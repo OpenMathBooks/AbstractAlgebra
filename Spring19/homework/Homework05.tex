@@ -1,0 +1,153 @@
+\documentclass[11pt]{exam}
+
+\usepackage{amsmath, amssymb, amsthm, multicol}
+\usepackage{graphicx}
+\usepackage{textcomp}
+\usepackage{tikz}
+\usepackage{mathrsfs}
+%\usepackage[top=1in, bottom=1in, left=1in, right=1in]{geometry}
+%\usepackage{framed}
+
+
+%\newenvironment{ques}[2]{\vskip 1ex \noindent{\bf Question #1:}\marginpar{(#2 pts)}}{}
+%\newenvironment{sol}{\begin{framed} \noindent{\em Solution:}}{\end{framed}\vskip 1em}
+
+
+
+\def\d{\displaystyle}
+\def\b{\mathbf}
+\def\N{\mathbb{N}}
+\def\R{\mathbb{R}}
+\def\Z{\mathbb{Z}}
+\def\Q{\mathbb{Q}}
+\def\C{\mathbb{C}}
+\def\F{\mathscr{F}}
+\def\st{~:~}
+\def\bar{\overline}
+\def\inv{^{-1}}
+\def\imp{\rightarrow}
+\def\and{\wedge}
+\def\onto{\twoheadrightarrow}
+\DeclareMathOperator{\Gal}{Gal}
+\DeclareMathOperator{\ord}{ord}
+\DeclareMathOperator{\lcm}{lcm}
+
+
+%\pointname{pts}
+\pointsinmargin
+\marginpointname{pts}
+\marginbonuspointname{bns-pts}
+\addpoints
+\pagestyle{head}
+%\printanswers
+
+\firstpageheader{MATH 322}{\bf Homework 5}{Due: Wednesday, March 20}
+
+
+
+
+\begin{document}
+
+\noindent \textbf{Instructions}: Same rules as usual.  Work together, write-up alone, no internet!
+\vskip 1ex
+
+\begin{questions}
+  
+  \question[6] Consider the 362880 elements in $S_9$.
+  \begin{parts}
+  \part What are the possible orders of elements in $S_9$.  For each possible order, give an example of an element with that order.  Explain how you know you have them all.
+  \begin{solution}
+  We know that the order of a cycle is its length, so there are elements of all orders in $\{1,2,\ldots, 9\}$, namely $(1)$, $(12)$, $(123)$, \ldots, $(123456789)$.  We can also get orders that are least common multiples of the lengths of disjoint cycles.  This way we can get $6$ (again), 10 as $(12)(34567)$, 14 as $(12)(3456789)$, 12 as $(123)(4567)$, 15 as $(123)(45678)$ and 20 as $(1234)(56789)$.  But that is all. 
+
+  \end{solution}
+  \part Give an example of an element with order 3 that does not fix any element of $\{1,2,\ldots,9\}$.
+  \begin{solution}
+  $(123)(456)(789)$ leaves no element fixed, but has order 3.
+  \end{solution}
+  \part What do elements of order 8 look like?  Bonus: how many elements of order 8 are there?
+  \begin{solution}
+  The only order 8 elements are the 8-cycles.  This is because any set of numbers with least common multiple 8 must include 8 itself.  
+
+  To count these, not that since we always start a cycle with the smallest number in it, the cycle must start with either a 1 or a 2.  If it starts with a 1, there are $8!$ choices for the rest of the cycle (8 choices for the next number, 7 for the one after that, and so on until we have picked 7 numbers, so this is really $P(8,7) = 8!/1!$).  If it starts with a 2, then there cannot be a 1 in the cycle, so there are $7!$ ways to finish the cycle.  Thus there are $8! + 7! = 45360$ elements with order 8 (which happens to be 1/8 of all cycles in $S_9$).
+  \end{solution}
+  \end{parts}
+
+  \question[8] Prove the following basic facts about orders of elements.  None of these are particularly difficult, so you should put most of your effort into writing a nice, clean proof of the fact.  In each of the following, $a$ is an element of a group $G$.
+  \begin{parts}
+  \part If $\ord(a) = n$ then for any $r < n$, $a^{n-r} = (a^r)\inv$.
+  \begin{solution}
+  \begin{proof}
+  Let $a$ be an element of a group with $\ord(a) = n$, and let $r < n$.  Now $a^{n-r}\cdots a^r = a^{n-r+r} = a^n = e$ so $(a^r)\inv = a^{n-r}$.
+  \end{proof}
+  \end{solution}
+
+  \part The order of $a\inv$ is the same as the order of $a$.
+  \begin{solution}
+  \begin{proof}
+  Again let $\ord(a) = n$.  Now $(a\inv)^n = (a^n)\inv = e\inv = e$ so we know that $\ord(a\inv)$ is at most $n$.  We must also argue that no smaller $k$ has $(a\inv)^k = e$.  But if there were such a $k < n$, then we would have $(a^k)\inv = e$.  The only element that has $e$ as an inverse is $e$ itself, so this would say $a^k = e$, a contradiction since $n$ was the least positive such exponent.
+  \end{proof}
+  \end{solution}
+  \part If $a^k = e$ where $k$ is odd, then the order of $a$ is odd.
+  \begin{solution}
+  \begin{proof}
+  Suppose $a^k = e$ for some odd number $k$.  This does not mean that $k$ is the order of $a$, but we do know that $k$ will be a multiple of the order of $a$.  If $\ord(a)$ were even, then every multiple of that order would be even as well.  Since $k$ is an odd multiple of the order, we know the order must be odd as well.
+  \end{proof}
+  \end{solution}
+  \part If $a\ne e$ and $a^p = e$ where $p$ is prime, then $\ord(a) = p$.
+  \begin{solution}
+  \begin{proof}
+  Suppose $a \ne e$ and $a^p = e$ where $p$ is prime.  This does not mean that $\ord(a) = p$ right away, just that $p$ is a multiple of $\ord(a)$.  But since $p$ is prime, $p$ is only a multiple of $1$ and $p$.  We know that $\ord(a) \ne 1$ since $a \ne e$.  Thus $\ord(a) = p$.
+  \end{proof}
+  \end{solution}
+  \end{parts}
+
+
+  \question[12] Let $a$ and $b$ be elements of a group $G$ with $\ord(a) = m$ and $\ord(b) = n$.
+  \begin{parts}
+  \part Assume $a$ and $b$ commute.  Let $k = \ord(ab)$ and $p = \lcm(m,n)$.  Prove $k$ divides $p$.
+  \begin{solution}
+  \begin{proof}
+  Assume $\ord(ab) = k$.  Consider $(ab)^p = a^pb^p$ (since $a$ and $b$ commute).  But $p$ is a multiple of $m$ and of $n$ so this means $(ab)^p = a^pb^p = e\cdot e = e$.  But this means that $p$ is a multiple of $\ord(ab)$, as needed.
+
+  Note you could also prove this from scratch using the division algorithm (which is how we know that the only exponents that give the identity are multiples of the order).
+  \end{proof}
+  \end{solution}
+
+  \part Assume $m$ and $n$ are relatively prime (i.e., $\gcd(m,n) = 1$).  Prove that no power of $a$ is equal to any power of $b$ (other than $e$).
+  \begin{solution}
+  \begin{proof}
+  Suppose that $a^k = b^j$.  But then $(a^k)^n = (b^j)^n = (b^n)^j = e^j = e$, and similarly $(b^j)^m = (a^k)^m = (a^m)^k = e^k = e$.  This proves that $m$ and $n$ are both multiples of the order of $a^k$ (which is the same as the order of $b^j$).  But since the only number that $m$ and $n$ are both multiples of is 1, we have that $a^k = e = b^j$.  That is, if any power of $a$ is equal to a power of $b$, then those powers are the identity.  
+  \end{proof}
+  \end{solution}
+
+  \part Use the previous parts to prove that if $a$ and $b$ commute and $m$ and $n$ are relatively prime, then $\ord(ab) = mn$.
+  \begin{solution}
+  \begin{proof}
+  From the previous parts we know that $\ord(ab)$ divides $\lcm(m,n) = mn$, and that no power of $a$ is equal to a power of $b$ (other than $e$).  Again let $k = \ord(ab)$.  We have $(ab)^k = a^kb^k = e$, or in other words $a^k = b^{-k}$.  By part (b), this implies that $a^k = e = b^{-k} = b^k$.  But then $k$ is a multiple of both $m$ and $n$, so is also a multiple of $\lcm(m,n)$.  The only multiple of $\lcm(m,n)$ that is also a divisor of $\lcm(m,n)$ is $\lcm(m,n)$ itself.  Thus $k = mn$.
+  \end{proof}
+  \end{solution}
+
+  \part Give an example to show that part (a) is not true if $a$ and $b$ do not commute.
+  \begin{solution}
+  For example, $a= (12)$ and $b = (13)$.  Then $ab = (132)$ and $\ord(ab) = 3$.  However, $\lcm(2,2) = 2$ and $3$ does not divide $2$.
+  \end{solution}
+  \end{parts}
+
+
+
+
+  
+  \question[4] Suppose $G$ is a group and $H$ and $K$ are distinct subgroups both with order the same prime number $p$.  Prove that $H \cap K = \{e\}$.  Hint: use Lagrange's theorem.
+
+  \begin{solution}
+  Consider an element $a \in H \cap K$.  Since $H$ is a group of order $p$, every element in $H$ (including $a$) must have order dividing $p$, by Lagrange's theorem.  Since $p$ is prime, this means $\ord(a) = p$ or $\ord(a) = 1$.  If $\ord(a) = p$, then the $p$ different powers of $a$ all belong to $H$, and also to $K$.  But since both $H$ and $K$ only have $p$ different elements, this means that $\langle a \rangle = H = K$ and the subgroups are not distinct.  Thus we have that $\ord(a) = 1$, so $a = e$.  In other words, the only element in both $H$ and $K$ is the identity.
+
+  An alternative proof would be to recall that $H \cap K$ is a subgroup of $G$, and since $H \cap K \subseteq H$ also a subgroup of $H$ (and similarly of $K$).  Since $H$ has order $p$, we know by Lagrange's theorem that the order of $H\cap K$ is either $p$ or 1.  If it is $p$, then $H \cap K = H = K$, contradicting the assumption that $H$ and $K$ are distinct.  Thus $|H\cap K| = 1$ so $H \cap K = \{e\}$.
+  \end{solution}
+
+
+\end{questions}
+
+\end{document}
+
+

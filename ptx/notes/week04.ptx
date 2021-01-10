@@ -1,0 +1,244 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<section xml:id="notes-week4" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>Week 4: February 3-7</title>
+  
+  <subsection xml:id="notes-2-3">
+    <title>Monday: Summary of Extension Fields</title>
+      <p>
+        Let's summarize what we have said about field extensions so far.
+        <ul>
+          <li>
+            <p>
+              Given any field <m>F</m> and any number <m>\alpha</m> algebraic over <m>F</m>, we can form <m>E = F(\alpha)</m>, an algebraic extension of <m>F</m>. 
+            </p>
+          </li>
+          <li>
+            <p>
+              This is the smallest field containing <m>F</m> and <m>\alpha</m>, by definition.
+            </p>
+          </li>
+          <li>
+            <p>
+              Since <m>\alpha</m> is algebraic, it is the root of a polynomial in <m>F[x]</m>.  In fact, there must be some irreducible monic polynomial <m>p(x)</m> that has <m>\alpha</m> as a root.  We call this the <term>minimal polynomial</term> for <m>\alpha</m>.
+            </p>
+          </li>
+          <li>
+            <p>
+              If the degree of <m>p(x)</m> is <m>n</m>, then we know that every element in <m>F(\alpha)</m> can be written in the form <m>c_0 + c_1\alpha + c_2 \alpha^2 + \cdots + c_{n-1}\alpha^{n-1}</m>.  The reason we know this is because <m>F(\alpha) \cong F[x]/\langle p(x) \rangle</m>, and we know that the quotient ring is a field.
+            </p>
+          </li>
+          <li>
+            <p>
+              That we can write everything in that form says that as a <em>vector space</em>, <m>F(\alpha)</m> has dimension <m>n</m>.  That is, there is a basis containing <m>n</m> elements, specifically, <m>\{1, \alpha, \alpha^2, \ldots, \alpha^{n-1}\}</m>.
+            </p>
+          </li>
+          <li>
+            <p>
+              We also saw that we can extend an extension field further by adding another algebraic element: <m>F(\alpha, \beta)</m> is an extension of <m>F(\alpha)</m>.  
+            </p>
+          </li>
+          <li>
+            <p>
+              We can look for the degree of this field extension over <m>F(\alpha)</m>, again by looking for the size of a basis (with the field of scalars now being <m>F(\alpha)</m>), or by looking for an irreducible polynomial in <m>F(\alpha)[x]</m> that has <m>\beta</m> as a root.
+            </p>
+          </li>
+          <li>
+            <p>
+              If <m>[F(\alpha,\beta):F(\alpha)] = m</m> (our notation for the degree of the extension), then we can multiply to find <m>[F(\alpha,\beta):F] = n\cdot m</m>.  We call this the tower rule.
+            </p>
+          </li>
+        </ul>
+      </p>
+      <p>
+        Let's work through an example.
+        <ul>
+          <li>
+            <p>
+              Explore <m>\Q(\sqrt[5]{7}, \sqrt{2}i)</m>.  Can we compare this to <m>\Q(\sqrt[5]{7}+\sqrt{2}i)</m> (which is a simple extension, rather than an iterated extension)?
+            </p>
+          </li>
+        </ul>
+      </p>
+      <p>
+        We have seen that if we adjoin an algebraic element to a field, we get a finite extension (an extension of finite degree).  What if I told you I had a finite degree extension.  Is every element algebraic?
+        <ul>
+          <li>
+            <p>
+              Yes!  Let <m>\alpha \in E</m> be any element of the field <m>E</m> with <m>[E:F] = n</m>.  
+            </p>
+          </li>
+          <li>
+            <p>
+              We know then that <m>\{1, \alpha, \alpha^2, \ldots, \alpha^n\}</m> is linearly <em>dependent</em>, since it is a set that contains <m>n+1</m> elements.  
+            </p>
+          </li>
+          <li>
+            <p>
+              This means that there are scalars <m>c_0, \ldots, c_n</m>, not all zero, such that <m>c_0 + c_1\alpha + c_2 \alpha^2 + \cdots + c_n\alpha^n = 0</m>.  
+            </p>
+          </li>
+          <li>
+            <p>
+              But then <m>p(x) = c_0 + c_1x + c_2x^2 + \cdots +c_nx^n</m> has <m>\alpha</m> as a root.
+            </p>
+          </li>
+          <li>
+            <p>
+              Careful: this does not say that <m>E = F(\alpha)</m>, since we don't know that <m>p(x)</m> is irreducible here.  In fact, we could take <m>\alpha \in F</m>.  Then the minimal polynomial is degree 1.
+            </p>
+          </li>
+        </ul>
+      </p>
+
+      <p>
+        For next time: do the constructions preview activity.
+      </p>
+  </subsection>
+
+  <subsection xml:id="notes-2-5">
+    <title>Wednesday: Constructible Numbers</title>
+    <p>
+      The activity you did to prepare for class today shows that some geometric objects are constructible, while others might not be.  But how can we be sure that it is <em>impossible</em> to <q>double the cube,</q> for example?
+    </p>
+    <p>
+      We need to algebratize constructions.  We will define a set of <term>constructible numbers</term> and then use abstract algebra to analyze this set.
+    </p>
+    <p>
+      Complete the activity <xref ref="ws_fields-constructable-numbers">Constructible Numbers</xref>.
+    </p>
+  </subsection>
+
+
+  <subsection xml:id="notes-2-7">
+    <title>Friday: Constructible Extensions</title>
+    <p>
+				Last class we saw that the set of constructible numbers is a <em>field</em>, extending <m>\Q</m> and closed under taking square roots of positive elements. Today we will consider the converse: are there any other constructible numbers other than those you can get from <m>\Q</m> using field operations and square roots.
+    </p>
+
+    <p>
+      <ul>
+        <li>
+          <p>
+				Let’s think about constructible points <m>(a,b)</m> in the plane <m>\R^2</m>. Certainly if <m>a</m> and <m>b</m> are constructible numbers (as defined previously) then <m>(a,b)</m> a constructible point (by using perpendicular lines).
+          </p>
+        </li>
+
+        <li>
+          <p>
+				Also, if <m>(a,b)</m> is constructible, so is <m>(0,b)</m> and <m>(a,0)</m>.
+          </p>
+        </li>
+
+        <li>
+          <p>
+				We already know that all rational numbers are constructible, so we now have all points in <m>\mathbb Q\times\mathbb Q</m> constructible.
+          </p>
+        </li>
+
+        <li>
+          <p>
+				Consider the field <m>K_1 = \mathbb Q(a,b)</m> where the point <m>(a,b)</m> was constructed in one step from <m>\mathbb Q\times \mathbb Q</m>. Then <m>K_2 = K_1(c,d)</m> where the point <m>(c,d)</m> was constructed in one step from points in <m>K_1\times K_1</m>. And so on.
+          </p>
+        </li>
+
+        <li>
+          <p>
+				If a point is to be constructible, then it will need to be constructed in some finite number of steps starting from <m>\mathbb Q\times\mathbb Q</m>.
+          </p>
+        </li>
+
+        <li>
+          <p>
+				Recall that a point is constructible provided it is at the intersection of lines and circles, each of which are constructible.
+          </p>
+        </li>
+
+        <li>
+          <p>
+				Consider the case for the intersection of two lines. Let <m>L_1</m> pass through <m>(a_1,b_1)</m>, and <m>(c_1, d_1)</m> and <m>L_2</m> pass through <m>(a_2, b_2)</m> and <m>(c_2, d_2)</m>. Can we find the coordinates of the intersection of these two lines?
+          </p>
+        </li>
+
+        <li>
+          <p>
+				Yes, doing so requires solving a system of two linear equation. In particular, the new <m>x</m> coordinate is a linear combination of <m>a_1, a_2, b_1, \ldots, d_2</m>.
+          </p>
+        </li>
+
+        <li>
+          <p>
+				So <m>x</m> is the root of a degree 1 polynomial over <m>K_i</m>, so <m>[K_{i+1}:K_i] = 1</m>. Similarly for <m>y</m>.
+          </p>
+        </li>
+
+        <li>
+          <p>
+				What about the intersection of a line and a circle? Recall that we can write the equation of a circle as <m>(x-a)^2 + (y- b)^2 = k^2</m>. Substitute in the equation for the line to get a quadratic polynomial in <m>x</m> (or <m>y</m>).
+          </p>
+        </li>
+
+        <li>
+          <p>
+				Finally, the intersection of two circles. Use the equation for a circle in the form <me>x^2 + y^2 +dx + ey + f = 0</me> and take the difference of the two equations to get a linear expression involving <m>x</m> and <m>y</m> which can be substituted into one of the equations for the circle as above.
+          </p>
+        </li>
+
+        <li>
+          <p>
+				What does all this tell us? Well, if we extend <m>\mathbb Q</m> to get a field containing the coordinates of a constructible point, then we must have extended <em>only</em> by taking square roots of elements. Of course, not necessarily elements in <m>\mathbb Q</m>, but definitely elements in some extension field we got along the way.
+          </p>
+        </li>
+
+        <li>
+          <p>
+				More specifically, we have that if <m>F</m> is some field containing constructible numbers, then the points determined by the intersections of lines and circles in <m>F</m> lie in the field <m>F(\sqrt{\alpha})</m> for some <m>\alpha \in F</m>.
+          </p>
+        </li>
+
+        <li>
+          <p>
+				Since this is recursive, we can say that a real number <m>\alpha</m> is constructible if and only if there exists a sequence of fields <me>{\mathbb Q} = F_0 \subset F_1 \subset \cdots \subset F_k</me> such that <m>F_i = F_{i-1}(\sqrt{\alpha_i})</m> with <m>\alpha_i \in F_i</m> and <m>\alpha \in F_k</m>.
+          </p>
+        </li>
+
+        <li>
+          <p>
+				This tells us exactly what sort of field extension any constructible number belongs to. It also says that the field of <em>all</em> constructible numbers is an infinite algebraic extension of <m>\mathbb Q</m>.
+          </p>
+        </li>
+
+        <li>
+          <p>
+				But what about doubling the cube? Note that if we started with a cube of side length 1, we would get a cube of volume 2, so side length <m>\sqrt[3]{2}</m>. Is this a constructible number? If it is, then it is in a field extension of <m>\mathbb Q</m> like those described above. So is it? Not obviously so, since it is not the square root of a number. But perhaps we can get the <m>\sqrt[3]{2}</m> in a field extension you make by just adding square roots.
+          </p>
+        </li>
+
+        <li>
+          <p>
+            What does all this tell us? Well, if we extend <m>\mathbb Q</m> to get a field containing the coordinates of a constructible point, then we can be sure that the degree of the field extension is a power of 2.
+          </p>
+				</li>
+
+				<li>
+					<p>
+            So what? Well what if we could double the cube? This would mean we could start with a cube of side length 1, and get a cube with volume 2. But the side length of such a cube would be <m>\sqrt[3]{2}</m>, and <m>\sqrt[3]{2}</m> belongs to a degree 3 field extension, so any field containing <m>\sqrt[3]{2}</m> would need to have degree a multiple of 3.
+          </p>
+				</li>
+
+				<li>
+					<p>
+            Trisecting the angle? Consider an attempt to trisect <m>60^\circ</m>. We would be able to construct <m>20^\circ</m> then, so surely we could also get <m>\cos(20^\circ)</m> as a constructible number (how?). But <me>\cos(3\theta) = 4\cos^3(\theta) - 3 \cos(\theta)</me> and since <m>\cos(60^\circ) = 1/2</m>, this says that <m>\cos(20^\circ)</m> is a root of the polynomial <m>8x^3 - 6x - 1</m> or that <m>2\cos(20^\circ)</m> is the root of <m>x^3 - 3x - 1</m>. We can show this is irreducible using the rational roots theorem. So again, any extension containing a trisected <m>60^\circ</m> would have a degree that was a multiple of 3.
+          </p>
+				</li>
+
+				<li>
+          <p>
+            Finally, if we could square the circle, then we would be able to construct a square whose side length was <m>\sqrt{\pi}</m>. But this is transcendental, so definitely would not give an extension whose degree was a power of 2.
+          </p>
+				</li>
+
+      </ul>
+    </p>
+  </subsection>
+</section>

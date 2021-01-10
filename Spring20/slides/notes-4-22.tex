@@ -1,0 +1,184 @@
+
+\documentclass[12pt]{exam}
+
+\usepackage{amssymb, amsmath, amsthm, mathrsfs, multicol, graphicx}
+\usepackage[top=.25in, bottom=1in, left=1in, right=1in]{geometry}
+% \usepackage{fancyhdr}
+\usepackage{url}
+\usepackage{enumitem}
+\usepackage{pdfpages}
+\usepackage{tikz}
+\usetikzlibrary{positioning,matrix,arrows}
+
+
+\usepackage{xcolor}
+
+\pagecolor[rgb]{0,0,0}
+\color[rgb]{1,1,1}
+
+\pagestyle{empty}
+% \include{macros-descrete}
+
+
+\setlength\parindent{0pt}
+
+%%% macros %%%%%
+\newcommand{\ex}{\noindent\textbf{Ex:} }
+
+\def\d{\displaystyle}
+% \def\uplevel#1{\end{itemize}#1\begin{itemize}}
+\def\deg{^\circ}
+\def\st{~:~}
+
+\def\imp{\rightarrow}
+\def\Imp{\Rightarrow}
+\def\iff{\Leftrightarrow}
+\def\Iff{\Leftrightarrow}
+\def\land{\wedge}
+
+
+
+\def\N{\mathbb N}
+\def\Z{\mathbb Z}
+\def\R{\mathbb R}
+\def\Q{\mathbb Q}
+\def\P{\mathbb P}
+\def\E{\mathbb E}
+\def\O{\mathbb O}
+\def\F{\mathbb F}
+\def\pow{\mathcal{P}}
+\def\b{\mathbf}
+\def\st{~|~}
+\def\bar{\overline}
+\def\inv{^{-1}}
+
+\newcommand{\vtx}[2]{node[fill,circle,inner sep=0pt, minimum size=5pt,label=#1:#2]{}}
+\newcommand{\va}[1]{\vtx{above}{#1}}
+\newcommand{\vb}[1]{\vtx{below}{#1}}
+\newcommand{\vr}[1]{\vtx{right}{#1}}
+\newcommand{\vl}[1]{\vtx{left}{#1}}
+\renewcommand{\v}{\vtx{above}{}}
+
+%headers and footers:
+
+
+%opening
+
+\begin{document}
+
+\begin{questions}
+
+
+  \question The group $D_3$ of symmetries of the triangle is isomorphic to $S_3$.  But by Cayley's theorem, the group is also isomorphic to a {\em subgroup} of $S_6$.  Find such a subgroup (using the proof of Cayley's theorem).
+  
+  \clearpage
+  
+  
+  
+  \question The identity can be written as $\varepsilon = (13)(24)(35)(14)(12)(15)(34)(45)$.
+  Mimic the proof that $\varepsilon$ must be even and show how to eliminate $x = 5$ from the product of transpositions and write $\varepsilon$ as the product of 2 fewer transpositions in the process.  Show all intermediate steps.
+  
+  \clearpage
+  
+  
+  
+  
+  \question Suppose the group $G$ has subnormal series 
+  \[G \supset H \supset \{e\}\]
+  and that $G/H \cong \Z_{10}$.  Assume also that $H$ is simple.
+  \begin{parts}
+  \part Explain how we know that the above series is not a composition series.
+
+  \vfill
+  \part Explain how we could find two different composition series for $G$.
+
+  \vfill
+  \part Prove that if $H$ is abelian, then $G$ is solvable.
+
+  \vfill
+  \part If $G$ happens to be the Galois group for some field $E$ over $\Q$, 
+  what can you say about subfields of $E$?
+  \vfill
+  \end{parts}
+  
+    \clearpage
+  
+  
+  \question Consider the polynomial $p(x) = x^3 + 5x^2 - 10x + 15$.  Let $E$ be the splitting field for $p(x)$ and $G$ be the Galois group of $E$ over $\Q$.
+  \begin{parts}
+    \part Prove that $G$ contains an element of order 3.
+
+    \vfill
+    \part Prove that $G$ contains an element of order 2.
+
+    \vfill
+    \part Explain how we know that there is a intermediate field $I$ strictly 
+    between $\Q$ and $E$ that is the splitting field for a polynomial.  What can you say about this field?
+    \vfill
+    \part Explain how you know that $G \cong S_3$ and not to $\Z_6$.
+
+    \vfill
+    \part Does the argument above prove that $p(x)$ is not solvable by 
+    radicals?  Is $p(x)$ solvable by radicals?
+    \vfill
+  \end{parts}
+  
+  \clearpage
+  
+  \question Consider the number $n = 1643 = 31\cdot 53$.  
+  \begin{parts}
+    \part What is $42^{1560}$ congruent to modulo 1643?  Explain, using group 
+    theory.  What if we replaced 42 with another number?  
+    \vfill
+    \part Note that $E = 7$ is relatively prime to $1643$. Find an integer $D$ 
+    such that $(a^{7})^D \equiv a  \pmod{1643}$ for any $a$ relatively prime to $1643$. Explain how you know your $D$ works. 
+    \vfill
+  \end{parts}
+  
+  \clearpage
+  
+  \question What is the difference between an inner direct product and an external direct product?  Illustrate with an example.
+  
+  \clearpage
+  
+  
+  \question I'm thinking of an abelian group that contains elements of order $9$ but not of order $27$, and elements of order $2$ and $5$ but not of orders $4$ or $25$.  Further, there is not other prime number $p$ (other than 2, 3, or 5) such that there is an element of order $p$. Which of the following can you deduce about my group?  Which must be true, which can't be true, and which might or might not be true.
+  \begin{parts}
+    \part There are elements of order 3.
+
+    \vfill
+    \part There are elements of order 10.
+
+    \vfill
+    \part The group is isomorphic to $\Z_2 \times \Z_{9}\times \Z_5$. 
+
+    \vfill
+    \part The group is cyclic.
+
+    \vfill
+  \end{parts}
+  
+  \clearpage
+  
+  \question Find all abelian groups of order 480.
+  
+  \clearpage
+  
+  
+  
+  
+  \question Let $X = \{1,2,3,4,5,6\}$ and $G = \{(1), (12), (345), (354), (12)(345), (12)(354)\}$.  Find $X_g$, $G_x$ and $\mathcal O_x$ for each $g \in G$ and $x \in X$.  Then verify the orbit-stabilizer theorem and Burnside's theorem.
+  
+  \clearpage
+  
+  \question How many different ways could the vertices of an equilateral triangle be colored using three colors?
+  
+  \clearpage
+  
+  
+  \question Use Burnside's theorem to explain why $\binom{7}{3} = \frac{1}{3!}P(7,3)$.  That is, why are there 6 times as many ways to make three scoop ice-cream cones chosen from 7 flavors as there are to make three scoop milkshakes (cones and shakes not allowing for repeated flavors).
+  
+  \clearpage
+  \end{questions}
+
+\end{document}

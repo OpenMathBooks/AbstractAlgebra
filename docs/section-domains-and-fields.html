@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*       on 2021-01-10T15:14:30-07:00       *-->
+<!--*   A recent stable commit (2020-08-09):   *-->
+<!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<html lang="en-US">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>AATA Integral Domains and Fields</title>
+<meta name="Keywords" content="Authored in PreTeXt">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script src="https://sagecell.sagemath.org/embedded_sagecell.js"></script><script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [['\\(','\\)']]
+    },
+    asciimath2jax: {
+        ignoreClass: ".*",
+        processClass: "has_am"
+    },
+    jax: ["input/AsciiMath"],
+    extensions: ["asciimath2jax.js"],
+    TeX: {
+        extensions: ["extpfeil.js", "autobold.js", "https://pretextbook.org/js/lib/mathjaxknowl.js", "AMScd.js", ],
+        // scrolling to fragment identifiers is controlled by other Javascript
+        positionToHash: false,
+        equationNumbers: { autoNumber: "none", useLabelIds: true, },
+        TagSide: "right",
+        TagIndent: ".8em",
+    },
+    // HTML-CSS output Jax to be dropped for MathJax 3.0
+    "HTML-CSS": {
+        scale: 88,
+        mtextFontInherit: true,
+    },
+    CommonHTML: {
+        scale: 88,
+        mtextFontInherit: true,
+    },
+});
+</script><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS_CHTML-full"></script><link href="https://unpkg.com/prismjs@v1.22.0/themes/prism.css" rel="stylesheet">
+<script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/jquery.min.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/0.13/pretext.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/0.13/pretext_add_on.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script xmlns:svg="http://www.w3.org/2000/svg">sagecellEvalName='Evaluate (Sage)';
+</script><link xmlns:svg="http://www.w3.org/2000/svg" href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://fonts.googleapis.com/css?family=Inconsolata:400,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/pretext.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/pretext_add_on.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/banner_default.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/toc_default.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/knowls_default.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/style_default.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/colors_default.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/setcolors.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="custom-styles.css">
+<!-- 2019-10-12: Temporary - CSS file for experiments with styling --><link xmlns:svg="http://www.w3.org/2000/svg" href="developer.css" rel="stylesheet" type="text/css">
+</head>
+<body id="judson-AATA" class="mathbook-book has-toc has-sidebar-left">
+<a class="assistive" href="#content">Skip to main content</a><div xmlns:svg="http://www.w3.org/2000/svg" class="hidden-content" style="display:none">\(\newcommand{\identity}{\mathrm{id}}
+\newcommand{\notdivide}{\nmid}
+\newcommand{\notsubset}{\not\subset}
+\newcommand{\lcm}{\operatorname{lcm}}
+\newcommand{\gf}{\operatorname{GF}}
+\newcommand{\inn}{\operatorname{Inn}}
+\newcommand{\aut}{\operatorname{Aut}}
+\newcommand{\Hom}{\operatorname{Hom}}
+\newcommand{\cis}{\operatorname{cis}}
+\newcommand{\chr}{\operatorname{char}}
+\newcommand{\Null}{\operatorname{Null}}
+\newcommand{\transpose}{\text{t}}
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\Q}{\mathbb{Q}}
+\newcommand{\R}{\mathbb{R}}
+\def\C{\mathbb{C}}
+\newcommand{\st}{:}
+\newcommand{\inv}{^{-1}}
+\newcommand{\bC}{\mathbb{C}}
+      \newcommand{\F}{\mathscr{F}}
+      \newcommand{\FR}{\mathscr{F}(\R)}
+      \newcommand{\DR}{\mathscr{D}(\R)}
+      \def\s{\varrho}
+      \def\theterm{Spring 2021}
+      \def\thecourse{MATH 322}
+\newcommand{\lt}{&lt;}
+\newcommand{\gt}{&gt;}
+\newcommand{\amp}{&amp;}
+\)</div>
+<header id="masthead" class="smallbuttons"><div class="banner"><div class="container">
+<a id="logo-link" href="http://abstract.pugetsound.edu" target="_blank"><img src="images/cover_aata_2020.png" alt="Logo image"></a><div class="title-container">
+<h1 class="heading"><a href="aata-toc.html"><span class="title">Abstract Algebra:</span> <span class="subtitle">Theory and Applications, Remixed!</span></a></h1>
+<p class="byline">Thomas W. Judson</p>
+</div>
+</div></div>
+<nav xmlns:svg="http://www.w3.org/2000/svg" id="primary-navbar" class="navbar"><div class="container">
+<div class="navbar-top-buttons">
+<button class="sidebar-left-toggle-button button active" aria-label="Show or hide table of contents sidebar">Contents</button><div class="tree-nav toolbar toolbar-divisor-3">
+<a class="index-button toolbar-item button" href="index-1.html" title="Index">Index</a><span class="threebuttons"><a id="previousbutton" class="previous-button toolbar-item button" href="section-rings-definitions.html" title="Previous">Prev</a><a id="upbutton" class="up-button button toolbar-item" href="rings.html" title="Up">Up</a><a id="nextbutton" class="next-button button toolbar-item" href="section-ring-homomorphisms.html" title="Next">Next</a></span>
+</div>
+</div>
+<div class="navbar-bottom-buttons toolbar toolbar-divisor-4">
+<button class="sidebar-left-toggle-button button toolbar-item active">Contents</button><a class="previous-button toolbar-item button" href="section-rings-definitions.html" title="Previous">Prev</a><a class="up-button button toolbar-item" href="rings.html" title="Up">Up</a><a class="next-button button toolbar-item" href="section-ring-homomorphisms.html" title="Next">Next</a>
+</div>
+</div></nav></header><div class="page">
+<div xmlns:svg="http://www.w3.org/2000/svg" id="sidebar-left" class="sidebar" role="navigation"><div class="sidebar-content">
+<nav id="toc"><ul>
+<li class="link frontmatter">
+<a href="aata.html" data-scroll="Wih"><span class="title">Front Matter</span></a><ul>
+<li><a href="colophon-1.html" data-scroll="colophon-1">Colophon</a></li>
+<li><a href="acknowledgement-1.html" data-scroll="acknowledgement-1">Acknowledgements</a></li>
+<li><a href="preface-1.html" data-scroll="JEk">Preface to the Remixed Version</a></li>
+<li><a href="preface-2.html" data-scroll="Cpq">Original Preface</a></li>
+</ul>
+</li>
+<li class="link part"><a href="part-groups.html" data-scroll="part-groups"><span class="codenumber">I</span> <span class="title">Groups</span></a></li>
+<li class="link">
+<a href="sets.html" data-scroll="xcu"><span class="codenumber">1</span> <span class="title">Preliminaries</span></a><ul>
+<li><a href="section-note-on-proofs.html" data-scroll="yRH">A Short Note on Proofs</a></li>
+<li><a href="section-sets-and-functions.html" data-scroll="eYQ">Sets and Functions</a></li>
+<li><a href="section-equivalence-relations.html" data-scroll="VFe">Equivalence Relations and Partitions</a></li>
+<li><a href="section-math-induction.html" data-scroll="bUT">Mathematical Induction</a></li>
+<li><a href="exercises-sets.html" data-scroll="mDp">Additional Exercises</a></li>
+<li><a href="sets-references.html" data-scroll="ztb">References and Suggested Readings</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="groups.html" data-scroll="ZbN"><span class="codenumber">2</span> <span class="title">Groups</span></a><ul>
+<li><a href="section-mod-n-sym.html" data-scroll="nfs">Integer Equivalence Classes and Symmetries</a></li>
+<li><a href="section-groups-define.html" data-scroll="TmB">Definitions and Examples</a></li>
+<li><a href="section-basic-properties.html" data-scroll="Rxo">Basic Properties of Groups</a></li>
+<li><a href="section-subgroups.html" data-scroll="ztK">Subgroups</a></li>
+<li><a href="cyclic.html" data-scroll="MzR">Cyclic Subgroups</a></li>
+<li><a href="section-permutation-definitions.html" data-scroll="Wyg">Permutation Groups</a></li>
+<li><a href="exercises-groups.html" data-scroll="OCI">Additional Exercises</a></li>
+<li><a href="groups-exercises-detecting-errors.html" data-scroll="uJR">Additional Exercises: Detecting Errors</a></li>
+<li><a href="groups-references.html" data-scroll="muP">References and Suggested Readings</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="cosets.html" data-scroll="Uzy"><span class="codenumber">3</span> <span class="title">Cosets and Factor Groups</span></a><ul>
+<li><a href="section-cosets.html" data-scroll="xMb">Cosets</a></li>
+<li><a href="section-factor-groups.html" data-scroll="avo">Factor Groups and Normal Subgroups</a></li>
+<li><a href="exercises-cosets.html" data-scroll="FqA">Exercises</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="isomorph.html" data-scroll="OUu"><span class="codenumber">4</span> <span class="title">Isomorphisms and Homomorphisms</span></a><ul>
+<li><a href="section-isomorph-definitions.html" data-scroll="Evp">Definition and Examples</a></li>
+<li><a href="section-group-homomorphisms.html" data-scroll="uOI">Group Homomorphisms</a></li>
+<li><a href="section-group-isomorphism-theorems.html" data-scroll="aVR">The Isomorphism Theorems</a></li>
+<li><a href="exercises-isomorph.html" data-scroll="VeC">Additional Exercises</a></li>
+<li><a href="homomorph-exercises-automorphisms.html" data-scroll="Jes">Additional Exercises: Automorphisms</a></li>
+</ul>
+</li>
+<li class="link part"><a href="part-rings-and-fields.html" data-scroll="part-rings-and-fields"><span class="codenumber">II</span> <span class="title">Rings and Fields</span></a></li>
+<li class="link">
+<a href="rings.html" data-scroll="bhz"><span class="codenumber">5</span> <span class="title">Rings</span></a><ul>
+<li><a href="section-rings-definitions.html" data-scroll="kBl">Rings</a></li>
+<li><a href="section-domains-and-fields.html" data-scroll="QIu" class="active">Integral Domains and Fields</a></li>
+<li><a href="section-ring-homomorphisms.html" data-scroll="wPD">Ring Homomorphisms and Ideals</a></li>
+<li><a href="section-maximal-prime-ideals.html" data-scroll="cWM">Maximal and Prime Ideals</a></li>
+<li><a href="section-software-application.html" data-scroll="JdV">An Application to Software Design</a></li>
+<li><a href="exercises-rings.html" data-scroll="LYB">Additional Exercises</a></li>
+<li><a href="rings-exercises-programming.html" data-scroll="sfK">Programming Exercise</a></li>
+<li><a href="rings-references.html" data-scroll="JSg">References and Suggested Readings</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="poly.html" data-scroll="tPt"><span class="codenumber">6</span> <span class="title">Polynomials</span></a><ul>
+<li><a href="section-division-algorithm.html" data-scroll="Icc">The Integers</a></li>
+<li><a href="section-poly-rings.html" data-scroll="Djf">Polynomial Rings</a></li>
+<li><a href="section-poly-division-algorithm.html" data-scroll="jqo">The Division Algorithm</a></li>
+<li><a href="section-irreducible-poly.html" data-scroll="Pxx">Irreducible Polynomials</a></li>
+<li><a href="sec-factoring-c-r.html" data-scroll="icb">Factoring over \(\C\) and \(\R\)</a></li>
+<li><a href="exercises-poly.html" data-scroll="eGv">Additional Exercises</a></li>
+<li><a href="practice-euclidean-algorithm.html" data-scroll="BUS">Additional Exercises: The Euclidean Algorithm</a></li>
+<li><a href="poly-exercises-cubics-quartics.html" data-scroll="KNE">Additional Exercises:  Solving the Cubic and Quartic Equations</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="domains.html" data-scroll="HlR"><span class="codenumber">7</span> <span class="title">Integral Domains</span></a><ul>
+<li><a href="section-field-of-fractions.html" data-scroll="cTV">Fields of Fractions</a></li>
+<li><a href="section-factorization-domains.html" data-scroll="Jbe">Factorization in Integral Domains</a></li>
+<li><a href="reading-questions-22.html" data-scroll="drU">Reading Questions</a></li>
+<li><a href="exercises-domains.html" data-scroll="kyu">Exercises</a></li>
+<li><a href="domains-references.html" data-scroll="CJg">References and Suggested Readings</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="fields.html" data-scroll="pNh"><span class="codenumber">8</span> <span class="title">Fields</span></a><ul>
+<li><a href="section-constructions.html" data-scroll="ctw">Geometric Constructions</a></li>
+<li><a href="section-fields-intro.html" data-scroll="GTt">Introduction</a></li>
+<li><a href="section-extension-fields.html" data-scroll="dGQ">Extension Fields</a></li>
+<li><a href="fields-subsection-algebraic-elements.html" data-scroll="acq">Algebraic Elements</a></li>
+<li><a href="section-fields-vectorspaces-review.html" data-scroll="UWY">A Review of Vector Spaces</a></li>
+<li><a href="section-fields-vectorspaces.html" data-scroll="Scs">Extension Fields as Vector Spaces</a></li>
+<li><a href="section-constructions-conc.html" data-scroll="XhK">What's Not Constructible</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="galois.html" data-scroll="hgP"><span class="codenumber">9</span> <span class="title">Galois Theory</span></a><ul>
+<li><a href="section-galois-splitting-fields.html" data-scroll="wmn">Splitting Fields</a></li>
+<li><a href="section-galois-field-automorphisms.html" data-scroll="iWc">Field Automorphisms</a></li>
+<li><a href="section-galois-fund-theorem-galois-theory.html" data-scroll="Pdl">The Fundamental Theorem</a></li>
+</ul>
+</li>
+<li class="link part"><a href="part-more-group-theory.html" data-scroll="part-more-group-theory"><span class="codenumber">III</span> <span class="title">More Group Theory</span></a></li>
+<li class="link">
+<a href="groups.html" data-scroll="nRa"><span class="codenumber">10</span> <span class="title">Some of the Structure of Groups</span></a><ul>
+<li><a href="section-groups-cayley.html" data-scroll="CTu">Isomorphisms and Cayley's Theorem</a></li>
+<li><a href="section-groups-permutations.html" data-scroll="mjE">Permutation Groups</a></li>
+<li><a href="section-solvable-groups.html" data-scroll="WbU">Solvable Groups</a></li>
+<li><a href="section-simplicity-of-an.html" data-scroll="GCx">The Simplicity of the Alternating Group</a></li>
+<li><a href="section-galois-applications.html" data-scroll="vku">Applications: Galois Groups</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="struct-more.html" data-scroll="YWA"><span class="codenumber">11</span> <span class="title">More of the Structure of Groups</span></a><ul>
+<li><a href="section-groups-order.html" data-scroll="hVk">Cyclic Groups and Orders of Elements</a></li>
+<li><a href="section-groups-lagrange.html" data-scroll="BOb">Lagrange's Theorem and its consequences</a></li>
+<li><a href="section-direct-products.html" data-scroll="kCy">Direct Products</a></li>
+<li><a href="section-finite-abelian-groups.html" data-scroll="pUL">Finite Abelian Groups</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="crypt.html" data-scroll="uCn"><span class="codenumber">12</span> <span class="title">Introduction to Cryptography</span></a><ul>
+<li><a href="section-private-key-crypt.html" data-scroll="Qkr">Private Key Cryptography</a></li>
+<li><a href="section-public-key-crypt.html" data-scroll="wrA">Public Key Cryptography</a></li>
+<li><a href="ws_groups-RSA-lab.html" data-scroll="zaZ">Activity: RSA Cryptography Lab</a></li>
+<li><a href="section-method-of-repeated-squares.html" data-scroll="YOj">The Method of Repeated Squares</a></li>
+<li><a href="exercises-crypt.html" data-scroll="rHH">Exercises</a></li>
+<li><a href="crypt-exercises-additional.html" data-scroll="XOQ">Additional Exercises: Primality and Factoring</a></li>
+<li><a href="crypt-references.html" data-scroll="yqf">References and Suggested Readings</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="actions.html" data-scroll="elJ"><span class="codenumber">13</span> <span class="title">Group Actions</span></a><ul>
+<li><a href="section-groups-acting-on-sets.html" data-scroll="nFv">Groups Acting on Sets</a></li>
+<li><a href="section-class-equation.html" data-scroll="TME">The Class Equation</a></li>
+<li><a href="section-burnsides-counting-theorem.html" data-scroll="zTN">Burnside's Counting Theorem</a></li>
+<li><a href="exercises-actions.html" data-scroll="PcL">Exercises</a></li>
+<li><a href="actions-exercises-programming.html" data-scroll="vjU">Programming Exercise</a></li>
+<li><a href="actions-references.html" data-scroll="VdC">References and Suggested Reading</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="sylow.html" data-scroll="TkO"><span class="codenumber">14</span> <span class="title">The Sylow Theorems</span></a><ul>
+<li><a href="section-sylow-theorems.html" data-scroll="ILJ">The Sylow Theorems</a></li>
+<li><a href="section-sylow-applications.html" data-scroll="oSS">Examples and Applications</a></li>
+<li><a href="reading-questions-23.html" data-scroll="EPk">Reading Questions</a></li>
+<li><a href="exercises-sylow.html" data-scroll="kiZ">Exercises</a></li>
+<li><a href="sylow-exercises-project.html" data-scroll="Qqi">A Project</a></li>
+<li><a href="sylow-references.html" data-scroll="Sgz">References and Suggested Readings</a></li>
+</ul>
+</li>
+<li class="link part"><a href="part-additional.html" data-scroll="part-additional"><span class="codenumber">IV</span> <span class="title">Additional Topics</span></a></li>
+<li class="link">
+<a href="matrix.html" data-scroll="CSk"><span class="codenumber">15</span> <span class="title">Matrix Groups and Symmetry</span></a><ul>
+<li><a href="section-matrix-groups.html" data-scroll="geN">Matrix Groups</a></li>
+<li><a href="section-symmetry.html" data-scroll="MlW">Symmetry</a></li>
+<li><a href="reading-questions-24.html" data-scroll="jhg">Reading Questions</a></li>
+<li><a href="exercises-matrix.html" data-scroll="nJm">Exercises</a></li>
+<li><a href="matrix-references.html" data-scroll="IcT">References and Suggested Readings</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="algcodes.html" data-scroll="jTr"><span class="codenumber">16</span> <span class="title">Algebraic Coding Theory</span></a><ul>
+<li><a href="section-error-detecting-correcting-codes.html" data-scroll="lIE">Error-Detecting and Correcting Codes</a></li>
+<li><a href="section-linear-codes.html" data-scroll="RPN">Linear Codes</a></li>
+<li><a href="section-parity-check.html" data-scroll="xWW">Parity-Check and Generator Matrices</a></li>
+<li><a href="section-efficient-decoding.html" data-scroll="eef">Efficient Decoding</a></li>
+<li><a href="reading-questions-25.html" data-scroll="gmA">Reading Questions</a></li>
+<li><a href="exercises-algcodes.html" data-scroll="NfU">Exercises</a></li>
+<li><a href="algcodes-exercises-programming.html" data-scroll="tnd">Programming Exercises</a></li>
+<li><a href="algcodes-references.html" data-scroll="GJf">References and Suggested Readings</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="finite.html" data-scroll="Gnc"><span class="codenumber">17</span> <span class="title">Finite Fields</span></a><ul>
+<li><a href="section-finite-field.html" data-scroll="jzF">Structure of a Finite Field</a></li>
+<li><a href="section-poly-codes.html" data-scroll="PGO">Polynomial Codes</a></li>
+<li><a href="reading-questions-26.html" data-scroll="RdC">Reading Questions</a></li>
+<li><a href="exercises-finite.html" data-scroll="KWV">Exercises</a></li>
+<li><a href="finite-exercises-bch-codes.html" data-scroll="ree">Additional Exercises: Error Correction for <abbr class="acronym">BCH</abbr> Codes</a></li>
+<li><a href="finite-references.html" data-scroll="Yrk">References and Suggested Readings</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="boolean.html" data-scroll="dAp"><span class="codenumber">18</span> <span class="title">Lattices and Boolean Algebras</span></a><ul>
+<li><a href="section-boolean-lattices.html" data-scroll="Tbk">Lattices</a></li>
+<li><a href="section-boolean-algebras.html" data-scroll="zit">Boolean Algebras</a></li>
+<li><a href="section-algebra-of-circuits.html" data-scroll="fpC">The Algebra of Electrical Circuits</a></li>
+<li><a href="reading-questions-27.html" data-scroll="nQZ">Reading Questions</a></li>
+<li><a href="exercises-boolean.html" data-scroll="uyA">Exercises</a></li>
+<li><a href="boolean-exercises-programming.html" data-scroll="aFJ">Programming Exercises</a></li>
+<li><a href="boolean-references.html" data-scroll="QcR">References and Suggested Readings</a></li>
+</ul>
+</li>
+<li class="link backmatter"><a href="backmatter.html" data-scroll="uDN"><span class="title">Reference</span></a></li>
+<li class="link"><a href="appendix-gfdl.html" data-scroll="gAi"><span class="codenumber">A</span> <span class="title">GNU Free Documentation License</span></a></li>
+<li class="link"><a href="solutions-1.html" data-scroll="aKW"><span class="codenumber">B</span> <span class="title">Hints and Answers to Selected Exercises</span></a></li>
+<li class="link"><a href="appendix-2.html" data-scroll="MHr"><span class="codenumber">C</span> <span class="title">Notation</span></a></li>
+<li class="link"><a href="index-1.html" data-scroll="index-1"><span class="title">Index</span></a></li>
+<li class="link"><a href="colophon-2.html" data-scroll="colophon-2"><span class="title">Colophon</span></a></li>
+</ul></nav><div class="extras"><nav><a class="mathbook-link" href="https://pretextbook.org">Authored in PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" alt="Powered by MathJax"></a></nav></div>
+</div></div>
+<main class="main"><div id="content" class="pretext-content"><section xmlns:svg="http://www.w3.org/2000/svg" class="section" id="QIu"><h2 class="heading hide-type">
+<span class="type">Section</span> <span class="codenumber">5.2</span> <span class="title">Integral Domains and Fields</span>
+</h2>
+<p id="BHa">Let us briefly recall some definitions. If \(R\) is a ring and \(r\) is a nonzero element in \(R\text{,}\) then \(r\) is said to be a <dfn class="terminology">zero divisor</dfn> if there is some nonzero element \(s \in R\) such that \(rs = 0\text{.}\) A commutative ring with identity is said to be an <dfn class="terminology">integral domain</dfn> if it has no zero divisors. If an element \(a\) in a ring \(R\) with identity has a multiplicative inverse, we say that \(a\) is a <dfn class="terminology">unit</dfn>. If every nonzero element in a ring \(R\) is a unit, then \(R\) is called a <dfn class="terminology">division ring</dfn>. A commutative division ring is called a <dfn class="terminology">field</dfn>.</p>
+<article class="example example-like" id="bvU"><h6 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">5.12</span><span class="period">.</span>
+</h6>
+<p id="baI">If \(i^2 = -1\text{,}\) then the set \({\mathbb Z}[ i ] = \{ m + ni : m, n \in {\mathbb Z} \}\) forms a ring known as the <dfn class="terminology">Gaussian integers</dfn>.  It is easily seen that the Gaussian integers are a subring of the complex numbers since they are closed under addition and multiplication. Let \(\alpha = a + bi\) be a unit in \({\mathbb Z}[ i ]\text{.}\) Then \(\overline{\alpha} = a - bi\) is also a unit since if \(\alpha \beta = 1\text{,}\) then \(\overline{\alpha} \overline{\beta} = 1\text{.}\) If \(\beta = c + di\text{,}\) then</p>
+<div class="displaymath">
+\begin{equation*}
+1 = \alpha \beta \overline{\alpha} \overline{\beta} = (a^2 + b^2 )(c^2 + d^2)\text{.}
+\end{equation*}
+</div>
+<p data-braille="continuation">Therefore, \(a^2 + b^2\) must either be \(1\) or \(-1\text{;}\) or, equivalently, \(a + bi = \pm 1\) or \(a + bi = \pm i\text{.}\) Therefore, units of this ring are \(\pm 1\) and \(\pm i\text{;}\) hence, the Gaussian integers are not a field. We will leave it as an exercise to prove that the Gaussian integers are an integral domain.</p></article><article class="example example-like" id="HDd"><h6 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">5.13</span><span class="period">.</span>
+</h6>
+<p id="HhR">The set of matrices</p>
+<div class="displaymath">
+\begin{equation*}
+F =
+\left\{
+\begin{pmatrix}
+1 &amp; 0 \\
+0 &amp; 1
+\end{pmatrix},
+\begin{pmatrix}
+1 &amp; 1 \\
+1 &amp; 0
+\end{pmatrix},
+\begin{pmatrix}
+0 &amp; 1 \\
+1 &amp; 1
+\end{pmatrix},
+\begin{pmatrix}
+0 &amp; 0 \\
+0 &amp; 0
+\end{pmatrix}
+\right\}
+\end{equation*}
+</div>
+<p data-braille="continuation">with entries in \({\mathbb Z}_2\) forms a field.</p></article><article class="example example-like" id="nKm"><h6 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">5.14</span><span class="period">.</span>
+</h6>
+<p id="npa">The set \({\mathbb Q}( \sqrt{2}\, ) = \{ a + b \sqrt{2} : a, b \in {\mathbb Q} \}\) is a field. The inverse of an element \(a + b \sqrt{2}\) in \({\mathbb Q}( \sqrt{2}\, )\) is</p>
+<div class="displaymath">
+\begin{equation*}
+\frac{a}{a^2 - 2 b^2} +\frac{- b}{ a^2 - 2 b^2} \sqrt{2}\text{.}
+\end{equation*}
+</div></article><p id="hOj">We have the following alternative characterization of integral domains.</p>
+<article class="proposition theorem-like" id="Nsp"><h6 class="heading">
+<span class="type">Proposition</span><span class="space"> </span><span class="codenumber">5.15</span><span class="period">.</span><span class="space"> </span><span class="title">Cancellation Law.</span>
+</h6>
+<p id="gPU">Let \(D\) be a commutative ring with identity. Then \(D\) is an integral domain if and only if for all nonzero elements \(a \in D\) with \(ab = ac\text{,}\) we have \(b=c\text{.}\)</p></article><article class="proof" id="roM"><h6 class="heading"><span class="type">Proof<span class="period">.</span></span></h6>
+<p id="EIK">Let \(D\) be an integral domain. Then \(D\) has no zero divisors. Let \(ab = ac\) with \(a \neq 0\text{.}\) Then \(a(b - c) =0\text{.}\) Hence, \(b - c = 0\) and \(b = c\text{.}\)</p>
+<p id="kPT">Conversely, let us suppose that cancellation is possible in \(D\text{.}\) That is, suppose that \(ab = ac\) implies \(b=c\text{.}\) Let \(ab = 0\text{.}\) If \(a \neq 0\text{,}\) then \(ab = a 0\) or \(b=0\text{.}\) Therefore, \(a\) cannot be a zero divisor.</p></article><p id="NVs">The following surprising theorem is due to Wedderburn.</p>
+<article class="theorem theorem-like" id="LDc"><h6 class="heading">
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">5.16</span><span class="period">.</span>
+</h6>
+<p id="faH">Every finite integral domain is a field.</p></article><article class="proof" id="Ocj"><h6 class="heading"><span class="type">Proof<span class="period">.</span></span></h6>
+<p id="QXc">Let \(D\) be a finite integral domain and \(D^\ast\) be the set of nonzero elements of \(D\text{.}\) We must show that every element in \(D^*\) has an inverse. For each \(a \in D^\ast\) we can define a map \(\lambda_a : D^\ast \rightarrow D^\ast\) by \(\lambda_a(d) = ad\text{.}\) This map makes sense, because if  \(a \neq 0\) and \(d \neq 0\text{,}\) then \(ad \neq 0\text{.}\) The map \(\lambda_a\) is one-to-one, since for \(d_1, d_2 \in D^*\text{,}\)</p>
+<div class="displaymath">
+\begin{equation*}
+ad_1 = \lambda_a(d_1) = \lambda_a(d_2) = ad_2
+\end{equation*}
+</div>
+<p data-braille="continuation">implies \(d_1 = d_2\) by left cancellation. Since \(D^\ast\) is a finite set, the map \(\lambda_a\) must also be onto; hence, for some \(d \in D^\ast\text{,}\) \(\lambda_a(d) = ad = 1\text{.}\) Therefore, \(a\) has a left inverse. Since \(D\) is commutative, \(d\) must also be a right inverse for \(a\text{.}\) Consequently, \(D\) is a field.</p></article><p id="ucB">For any nonnegative integer \(n\) and any element \(r\) in a ring \(R\) we write \(r + \cdots + r\) (\(n\) times) as \(nr\text{.}\) We define the <dfn class="terminology">characteristic</dfn> of a ring \(R\) to be the least positive integer \(n\) such that \(nr = 0\) for all \(r \in R\text{.}\) If no such integer exists, then the characteristic of \(R\) is defined to be \(0\text{.}\) We will denote the characteristic of \(R\) by \(\chr R\text{.}\) </p>
+<article class="example example-like" id="TRv"><h6 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">5.17</span><span class="period">.</span>
+</h6>
+<p id="Twj">For every prime \(p\text{,}\) \({\mathbb Z}_p\) is a field of characteristic \(p\text{.}\) By <a class="xref" data-knowl="./knowl/proposition-zn-equiv-classes.html" title="Proposition 2.4">Proposition 2.4</a>, every nonzero element in \({\mathbb Z}_p\) has an inverse; hence, \({\mathbb Z}_p\) is a field. If \(a\) is any nonzero element in the field, then \(pa =0\text{,}\) since the order of any nonzero element in the abelian group \({\mathbb Z}_p\) is \(p\text{.}\)</p></article><article class="lemma theorem-like" id="lUZ"><h6 class="heading">
+<span class="type">Lemma</span><span class="space"> </span><span class="codenumber">5.18</span><span class="period">.</span>
+</h6>
+<p id="FsE">Let \(R\) be a ring with identity. If \(1\) has order \(n\text{,}\) then the characteristic of \(R\) is \(n\text{.}\)</p></article><article class="proof" id="jKn"><h6 class="heading"><span class="type">Proof<span class="period">.</span></span></h6>
+<p id="xel">If \(1\) has order \(n\text{,}\) then \(n\) is the least positive integer such that \(n 1 = 0\text{.}\) Thus, for all \(r \in R\text{,}\)</p>
+<div class="displaymath">
+\begin{equation*}
+nr = n(1r) = (n 1) r = 0r = 0\text{.}
+\end{equation*}
+</div>
+<p data-braille="continuation">On the other hand, if no positive \(n\) exists such that \(n1 = 0\text{,}\) then the characteristic of \(R\) is zero.</p></article><article class="theorem theorem-like" id="rKl"><h6 class="heading">
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">5.19</span><span class="period">.</span>
+</h6>
+<p id="LhQ">The characteristic of an integral domain is either prime or zero.</p></article><article class="proof" id="ujs"><h6 class="heading"><span class="type">Proof<span class="period">.</span></span></h6>
+<p id="dlu">Let \(D\) be an integral domain and suppose that the characteristic of \(D\) is \(n\) with \(n \neq 0\text{.}\) If \(n\) is not prime, then \(n = ab\text{,}\) where \(1 \lt a \lt n\) and \(1 \lt b \lt n\text{.}\) By <a class="xref" data-knowl="./knowl/lemma-ring-characteristic.html" title="Lemma 5.18">Lemma 5.18</a>, we need only consider the case \(n 1 = 0\text{.}\) Since \(0 = n 1 = (ab)1 = (a1)(b1)\) and there are no zero divisors in \(D\text{,}\) either \(a1 =0\) or \(b1=0\text{.}\) Hence, the characteristic of \(D\) must be less than \(n\text{,}\) which is a contradiction. Therefore, \(n\) must be prime.</p></article><section class="reading-questions" id="APq"><h3 class="heading hide-type">
+<span class="type">Reading Questions</span> <span class="codenumber"></span> <span class="title">Reading Questions</span>
+</h3>
+<article class="exercise exercise-like" id="lGs"><h6 class="heading"><span class="codenumber">1<span class="period">.</span></span></h6>
+<p id="kAZ">What do we mean by a <dfn class="terminology">zero divisor</dfn>?  Explain and illustrate with an example.</p></article><article class="exercise exercise-like" id="RNB"><h6 class="heading"><span class="codenumber">2<span class="period">.</span></span></h6>
+<p id="QIi">What do we mean by a <dfn class="terminology">unit</dfn>?  Which elements of the field \(\Q\) are units?</p></article><article class="exercise exercise-like" id="xUK"><h6 class="heading"><span class="codenumber">3<span class="period">.</span></span></h6>
+<p id="wPr">What is the <em class="emphasis">Cancellation Law</em> and how does this relate to zero divisors?</p></article><article class="exercise exercise-like" id="ebT"><h6 class="heading"><span class="codenumber">4<span class="period">.</span></span></h6>
+<p id="cWA">After reading the section, what questions do you still have?  Write at least one well formulated question (even if you think you understand everything).</p></article></section><section class="exercises" id="boN"><h3 class="heading hide-type">
+<span class="type">Exercises</span> <span class="codenumber"></span> <span class="title">Practice Problems</span>
+</h3>
+<article class="exercise exercise-like" id="EBq"><h6 class="heading"><span class="codenumber">1<span class="period">.</span></span></h6>
+<p id="zKt">For which \(n\) is \(\Z_n\) an integral domain?  For which \(n\) is \(\Z_n\) a field?</p>
+<div class="solutions"></div></article><article class="exercise exercise-like" id="kIz"><h6 class="heading"><span class="codenumber">2<span class="period">.</span></span></h6>
+<p id="fRC">Just like we did for groups, we can take the direct product of rings.  For example, the ring \(\Z_2 \times \Z_3\) contains 6 elements.  We add and multiply elements wise.</p>
+<p id="LYL">For which \(m\) and \(n\) is the ring \(\Z_m \times \Z_n\) an integral domain?</p>
+<div class="solutions"></div></article><article class="exercise exercise-like" id="QPI"><h6 class="heading"><span class="codenumber">3<span class="period">.</span></span></h6>
+<p id="sfU">Let \(R\) be a ring.  For \(x \in R\text{,}\) we write \(nx\) to mean \(x + x + \cdots + x\) (            \(n\) times).  What is \((nx)^2\text{?}\)  What about \((nx)^3\text{?}\)</p>
+<div class="solutions"></div></article><article class="exercise exercise-like" id="wWR"><h6 class="heading"><span class="codenumber">4<span class="period">.</span></span></h6>
+<p id="Ynd">Suppose that \(R\) is a ring such that \(x^3 = x\) for all \(x \in R\text{.}\)  Prove that \(6x = 0\) for all \(x \in R\text{.}\)</p>
+<div class="solutions"></div></article></section><section class="exercises" id="HvW"><h3 class="heading hide-type">
+<span class="type">Exercises</span> <span class="codenumber"></span> <span class="title">Collected Homework</span>
+</h3>
+<article class="exercise exercise-like" id="dea"><h6 class="heading"><span class="codenumber">C1<span class="period">.</span></span></h6>
+<p id="Eum">An element \(a\) in a ring \(R\) is called an <dfn class="terminology">idempotent</dfn> if \(a^2 = a\text{.}\) Prove that if \(R\) is an integral domain, the only idempotents are 0 and 1.  Then give an example of a ring that has an idempotent other than 0 and 1.</p></article><article class="exercise exercise-like" id="Jlj"><h6 class="heading"><span class="codenumber">C2<span class="period">.</span></span></h6>
+<p id="kBv">Suppose \(R\) is a ring such that \(x^2 = x\) for all \(x \in R\) (that is, every element is idempotent; such rings are called <dfn class="terminology">Boolean rings</dfn>).</p>
+<ol class="lower-alpha">
+<li id="Bll"><p id="Ojx">Prove that \(-x = x\) for all \(x \in R\text{.}\)</p></li>
+<li id="hsu"><p id="uqG">Prove that \(R\) is commutative.</p></li>
+</ol>
+<div class="solutions">
+<a data-knowl="" class="id-ref hint-knowl original" data-refid="hk-jDg" id="jDg"><span class="type">Hint</span></a><div class="hidden-content tex2jax_ignore" id="hk-jDg"><div class="hint solution-like"><p id="WxQ">For the second part, what is \((a+b)^2\text{?}\)</p></div></div>
+</div></article></section></section></div></main>
+</div>
+<script src="https://unpkg.com/prismjs@v1.22.0/components/prism-core.min.js"></script><script src="https://unpkg.com/prismjs@v1.22.0/plugins/autoloader/prism-autoloader.min.js"></script>
+</body>
+</html>

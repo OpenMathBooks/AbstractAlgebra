@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<section xml:id="notes-week2" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>Week 2: Jan 20-24</title>
+  
+  <introduction>
+    <p>
+      No class on Monday, January 20th in observance of Marthin Luther King, Jr. Day.
+    </p>
+  </introduction>
+
+  <subsection xml:id="notes-1-22">
+    <title>Wednesday, January 22</title>
+    
+    <introduction>
+      <p>
+        Today we will bring together the review from last week to see how it helps us understand extension fields built to contain particular roots of polynomials.
+      </p>
+    </introduction>
+
+  <paragraphs>
+    <title>Extension Fields as Quotient Rings</title>
+    
+    <p>
+      To set the stage: we are considering a field <m>E</m> that extends a field <m>F</m> (which we often take to be <m>\Q</m>).
+      <ul>
+        <li>
+          <p>
+            We want <m>E</m> to be the smallest field in which a particular polynomial irreducible <m>p(x)</m>, with coefficients from the <term>base field</term> <m>F</m>, can factor.  
+          </p>
+        </li>
+        <li>
+          <p>
+            Let <m>\alpha</m> be a root of <m>p(x)</m>.  We consider <m>F(\alpha) = \{a+b\alpha + c \alpha^2 + \cdots \st a, b, c,\ldots \in F\}</m> (the powers of <m>\alpha</m> go up to one less than the degree of <m>p(x)</m>).
+          </p>
+        </li>
+        <li>
+          <p>
+            This is certainly a ring, but we want to make sure it is a field.
+          </p>
+        </li>
+        <li>
+          <p>
+            Consider <m>F[x]</m>, the set of all polynomials with coefficients from <m>F</m>.  Consider the <term>evaluation homomorphism</term> <m>\sigma_\alpha:F[x] \to F(\alpha)</m> given by <m>\sigma_\alpha(p(x)) = p(\alpha)</m>.   That is, just plug in <m>\alpha</m> for <m>x</m>.
+          </p>
+        </li>
+        <li>
+          <p>
+            We can easily see that <m>\sigma_\alpha</m> is a <em>surjective</em> homomorphism.  What's more, the <em>kernel</em> <m>K</m> of <m>\sigma_\alpha</m> is an ideal that contains <m>p(x)</m>.  
+          </p>
+        </li>
+        <li>
+          <p>
+            In fact, <m>K</m> must contain exactly the polynomials that have <m>\alpha</m> as a root.  By the division algorithm, we can show that all these polynomials have <m>p(x)</m> as a factor (since <m>p(x)</m> is irreducible).  That is, <m>K = \langle p(x) \rangle</m>.
+          </p>
+        </li>
+        <li>
+          <p>
+            Thus by the Fundamental Homomorphism Theorem, <m>F[x]/\langle p(x) \rangle \cong F(c)</m>.
+          </p>
+        </li>
+        <li>
+          <p>
+            The reason this is helpful: if we can prove that <m>F[x]/\langle p(x) \rangle</m> is a field, then <m>F(c)</m> must also be a field.
+          </p>
+        </li>
+        <li>
+          <p>
+            The only thing we need to check is that every non-zero element of that quoteint ring <m>F[x]/\langle p(x) \rangle</m> has a multiplicative inverse.
+          </p>
+        </li>
+      </ul>
+    </p>
+  </paragraphs>
+
+  </subsection>
+
+  <subsection xml:id="notes-1-24">
+    <title>Friday, January 24</title>
+    <p>
+      The goal today is to connect the work we have done with the Euclidean algorithm and Bezout's lemma to the idea of extension fields as quotient rings.  Do the activity and discuss.
+    </p>
+  </subsection>
+
+
+</section>

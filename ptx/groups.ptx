@@ -1,0 +1,4143 @@
+<?xml version="1.0"?>
+<!-- This file is part of the book                    -->
+<!--                                                  -->
+<!-- Abstract Algebra: Theory and Applications        -->
+<!--                                                  -->
+<!-- Text: Copyright (C) 1997-2020  Thomas W. Judson  -->
+<!-- Sage: Copyright (C) 2010-2020  Robert A. Beezer  -->
+<!-- See the file COPYING for copying conditions.     -->
+<!-- This file is part of the book                    -->
+<!--                                                  -->
+<!-- See the file COPYING for copying conditions.     -->
+<chapter xmlns:xi="http://www.w3.org/2001/XInclude" xml:id="groups" permid="ZbN">
+  <title>Groups</title>
+  <introduction permid="sdG">
+    <p permid="nfF">
+      We begin our study of algebraic structures by investigating sets associated with single operations that satisfy certain reasonable axioms;
+      that is, we want to define an operation on a set in a way that will generalize such familiar structures as the integers
+      <m>{\mathbb Z}</m> together with the single operation of addition,
+      or invertible <m>2 \times 2</m> matrices together with the single operation of matrix multiplication.
+      The integers and the <m>2 \times 2</m> matrices,
+      together with their respective single operations,
+      are examples of algebraic structures known as groups.
+    </p>
+
+    <p permid="TmO">
+      The theory of groups occupies a central position in mathematics.
+      Modern group theory arose from an attempt to find the roots of a polynomial in terms of its coefficients.
+      Groups now play a central role in such areas as coding theory,
+      counting, and the study of symmetries;
+      many areas of biology, chemistry,
+      and physics have benefited from group theory.
+    </p>
+  </introduction>
+
+  <section xml:id="section-mod-n-sym" permid="nfs">
+    <title>Integer Equivalence Classes and Symmetries</title>
+    <introduction permid="YkP">
+      <p permid="ztX">
+        Let us now investigate some mathematical structures that can be viewed as sets with single operations.
+      </p>
+    </introduction>
+
+    <subsection xml:id="groups-subsection-integers-mod-n" permid="FiW">
+      <title>The Integers mod <m>n</m></title>
+      <p permid="RLW">
+        The integers mod <m>n</m> have become indispensable in the theory and applications of algebra.
+        In mathematics they are used in cryptography, coding theory,
+        and the detection of errors in identification codes.
+      </p>
+
+      <p permid="xTf">
+        We have already seen that two integers <m>a</m> and <m>b</m> are equivalent mod <m>n</m> if <m>n</m> divides <m>a - b</m>.
+        The integers mod <m>n</m> also partition
+        <m>{\mathbb Z}</m> into <m>n</m> different equivalence classes;
+        we will denote the set of these equivalence classes by <m>{\mathbb Z}_n</m>.
+
+        <notation>
+          <usage>\mathbb Z_n</usage>
+          <description>the integers modulo <m>n</m></description>
+        </notation>
+
+        Consider the integers modulo <m>12</m> and the corresponding partition of the integers:
+        <md permid="PBk">
+          <mrow>{[0]} &amp; = \{ \ldots, -12, 0, 12, 24, \ldots \},</mrow>
+          <mrow>{[1]} &amp; = \{ \ldots, -11, 1, 13, 25, \ldots \},</mrow>
+          <mrow>&amp; \vdots</mrow>
+          <mrow>{[11]} &amp; = \{ \ldots, -1, 11, 23, 35, \ldots \}</mrow>
+        </md>.
+        When no confusion can arise,
+        we will use <m>0, 1, \ldots, 11</m> to indicate the equivalence classes  <m>{[0]}, {[1]}, \ldots, {[11]}</m> respectively.
+        We can do arithmetic on <m>{\mathbb Z}_n</m>.
+        For two integers <m>a</m> and <m>b</m>,
+        define addition modulo <m>n</m> to be <m>(a + b) \pmod{n}</m>;
+        that is, the remainder when <m>a + b</m> is divided by <m>n</m>.
+        Similarly, multiplication modulo <m>n</m> is defined as <m>(a  b) \pmod{ n}</m>,
+        the remainder when <m>a  b</m> is divided by <m>n</m>.
+      </p>
+
+      <example xml:id="example-groups-zn-addition" permid="rPl">
+        <p permid="gGz">
+          The following examples illustrate integer arithmetic modulo <m>n</m>:
+          <md permid="vIt">
+            <mrow>7 + 4 &amp; \equiv  1 \pmod{ 5} &amp; 7 \cdot 3 &amp; \equiv 1 \pmod{ 5}</mrow>
+            <mrow>3 + 5 &amp; \equiv  0 \pmod{ 8} &amp; 3 \cdot 5 &amp; \equiv 7 \pmod{ 8}</mrow>
+            <mrow>3 + 4 &amp; \equiv 7 \pmod{ 12} &amp; 3 \cdot 4 &amp; \equiv 0 \pmod{ 12}</mrow>
+          </md>.
+          In particular,
+          notice that it is possible that the product of two nonzero numbers modulo <m>n</m> can be equivalent to <m>0</m> modulo <m>n</m>.
+        </p>
+      </example>
+
+      <example xml:id="example-groups-zn-arithmetic-laws" permid="XWu">
+        <p permid="MNI">
+          Most, but not all,
+          of the usual laws of arithmetic hold for addition and multiplication in <m>{\mathbb Z}_n</m>.
+          For instance,
+          it is not necessarily true that there is a multiplicative inverse.
+          Consider the multiplication table for
+          <m>{\mathbb Z}_8</m> in <xref ref="table-z8-mult"/>.
+          Notice that <m>2</m>, <m>4</m>,
+          and <m>6</m> do not have multiplicative inverses;
+          that is, for <m>n = 2</m>, <m>4</m>, or <m>6</m>,
+          there is no integer <m>k</m> such that <m>k n \equiv 1 \pmod{ 8}</m>.
+        </p>
+
+        <figure xml:id="table-z8-mult" permid="PPF">
+            <!-- math table -->
+          <caption>Multiplication table for <m>{\mathbb Z_8}</m></caption>
+          <p permid="sUR">
+            <me permid="bPC">
+              \begin{array}{c|cccccccc}
+              \cdot &amp; 0 &amp; 1 &amp; 2 &amp; 3 &amp; 4 &amp; 5 &amp; 6 &amp; 7 \\
+              \hline
+              0       &amp; 0 &amp; 0 &amp; 0 &amp; 0 &amp; 0 &amp; 0 &amp; 0 &amp; 0 \\
+              1       &amp; 0 &amp; 1 &amp; 2 &amp; 3 &amp; 4 &amp; 5 &amp; 6 &amp; 7 \\
+              2       &amp; 0 &amp; 2 &amp; 4 &amp; 6 &amp; 0 &amp; 2 &amp; 4 &amp; 6 \\
+              3       &amp; 0 &amp; 3 &amp; 6 &amp; 1 &amp; 4 &amp; 7 &amp; 2 &amp; 5 \\
+              4       &amp; 0 &amp; 4 &amp; 0 &amp; 4 &amp; 0 &amp; 4 &amp; 0 &amp; 4 \\
+              5       &amp; 0 &amp; 5 &amp; 2 &amp; 7 &amp; 4 &amp; 1 &amp; 6 &amp; 3 \\
+              6       &amp; 0 &amp; 6 &amp; 4 &amp; 2 &amp; 0 &amp; 6 &amp; 4 &amp; 2 \\
+              7       &amp; 0 &amp; 7 &amp; 6 &amp; 5 &amp; 4 &amp; 3 &amp; 2 &amp; 1 
+              \end{array}
+            </me>
+          </p>
+        </figure>
+      </example>
+
+
+      <proposition xml:id="proposition-zn-equiv-classes" permid="LIc">
+        <statement>
+          <p permid="DtW">
+            Let <m>{\mathbb Z}_n</m> be the set of equivalence classes of the integers mod <m>n</m> and <m>a,
+            b, c \in {\mathbb Z}_n</m>.
+
+            <ol permid="gdJ">
+              <li permid="VEE">
+                <p permid="CvH">
+                  Addition and multiplication are commutative:
+                  <md permid="HWL">
+                    <mrow>a + b &amp; \equiv b + a \pmod{ n}</mrow>
+                    <mrow>a  b &amp; \equiv b  a \pmod{ n}</mrow>
+                  </md>.
+                </p>
+              </li>
+
+              <li permid="BLN">
+                <p permid="iCQ">
+                  Addition and multiplication are associative:
+                  <md permid="odU">
+                    <mrow>(a + b) + c &amp; \equiv  a + (b + c)\pmod{ n}</mrow>
+                    <mrow>(a  b) c &amp; \equiv  a   (b  c) \pmod{ n}</mrow>
+                  </md>.
+                </p>
+              </li>
+
+              <li permid="hSW">
+                <p permid="OJZ">
+                  There are both additive and multiplicative identities:
+                  <md permid="Uld">
+                    <mrow>a + 0  &amp; \equiv  a \pmod{ n}</mrow>
+                    <mrow>a \cdot  1  &amp; \equiv  a \pmod{ n}</mrow>
+                  </md>.
+                </p>
+              </li>
+
+              <li permid="Oaf">
+                <p permid="uRi">
+                  Multiplication distributes over addition:
+                  <me permid="Asm">
+                    a  (b  + c)  \equiv a  b + a  c  \pmod{ n}
+                  </me>.
+                </p>
+              </li>
+
+              <li permid="uho">
+                <p permid="aYr">
+                  For every integer <m>a</m> there is an additive inverse <m>-a</m>:
+                  <me permid="gzv">
+                    a + (-a)  \equiv 0 \pmod{ n}
+                  </me>.
+                </p>
+              </li>
+
+              <li permid="aox">
+                <p permid="HfA">
+                  Let <m>a</m> be a nonzero integer.
+                  Then <m>\gcd(a,n) = 1</m> if and only if there exists a multiplicative inverse <m>b</m> for <m>a \pmod{n}</m>;
+                  that is, a nonzero integer <m>b</m> such that
+                  <me permid="MGE">
+                    a  b  \equiv 1 \pmod{ n}
+                  </me>.
+                </p>
+              </li>
+            </ol>
+          </p>
+        </statement>
+        <!--Todo RAB: consider cases in proofs for mathBook XML-->
+        <!--Todo See if id/ref works on items in ordered lists-->
+
+        <proof permid="QGq">
+          <p permid="VxA">
+            We will prove (1) and (6) and leave the remaining properties to be proven in the exercises.
+          </p>
+
+          <p permid="BEJ">
+            (1) Addition and multiplication are commutative modulo <m>n</m> since the remainder of <m>a + b</m> divided by <m>n</m> is the same as the remainder of <m>b + a</m> divided by <m>n</m>.
+          </p>
+
+          <p permid="hLS">
+            (6) Suppose that <m>\gcd(a, n) = 1</m>.
+            Then there exist integers <m>r</m> and <m>s</m> such that <m>ar + ns = 1</m>.
+            Since <m>ns = 1 - ar</m>,
+            it must be the case that <m>ar \equiv 1 \pmod{n}</m>.
+            Letting <m>b</m> be the equivalence class of <m>r</m>,
+            <m>a b \equiv 1\pmod{n}</m>.
+          </p>
+
+          <p permid="NTb">
+            Conversely, suppose that there exists an integer <m>b</m> such that <m>ab \equiv 1 \pmod{ n}</m>.
+            Then <m>n</m> divides <m>ab -1</m>,
+            so there is an integer <m>k</m> such that <m>ab - nk = 1</m>.
+            Let <m>d = \gcd(a,n)</m>.
+            Since <m>d</m> divides <m>ab - nk</m>,
+            <m>d</m> must also divide <m>1</m>; hence, <m>d = 1</m>.
+          </p>
+        </proof>
+      </proposition>
+    </subsection>
+
+    <subsection xml:id="groups-subsection-symmetries" permid="lqf">
+      <title>Symmetries</title>
+            <!-- Symmetries of a rectangle  Replaced diagram with a tikz figure - TWJ 5/4/2010 -->
+      <figure xml:id="figure-groups-rectangle" permid="iKh">
+        <caption>Rigid motions of a rectangle</caption>
+        <image xml:id="groups-rectangle" permid="DBn">
+          <description>The four symmetries ot a rectangle: (1) sending rectangle ABCD to rectangle ABCD, (2) sending rectangle ABCD to rectangle CDAB, (3) sending rectangle ABCD to rectangle BADC, and (4) sending rectangle ABCD to rectangle DCBA.</description>
+
+            <latex-image>
+                <xi:include href="tikz/groups-rectangle.tex" parse="text"/>
+            </latex-image>
+        </image>
+
+      </figure>
+
+      <p permid="eao">
+        A <term>symmetry</term> of a geometric figure is a rearrangement of the figure preserving the arrangement of its sides and vertices as well as its distances and angles.
+        A map from the plane to itself preserving the symmetry of an object is called a
+        <term>rigid motion</term>.
+            <idx><h>Rigid motion</h></idx>
+        For example,
+        if we look at the rectangle in <xref ref="figure-groups-rectangle"/>,
+        it is easy to see that a rotation of <m>180^{\circ}</m> or
+        <m>360^{\circ}</m> returns a rectangle in the plane with the same orientation as the original rectangle and the same relationship among the vertices.
+        A reflection of the rectangle across either the vertical axis or the horizontal axis can also be seen to be a symmetry.
+        However, a <m>90^{\circ}</m> rotation in either direction cannot be a symmetry unless the rectangle is a square.
+      </p>
+            <!-- Replaced diagram with a tikz figure - TWJ 5/5/2010 -->
+      <figure xml:id="figure-s3-symmetry" permid="ORq">
+        <caption>Symmetries of a triangle</caption>
+        <image xml:id="groups-s3-symmetry" permid="jIw">
+          <description>The six symmetries of a triangle: (1) triangle ABC to triangle ABC, (2) ABC to CAB, (3) ABC to BCA, (4) ABC to ACB, (5) ABC to CBA, and (6) ABC to BAC</description>
+
+            <latex-image>
+                <xi:include href="tikz/groups-s3-symmetry.tex" parse="text"/>
+            </latex-image>
+        </image>
+
+      </figure>
+
+      <p permid="Khx">
+        Let us find the symmetries of the equilateral triangle <m>\bigtriangleup ABC</m>.
+        To find a symmetry of <m>\bigtriangleup ABC</m>,
+        we must first examine the permutations of the vertices <m>A</m>,
+        <m>B</m>,
+        and <m>C</m> and then ask if a permutation extends to a symmetry of the triangle.
+        Recall that a <term>permutation</term>
+        of a set <m>S</m> is a one-to-one and onto map <m>\pi :S \rightarrow S</m>.
+        The three vertices have <m>3! = 6</m> permutations,
+        so the triangle has at most six symmetries.
+        To see that there are six permutations,
+        observe there are three different possibilities for the first vertex,
+        and two for the second,
+        and the remaining vertex is determined by the placement of the first two.
+        So we have <m>3 \cdot 2 \cdot 1 = 3! = 6</m> different arrangements.
+        To denote the permutation of the vertices of an equilateral triangle that sends <m>A</m> to <m>B</m>,
+        <m>B</m> to <m>C</m>, and <m>C</m> to <m>A</m>, we write the array
+        <me permid="sNN">
+          \begin{pmatrix}
+          A &amp; B &amp; C \\
+          B &amp; C &amp; A
+          \end{pmatrix}
+        </me>.
+        Notice that this particular permutation corresponds to the rigid motion of rotating the triangle by
+        <m>120^{\circ}</m> in a clockwise direction.
+        In fact, every permutation gives rise to a symmetry of the triangle.
+        All of these symmetries are shown in <xref ref="figure-s3-symmetry"/>.
+      </p>
+
+      <p permid="qoG">
+        A natural question to ask is what happens if one motion of the triangle
+        <m>\bigtriangleup ABC</m> is followed by another.
+        Which symmetry is <m>\mu_1 \rho_1</m>;
+        that is, what happens when we do the permutation <m>\rho_1</m> and then the permutation <m>\mu_1</m>? 
+        <em>Remember that we are composing functions here.
+        Although we usually multiply left to right,
+        we compose functions right to left.</em> We have
+        <md permid="YUW">
+          <mrow>(\mu_1 \rho_1)(A) &amp; = \mu_1( \rho_1( A ) ) = \mu_1( B ) = C</mrow>
+          <mrow>(\mu_1 \rho_1)(B) &amp; = \mu_1( \rho_1( B ) ) = \mu_1( C ) = B</mrow>
+          <mrow>(\mu_1 \rho_1)(C) &amp; = \mu_1( \rho_1( C ) ) = \mu_1( A ) = A</mrow>
+        </md>.
+        This is the same symmetry as <m>\mu_2</m>.
+        Suppose we do these motions in the opposite order,
+        <m>\rho_1</m> then <m>\mu_1</m>.
+        It is easy to determine that this is the same as the symmetry <m>\mu_3</m>;
+        hence, <m>\rho_1 \mu_1 \neq \mu_1 \rho_1</m>.
+        A multiplication table for the symmetries of an equilateral triangle
+        <m>\bigtriangleup ABC</m> is given in <xref ref="table-s3"/>.
+      </p>
+
+      <p permid="WvP">
+        Notice that in the multiplication table for the symmetries of an equilateral triangle,
+        for every motion of the triangle <m>\alpha</m> there is another motion <m>\beta</m> such that <m>\alpha \beta = \identity</m>;
+        that is, for every motion there is another motion that takes the triangle back to its original orientation.
+      </p>
+
+      <figure xml:id="table-s3" permid="osp">
+            <!-- math table -->
+        <caption>Symmetries of an equilateral triangle</caption>
+        <p permid="CCY">
+          <me permid="Fcf">
+            \begin{array}{c|cccccc}
+            \circ  &amp; \identity     &amp; \rho_1 &amp; \rho_2 &amp; \mu_1 &amp; \mu_2 &amp; \mu_3 \\
+            \hline
+            \identity     &amp; \identity     &amp; \rho_1 &amp; \rho_2 &amp; \mu_1 &amp; \mu_2 &amp; \mu_3 \\
+            \rho_1 &amp; \rho_1 &amp; \rho_2 &amp; \identity     &amp; \mu_3 &amp; \mu_1 &amp; \mu_2 \\
+            \rho_2 &amp; \rho_2 &amp; \identity     &amp; \rho_1 &amp; \mu_2 &amp; \mu_3 &amp; \mu_1 \\
+            \mu_1  &amp; \mu_1  &amp; \mu_2  &amp; \mu_3  &amp; \identity    &amp; \rho_1&amp; \rho_2\\
+            \mu_2  &amp; \mu_2  &amp; \mu_3  &amp; \mu_1  &amp; \rho_2 &amp; \identity    &amp; \rho_1\\
+            \mu_3  &amp; \mu_3  &amp; \mu_1  &amp; \mu_2  &amp; \rho_1 &amp; \rho_2&amp; \identity
+            \end{array}
+          </me>
+        </p>
+      </figure>
+    </subsection>
+
+    <reading-questions xml:id="rqs-equiv-classes-symmetries" permid="CLH">
+      <exercise xml:id="rq2-1-1" permid="bor">
+        <statement>
+          <p permid="Vzf">
+            What does it mean to say that a number <m>a</m> in <m>\mathbb{Z}_8</m> has a <em>multiplicative inverse</em>?  Describe this in general, and illustrate with an example of an element that has this and one that doesn't.
+          </p>
+        </statement>
+      </exercise>
+      <exercise xml:id="rq2-1-2" permid="HvA">
+        <statement>
+          <p permid="BGo">
+            Why are there six <em>symmetires</em> of an equilateral triangle?  Does this mean there should be <m>4!=24</m> symmetries of a square?
+          </p>
+        </statement>
+      </exercise>
+      <exercise xml:id="rq2-1-3" permid="nCJ">
+        <statement>
+          <p permid="hNx">
+            Which of the operations discussed in this section are <em>commutative</em> and which are not?  What does this mean?  Illustrate with examples.
+          </p>
+        </statement>
+      </exercise>
+      <exercise xml:id="rq2-1-4" permid="TJS">
+        <statement>
+          <p permid="NUG">
+            After reading the section, what questions do you still have?  Write at least one well formulated question (even if you <em>think</em> you understand everything). 
+          </p>
+        </statement>
+      </exercise>
+    </reading-questions>
+  </section>
+
+  <section xml:id="section-groups-define" permid="TmB">
+    <title>Definitions and Examples</title>
+        <!-- % TWJ, 2010/03/31 -->
+        <!-- % Fixed the error  <m>(a,b) \in G \times G</m> -->
+    <introduction permid="ErY">
+      <p permid="fBg">
+        The integers mod <m>n</m> and the symmetries of a triangle or a rectangle are examples of groups.
+        A <term>binary operation</term>
+            <idx><h>Binary operation</h></idx>
+        or <term>law of composition</term>
+        on a set <m>G</m> is a function
+        <m>G \times G \rightarrow G</m> that assigns to each pair
+        <m>(a,b) \in G \times G</m> a unique element <m>a \circ b</m>,
+        or <m>ab</m> in <m>G</m>, called the composition of <m>a</m> and <m>b</m>.
+        A <term>group</term><idx><h>Group</h><h>definition of</h></idx>
+        <m>(G, \circ )</m> is a set <m>G</m> together with a law of composition
+        <m>(a,b) \mapsto a \circ b</m> that satisfies the following axioms.
+
+        <ul permid="ssb">
+          <li permid="djd">
+            <p permid="nmJ">
+              The law of composition is <term>associative</term>.
+              That is,
+              <me permid="ljo">
+                (a \circ b) \circ c = a \circ (b \circ c)
+              </me>
+              for <m>a, b, c \in G</m>.
+            </p>
+          </li>
+
+          <li permid="Jqm">
+            <p permid="TtS">
+              There exists an element <m>e \in G</m>,
+              called the <term>identity element</term>,
+                <idx><h>Element</h><h>identity</h></idx>
+              such that for any element <m>a \in G</m>
+              <me permid="Rqx">
+                e \circ a = a \circ e = a
+              </me>.
+            </p>
+          </li>
+
+          <li permid="pxv">
+            <p permid="zBb">
+              For each element <m>a \in G</m>,
+              there exists an <term>inverse element</term>
+                <idx><h>Element</h><h>inverse</h></idx>
+              in G, denoted by <m>a^{-1}</m>, such that
+              <me permid="xxG">
+                a \circ a^{-1} = a^{-1} \circ a = e
+              </me>.
+            </p>
+          </li>
+        </ul>
+      </p>
+
+      <p permid="LIp">
+        A group <m>G</m> with the property that <m>a \circ b = b \circ a</m> for all
+        <m>a, b \in G</m> is called <term>abelian</term>
+            <idx><h>Abelian group</h></idx>
+            <idx><h>Group</h><h>abelian</h></idx>
+        or <term>commutative</term>.
+            <idx><h>Group</h><h>commutative</h></idx>
+        Groups not satisfying this property are said to be <term>nonabelian</term>
+            <idx><h>Group</h><h>nonabelian</h></idx>
+        or <term>noncommutative</term>.
+            <idx><h>Group</h><h>noncommutative</h></idx>
+      </p>
+
+      <example xml:id="example-groups-integers" permid="bfv">
+        <p permid="Zca">
+          The integers <m>{\mathbb Z } = \{ \ldots , -1, 0, 1, 2, \ldots \}</m> form a group under the operation of addition.
+          The binary operation on two integers <m>m,
+          n \in {\mathbb Z}</m> is just their sum.
+          Since the integers under addition already have a well-established notation,
+          we will use the operator <m>+</m> instead of <m>\circ</m>;
+          that is, we shall write <m>m + n</m> instead of <m>m \circ n</m>.
+          The identity is <m>0</m>,
+          and the inverse of <m>n \in {\mathbb Z}</m> is written as <m>-n</m> instead of <m>n^{-1}</m>.
+          Notice that the set of integers under addition have the additional property that
+          <m>m + n = n + m</m> and therefore form an abelian group.
+        </p>
+      </example>
+
+      <p permid="rPy">
+        Most of the time we will write <m>ab</m> instead of <m>a \circ b</m>;
+        however, if the group already has a natural operation such as addition in the integers,
+        we will use that operation.
+        That is, if we are adding two integers,
+        we still write <m>m + n</m>,
+        <m>-n</m> for the inverse, and 0 for the identity as usual.
+        We also write <m>m - n</m> instead of <m>m + (-n)</m>.
+      </p>
+
+      <p permid="XWH">
+        It is often convenient to describe a group in terms of an addition or multiplication table.
+        Such a table is called a <term>Cayley table</term>.
+            <idx><h>Cayley table</h></idx>
+      </p>
+
+      <example xml:id="example-groups-z5" permid="HmE">
+        <p permid="Fjj">
+          The integers mod <m>n</m> form a group under addition modulo <m>n</m>.
+          Consider <m>{\mathbb Z}_5</m>,
+          consisting of the equivalence classes of the integers <m>0</m>,
+          <m>1</m>,
+          <m>2</m>, <m>3</m>, and <m>4</m>.
+          We define the group operation on <m>{\mathbb Z}_5</m> by modular addition.
+          We write the binary operation on the group additively;
+          that is, we write <m>m + n</m>.
+          The element 0 is the identity of the group and each element in <m>{\mathbb Z}_5</m> has an inverse.
+          For instance, <m>2 + 3 = 3 + 2 = 0</m>.
+          <xref ref="table-z5-cayley"/> is a Cayley table for <m>{\mathbb Z}_5</m>.
+          By <xref ref="proposition-zn-equiv-classes"/>,
+          <m>{\mathbb Z}_n = \{0, 1, \ldots,
+          n-1 \}</m> is a group under the binary operation of addition mod <m>n</m>.
+        </p>
+
+        <figure xml:id="table-z5-cayley" permid="vWO">
+            <!-- math table -->
+          <caption>Cayley table for <m>({\mathbb Z_5}, +)</m></caption>
+          <p permid="lqs">
+            <me permid="dEP">
+              \begin{array}{c|ccccc}
+              + &amp; 0 &amp; 1 &amp; 2 &amp; 3 &amp; 4 \\
+              \hline
+              0 &amp; 0 &amp; 1 &amp; 2 &amp; 3 &amp; 4 \\
+              1 &amp; 1 &amp; 2 &amp; 3 &amp; 4 &amp; 0 \\
+              2 &amp; 2 &amp; 3 &amp; 4 &amp; 0 &amp; 1 \\
+              3 &amp; 3 &amp; 4 &amp; 0 &amp; 1 &amp; 2 \\
+              4 &amp; 4 &amp; 0 &amp; 1 &amp; 2 &amp; 3
+              \end{array}
+            </me>
+          </p>
+        </figure>
+      </example>
+
+      <example xml:id="example-groups-z6-mult" permid="ntN">
+        <p permid="RxB">
+          Not every set with a binary operation is a group.
+          For example,
+          if we let modular multiplication be the binary operation on <m>{\mathbb Z}_n</m>,
+          then <m>{\mathbb Z}_n</m> fails to be a group.
+          The element 1 acts as a group identity since
+          <m>1 \cdot k = k \cdot 1 = k</m> for any <m>k \in {\mathbb Z}_n</m>;
+          however, a multiplicative inverse for <m>0</m> does not exist since
+          <m>0 \cdot k = k \cdot 0 = 0</m> for every <m>k</m> in <m>{\mathbb Z}_n</m>.
+          Even if we consider the set <m>{\mathbb Z}_n \setminus \{0 \}</m>,
+          we still may not have a group.
+          For instance, let <m>2 \in {\mathbb Z}_6</m>.
+          Then 2 has no multiplicative inverse since
+          <md permid="JLY">
+            <mrow>0 \cdot 2 &amp; = 0 \qquad 1 \cdot 2 = 2</mrow>
+            <mrow>2 \cdot 2 &amp; = 4 \qquad 3 \cdot 2 = 0</mrow>
+            <mrow>4 \cdot 2 &amp; = 2 \qquad 5 \cdot 2 = 4</mrow>
+          </md>.
+          By <xref ref="proposition-zn-equiv-classes"/>,
+          every nonzero <m>k</m> does have an inverse in
+          <m>{\mathbb Z}_n</m> if <m>k</m> is relatively prime to <m>n</m>.
+          Denote the set of all such nonzero elements in <m>{\mathbb Z}_n</m> by <m>U(n)</m>.
+
+          <notation>
+            <usage>U(n)</usage>
+            <description>group of units in <m>\mathbb Z_n</m></description>
+          </notation>
+
+          Then <m>U(n)</m> is a group called the
+          <term>group of units</term>
+              <idx><h>Group</h><h>of units</h></idx>
+          of <m>{\mathbb Z}_n</m>.
+          <xref ref="table-cayley-u8"/> is a Cayley table for the group <m>U(8)</m>.
+        </p>
+
+        <figure xml:id="table-cayley-u8" permid="cdX">
+            <!-- math table -->
+          <caption>Multiplication table for <m>U(8)</m></caption>
+          <p permid="xEK">
+            <me permid="pTh">
+              \begin{array}{c|cccc}
+              \cdot &amp; 1 &amp; 3 &amp; 5 &amp; 7 \\
+              \hline
+              1       &amp; 1 &amp; 3 &amp; 5 &amp; 7 \\
+              3       &amp; 3 &amp; 1 &amp; 7 &amp; 5 \\
+              5       &amp; 5 &amp; 7 &amp; 1 &amp; 3 \\
+              7       &amp; 7 &amp; 5 &amp; 3 &amp; 1
+              \end{array}
+            </me>
+          </p>
+        </figure>
+      </example>
+
+      <example xml:id="example-groups-nonabelian" permid="TAW">
+        <p permid="dLT">
+          The symmetries of an equilateral triangle described in <xref ref="section-mod-n-sym"/> form a nonabelian group.
+          As we observed, it is not necessarily true that
+          <m>\alpha \beta = \beta \alpha</m> for two symmetries <m>\alpha</m> and <m>\beta</m>.
+          Using <xref ref="table-s3"/>, which is a Cayley table for this group,
+          we can easily check that the symmetries of an equilateral triangle are indeed a group.
+          We will denote this group by either <m>S_3</m> or <m>D_3</m>,
+          for reasons that will be explained later.
+        </p>
+      </example>
+
+      <example xml:id="example-groups-gl2" permid="zIf">
+        <p permid="JTc">
+          We use  <m>{\mathbb M}_2 ( {\mathbb R})</m> to denote the set of all <m>2 \times 2</m> matrices.
+          Let <m>GL_2({\mathbb R})</m> be the subset of
+          <m>{\mathbb M}_2 ( {\mathbb R})</m> consisting of invertible matrices;
+          that is, a matrix
+
+          <notation>
+            <usage>\mathbb M_n(\mathbb R)</usage>
+            <description>the <m>n \times n</m> matrices with entries in <m>\mathbb R</m></description>
+          </notation>
+
+          <me permid="Waq">
+            A =
+            \begin{pmatrix}
+            a &amp; b \\
+            c &amp; d
+            \end{pmatrix}
+          </me>
+          is in  <m>GL_2( {\mathbb R})</m> if there exists a matrix <m>A^{-1}</m> such that <m>A A^{-1} = A^{-1} A = I</m>,
+          where <m>I</m> is the <m>2 \times 2</m> identity matrix.
+          For <m>A</m> to have an inverse is equivalent to requiring that the determinant of <m>A</m> be nonzero;
+          that is, <m>\det A = ad - bc \neq 0</m>.
+
+          <notation>
+            <usage>\det A</usage>
+            <description>the determinant of <m>A</m></description>
+          </notation>
+
+          The set of invertible matrices forms a group called the
+          <term>general linear group</term>.
+              <idx><h>Group</h><h>general linear</h></idx>
+          <notation>
+            <usage>GL_n(\mathbb R)</usage>
+            <description>the general linear group</description>
+          </notation>
+
+          The identity of the group is the identity matrix
+          <me permid="Chz">
+            I =
+            \begin{pmatrix}
+            1 &amp; 0 \\
+            0 &amp; 1
+            \end{pmatrix}
+          </me>.
+          The inverse of <m>A \in GL_2( {\mathbb R})</m> is
+          <me permid="ioI">
+            A^{-1} =
+            \frac{1}{ad-bc}
+            \begin{pmatrix}
+            d &amp; -b \\
+            -c &amp; a
+            \end{pmatrix}
+          </me>.
+          The product of two invertible matrices is again invertible.
+          Matrix multiplication is associative,
+          satisfying the other group axiom.
+          For matrices it is not true in general that <m>AB = BA</m>;
+          hence, <m>GL_2({\mathbb R})</m> is another example of a nonabelian group.
+        </p>
+      </example>
+            <!-- % Changed <m>AB \neq BA</m> to <m>AB = BA</m>. Suggested by Isaac Coombs. TWJ 8/24/2011 -->
+      <example xml:id="example-groups-quaterions" permid="fPo">
+        <p permid="qal">
+          Let
+          <md permid="OvR">
+            <mrow>1 &amp; = 
+            \begin{pmatrix}
+            1 &amp; 0\\
+            0 &amp; 1
+            \end{pmatrix}
+            \qquad
+            I
+            =
+            \begin{pmatrix}
+            0 &amp; 1\\
+            -1 &amp; 0
+            \end{pmatrix}</mrow>
+            <mrow>J &amp; = 
+            \begin{pmatrix}
+            0 &amp; i\\
+            i &amp; 0
+            \end{pmatrix}
+            \qquad
+            K =
+            \begin{pmatrix}
+            i &amp; 0\\
+            0 &amp; -i
+            \end{pmatrix}</mrow>
+          </md>,
+          where <m>i^2 = -1</m>.
+          Then the relations <m>I^2 = J^2 = K^2 = -1</m>,
+          <m>IJ=K</m>, <m>JK = I</m>, <m>KI = J</m>,
+          <m>JI = -K</m>, <m>KJ = -I</m>, and <m>IK = -J</m> hold.
+          The set
+
+          <notation>
+            <usage>Q_8</usage>
+            <description>the group of quaternions</description>
+          </notation>
+
+          <m>Q_8 = \{\pm 1, \pm I, \pm J, \pm K  \}</m> is a group called the
+          <term>quaternion group</term>.
+              <idx><h>Group</h><h>quaternion</h></idx>
+              <idx><h>Quaternions</h></idx>
+          Notice that <m>Q_8</m> is noncommutative.
+        </p>
+      </example>
+
+      <example xml:id="example-groups-c-star" permid="LWx">
+        <p permid="Whu">
+          Let <m>{\mathbb C}^\ast</m> be the set of nonzero complex numbers.
+
+          <notation>
+            <usage>\mathbb C^*</usage>
+            <description>the multiplicative group of complex numbers</description>
+          </notation>
+
+          Under the operation of multiplication <m>{\mathbb C}^\ast</m> forms a group.
+          The identity is <m>1</m>.
+          If <m>z = a+bi</m> is a nonzero complex number, then
+          <me permid="uDa">
+            z^{-1} = \frac{a -bi}{a^2 +b^2}
+          </me>
+          is the inverse of <m>z</m>.
+          It is easy to see that the remaining group axioms hold.
+        </p>
+      </example>
+
+      <p permid="EdQ">
+        A group is <term>finite</term>,
+            <idx><h>Group</h><h>finite</h></idx>
+        or has <term>finite order</term>,
+        if it contains a finite number of elements;
+        otherwise, the group is said to be <term>infinite</term>
+        or to have <term>infinite order</term>.
+            <idx><h>Group</h><h>infinite</h></idx>
+        The <term>order</term>
+            <idx><h>Group</h><h>order of</h></idx>
+        of a finite group is the number of elements that it contains.
+        If <m>G</m> is a group containing <m>n</m> elements, we write <m>|G| = n</m>.
+
+        <notation>
+          <usage>|G|</usage>
+          <description>the order of a group</description>
+        </notation>
+
+        The group <m>{\mathbb Z}_5</m> is a finite group of order <m>5</m>;
+        the integers <m>{\mathbb Z}</m> form an infinite group under addition,
+        and we sometimes write <m>|{\mathbb Z}| = \infty</m>.
+      </p>
+    </introduction>
+
+    <subsection xml:id="groups-subsection-historical-note" permid="xEx">
+      <title>Historical Note</title>
+      <p permid="fPB">
+        Although the first clear axiomatic definition of a group was not given until the late 1800s,
+        group-theoretic methods had been employed before this time in the development of many areas of mathematics,
+        including geometry and the theory of algebraic equations.
+      </p>
+
+      <p permid="LWK">
+        Joseph-Louis Lagrange
+            <idx><h>Lagrange, Joseph-Louis</h></idx>
+        used group-theoretic methods in a 1770<ndash/>1771 memoir to study methods of solving polynomial equations.
+        Later, Évariste Galois
+            <idx><h>Galois, Évariste</h></idx>
+        (1811<ndash/>1832) succeeded in developing the mathematics necessary to determine exactly which polynomial equations could be solved in terms of the coefficients of the polynomial.
+        Galois' primary tool was group theory.
+      </p>
+
+      <p permid="sdT">
+        The study of geometry was revolutionized in 1872 when Felix Klein
+            <idx><h>Klein, Felix</h></idx>
+        proposed that geometric spaces should be studied by examining those properties that are invariant under a transformation of the space.
+        Sophus Lie,
+            <idx><h>Lie, Sophus</h></idx>
+        a contemporary of Klein,
+        used group theory to study solutions of partial differential equations.
+        One of the first modern treatments of group theory appeared in William Burnside's
+            <idx><h>Burnside, William</h></idx>
+        <pubtitle>The Theory of Groups of Finite Order</pubtitle> [1], first published in 1897.
+      </p>
+    </subsection>
+    <reading-questions xml:id="rqs-group-defs" permid="iSQ">
+      <exercise xml:id="rq2-2-1" permid="zRb">
+        <statement>
+          <p permid="ubP">
+            What does it mean for a group to be <em>abelian</em>?  Be as specific as possible.
+          </p>
+        </statement>
+      </exercise>
+      <exercise xml:id="rq2-2-2" permid="fYk">
+        <statement>
+          <p permid="aiY">
+            What is the inverse of the element 5 in (a) the group <m>\Z_8</m> and (b) the group <m>U(8)</m>?  Breifly explain your answers.
+          </p>
+        </statement>
+      </exercise>
+      <exercise xml:id="rq2-2-3" permid="Mft">
+        <statement>
+          <p permid="Gqh">
+            What is the order of the group <m>U(8)</m>?  Explain.
+          </p>
+        </statement>
+      </exercise>
+      <exercise xml:id="rq2-2-4" permid="smC">
+        <statement>
+          <p permid="mxq">
+            After reading the section, what questions do you still have?  Write at least one well formulated question (even if you think you understand everything).
+          </p>
+        </statement>
+      </exercise>
+    </reading-questions>
+    <exercises xml:id="practice-gp-def-ex" permid="kAV">
+      <title>Practice Problems</title>
+
+      <exercise number="1" permid="lZZ">
+        <statement>
+          <p permid="wzr">
+          Find all <m>x \in {\mathbb Z}</m> satisfying each of the following equations.
+
+            <ol cols="2" permid="Yzk">
+              <li permid="jIj">
+                <p permid="IUN">
+                  <m>3x \equiv 2 \pmod{7}</m>
+                </p>
+              </li>
+
+              <li permid="PPs">
+                <p permid="pbW">
+                  <m>5x + 1 \equiv 13 \pmod{23}</m>
+                </p>
+              </li>
+
+              <li permid="vWB">
+                <p permid="Vjf">
+                  <m>5x + 1 \equiv 13 \pmod{26}</m>
+                </p>
+              </li>
+
+              <li permid="cdK">
+                <p permid="Bqo">
+                  <m>9x \equiv 3 \pmod{5}</m>
+                </p>
+              </li>
+
+              <li permid="IkT">
+                <p permid="hxx">
+                  <m>5x \equiv 1 \pmod{6}</m>
+                </p>
+              </li>
+
+              <li permid="osc">
+                <p permid="NEG">
+                  <m>3x \equiv 1 \pmod{6}</m>
+                </p>
+              </li>
+            </ol>
+          </p>
+        </statement>
+        <hint permid="NLK">
+          <p permid="nBe">
+          (a) <m>3 + 7 \mathbb Z = \{ \ldots, -4, 3, 10, \ldots \}</m>; (c)
+            <m>18 + 26 \mathbb Z</m>; (e) <m>5 + 6 \mathbb Z</m>.
+          </p>
+        </hint>
+      </exercise>
+
+      <exercise number="2" permid="Shi">
+        <statement>
+          <p permid="cGA">
+          Which of the following multiplication tables defined on the set <m>G = \{ a, b, c, d \}</m> form a group?
+          Support your answer in each case.
+
+            <ol cols="2" permid="EGt">
+              <li permid="Uzl">
+                <p permid="tLP">
+                  <me permid="DWM">
+                  \begin{array}{c|cccc}
+                  \circ &amp; a &amp; b &amp; c &amp; d \\
+                  \hline
+                  a &amp; a &amp; c &amp; d &amp; a \\
+                  b &amp; b &amp; b &amp; c &amp; d \\
+                  c &amp; c &amp; d &amp; a &amp; b \\
+                  d &amp; d &amp; a &amp; b &amp; c
+                  \end{array}
+                  </me>
+                </p>
+              </li>
+
+              <li permid="AGu">
+                <p permid="ZSY">
+                  <me permid="kdV">
+                  \begin{array}{c|cccc}
+                  \circ &amp; a &amp; b &amp; c &amp; d \\
+                  \hline
+                  a &amp; a &amp; b &amp; c &amp; d \\
+                  b &amp; b &amp; a &amp; d &amp; c \\
+                  c &amp; c &amp; d &amp; a &amp; b \\
+                  d &amp; d &amp; c &amp; b &amp; a
+                  \end{array}
+                  </me>
+                </p>
+              </li>
+
+              <li permid="gND">
+                <p permid="Gah">
+                  <me permid="Qle">
+                  \begin{array}{c|cccc}
+                  \circ &amp; a &amp; b &amp; c &amp; d \\
+                  \hline
+                  a &amp; a &amp; b &amp; c &amp; d \\
+                  b &amp; b &amp; c &amp; d &amp; a \\
+                  c &amp; c &amp; d &amp; a &amp; b \\
+                  d &amp; d &amp; a &amp; b &amp; c
+                  \end{array}
+                  </me>
+                </p>
+              </li>
+
+              <li permid="MUM">
+                <p permid="mhq">
+                  <me permid="wsn">
+                  \begin{array}{c|cccc}
+                  \circ &amp; a &amp; b &amp; c &amp; d \\
+                  \hline
+                  a &amp; a &amp; b &amp; c &amp; d \\
+                  b &amp; b &amp; a &amp; c &amp; d \\
+                  c &amp; c &amp; b &amp; a &amp; d \\
+                  d &amp; d &amp; d &amp; b &amp; c
+                  \end{array}
+                  </me>
+                </p>
+              </li>
+            </ol>
+          </p>
+        </statement>
+        <hint permid="aac">
+          <p permid="TIn">
+          (a) Not a group; (c) a group.
+          </p>
+        </hint>
+      </exercise>
+
+      <exercise number="3" xml:id="exercise-groups-rectangle-symmetries" permid="yor">
+        <statement>
+          <p permid="INJ">
+          Write out Cayley tables for groups formed by the symmetries of a rectangle and for <m>({\mathbb Z}_4, +)</m>.
+          How many elements are in each group?
+          Are the groups the same?
+          Why or why not?
+          </p>
+        </statement>
+        <hint permid="RrY">
+          <p permid="KLO">
+            Both groups have order 4, but they are not the same.
+          </p>
+        </hint>
+      </exercise>
+
+      <exercise number="4" permid="evA">
+        <statement>
+          <p permid="oUS">
+          Describe the symmetries of a rhombus and prove that the set of symmetries forms a group.
+          Give Cayley tables for both the symmetries of a rectangle and the symmetries of a rhombus.
+          Are the symmetries of a rectangle and those of a rhombus the same?
+          </p>
+        </statement>
+      </exercise>
+
+
+      <exercise number="6" permid="qJS">
+        <statement>
+          <p permid="Bjk">
+          Give a multiplication table for the group <m>U(12)</m>.
+          </p>
+        </statement>
+        <hint permid="eJV">
+          <p permid="zPw">
+            <me permid="hjp">
+            \begin{array}{c|cccc}
+            \cdot &amp; 1  &amp; 5  &amp; 7  &amp; 11 \\
+            \hline
+            1 &amp; 1 &amp; 5 &amp; 7 &amp; 11 \\ 5 &amp; 5 &amp; 1 &amp; 11 &amp; 7 \\
+            7 &amp; 7 &amp; 11 &amp; 1 &amp; 5 \\ 11 &amp; 11 &amp; 7 &amp; 5 &amp; 1
+            \end{array}
+            </me>
+          </p>
+        </hint>
+      </exercise>
+
+      <exercise number="x1" permid="hGp">
+        <statement>
+          <p permid="YPt">
+            Consider <m>(\Z,-)</m>, the integers with operation subtraction.  Explain why this is <em>not</em> a group.  Say specifically what goes wrong.
+          </p>
+        </statement>
+        <hint permid="xzh">
+          <p permid="qSX">
+            It doesn't matter that subtraction is not commutative.  The other three properties do not hold though.  Can you say why?
+          </p>
+        </hint>
+      </exercise>
+
+      <exercise number="x2" permid="NNy">
+        <statement>
+          <p permid="EWC">
+            Consider the operation that gives the distance between two numbers on the number line.  In other words, define <m>\ast</m> on <m>\R</m> by <m>x \ast y = |x-y|</m>.  Analyze this operation.  That is, decide whether the operation is associative, commutative, has an identity, and has inverses.  Is <m>(\R, \ast)</m> a group?
+          </p>
+        </statement>
+        <solution permid="dGq">
+          <p permid="LRh">
+            Yes, the operation is commutative, since <m>|x-y| = |y-x|</m>.  The operation is not associative though: <m>(2\ast 1)\ast 3 = ||2-1| - 3| = |1-3| = 2</m> but <m>2 \ast (1 \ast 3) = |2- |1-3|| = |2-2| = 0</m>.  This is enough to prove that <m>(\R, \ast)</m> is not a group.
+          </p>
+
+          <p permid="rYq">
+            Even more, there is not an identity element: while 0 would be the natural choice here, and indeed <m>a \ast 0 = |a-0| = a</m> is true for all positive <m>a</m>, it is not true for negative <m>a</m>.  Since there is no identity, there can be no inverses.
+          </p>
+        </solution>
+      </exercise>
+
+      <exercise number="x3" permid="tUH">
+        <statement>
+          <p permid="ldL">
+            Consider the set <m>S = \{A,B,C\}</m>.  It turns out that there are <m>19683</m> different operations on this set.  Below, you are asked to describe five of them, each with some given properties.  To do this, simply write out the <m>3\times 3</m> operation table.  Then say how you know that the operation you gave has the perperties requested.
+            <ol permid="ZGr">
+              <li permid="qEC">
+                <p permid="jJX">
+                  <m>\ast</m> is not commutative.
+                </p>
+              </li>
+              <li permid="WLL">
+                <m>\ast</m> is not associative, but is commutative.
+              </li>
+              <li permid="CSU">
+                <m>S</m> has an identity with respect to <m>\ast</m>, but the identity is not <m>A</m>.
+              </li>
+              <li permid="jad">
+                <m>S</m> has an identity, but not every element has an inverse under <m>\ast</m>.
+              </li>
+              <li permid="Phm">
+                <m>\ast</m> is commutative, <m>S</m> has an identity, and every element has an inverse under <m>\ast</m>.
+              </li>
+            </ol>
+          </p>
+        </statement>
+      </exercise>
+
+      <exercise number="x4" permid="abQ">
+        <statement>
+          <p permid="RkU">
+            Prove that every group of order 3 is abelian.  See part (e) of the previous problem.
+          </p>
+        </statement>
+        <hint permid="JNz">
+          <p permid="Xag">
+            You might as well use <m>A</m> for the identity.  This takes care of one row and one column.  There are only 4 spots left in the Cayley table.  
+          </p>
+        </hint>
+      </exercise>
+
+      <exercise number="x5" permid="GiZ">
+        <statement>
+          <p permid="xsd">
+            Define <m>\ast</m> on the real numbers <m>\R</m> by <m>x\ast y = x+y-5</m>.  Is <m>(\R, \ast)</m> a group?  Is it an abelian group?
+          </p>
+        </statement>
+        <solution permid="pUI">
+          <p permid="Yfz">
+            We will see that it is indeed an abelian group.  First, check that <m>\ast</m> is associative:
+            <me permid="IBc">
+              (x\ast y)\ast z = (x+y-5)\ast z = (x+y-5)+z - 5 = x+y+z - 10
+            </me>.
+            <me permid="oIl">
+              x\ast (y \ast z) = x \ast (y+z-5) = x+(y+z-5)-5 = x+y+z - 10
+            </me>.
+            So <m>(x\ast y)\ast z = x \ast (y \ast z)</m> and the operation is associative.
+          </p>
+          <p permid="EmI">
+            What about the identity?  We need to find a real number <m>e</m> such that <m>x \ast e = x</m>.  But <m>x \ast e = x+e-5</m>, and for this to be <m>x</m> it must be that <m>e = 5</m>.  We must also have <m>e \ast x = x</m> and indeed <m>5 \ast x = 5+x-5 = x</m>.  Thus there is an identity element, <m>e = 5</m>.
+          </p>
+          <p permid="ktR">
+            For inverses, we much verify that for each <m>x \in \R</m> there is some other element <m>x' \in \R</m> such that <m>x \ast x' = x' \ast x = 5</m> (since <m>5</m> is the identity).  How can <m>x \ast x' = 5</m>?  Well <m>x \ast x' = x + x' - 5 = 5</m> means that <m>x' = 10 - x</m>.  And notice that <m>(10-x) \ast x = 10 - x + x -5 = 5</m> as needed.
+          </p>
+          <p permid="QBa">
+            Thus <m>(\R, \ast)</m> does form a group.  It is also easy to check that <m>\ast</m> is commutative, so this is in fact an <em>abelian</em> group.
+          </p>
+        </solution>
+      </exercise>
+    </exercises>
+
+
+    <exercises xml:id="collected-gp-def-ex" permid="QIe">
+      <title>Collected Homework</title>
+
+      <exercise number="7" permid="WRb">
+        <statement>
+          <p permid="hqt">
+          Let <m>S = {\mathbb R} \setminus \{ -1 \}</m> and define a binary operation on <m>S</m> by <m>a \ast b = a + b + ab</m>.
+          Prove that <m>(S, \ast)</m> is an abelian group.
+          </p>
+        </statement>
+        <hint permid="WbR">
+          <p permid="Dhp">
+          Careful here for inverses.  They are not the usual inverses.  Say what they are and prove you are correct.
+          </p>
+        </hint>
+      </exercise>
+
+      <exercise number="Bonus" permid="mqi">
+        <statement>
+          <p permid="dzm">
+          We know that a set <m>S</m> might or might not have an identity element with respect to the operation <m>\ast</m>.  Is it possible for a set to have more than one identity element?  Explain what this would mean in terms of the Cayley (operation) table, and why this answers the question.
+          </p>
+        </statement>
+      </exercise>
+
+    </exercises>
+
+    
+    
+    </section>
+
+
+
+    <section xml:id="section-basic-properties" permid="Rxo">
+      <title>Basic Properties of Groups</title>
+      <proposition permid="kkM">
+        <statement>
+          <p permid="jBf">
+            The identity element in a group <m>G</m> is unique;
+            that is, there exists only one element <m>e \in G</m> such that
+            <m>eg = ge = g</m> for all <m>g \in G</m>.
+          </p>
+        </statement>
+
+        <proof permid="wNz">
+          <p permid="uak">
+            Suppose that <m>e</m> and <m>e'</m> are both identities in <m>G</m>.
+            Then <m>eg = ge = g</m> and
+            <m>e'g = ge' = g</m> for all <m>g \in G</m>.
+            We need to show that <m>e = e'</m>.
+            If we think of <m>e</m> as the identity, then <m>ee' = e'</m>;
+            but if <m>e'</m> is the identity, then <m>ee' = e</m>.
+            Combining these two equations,
+            we have <m>e = ee' = e'</m>.
+          </p>
+        </proof>
+      </proposition>
+
+      <p permid="uYz">
+        Inverses in a group are also unique.
+        If <m>g'</m> and <m>g''</m> are both inverses of an element <m>g</m> in a group <m>G</m>,
+        then <m>gg' = g'g = e</m> and <m>gg'' = g''g = e</m>.
+        We want to show that <m>g' = g''</m>,
+        but <m>g' = g'e = g'(gg'') = (g'g)g'' = eg'' = g''</m>.
+        We summarize this fact in the following proposition.
+      </p>
+
+      <proposition permid="QrV">
+        <statement>
+          <p permid="PIo">
+            If <m>g</m> is any element in a group <m>G</m>,
+            then the inverse of <m>g</m>,
+            denoted by <m>g^{-1}</m>, is unique.
+          </p>
+        </statement>
+      </proposition>
+
+      <proposition xml:id="proposition-inverse-of-products" permid="wze">
+        <statement>
+          <p permid="vPx">
+            Let <m>G</m> be a group.
+            If <m>a, b \in G</m>, then <m>(ab)^{-1} = b^{-1}a^{-1}</m>.
+          </p>
+        </statement>
+
+        <proof permid="cUI">
+          <p permid="aht">
+            Let <m>a, b \in G</m>.
+            Then <m>abb^{-1}a^{-1} = aea^{-1} = aa^{-1} = e</m>.
+            Similarly, <m>b^{-1}a^{-1}ab = e</m>.
+            But by the previous proposition, inverses are unique;
+            hence, <m>(ab)^{-1} = b^{-1}a^{-1}</m>.
+          </p>
+        </proof>
+      </proposition>
+
+      <proposition permid="cGn">
+        <statement>
+          <p permid="bWG">
+            Let <m>G</m> be a group.
+            For any <m>a \in G</m>, <m>(a^{-1})^{-1} = a</m>.
+          </p>
+        </statement>
+
+        <proof permid="JbR">
+          <p permid="GoC">
+            Observe that <m>a^{-1} (a^{-1})^{-1} = e</m>.
+            Consequently,
+            multiplying both sides of this equation by <m>a</m>, we have
+            <me permid="aKj">
+              (a^{-1})^{-1} = e (a^{-1})^{-1} = a a^{-1} (a^{-1})^{-1} = ae = a
+            </me>.
+          </p>
+        </proof>
+      </proposition>
+
+      <p permid="bfI">
+        It makes sense to write equations with group elements and group operations.
+        If <m>a</m> and <m>b</m> are two elements in a group <m>G</m>,
+        does there exist an element <m>x \in G</m> such that <m>ax = b</m>?
+        If such an <m>x</m> does exist, is it unique?
+        The following proposition answers both of these questions positively.
+      </p>
+
+      <proposition xml:id="proposition-group-equations" permid="INw">
+        <statement>
+          <p permid="IdP">
+            Let <m>G</m> be a group and <m>a</m> and <m>b</m> be any two elements in <m>G</m>.
+            Then the equations <m>ax = b</m> and <m>xa = b</m> have unique solutions in <m>G</m>.
+          </p>
+        </statement>
+
+        <proof permid="pja">
+          <p permid="mvL">
+            Suppose that <m>ax = b</m>.
+            We must show that such an <m>x</m> exists.
+            We can multiply both sides of <m>ax = b</m> by <m>a^{-1}</m> to find <m>x = ex = a^{-1}ax = a^{-1}b</m>.
+          </p>
+
+          <p permid="SCU">
+            To show uniqueness,
+            suppose that <m>x_1</m> and <m>x_2</m> are both solutions of <m>ax = b</m>;
+            then <m>ax_1 = b = ax_2</m>.
+            So <m>x_1 = a^{-1}ax_1 = a^{-1}ax_2 = x_2</m>.
+            The proof for the existence and uniqueness of the solution of <m>xa = b</m> is similar.
+          </p>
+        </proof>
+      </proposition>
+
+      <proposition permid="oUF">
+        <statement>
+          <p permid="okY">
+            If <m>G</m> is a group and <m>a, b, c \in G</m>,
+            then <m>ba = ca</m> implies <m>b = c</m> and <m>ab = ac</m> implies <m>b = c</m>.
+          </p>
+        </statement>
+      </proposition>
+
+      <p permid="HmR">
+        This proposition tells us that the
+        <term>right and left cancellation laws</term><idx><h>Cancellation law</h><h>for groups</h></idx> are true in groups.
+        We leave the proof as an exercise.
+      </p>
+
+      <p permid="nua">
+        We can use exponential notation for groups just as we do in ordinary algebra.
+        If <m>G</m> is a group and <m>g \in G</m>,
+        then we define <m>g^0 = e</m>.
+        For <m>n \in {\mathbb N}</m>, we define
+        <me permid="GRs">
+          g^n = \underbrace{g \cdot g \cdots g}_{n \; \text{times}}
+        </me>
+        and
+        <me permid="mYB">
+          g^{-n} = \underbrace{g^{-1} \cdot g^{-1} \cdots g^{-1}}_{n \; \text{times}}
+        </me>.
+      </p>
+
+      <theorem xml:id="theorem-exponent-laws" permid="EdD">
+        <statement>
+          <p permid="XmN">
+            In a group, the usual laws of exponents hold;
+            that is, for all <m>g, h \in G</m>,
+
+            <ol permid="zWA">
+              <li permid="GvG">
+                <p permid="fIk">
+                  <m>g^mg^n = g^{m+n}</m> for all <m>m, n \in {\mathbb Z}</m>;
+                </p>
+              </li>
+
+              <li permid="mCP">
+                <p permid="LPt">
+                  <m>(g^m)^n = g^{mn}</m> for all <m>m, n \in {\mathbb Z}</m>;
+                </p>
+              </li>
+
+              <li permid="SJY">
+                <p permid="rWC">
+                  <m>(gh)^n = (h^{-1}g^{-1})^{-n}</m> for all <m>n \in {\mathbb Z}</m>.
+                  Furthermore, if <m>G</m> is abelian,
+                  then <m>(gh)^n = g^nh^n</m>.
+                </p>
+              </li>
+            </ol>
+          </p>
+        </statement>
+      </theorem>
+
+      <p permid="TBj">
+        We will leave the proof of this theorem as an exercise.
+        Notice that <m>(gh)^n \neq g^nh^n</m> in general,
+        since the group may not be abelian.
+        If the group is <m>{\mathbb Z}</m> or <m>{\mathbb Z}_n</m>,
+        we write the group operation additively and the exponential operation multiplicatively;
+        that is, we write <m>ng</m> instead of <m>g^n</m>.
+        The laws of exponents now become
+
+        <ol permid="xbU">
+          <li permid="yRh">
+            <p permid="YdL">
+              <m>mg + ng = (m+n)g</m> for all <m>m, n \in {\mathbb Z}</m>;
+            </p>
+          </li>
+
+          <li permid="eYq">
+            <p permid="EkU">
+              <m>m(ng) = (mn)g</m> for all <m>m, n \in {\mathbb Z}</m>;
+            </p>
+          </li>
+
+          <li permid="Lfz">
+            <p permid="ksd">
+              <m>m(g + h) = mg + mh</m> for all <m>n \in {\mathbb Z}</m>.
+            </p>
+          </li>
+        </ol>
+      </p>
+
+      <p permid="zIs">
+        It is important to realize that the last statement can be made only because <m>{\mathbb Z}</m> and
+        <m>{\mathbb Z}_n</m> are commutative groups.
+      </p>
+
+      <reading-questions xml:id="rqs-group-perperties" permid="OZZ">
+        <exercise xml:id="rq2-3-1" permid="YtL">
+          <statement>
+            <p permid="SEz">
+              For any group <m>G</m> with elements <m>a</m> and <m>b</m>, is <m>(ab)\inv = a\inv b\inv</m>?  Explain why or give a counterexample.
+            </p>
+          </statement>
+        </exercise>
+        <exercise xml:id="rq2-3-2" permid="EAU">
+          <statement>
+            <p permid="yLI">
+              In any group <m>G</m> with elements <m>a</m> and <m>b</m>, is there a unique solution in the group to the equation <m>ax = b</m>? Explain why or give a counterexample.
+            </p>
+          </statement>
+        </exercise>
+        <exercise xml:id="rq2-3-3" permid="kId">
+          <statement>
+            <p permid="eSR">
+              What are the <em>right and left cancellation laws</em>?  Do these hold for all groups, some groups, or no groups?  Explain.
+            </p>
+          </statement>
+        </exercise>
+        <exercise xml:id="rq2-3-4" permid="QPm">
+          <statement>
+            <p permid="Laa">
+              After reading the section, what questions do you still have?  Write at least one well formulated question (even if you think you understand everything).
+            </p>
+          </statement>
+        </exercise>
+      </reading-questions>
+
+    <exercises xml:id="practice-gp-prop" permid="wPn">
+      <title>Practice Problems</title>
+      <exercise permid="Sxr">
+        <statement>
+          <p permid="JGv">
+      Consider a group <m>G</m> which contains elements <m>a</m>,            <m>b</m>, and <m>c</m>, with identity <m>e</m> (among others, possibly).  Solve each of the equations below for <m>x</m>.
+            <ol permid="FNA">
+              <li permid="vov">
+                <m>axb=c</m>
+              </li>
+              <li permid="bvE">
+                <m>x^2a = bxc\inv</m> given <m>acx=xac</m>.
+              </li>
+              <li permid="HCN">
+                <m>x^2 = a^2</m> given <m>x^5 = e</m>.
+              </li>
+            </ol>
+          </p>
+        </statement>
+        <solution permid="Cja">
+          <p permid="wIj">
+            <ol permid="BdH">
+              <li permid="nJW">
+                <p permid="PRg">
+                  <m>x =  a\inv c b\inv</m>
+                </p>
+              </li>
+              <li permid="TRf">
+                <p permid="vYp">
+                  <m>x = bc\inv a\inv</m>
+                </p>
+              </li>
+              <li permid="zYo">
+                <p permid="cfy">
+                  <m>x = a^6</m>.
+                </p>
+              </li>
+            </ol>
+          </p>
+        </solution>
+      </exercise>
+
+      <exercise permid="yEA">
+        <statement>
+          <p permid="pNE">
+        For each of the following rules, either prove that it is true in every group <m>G</m> or give a counterexample.
+            <ol permid="lUJ">
+              <li permid="gfx">
+                <p permid="ImH">
+              If <m>x^2 = e</m>, then <m>x=e</m>.
+                </p>
+              </li>
+              <li permid="MmG">
+                <p permid="otQ">
+                  <m>(ab)^2 = a^2b^2</m>.
+                </p>
+              </li>
+              <li permid="stP">
+                <p permid="UAZ">
+              If <m>x^2 = x</m> then <m>x = e</m>.
+                </p>
+              </li>
+              <li permid="YAY">
+                <p permid="AIi">
+              For every <m>x \in G</m>, there is some <m>y\in G</m> such taht <m>x = y^2</m> (in other words, every <m>x</m> has a square root).
+                </p>
+              </li>
+            </ol>
+          </p>
+        </statement>
+        <solution permid="iqj">
+          <p permid="cPs">
+            <ol permid="hkQ">
+              <li permid="EIh">
+                <p permid="gPr">
+              False.  Look at <m>D_4</m> for a counterexample. 
+                </p>
+              </li>
+              <li permid="kPq">
+                <p permid="MWA">
+              False.
+                </p>
+              </li>
+              <li permid="QWz">
+                <p permid="tdJ">
+              True.  If <m>x^2 = x</m>, then <m>x^2x\inv = x x\inv</m> which simplifies to <m>x = e</m>
+                </p>
+              </li>
+              <li permid="xdI">
+                <p permid="ZkS">
+              False.
+                </p>
+              </li>
+            </ol>
+          </p>
+        </solution>
+      </exercise>
+
+      <exercise permid="eLJ">
+        <statement>
+          <p permid="VUN">
+        If <m>a,b \in G</m> and <m>ab = ba</m>, we say that <m>a</m> and <m>b</m>
+            <term>commute</term>.  Assuming that <m>a</m> and <m>b</m> commute, prove the following.
+            <ol permid="SbS">
+              <li permid="dkR">
+                <p permid="Fsb">
+                  <m>a\inv</m> and <m>b\inv</m> commute.
+                </p>
+              </li>
+              <li permid="Jsa">
+                <p permid="lzk">
+                  <m>a</m> and <m>b\inv</m> commute.
+                </p>
+              </li>
+              <li permid="pzj">
+                <p permid="RGt">
+                  <m>a</m> commutes with <m>ab</m>.
+                </p>
+              </li>
+              <li permid="VGs">
+                <p permid="xNC">
+                  <m>a^2</m> commutes with <m>b^2</m>.
+                </p>
+              </li>
+              <li permid="BNB">
+                <p permid="dUL">
+                  <m>xax\inv</m> commutes with <m>xbx\inv</m> for any <m>x \in G</m>.
+                </p>
+              </li>
+            </ol>
+          </p>
+        </statement>
+        <solution permid="Oxs">
+          <p permid="IWB">
+            <ol permid="NrZ">
+              <li permid="hUK">
+                <p permid="KbU">
+              We know that <m>a\inv b\inv = (ba)\inv</m>.  But because <m>ab = ba</m>, we get that <m>(ba)\inv = (ab)\inv = b\inv a\inv</m>.  Thus <m>a\inv b\inv = b\inv a\inv</m>, which says that <m>a\inv</m> and <m>b\inv</m> commute.
+                </p>
+              </li>
+              <li permid="ObT">
+                <p permid="qjd">
+              Note that <m>a = abb\inv</m>.  Since <m>a</m> and <m>b</m> commute, we get <m>a = bab\inv</m>.  Multiply by <m>b\inv</m> on the left: <m>b\inv a = a b\inv</m>, which is to say that <m>a</m> and <m>b\inv</m> commute.
+                </p>
+              </li>
+              <li permid="ujc">
+                <p permid="Wqm">
+              We want to show that <m>a(ab) = (ab)a</m>.  Well, <m>a(ab) = a(ba)</m> since <m>a</m> and <m>b</m> commute, and <m>a(ba) = (ab)a</m> since the group is associative.  Therefore <m>a</m> and <m>ab</m> commute.
+                </p>
+              </li>
+              <li permid="aql">
+                <p permid="Cxv">
+              Suppose <m>ab = ba</m>.  Now consider <m>a^2 b^2 = aabb</m>.  Since <m>a</m> and <m>b</m> commute, we have
+                  <md permid="hdM">
+                    <mrow>a^2b^2 \amp = aabb </mrow>
+                    <mrow>\amp = abab </mrow>
+                    <mrow>\amp = baab </mrow>
+                    <mrow>\amp = baba = b^2a^2</mrow>
+                  </md>
+
+                Thus <m>a^2</m> and <m>b^2</m> commute.
+                </p>
+              </li>
+              <li permid="Gxu">
+                <p permid="iEE">
+              We want to show that <m>(xax\inv)(xbx\inv) = (xbx\inv)(xax\inv)</m>.  Well the left hand side can be simplified:
+                  <me permid="UPu">(xax\inv)(xbx\inv) = xabx\inv</me>
+              and the right hand side can be simplified:
+                  <me permid="AWD">(xbx\inv)(xax\inv) = xbax\inv</me>
+              But since <m>a</m> and <m>b</m> commute, <m>xabx\inv = xbax\inv</m> so <m>xax\inv</m> and <m>xbx\inv</m> commute.
+                </p>
+              </li>
+            </ol>
+          </p>
+        </solution>
+      </exercise>
+
+      <exercise permid="KSS">
+        <statement>
+          <p permid="CbW">
+        Let <m>G</m> be a group.  Let <m>a, b, c</m> denote elements of <m>G</m>, and let <m>e</m> be the identity in <m>G</m>.
+            <ol permid="yjb">
+              <li permid="mED">
+                <p permid="OLN">
+              Prove that if <m>ab = e</m>, then <m>ba = e</m>.
+                </p>
+              </li>
+              <li permid="SLM">
+                <p permid="uSW">
+              Prove that if <m>abc = e</m>, then <m>cab = e</m> and <m>bca = e</m>.
+                </p>
+              </li>
+            </ol>
+          </p>
+        </statement>
+        <solution permid="uEB">
+          <p permid="pdK">
+            <ol permid="tzi">
+              <li permid="ySV">
+                <p permid="baf">
+              Assume <m>ab = e</m>.  Then <m>a = b\inv</m>, so <m>ba = bb\inv</m>, or <m>ba = e</m>, as desired.
+                </p>
+              </li>
+              <li permid="fae">
+                <p permid="Hho">
+              Note that since <m>(ab)c = e</m>, we have that <m>ab = c\inv</m>.  That means that <m>c(ab) = e</m> as well.  Repeat for <m>a(bc) = e</m> to get the other equation.
+                </p>
+              </li>
+            </ol>
+          </p>
+        </solution>
+      </exercise>
+
+      <exercise permid="rab">
+        <statement>
+          <p permid="ijf">
+        Prove that if <m>xay = a\inv</m>, then <m>yax = a\inv</m>.
+          </p>
+        </statement>
+        <solution permid="aLK">
+          <p permid="VkT">
+        Suppose <m>xay = a\inv</m>.  Then <m>xaya = e</m>.  By the previous problem this means that <m>ayax = e</m> and also that <m>yaxa = e</m>.  But then multiply by <m>a\inv</m> on the right: <m>yax = a\inv</m>.
+          </p>
+        </solution>
+      </exercise>
+
+      <exercise permid="Xhk">
+        <statement>
+          <p permid="Oqo">
+        Let <m>a</m>,            <m>b</m>, and <m>c</m> each be equal to its own inverse.  Prove that if <m>ab = c</m>, then <m>bc = a</m> and <m>ca = b</m>.
+          </p>
+        </statement>
+        <solution permid="GST">
+          <p permid="Bsc">
+        Suppose <m>ab = c</m>.  Then <m>abc = e</m> (since <m>c\inv = c</m>), so <m>bc = a</m> (multiply by <m>a</m> on the left of both sides). Also, <m>cab = e</m>, so <m>ca = b</m> (multiplying by <m>b</m> on the right of both sides).
+          </p>
+        </solution>
+      </exercise>
+
+      <exercise permid="Dot">
+        <statement>
+          <p permid="uxx">
+        Prove that if <m>abc</m> is its own inverse, then <m>bca</m> is its own inverse, and <m>cab</m> is its own inverse.
+          </p>
+        </statement>
+        <solution permid="nac">
+          <p permid="hzl">
+        We are given that <m>abcabc = e</m>  We get that <m>bcabca = e</m> and <m>cabcab = e</m>, which is basically what we want to show (just group them appropriately).
+          </p>
+        </solution>
+      </exercise>
+
+      <exercise permid="jvC">
+        <statement>
+          <p permid="aEG">
+        Let <m>a</m> and <m>b</m> each be equal to its own inverse.  Prove that <m>ba</m> is the inverse of <m>ab</m>.
+          </p>
+        </statement>
+        <solution permid="Thl">
+          <p permid="NGu">
+        We want to show that <m>(ab)(ba) = e</m>.  But <m>bb = e</m> and <m>aa = e</m>, so <m>abba = aa = e</m>, as required.
+          </p>
+        </solution>
+      </exercise>
+
+
+    </exercises>
+
+
+    <exercises xml:id="collected-gp-prop" permid="cWw">
+      <title>Collected Homework</title>
+
+      <exercise permid="PCL">
+        <statement>
+          <p permid="GLP">
+          Let <m>a</m> be an element of a group <m>G</m> with identity <m>e</m>.  Prove that <m>a = a\inv</m> if and only if <m>a^2 = e</m>.
+          </p>
+        </statement>
+        <hint permid="zou">
+          <p permid="joy">
+          You need to prove two directions here: if <m>a = a\inv</m> then <m>a^2 = e</m> and if <m>a^2 = e</m> then <m>a = a\inv</m>.
+          </p>
+        </hint>
+      </exercise>
+
+      <exercise permid="vJU">
+        <statement>
+          <p permid="mSY">
+          Let <m>G</m> be a group and suppose that <m>(ab)^2 = a^2 b^2</m> for all <m>a, b \in G</m>.  Prove that <m>G</m> is abelian.
+          </p>
+        </statement>
+        <hint permid="fvD">
+          <p permid="PvH">
+          You are trying to prove <m>xy = yx</m> for all <m>x, y \in G</m>.  Don't assume this!  It should be the last line of your proof.
+          </p>
+        </hint>
+      </exercise>
+
+      <exercise permid="bRd">
+        <statement>
+          <p permid="Tah">
+          True or false: if <m>x^2 = a^2</m> then <m>x = a</m>.  Prove your answer.
+          </p>
+        </statement>
+      </exercise>
+    </exercises>
+    </section>
+
+  <section xml:id="section-subgroups" permid="ztK">
+    <title>Subgroups</title>
+    <subsection xml:id="groups-subsection-subgroup-examples" permid="dLG">
+      <title>Definitions and Examples</title>
+      <p permid="Ylc">
+        Sometimes we wish to investigate smaller groups sitting inside a larger group.
+        The set of even integers <m>2{\mathbb Z} = \{\ldots, -2, 0, 2, 4, \ldots \}</m> is a group under the operation of addition.
+        This smaller group sits naturally inside of the group of integers under addition.
+        We define a <term>subgroup</term><idx><h>Subgroup</h><h>definition of</h></idx> <m>H</m> of a group <m>G</m> to be a subset <m>H</m> of <m>G</m> such that when the group operation of <m>G</m> is restricted to <m>H</m>,
+        <m>H</m> is a group in its own right.
+        Observe that every group <m>G</m> with at least two elements will always have at least two subgroups,
+        the subgroup consisting of the identity element alone and the entire group itself.
+        The subgroup <m>H = \{ e \}</m> of a group <m>G</m> is called the
+        <term>trivial subgroup</term>.
+            <idx><h>Subgroup</h><h>trivial</h></idx>
+        A subgroup that is a proper subset of <m>G</m> is called a
+        <term>proper subgroup</term>.
+            <idx><h>Subgroup</h><h>proper</h></idx>
+        In many of the examples that we have investigated up to this point,
+        there exist other subgroups besides the trivial and improper subgroups.
+      </p>
+
+      <example xml:id="example-groups-multiplicative-subgroup" permid="VbO">
+        <p permid="CoD">
+          Consider the set of nonzero real numbers,
+          <m>{\mathbb R}^*</m>, with the group operation of multiplication.
+
+          <notation>
+            <usage>\mathbb R^*</usage>
+            <description>the multiplicative group of real numbers</description>
+          </notation>
+
+          The identity of this group is <m>1</m> and the inverse of any element <m>a \in {\mathbb R}^*</m> is just <m>1/a</m>.
+          We will show that
+          <me permid="TfK">
+            {\mathbb Q}^* = \{ p/q : p \, \text{and}\, q\, \text{are nonzero integers} \}
+          </me>
+          is a subgroup of <m>{\mathbb R}^*</m>.
+
+          <notation>
+            <usage>\mathbb Q^*</usage>
+            <description>the multiplicative group of rational numbers</description>
+          </notation>
+
+          The identity of <m>{\mathbb R}^*</m> is <m>1</m>;
+          however,  <m>1 = 1/1</m> is the quotient of two nonzero integers.
+          Hence, the identity of <m>{\mathbb R}^*</m> is in <m>{\mathbb Q}^*</m>.
+          Given two elements in <m>{\mathbb Q}^*</m>,
+          say <m>p/q</m> and <m>r/s</m>,
+          their product <m>pr/qs</m> is also in <m>{\mathbb Q}^*</m>.
+          The inverse of any element <m>p/q \in {\mathbb Q}^*</m> is again in
+          <m>{\mathbb Q}^*</m> since <m>(p/q)^{-1} = q/p</m>.
+          Since multiplication in <m>{\mathbb R}^*</m> is associative,
+          multiplication in <m>{\mathbb Q}^*</m> is associative.
+        </p>
+      </example>
+
+      <example xml:id="example-groups-subgroup-h" permid="BiX">
+        <p permid="ivM">
+          Recall that <m>{\mathbb C}^{\ast}</m> is the multiplicative group of nonzero complex numbers.
+          Let <m>H = \{ 1, -1, i, -i \}</m>.
+          Then <m>H</m> is a subgroup of <m>{\mathbb C}^{\ast}</m>.
+          It is quite easy to verify that <m>H</m> is a group under multiplication and that <m>H \subset {\mathbb C}^{\ast}</m>.
+        </p>
+      </example>
+
+      <example xml:id="example-groups-sl2" permid="hqg">
+        <p permid="OCV">
+          Let <m>SL_2( {\mathbb R})</m> be the subset of
+          <m>GL_2( {\mathbb R })</m> consisting of matrices of determinant one;
+          that is, a matrix
+
+          <notation>
+            <usage>SL_n(\mathbb R)</usage>
+            <description>the special linear group</description>
+          </notation>
+
+          <me permid="zmT">
+            A =
+            \begin{pmatrix}
+            a &amp; b \\
+            c &amp; d
+            \end{pmatrix}
+          </me>
+          is in <m>SL_2( {\mathbb R})</m> exactly when <m>ad - bc = 1</m>.
+          To show that <m>SL_2( {\mathbb R})</m> is a subgroup of the general linear group,
+          we must show that it is a group under matrix multiplication.
+          The <m>2 \times 2</m> identity matrix is in <m>SL_2( {\mathbb R})</m>,
+          as is the inverse of the matrix <m>A</m>:
+          <me permid="LBl">
+            A^{-1} =
+            \begin{pmatrix}
+            d  &amp; -b \\
+            -c &amp;  a
+            \end{pmatrix}
+          </me>.
+          It remains to show that multiplication is closed;
+          that is, that the product of two matrices of determinant one also has determinant one.
+          We will leave this task as an exercise.
+          The group <m>SL_2({\mathbb R})</m> is called the
+          <term>special linear group</term>.
+              <idx><h>Group</h><h>special linear</h></idx>
+        </p>
+      </example>
+
+      <example xml:id="example-groups-gl2-subgroup" permid="Nxp">
+        <p permid="uKe">
+          It is important to realize that a subset <m>H</m> of a group <m>G</m> can be a group without being a subgroup of <m>G</m>.
+          For <m>H</m> to be a subgroup of <m>G</m>, it must inherit the binary operation of <m>G</m>.
+          The set of all <m>2 \times 2</m> matrices,
+          <m>{\mathbb M}_2(\mathbb R)</m>,
+          forms a group under the operation of addition.
+          The <m>2 \times 2</m> general linear group is a subset of
+          <m>{\mathbb M}_2(\mathbb R)</m> and is a group under matrix multiplication,
+          but it is not a subgroup of <m>{\mathbb M}_2(\mathbb R)</m>.
+          If we add two invertible matrices,
+          we do not necessarily obtain another invertible matrix.
+          Observe that
+          <me permid="rIu">
+            \begin{pmatrix}
+            1 &amp; 0 \\
+            0 &amp; 1
+            \end{pmatrix}
+            +
+            \begin{pmatrix}
+            -1 &amp;  0 \\
+            0  &amp; -1
+            \end{pmatrix}
+            =
+            \begin{pmatrix}
+            0 &amp; 0 \\
+            0 &amp; 0
+            \end{pmatrix}
+          </me>,
+          but the zero matrix is not in <m>GL_2( {\mathbb R })</m>.
+        </p>
+      </example>
+
+      <example xml:id="example-groups-z2xz2" permid="tEy">
+        <p permid="aRn">
+          One way of telling whether or not two groups are the same is by examining their subgroups.
+          Other than the trivial subgroup and the group itself,
+          the group <m>{\mathbb Z}_4</m> has a single subgroup consisting of the elements <m>0</m> and <m>2</m>.
+          From the group <m>{\mathbb Z}_2</m>,
+          we can form another group of four elements as follows.
+          As a set this group is <m>{\mathbb Z}_2 \times {\mathbb Z}_2</m>.
+          We perform the group operation coordinatewise;
+          that is, <m>(a,b) + (c,d) = (a+c, b+d)</m>.
+          <xref ref="table-z2xz2"/> is an addition table for <m>{\mathbb Z}_2 \times {\mathbb Z}_2</m>.
+          Since there are three nontrivial proper subgroups of <m>{\mathbb Z}_2 \times {\mathbb Z}_2</m>,
+          <m>H_1 = \{ (0,0), (0,1) \}</m>,
+          <m>H_2 = \{ (0,0), (1,0) \}</m>,
+          and <m>H_3 = \{ (0,0), (1,1) \}</m>,
+          <m>{\mathbb Z}_4</m> and <m>{\mathbb Z}_2 \times {\mathbb Z}_2</m> must be different groups.
+        </p>
+
+        <figure xml:id="table-z2xz2" permid="Ilg">
+            <!-- math table -->
+          <caption>Addition table for <m>{\mathbb Z}_2 \times {\mathbb Z}_2</m></caption>
+          <p permid="GYw">
+            <me permid="XPD">
+              \begin{array}{c|cccc}
+              +     &amp; (0,0) &amp; (0,1) &amp; (1,0) &amp; (1,1) \\
+              \hline
+              (0,0) &amp; (0,0) &amp; (0,1) &amp; (1,0) &amp; (1,1) \\
+              (0,1) &amp; (0,1) &amp; (0,0) &amp; (1,1) &amp; (1,0) \\
+              (1,0) &amp; (1,0) &amp; (1,1) &amp; (0,0) &amp; (0,1) \\
+              (1,1) &amp; (1,1) &amp; (1,0) &amp; (0,1) &amp; (0,0)
+              \end{array}
+            </me>
+          </p>
+        </figure>
+      </example>
+
+    </subsection>
+
+    <subsection xml:id="groups-subsection-subgroup-theorems" permid="JSP">
+      <title>Some Subgroup Theorems</title>
+      <p permid="Esl">
+        Let us examine some criteria for determining exactly when a subset of
+        a group is a subgroup.
+      </p>
+
+      <proposition permid="ZLH">
+        <statement>
+          <p permid="Ush">
+            A subset <m>H</m> of <m>G</m> is a subgroup if and only if it satisfies the following conditions.
+
+            <ol permid="MkS">
+              <li permid="rmI">
+                <p permid="Qzm">
+                  The identity <m>e</m> of <m>G</m> is in <m>H</m>.
+                </p>
+              </li>
+
+              <li permid="XtR">
+                <p permid="wGv">
+                  If <m>h_1, h_2 \in H</m>, then <m>h_1h_2 \in H</m>.
+                </p>
+              </li>
+
+              <li permid="DBa">
+                <p permid="cNE">
+                  If <m>h \in H</m>, then <m>h^{-1} \in H</m>.
+                </p>
+              </li>
+            </ol>
+          </p>
+        </statement>
+
+        <proof permid="Vqj">
+          <p permid="yKd">
+            First suppose that <m>H</m> is a subgroup of <m>G</m>.
+            We must show that the three conditions hold.
+            Since <m>H</m> is a group, it must have an identity <m>e_H</m>.
+            We must show that <m>e_H = e</m>,
+            where <m>e</m> is the identity of <m>G</m>.
+            We know that <m>e_H e_H = e_H</m> and that <m>ee_H = e_H e = e_H</m>;
+            hence, <m>ee_H = e_H e_H</m>.
+            By right-hand cancellation, <m>e =e_H</m>.
+            The second condition holds since a subgroup <m>H</m> is a group.
+            To prove the third condition, let <m>h \in H</m>.
+            Since <m>H</m> is a group,
+            there is an element <m>h' \in H</m> such that <m>hh' = h'h = e</m>.
+            By the uniqueness of the inverse in <m>G</m>, <m>h' = h^{-1}</m>.
+          </p>
+
+          <p permid="eRm">
+            Conversely, if the three conditions hold,
+            we must show that <m>H</m> is a group under the same operation as <m>G</m>;
+            however, these conditions plus the associativity of the binary operation are exactly the axioms stated in the definition of a group.
+          </p>
+        </proof>
+      </proposition>
+
+      <proposition xml:id="proposition-subgroup" permid="FSQ">
+        <statement>
+          <p permid="Azq">
+            Let <m>H</m> be a subset of a group <m>G</m>.
+            Then <m>H</m> is a subgroup of <m>G</m> if and only if <m>H \neq \emptyset</m>,
+            and whenever <m>g, h \in H</m> then <m>gh^{-1}</m> is in <m>H</m>.
+          </p>
+        </statement>
+
+        <proof permid="Bxs">
+          <p permid="KYv">
+            First assume that <m>H</m> is a subgroup of <m>G</m>.
+            We wish to show that <m>gh^{-1} \in H</m> whenever <m>g</m> and <m>h</m> are in <m>H</m>.
+            Since <m>h</m> is in <m>H</m>,
+            its inverse <m>h^{-1}</m> must also be in <m>H</m>.
+            Because of the closure of the group operation, <m>gh^{-1} \in H</m>.
+          </p>
+
+          <p permid="rfE">
+            Conversely, suppose that <m>H \subset G</m> such that <m>H \neq \emptyset</m> and
+            <m>g h^{-1} \in H</m> whenever <m>g, h \in H</m>.
+            If <m>g \in H</m>, then <m>gg^{-1} = e</m> is in <m>H</m>.
+            If <m>g \in H</m>, then <m>eg^{-1} = g^{-1}</m> is also in <m>H</m>.
+            Now let <m>h_1, h_2 \in H</m>.
+            We must show that their product is also in <m>H</m>.
+            However, <m>h_1(h_2^{-1})^{-1} = h_1 h_2 \in H</m>.
+            Hence, <m>H</m> is a subgroup of <m>G</m>.
+          </p>
+        </proof>
+      </proposition>
+            <!-- % TWJ, 2012/11/21 -->
+            <!-- % Proof rewritten for clarity.  Suggested by R. Beezer. -->
+            <!-- Let <m>H</m> be a nonempty subset of <m>G</m>.  Then <m>H</m> contains some element <m>g</m>.  So <m>gg^{-1} = e</m> is in <m>H</m>.  If <m>g \in H</m>, then <m>eg^{-1} = g^{-1}</m> is also in <m>H</m>. Finally, let <m>g, h \in H</m>. We must show that their product is also in <m>H</m>.  However, <m>g(h^{-1})^{-1} = gh \in H</m>.  Hence, <m>H</m> is indeed a subgroup of <m>G</m>. Conversely, if <m>g</m> and <m>h</m> are in <m>H</m>, we want to show that <m>gh^{-1} \in H</m>.  Since <m>h</m> is in <m>H</m>, its inverse <m>h^{-1}</m> must also be in <m>H</m>.  Because of the closure of the group operation, <m>gh^{-1} \in H</m>.  -->
+
+      <paragraphs permid="GYj">
+        <title>Sage</title>
+        <p permid="kzu">
+          The first half of this text is about group theory.
+          Sage includes Groups, Algorithms and Programming (<acro>GAP</acro>),
+          a program designed primarly for just group theory,
+          and in continuous development since 1986.
+          Many of Sage's computations for groups ultimately are performed by GAP.
+        </p>
+      </paragraphs>
+
+    </subsection>
+    <reading-questions xml:id="rqs-subgroups" permid="vhi">
+      <exercise xml:id="rq2-4-1" permid="wWv">
+        <statement>
+          <p permid="rhj">
+            Is <m>\Z_4</m> a subgroup of <m>\Z_8</m>?  Explain.
+          </p>
+        </statement>
+      </exercise>
+      <exercise xml:id="rq2-4-2" permid="ddE">
+        <statement>
+          <p permid="Xos">
+            What makes a subgroup <em>proper</em>?  What makes a subgroup <em>non-trivial</em>?
+          </p>
+        </statement>
+      </exercise>
+      <exercise xml:id="rq2-4-3" permid="JkN">
+        <statement>
+          <p permid="DvB">
+            The subgroup criterion in <xref ref="proposition-subgroup"/> says that for <m>H</m> to be a subgroup it is enough for <m>H \ne \emptyset</m> and whenever <m>g,h \in H</m> we also have <m>gh\inv \in H</m>.  Does every subgroup need to contain the identity?  If so, why does this criterion not say so?
+          </p>
+        </statement>
+      </exercise>
+      <exercise xml:id="rq2-4-4" permid="prW">
+        <statement>
+          <p permid="jCK">
+            After reading the section, what questions do you still have?  Write at least one well formulated question (even if you think you understand everything).
+          </p>
+        </statement>
+      </exercise>
+    </reading-questions>
+
+    <exercises xml:id="practice-gp-subgp" permid="JdF">
+      <title>Practice Problems</title>
+
+      <exercise permid="HYm">
+        <statement>
+          <p permid="zhq">
+          How many subgroups are there of <m>D_4</m>?  Find them all.  What are their orders?
+          </p>
+        </statement>
+        <hint permid="LCM">
+          <p permid="vCQ">
+          You should find 10 subgroups.  Their orders will be <m>1</m>,            <m>2</m>,            <m>4</m> and <m>8</m>.
+          </p>
+        </hint>
+      </exercise>
+
+      <exercise permid="ofv">
+        <statement>
+          <p permid="foz">
+          How many subgroups are there of <m>\Z_8</m>?  Find them all.  What are their orders?
+          </p>
+        </statement>
+        <hint permid="rJV">
+          <p permid="bJZ">
+          There will be 4 subgroups.  One each of orders 1, 2, 4, and 8.
+          </p>
+        </hint>
+      </exercise>
+
+      <exercise permid="UmE">
+        <statement>
+          <p permid="LvI">
+          List the subgroups of <m>\Z_9</m>.  Then list the subgroups of <m>\Z_3 \times \Z_3</m> (the group of all ordered pairs <m>(a,b)</m> where <m>a</m> and <m>b</m> are in <m>\Z_3</m>).  Note this shows that the two groups are not the same.
+          </p>
+        </statement>
+        <hint permid="XRe">
+          <p permid="HRi">
+          There are 3 subgroups of <m>\Z_9</m>.  There are more of <m>\Z_3 \times \Z_3</m>. 
+          </p>
+        </hint>
+      </exercise>
+
+      <exercise permid="AtN">
+        <statement>
+          <p permid="rCR">
+          Let <m>G = (\R, +)</m>, the real numbers under addition.  Let <m>H = \{\log a \st a \in \Q,~ a \gt 0\}</m>.  Prove that <m>H</m> is a subgroup of <m>G</m>
+          </p>
+        </statement>
+        <solution permid="DYn">
+          <p permid="tND">
+          The identity of <m>G</m> is <m>0</m>, and <m>0 = \log 1</m>.  Since <m>1 \in \Q</m> and positive, we see that <m>0 \in H</m>. 
+          </p>
+          <p permid="ZUM">
+          Suppose <m>a, b \in H</m>.  This means that <m>a = \log x</m> and <m>b = \log y</m> for some <m>x,y \in \Q</m>, both positive.  What about <m>a+b</m>?  Well, <m>a+b = \log x + \log y = \log(xy)</m>.  We have <m>xy \in \Q</m> and positive, so <m>a+b \in H</m>.
+          </p>
+          <p permid="GbV">
+          Finall, for inverses, suppose <m>a \in H</m>.  Then <m>a = \log x</m> for positive <m>x \in \Q</m>.  The inverse will be <m>-a = -\log x = \log(x\inv)</m>.  But <m>x\inv \in \Q</m> and still positive, so <m>-a \in H</m>.
+          </p>
+        </solution>
+      </exercise>
+
+      <exercise permid="gAW">
+        <statement>
+          <p permid="XKa">
+          Consider the group <m>G = (\R \times \R, +)</m>, the set of all ordered pairs of real numbers, under addition (where we add each coordinate independently: <m>(a,b) + (c,d) = (a+c, b+d)</m>).  Define the set <m>H = \{(x,y) \st y = 2x\}</m>.  Is <m>H</m> a subgroup of <m>G</m>?  Prove your answer.
+          </p>
+        </statement>
+        <hint permid="kfw">
+          <p permid="nYr">
+          Yes, <m>H</m> is a subgroup of <m>G</m>.  For closure under addition, consider <m>(x_1, y_1) \in H</m> and <m>(x_2, y_2) \in H</m>.  This means that <m>y_1 = 2x_1</m> and <m>y_2 = 2x_2</m>.  What about <m>(x_1+x_2, y_1+y_2)</m>?  Well, <m>y_1+y_2 = 2x_1 + 2x_2 = 2(x_1+x_2)</m>, so indeed, <m>(x_1+x_2, y_1+y_2) \in H</m>.  
+          </p>
+          <p permid="UfA">
+          For inverse, we need to check that <m>(-x, -y) \in H</m> given that <m>(x,y) \in H</m>.  Do it!
+          </p>
+        </hint>
+      </exercise>
+
+      <exercise permid="MIf">
+        <statement>
+          <p permid="DRj">
+          Again consider <m>G = (\R\times \R, +)</m>, but this time define <m>H = \{(x,y) \st x^2 + y^2 > 0\}</m>.  Is <m>H</m> a subgroup of <m>G</m>?  Prove your answer.
+          </p>
+        </statement>
+        <answer permid="QmF">
+          <p permid="mje">
+          No.  <m>H</m> does not contain the identity (and is not closed under inverses).  You should show this!
+          </p>
+        </answer>
+      </exercise>
+
+    </exercises>
+
+
+    <exercises xml:id="collected-gp-subgp" permid="pkO">
+      <title>Collected Homework</title>
+
+      <exercise number="C1" permid="sPo">
+        <statement>
+          <p permid="jYs">
+          Consider the group <m>(\Q^*,\cdot)</m>, the non-zero rational numbers under multiplication.  Let <m>H = \{2^k \st k \in \Z\}</m>.  Prove that <m>H</m> is a subgroup of <m>G</m>.
+          </p>
+        </statement>
+      </exercise>
+
+      <exercise number="C2" permid="YWx">
+        <statement>
+          <p permid="QfB">
+          Let <m>G</m> be a group and let <m>H = \{x \in G \st x^2 = e\}</m>.
+            <ol permid="eqk">
+              <li permid="Lhn">
+                <p permid="nox">
+                If <m>G = D_4</m>, what is <m>H</m>?  Is <m>H</m> a subgroup of <m>G</m>?
+                </p>
+              </li>
+              <li permid="row">
+                <p permid="TvG">
+                Prove that if <m>G</m> is abelian, then <m>H</m> is a subgroup of <m>G</m>.
+                </p>
+              </li>
+            </ol>
+          </p>
+        </statement>
+        <hint permid="wtO">
+          <p permid="AmJ">
+          Warning: this is not the same as <m>G^2 = \{g^2 \st g \in G\}</m> that we did in class.
+          </p>
+        </hint>
+      </exercise>
+
+    </exercises>
+
+
+  </section>
+
+  <section xml:id="cyclic" permid="MzR">
+    <title>Cyclic Subgroups</title>
+    <introduction permid="bXk">
+      <p permid="klQ">
+        Often a subgroup will depend entirely on a single element of the group;
+        that is, knowing that particular element will allow us to compute any other element in the subgroup.
+      </p>
+      <!-- RAB 2014/08/18 Maybe this id should have 3z, not z3? -->
+      <example xml:id="example-cyclic-z3" permid="Gpg">
+        <p permid="JTT">
+          Suppose that we consider <m>3 \in {\mathbb Z}</m> and look at all multiples
+          (both positive and negative)
+          of <m>3</m>.
+          As a set, this is
+          <me permid="Byw">
+            3 {\mathbb Z} = \{ \ldots, -3, 0, 3, 6, \ldots \}
+          </me>.
+          It is easy to see that <m>3 {\mathbb Z}</m> is a subgroup of the integers.
+          This subgroup is completely determined by the element <m>3</m> since we can obtain all of the other elements of the group by taking multiples of <m>3</m>.
+          Every element in the subgroup is
+          <q>generated</q> by <m>3</m>.
+        </p>
+      </example>
+
+      <example xml:id="example-cyclic-2n" permid="mwp">
+        <p permid="qbc">
+          If <m>H = \{ 2^n : n \in {\mathbb Z} \}</m>,
+          then <m>H</m> is a subgroup of the multiplicative group of nonzero rational numbers,
+          <m>{\mathbb Q}^*</m>.
+          If <m>a = 2^m</m> and <m>b = 2^n</m> are in <m>H</m>,
+          then <m>ab^{-1} = 2^m 2^{-n} = 2^{m-n}</m> is also in <m>H</m>.
+          By <xref ref="proposition-subgroup"/>,
+        <m>H</m> is a subgroup of <m>{\mathbb Q}^*</m> determined by the element <m>2</m>.
+      </p>
+    </example>
+
+    <theorem xml:id="theorem-cyclic-subgroup" permid="hMw">
+      <statement>
+        <p permid="UsY">
+            Let <m>G</m> be a group and <m>a</m> be any element in <m>G</m>.
+            Then the set
+
+          <notation>
+            <usage>\langle a \rangle</usage>
+            <description>cyclic group generated by <m>a</m>
+            </description>
+          </notation>
+
+          <me permid="hFF">
+              \langle a \rangle  = \{ a^k : k \in {\mathbb Z} \}
+          </me>
+            is a subgroup of <m>G</m>.
+            Furthermore,
+          <m>\langle a \rangle</m> is the smallest subgroup of <m>G</m> that contains <m>a</m>.
+        </p>
+      </statement>
+
+      <proof permid="UsL">
+        <p permid="rgv">
+            The identity is in <m>\langle a \rangle </m> since <m>a^0 = e</m>.
+            If <m>g</m> and <m>h</m> are any two elements in <m>\langle a \rangle </m>,
+            then by the definition of <m>\langle a \rangle</m> we can write <m>g = a^m</m> and <m>h = a^n</m> for some integers <m>m</m> and <m>n</m>.
+            So <m>gh = a^m a^n = a^{m+n}</m> is again in <m>\langle a \rangle </m>.
+            Finally, if <m>g = a^n</m> in <m>\langle a \rangle </m>,
+            then the inverse <m>g^{-1} = a^{-n}</m> is also in <m>\langle a \rangle </m>.
+            Clearly, any subgroup <m>H</m> of <m>G</m> containing <m>a</m> must contain all the powers of <m>a</m> by closure;
+            hence, <m>H</m> contains <m>\langle a \rangle </m>.
+            Therefore, <m>\langle a \rangle </m> is the smallest subgroup of <m>G</m> containing <m>a</m>.
+        </p>
+      </proof>
+    </theorem>
+
+    <remark permid="PIS">
+      <p permid="XXy">
+          If we are using the <q>+</q> notation,
+          as in the case of the integers under addition,
+          we write <m>\langle a \rangle = \{ na : n \in {\mathbb Z} \}</m>.
+      </p>
+    </remark>
+
+    <p permid="QsZ">
+        For <m>a \in G</m>, we call <m>\langle a \rangle </m> the
+      <term>cyclic subgroup</term>
+      <idx>
+        <h>Subgroup</h>
+        <h>cyclic</h>
+      </idx>
+        generated by <m>a</m>.
+        If <m>G</m> contains some element <m>a</m> such that <m>G = \langle a \rangle </m>,
+        then <m>G</m> is a <term>cyclic group</term>.
+      <idx>
+        <h>Group</h>
+        <h>cyclic</h>
+      </idx>
+        In this case <m>a</m> is a <term>generator</term>
+      <idx>
+        <h>Generator of a cyclic subgroup</h>
+      </idx> of <m>G</m>.
+        If <m>a</m> is an element of a group <m>G</m>,
+        we define the <term>order</term>
+      <idx>
+        <h>Element</h>
+        <h>order of</h>
+      </idx>
+        of <m>a</m> to be the smallest positive integer <m>n</m> such that <m>a^n= e</m>,
+        and we write <m>|a| = n</m>.
+
+      <notation>
+        <usage>|a|</usage>
+        <description>the order of an element <m>a</m>
+        </description>
+      </notation>
+
+        If there is no such integer <m>n</m>,
+        we say that the order of <m>a</m> is infinite and write
+      <m>|a| = \infty</m> to denote the order of <m>a</m>.
+    </p>
+
+    <example xml:id="example-cyclic-z6" permid="SDy">
+      <p permid="Wil">
+          Notice that a cyclic group can have more than a single generator.
+          Both <m>1</m> and <m>5</m> generate <m>{\mathbb Z}_6</m>;
+          hence, <m>{\mathbb Z}_6</m> is a cyclic group.
+          Not every element in a cyclic group is necessarily a generator of the group.
+          The order of <m>2 \in {\mathbb Z}_6</m> is <m>3</m>.
+          The cyclic subgroup generated by <m>2</m> is <m>\langle 2 \rangle = \{ 0, 2, 4 \}</m>.
+      </p>
+    </example>
+
+    <p permid="wAi">
+        The groups <m>{\mathbb Z}</m> and <m>{\mathbb Z}_n</m> are cyclic groups.
+        The elements <m>1</m> and <m>-1</m> are generators for <m>{\mathbb Z}</m>.
+        We can certainly generate <m>{\mathbb Z}_n</m> with 1 although there may be other generators of <m>{\mathbb Z}_n</m>,
+        as in the case of <m>{\mathbb Z}_6</m>.
+    </p>
+
+    <example xml:id="example-cyclic-u9" permid="yKH">
+      <p permid="Cpu">
+          The group of units, <m>U(9)</m>,
+          in <m>{\mathbb Z}_9</m> is a cyclic group.
+          As a set, <m>U(9)</m> is <m>\{ 1, 2, 4, 5, 7, 8  \}</m>.
+          The element 2 is a generator for <m>U(9)</m> since
+        <md permid="NMO">
+          <mrow>2^1 &amp; = 2 \qquad 2^2 = 4</mrow>
+          <mrow>2^3 &amp; = 8 \qquad 2^4 = 7</mrow>
+          <mrow>2^5 &amp; =  5 \qquad 2^6 = 1</mrow>
+        </md>.
+      </p>
+    </example>
+
+    <example xml:id="example-cyclic-s3-not-cyclic" permid="eRQ">
+      <p permid="iwD">
+          Not every group is a cyclic group.
+          Consider the symmetry group of an equilateral triangle <m>S_3</m>.
+          The multiplication table for this group is <xref ref="table-s3"/>
+.
+          The subgroups of <m>S_3</m> are shown in <xref ref="figure-subgrps-s3"/>
+.
+          Notice that every subgroup is cyclic;
+          however, no single element generates the entire group.
+    </p>
+
+    <figure xml:id="figure-subgrps-s3" permid="ODM">
+      <caption>Subgroups of <m>S_3</m>
+      </caption>
+      <!-- Replaced figure with tikz figure - TWJ 5/6/2010 -->
+      <image xml:id="cyclic-s3-subgroups" permid="epA">
+        <description>The lattice of subgroups for S-3: the top is S-3, the second line is the identity, rho-1, rho-2; the identity, mu-1; the identity, mu-2; the identity, mu-3, and the bottom is the identity subgroup.</description>
+
+        <latex-image>
+          <xi:include href="tikz/cyclic-s3-subgroups.tex" parse="text"/>
+        </latex-image>
+      </image>
+
+    </figure>
+  </example>
+
+  <theorem xml:id="theorem-cyclic-abelian" permid="NTF">
+    <statement>
+      <p permid="AAh">
+            Every cyclic group is abelian.
+      </p>
+    </statement>
+
+    <proof permid="AzU">
+      <p permid="XnE">
+            Let <m>G</m> be a cyclic group and <m>a \in G</m> be a generator for <m>G</m>.
+            If <m>g</m> and <m>h</m> are in <m>G</m>,
+            then they can be written as powers of <m>a</m>,
+            say <m>g = a^r</m> and <m>h = a^s</m>.
+            Since
+        <me permid="tTX">
+              g  h = a^r a^s = a^{r+s} = a^{s+r} = a^s a^r = h g
+        </me>,
+        <m>G</m> is abelian.
+      </p>
+    </proof>
+  </theorem>
+</introduction>
+
+<subsection xml:id="cyclic-subsection-cyclic-subgroups" permid="qRN">
+  <title>Subgroups of Cyclic Groups</title>
+  <p permid="lFE">
+        We can ask some interesting questions about cyclic subgroups of a group and subgroups of a cyclic group.
+        If <m>G</m> is a group, which subgroups of <m>G</m> are cyclic?
+        If <m>G</m> is a cyclic group,
+        what type of subgroups does <m>G</m> possess?
+  </p>
+
+  <theorem xml:id="theorem-cyclic-subgroups" permid="lcB">
+    <statement>
+      <p permid="gHq">
+            Every subgroup of a cyclic group is cyclic.
+      </p>
+    </statement>
+
+    <proof permid="gHd">
+      <p permid="DuN">
+            The main tools used in this proof are the division algorithm and the Principle of Well-Ordering.
+            Let <m>G</m> be a cyclic group generated by <m>a</m> and suppose that <m>H</m> is a subgroup of <m>G</m>.
+            If <m>H = \{ e \}</m>, then trivially <m>H</m> is cyclic.
+            Suppose that <m>H</m> contains some other element <m>g</m> distinct from the identity.
+            Then <m>g</m> can be written as <m>a^n</m> for some integer <m>n</m>.
+            Since <m>H</m> is a subgroup,
+        <m>g^{-1} = a^{-n}</m> must also be in <m>H</m>.
+            Since either <m>n</m> or <m>-n</m> is positive,
+            we can assume that <m>H</m> contains positive powers of <m>a</m> and <m>n \gt 0</m>.
+            Let <m>m</m> be the smallest natural number such that <m>a^m \in H</m>.
+            Such an <m>m</m> exists by the Principle of Well-Ordering.
+      </p>
+
+      <p permid="jBW">
+            We claim that <m>h = a^m</m> is a generator for <m>H</m>.
+            We must show that every <m>h' \in H</m> can be written as a power of <m>h</m>.
+            Since <m>h' \in H</m> and <m>H</m> is a subgroup of <m>G</m>,
+        <m>h' = a^k</m> for some integer <m>k</m>.
+            Using the division algorithm,
+            we can find numbers <m>q</m> and <m>r</m> such that
+        <m>k = mq +r</m> where <m>0 \leq r \lt m</m>; hence,
+        <me permid="abg">
+              a^k = a^{mq +r} = (a^m)^q a^r = h^q a^r
+        </me>.
+            So <m>a^r = a^k h^{-q}</m>.
+            Since <m>a^k</m> and <m>h^{-q}</m> are in <m>H</m>,
+        <m>a^r</m> must also be in <m>H</m>.
+            However, <m>m</m> was the smallest positive number such that <m>a^m</m> was in <m>H</m>;
+            consequently, <m>r=0</m> and so <m>k=mq</m>.
+            Therefore,
+        <me permid="Gip">
+              h' = a^k = a^{mq} =  h^q
+        </me>
+            and <m>H</m> is generated by <m>h</m>.
+      </p>
+    </proof>
+  </theorem>
+
+  <corollary permid="dyc">
+    <statement>
+      <p permid="xFB">
+            The subgroups of <m>{\mathbb Z}</m> are exactly
+        <m>n{\mathbb Z}</m> for <m>n = 0, 1, 2,\ldots</m>.
+      </p>
+    </statement>
+  </corollary>
+
+  <proposition xml:id="proposition-cyclic-subgrp-order" permid="xqT">
+    <statement>
+      <p permid="Fka">
+            Let <m>G</m> be a cyclic group of order <m>n</m> and suppose that <m>a</m> is a generator for <m>G</m>.
+            Then <m>a^k=e</m> if and only if <m>n</m> divides <m>k</m>.
+      </p>
+    </statement>
+
+    <proof permid="FjN">
+      <p permid="PJf">
+            First suppose that <m>a^k=e</m>.
+            By the division algorithm,
+        <m>k = nq + r</m> where <m>0 \leq r \lt n</m>; hence,
+        <me permid="mpy">
+              e = a^k = a^{nq + r} = a^{nq} a^r = e a^r = a^r
+        </me>.
+            Since the smallest positive integer <m>m</m> such that <m>a^m = e</m> is <m>n</m>,
+        <m>r= 0</m>.
+      </p>
+
+      <p permid="vQo">
+            Conversely, if <m>n</m> divides <m>k</m>,
+            then <m>k=ns</m> for some integer <m>s</m>.
+            Consequently,
+        <me permid="SwH">
+              a^k = a^{ns} = (a^n)^s = e^s = e
+        </me>.
+      </p>
+    </proof>
+  </proposition>
+
+  <theorem xml:id="theorem-cyclic-orders" permid="RjK">
+    <statement>
+      <p permid="MOz">
+            Let <m>G</m> be a cyclic group of order <m>n</m> and suppose that <m>a \in G</m> is a
+            generator of the group.
+            If <m>b = a^k</m>, then the order of <m>b</m> is <m>n/d</m>,
+            where <m>d = \gcd(k,n)</m>.
+      </p>
+    </statement>
+
+    <proof permid="MOm">
+      <p permid="bXx">
+            We wish to find the smallest integer <m>m</m> such that <m>e = b^m = a^{km}</m>.
+            By <xref ref="proposition-cyclic-subgrp-order"/>
+,
+            this is the smallest integer <m>m</m> such that <m>n</m> divides <m>km</m> or,
+            equivalently,
+      <m>n/d</m> divides <m>m(k/d)</m>.
+            Since <m>d</m> is the greatest common divisor of <m>n</m> and <m>k</m>,
+      <m>n/d</m> and <m>k/d</m> are relatively prime.
+            Hence, for <m>n/d</m> to divide <m>m(k/d)</m> it must divide <m>m</m>.
+            The smallest such <m>m</m> is <m>n/d</m>.
+    </p>
+  </proof>
+</theorem>
+
+<corollary xml:id="corollary-cyclic-modngenerators" permid="JFl">
+  <statement>
+    <p permid="dMK">
+            The generators of <m>{\mathbb Z}_n</m> are the integers <m>r</m> such that
+      <m>1 \leq r \lt n</m> and <m>\gcd(r,n) = 1</m>.
+    </p>
+  </statement>
+</corollary>
+
+<example xml:id="example-cyclic-z16" permid="pMu">
+  <p permid="uKV">
+          Let us examine the group <m>{\mathbb Z}_{16}</m>.
+          The numbers <m>1</m>,    <m>3</m>,
+    <m>5</m>,    <m>7</m>,    <m>9</m>,    <m>11</m>,    <m>13</m>,
+          and <m>15</m> are the elements of
+    <m>{\mathbb Z}_{16}</m> that are relatively prime to <m>16</m>.
+          Each of these elements generates <m>{\mathbb Z}_{16}</m>.
+          For example,
+    <md permid="yDQ">
+      <mrow>1 \cdot 9  &amp; =  9  &amp;  2 \cdot 9  &amp; = 2  &amp; 3 \cdot 9  &amp; = 11</mrow>
+      <mrow>4 \cdot 9  &amp; =  4  &amp;  5 \cdot 9  &amp; = 13 &amp; 6 \cdot 9 &amp; = 6</mrow>
+      <mrow>7 \cdot 9  &amp; =  15 &amp; 8 \cdot 9  &amp; = 8  &amp; 9 \cdot 9 &amp;  = 1</mrow>
+      <mrow>10 \cdot 9 &amp; =  10 &amp; 11 \cdot 9 &amp; = 3  &amp; 12 \cdot 9 &amp;  = 12</mrow>
+      <mrow>13 \cdot 9 &amp; =  5 &amp; 14 \cdot 9 &amp; = 14 &amp;  15 \cdot 9 &amp; = 7</mrow>
+    </md>.
+  </p>
+</example>
+</subsection>
+<reading-questions xml:id="rqs-cyclic" permid="wmB">
+<exercise xml:id="rq2-5-1" permid="ctK">
+  <statement>
+    <p permid="AWu">
+            Explain what it means for a group to be cyclic.  Your explanation should use the word <em>generator</em> at least once.
+    </p>
+  </statement>
+</exercise>
+<exercise xml:id="rq2-5-2" permid="IAT">
+  <statement>
+    <p permid="hdD">
+            Find two different generators for the group <m>U(9) = \{1,2,4,5,7,8\}</m>.  What does this say about whether <m>U(9)</m> is cyclic? (Compare to the previous question.)
+    </p>
+  </statement>
+</exercise>
+<exercise xml:id="rq2-5-3" permid="oIc">
+  <statement>
+    <p permid="NkM">
+            Suppose <m>H</m> is a subgroup of a cyclic group <m>G</m>.  Must <m>H</m> be abelian?  Explain.
+    </p>
+  </statement>
+</exercise>
+<exercise xml:id="rq2-5-4" permid="UPl">
+  <statement>
+    <p permid="trV">
+            After reading the section, what questions do you still have?  Write at least one well formulated question (even if you think you understand everything).
+    </p>
+  </statement>
+</exercise>
+</reading-questions>
+
+
+</section>
+
+<section xml:id="section-permutation-definitions" permid="Wyg">
+  <title>Permutation Groups</title>
+  <introduction permid="DZd">
+    <p permid="ogy">
+      Permutation groups are central to the study of geometric symmetries and to Galois theory,
+      the study of finding solutions of polynomial equations.
+      They also provide abundant examples of nonabelian groups.
+    </p>
+
+    <p permid="UnH">
+      Let us recall for a moment the symmetries of the equilateral triangle
+      <m>\bigtriangleup ABC</m> from <xref ref="groups"/>
+.
+      The symmetries actually consist of permutations of the three vertices,
+      where a <term>permutation</term>
+    <idx>
+      <h>Permutation</h>
+      <h>definition of</h>
+    </idx> of the set
+    <m>S = \{ A, B, C \}</m> is a one-to-one and onto map <m>\pi :S \rightarrow S</m>.
+      The three vertices have the following six permutations.
+    <md permid="XwI">
+      <mrow>\begin{pmatrix}
+        A &amp; B &amp; C \\
+        A &amp; B &amp; C
+        \end{pmatrix}
+        \qquad
+        \begin{pmatrix}
+        A &amp; B &amp; C \\
+        C &amp; A &amp; B
+        \end{pmatrix}
+        \qquad
+        \begin{pmatrix}
+        A &amp; B &amp; C \\
+        B &amp; C &amp; A
+        \end{pmatrix}</mrow>
+      <mrow>\begin{pmatrix}
+        A &amp; B &amp; C \\
+        A &amp; C &amp; B
+        \end{pmatrix}
+        \qquad
+        \begin{pmatrix}
+        A &amp; B &amp; C \\
+        C &amp; B &amp; A
+        \end{pmatrix}
+        \qquad
+        \begin{pmatrix}
+        A &amp; B &amp; C \\
+        B &amp; A &amp; C
+        \end{pmatrix}</mrow>
+    </md>
+  </p>
+
+  <p permid="AuQ">
+      We have used the array
+    <me permid="DDR">
+        \begin{pmatrix}
+        A &amp; B &amp; C \\
+        B &amp; C &amp; A
+        \end{pmatrix}
+    </me>
+      to denote the permutation that sends <m>A</m> to <m>B</m>,
+    <m>B</m> to <m>C</m>, and <m>C</m> to <m>A</m>.
+      That is,
+    <md permid="jLa">
+      <mrow>A &amp; \mapsto  B</mrow>
+      <mrow>B &amp; \mapsto  C</mrow>
+      <mrow>C &amp; \mapsto  A</mrow>
+    </md>.
+      The symmetries of a triangle form a group.
+      In this section we will study groups of this type.
+  </p>
+
+
+    <p permid="gBZ">
+        In general, the permutations of a set <m>X</m> form a group <m>S_X</m>.
+        If <m>X</m> is a finite set, we can assume <m>X=\{ 1, 2, \ldots, n\}</m>.
+        In this case we write <m>S_n</m> instead of <m>S_X</m>.
+
+      <notation>
+        <usage>S_n</usage>
+        <description>the symmetric group on <m>n</m> letters</description>
+      </notation>
+
+        The following theorem says that <m>S_n</m> is a group.
+        We call this group the <term>symmetric group</term>
+      <idx>
+        <h>Group</h>
+        <h>symmetric</h>
+      </idx>
+        on <m>n</m> letters.
+    </p>
+
+    <theorem permid="GTJ">
+      <statement>
+        <p permid="kBY">
+            The symmetric group on <m>n</m> letters, <m>S_n</m>,
+            is a group with <m>n!</m> elements,
+            where the binary operation is the composition of maps.
+        </p>
+      </statement>
+
+      <proof permid="cBN">
+        <p permid="Kkb">
+            The identity of <m>S_n</m> is just the identity map that sends <m>1</m> to <m>1</m>,
+          <m>2</m> to <m>2</m>,          <m>\ldots</m>,          <m>n</m> to <m>n</m>.
+            If <m>f : S_n \rightarrow S_n</m> is a permutation,
+            then <m>f^{-1}</m> exists, since <m>f</m> is one-to-one and onto;
+            hence, every permutation has an inverse.
+            Composition of maps is associative,
+            which makes the group operation associative.
+            We leave the proof that <m>|S_n|= n!</m> as an exercise.
+        </p>
+      </proof>
+    </theorem>
+
+    <p permid="MJi">
+        A subgroup of <m>S_n</m> is called a
+      <term>permutation group</term>.
+      <idx>
+        <h>Group</h>
+        <h>permutation</h>
+      </idx>
+      <idx>
+        <h>Permutation group</h>
+      </idx>
+    </p>
+
+    <example xml:id="example-permute-s5" permid="zpk">
+      <p permid="Gkc">
+          Consider the subgroup <m>G</m> of <m>S_5</m> consisting of the identity permutation <m>\identity</m> and the permutations
+        <md permid="PSj">
+          <mrow>\sigma
+            &amp; =
+            \begin{pmatrix}
+            1 &amp; 2 &amp; 3 &amp; 4 &amp; 5 \\
+            1 &amp; 2 &amp; 3 &amp; 5 &amp; 4
+            \end{pmatrix}</mrow>
+          <mrow>\tau
+            &amp; =
+            \begin{pmatrix}
+            1 &amp; 2 &amp; 3 &amp; 4 &amp; 5 \\
+            3 &amp; 2 &amp; 1 &amp; 4 &amp; 5
+            \end{pmatrix}</mrow>
+          <mrow>\mu
+            &amp; =
+            \begin{pmatrix}
+            1 &amp; 2 &amp; 3 &amp; 4 &amp; 5 \\
+            3 &amp; 2 &amp; 1 &amp; 5 &amp; 4
+            \end{pmatrix}</mrow>
+        </md>.
+          The following table tells us how to multiply elements in the permutation group <m>G</m>.
+      </p>
+
+      <sidebyside width="100%" permid="XRU">
+
+        <p permid="mrl">
+          <me permid="vZs">
+              \begin{array}{c|cccc}
+              \circ &amp; \identity &amp; \sigma &amp; \tau &amp; \mu \\ \hline
+              \identity &amp; \identity &amp; \sigma &amp; \tau &amp; \mu \\
+              \sigma &amp; \sigma &amp; \identity &amp; \mu &amp; \tau \\
+              \tau &amp; \tau &amp; \mu &amp; \identity &amp; \sigma \\
+              \mu &amp; \mu &amp; \tau &amp; \sigma &amp; \identity
+              \end{array}
+          </me>
+        </p>
+      </sidebyside>
+    </example>
+
+    <remark permid="rKL">
+      <p permid="bSg">
+          Though it is natural to multiply elements in a group from left to right,
+          functions are composed from right to left.
+          Let <m>\sigma</m> and <m>\tau</m> be permutations on a set <m>X</m>.
+          To compose <m>\sigma</m> and <m>\tau</m> as functions,
+          we calculate <m>(\sigma \circ \tau)(x) = \sigma( \tau(x))</m>.
+          That is, we do <m>\tau</m> first, then <m>\sigma</m>.
+          There are several ways to approach this inconsistency.
+        <em>We will adopt the convention of multiplying permutations right to left.
+          To compute <m>\sigma \tau</m>,
+          do <m>\tau</m> first and then <m>\sigma</m>.
+        </em> That is,
+          by <m>\sigma \tau (x)</m> we mean
+        <m>\sigma( \tau( x))</m>. (Another way of solving this problem would be to write functions on the right;
+          that is, instead of writing <m>\sigma(x)</m>,
+          we could write <m>(x)\sigma</m>.
+          We could also multiply permutations left to right to agree with the usual way of multiplying elements in a group.
+          Certainly all of these methods have been used.
+      </p>
+    </remark>
+
+    <example xml:id="example-permute-s4-nonabelian" permid="fwt">
+      <p permid="Syu">
+          Permutation multiplication is not usually commutative.
+          Let
+        <md permid="ouT">
+          <mrow>\sigma
+            &amp; =
+            \begin{pmatrix}
+            1 &amp; 2 &amp; 3 &amp; 4 \\
+            4 &amp; 1 &amp; 2 &amp; 3
+            \end{pmatrix}</mrow>
+          <mrow>\tau
+            &amp; =
+            \begin{pmatrix}
+            1 &amp; 2 &amp; 3 &amp; 4 \\
+            2 &amp; 1 &amp; 4 &amp; 3
+            \end{pmatrix}</mrow>
+        </md>.
+          Then
+        <me permid="cgB">
+            \sigma \tau
+            =
+            \begin{pmatrix}
+            1 &amp; 2 &amp; 3 &amp; 4 \\
+            1 &amp; 4 &amp; 3 &amp; 2
+            \end{pmatrix}
+        </me>,
+          but
+        <me permid="InK">
+            \tau \sigma
+            =
+            \begin{pmatrix}
+            1 &amp; 2 &amp; 3 &amp; 4 \\
+            3 &amp; 2 &amp; 1 &amp; 4
+            \end{pmatrix}
+        </me>.
+      </p>
+    </example>
+  </introduction>
+
+  <subsection xml:id="permute-subsection-cycle-notation" permid="gXl">
+    <title>Cycle Notation</title>
+    <p permid="bwH">
+        The notation that we have used to represent permutations up to this point is cumbersome,
+        to say the least.
+        To work effectively with permutation groups,
+        we need a more streamlined method of writing down and manipulating permutations.
+    </p>
+
+    <p permid="HDQ">
+        A permutation <m>\sigma \in S_X</m> is a
+      <term>cycle of length</term>
+      <idx>
+        <h>Cycle</h>
+        <h>definition of</h>
+      </idx>
+      <m>k</m> if there exist elements <m>a_1, a_2, \ldots,
+        a_k \in X</m> such that
+      <md permid="UCc">
+        <mrow>\sigma( a_1 ) &amp; = a_2</mrow>
+        <mrow>\sigma( a_2 ) &amp; = a_3</mrow>
+        <mrow>&amp; \vdots</mrow>
+        <mrow>\sigma( a_k ) &amp; = a_1</mrow>
+      </md>
+        and <m>\sigma( x) = x</m> for all other elements <m>x \in X</m>.
+        We will write <m>(a_1, a_2, \ldots,
+        a_k )</m> to denote the cycle <m>\sigma</m>.
+
+      <notation>
+        <usage>(a_1, a_2, \ldots, a_k )</usage>
+        <description>cycle of length <m>k</m>
+        </description>
+      </notation>
+
+        Cycles are the building blocks of all permutations.
+    </p>
+
+    <example xml:id="example-permute-cycle-notation" permid="bhZ">
+      <p permid="yFD">
+          The permutation
+        <me permid="AJl">
+            \sigma =
+            \begin{pmatrix}
+            1 &amp; 2 &amp; 3 &amp; 4 &amp; 5 &amp; 6 &amp; 7\\
+            6 &amp; 3 &amp; 5 &amp; 1 &amp; 4 &amp; 2 &amp; 7
+            \end{pmatrix}
+            =
+            (1 6 2 3 5 4 )
+        </me>
+          is a cycle of length <m>6</m>, whereas
+        <me permid="gQu">
+            \tau =
+            \begin{pmatrix}
+            1 &amp; 2 &amp; 3 &amp; 4 &amp; 5 &amp; 6 \\
+            1 &amp; 4 &amp; 2 &amp; 3 &amp; 5 &amp; 6
+            \end{pmatrix}
+            =
+            (2 4 3)
+        </me>
+          is a cycle of length <m>3</m>.
+      </p>
+
+      <p permid="eMM">
+          Not every permutation is a cycle.
+          Consider the permutation
+        <me permid="MXD">
+            \begin{pmatrix}
+            1 &amp; 2 &amp; 3 &amp; 4 &amp; 5 &amp; 6 \\
+            2 &amp; 4 &amp; 1 &amp; 3 &amp; 6 &amp; 5
+            \end{pmatrix}
+            = (1 2 4 3)(5 6)
+        </me>.
+          This permutation actually contains a cycle of length 2 and a cycle of length <m>4</m>.
+      </p>
+    </example>
+
+    <example xml:id="example-permute-cycle-mult" permid="Hpi">
+      <p permid="KTV">
+          It is very easy to compute products of cycles.
+          Suppose that
+        <me permid="teM">
+            \sigma = (1 3 5 2 ) \quad \text{and} \quad \tau = (2 5 6)
+        </me>.
+          If we think of <m>\sigma</m> as
+        <me permid="ZlV">
+            1 \mapsto 3, \qquad
+            3 \mapsto 5, \qquad
+            5 \mapsto 2, \qquad
+            2 \mapsto 1
+        </me>,
+          and <m>\tau</m> as
+        <me permid="Fte">
+            2 \mapsto 5, \qquad
+            5 \mapsto 6, \qquad
+            6 \mapsto 2
+        </me>,
+          then for <m>\sigma \tau</m> remembering that we apply <m>\tau</m> first and then <m>\sigma</m>,
+          it must be the case that
+        <me permid="lAn">
+            1 \mapsto 3, \qquad
+            3 \mapsto 5, \qquad
+            5 \mapsto 6, \qquad
+            6 \mapsto 2 \mapsto 1
+        </me>,
+          or <m>\sigma \tau =  (1 3 5 6 )</m>.
+          If <m>\mu = (1634)</m>, then <m>\sigma \mu = (1 6 5 2)(3 4)</m>.
+      </p>
+    </example>
+
+    <p permid="nKZ">
+        Two cycles in <m>S_X</m>,      <m>\sigma = (a_1, a_2, \ldots,
+        a_k )</m> and <m>\tau = (b_1, b_2, \ldots,
+        b_l )</m>, are <term>disjoint</term>
+      <idx>
+        <h>Cycle</h>
+        <h>disjoint</h>
+      </idx>
+        if <m>a_i \neq b_j</m> for all <m>i</m> and <m>j</m>.
+    </p>
+
+    <example xml:id="example-permute-cycles-disjoint" permid="nwr">
+      <p permid="rbe">
+          The cycles <m>(1 3 5)</m> and <m>(2 7 )</m> are disjoint;
+          however, the cycles <m>(1 3 5)</m> and <m>(3 4 7 )</m> are not.
+          Calculating their products, we find that
+        <md permid="RHw">
+          <mrow>(1 3 5)(2 7 ) &amp; = (1 3 5)(2 7 )</mrow>
+          <mrow>(1 3 5)(3 4 7 ) &amp; = (1 3 4 7 5)</mrow>
+        </md>.
+          The product of two cycles that are not disjoint may reduce to something less complicated;
+          the product of disjoint cycles cannot be simplified.
+      </p>
+    </example>
+
+    <proposition permid="vaQ">
+      <statement>
+        <p permid="BAj">
+            Let <m>\sigma</m> and <m>\tau</m> be two disjoint cycles in <m>S_X</m>.
+            Then <m>\sigma \tau = \tau \sigma</m>.
+        </p>
+      </statement>
+
+      <proof permid="NsP">
+        <p permid="qrk">
+            Let <m>\sigma = (a_1, a_2, \ldots,
+            a_k )</m> and <m>\tau = (b_1, b_2, \ldots, b_l )</m>.
+            We must show that <m>\sigma \tau(x) = \tau \sigma(x)</m> for all <m>x \in X</m>.
+            If <m>x</m> is neither in <m>\{ a_1, a_2, \ldots,
+            a_k \}</m> nor <m>\{b_1, b_2, \ldots, b_l \}</m>,
+            then both <m>\sigma</m> and <m>\tau</m> fix <m>x</m>.
+            That is, <m>\sigma(x)=x</m> and <m>\tau(x)=x</m>.
+            Hence,
+          <me permid="xOF">
+              \sigma \tau(x) = \sigma( \tau(x)) = \sigma(x) = x = \tau(x) = \tau( \sigma(x)) =  \tau \sigma(x)
+          </me>.
+          <em>Do not forget that we are multiplying permutations right to left,
+            which is the opposite of the order in which we usually multiply group elements.</em>
+            Now suppose that <m>x \in \{ a_1, a_2, \ldots, a_k \}</m>.
+            Then <m>\sigma( a_i ) = a_{(i \bmod k) + 1}</m>; that is,
+          <md permid="dVO">
+            <mrow>a_1 &amp; \mapsto a_2</mrow>
+            <mrow>a_2 &amp; \mapsto a_3</mrow>
+            <mrow>&amp; \vdots</mrow>
+            <mrow>a_{k-1} &amp; \mapsto a_k</mrow>
+            <mrow>a_k &amp; \mapsto  a_1</mrow>
+          </md>.
+            However, <m>\tau(a_i) = a_i</m> since <m>\sigma</m> and <m>\tau</m> are disjoint.
+            Therefore,
+          <md permid="KcX">
+            <mrow>\sigma \tau(a_i) &amp; = \sigma( \tau(a_i))</mrow>
+            <mrow>&amp; = \sigma(a_i)</mrow>
+            <mrow>&amp; = a_{(i \bmod k)+1}</mrow>
+            <mrow>&amp; = \tau( a_{(i \bmod k)+1} )</mrow>
+            <mrow>&amp; = \tau( \sigma(a_i) )</mrow>
+            <mrow>&amp; = \tau \sigma(a_i)</mrow>
+          </md>.
+            Similarly, if <m>x \in \{b_1, b_2, \ldots,
+            b_l  \}</m>, then <m>\sigma</m> and <m>\tau</m> also commute.
+        </p>
+      </proof>
+    </proposition>
+
+    <theorem permid="OTH">
+      <statement>
+        <p permid="QJh">
+            Every permutation in <m>S_n</m> can be written as the product of disjoint cycles.
+        </p>
+      </statement>
+
+      <proof permid="IIW">
+        <p permid="Wyt">
+            We can assume that <m>X = \{ 1, 2, \ldots, n \}</m>.
+            If <m>\sigma \in S_n</m> and we define <m>X_1</m> to be <m>\{ \sigma(1), \sigma^2(1), \ldots \}</m>,
+            then the set <m>X_1</m> is finite since <m>X</m> is finite.
+            Now let <m>i</m> be the first integer in <m>X</m> that is not in <m>X_1</m> and define <m>X_2</m> by <m>\{ \sigma(i), \sigma^2(i), \ldots \}</m>.
+            Again, <m>X_2</m> is a finite set.
+            Continuing in this manner,
+            we can define finite disjoint sets <m>X_3, X_4, \ldots</m>.
+            Since <m>X</m> is a finite set,
+            we are guaranteed that this process will end and there will be only a finite number of these sets,
+            say <m>r</m>.
+            If <m>\sigma_i</m> is the cycle defined by
+          <me permid="qkg">
+              \sigma_i( x ) = 
+              \begin{cases}
+              \sigma( x ) &amp; x \in X_i \\
+              x   &amp; x \notin X_i
+              \end{cases}
+          </me>,
+            then <m>\sigma = \sigma_1 \sigma_2 \cdots \sigma_r</m>.
+            Since the sets <m>X_1, X_2, \ldots, X_r</m> are disjoint,
+            the cycles <m>\sigma_1, \sigma_2, \ldots, \sigma_r</m> must also be disjoint.
+        </p>
+      </proof>
+    </theorem>
+
+    <example xml:id="example-permute-cycle-products" permid="TDA">
+      <p permid="Xin">
+          Let
+        <md permid="Wrp">
+          <mrow>\sigma &amp; =
+            \begin{pmatrix}
+            1 &amp; 2 &amp; 3 &amp; 4 &amp; 5 &amp; 6 \\
+            6 &amp; 4 &amp; 3 &amp; 1 &amp; 5 &amp; 2
+            \end{pmatrix}</mrow>
+          <mrow>\tau &amp; =
+            \begin{pmatrix}
+            1 &amp; 2 &amp; 3 &amp; 4 &amp; 5 &amp; 6 \\
+            3 &amp; 2 &amp; 1 &amp; 5 &amp; 6 &amp; 4
+            \end{pmatrix}</mrow>
+        </md>.
+          Using cycle notation, we can write
+        <md permid="Cyy">
+          <mrow>\sigma      &amp; = (1624)</mrow>
+          <mrow>\tau        &amp; = (13)(456)</mrow>
+          <mrow>\sigma \tau &amp; = (1 3 6) ( 2 4 5)</mrow>
+          <mrow>\tau \sigma &amp; = (1 4 3 )(2 5 6)</mrow>
+        </md>.
+      </p>
+    </example>
+
+    <remark permid="zKJ">
+      <p permid="HZp">
+          From this point forward we will find it convenient to use cycle notation to represent permutations.
+          When using cycle notation,
+          we often denote the identity permutation by <m>(1)</m>.
+      </p>
+    </remark>
+  </subsection>
+
+  <subsection xml:id="permute-subsection-transpositions" permid="Neu">
+    <title>Transpositions</title>
+    <p permid="TSi">
+        The simplest permutation is a cycle of length <m>2</m>.
+        Such cycles are called <term>transpositions</term>.
+      <idx>
+        <h>Transposition</h>
+      </idx>
+        Since
+      <me permid="iFH">
+          (a_1, a_2, \ldots, a_n ) = (a_1 a_n ) (a_1 a_{n-1} ) \cdots ( a_1 a_3 ) (a_1 a_2 )
+      </me>,
+        any cycle can be written as the product of transpositions,
+        leading to the following proposition.
+    </p>
+
+    <proposition permid="LZb">
+      <statement>
+        <p permid="hHs">
+            Any permutation of a finite set containing at least two elements can be written as the product of transpositions.
+        </p>
+      </statement>
+    </proposition>
+
+    <example xml:id="example-permute-transpositions" permid="Ynt">
+      <p permid="Dpw">
+          Consider the permutation
+        <me permid="OMQ">
+            ( 1 6 ) (2 5 3) = (1 6 )( 2 3 )( 2 5 ) = (1 6 )( 4 5 )(2 3 )( 4 5 )(2 5 )
+        </me>.
+          As we can see,
+          there is no unique way to represent permutation as the product of transpositions.
+          For instance,
+          we can write the identity permutation as <m>(1 2 )(1 2 )</m>,
+          as <m>(1 3 )(2 4 )(1 3 )( 2 4 )</m>, and in many other ways.
+          However, as it turns out,
+          no permutation can be written as the product of both an even number of transpositions and an odd number of transpositions.
+          For instance, we could represent the permutation <m>(1 6)</m> by
+        <me permid="uTZ">
+            (2 3 )(1 6)( 2 3)
+        </me>
+          or by
+        <me permid="bbi">
+            (3 5) (1 6) (1 3) (1 6) (1 3) (3 5) (5 6)
+        </me>,
+          but <m>(1 6)</m> will always be the product of an odd number of transpositions.
+      </p>
+    </example>
+
+    <lemma xml:id="lemma-identity-even-trans" permid="sgk">
+      <statement>
+        <p permid="acT">
+            If the identity is written as the product of <m>r</m> transpositions,
+          <me permid="Hir">
+              \identity = \tau_1 \tau_2 \cdots \tau_r
+          </me>,
+            then <m>r</m> is an even number.
+        </p>
+      </statement>
+
+      <proof permid="ZHh">
+        <p permid="CFC">
+            We will employ induction  on <m>r</m>.
+            A transposition cannot be the identity;
+            hence, <m>r \gt 1</m>.
+            If <m>r=2</m>, then we are done.
+            Suppose that <m>r \gt 2</m>.
+            In this case the product of the last two transpositions,
+          <m>\tau_{r-1} \tau_r</m>, must be one of the following cases:
+          <md permid="npA">
+            <mrow>(a b)(a b) &amp; = \identity</mrow>
+            <mrow>(b c)(a b) &amp; = (a c)(b c)</mrow>
+            <mrow>(c d)(a b) &amp; = (a b)(c d)</mrow>
+            <mrow>(a c)(a b) &amp; = (a b)(b c)</mrow>
+          </md>,
+            where <m>a</m>,          <m>b</m>,          <m>c</m>,
+            and <m>d</m> are distinct.
+        </p>
+
+        <p permid="iML">
+            The first equation simply says that a transposition is its own inverse.
+            If this case occurs, delete
+          <m>\tau_{r-1} \tau_r</m> from the product to obtain
+          <me permid="TwJ">
+              \identity = \tau_1 \tau_2 \cdots \tau_{r - 3} \tau_{r - 2}
+          </me>.
+            By induction <m>r - 2</m> is even;
+            hence, <m>r</m> must be even.
+        </p>
+
+        <p permid="OTU">
+            In each of the other three cases,
+            we can replace <m>\tau_{r - 1} \tau_r</m> with the right-hand side of the corresponding equation to obtain a new product of <m>r</m> transpositions for the identity.
+            In this new product the last occurrence of <m>a</m> will be in the next-to-the-last transposition.
+            We can continue this process with
+          <m>\tau_{r - 2} \tau_{r - 1}</m> to obtain either a product of <m>r - 2</m> transpositions or a new product of <m>r</m> transpositions where the last occurrence of <m>a</m> is in <m>\tau_{r - 2}</m>.
+            If the identity is the product of <m>r - 2</m> transpositions,
+            then again we are done, by our induction hypothesis;
+            otherwise, we will repeat the procedure with <m>\tau_{r - 3} \tau_{r - 2}</m>.
+        </p>
+
+        <p permid="vbd">
+            At some point either we will have two adjacent,
+            identical transpositions canceling each other out or <m>a</m> will be shuffled so that it will appear only in the first transposition.
+            However, the latter case cannot occur,
+            because the identity would not fix <m>a</m> in this instance.
+            Therefore, the identity permutation must be the product of <m>r-2</m> transpositions and,
+            again by our induction hypothesis, we are done.
+        </p>
+      </proof>
+    </lemma>
+
+    <theorem xml:id="theorem-even-and-odd" permid="fRS">
+      <statement>
+        <p permid="wQq">
+            If a permutation <m>\sigma</m> can be expressed as the product of an even number of transpositions,
+            then any other product of transpositions equaling <m>\sigma</m> must also contain an even number of transpositions.
+            Similarly, if <m>\sigma</m> can be expressed as the product of an odd number of transpositions,
+            then any other product of transpositions equaling <m>\sigma</m> must also contain an odd number of transpositions.
+        </p>
+      </statement>
+
+      <proof permid="oQf">
+        <p permid="bim">
+            Suppose that
+          <me permid="zDS">
+              \sigma = \sigma_1 \sigma_2 \cdots \sigma_m = \tau_1 \tau_2 \cdots \tau_n
+          </me>,
+            where <m>m</m> is even.
+            We must show that <m>n</m> is also an even number.
+            The inverse of <m>\sigma</m> is <m>\sigma_m \cdots \sigma_1</m>.
+            Since
+          <me permid="fLb">
+              \identity = \sigma \sigma_m \cdots \sigma_1 = \tau_1  \cdots \tau_n \sigma_m \cdots \sigma_1
+          </me>,
+          <m>n</m> must be even by <xref ref="lemma-identity-even-trans"/>
+.
+            The proof for the case in which <m>\sigma</m> can be expressed as an odd number of transpositions is left as an exercise.
+      </p>
+    </proof>
+  </theorem>
+
+  <p permid="zZr">
+        In light of <xref ref="theorem-even-and-odd"/>
+, we define a permutation to be <term>even</term>
+  <idx>
+    <h>Permutation</h>
+    <h>even</h>
+  </idx>
+        if it can be expressed as an even number of transpositions and <term>odd</term>
+  <idx>
+    <h>Permutation</h>
+    <h>odd</h>
+  </idx>
+        if it can be expressed as an odd number of transpositions.
+</p>
+</subsection>
+
+<subsection xml:id="permute-subsection-alternating-groups" permid="tlD">
+<title>The Alternating Groups</title>
+<p permid="ggA">
+        One of the most important subgroups of <m>S_n</m> is the set of all even permutations,
+  <m>A_n</m>.
+
+  <notation>
+    <usage>A_n</usage>
+    <description>the alternating group on <m>n</m> letters</description>
+  </notation>
+
+        The group <m>A_n</m> is called the
+  <term>alternating group on <m>n</m> letters</term>.
+  <idx>
+    <h>Group</h>
+    <h>alternating</h>
+  </idx>
+</p>
+
+<theorem permid="EuC">
+  <statement>
+    <p permid="cXz">
+            The set <m>A_n</m> is a subgroup of <m>S_n</m>.
+    </p>
+  </statement>
+
+  <proof permid="UXo">
+    <p permid="Hpv">
+            Since the product of two even permutations must also be an even permutation,
+      <m>A_n</m> is closed.
+            The identity is an even permutation and therefore is in <m>A_n</m>.
+            If <m>\sigma</m> is an even permutation, then
+      <me permid="LSk">
+              \sigma = \sigma_1 \sigma_2 \cdots \sigma_r
+      </me>,
+            where <m>\sigma_i</m> is a transposition and <m>r</m> is even.
+            Since the inverse of any transposition is itself,
+      <me permid="rZt">
+              \sigma^{-1} = \sigma_r \sigma_{r-1} \cdots \sigma_1
+      </me>
+            is also in <m>A_n</m>.
+    </p>
+  </proof>
+</theorem>
+
+<proposition permid="kBL">
+  <statement>
+    <p permid="NOB">
+            The number of even permutations in <m>S_n</m>,
+      <m>n \geq 2</m>, is equal to the number of odd permutations;
+            hence, the order of <m>A_n</m> is <m>n!/2</m>.
+    </p>
+  </statement>
+
+  <proof permid="tzY">
+    <p permid="nwE">
+            Let <m>A_n</m> be the set of even permutations in <m>S_n</m> and <m>B_n</m> be the set of odd permutations.
+            If we can show that there is a bijection between these sets,
+            they must contain the same number of elements.
+            Fix a transposition <m>\sigma</m> in <m>S_n</m>.
+            Since <m>n \geq 2</m>, such a <m>\sigma</m> exists.
+            Define
+      <me permid="YgC">
+              \lambda_{\sigma} : A_n \rightarrow B_n
+      </me>
+            by
+      <me permid="EnL">
+              \lambda_{\sigma} ( \tau ) = \sigma  \tau 
+      </me>.
+            Suppose that <m>\lambda_{\sigma} ( \tau ) = \lambda_{\sigma} ( \mu )</m>.
+            Then <m>\sigma  \tau = \sigma  \mu</m> and so
+      <me permid="kuU">
+              \tau = \sigma^{-1} \sigma \tau = \sigma^{-1} \sigma \mu = \mu
+      </me>.
+            Therefore, <m>\lambda_{\sigma}</m> is one-to-one.
+            We will leave the proof that
+      <m>\lambda_{\sigma}</m> is surjective to the reader.
+    </p>
+  </proof>
+</proposition>
+
+<example xml:id="example-permute-s4" permid="QIU">
+  <p permid="jwF">
+          The group <m>A_4</m> is the subgroup of <m>S_4</m> consisting of even permutations.
+          There are twelve elements in  <m>A_4</m>:
+    <md permid="QCd">
+      <mrow>&amp; (1)    &amp;&amp; (12)(34) &amp;&amp; (13)(24) &amp;&amp; (14)(23)</mrow>
+      <mrow>&amp; (123)  &amp;&amp; (132)    &amp;&amp; (124)    &amp;&amp; (142)</mrow>
+      <mrow>&amp; (134)  &amp;&amp; (143)    &amp;&amp; (234)    &amp;&amp; (243)</mrow>
+    </md>.
+          One of the end-of-chapter exercises will be to write down all the subgroups of <m>A_4</m>.
+          You will find that there is no subgroup of order 6.
+          Does this surprise you?
+  </p>
+</example>
+</subsection>
+
+<subsection xml:id="section-dihedral-groups" permid="CFp">
+  <title>Dihedral Groups</title>
+    <p permid="sQr">
+        A special type of permutation group is the dihedral group.
+        Recall the symmetry group of an equilateral triangle in <xref ref="groups"/>
+.
+        Such groups consist of the rigid motions of a regular <m>n</m>-sided polygon or <m>n</m>-gon.
+        For <m>n = 3, 4, \ldots</m>, we define the
+    <term>nth dihedral group</term>
+    <idx>
+      <h>Group</h>
+      <h>dihedral</h>
+    </idx>
+        to be the group of rigid motions of a regular <m>n</m>-gon.
+        We will denote this group by <m>D_n</m>.
+
+    <notation>
+      <usage>D_n</usage>
+      <description>the dihedral group</description>
+    </notation>
+
+        We can number the vertices of a regular <m>n</m>-gon by
+    <m>1, 2, \ldots,
+        n</m> (    <xref ref="figure-regular"/>
+).
+        Notice that there are exactly <m>n</m> choices to replace the first vertex.
+        If we replace the first vertex by <m>k</m>,
+        then the second vertex must be replaced either by vertex <m>k+1</m> or by vertex <m>k-1</m>;
+        hence, there are <m>2n</m> possible rigid motions of the <m>n</m>-gon.
+        We summarize these results in the following theorem.
+  </p>
+
+  <figure xml:id="figure-regular" permid="YXA">
+    <caption>A regular <m>n</m>-gon</caption>
+    <image width="60%" xml:id="permute-ngon" permid="guV">
+      <description>An n-gon with vertex 1 at the top, followed by 2, 3, 4, ..., n - 1, n.</description>
+
+      <latex-image>
+        <xi:include href="tikz/permute-ngon.tex" parse="text"/>
+      </latex-image>
+    </image>
+
+  </figure>
+
+  <theorem permid="naS">
+    <statement>
+      <p permid="JeI">
+            The dihedral group, <m>D_n</m>,
+            is a subgroup of <m>S_n</m> of order <m>2n</m>.
+      </p>
+    </statement>
+  </theorem>
+
+  <theorem xml:id="theorem-dn-generator" permid="Tib">
+    <statement>
+      <p permid="plR">
+            The group <m>D_n</m>,        <m>n \geq 3</m>,
+            consists of all products of the two elements <m>r</m> and <m>s</m>,
+            satisfying the relations
+        <md permid="wJm">
+          <mrow>r^n &amp; = 1</mrow>
+          <mrow>s^2 &amp; = 1</mrow>
+          <mrow>srs &amp; = r^{-1}</mrow>
+        </md>.
+      </p>
+    </statement>
+
+    <proof permid="Bex">
+      <p permid="TDN">
+            The possible motions of a regular <m>n</m>-gon are either reflections or rotations (<xref ref="figure-rotations"/>
+).
+            There are exactly <m>n</m> possible rotations:
+      <me permid="cQv">
+              \identity, \frac{360^{\circ} }{n}, 2 \cdot \frac{360^{\circ} }{n}, \ldots, (n-1) \cdot \frac{360^{\circ} }{n}
+      </me>.
+            We will denote the rotation <m>360^{\circ} /n</m> by <m>r</m>.
+            The rotation <m>r</m> generates all  of the other rotations.
+            That is,
+      <me permid="IXE">
+              r^k = k \cdot \frac{360^{\circ} }{n}
+      </me>.
+    </p>
+
+    <figure xml:id="figure-rotations" permid="fSf">
+      <caption>Rotations and reflections of a regular <m>n</m>-gon</caption>
+      <image xml:id="permute-motions-ngon" permid="MCe">
+        <description>Rotations and reflections of an octagon.  Where the top octagon (1 (top), 2, 3, 4, 5, 6, 7, 8) is rotated to an octagon (2 (top), 3, 4, 5, 6, 7, 8, 1), and the octagon below (1 (top), 2, 3, 4, 5, 6, 7, 8) is reflected about a vertical axis to (1 (top), 8, 7, 6, 5, 4, 3, 2).</description>
+
+        <latex-image>
+          <xi:include href="tikz/permute-motions-ngon.tex" parse="text"/>
+        </latex-image>
+      </image>
+
+    </figure>
+
+    <p permid="zKW">
+            Label the <m>n</m> reflections <m>s_1, s_2, \ldots, s_n</m>,
+            where <m>s_k</m> is the reflection that leaves vertex <m>k</m> fixed.
+            There are two cases of reflections,
+            depending on whether <m>n</m> is even or odd.
+            If there are an even number of vertices,
+            then two vertices are left fixed by a reflection,
+            and <m>s_1 = s_{n/2 + 1}, s_2 = s_{n/2 + 2}, \ldots, s_{n/2}  = s_n</m>.
+            If there are an odd number of vertices,
+            then only a single vertex is left fixed by a reflection and
+      <m>s_1, s_2, \ldots,
+            s_n</m> are distinct (<xref ref="figure-types"/>
+).
+            In either case, the order of each <m>s_k</m> is two.
+            Let <m>s = s_1</m>.
+            Then <m>s^2 = 1</m> and <m>r^n = 1</m>.
+            Since any rigid motion <m>t</m> of the <m>n</m>-gon replaces the first vertex by the vertex <m>k</m>,
+            the second vertex must be replaced by either <m>k+1</m> or by <m>k-1</m>.
+            If the second vertex is replaced by <m>k+1</m>, then <m>t = r^k</m>.
+            If the second vertex is replaced by <m>k-1</m>, then <m>t = r^k s</m>.    <fn>Since we are in an abstract group, we will adopt the convention that group elements are multiplied left to right.</fn>
+            Hence, <m>r</m> and <m>s</m> generate <m>D_n</m>.
+            That is, <m>D_n</m> consists of all finite products of <m>r</m> and <m>s</m>,
+    <me permid="peN">
+              D_n = \{1, r, r^2, \ldots, r^{n-1}, s, rs, r^2 s, \ldots, r^{n-1} s\}
+    </me>.
+            We will leave the proof that <m>srs = r^{-1}</m> as an exercise.
+  </p>
+
+  <figure xml:id="figure-types" permid="LZo">
+    <caption>Types of  reflections of a regular <m>n</m>-gon</caption>
+    <image xml:id="permute-reflections-ngon" permid="sJn">
+      <description>The top hexagon (1 (top), 2, 3, 4, 5, 6) is relected to (1 (top), 6, 5, 4, 3,. 2).  The bottom pentqgon (1 (top), 2, 3, 4, 5) is relected to become (1 (top), 5, 4, 3, 2).</description>
+
+      <latex-image>
+        <xi:include href="tikz/permute-reflections-ngon.tex" parse="text"/>
+      </latex-image>
+    </image>
+
+  </figure>
+</proof>
+</theorem>
+
+<example xml:id="example-permute-d4-group" permid="LDC">
+<p permid="PDO">
+          The group of rigid motions of a square,
+  <m>D_4</m>, consists of eight elements.
+          With the vertices numbered <m>1</m>,  <m>2</m>,  <m>3</m>,
+  <m>4</m> (  <xref ref="figure-d4"/>
+), the rotations are
+  <md permid="VlW">
+    <mrow>r   &amp; = (1234)</mrow>
+    <mrow>r^2 &amp; = (13)(24)</mrow>
+    <mrow>r^3 &amp; = (1432)</mrow>
+    <mrow>r^4 &amp; = (1)</mrow>
+  </md>
+          and the reflections are
+  <md permid="Btf">
+    <mrow>s_1 &amp; = (24)</mrow>
+    <mrow>s_2 &amp; = (13)</mrow>
+  </md>.
+          The order of <m>D_4</m> is <m>8</m>.
+          The remaining two elements are
+  <md permid="hAo">
+    <mrow>r s_1   &amp; = (12)(34)</mrow>
+    <mrow>r^3 s_1 &amp; = (14)(23)</mrow>
+  </md>.
+</p>
+
+<figure xml:id="figure-d4" permid="vKX">
+  <caption>The group <m>D_4</m>
+  </caption>
+  <image width="60%" xml:id="permute-dihedral-four" permid="YQw">
+    <description>A square with diagonal lines of symmetries connecting opposite vertices, a horzontal line of symmetry that bisects the two vertical sides of the square and a vertical line of symmetry that bisects the two horizaontal sides of the square.</description>
+
+    <latex-image>
+      <xi:include href="tikz/permute-dihedral-four.tex" parse="text"/>
+    </latex-image>
+  </image>
+
+</figure>
+</example>
+
+
+
+
+<paragraphs xml:id="permute-subsection-motion-group-cube" permid="FzV">
+<title>The Motion Group of a Cube</title>
+<p permid="suS">
+        We can investigate the groups of rigid motions of geometric objects other than a regular <m>n</m>-sided polygon to obtain interesting examples of permutation groups.
+        Let us consider the group of rigid motions of a cube.  By rigid motion, we mean a rotation with the axis of rotation about opposing faces, edges, or vertices.
+        One of the first questions that we can ask about this group is
+<q>what is its order?</q>
+        A cube has <m>6</m> sides.
+        If a particular side is facing upward,
+        then there are four possible rotations of the cube that will preserve the upward-facing side.
+        Hence, the order of the group is <m>6 \cdot 4 = 24</m>.
+        We have just proved the following proposition.
+</p>
+
+<proposition xml:id="proposition-motions-cube" permid="cXm">
+<statement>
+  <p permid="tVK">
+            The group of rigid motions of a cube contains <m>24</m> elements.
+  </p>
+</statement>
+</proposition>
+
+<theorem permid="wQd">
+<statement>
+  <p permid="Vta">
+            The group of rigid motions of a cube is <m>S_4</m>.
+  </p>
+</statement>
+
+<proof permid="hlG">
+  <p permid="sgx">
+            From <xref ref="proposition-motions-cube"/>
+,
+            we already know that the motion group of the cube has <m>24</m> elements,
+            the same number of elements as there are in <m>S_4</m>.
+            There are exactly four diagonals in the cube.
+            If we label these diagonals <m>1</m>,
+  <m>2</m>,  <m>3</m>, and <m>4</m>,
+            we must show that the motion group of the cube will give us any permutation of the diagonals (<xref ref="figure-motions"/>
+).
+            If we can obtain all of these permutations,
+            then <m>S_4</m> and the group of rigid motions of the cube must be the same.
+            To obtain a transposition we can rotate the cube
+<m>180^{\circ}</m> about the axis joining the midpoints of opposite edges (<xref ref="figure-transpose"/>
+).
+            There are six such axes, giving all transpositions in <m>S_4</m>.
+            Since every element in <m>S_4</m> is the product of a finite number of transpositions,
+            the motion group of a cube must be <m>S_4</m>.
+</p>
+
+<figure xml:id="figure-motions" permid="YnG">
+<caption>The motion group of a cube</caption>
+
+<image width="60%" xml:id="permute-motions-cube" permid="EXF">
+<description>A cube where the top vetices are labled 1, 2, 3, 4 and the bottom vertices are labled 3, 4, 1, 2.  Diagonals connect vertex 1 on the top with vertex 1 on the bottom, vertex 2 on the top with vertex 2 on the bottom, vertex 3 on the top with vertex 3 on the bottom, and vertex 4 on the top with vertex 4 on the bottom,</description>
+
+<latex-image>
+  <xi:include href="tikz/permute-motions-cube.tex" parse="text"/>
+</latex-image>
+</image>
+
+</figure>
+
+<figure xml:id="figure-transpose" permid="EuP">
+<caption>Transpositions in the motion group of a cube</caption>
+<image xml:id="permute-transpositions-cube" permid="leO">
+<description>Two cubes where the top vetices of the first cube are labled 1, 2, 3, 4 and the bottom vertices are labled 3, 4, 1, 2 and the top vertices of the second cube are labled 2, 1, 3, 4 and the bottom vertices are labled 3, 4, 2, 1.  Lines of symmetry connect the 12 edge on top with the 12 edge on the bottom in both cubes.</description>
+
+<latex-image>
+  <xi:include href="tikz/permute-transpositions-cube.tex" parse="text"/>
+</latex-image>
+</image>
+
+</figure>
+</proof>
+</theorem>
+
+</paragraphs>
+</subsection>
+
+
+<subsection xml:id="permute-historical-note" permid="ZsM">
+<title>Historical Note</title>
+<p permid="MnJ">
+        Lagrange
+  <idx>
+    <h>Lagrange, Joseph-Louis</h>
+  </idx>
+        first thought of permutations as functions from a set to itself,
+        but it was Cauchy who developed the basic theorems and notation for permutations.
+        He was the first to use cycle notation.
+        Augustin-Louis Cauchy
+  <idx>
+    <h>Cauchy, Augustin-Louis</h>
+  </idx>
+        (1789<ndash/>
+1857) was born in Paris at the height of the French Revolution.
+        His family soon left Paris for the village of Arcueil to escape the Reign of Terror.
+        One of the family's neighbors there was Pierre-Simon Laplace
+<idx>
+  <h>Laplace, Pierre-Simon</h>
+</idx>
+        (1749<ndash/>
+1827), who encouraged him to seek a career in mathematics.
+        Cauchy began his career as a mathematician by solving a problem in geometry given to him by Lagrange.
+        Cauchy wrote over 800 papers on such diverse topics as differential equations,
+        finite groups, applied mathematics, and complex analysis.
+        He was one of the mathematicians responsible for making calculus rigorous.
+        Perhaps more theorems and concepts in mathematics have the name Cauchy attached to them than that of any other mathematician.
+</p>
+</subsection>
+
+
+
+<reading-questions xml:id="rqs-permutations" permid="exs">
+<exercise xml:id="rq2-6-1" permid="KEB">
+<statement>
+  <p permid="vvD">
+            What is the order of the group <m>S_4</m>?  What is the order of the group <m>A_4</m>?  Then, give an example of an element in <m>S_4</m> that is not in <m>A_4</m>.
+  </p>
+</statement>
+</exercise>
+<exercise xml:id="rq2-6-2" permid="qLK">
+<statement>
+  <p permid="bCM">
+            Write the permutation <m>\sigma = \begin{pmatrix}1 \amp 2 \amp 3 \amp 4 \amp 5 \amp 6 \amp 7 \\ 3 \amp 2 \amp7 \amp 5 \amp 6 \amp 4 \amp 1 \end{pmatrix}</m> in cycle notation.
+  </p>
+</statement>
+</exercise>
+<exercise xml:id="rq2-6-3" permid="WST">
+<statement>
+  <p permid="HJV">
+            Write <m>\sigma = (142)(243)</m> as a single cycle or product of disjoint cycles.  Then, find <m>\sigma(2)</m>.
+  </p>
+</statement>
+</exercise>
+<exercise xml:id="rq2-6-4" permid="Dac">
+<statement>
+  <p permid="nRe">
+            After reading the section, what questions do you still have?  Write at least one well formulated question (even if you think you understand everything).
+  </p>
+</statement>
+</exercise>
+</reading-questions>
+
+<exercises xml:id="practice-gp-perm" permid="VrX">
+<title>Practice Problems</title>
+
+<exercise number="1" xml:id="permute-exercise-cycle-notation" permid="Jev">
+<statement>
+  <p permid="xAk">
+          Write the following permutations in cycle notation.
+
+    <ol cols="2" permid="xOs">
+      <li permid="ZVC">
+        <p permid="vih">
+          <me permid="NHx">
+                  \begin{pmatrix}
+                  1 &amp; 2 &amp; 3 &amp; 4 &amp; 5 \\
+                  2 &amp; 4 &amp; 1 &amp; 5 &amp; 3
+                  \end{pmatrix}
+          </me>
+        </p>
+      </li>
+
+      <li permid="GcL">
+        <p permid="bpq">
+          <me permid="tOG">
+                  \begin{pmatrix}
+                  1 &amp; 2 &amp; 3 &amp; 4 &amp; 5 \\
+                  4 &amp; 2 &amp; 5 &amp; 1 &amp; 3
+                  \end{pmatrix}
+          </me>
+        </p>
+      </li>
+
+      <li permid="mjU">
+        <p permid="Hwz">
+          <me permid="ZVP">
+                  \begin{pmatrix}
+                  1 &amp; 2 &amp; 3 &amp; 4 &amp; 5 \\
+                  3 &amp; 5 &amp; 1 &amp; 4 &amp; 2
+                  \end{pmatrix}
+          </me>
+        </p>
+      </li>
+
+      <li permid="Srd">
+        <p permid="nDI">
+          <me permid="GcY">
+                  \begin{pmatrix}
+                  1 &amp; 2 &amp; 3 &amp; 4 &amp; 5 \\
+                  1 &amp; 4 &amp; 3 &amp; 2 &amp; 5
+                  \end{pmatrix}
+          </me>
+        </p>
+      </li>
+    </ol>
+  </p>
+</statement>
+<answer permid="lVz">
+  <p permid="AQp">
+          (a) <m>(12453)</m>; (b) <m>(14)(35)</m>; (c) <m>(13)(25)</m>; (d) <m>(24)</m>.
+  </p>
+</answer>
+</exercise>
+
+<exercise number="2" permid="plE">
+<statement>
+  <p permid="dHt">
+          Compute each of the following.
+
+    <ol cols="2" permid="dVB">
+      <li permid="yym">
+        <p permid="TKR">
+          <m>(1345)(234)</m>
+        </p>
+      </li>
+
+      <li permid="eFv">
+        <p permid="zSa">
+          <m>(12)(1253)</m>
+        </p>
+      </li>
+
+      <li permid="KME">
+        <p permid="fZj">
+          <m>(143)(23)(24)</m>
+        </p>
+      </li>
+
+      <li permid="qTN">
+        <p permid="Mgs">
+          <m>(1423)(34)(56)(1324)</m>
+        </p>
+      </li>
+
+      <li permid="XaW">
+        <p permid="snB">
+          <m>(1254)(13)(25)</m>
+        </p>
+      </li>
+
+      <li permid="Dif">
+        <p permid="YuK">
+          <m>(1254) (13)(25)^2</m>
+        </p>
+      </li>
+
+      <li permid="jpo">
+        <p permid="EBT">
+          <m>(1254)^{-1} (123)(45) (1254)</m>
+        </p>
+      </li>
+
+      <li permid="Pwx">
+        <p permid="kJc">
+          <m>(1254)^2 (123)(45)</m>
+        </p>
+      </li>
+
+      <li permid="vDG">
+        <p permid="QQl">
+          <m>(123)(45) (1254)^{-2}</m>
+        </p>
+      </li>
+
+      <li permid="bKP">
+        <p permid="wXu">
+          <m>(1254)^{100}</m>
+        </p>
+      </li>
+
+      <li permid="HRY">
+        <p permid="deD">
+          <m>|(1254)|</m>
+        </p>
+      </li>
+
+      <li permid="nZh">
+        <p permid="JlM">
+          <m>|(1254)^2|</m>
+        </p>
+      </li>
+
+      <li permid="Ugq">
+        <p permid="psV">
+          <m>(12)^{-1}</m>
+        </p>
+      </li>
+
+      <li permid="Anz">
+        <p permid="VAe">
+          <m>(12537)^{-1}</m>
+        </p>
+      </li>
+
+      <li permid="guI">
+        <p permid="BHn">
+          <m>[(12)(34)(12)(47)]^{-1}</m>
+        </p>
+      </li>
+
+      <li permid="MBR">
+        <p permid="hOw">
+          <m>[(1235)(467)]^{-1}</m>
+        </p>
+      </li>
+    </ol>
+  </p>
+</statement>
+<answer permid="yjR">
+  <p permid="gXy">
+          (a) <m>(135)(24)</m>; (b) <m>(253)</m>; (c) <m>(14)(23)</m>; (d) <m>(12)(56)</m>; (e) <m>(1324)</m>; (f) <m>(13254)</m>; (g) <m>(134)(25)</m>; (h) <m>(14)(235)</m>; (i) <m>(143)(25)</m>; (j) <m>(1)</m>; (k) <m>4</m> (i.e., the order of the element); (l) <m>2</m>; (m) <m>(12)</m>; (n) <m>(17352)</m>; (o) <m>(374)</m>; (p) <m>(476)(1532)</m>.
+  </p>
+</answer>
+</exercise>
+
+<exercise number="3" permid="VsN">
+<statement>
+  <p permid="JOC">
+          Express the following permutations as products of transpositions and identify them as even or odd.
+
+    <ol cols="2" permid="KcK">
+      <li permid="sJa">
+        <p permid="NVF">
+          <m>(14356)</m>
+        </p>
+      </li>
+
+      <li permid="YQj">
+        <p permid="ucO">
+          <m>(156)(234)</m>
+        </p>
+      </li>
+
+      <li permid="EXs">
+        <p permid="ajX">
+          <m>(1426)(142)</m>
+        </p>
+      </li>
+
+      <li permid="leB">
+        <p permid="Grg">
+          <m>(17254)(1423)(154632)</m>
+        </p>
+      </li>
+
+      <li permid="RlK">
+        <p permid="myp">
+          <m>(142637)</m>
+        </p>
+      </li>
+    </ol>
+  </p>
+</statement>
+<answer permid="Kyj">
+  <p permid="NeH">
+          (a) <m>(16)(15)(13)(14)</m> (even); (b) <m>(15)(56)(23)(24)</m> (even); (c) <m>(16)(14)(12)</m> (odd); (d) <m>(17)(72)(25)(54)(14)(42)(23)(15)(54)(46)(63)(32)</m> (even); (e) <m>(14)(42)(26)(63)(37)</m> (odd).
+  </p>
+</answer>
+</exercise>
+<exercise number="5" permid="hHf">
+<statement>
+  <p permid="WcU">
+          List all of the subgroups of <m>S_4</m>.
+          Find each of the following sets:
+
+    <ol permid="qjT">
+      <li permid="xsT">
+        <p permid="SFy">
+          <m>\{ \sigma \in S_4 : \sigma(1) = 3 \}</m>
+        </p>
+      </li>
+
+      <li permid="dAc">
+        <p permid="yMH">
+          <m>\{ \sigma \in S_4 : \sigma(2) = 2 \}</m>
+        </p>
+      </li>
+
+      <li permid="JHl">
+        <p permid="eTQ">
+          <m>\{ \sigma \in S_4 : \sigma(1) = 3</m> and <m>\sigma(2) = 2 \}</m>.
+        </p>
+      </li>
+    </ol>
+
+          Are any of these sets subgroups of <m>S_4</m>?
+  </p>
+</statement>
+<hint permid="jaT">
+  <p permid="ZsZ">
+          (a) <m>\{ (13), (13)(24), (132), (134), (1324), (1342) \}</m> is not a subgroup.
+  </p>
+  <p permid="gtS">
+      (b) <m>\{(1), (134), (143), (13), (14), (34)\}</m> is a subgroup.
+  </p>
+  <p permid="MBb">
+      (c) <m>\{(13), (134)\}</m> is not a subgroup.
+  </p>
+
+</hint>
+</exercise>
+
+<exercise number="6" permid="NOo">
+<statement>
+  <p permid="Ckd">
+          Find all of the subgroups in <m>A_4</m>.
+          What is the order of each subgroup?
+  </p>
+</statement>
+<hint permid="cAX">
+  <p permid="sIk">
+      There are subgroups of orders 1, 2, 3, 4, and 12.  You have multiple choices for the subgroups of order 2 and 3.
+  </p>
+</hint>
+</exercise>
+
+<exercise number="7" permid="tVx">
+<statement>
+  <p permid="irm">
+          Find all possible orders of elements in <m>S_7</m> and <m>A_7</m>.
+  </p>
+</statement>
+<answer permid="IIg">
+  <p permid="Sqn">
+      The possible orders in <m>S_7</m> are 1, 2, 3, 4, 5, 6, 7, 10, and 12.  In <m>A_7</m> you can only have orders 1, 2, 3, 5, 6, and 7.
+  </p>
+</answer>
+</exercise>
+
+<exercise number="8" permid="acG">
+<statement>
+  <p permid="Oyv">
+          Show that <m>A_{10}</m> contains an element of order <m>15</m>.
+  </p>
+</statement>
+<hint permid="HDD">
+  <p permid="FAi">
+    <m>(12345)(678)</m>.
+  </p>
+</hint>
+</exercise>
+
+<exercise number="9" permid="GjP">
+<statement>
+  <p permid="uFE">
+          Does <m>A_8</m> contain an element of order <m>26</m>?
+  </p>
+</statement>
+<answer permid="oPp">
+  <p permid="yxw">
+      No.  We will give a good reason why in chapter 6.
+  </p>
+</answer>
+</exercise>
+
+<exercise number="10" permid="mqY">
+<statement>
+  <p permid="aMN">
+          Find an element of largest order in <m>S_n</m> for <m>n = 3, \ldots, 10</m>.
+  </p>
+</statement>
+<answer permid="UWy">
+  <p permid="eEF">
+    <m>(123)</m>,    <m>(1234)</m>,    <m>(12)(345)</m>, 
+    <m>(123456)</m>,    <m>(123)(4567)</m>,    <m>(123)(45678)</m>,    <m>(1234)(56789)</m>,    <m>(12)(345)(678910)</m>.
+  </p>
+</answer>
+</exercise>
+
+</exercises>
+
+
+<exercises xml:id="collected-gp-perm" permid="Bzg">
+<title>Collected Homework</title>
+
+<exercise number="C1" permid="FdG">
+<statement>
+  <p permid="wmK">
+          Consider the group <m>S_7</m> and its 5040 elements.  Let <m>\sigma = (142376)</m>. 
+    <ol permid="Kxt">
+      <li permid="XvF">
+        <p permid="zCP">
+                 Find <m>\langle \sigma \rangle</m>, the cyclic subgroup of <m>S_7</m> generated by <m>\sigma</m>.  (Just list out all its elements.)
+        </p>
+      </li>
+      <li permid="DCO">
+        <p permid="fJY">
+                What is <m>\sigma^{5040}</m>?  Justify your answer.
+        </p>
+      </li>
+    </ol>
+  </p>
+</statement>
+</exercise>
+
+<exercise number="C2" permid="lkP">
+<statement>
+  <p permid="ctT">
+          In the previous problem you found a cyclic subgroup of order 6 in <m>S_7</m>.  What is the order of the largest cyclic subgroup in <m>S_7</m>?  Is <m>S_7</m> itself cyclic?  Explain. 
+  </p>
+</statement>
+
+</exercise>
+
+</exercises>
+
+</section>
+
+
+    <!-- Exercises with Solutions  -->
+    <xi:include href="./exercises/groups-additional.ptx" />
+    
+
+  <exercises xml:id="groups-exercises-detecting-errors" permid="uJR">
+    <title>Additional Exercises: Detecting Errors</title>
+        <!--EXERCISE GROUP
+
+		<introduction>
+			<p>Credit card companies, banks, book publishers, and supermarkets all take advantage of the properties of integer arithmetic modulo <m>n</m> and group theory to obtain error detection schemes for the identification codes that they use.</p>
+		</introduction>
+	-->
+    <!--Todo Add intro-->
+        <!-- % TWJ, 2010/03/31 -->
+        <!-- % Fixed figure reference -->
+        <!-- % TWJ, 2012/10/21 -->
+        <!-- % Deleted the word "now" in the description of <acro>UPC</acro> symbols.  Suggested by R. Beezer. -->
+    <exercise permid="lEA">
+      <title><acro>UPC</acro> Symbols</title>
+      <statement>
+        <p permid="PWJ">
+          Universal Product Code
+              <idx><h>Universal Product Code</h></idx>
+          (<acro>UPC</acro>) symbols are found on most products in grocery and retail stores.
+          The <acro>UPC</acro> symbol is a 12-digit code identifying the manufacturer of a product and the product itself (<xref ref="figure-upc-codes"/>).
+          The first 11 digits contain information about the product;
+          the twelfth digit is used for error detection.
+          If <m>d_1 d_2 \cdots d_{12}</m> is a valid <acro>UPC</acro> number, then
+          <me permid="yRu">
+            3 \cdot d_1 + 1 \cdot d_2 + 3 \cdot d_3 + \cdots + 3 \cdot d_{11} + 1 \cdot d_{12} \equiv 0 \pmod{10}
+          </me>.
+          <ol permid="kNC">
+            <li permid="tbV">
+              <p permid="Soz">
+                Show that the <acro>UPC</acro> number 0-50000-30042-6, which appears in <xref ref="figure-upc-codes"/>, is a valid <acro>UPC</acro> number.
+              </p>
+            </li>
+
+            <li permid="Zje">
+              <p permid="yvI">
+                Show that the number 0-50000-30043-6 is not a valid <acro>UPC</acro> number.
+              </p>
+            </li>
+
+            <li permid="Fqn">
+              <p permid="eCR">
+                Write a formula to calculate the check digit, <m>d_{12}</m>,
+                in the <acro>UPC</acro> number.
+              </p>
+            </li>
+
+            <li permid="lxw">
+              <p permid="KKa">
+                The <acro>UPC</acro> error detection scheme can detect most transposition errors;
+                that is, it can determine if two digits have been interchanged.
+                Show that the transposition error 0-05000-30042-6 is not detected.
+                Find a transposition error that is detected.
+                Can you find a general rule for the types of transposition errors that can be detected?
+              </p>
+            </li>
+<!-- % Corrected exercise. Suggested by John Watterlond. TWJ 8/24/2011 -->
+            <li permid="REF">
+              <p permid="qRj">
+                Write a program that will determine whether or not a <acro>UPC</acro> number is valid.
+              </p>
+            </li>
+          </ol>
+        </p>
+
+        <figure xml:id="figure-upc-codes" permid="wdS">
+          <caption>A <acro>UPC</acro> code</caption>
+          <image width="50%" source="images/UPCcode" permid="NkV">
+            <description>The vertical lines of a UPC bar scan code for 0-05000-30042-6</description>
+          </image>
+        </figure>
+      </statement>
+    </exercise>
+
+    <exercise permid="RLJ">
+      <statement>
+        <p permid="clb">
+          It is often useful to use an inner product notation for this type of error detection scheme;
+          hence, we will use the notion
+          <me permid="eYD">
+            (d_1, d_2, \ldots, d_k ) \cdot (w_1, w_2, \ldots, w_k ) \equiv 0 \pmod{ n }
+          </me>
+          to mean
+          <me permid="LfM">
+            d_1 w_1 +  d_2 w_2 + \cdots +  d_k w_k  \equiv 0  \pmod{ n}
+          </me>.
+        </p>
+
+        <p permid="Isk">
+          Suppose that <m>(d_1, d_2, \ldots,
+          d_k ) \cdot (w_1, w_2, \ldots,
+          w_k ) \equiv 0 \pmod{ n}</m> is an error detection scheme for the <m>k</m>-digit identification number <m>d_1 d_2 \cdots d_k</m>,
+          where <m>0 \leq d_i \lt n</m>.
+          Prove that all single-digit errors are detected if and only if
+          <m>\gcd( w_i, n ) = 1</m> for <m>1 \leq i \leq k</m>.
+        </p>
+      </statement>
+    </exercise>
+
+    <exercise permid="xSS">
+      <statement>
+        <p permid="ozt">
+          Let <m>(d_1, d_2, \ldots, d_k ) \cdot (w_1, w_2, \ldots,
+          w_k ) \equiv 0 \pmod{ n}</m> be an error detection scheme for the <m>k</m>-digit identification number <m>d_1 d_2 \cdots d_k</m>,
+          where <m>0 \leq d_i \lt n</m>.
+          Prove that all transposition errors of two digits <m>d_i</m> and <m>d_j</m> are detected if and only if
+          <m>\gcd( w_i - w_j, n ) = 1</m> for <m>i</m> and <m>j</m> between <m>1</m> and <m>k</m>.
+        </p>
+      </statement>
+    </exercise>
+
+    <exercise permid="eab">
+      <title><acro>ISBN</acro> Codes</title>
+      <statement>
+        <p permid="UGC">
+          Every book has an International Standard Book Number<idx><h>International standard book number</h></idx> (<acro>ISBN</acro>) code.
+          This is a 10-digit code indicating the book's publisher and title.
+          The tenth digit is a check digit satisfying
+          <me permid="rmV">
+            (d_1, d_2, \ldots, d_{10} ) \cdot (10, 9, \ldots, 1 )  \equiv 0 \pmod{11}
+          </me>.
+          One problem is that <m>d_{10}</m> might have to be a 10 to make the inner product zero;
+          in this case, 11 digits would be  needed to make this scheme work.
+          Therefore, the character X is used for the eleventh digit.
+          So <acro>ISBN</acro> 3-540-96035-X is a valid <acro>ISBN</acro> code.
+
+          <ol permid="QUL">
+            <li permid="xLO">
+              <p permid="WYs">
+                Is <acro>ISBN</acro> 0-534-91500-0 a valid <acro>ISBN</acro> code?
+                What about <acro>ISBN</acro> 0-534-91700-0 and <acro>ISBN</acro> 0-534-19500-0?
+              </p>
+            </li>
+
+            <li permid="dSX">
+              <p permid="DfB">
+                Does this method detect all single-digit errors?
+                What about all transposition errors?
+              </p>
+            </li>
+
+            <li permid="Kag">
+              <p permid="jmK">
+                How many different <acro>ISBN</acro> codes are there?
+              </p>
+            </li>
+
+            <li permid="qhp">
+              <p permid="PtT">
+                Write a computer program that will calculate the check digit for the first nine digits of an <acro>ISBN</acro> code.
+              </p>
+            </li>
+
+            <li permid="Woy">
+              <p permid="vBc">
+                A publisher has houses in Germany and the United States.
+                Its German prefix is 3-540.
+                If its United States prefix will be 0-<c>abc</c>,
+                find <c>abc</c>such that the rest of the <acro>ISBN</acro> code will be the same for a book printed in Germany and in the United States.
+                Under the <acro>ISBN</acro> coding method the first digit identifies the language; German is 3 and English is 0.
+                The next group of numbers identifies the publisher,
+                and the last group identifies the specific book.
+              </p>
+            </li>
+          </ol>
+        </p>
+      </statement>
+    </exercise>
+
+  </exercises>
+
+  <references xml:id="groups-references" permid="muP">
+        <!--  references checked and updated - TWJ 6/22/2010 -->
+    <title>References and Suggested Readings</title>
+        <!--Fix intro
+	 	<introduction>
+	 		<p>References [2] and [3] show how group theory can be used in error detection schemes.  Other sources cover more advanced topics in group theory.</p>
+	 	</introduction>
+-->
+        <!-- %Reference updated - TWJ 6/22/2010 -->
+        <!-- was [1] -->
+    <biblio type="raw" permid="SBY">
+      Burnside, W.
+      <title>Theory of Groups of Finite Order</title>. 2nd ed. Cambridge University Press, Cambridge, 1911; Dover, New York, 1953.  A classic.  Also available at books.google.com.
+    </biblio>
+        <!-- was [2] -->
+    <biblio type="raw" permid="yJh">
+      Gallian, J. A. and Winters, S. <q>Modular Arithmetic in the Marketplace,</q>
+      <title>The American Mathematical Monthly</title>
+      <volume>95</volume>
+      (1988): 548<ndash/>51.
+    </biblio>
+        <!-- %Reference updated - TWJ 6/22/2010 -->
+        <!-- was [3] -->
+    <biblio type="raw" permid="eQq">
+      Gallian, J. A.
+      <title>Contemporary Abstract Algebra</title>. 7th ed. Brooks/Cole, Belmont, CA, 2009.
+    </biblio>
+        <!-- %Reference updated - TWJ 6/22/2010 -->
+        <!-- was [4] -->
+    <biblio type="raw" permid="KXz">
+      Hall, M.
+      <title>Theory of Groups</title>. 2nd ed. American Mathematical Society, Providence, 1959.
+    </biblio>
+        <!-- %Reference updated - TWJ 6/22/2010 -->
+        <!-- was [5] -->
+    <biblio type="raw" permid="reI">
+      Kurosh, A. E.
+      <title>The Theory of Groups</title>, vols. I and II. American Mathematical Society, Providence, 1979.
+    </biblio>
+        <!-- %  The following two books are out of print and probably not readily available - TWJ 6/22/2010  -->
+        <!-- [6] MacDonald, I. D. The Theory of Groups. Krieger, London, 1988. -->
+        <!-- [7] Rose, J. S. A Course on Group Theory. Cambridge University Press, Cambridge, 1978. -->
+        <!-- %Reference updated 6/22/2010 - TWJ -->
+        <!-- was [6] -->
+    <biblio type="raw" permid="XlR">
+      Rotman, J. J.
+      <title>An Introduction to the Theory of Groups</title>. 4th ed. Springer, New York, 1995.
+    </biblio>
+  </references>
+
+
+</chapter>

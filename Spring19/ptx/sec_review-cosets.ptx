@@ -1,0 +1,234 @@
+<?xml version="1.0"?>
+<!-- This file is part of the book                    -->
+<!--                                                  -->
+<!-- Abstract Algebra: Theory and Applications        -->
+<!--                                                  -->
+<!-- Text: Copyright (C) 1997-2018  Thomas W. Judson  -->
+<!-- Sage: Copyright (C) 2010-2018  Robert A. Beezer  -->
+<!-- See the file COPYING for copying conditions.     -->
+<!-- This file is part of the book                    -->
+<!--                                                  -->
+<!-- See the file COPYING for copying conditions.     -->
+  <section xmlns:xi="http://www.w3.org/2001/XInclude" xml:id="section-cosets" permid="xMb">
+      <title>Cosets</title>
+      <p permid="oOb">
+        Let <m>G</m> be a group and <m>H</m> a subgroup of <m>G</m>.
+        Define a <term>left coset</term>
+            <idx><h>Coset</h><h>left</h></idx>
+        of <m>H</m> with <term>representative</term><idx><h>Coset</h><h>representative</h></idx> <m>g \in G</m> to be the set
+        <me permid="ZFd">
+          gH = \{ gh : h \in H \}
+        </me>.
+        <term>Right cosets</term>
+            <idx><h>Coset</h><h>right</h></idx>
+        can be defined similarly by
+        <me permid="FMm">
+          Hg = \{ hg : h \in H \}
+        </me>.
+        If left and right cosets coincide or if it is clear from the context to which type of coset that we are referring,
+        we will use the word <em>coset</em>
+        without specifying left or right.
+      </p>
+
+      <example xml:id="example-cosets-z6-cosets" permid="UdZ">
+        <p permid="zIF">
+          Let <m>H</m> be the subgroup of
+          <m>{\mathbb Z}_6</m> consisting of the elements <m>0</m> and <m>3</m>.
+          The cosets are
+          <md permid="lTv">
+            <mrow>0 + H = 3 + H = \{ 0, 3 \}</mrow>
+            <mrow>1 + H = 4 + H = \{ 1, 4 \}</mrow>
+            <mrow>2 + H = 5 + H = \{ 2, 5 \}</mrow>
+          </md>.
+          We will always write the cosets of subgroups of <m>{\mathbb Z}</m> and
+          <m>{\mathbb Z}_n</m> with the additive notation we have used for cosets here.
+          In a commutative group, left and right cosets are always identical.
+        </p>
+      </example>
+
+      <example xml:id="example-cosets-s3-cosets" permid="Ali">
+        <p permid="fPO">
+          Let <m>H</m> be the subgroup of <m>S_3</m> defined by the permutations <m>\{(1), (123), (132) \}</m>.
+          The left cosets of <m>H</m> are
+          <md permid="SaE">
+            <mrow>(1)H = (1 2 3)H =  (132)H = \{(1), (1 23), (132) \}</mrow>
+            <mrow>(1 2)H = (1 3)H = (2 3)H =  \{ (1 2), (1 3), (2 3)  \}</mrow>
+          </md>.
+          The right cosets of <m>H</m> are exactly the same as the left cosets:
+          <md permid="yhN">
+            <mrow>H(1) = H(1 2 3) =  H(132) = \{(1), (1 23), (132) \}</mrow>
+            <mrow>H(1 2) = H(1 3) = H(2 3) =  \{ (1 2), (1 3), (2 3)  \}</mrow>
+          </md>.
+        </p>
+
+        <p permid="LWX">
+          It is not always the case that a left coset is the same as a right coset.
+          Let <m>K</m> be the subgroup of <m>S_3</m> defined by the permutations <m>\{(1), (1 2)\}</m>.
+          Then the left cosets of <m>K</m> are
+          <md permid="eoW">
+            <mrow>(1)K = (1 2)K = \{(1), (1 2)\}</mrow>
+            <mrow>(1 3)K = (1 2 3)K = \{(1 3), (1 2 3)\}</mrow>
+            <mrow>(2 3)K = (1 3 2)K = \{(2 3), (1 3 2)\};</mrow>
+          </md>
+          however, the right cosets of <m>K</m> are
+          <md permid="Kwf">
+            <mrow>K(1) = K(1 2) = \{(1), (1 2)\}</mrow>
+            <mrow>K(1 3) = K(1 3 2) = \{(1 3), (1 3 2)\}</mrow>
+            <mrow>K(2 3) = K(1 2 3) = \{(2 3), (1 2 3)\}</mrow>
+          </md>.
+        </p>
+      </example>
+
+      <p permid="UVk">
+        The following lemma is quite useful when dealing with cosets.
+        (We leave its proof as an exercise.)
+      </p>
+
+      <lemma xml:id="lemma-cosets-theorem-1" permid="vBp">
+        <statement>
+          <p permid="bfV">
+            Let <m>H</m> be a subgroup of a group <m>G</m> and suppose that <m>g_1, g_2 \in G</m>.
+            The following conditions are equivalent.
+
+            <ol permid="fWS">
+              <li permid="ahG">
+                <p permid="dMg">
+                  <m>g_1 H = g_2 H</m>;
+                </p>
+              </li>
+
+              <li permid="GoP">
+                <p permid="JTp">
+                  <m>H g_1^{-1} = H g_2^{-1}</m>;
+                </p>
+              </li>
+
+              <li permid="mvY">
+                <p permid="qay">
+                  <m>g_1 H \subset g_2 H</m>;
+                </p>
+              </li>
+
+              <li permid="SDh">
+                <p permid="WhH">
+                  <m>g_2 \in g_1 H</m>;
+                </p>
+              </li>
+
+              <li permid="yKq">
+                <p permid="CoQ">
+                  <m>g_1^{-1} g_2 \in H</m>.
+                </p>
+              </li>
+            </ol>
+          </p>
+        </statement>
+      </lemma>
+
+      <p permid="Bct">
+        In all of our examples the cosets of a subgroup <m>H</m> partition the larger group <m>G</m>.
+        The following theorem proclaims that this will always be the case.
+      </p>
+
+      <theorem xml:id="theorem-cosets-theorem-2" permid="SoM">
+        <statement>
+          <p permid="xTs">
+            Let <m>H</m> be a subgroup of a group <m>G</m>.
+            Then the left cosets of <m>H</m> in <m>G</m> partition <m>G</m>.
+            That is, the group <m>G</m> is the disjoint union of the left cosets of <m>H</m> in <m>G</m>.
+          </p>
+        </statement>
+
+        <proof permid="xqC">
+          <p permid="ozG">
+            Let <m>g_1 H</m> and <m>g_2 H</m> be two cosets of <m>H</m> in <m>G</m>.
+            We must show that either <m>g_1 H \cap g_2 H = \emptyset</m> or <m>g_1 H = g_2 H</m>.
+            Suppose that <m>g_1 H \cap g_2 H \neq \emptyset</m> and <m>a \in g_1 H \cap g_2 H</m>.
+            Then by the definition of a left coset,
+            <m>a = g_1 h_1 = g_2 h_2</m> for some elements <m>h_1</m> and <m>h_2</m> in <m>H</m>.
+            Hence, <m>g_1 = g_2 h_2 h_1^{-1}</m> or <m>g_1 \in g_2 H</m>.
+            By <xref ref="lemma-cosets-theorem-1"/>, <m>g_1 H = g_2 H</m>.
+          </p>
+        </proof>
+      </theorem>
+
+      <remark permid="sGJ">
+        <p permid="Esy">
+          There is nothing special in this theorem about left cosets.
+          Right cosets also partition <m>G</m>;
+          the proof of this fact is exactly the same as the proof for left cosets except that all group multiplications are done on the opposite side of <m>H</m>.
+        </p>
+      </remark>
+
+      <p permid="hjC">
+        Let <m>G</m> be a group and <m>H</m> be a subgroup of <m>G</m>.
+        Define the <term>index</term>
+            <idx><h>Index of a subgroup</h></idx>
+            <idx><h>Subgroup</h><h>index of</h></idx>
+        of <m>H</m> in <m>G</m> to be the number of left cosets of <m>H</m> in <m>G</m>.
+        We will denote the index by <m>[G:H]</m>.
+
+        <notation>
+          <usage>[G:H]</usage>
+          <description>index of a subgroup <m>H</m> in a group <m>G</m></description>
+        </notation>
+
+      </p>
+
+      <example xml:id="example-cosets-z6-index" permid="gsr">
+        <p permid="seg">
+          Let <m>G= {\mathbb Z}_6</m> and <m>H = \{ 0, 3 \}</m>.
+          Then <m>[G:H] = 3</m>.
+        </p>
+      </example>
+
+      <example xml:id="example-cosets-s3-index" permid="MzA">
+        <p permid="Ylp">
+          Suppose that <m>G= S_3</m>,
+          <m>H = \{ (1),(123), (132) \}</m>,
+          and <m>K= \{ (1), (12) \}</m>.
+          Then <m>[G:H] = 2</m> and <m>[G:K] = 3</m>.
+        </p>
+      </example>
+
+      <theorem xml:id="theorem-cosets-theorem-3" permid="yvV">
+        <statement>
+          <p permid="eaB">
+            Let <m>H</m> be a subgroup of a group <m>G</m>.
+            The number of left cosets of <m>H</m> in <m>G</m> is the same as the number of right cosets of <m>H</m> in <m>G</m>.
+          </p>
+        </statement>
+
+        <proof permid="dxL">
+          <p permid="UGP">
+            Let <m>{\mathcal L}_H</m> and
+            <m>{\mathcal R}_H</m> denote the set of left and right cosets of <m>H</m> in <m>G</m>,
+            respectively.
+
+            <notation>
+              <usage>\mathcal L_H</usage>
+              <description>the set of left cosets of a subgroup <m>H</m> in a group <m>G</m></description>
+            </notation>
+
+            <notation>
+              <usage>\mathcal R_H</usage>
+              <description>the set of right cosets of a subgroup <m>H</m> in a group <m>G</m></description>
+            </notation>
+
+            If we can define a bijective map <m>\phi : {\mathcal L}_H \rightarrow {\mathcal R}_H</m>,
+            then the theorem will be proved.
+            If <m>gH \in {\mathcal L}_H</m>,
+            let <m>\phi( gH ) = Hg^{-1}</m>.
+            By <xref ref="lemma-cosets-theorem-1"/>, the map <m>\phi</m> is well-defined;
+            that is, if <m>g_1 H = g_2 H</m>,
+            then <m>H g_1^{-1} = H g_2^{-1}</m>.
+            To show that <m>\phi</m> is one-to-one, suppose that
+            <me permid="qDo">
+              H g_1^{-1} = \phi( g_1 H ) = \phi( g_2 H ) = H g_2^{-1}
+            </me>.
+            Again by <xref ref="lemma-cosets-theorem-1"/>, <m>g_1 H = g_2 H</m>.
+            The map <m>\phi</m> is onto since <m>\phi(g^{-1} H ) = H g</m>.
+          </p>
+        </proof>
+      </theorem>
+    </section>

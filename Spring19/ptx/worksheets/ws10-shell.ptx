@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<mathbook xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en-US">
+  <xi:include href="./ws-info.ptx" />
+  
+  <article xml:id="activity10-permutations-order">
+    <!-- <xi:include href="./fields-constructions.ptx"/> -->
+    <xi:include href="./groups-permutations-order.ptx" />
+  </article>
+  
+</mathbook>

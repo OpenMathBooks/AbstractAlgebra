@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*       on 2021-01-10T15:15:28-07:00       *-->
+<!--*   A recent stable commit (2020-08-09):   *-->
+<!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<html lang="en-US">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>AATA Applications: Galois Groups</title>
+<meta name="Keywords" content="Authored in PreTeXt">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script src="https://sagecell.sagemath.org/embedded_sagecell.js"></script><script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [['\\(','\\)']]
+    },
+    asciimath2jax: {
+        ignoreClass: ".*",
+        processClass: "has_am"
+    },
+    jax: ["input/AsciiMath"],
+    extensions: ["asciimath2jax.js"],
+    TeX: {
+        extensions: ["extpfeil.js", "autobold.js", "https://pretextbook.org/js/lib/mathjaxknowl.js", "AMScd.js", ],
+        // scrolling to fragment identifiers is controlled by other Javascript
+        positionToHash: false,
+        equationNumbers: { autoNumber: "none", useLabelIds: true, },
+        TagSide: "right",
+        TagIndent: ".8em",
+    },
+    // HTML-CSS output Jax to be dropped for MathJax 3.0
+    "HTML-CSS": {
+        scale: 88,
+        mtextFontInherit: true,
+    },
+    CommonHTML: {
+        scale: 88,
+        mtextFontInherit: true,
+    },
+});
+</script><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS_CHTML-full"></script><link href="https://unpkg.com/prismjs@v1.22.0/themes/prism.css" rel="stylesheet">
+<script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/jquery.min.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/0.13/pretext.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/0.13/pretext_add_on.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script xmlns:svg="http://www.w3.org/2000/svg">sagecellEvalName='Evaluate (Sage)';
+</script><link xmlns:svg="http://www.w3.org/2000/svg" href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://fonts.googleapis.com/css?family=Inconsolata:400,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/pretext.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/pretext_add_on.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/banner_default.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/toc_default.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/knowls_default.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/style_default.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/colors_default.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/setcolors.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="custom-styles.css">
+<!-- 2019-10-12: Temporary - CSS file for experiments with styling --><link xmlns:svg="http://www.w3.org/2000/svg" href="developer.css" rel="stylesheet" type="text/css">
+</head>
+<body id="judson-AATA" class="mathbook-book has-toc has-sidebar-left">
+<a class="assistive" href="#content">Skip to main content</a><div xmlns:svg="http://www.w3.org/2000/svg" class="hidden-content" style="display:none">\(\newcommand{\identity}{\mathrm{id}}
+\newcommand{\notdivide}{\nmid}
+\newcommand{\notsubset}{\not\subset}
+\newcommand{\lcm}{\operatorname{lcm}}
+\newcommand{\gf}{\operatorname{GF}}
+\newcommand{\inn}{\operatorname{Inn}}
+\newcommand{\aut}{\operatorname{Aut}}
+\newcommand{\Hom}{\operatorname{Hom}}
+\newcommand{\cis}{\operatorname{cis}}
+\newcommand{\chr}{\operatorname{char}}
+\newcommand{\Null}{\operatorname{Null}}
+\newcommand{\transpose}{\text{t}}
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\Q}{\mathbb{Q}}
+\newcommand{\R}{\mathbb{R}}
+\def\C{\mathbb{C}}
+\newcommand{\st}{:}
+\newcommand{\inv}{^{-1}}
+\newcommand{\bC}{\mathbb{C}}
+      \newcommand{\F}{\mathscr{F}}
+      \newcommand{\FR}{\mathscr{F}(\R)}
+      \newcommand{\DR}{\mathscr{D}(\R)}
+      \def\s{\varrho}
+      \def\theterm{Spring 2021}
+      \def\thecourse{MATH 322}
+\newcommand{\lt}{&lt;}
+\newcommand{\gt}{&gt;}
+\newcommand{\amp}{&amp;}
+\)</div>
+<header id="masthead" class="smallbuttons"><div class="banner"><div class="container">
+<a id="logo-link" href="http://abstract.pugetsound.edu" target="_blank"><img src="images/cover_aata_2020.png" alt="Logo image"></a><div class="title-container">
+<h1 class="heading"><a href="aata-toc.html"><span class="title">Abstract Algebra:</span> <span class="subtitle">Theory and Applications, Remixed!</span></a></h1>
+<p class="byline">Thomas W. Judson</p>
+</div>
+</div></div>
+<nav xmlns:svg="http://www.w3.org/2000/svg" id="primary-navbar" class="navbar"><div class="container">
+<div class="navbar-top-buttons">
+<button class="sidebar-left-toggle-button button active" aria-label="Show or hide table of contents sidebar">Contents</button><div class="tree-nav toolbar toolbar-divisor-3">
+<a class="index-button toolbar-item button" href="index-1.html" title="Index">Index</a><span class="threebuttons"><a id="previousbutton" class="previous-button toolbar-item button" href="section-simplicity-of-an.html" title="Previous">Prev</a><a id="upbutton" class="up-button button toolbar-item" href="groups.html" title="Up">Up</a><a id="nextbutton" class="next-button button toolbar-item" href="struct-more.html" title="Next">Next</a></span>
+</div>
+</div>
+<div class="navbar-bottom-buttons toolbar toolbar-divisor-4">
+<button class="sidebar-left-toggle-button button toolbar-item active">Contents</button><a class="previous-button toolbar-item button" href="section-simplicity-of-an.html" title="Previous">Prev</a><a class="up-button button toolbar-item" href="groups.html" title="Up">Up</a><a class="next-button button toolbar-item" href="struct-more.html" title="Next">Next</a>
+</div>
+</div></nav></header><div class="page">
+<div xmlns:svg="http://www.w3.org/2000/svg" id="sidebar-left" class="sidebar" role="navigation"><div class="sidebar-content">
+<nav id="toc"><ul>
+<li class="link frontmatter">
+<a href="aata.html" data-scroll="Wih"><span class="title">Front Matter</span></a><ul>
+<li><a href="colophon-1.html" data-scroll="colophon-1">Colophon</a></li>
+<li><a href="acknowledgement-1.html" data-scroll="acknowledgement-1">Acknowledgements</a></li>
+<li><a href="preface-1.html" data-scroll="JEk">Preface to the Remixed Version</a></li>
+<li><a href="preface-2.html" data-scroll="Cpq">Original Preface</a></li>
+</ul>
+</li>
+<li class="link part"><a href="part-groups.html" data-scroll="part-groups"><span class="codenumber">I</span> <span class="title">Groups</span></a></li>
+<li class="link">
+<a href="sets.html" data-scroll="xcu"><span class="codenumber">1</span> <span class="title">Preliminaries</span></a><ul>
+<li><a href="section-note-on-proofs.html" data-scroll="yRH">A Short Note on Proofs</a></li>
+<li><a href="section-sets-and-functions.html" data-scroll="eYQ">Sets and Functions</a></li>
+<li><a href="section-equivalence-relations.html" data-scroll="VFe">Equivalence Relations and Partitions</a></li>
+<li><a href="section-math-induction.html" data-scroll="bUT">Mathematical Induction</a></li>
+<li><a href="exercises-sets.html" data-scroll="mDp">Additional Exercises</a></li>
+<li><a href="sets-references.html" data-scroll="ztb">References and Suggested Readings</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="groups.html" data-scroll="ZbN"><span class="codenumber">2</span> <span class="title">Groups</span></a><ul>
+<li><a href="section-mod-n-sym.html" data-scroll="nfs">Integer Equivalence Classes and Symmetries</a></li>
+<li><a href="section-groups-define.html" data-scroll="TmB">Definitions and Examples</a></li>
+<li><a href="section-basic-properties.html" data-scroll="Rxo">Basic Properties of Groups</a></li>
+<li><a href="section-subgroups.html" data-scroll="ztK">Subgroups</a></li>
+<li><a href="cyclic.html" data-scroll="MzR">Cyclic Subgroups</a></li>
+<li><a href="section-permutation-definitions.html" data-scroll="Wyg">Permutation Groups</a></li>
+<li><a href="exercises-groups.html" data-scroll="OCI">Additional Exercises</a></li>
+<li><a href="groups-exercises-detecting-errors.html" data-scroll="uJR">Additional Exercises: Detecting Errors</a></li>
+<li><a href="groups-references.html" data-scroll="muP">References and Suggested Readings</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="cosets.html" data-scroll="Uzy"><span class="codenumber">3</span> <span class="title">Cosets and Factor Groups</span></a><ul>
+<li><a href="section-cosets.html" data-scroll="xMb">Cosets</a></li>
+<li><a href="section-factor-groups.html" data-scroll="avo">Factor Groups and Normal Subgroups</a></li>
+<li><a href="exercises-cosets.html" data-scroll="FqA">Exercises</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="isomorph.html" data-scroll="OUu"><span class="codenumber">4</span> <span class="title">Isomorphisms and Homomorphisms</span></a><ul>
+<li><a href="section-isomorph-definitions.html" data-scroll="Evp">Definition and Examples</a></li>
+<li><a href="section-group-homomorphisms.html" data-scroll="uOI">Group Homomorphisms</a></li>
+<li><a href="section-group-isomorphism-theorems.html" data-scroll="aVR">The Isomorphism Theorems</a></li>
+<li><a href="exercises-isomorph.html" data-scroll="VeC">Additional Exercises</a></li>
+<li><a href="homomorph-exercises-automorphisms.html" data-scroll="Jes">Additional Exercises: Automorphisms</a></li>
+</ul>
+</li>
+<li class="link part"><a href="part-rings-and-fields.html" data-scroll="part-rings-and-fields"><span class="codenumber">II</span> <span class="title">Rings and Fields</span></a></li>
+<li class="link">
+<a href="rings.html" data-scroll="bhz"><span class="codenumber">5</span> <span class="title">Rings</span></a><ul>
+<li><a href="section-rings-definitions.html" data-scroll="kBl">Rings</a></li>
+<li><a href="section-domains-and-fields.html" data-scroll="QIu">Integral Domains and Fields</a></li>
+<li><a href="section-ring-homomorphisms.html" data-scroll="wPD">Ring Homomorphisms and Ideals</a></li>
+<li><a href="section-maximal-prime-ideals.html" data-scroll="cWM">Maximal and Prime Ideals</a></li>
+<li><a href="section-software-application.html" data-scroll="JdV">An Application to Software Design</a></li>
+<li><a href="exercises-rings.html" data-scroll="LYB">Additional Exercises</a></li>
+<li><a href="rings-exercises-programming.html" data-scroll="sfK">Programming Exercise</a></li>
+<li><a href="rings-references.html" data-scroll="JSg">References and Suggested Readings</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="poly.html" data-scroll="tPt"><span class="codenumber">6</span> <span class="title">Polynomials</span></a><ul>
+<li><a href="section-division-algorithm.html" data-scroll="Icc">The Integers</a></li>
+<li><a href="section-poly-rings.html" data-scroll="Djf">Polynomial Rings</a></li>
+<li><a href="section-poly-division-algorithm.html" data-scroll="jqo">The Division Algorithm</a></li>
+<li><a href="section-irreducible-poly.html" data-scroll="Pxx">Irreducible Polynomials</a></li>
+<li><a href="sec-factoring-c-r.html" data-scroll="icb">Factoring over \(\C\) and \(\R\)</a></li>
+<li><a href="exercises-poly.html" data-scroll="eGv">Additional Exercises</a></li>
+<li><a href="practice-euclidean-algorithm.html" data-scroll="BUS">Additional Exercises: The Euclidean Algorithm</a></li>
+<li><a href="poly-exercises-cubics-quartics.html" data-scroll="KNE">Additional Exercises:  Solving the Cubic and Quartic Equations</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="domains.html" data-scroll="HlR"><span class="codenumber">7</span> <span class="title">Integral Domains</span></a><ul>
+<li><a href="section-field-of-fractions.html" data-scroll="cTV">Fields of Fractions</a></li>
+<li><a href="section-factorization-domains.html" data-scroll="Jbe">Factorization in Integral Domains</a></li>
+<li><a href="reading-questions-22.html" data-scroll="drU">Reading Questions</a></li>
+<li><a href="exercises-domains.html" data-scroll="kyu">Exercises</a></li>
+<li><a href="domains-references.html" data-scroll="CJg">References and Suggested Readings</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="fields.html" data-scroll="pNh"><span class="codenumber">8</span> <span class="title">Fields</span></a><ul>
+<li><a href="section-constructions.html" data-scroll="ctw">Geometric Constructions</a></li>
+<li><a href="section-fields-intro.html" data-scroll="GTt">Introduction</a></li>
+<li><a href="section-extension-fields.html" data-scroll="dGQ">Extension Fields</a></li>
+<li><a href="fields-subsection-algebraic-elements.html" data-scroll="acq">Algebraic Elements</a></li>
+<li><a href="section-fields-vectorspaces-review.html" data-scroll="UWY">A Review of Vector Spaces</a></li>
+<li><a href="section-fields-vectorspaces.html" data-scroll="Scs">Extension Fields as Vector Spaces</a></li>
+<li><a href="section-constructions-conc.html" data-scroll="XhK">What's Not Constructible</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="galois.html" data-scroll="hgP"><span class="codenumber">9</span> <span class="title">Galois Theory</span></a><ul>
+<li><a href="section-galois-splitting-fields.html" data-scroll="wmn">Splitting Fields</a></li>
+<li><a href="section-galois-field-automorphisms.html" data-scroll="iWc">Field Automorphisms</a></li>
+<li><a href="section-galois-fund-theorem-galois-theory.html" data-scroll="Pdl">The Fundamental Theorem</a></li>
+</ul>
+</li>
+<li class="link part"><a href="part-more-group-theory.html" data-scroll="part-more-group-theory"><span class="codenumber">III</span> <span class="title">More Group Theory</span></a></li>
+<li class="link">
+<a href="groups.html" data-scroll="nRa"><span class="codenumber">10</span> <span class="title">Some of the Structure of Groups</span></a><ul>
+<li><a href="section-groups-cayley.html" data-scroll="CTu">Isomorphisms and Cayley's Theorem</a></li>
+<li><a href="section-groups-permutations.html" data-scroll="mjE">Permutation Groups</a></li>
+<li><a href="section-solvable-groups.html" data-scroll="WbU">Solvable Groups</a></li>
+<li><a href="section-simplicity-of-an.html" data-scroll="GCx">The Simplicity of the Alternating Group</a></li>
+<li><a href="section-galois-applications.html" data-scroll="vku" class="active">Applications: Galois Groups</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="struct-more.html" data-scroll="YWA"><span class="codenumber">11</span> <span class="title">More of the Structure of Groups</span></a><ul>
+<li><a href="section-groups-order.html" data-scroll="hVk">Cyclic Groups and Orders of Elements</a></li>
+<li><a href="section-groups-lagrange.html" data-scroll="BOb">Lagrange's Theorem and its consequences</a></li>
+<li><a href="section-direct-products.html" data-scroll="kCy">Direct Products</a></li>
+<li><a href="section-finite-abelian-groups.html" data-scroll="pUL">Finite Abelian Groups</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="crypt.html" data-scroll="uCn"><span class="codenumber">12</span> <span class="title">Introduction to Cryptography</span></a><ul>
+<li><a href="section-private-key-crypt.html" data-scroll="Qkr">Private Key Cryptography</a></li>
+<li><a href="section-public-key-crypt.html" data-scroll="wrA">Public Key Cryptography</a></li>
+<li><a href="ws_groups-RSA-lab.html" data-scroll="zaZ">Activity: RSA Cryptography Lab</a></li>
+<li><a href="section-method-of-repeated-squares.html" data-scroll="YOj">The Method of Repeated Squares</a></li>
+<li><a href="exercises-crypt.html" data-scroll="rHH">Exercises</a></li>
+<li><a href="crypt-exercises-additional.html" data-scroll="XOQ">Additional Exercises: Primality and Factoring</a></li>
+<li><a href="crypt-references.html" data-scroll="yqf">References and Suggested Readings</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="actions.html" data-scroll="elJ"><span class="codenumber">13</span> <span class="title">Group Actions</span></a><ul>
+<li><a href="section-groups-acting-on-sets.html" data-scroll="nFv">Groups Acting on Sets</a></li>
+<li><a href="section-class-equation.html" data-scroll="TME">The Class Equation</a></li>
+<li><a href="section-burnsides-counting-theorem.html" data-scroll="zTN">Burnside's Counting Theorem</a></li>
+<li><a href="exercises-actions.html" data-scroll="PcL">Exercises</a></li>
+<li><a href="actions-exercises-programming.html" data-scroll="vjU">Programming Exercise</a></li>
+<li><a href="actions-references.html" data-scroll="VdC">References and Suggested Reading</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="sylow.html" data-scroll="TkO"><span class="codenumber">14</span> <span class="title">The Sylow Theorems</span></a><ul>
+<li><a href="section-sylow-theorems.html" data-scroll="ILJ">The Sylow Theorems</a></li>
+<li><a href="section-sylow-applications.html" data-scroll="oSS">Examples and Applications</a></li>
+<li><a href="reading-questions-23.html" data-scroll="EPk">Reading Questions</a></li>
+<li><a href="exercises-sylow.html" data-scroll="kiZ">Exercises</a></li>
+<li><a href="sylow-exercises-project.html" data-scroll="Qqi">A Project</a></li>
+<li><a href="sylow-references.html" data-scroll="Sgz">References and Suggested Readings</a></li>
+</ul>
+</li>
+<li class="link part"><a href="part-additional.html" data-scroll="part-additional"><span class="codenumber">IV</span> <span class="title">Additional Topics</span></a></li>
+<li class="link">
+<a href="matrix.html" data-scroll="CSk"><span class="codenumber">15</span> <span class="title">Matrix Groups and Symmetry</span></a><ul>
+<li><a href="section-matrix-groups.html" data-scroll="geN">Matrix Groups</a></li>
+<li><a href="section-symmetry.html" data-scroll="MlW">Symmetry</a></li>
+<li><a href="reading-questions-24.html" data-scroll="jhg">Reading Questions</a></li>
+<li><a href="exercises-matrix.html" data-scroll="nJm">Exercises</a></li>
+<li><a href="matrix-references.html" data-scroll="IcT">References and Suggested Readings</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="algcodes.html" data-scroll="jTr"><span class="codenumber">16</span> <span class="title">Algebraic Coding Theory</span></a><ul>
+<li><a href="section-error-detecting-correcting-codes.html" data-scroll="lIE">Error-Detecting and Correcting Codes</a></li>
+<li><a href="section-linear-codes.html" data-scroll="RPN">Linear Codes</a></li>
+<li><a href="section-parity-check.html" data-scroll="xWW">Parity-Check and Generator Matrices</a></li>
+<li><a href="section-efficient-decoding.html" data-scroll="eef">Efficient Decoding</a></li>
+<li><a href="reading-questions-25.html" data-scroll="gmA">Reading Questions</a></li>
+<li><a href="exercises-algcodes.html" data-scroll="NfU">Exercises</a></li>
+<li><a href="algcodes-exercises-programming.html" data-scroll="tnd">Programming Exercises</a></li>
+<li><a href="algcodes-references.html" data-scroll="GJf">References and Suggested Readings</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="finite.html" data-scroll="Gnc"><span class="codenumber">17</span> <span class="title">Finite Fields</span></a><ul>
+<li><a href="section-finite-field.html" data-scroll="jzF">Structure of a Finite Field</a></li>
+<li><a href="section-poly-codes.html" data-scroll="PGO">Polynomial Codes</a></li>
+<li><a href="reading-questions-26.html" data-scroll="RdC">Reading Questions</a></li>
+<li><a href="exercises-finite.html" data-scroll="KWV">Exercises</a></li>
+<li><a href="finite-exercises-bch-codes.html" data-scroll="ree">Additional Exercises: Error Correction for <abbr class="acronym">BCH</abbr> Codes</a></li>
+<li><a href="finite-references.html" data-scroll="Yrk">References and Suggested Readings</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="boolean.html" data-scroll="dAp"><span class="codenumber">18</span> <span class="title">Lattices and Boolean Algebras</span></a><ul>
+<li><a href="section-boolean-lattices.html" data-scroll="Tbk">Lattices</a></li>
+<li><a href="section-boolean-algebras.html" data-scroll="zit">Boolean Algebras</a></li>
+<li><a href="section-algebra-of-circuits.html" data-scroll="fpC">The Algebra of Electrical Circuits</a></li>
+<li><a href="reading-questions-27.html" data-scroll="nQZ">Reading Questions</a></li>
+<li><a href="exercises-boolean.html" data-scroll="uyA">Exercises</a></li>
+<li><a href="boolean-exercises-programming.html" data-scroll="aFJ">Programming Exercises</a></li>
+<li><a href="boolean-references.html" data-scroll="QcR">References and Suggested Readings</a></li>
+</ul>
+</li>
+<li class="link backmatter"><a href="backmatter.html" data-scroll="uDN"><span class="title">Reference</span></a></li>
+<li class="link"><a href="appendix-gfdl.html" data-scroll="gAi"><span class="codenumber">A</span> <span class="title">GNU Free Documentation License</span></a></li>
+<li class="link"><a href="solutions-1.html" data-scroll="aKW"><span class="codenumber">B</span> <span class="title">Hints and Answers to Selected Exercises</span></a></li>
+<li class="link"><a href="appendix-2.html" data-scroll="MHr"><span class="codenumber">C</span> <span class="title">Notation</span></a></li>
+<li class="link"><a href="index-1.html" data-scroll="index-1"><span class="title">Index</span></a></li>
+<li class="link"><a href="colophon-2.html" data-scroll="colophon-2"><span class="title">Colophon</span></a></li>
+</ul></nav><div class="extras"><nav><a class="mathbook-link" href="https://pretextbook.org">Authored in PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" alt="Powered by MathJax"></a></nav></div>
+</div></div>
+<main class="main"><div id="content" class="pretext-content"><section xmlns:svg="http://www.w3.org/2000/svg" class="section" id="vku"><h2 class="heading hide-type">
+<span class="type">Section</span> <span class="codenumber">10.5</span> <span class="title">Applications: Galois Groups</span>
+</h2>
+<section class="subsection" id="ZCq"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">10.5.1</span> <span class="title">Solvability by Radicals</span>
+</h3>
+<p id="Qxm">Throughout this section we shall assume that all fields have characteristic zero to ensure that irreducible polynomials do not have multiple roots. The immediate goal of this section is to determine when the roots of a polynomial \(f(x)\) can be computed with a finite number of operations on the coefficients of \(f(x)\text{.}\) The allowable operations are addition, subtraction, multiplication, division, and the extraction of \(n\)th roots. Certainly the solution to the quadratic equation, \(a x^2 + b x +c = 0\text{,}\) illustrates this process:</p>
+<div class="displaymath">
+\begin{equation*}
+x = \frac{-b \pm \sqrt{b^2 - 4ac}}{2a}\text{.}
+\end{equation*}
+</div>
+<p data-braille="continuation">The only one of these operations that might demand a larger field is the taking of \(n\)th roots. We are led to the following definition.</p>
+<p id="wEv">An extension field \(E\) of a field \(F\) is an <dfn class="terminology">extension by radicals</dfn>  if there exists a chain of subfields</p>
+<div class="displaymath">
+\begin{equation*}
+F = F_0 \subset F_1 \subset F_2 \subset \cdots \subset F_r = E
+\end{equation*}
+</div>
+<p data-braille="continuation">such for \(i = 1, 2, \ldots, r\text{,}\) we have  \(F_i = F_{i - 1}(\alpha_i)\) and \(\alpha_i^{n_i} \in F_{i-1}\) for some positive integer \(n_i\text{.}\) A polynomial \(f(x)\) is <dfn class="terminology">solvable by radicals</dfn>  over \(F\) if the splitting field \(K\) of \(f(x)\) over \(F\) is contained in an extension of \(F\) by radicals. Our goal is to arrive at criteria that will tell us whether or not a polynomial \(f(x)\) is solvable by radicals by examining the Galois group \(f(x)\text{.}\)</p>
+<p id="cLE">The easiest polynomial to solve by radicals is one of the form \(x^n - a\text{.}\)  The roots of \(x^n - 1\) are called the <dfn class="terminology">nth roots of unity</dfn>.  These roots are a finite subgroup of the splitting field of \(x^n -1\text{.}\)  The \(n\)th roots of unity form a cyclic group. Any generator of this group is called a <dfn class="terminology">primitive nth root of unity</dfn>. </p>
+<article class="example example-like" id="MiF"><h6 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">10.34</span><span class="period">.</span>
+</h6>
+<p id="TNr">The polynomial \(x^n - 1\) is solvable by radicals over \({\mathbb Q}\text{.}\) The roots of this polynomial are \(1, \omega, \omega^2, \ldots, \omega^{n - 1}\text{,}\) where</p>
+<div class="displaymath">
+\begin{equation*}
+\omega = \cos\left( \frac{2 \pi}{n} \right) + i \sin\left( \frac{2 \pi}{n} \right)\text{.}
+\end{equation*}
+</div>
+<p data-braille="continuation">The splitting field of \(x^n - 1\) over \({\mathbb Q}\) is \({\mathbb Q}(\omega)\text{.}\)</p></article><p id="ISN">We shall prove that a polynomial is solvable by radicals if its Galois group is solvable. Recall that a subnormal series of a group \(G\) is a finite sequence of subgroups</p>
+<div class="displaymath">
+\begin{equation*}
+G = H_n \supset H_{n-1} \supset \cdots \supset H_1 \supset H_0 = \{ e \}\text{,}
+\end{equation*}
+</div>
+<p data-braille="continuation">where \(H_i\) is normal in \(H_{i+1}\text{.}\) A group \(G\) is solvable  if it has a subnormal series \(\{ H_i \}\) such that all of the factor groups \(H_{i+1} /H_i\) are abelian. For example, if we examine the series \(\{ \identity \} \subset A_3 \subset S_3\text{,}\) we see that \(S_3\) is solvable. On the other hand, \(S_5\) is not solvable, by <a class="xref" data-knowl="./knowl/theorem-an-simple.html" title="Theorem 10.33">Theorem 10.33</a>.</p>
+<article class="lemma theorem-like" id="zUn"><h6 class="heading">
+<span class="type">Lemma</span><span class="space"> </span><span class="codenumber">10.35</span><span class="period">.</span>
+</h6>
+<p id="FJM">Let \(F\) be a field of characteristic zero and \(E\) be the splitting field of \(x^n - a\) over \(F\) with \(a \in F\text{.}\) Then \(G(E/F)\) is a solvable group.</p></article><article class="proof" id="ZQL"><h6 class="heading"><span class="type">Proof<span class="period">.</span></span></h6>
+<p id="aHW">The roots of \(x^n - a\) are \(\sqrt[n]{a}, \omega \sqrt[n]{a}, \ldots, \omega^{n-1} \sqrt[n]{a}\text{,}\) where \(\omega\) is a primitive \(n\)th root of unity. Suppose that \(F\) contains all of its \(n\)th roots of unity. If \(\zeta\) is one of the roots of  \(x^n - a\text{,}\) then distinct roots of \(x^n - a\) are \(\zeta, \omega \zeta, \ldots, \omega^{n - 1} \zeta\text{,}\) and \(E = F(\zeta)\text{.}\) Since \(G(E/F)\) permutes the roots \(x^n - a\text{,}\) the elements in  \(G(E/F)\) must be determined by their action on these roots. Let \(\sigma\)  and \(\tau\) be in \(G(E/F)\) and suppose that \(\sigma( \zeta ) = \omega^i \zeta\) and \(\tau( \zeta ) = \omega^j \zeta\text{.}\) If \(F\) contains the roots of unity, then</p>
+<div class="displaymath">
+\begin{equation*}
+\sigma \tau( \zeta ) = \sigma( \omega^j \zeta) = \omega^j \sigma( \zeta ) = \omega^{i+j} \zeta = \omega^i \tau( \zeta ) = \tau( \omega^i \zeta ) = \tau \sigma( \zeta )\text{.}
+\end{equation*}
+</div>
+<p data-braille="continuation">Therefore, \(\sigma \tau = \tau \sigma\) and \(G(E/F)\) is abelian, and \(G(E/F)\) must be solvable.</p>
+<p id="GPf">Now suppose that \(F\) does not contain a primitive \(n\)th root of unity. Let \(\omega\) be a generator of the cyclic group of the \(n\)th roots of unity. Let \(\alpha\) be a zero of \(x^n - a\text{.}\) Since \(\alpha\) and \(\omega \alpha\) are both in the splitting field of \(x^n - a\text{,}\) \(\omega = (\omega \alpha)/ \alpha\) is also in \(E\text{.}\) Let \(K = F( \omega)\text{.}\) Then \(F \subset K \subset E\text{.}\) Since \(K\) is the splitting field of \(x^n - 1\text{,}\) \(K\) is a normal extension of \(F\text{.}\) Therefore, any automorphism \(\sigma\) in \(G(F( \omega)/ F)\) is determined by \(\sigma( \omega)\text{.}\) It must be the case that \(\sigma( \omega ) = \omega^i\) for some integer \(i\) since all of the zeros of \(x^n - 1\) are powers of \(\omega\text{.}\) If \(\tau( \omega ) = \omega^j\) is in \(G(F(\omega)/F)\text{,}\) then</p>
+<div class="displaymath">
+\begin{equation*}
+\sigma \tau( \omega ) = \sigma( \omega^j ) = [ \sigma( \omega )]^j = \omega^{ij} = [\tau( \omega ) ]^i = \tau( \omega^i )  = \tau \sigma( \omega )\text{.}
+\end{equation*}
+</div>
+<p data-braille="continuation">Therefore, \(G(F( \omega ) / F)\) is abelian. By the Fundamental Theorem of Galois Theory the series</p>
+<div class="displaymath">
+\begin{equation*}
+\{ \identity \} \subset G(E/ F(\omega)) \subset G(E/F)
+\end{equation*}
+</div>
+<p data-braille="continuation">is a normal series. By our previous argument, \(G(E/F(\omega))\) is abelian. Since</p>
+<div class="displaymath">
+\begin{equation*}
+G(E/F) /G(E/F( \omega)) \cong G(F(\omega)/F)
+\end{equation*}
+</div>
+<p data-braille="continuation">is also abelian, \(G(E/F)\) is solvable.</p></article><article class="lemma theorem-like" id="gbw"><h6 class="heading">
+<span class="type">Lemma</span><span class="space"> </span><span class="codenumber">10.36</span><span class="period">.</span>
+</h6>
+<p id="lQV">Let \(F\) be a field of characteristic zero and let</p>
+<div class="displaymath">
+\begin{equation*}
+F = F_0 \subset F_1 \subset F_2 \subset \cdots \subset F_r = E
+\end{equation*}
+</div>
+<p data-braille="continuation">a radical extension of \(F\text{.}\) Then there exists a normal radical extension</p>
+<div class="displaymath">
+\begin{equation*}
+F = K_0 \subset K_1 \subset K_2 \subset \cdots \subset K_r = K
+\end{equation*}
+</div>
+<p data-braille="continuation">such that \(K\) that contains \(E\) and \(K_i\) is a normal extension of \(K_{i-1}\text{.}\)</p></article><article class="proof" id="FXU"><h6 class="heading"><span class="type">Proof<span class="period">.</span></span></h6>
+<p id="mWo">Since \(E\) is a radical extension of \(F\text{,}\) there exists a chain of subfields</p>
+<div class="displaymath">
+\begin{equation*}
+F = F_0 \subset F_1 \subset F_2 \subset \cdots \subset F_r = E
+\end{equation*}
+</div>
+<p data-braille="continuation">such for \(i = 1, 2, \ldots, r\text{,}\) we have  \(F_i = F_{i - 1}(\alpha_i)\) and \(\alpha_i^{n_i} \in F_{i-1}\) for some positive integer \(n_i\text{.}\) We will build a normal radical extension of \(F\text{,}\)</p>
+<div class="displaymath">
+\begin{equation*}
+F = K_0 \subset K_1 \subset K_2 \subset \cdots \subset K_r = K
+\end{equation*}
+</div>
+<p data-braille="continuation">such that \(K \supseteq E\text{.}\) Define \(K_1\) for be the splitting field of \(x^{n_1} - \alpha_1^{n_1}\text{.}\) The roots of this polynomial are \(\alpha_1, \alpha_1 \omega, \alpha_1 \omega^2, \ldots, \alpha_1 \omega^{n_1 - 1}\text{,}\) where \(\omega\) is a primitive \(n_1\)th root of unity. If \(F\) contains all of its \(n_1\) roots of unity, then \(K_1 = F(\alpha_!)\text{.}\) On the other hand, suppose that \(F\) does not contain a primitive \(n_1\)th root of unity. If \(\beta\) is a root of \(x^{n_1} - \alpha_1^{n_1}\text{,}\) then all of the roots of  \(x^{n_1} - \alpha_1^{n_1}\) must be \(\beta, \omega \beta, \ldots, \omega^{n_1-1}\text{,}\) where  \(\omega\) is a primitive  \(n_1\)th root of unity. In this case, \(K_1 = F(\omega \beta)\text{.}\) Thus, \(K_1\) is a normal radical extension of \(F\) containing \(F_1\text{.}\) Continuing in this manner, we obtain</p>
+<div class="displaymath">
+\begin{equation*}
+F = K_0 \subset K_1 \subset K_2 \subset \cdots \subset K_r = K
+\end{equation*}
+</div>
+<p data-braille="continuation">such that \(K_i\) is a normal extension of \(K_{i-1}\) and \(K_i \supseteq F_i\) for \(i = 1, 2, \ldots, r\text{.}\)</p></article><p id="oZW">We will now prove the main theorem about solvability by radicals.</p>
+<article class="theorem theorem-like" id="TNe"><h6 class="heading">
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">10.37</span><span class="period">.</span>
+</h6>
+<p id="wqa">Let \(f(x)\) be in \(F[x]\text{,}\) where \(\chr F = 0\text{.}\) If \(f(x)\) is solvable by radicals, then the Galois group of \(f(x)\) over \(F\) is solvable.</p></article><article class="proof" id="wEi"><h6 class="heading"><span class="type">Proof<span class="period">.</span></span></h6>
+<p id="Tdx">Since \(f(x)\) is solvable by radicals there exists an extension \(E\) of \(F\) by radicals \(F = F_0 \subset F_1 \subset \cdots \subset F_n = E\text{.}\) By  <a class="xref" data-knowl="./knowl/lemma-radical-extension.html" title="Lemma 10.36">Lemma 10.36</a>, we can assume that \(E\) is a splitting field \(f(x)\) and \(F_i\) is normal over \(F_{i - 1}\text{.}\) By the Fundamental Theorem of Galois Theory, \(G(E/F_i)\) is a normal subgroup of \(G(E/F_{i - 1})\text{.}\) Therefore, we have a subnormal series of subgroups of \(G(E/F)\text{:}\)</p>
+<div class="displaymath">
+\begin{equation*}
+\{ \identity \} \subset G(E/F_{n - 1}) \subset \cdots \subset G(E/F_1) \subset G(E/F)\text{.}
+\end{equation*}
+</div>
+<p data-braille="continuation">Again by the Fundamental Theorem of Galois Theory, we know that</p>
+<div class="displaymath">
+\begin{equation*}
+G(E/F_{i - 1})/G(E/F_i) \cong G(F_i/F_{i - 1})\text{.}
+\end{equation*}
+</div>
+<p data-braille="continuation">By <a class="xref" data-knowl="./knowl/lemma-xn-a-solvable.html" title="Lemma 10.35">Lemma 10.35</a>, \(G(F_i/F_{i - 1})\) is solvable; hence, \(G(E/F)\) is also solvable.</p></article><p id="Vhf">The converse of <a class="xref" data-knowl="./knowl/theorem-solvable-by-radicals.html" title="Theorem 10.37">Theorem 10.37</a> is also true. For a proof, see any of the references at the end of this chapter.</p></section><section class="subsection" id="FJz"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">10.5.2</span> <span class="title">Insolvability of the Quintic</span>
+</h3>
+<p id="Boo">We are now in a position to find a fifth-degree polynomial that is not solvable by radicals. We merely need to find a polynomial whose Galois group is \(S_5\text{.}\) We begin by proving a lemma.</p>
+<article class="lemma theorem-like" id="spO"><h6 class="heading">
+<span class="type">Lemma</span><span class="space"> </span><span class="codenumber">10.38</span><span class="period">.</span>
+</h6>
+<p id="RYe">If \(p\) is prime, then any subgroup of \(S_p\) that contains a transposition and a cycle of length \(p\) must be all of \(S_p\text{.}\)</p></article><article class="proof" id="mfd"><h6 class="heading"><span class="type">Proof<span class="period">.</span></span></h6>
+<p id="zkG">Let \(G\) be a subgroup of \(S_p\) that contains a transposition \(\sigma\) and \(\tau\) a cycle of length \(p\text{.}\) We may assume that \(\sigma = (1 2)\text{.}\) The order of \(\tau\) is \(p\) and \(\tau^n\) must be a cycle of length \(p\) for \(1 \leq n \lt p\text{.}\) Therefore, we may assume that \(\mu = \tau^n = (1 2 i_3 \ldots i_p)\) for some \(n\text{,}\) where \(1 \leq n \lt p\) (see <a class="xref" data-knowl="./knowl/exercise-permute-order-product-cycles.html" title="Exercise 2.7.94">Exercise 2.7.94</a>). Noting that \((1 2)(12 i_3\ldots i_p) = (2 i_3\ldots i_p)\) and \((2i_3 \ldots i_p)^k(12)(2i_3 \ldots i_p)^{-k} = (1i_k)\text{,}\) we can obtain all the transpositions of the form \((1n)\) for \(1 \leq n \lt p\text{.}\) However, these transpositions generate all transpositions in \(S_p\text{,}\) since \((1j)(1 i)(1 j) = (i j)\text{.}\) The transpositions generate \(S_p\text{.}\)</p></article><figure class="figure figure-like" id="hvx"><div class="image-box" style="width: 70%; margin-left: 15%; margin-right: 15%;"><img src="images/galois-quintic.svg" role="img" style="width: 100%; height: auto;" alt="" onerror="this.src='images/galois-quintic.png';this.onerror=null;"></div>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">10.39<span class="period">.</span></span><span class="space"> </span>The graph of \(f(x) = x^5 - 6 x^3 - 27 x - 3\)</figcaption></figure><article class="example example-like" id="YwX"><h6 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">10.40</span><span class="period">.</span>
+</h6>
+<p id="zUA">We will show that \(f(x) = x^5 - 6 x^3 - 27 x - 3 \in {\mathbb Q}[x]\) is not solvable. We claim that the Galois group of \(f(x)\) over \({\mathbb Q}\) is \(S_5\text{.}\) By Eisenstein's Criterion, \(f(x)\) is irreducible and, therefore, must be separable. The derivative of \(f(x)\) is \(f'(x) = 5 x^4 - 18 x^2 - 27\text{;}\) hence, setting \(f'(x) = 0\) and solving, we find that the only real roots of \(f'(x)\) are</p>
+<div class="displaymath">
+\begin{equation*}
+x = \pm \sqrt{ \frac{6 \sqrt{6} + 9 }{5} }\text{.}
+\end{equation*}
+</div>
+<p data-braille="continuation">Therefore, \(f(x)\) can have at most one maximum and one minimum. It is easy to show that \(f(x)\) changes sign between \(-3\) and \(-2\text{,}\) between \(-2\) and \(0\text{,}\) and once again between \(0\) and \(4\) (<a class="xref" data-knowl="./knowl/figure-galois-4.html" title="Figure 10.39">Figure 10.39</a>). Therefore, \(f(x)\) has exactly three distinct real roots. The remaining two roots of \(f(x)\) must be complex conjugates. Let \(K\) be the splitting field of \(f(x)\text{.}\) Since \(f(x)\) has five distinct roots in \(K\) and every automorphism of \(K\) fixing \({\mathbb Q}\) is determined by the way it permutes the roots of \(f(x)\text{,}\) we know that \(G(K/{\mathbb Q})\) is a subgroup of \(S_5\text{.}\) Since \(f\) is irreducible, there is an element in \(\sigma \in G(K/{\mathbb Q})\) such that \(\sigma(a) = b\) for two roots \(a\) and \(b\) of \(f(x)\text{.}\) The automorphism of \({\mathbb C}\) that takes \(a + bi \mapsto a - bi\) leaves the real roots fixed and interchanges the complex roots; consequently, \(G(K/{\mathbb Q} )\) contains a transpostion. If \(\alpha\) is one of the real roots of \(f(x)\text{,}\) then \([\mathbb Q(\alpha) : \mathbb Q] = 5\text{.}\) Since \(\mathbb Q(\alpha)\) is a subfield of \(K\text{,}\) it must be the case the \([K : \mathbb Q]\) is divisible by 5. Since \([K : \mathbb Q] = |G(K/{\mathbb Q})|\) and \(G(K/{\mathbb Q}) \subset S_5\text{,}\) we know that \(G(K/{\mathbb Q})\) contains a cycle of length \(5\text{.}\) By <a class="xref" data-knowl="./knowl/lemma-sn-generating.html" title="Lemma 10.38">Lemma 10.38</a>, \(S_5\) is generated by a transposition and an element of order \(5\text{;}\) therefore, \(G(K/{\mathbb Q} )\) must be all of \(S_5\text{.}\) By <a class="xref" data-knowl="./knowl/theorem-an-simple.html" title="Theorem 10.33">Theorem 10.33</a>, \(S_5\) is not solvable. Consequently, \(f(x)\) cannot be solved by radicals.</p></article></section><section class="subsection" id="lQI"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">10.5.3</span> <span class="title">The Fundamental Theorem of Algebra</span>
+</h3>
+<p id="NCG">It seems fitting that the last theorem that we will state and prove is the Fundamental Theorem of Algebra. This theorem was first proven by Gauss in his doctoral thesis. Prior to Gauss's proof, mathematicians suspected that there might exist polynomials over the real and complex numbers having no solutions. The Fundamental Theorem of Algebra states that every polynomial over the complex numbers factors into distinct linear factors.</p>
+<article class="theorem theorem-like" id="EEg"><h6 class="heading">
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">10.41</span><span class="period">.</span><span class="space"> </span><span class="title">Fundamental Theorem of Algebra.</span>
+</h6>
+<p id="cxj">The field of complex numbers is algebraically closed; that is, every polynomial in \({\mathbb C}[x]\) has a root in \({\mathbb C}\text{.}\)</p></article><article class="proof" id="cLr"><h6 class="heading"><span class="type">Proof<span class="period">.</span></span></h6>
+<p id="frP">Suppose that \(E\) is a proper finite field extension of the complex numbers. Since any finite extension of a field of characteristic zero is a simple extension, there exists an \(\alpha \in E\) such that \(E = {\mathbb C}( \alpha )\) with \(\alpha\) the root of an irreducible polynomial \(f(x)\) in \({\mathbb C}[x]\text{.}\) The splitting field \(L\) of \(f(x)\) is a finite normal separable extension of \({\mathbb C}\) that contains \(E\text{.}\) We must show that it is impossible for \(L\) to be a proper extension of \({\mathbb C}\text{.}\)</p>
+<p id="LyY">Suppose that \(L\) is a proper extension of \({\mathbb C}\text{.}\) Since \(L\) is the splitting field of \(f(x)(x^2 + 1)\) over \({\mathbb R}\text{,}\) \(L\) is a finite normal separable extension of \({\mathbb R}\text{.}\) Let \(K\) be the fixed field of a Sylow 2-subgroup \(G\) of \(G(L/{\mathbb R})\text{.}\) Then \(L \supset K \supset {\mathbb R}\) and \(|G( L / K )| =[L:K]\text{.}\) Since \([L : {\mathbb R}] = [L:K][K:{\mathbb R}]\text{,}\) we know that \([K:{\mathbb R}]\) must be odd. Consequently, \(K = {\mathbb R}(\beta)\) with \(\beta\) having a minimal polynomial \(f(x)\) of odd degree. Therefore, \(K = {\mathbb R}\text{.}\)</p>
+<p id="rGh">We now know that \(G(L/{\mathbb R})\) must be a 2-group. It follows that \(G(L / {\mathbb C})\) is a \(2\)-group. We have assumed that \(L \neq {\mathbb C}\text{;}\) therefore, \(|G(L / {\mathbb C})| \geq 2\text{.}\) By the first Sylow Theorem and the Fundamental Theorem of Galois Theory, there exists a subgroup \(G\) of \(G(L/{\mathbb C})\) of index 2 and a field \(E\) fixed elementwise by \(G\text{.}\) Then \([E:{\mathbb C}] = 2\) and there exists an element \(\gamma \in E\) with minimal polynomial \(x^2 + b x + c\) in \({\mathbb C}[x]\text{.}\) This polynomial has roots \(( - b \pm \sqrt{b^2 - 4c}\, ) / 2\) that are in \({\mathbb C}\text{,}\) since \(b^2 - 4 c\) is in \({\mathbb C}\text{.}\) This is impossible; hence, \(L = {\mathbb C}\text{.}\)</p></article><p id="tJP">Although our proof was strictly algebraic, we were forced to rely on results from calculus. It is necessary to assume the completeness axiom from analysis to show that every polynomial of odd degree has a real root and that every positive real number has a square root. It seems that there is no possible way to avoid this difficulty and formulate a purely algebraic argument. It is somewhat amazing that there are several elegant proofs of the Fundamental Theorem of Algebra that use complex analysis. It is also interesting to note that we can obtain a proof of such an important theorem from two very different fields of mathematics.</p></section><section class="exercises" id="vpi"><h3 class="heading hide-type">
+<span class="type">Exercises</span> <span class="codenumber">10.5.4</span> <span class="title">Collected Homework</span>
+</h3>
+<article class="exercise exercise-like" id="hlD"><h6 class="heading"><span class="codenumber">1<span class="period">.</span></span></h6>
+<p id="CTH">Previously, we saw that the field \(E = \Q(\sqrt[4]{3},i)\) was the splitting field for the polynomial \(x^4-3\) and that the Galois group \(G(E/\Q)\) was isomorphic to \(D_4\text{.}\)  Now let's explore the solvability of the Galois group and whether the polynomial \(x^4 - 3\) is solvable by radicals.</p>
+<ol class="lower-alpha">
+<li id="FOn"><p id="eqX">Verify that \(D_4\) (i.e., the Galois group) is solvable.  You have done everything you need for this already, you just need to put the pieces together with the definition of <em class="emphasis">solvable</em>.</p></li>
+<li id="lVw"><p id="Kyg">Pick a subnormal series that witnesses that \(D_4\) is solvable, and look at the corresponding series of subfields of \(E\) (i.e., the subfields that are fixfields for the subgroups).  Verify that each of these are <em class="emphasis">normal</em> field extensions (i.e., that they are themselves splitting fields).</p></li>
+<li id="ScF"><p id="qFp">Let \(F\) be one of the fixfields from the previous part.  What are the elements of the Galois group \(G(F/\Q)\) and how do these relate to the Galois groups \(G(E/\Q)\) and \(G(E/F)\text{?}\)  Illustrate the connection using example elements.</p></li>
+<li id="yjO"><p id="WMy">Pick a non-normal subgroup of \(D_4\) and consider its fixfield.  Demonstrate that the fixfield is not a normal extension.</p></li>
+</ol></article><article class="exercise exercise-like" id="NsM"><h6 class="heading"><span class="codenumber">2<span class="period">.</span></span></h6>
+<p id="jaQ">Find a degree 5 polynomial whose Galois group is isomorphic to \(S_5\text{.}\)  Explain how you know your example works and what the significance is.  Your example should be different from the one we discuss in class.</p></article><article class="exercise exercise-like" id="tzV"><h6 class="heading"><span class="codenumber">3<span class="period">.</span></span></h6>
+<p id="PhZ">Bonus (worth 5000 points): Express the roots of the polynomial you found in the previous question in terms of rational numbers, field, operations, and radicals (square roots, cube roots, etc).</p></article></section></section></div></main>
+</div>
+<script src="https://unpkg.com/prismjs@v1.22.0/components/prism-core.min.js"></script><script src="https://unpkg.com/prismjs@v1.22.0/plugins/autoloader/prism-autoloader.min.js"></script>
+</body>
+</html>

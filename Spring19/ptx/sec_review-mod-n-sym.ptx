@@ -1,0 +1,323 @@
+<?xml version="1.0"?>
+<!-- This file is part of the book                    -->
+<!--                                                  -->
+<!-- Abstract Algebra: Theory and Applications        -->
+<!--                                                  -->
+<!-- Text: Copyright (C) 1997-2018  Thomas W. Judson  -->
+<!-- Sage: Copyright (C) 2010-2018  Robert A. Beezer  -->
+<!-- See the file COPYING for copying conditions.     -->
+<!-- This file is part of the book                    -->
+<!--                                                  -->
+<!-- See the file COPYING for copying conditions.     -->
+
+  <section xmlns:xi="http://www.w3.org/2001/XInclude" xml:id="section-mod-n-sym" permid="nfs">
+    <title>Integer Equivalence Classes and Symmetries</title>
+    <introduction permid="YkP">
+      <p permid="ztX">
+        Let us now investigate some mathematical structures that can be viewed as sets with single operations.
+      </p>
+    </introduction>
+
+    <subsection xml:id="groups-subsection-integers-mod-n" permid="FiW">
+      <title>The Integers mod <m>n</m></title>
+      <p permid="RLW">
+        The integers mod <m>n</m> have become indispensable in the theory and applications of algebra.
+        In mathematics they are used in cryptography, coding theory,
+        and the detection of errors in identification codes.
+      </p>
+
+      <p permid="xTf">
+        We have already seen that two integers <m>a</m> and <m>b</m> are equivalent mod <m>n</m> if <m>n</m> divides <m>a - b</m>.
+        The integers mod <m>n</m> also partition
+        <m>{\mathbb Z}</m> into <m>n</m> different equivalence classes;
+        we will denote the set of these equivalence classes by <m>{\mathbb Z}_n</m>.
+
+        <notation>
+          <usage>\mathbb Z_n</usage>
+          <description>the integers modulo <m>n</m></description>
+        </notation>
+
+        Consider the integers modulo <m>12</m> and the corresponding partition of the integers:
+        <md permid="PBk">
+          <mrow>{[0]} &amp; = \{ \ldots, -12, 0, 12, 24, \ldots \},</mrow>
+          <mrow>{[1]} &amp; = \{ \ldots, -11, 1, 13, 25, \ldots \},</mrow>
+          <mrow>&amp; \vdots</mrow>
+          <mrow>{[11]} &amp; = \{ \ldots, -1, 11, 23, 35, \ldots \}</mrow>
+        </md>.
+        When no confusion can arise,
+        we will use <m>0, 1, \ldots, 11</m> to indicate the equivalence classes  <m>{[0]}, {[1]}, \ldots, {[11]}</m> respectively.
+        We can do arithmetic on <m>{\mathbb Z}_n</m>.
+        For two integers <m>a</m> and <m>b</m>,
+        define addition modulo <m>n</m> to be <m>(a + b) \pmod{n}</m>;
+        that is, the remainder when <m>a + b</m> is divided by <m>n</m>.
+        Similarly, multiplication modulo <m>n</m> is defined as <m>(a  b) \pmod{ n}</m>,
+        the remainder when <m>a  b</m> is divided by <m>n</m>.
+      </p>
+
+      <example xml:id="example-groups-zn-addition" permid="rPl">
+        <p permid="gGz">
+          The following examples illustrate integer arithmetic modulo <m>n</m>:
+          <md permid="vIt">
+            <mrow>7 + 4 &amp; \equiv  1 \pmod{ 5} &amp; 7 \cdot 3 &amp; \equiv 1 \pmod{ 5}</mrow>
+            <mrow>3 + 5 &amp; \equiv  0 \pmod{ 8} &amp; 3 \cdot 5 &amp; \equiv 7 \pmod{ 8}</mrow>
+            <mrow>3 + 4 &amp; \equiv 7 \pmod{ 12} &amp; 3 \cdot 4 &amp; \equiv 0 \pmod{ 12}</mrow>
+          </md>.
+          In particular,
+          notice that it is possible that the product of two nonzero numbers modulo <m>n</m> can be equivalent to <m>0</m> modulo <m>n</m>.
+        </p>
+      </example>
+
+      <example xml:id="example-groups-zn-arithmetic-laws" permid="XWu">
+        <p permid="MNI">
+          Most, but not all,
+          of the usual laws of arithmetic hold for addition and multiplication in <m>{\mathbb Z}_n</m>.
+          For instance,
+          it is not necessarily true that there is a multiplicative inverse.
+          Consider the multiplication table for
+          <m>{\mathbb Z}_8</m> in <xref ref="table-z8-mult"/>.
+          Notice that <m>2</m>, <m>4</m>,
+          and <m>6</m> do not have multiplicative inverses;
+          that is, for <m>n = 2</m>, <m>4</m>, or <m>6</m>,
+          there is no integer <m>k</m> such that <m>k n \equiv 1 \pmod{ 8}</m>.
+        </p>
+
+        <table xml:id="table-z8-mult" permid="PPF">
+            <!-- math table -->
+          <caption>Multiplication table for <m>{\mathbb Z_8}</m></caption>
+          <p permid="sUR">
+            <me permid="bPC">
+              \begin{array}{c|cccccccc}
+              \cdot &amp; 0 &amp; 1 &amp; 2 &amp; 3 &amp; 4 &amp; 5 &amp; 6 &amp; 7 \\
+              \hline
+              0       &amp; 0 &amp; 0 &amp; 0 &amp; 0 &amp; 0 &amp; 0 &amp; 0 &amp; 0 \\
+              1       &amp; 0 &amp; 1 &amp; 2 &amp; 3 &amp; 4 &amp; 5 &amp; 6 &amp; 7 \\
+              2       &amp; 0 &amp; 2 &amp; 4 &amp; 6 &amp; 0 &amp; 2 &amp; 4 &amp; 6 \\
+              3       &amp; 0 &amp; 3 &amp; 6 &amp; 1 &amp; 4 &amp; 7 &amp; 2 &amp; 5 \\
+              4       &amp; 0 &amp; 4 &amp; 0 &amp; 4 &amp; 0 &amp; 4 &amp; 0 &amp; 4 \\
+              5       &amp; 0 &amp; 5 &amp; 2 &amp; 7 &amp; 4 &amp; 1 &amp; 6 &amp; 3 \\
+              6       &amp; 0 &amp; 6 &amp; 4 &amp; 2 &amp; 0 &amp; 6 &amp; 4 &amp; 2 \\
+              7       &amp; 0 &amp; 7 &amp; 6 &amp; 5 &amp; 4 &amp; 3 &amp; 2 &amp; 1 
+              \end{array}
+            </me>
+          </p>
+        </table>
+      </example>
+
+
+      <proposition xml:id="proposition-zn-equiv-classes" permid="LIc">
+        <statement>
+          <p permid="DtW">
+            Let <m>{\mathbb Z}_n</m> be the set of equivalence classes of the integers mod <m>n</m> and <m>a,
+            b, c \in {\mathbb Z}_n</m>.
+
+            <ol permid="gdJ">
+              <li permid="VEE">
+                <p permid="CvH">
+                  Addition and multiplication are commutative:
+                  <md permid="HWL">
+                    <mrow>a + b &amp; \equiv b + a \pmod{ n}</mrow>
+                    <mrow>a  b &amp; \equiv b  a \pmod{ n}</mrow>
+                  </md>.
+                </p>
+              </li>
+
+              <li permid="BLN">
+                <p permid="iCQ">
+                  Addition and multiplication are associative:
+                  <md permid="odU">
+                    <mrow>(a + b) + c &amp; \equiv  a + (b + c)\pmod{ n}</mrow>
+                    <mrow>(a  b) c &amp; \equiv  a   (b  c) \pmod{ n}</mrow>
+                  </md>.
+                </p>
+              </li>
+
+              <li permid="hSW">
+                <p permid="OJZ">
+                  There are both additive and multiplicative identities:
+                  <md permid="Uld">
+                    <mrow>a + 0  &amp; \equiv  a \pmod{ n}</mrow>
+                    <mrow>a \cdot  1  &amp; \equiv  a \pmod{ n}</mrow>
+                  </md>.
+                </p>
+              </li>
+
+              <li permid="Oaf">
+                <p permid="uRi">
+                  Multiplication distributes over addition:
+                  <me permid="Asm">
+                    a  (b  + c)  \equiv a  b + a  c  \pmod{ n}
+                  </me>.
+                </p>
+              </li>
+
+              <li permid="uho">
+                <p permid="aYr">
+                  For every integer <m>a</m> there is an additive inverse <m>-a</m>:
+                  <me permid="gzv">
+                    a + (-a)  \equiv 0 \pmod{ n}
+                  </me>.
+                </p>
+              </li>
+
+              <li permid="aox">
+                <p permid="HfA">
+                  Let <m>a</m> be a nonzero integer.
+                  Then <m>\gcd(a,n) = 1</m> if and only if there exists a multiplicative inverse <m>b</m> for <m>a \pmod{n}</m>;
+                  that is, a nonzero integer <m>b</m> such that
+                  <me permid="MGE">
+                    a  b  \equiv 1 \pmod{ n}
+                  </me>.
+                </p>
+              </li>
+            </ol>
+          </p>
+        </statement>
+        <todo>RAB: consider cases in proofs for mathBook XML</todo>
+        <todo>See if id/ref works on items in ordered lists</todo>
+
+        <proof permid="QGq">
+          <p permid="VxA">
+            We will prove (1) and (6) and leave the remaining properties to be proven in the exercises.
+          </p>
+
+          <p permid="BEJ">
+            (1) Addition and multiplication are commutative modulo <m>n</m> since the remainder of <m>a + b</m> divided by <m>n</m> is the same as the remainder of <m>b + a</m> divided by <m>n</m>.
+          </p>
+
+          <p permid="hLS">
+            (6) Suppose that <m>\gcd(a, n) = 1</m>.
+            Then there exist integers <m>r</m> and <m>s</m> such that <m>ar + ns = 1</m>.
+            Since <m>ns = 1 - ar</m>,
+            it must be the case that <m>ar \equiv 1 \pmod{n}</m>.
+            Letting <m>b</m> be the equivalence class of <m>r</m>,
+            <m>a b \equiv 1\pmod{n}</m>.
+          </p>
+
+          <p permid="NTb">
+            Conversely, suppose that there exists an integer <m>b</m> such that <m>ab \equiv 1 \pmod{ n}</m>.
+            Then <m>n</m> divides <m>ab -1</m>,
+            so there is an integer <m>k</m> such that <m>ab - nk = 1</m>.
+            Let <m>d = \gcd(a,n)</m>.
+            Since <m>d</m> divides <m>ab - nk</m>,
+            <m>d</m> must also divide <m>1</m>; hence, <m>d = 1</m>.
+          </p>
+        </proof>
+      </proposition>
+    </subsection>
+
+    <subsection xml:id="groups-subsection-symmetries" permid="lqf">
+      <title>Symmetries</title>
+            <!-- Symmetries of a rectangle  Replaced diagram with a tikz figure - TWJ 5/4/2010 -->
+      <figure xml:id="figure-groups-rectangle" permid="iKh">
+        <caption>Rigid motions of a rectangle</caption>
+        <image xml:id="groups-rectangle" permid="DBn">
+
+            <latex-image>
+                <xi:include href="tikz/groups-rectangle.tex" parse="text"/>
+            </latex-image>
+        </image>
+
+      </figure>
+
+      <p permid="eao">
+        A <term>symmetry</term> of a geometric figure is a rearrangement of the figure preserving the arrangement of its sides and vertices as well as its distances and angles.
+        A map from the plane to itself preserving the symmetry of an object is called a
+        <term>rigid motion</term>.
+            <idx><h>Rigid motion</h></idx>
+        For example,
+        if we look at the rectangle in <xref ref="figure-groups-rectangle"/>,
+        it is easy to see that a rotation of <m>180^{\circ}</m> or
+        <m>360^{\circ}</m> returns a rectangle in the plane with the same orientation as the original rectangle and the same relationship among the vertices.
+        A reflection of the rectangle across either the vertical axis or the horizontal axis can also be seen to be a symmetry.
+        However, a <m>90^{\circ}</m> rotation in either direction cannot be a symmetry unless the rectangle is a square.
+      </p>
+            <!-- Replaced diagram with a tikz figure - TWJ 5/5/2010 -->
+      <figure xml:id="figure-s3-symmetry" permid="ORq">
+        <caption>Symmetries of a triangle</caption>
+        <image xml:id="groups-s3-symmetry" permid="jIw">
+
+            <latex-image>
+                <xi:include href="tikz/groups-s3-symmetry.tex" parse="text"/>
+            </latex-image>
+        </image>
+
+      </figure>
+
+      <p permid="Khx">
+        Let us find the symmetries of the equilateral triangle <m>\bigtriangleup ABC</m>.
+        To find a symmetry of <m>\bigtriangleup ABC</m>,
+        we must first examine the permutations of the vertices <m>A</m>,
+        <m>B</m>,
+        and <m>C</m> and then ask if a permutation extends to a symmetry of the triangle.
+        Recall that a <term>permutation</term>
+        of a set <m>S</m> is a one-to-one and onto map <m>\pi :S \rightarrow S</m>.
+        The three vertices have <m>3! = 6</m> permutations,
+        so the triangle has at most six symmetries.
+        To see that there are six permutations,
+        observe there are three different possibilities for the first vertex,
+        and two for the second,
+        and the remaining vertex is determined by the placement of the first two.
+        So we have <m>3 \cdot 2 \cdot 1 = 3! = 6</m> different arrangements.
+        To denote the permutation of the vertices of an equilateral triangle that sends <m>A</m> to <m>B</m>,
+        <m>B</m> to <m>C</m>, and <m>C</m> to <m>A</m>, we write the array
+        <me permid="sNN">
+          \begin{pmatrix}
+          A &amp; B &amp; C \\
+          B &amp; C &amp; A
+          \end{pmatrix}
+        </me>.
+        Notice that this particular permutation corresponds to the rigid motion of rotating the triangle by
+        <m>120^{\circ}</m> in a clockwise direction.
+        In fact, every permutation gives rise to a symmetry of the triangle.
+        All of these symmetries are shown in <xref ref="figure-s3-symmetry"/>.
+      </p>
+
+      <p permid="qoG">
+        A natural question to ask is what happens if one motion of the triangle
+        <m>\bigtriangleup ABC</m> is followed by another.
+        Which symmetry is <m>\mu_1 \rho_1</m>;
+        that is, what happens when we do the permutation <m>\rho_1</m> and then the permutation <m>\mu_1</m>? 
+        <em>Remember that we are composing functions here.
+        Although we usually multiply left to right,
+        we compose functions right to left.</em> We have
+        <md permid="YUW">
+          <mrow>(\mu_1 \rho_1)(A) &amp; = \mu_1( \rho_1( A ) ) = \mu_1( B ) = C</mrow>
+          <mrow>(\mu_1 \rho_1)(B) &amp; = \mu_1( \rho_1( B ) ) = \mu_1( C ) = B</mrow>
+          <mrow>(\mu_1 \rho_1)(C) &amp; = \mu_1( \rho_1( C ) ) = \mu_1( A ) = A</mrow>
+        </md>.
+        This is the same symmetry as <m>\mu_2</m>.
+        Suppose we do these motions in the opposite order,
+        <m>\rho_1</m> then <m>\mu_1</m>.
+        It is easy to determine that this is the same as the symmetry <m>\mu_3</m>;
+        hence, <m>\rho_1 \mu_1 \neq \mu_1 \rho_1</m>.
+        A multiplication table for the symmetries of an equilateral triangle
+        <m>\bigtriangleup ABC</m> is given in <xref ref="table-s3"/>.
+      </p>
+
+      <p permid="WvP">
+        Notice that in the multiplication table for the symmetries of an equilateral triangle,
+        for every motion of the triangle <m>\alpha</m> there is another motion <m>\beta</m> such that <m>\alpha \beta = \identity</m>;
+        that is, for every motion there is another motion that takes the triangle back to its original orientation.
+      </p>
+
+      <table xml:id="table-s3" permid="osp">
+            <!-- math table -->
+        <caption>Symmetries of an equilateral triangle</caption>
+        <p permid="CCY">
+          <me permid="Fcf">
+            \begin{array}{c|cccccc}
+            \circ  &amp; \identity     &amp; \rho_1 &amp; \rho_2 &amp; \mu_1 &amp; \mu_2 &amp; \mu_3 \\
+            \hline
+            \identity     &amp; \identity     &amp; \rho_1 &amp; \rho_2 &amp; \mu_1 &amp; \mu_2 &amp; \mu_3 \\
+            \rho_1 &amp; \rho_1 &amp; \rho_2 &amp; \identity     &amp; \mu_3 &amp; \mu_1 &amp; \mu_2 \\
+            \rho_2 &amp; \rho_2 &amp; \identity     &amp; \rho_1 &amp; \mu_2 &amp; \mu_3 &amp; \mu_1 \\
+            \mu_1  &amp; \mu_1  &amp; \mu_2  &amp; \mu_3  &amp; \identity    &amp; \rho_1&amp; \rho_2\\
+            \mu_2  &amp; \mu_2  &amp; \mu_3  &amp; \mu_1  &amp; \rho_2 &amp; \identity    &amp; \rho_1\\
+            \mu_3  &amp; \mu_3  &amp; \mu_1  &amp; \mu_2  &amp; \rho_1 &amp; \rho_2&amp; \identity
+            \end{array}
+          </me>
+        </p>
+      </table>
+    </subsection>
+
+  </section>

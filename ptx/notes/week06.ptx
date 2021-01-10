@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<section xml:id="notes-week6" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>Week 6: February 17-21</title>
+  <subsection xml:id="notes-2-17">
+    <title>Monday: Galois Correspondence</title>
+    
+    <p>
+				Recall that the Galois group of a splitting field <m>K</m> over a base field <m>F</m> is the group of all automorphisms of <m>K</m> that leave <m>F</m> fixed. These automorphisms are determined by where they send the roots of a (really any) polynomial <m>p(x) \in F[x]</m> that has <m>K</m> as its splitting field: roots of an irreducible polynomial must be sent to other roots of the same irreducible polynomial. So we can determine quite a bit about the splitting field, polynomials that split in the field, and the Galois group using the other two of these to say something about the third.
+    </p>
+
+    <p>
+				Today, let’s look at what can happen in <em>subgroups</em> of the Galois group.
+    </p>
+
+    <p>
+      <ul>
+        <li>
+          <p>
+				Start with a familiar example. <m>K = \mathbb Q(\sqrt{3}, \sqrt{5}) = \mathbb Q(\sqrt{3}+\sqrt{5})</m> has Galois group <m>\mathbb Z_2\times \mathbb Z_2</m>. We can list out the automorphisms exactly, but let’s call them <m>\varepsilon</m>,            <m>\alpha</m>,            <m>\beta</m> and <m>\gamma</m>.
+          </p>
+        </li>
+
+        <li>
+          <p>
+				We can think of <m>\varepsilon = (0,0)</m>,            <m>\alpha = (1,0)</m>, etc. where a zero means we send <m>\sqrt{3}</m> or <m>\sqrt{5}</m> to itself, a 1 means we sent it to its negative.
+          </p>
+        </li>
+
+        <li>
+          <p>
+				What do the subgroups look like? There are 5 subgroups: the two trivial subgroups and the subgroups <m>\{\varepsilon, \alpha\}</m>,            <m>\{\varepsilon, \beta\}</m>, and <m>\{\varepsilon, \gamma\}</m>. Draw the lattice of subgroups.
+          </p>
+        </li>
+
+        <li>
+          <p>
+				Look at <m>H = \{\varepsilon, \alpha\}</m>, where <m>\alpha</m> sends <m>\sqrt{3}</m> to <m>-\sqrt{3}</m> and <m>\sqrt{5} \mapsto \sqrt{5}</m>. Note that all (both) the automorphism of <m>K</m> here fix every element in <m>\mathbb Q(\sqrt{5})</m>.
+          </p>
+        </li>
+
+        <li>
+          <p>
+				We call <m>\mathbb Q(\sqrt{5})</m> the fixed field of the subgroup <m>H</m>. For short, call it the <em>fixfield</em> of <m>H</m>. Will every subgroup of <m>G = G(K/\mathbb Q)</m> have a fixfield?
+          </p>
+        </li>
+
+        <li>
+          <p>
+				What about the other direction? Suppose you have a subfield <m>E</m> of <m>K</m> contained in <m>\mathbb Q</m> (an <em>intermediate field</em>). Of course we can consider the Galois group <m>G(K/E)</m>, the set of all automorphisms of <m>K</m> that fix <m>E</m>. Try this with <m>\mathbb Q(\sqrt{3})</m>. You get a subgroup of <m>G</m>, which will will call the <em>fixer</em> of <m>E</m>. Does every intermediate field have a fixer?
+          </p>
+        </li>
+
+        <li>
+          <p>
+				There is a very strong relationship between the fixfields of subgroups of <m>G</m> and fixers of intermeidate fields. Every subgroup has a fixfield, and the fixer of the fixfield is the subgroup. Every intermdiate field has a fixer, and the fixfield of the fixer is the intermediate field!
+          </p>
+        </li>
+
+        <li>
+          <p>
+				Note that so far we have thought of the intermediate fields in our example as just <m>\mathbb Q(\sqrt{3})</m> and <m>\mathbb Q(\sqrt{5})</m>. But since there are three intermediate subgroups, there must be three intermediate fields. Can we find the last fixfield? It’s <m>\mathbb Q(\sqrt{15})</m>.
+          </p>
+        </li>
+
+        <li>
+          <p>
+				There is more! What can we say about the degree of extensions in the field lattice and the size of the subgroups? Well, the size of a subgroup <m>H</m> of <m>G</m> will be equal to <m>[K:I]</m>, where <m>I</m> is the fixfield of <m>H</m>. Note that this really shows that the lattice of subgroups matches up with the lattice of intermediate fields, just flipped upside down.
+          </p>
+        </li>
+
+      </ul>
+    </p>
+</subsection>
+</section>

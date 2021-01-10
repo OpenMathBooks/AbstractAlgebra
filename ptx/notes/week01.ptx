@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<section xml:id="notes-week1" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>Week 1: Jan 13-17</title>
+  
+  <subsection xml:id="notes-1-13">
+    <title>Monday, January 13</title>
+      <p>
+        Today we introduce the course, including both logistics of how the course will run, and the content of the course through an activity about extension fields.
+      </p>
+
+      <p>
+        First, some notes on the syllabus:
+        <ul>
+          <li>
+            <p>
+              Textbook: a modified version of my Judson's abstract algebra book.  The book is free online (link in Canvas).
+            </p>
+          </li>
+          <li>
+            <p>
+              Quizzes, homework, exams, and project.  
+              <ul>
+                <li>
+                  <p>
+                    There will be in-class quizzes (occasional) and online reading quizzes, through Canvas.
+                  </p>
+                </li>
+                <li>
+                  <p>
+                    Daily homework (1-2 problems).  Expect to try them and resubmit for full credit.
+                  </p>
+                  <p>
+                    I encourage you to type homework using LaTeX or markdown.  See link to blog post.
+                  </p>
+                </li>
+                <li>
+                  <p>
+                    The exams will have a take-home and in-class portion.  Announce tentative dates listed on syllabus.  The final is cummulative, but a take-home
+                  </p>
+                </li>
+                <li>
+                  <p>
+                    There is a group project: 2-3 students per group.  We will work throughout the semester on it; you will present during the final exam meeting and submit a short paper on the topic.
+                  </p>
+                </li>
+              </ul>
+            </p>
+          </li>
+          <li>
+            <p>
+              Classroom policies: participation, attendance, makeups, don't be rude, don't cheat, disability resources, other resources.
+            </p>
+          </li>
+        </ul>
+      </p>
+
+  <paragraphs>
+    <title>Introduction to Field Theory</title>
+    <p>
+      The goal today is to work through a problem typical of what we will try to do this semester.  A lot of this should be review, but it is not easy review.  
+    </p>
+
+    <p>
+      Work in groups on <xref ref="ws_fields-intro"/>.  
+    </p>
+
+    <p>
+      For next class, read section 1.1.  Next time you will work together to remind each other what you learned last semester.
+    </p>
+  </paragraphs>
+
+  </subsection>
+
+
+  <subsection xml:id="notes-1-15">
+    <title>Wednesday, January 15</title>
+    <p>
+      Today you will work on an <xref ref="ws_rings-review1">activity</xref> to review rings, ideals, and quoteint rings. 
+    </p>
+  </subsection>
+
+  <subsection xml:id="notes-1-17">
+    <title>Friday, January 17</title>
+    <p>
+      We continue our review with an <xref ref="ws_rings-review2">activity</xref> to review the Euclidean algorithm and Bezout's lemma. 
+    </p>
+  </subsection>
+
+
+</section>

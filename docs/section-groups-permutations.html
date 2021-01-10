@@ -1,0 +1,856 @@
+<!DOCTYPE html>
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*       on 2021-01-10T15:15:22-07:00       *-->
+<!--*   A recent stable commit (2020-08-09):   *-->
+<!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<html lang="en-US">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>AATA Permutation Groups</title>
+<meta name="Keywords" content="Authored in PreTeXt">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script src="https://sagecell.sagemath.org/embedded_sagecell.js"></script><script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [['\\(','\\)']]
+    },
+    asciimath2jax: {
+        ignoreClass: ".*",
+        processClass: "has_am"
+    },
+    jax: ["input/AsciiMath"],
+    extensions: ["asciimath2jax.js"],
+    TeX: {
+        extensions: ["extpfeil.js", "autobold.js", "https://pretextbook.org/js/lib/mathjaxknowl.js", "AMScd.js", ],
+        // scrolling to fragment identifiers is controlled by other Javascript
+        positionToHash: false,
+        equationNumbers: { autoNumber: "none", useLabelIds: true, },
+        TagSide: "right",
+        TagIndent: ".8em",
+    },
+    // HTML-CSS output Jax to be dropped for MathJax 3.0
+    "HTML-CSS": {
+        scale: 88,
+        mtextFontInherit: true,
+    },
+    CommonHTML: {
+        scale: 88,
+        mtextFontInherit: true,
+    },
+});
+</script><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS_CHTML-full"></script><link href="https://unpkg.com/prismjs@v1.22.0/themes/prism.css" rel="stylesheet">
+<script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/jquery.min.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/0.13/pretext.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/0.13/pretext_add_on.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script xmlns:svg="http://www.w3.org/2000/svg">sagecellEvalName='Evaluate (Sage)';
+</script><link xmlns:svg="http://www.w3.org/2000/svg" href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://fonts.googleapis.com/css?family=Inconsolata:400,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/pretext.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/pretext_add_on.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/banner_default.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/toc_default.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/knowls_default.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/style_default.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/colors_default.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/setcolors.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="custom-styles.css">
+<!-- 2019-10-12: Temporary - CSS file for experiments with styling --><link xmlns:svg="http://www.w3.org/2000/svg" href="developer.css" rel="stylesheet" type="text/css">
+</head>
+<body id="judson-AATA" class="mathbook-book has-toc has-sidebar-left">
+<a class="assistive" href="#content">Skip to main content</a><div xmlns:svg="http://www.w3.org/2000/svg" class="hidden-content" style="display:none">\(\newcommand{\identity}{\mathrm{id}}
+\newcommand{\notdivide}{\nmid}
+\newcommand{\notsubset}{\not\subset}
+\newcommand{\lcm}{\operatorname{lcm}}
+\newcommand{\gf}{\operatorname{GF}}
+\newcommand{\inn}{\operatorname{Inn}}
+\newcommand{\aut}{\operatorname{Aut}}
+\newcommand{\Hom}{\operatorname{Hom}}
+\newcommand{\cis}{\operatorname{cis}}
+\newcommand{\chr}{\operatorname{char}}
+\newcommand{\Null}{\operatorname{Null}}
+\newcommand{\transpose}{\text{t}}
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\Q}{\mathbb{Q}}
+\newcommand{\R}{\mathbb{R}}
+\def\C{\mathbb{C}}
+\newcommand{\st}{:}
+\newcommand{\inv}{^{-1}}
+\newcommand{\bC}{\mathbb{C}}
+      \newcommand{\F}{\mathscr{F}}
+      \newcommand{\FR}{\mathscr{F}(\R)}
+      \newcommand{\DR}{\mathscr{D}(\R)}
+      \def\s{\varrho}
+      \def\theterm{Spring 2021}
+      \def\thecourse{MATH 322}
+\newcommand{\lt}{&lt;}
+\newcommand{\gt}{&gt;}
+\newcommand{\amp}{&amp;}
+\)</div>
+<header id="masthead" class="smallbuttons"><div class="banner"><div class="container">
+<a id="logo-link" href="http://abstract.pugetsound.edu" target="_blank"><img src="images/cover_aata_2020.png" alt="Logo image"></a><div class="title-container">
+<h1 class="heading"><a href="aata-toc.html"><span class="title">Abstract Algebra:</span> <span class="subtitle">Theory and Applications, Remixed!</span></a></h1>
+<p class="byline">Thomas W. Judson</p>
+</div>
+</div></div>
+<nav xmlns:svg="http://www.w3.org/2000/svg" id="primary-navbar" class="navbar"><div class="container">
+<div class="navbar-top-buttons">
+<button class="sidebar-left-toggle-button button active" aria-label="Show or hide table of contents sidebar">Contents</button><div class="tree-nav toolbar toolbar-divisor-3">
+<a class="index-button toolbar-item button" href="index-1.html" title="Index">Index</a><span class="threebuttons"><a id="previousbutton" class="previous-button toolbar-item button" href="section-groups-cayley.html" title="Previous">Prev</a><a id="upbutton" class="up-button button toolbar-item" href="groups.html" title="Up">Up</a><a id="nextbutton" class="next-button button toolbar-item" href="section-solvable-groups.html" title="Next">Next</a></span>
+</div>
+</div>
+<div class="navbar-bottom-buttons toolbar toolbar-divisor-4">
+<button class="sidebar-left-toggle-button button toolbar-item active">Contents</button><a class="previous-button toolbar-item button" href="section-groups-cayley.html" title="Previous">Prev</a><a class="up-button button toolbar-item" href="groups.html" title="Up">Up</a><a class="next-button button toolbar-item" href="section-solvable-groups.html" title="Next">Next</a>
+</div>
+</div></nav></header><div class="page">
+<div xmlns:svg="http://www.w3.org/2000/svg" id="sidebar-left" class="sidebar" role="navigation"><div class="sidebar-content">
+<nav id="toc"><ul>
+<li class="link frontmatter">
+<a href="aata.html" data-scroll="Wih"><span class="title">Front Matter</span></a><ul>
+<li><a href="colophon-1.html" data-scroll="colophon-1">Colophon</a></li>
+<li><a href="acknowledgement-1.html" data-scroll="acknowledgement-1">Acknowledgements</a></li>
+<li><a href="preface-1.html" data-scroll="JEk">Preface to the Remixed Version</a></li>
+<li><a href="preface-2.html" data-scroll="Cpq">Original Preface</a></li>
+</ul>
+</li>
+<li class="link part"><a href="part-groups.html" data-scroll="part-groups"><span class="codenumber">I</span> <span class="title">Groups</span></a></li>
+<li class="link">
+<a href="sets.html" data-scroll="xcu"><span class="codenumber">1</span> <span class="title">Preliminaries</span></a><ul>
+<li><a href="section-note-on-proofs.html" data-scroll="yRH">A Short Note on Proofs</a></li>
+<li><a href="section-sets-and-functions.html" data-scroll="eYQ">Sets and Functions</a></li>
+<li><a href="section-equivalence-relations.html" data-scroll="VFe">Equivalence Relations and Partitions</a></li>
+<li><a href="section-math-induction.html" data-scroll="bUT">Mathematical Induction</a></li>
+<li><a href="exercises-sets.html" data-scroll="mDp">Additional Exercises</a></li>
+<li><a href="sets-references.html" data-scroll="ztb">References and Suggested Readings</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="groups.html" data-scroll="ZbN"><span class="codenumber">2</span> <span class="title">Groups</span></a><ul>
+<li><a href="section-mod-n-sym.html" data-scroll="nfs">Integer Equivalence Classes and Symmetries</a></li>
+<li><a href="section-groups-define.html" data-scroll="TmB">Definitions and Examples</a></li>
+<li><a href="section-basic-properties.html" data-scroll="Rxo">Basic Properties of Groups</a></li>
+<li><a href="section-subgroups.html" data-scroll="ztK">Subgroups</a></li>
+<li><a href="cyclic.html" data-scroll="MzR">Cyclic Subgroups</a></li>
+<li><a href="section-permutation-definitions.html" data-scroll="Wyg">Permutation Groups</a></li>
+<li><a href="exercises-groups.html" data-scroll="OCI">Additional Exercises</a></li>
+<li><a href="groups-exercises-detecting-errors.html" data-scroll="uJR">Additional Exercises: Detecting Errors</a></li>
+<li><a href="groups-references.html" data-scroll="muP">References and Suggested Readings</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="cosets.html" data-scroll="Uzy"><span class="codenumber">3</span> <span class="title">Cosets and Factor Groups</span></a><ul>
+<li><a href="section-cosets.html" data-scroll="xMb">Cosets</a></li>
+<li><a href="section-factor-groups.html" data-scroll="avo">Factor Groups and Normal Subgroups</a></li>
+<li><a href="exercises-cosets.html" data-scroll="FqA">Exercises</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="isomorph.html" data-scroll="OUu"><span class="codenumber">4</span> <span class="title">Isomorphisms and Homomorphisms</span></a><ul>
+<li><a href="section-isomorph-definitions.html" data-scroll="Evp">Definition and Examples</a></li>
+<li><a href="section-group-homomorphisms.html" data-scroll="uOI">Group Homomorphisms</a></li>
+<li><a href="section-group-isomorphism-theorems.html" data-scroll="aVR">The Isomorphism Theorems</a></li>
+<li><a href="exercises-isomorph.html" data-scroll="VeC">Additional Exercises</a></li>
+<li><a href="homomorph-exercises-automorphisms.html" data-scroll="Jes">Additional Exercises: Automorphisms</a></li>
+</ul>
+</li>
+<li class="link part"><a href="part-rings-and-fields.html" data-scroll="part-rings-and-fields"><span class="codenumber">II</span> <span class="title">Rings and Fields</span></a></li>
+<li class="link">
+<a href="rings.html" data-scroll="bhz"><span class="codenumber">5</span> <span class="title">Rings</span></a><ul>
+<li><a href="section-rings-definitions.html" data-scroll="kBl">Rings</a></li>
+<li><a href="section-domains-and-fields.html" data-scroll="QIu">Integral Domains and Fields</a></li>
+<li><a href="section-ring-homomorphisms.html" data-scroll="wPD">Ring Homomorphisms and Ideals</a></li>
+<li><a href="section-maximal-prime-ideals.html" data-scroll="cWM">Maximal and Prime Ideals</a></li>
+<li><a href="section-software-application.html" data-scroll="JdV">An Application to Software Design</a></li>
+<li><a href="exercises-rings.html" data-scroll="LYB">Additional Exercises</a></li>
+<li><a href="rings-exercises-programming.html" data-scroll="sfK">Programming Exercise</a></li>
+<li><a href="rings-references.html" data-scroll="JSg">References and Suggested Readings</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="poly.html" data-scroll="tPt"><span class="codenumber">6</span> <span class="title">Polynomials</span></a><ul>
+<li><a href="section-division-algorithm.html" data-scroll="Icc">The Integers</a></li>
+<li><a href="section-poly-rings.html" data-scroll="Djf">Polynomial Rings</a></li>
+<li><a href="section-poly-division-algorithm.html" data-scroll="jqo">The Division Algorithm</a></li>
+<li><a href="section-irreducible-poly.html" data-scroll="Pxx">Irreducible Polynomials</a></li>
+<li><a href="sec-factoring-c-r.html" data-scroll="icb">Factoring over \(\C\) and \(\R\)</a></li>
+<li><a href="exercises-poly.html" data-scroll="eGv">Additional Exercises</a></li>
+<li><a href="practice-euclidean-algorithm.html" data-scroll="BUS">Additional Exercises: The Euclidean Algorithm</a></li>
+<li><a href="poly-exercises-cubics-quartics.html" data-scroll="KNE">Additional Exercises:  Solving the Cubic and Quartic Equations</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="domains.html" data-scroll="HlR"><span class="codenumber">7</span> <span class="title">Integral Domains</span></a><ul>
+<li><a href="section-field-of-fractions.html" data-scroll="cTV">Fields of Fractions</a></li>
+<li><a href="section-factorization-domains.html" data-scroll="Jbe">Factorization in Integral Domains</a></li>
+<li><a href="reading-questions-22.html" data-scroll="drU">Reading Questions</a></li>
+<li><a href="exercises-domains.html" data-scroll="kyu">Exercises</a></li>
+<li><a href="domains-references.html" data-scroll="CJg">References and Suggested Readings</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="fields.html" data-scroll="pNh"><span class="codenumber">8</span> <span class="title">Fields</span></a><ul>
+<li><a href="section-constructions.html" data-scroll="ctw">Geometric Constructions</a></li>
+<li><a href="section-fields-intro.html" data-scroll="GTt">Introduction</a></li>
+<li><a href="section-extension-fields.html" data-scroll="dGQ">Extension Fields</a></li>
+<li><a href="fields-subsection-algebraic-elements.html" data-scroll="acq">Algebraic Elements</a></li>
+<li><a href="section-fields-vectorspaces-review.html" data-scroll="UWY">A Review of Vector Spaces</a></li>
+<li><a href="section-fields-vectorspaces.html" data-scroll="Scs">Extension Fields as Vector Spaces</a></li>
+<li><a href="section-constructions-conc.html" data-scroll="XhK">What's Not Constructible</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="galois.html" data-scroll="hgP"><span class="codenumber">9</span> <span class="title">Galois Theory</span></a><ul>
+<li><a href="section-galois-splitting-fields.html" data-scroll="wmn">Splitting Fields</a></li>
+<li><a href="section-galois-field-automorphisms.html" data-scroll="iWc">Field Automorphisms</a></li>
+<li><a href="section-galois-fund-theorem-galois-theory.html" data-scroll="Pdl">The Fundamental Theorem</a></li>
+</ul>
+</li>
+<li class="link part"><a href="part-more-group-theory.html" data-scroll="part-more-group-theory"><span class="codenumber">III</span> <span class="title">More Group Theory</span></a></li>
+<li class="link">
+<a href="groups.html" data-scroll="nRa"><span class="codenumber">10</span> <span class="title">Some of the Structure of Groups</span></a><ul>
+<li><a href="section-groups-cayley.html" data-scroll="CTu">Isomorphisms and Cayley's Theorem</a></li>
+<li><a href="section-groups-permutations.html" data-scroll="mjE" class="active">Permutation Groups</a></li>
+<li><a href="section-solvable-groups.html" data-scroll="WbU">Solvable Groups</a></li>
+<li><a href="section-simplicity-of-an.html" data-scroll="GCx">The Simplicity of the Alternating Group</a></li>
+<li><a href="section-galois-applications.html" data-scroll="vku">Applications: Galois Groups</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="struct-more.html" data-scroll="YWA"><span class="codenumber">11</span> <span class="title">More of the Structure of Groups</span></a><ul>
+<li><a href="section-groups-order.html" data-scroll="hVk">Cyclic Groups and Orders of Elements</a></li>
+<li><a href="section-groups-lagrange.html" data-scroll="BOb">Lagrange's Theorem and its consequences</a></li>
+<li><a href="section-direct-products.html" data-scroll="kCy">Direct Products</a></li>
+<li><a href="section-finite-abelian-groups.html" data-scroll="pUL">Finite Abelian Groups</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="crypt.html" data-scroll="uCn"><span class="codenumber">12</span> <span class="title">Introduction to Cryptography</span></a><ul>
+<li><a href="section-private-key-crypt.html" data-scroll="Qkr">Private Key Cryptography</a></li>
+<li><a href="section-public-key-crypt.html" data-scroll="wrA">Public Key Cryptography</a></li>
+<li><a href="ws_groups-RSA-lab.html" data-scroll="zaZ">Activity: RSA Cryptography Lab</a></li>
+<li><a href="section-method-of-repeated-squares.html" data-scroll="YOj">The Method of Repeated Squares</a></li>
+<li><a href="exercises-crypt.html" data-scroll="rHH">Exercises</a></li>
+<li><a href="crypt-exercises-additional.html" data-scroll="XOQ">Additional Exercises: Primality and Factoring</a></li>
+<li><a href="crypt-references.html" data-scroll="yqf">References and Suggested Readings</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="actions.html" data-scroll="elJ"><span class="codenumber">13</span> <span class="title">Group Actions</span></a><ul>
+<li><a href="section-groups-acting-on-sets.html" data-scroll="nFv">Groups Acting on Sets</a></li>
+<li><a href="section-class-equation.html" data-scroll="TME">The Class Equation</a></li>
+<li><a href="section-burnsides-counting-theorem.html" data-scroll="zTN">Burnside's Counting Theorem</a></li>
+<li><a href="exercises-actions.html" data-scroll="PcL">Exercises</a></li>
+<li><a href="actions-exercises-programming.html" data-scroll="vjU">Programming Exercise</a></li>
+<li><a href="actions-references.html" data-scroll="VdC">References and Suggested Reading</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="sylow.html" data-scroll="TkO"><span class="codenumber">14</span> <span class="title">The Sylow Theorems</span></a><ul>
+<li><a href="section-sylow-theorems.html" data-scroll="ILJ">The Sylow Theorems</a></li>
+<li><a href="section-sylow-applications.html" data-scroll="oSS">Examples and Applications</a></li>
+<li><a href="reading-questions-23.html" data-scroll="EPk">Reading Questions</a></li>
+<li><a href="exercises-sylow.html" data-scroll="kiZ">Exercises</a></li>
+<li><a href="sylow-exercises-project.html" data-scroll="Qqi">A Project</a></li>
+<li><a href="sylow-references.html" data-scroll="Sgz">References and Suggested Readings</a></li>
+</ul>
+</li>
+<li class="link part"><a href="part-additional.html" data-scroll="part-additional"><span class="codenumber">IV</span> <span class="title">Additional Topics</span></a></li>
+<li class="link">
+<a href="matrix.html" data-scroll="CSk"><span class="codenumber">15</span> <span class="title">Matrix Groups and Symmetry</span></a><ul>
+<li><a href="section-matrix-groups.html" data-scroll="geN">Matrix Groups</a></li>
+<li><a href="section-symmetry.html" data-scroll="MlW">Symmetry</a></li>
+<li><a href="reading-questions-24.html" data-scroll="jhg">Reading Questions</a></li>
+<li><a href="exercises-matrix.html" data-scroll="nJm">Exercises</a></li>
+<li><a href="matrix-references.html" data-scroll="IcT">References and Suggested Readings</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="algcodes.html" data-scroll="jTr"><span class="codenumber">16</span> <span class="title">Algebraic Coding Theory</span></a><ul>
+<li><a href="section-error-detecting-correcting-codes.html" data-scroll="lIE">Error-Detecting and Correcting Codes</a></li>
+<li><a href="section-linear-codes.html" data-scroll="RPN">Linear Codes</a></li>
+<li><a href="section-parity-check.html" data-scroll="xWW">Parity-Check and Generator Matrices</a></li>
+<li><a href="section-efficient-decoding.html" data-scroll="eef">Efficient Decoding</a></li>
+<li><a href="reading-questions-25.html" data-scroll="gmA">Reading Questions</a></li>
+<li><a href="exercises-algcodes.html" data-scroll="NfU">Exercises</a></li>
+<li><a href="algcodes-exercises-programming.html" data-scroll="tnd">Programming Exercises</a></li>
+<li><a href="algcodes-references.html" data-scroll="GJf">References and Suggested Readings</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="finite.html" data-scroll="Gnc"><span class="codenumber">17</span> <span class="title">Finite Fields</span></a><ul>
+<li><a href="section-finite-field.html" data-scroll="jzF">Structure of a Finite Field</a></li>
+<li><a href="section-poly-codes.html" data-scroll="PGO">Polynomial Codes</a></li>
+<li><a href="reading-questions-26.html" data-scroll="RdC">Reading Questions</a></li>
+<li><a href="exercises-finite.html" data-scroll="KWV">Exercises</a></li>
+<li><a href="finite-exercises-bch-codes.html" data-scroll="ree">Additional Exercises: Error Correction for <abbr class="acronym">BCH</abbr> Codes</a></li>
+<li><a href="finite-references.html" data-scroll="Yrk">References and Suggested Readings</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="boolean.html" data-scroll="dAp"><span class="codenumber">18</span> <span class="title">Lattices and Boolean Algebras</span></a><ul>
+<li><a href="section-boolean-lattices.html" data-scroll="Tbk">Lattices</a></li>
+<li><a href="section-boolean-algebras.html" data-scroll="zit">Boolean Algebras</a></li>
+<li><a href="section-algebra-of-circuits.html" data-scroll="fpC">The Algebra of Electrical Circuits</a></li>
+<li><a href="reading-questions-27.html" data-scroll="nQZ">Reading Questions</a></li>
+<li><a href="exercises-boolean.html" data-scroll="uyA">Exercises</a></li>
+<li><a href="boolean-exercises-programming.html" data-scroll="aFJ">Programming Exercises</a></li>
+<li><a href="boolean-references.html" data-scroll="QcR">References and Suggested Readings</a></li>
+</ul>
+</li>
+<li class="link backmatter"><a href="backmatter.html" data-scroll="uDN"><span class="title">Reference</span></a></li>
+<li class="link"><a href="appendix-gfdl.html" data-scroll="gAi"><span class="codenumber">A</span> <span class="title">GNU Free Documentation License</span></a></li>
+<li class="link"><a href="solutions-1.html" data-scroll="aKW"><span class="codenumber">B</span> <span class="title">Hints and Answers to Selected Exercises</span></a></li>
+<li class="link"><a href="appendix-2.html" data-scroll="MHr"><span class="codenumber">C</span> <span class="title">Notation</span></a></li>
+<li class="link"><a href="index-1.html" data-scroll="index-1"><span class="title">Index</span></a></li>
+<li class="link"><a href="colophon-2.html" data-scroll="colophon-2"><span class="title">Colophon</span></a></li>
+</ul></nav><div class="extras"><nav><a class="mathbook-link" href="https://pretextbook.org">Authored in PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" alt="Powered by MathJax"></a></nav></div>
+</div></div>
+<main class="main"><div id="content" class="pretext-content"><section xmlns:svg="http://www.w3.org/2000/svg" class="section" id="mjE"><h2 class="heading hide-type">
+<span class="type">Section</span> <span class="codenumber">10.2</span> <span class="title">Permutation Groups</span>
+</h2>
+<section class="introduction" id="dzM"><p id="CMq">Permutation groups are central to the study of geometric symmetries and to Galois theory, the study of finding solutions of polynomial equations. They also provide abundant examples of nonabelian groups. Plus, as we have just seen, every group is isomorphic to a subgroup of a permutation group.  So let's study them.</p>
+<p id="iTz">In general, the permutations of a set \(X\) form a group we call \(S_X\text{.}\) If \(X\) is a finite set, we can assume \(X=\{ 1, 2, \ldots, n\}\text{.}\) In this case we write \(S_n\) instead of \(S_X\text{.}\)  The following theorem says that \(S_n\) is a group. We call this group the <dfn class="terminology">symmetric group</dfn>  on \(n\) letters.</p>
+<article class="theorem theorem-like" id="YPT"><h6 class="heading">
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">10.3</span><span class="period">.</span>
+</h6>
+<p id="jYS">The symmetric group on \(n\) letters, \(S_n\text{,}\) is a group with \(n!\) elements, where the binary operation is the composition of maps.</p></article><article class="proof" id="JGV"><h6 class="heading"><span class="type">Proof<span class="period">.</span></span></h6>
+<p id="aFg">The identity of \(S_n\) is just the identity map that sends \(1\) to \(1\text{,}\) \(2\) to \(2\text{,}\) \(\ldots\text{,}\) \(n\) to \(n\text{.}\) If \(f : S_n \rightarrow S_n\) is a permutation, then \(f^{-1}\) exists, since \(f\) is one-to-one and onto; hence, every permutation has an inverse. Composition of maps is associative, which makes the group operation associative. We leave the proof that \(|S_n|= n!\) as an exercise.</p></article><p id="PaI">A subgroup of \(S_n\) is called a <dfn class="terminology">permutation group</dfn>. </p>
+<article class="example example-like" id="EXc"><h6 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">10.4</span><span class="period">.</span>
+</h6>
+<p id="hem">Consider the subgroup \(G\) of \(S_5\) consisting of the identity permutation \(\identity\) and the permutations</p>
+<div class="displaymath">
+\begin{align*}
+\sigma
+&amp; =
+\begin{pmatrix}
+1 &amp; 2 &amp; 3 &amp; 4 &amp; 5 \\
+1 &amp; 2 &amp; 3 &amp; 5 &amp; 4
+\end{pmatrix}\\
+\tau
+&amp; =
+\begin{pmatrix}
+1 &amp; 2 &amp; 3 &amp; 4 &amp; 5 \\
+3 &amp; 2 &amp; 1 &amp; 4 &amp; 5
+\end{pmatrix}\\
+\mu
+&amp; =
+\begin{pmatrix}
+1 &amp; 2 &amp; 3 &amp; 4 &amp; 5 \\
+3 &amp; 2 &amp; 1 &amp; 5 &amp; 4
+\end{pmatrix}\text{.}
+\end{align*}
+</div>
+<p data-braille="continuation">The following table tells us how to multiply elements in the permutation group \(G\text{.}\)</p>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:0%;margin-right:0%;"><div class="sbspanel" style="width:100%;justify-content:flex-start;"><div class="displaymath" id="Nlv">
+\begin{equation*}
+\begin{array}{c|cccc}
+\circ &amp; \identity &amp; \sigma &amp; \tau &amp; \mu \\ \hline
+\identity &amp; \identity &amp; \sigma &amp; \tau &amp; \mu \\
+\sigma &amp; \sigma &amp; \identity &amp; \mu &amp; \tau \\
+\tau &amp; \tau &amp; \mu &amp; \identity &amp; \sigma \\
+\mu &amp; \mu &amp; \tau &amp; \sigma &amp; \identity
+\end{array}
+\end{equation*}
+</div></div></div></div></article><article class="remark remark-like" id="Rlu"><h6 class="heading">
+<span class="type">Remark</span><span class="space"> </span><span class="codenumber">10.5</span><span class="period">.</span>
+</h6>
+<p id="qxY">Though it is natural to multiply elements in a group from left to right, functions are composed from right to left. Let \(\sigma\) and \(\tau\) be permutations on a set \(X\text{.}\) To compose \(\sigma\) and \(\tau\) as functions, we calculate \((\sigma \circ \tau)(x) = \sigma( \tau(x))\text{.}\) That is, we do \(\tau\) first, then \(\sigma\text{.}\) There are several ways to approach this inconsistency. <em class="emphasis">We will adopt the convention of multiplying permutations right to left. To compute \(\sigma \tau\text{,}\) do \(\tau\) first and then \(\sigma\text{.}\)</em> That is, by \(\sigma \tau (x)\) we mean \(\sigma( \tau( x))\text{.}\) (Another way of solving this problem would be to write functions on the right; that is, instead of writing \(\sigma(x)\text{,}\) we could write \((x)\sigma\text{.}\) We could also multiply permutations left to right to agree with the usual way of multiplying elements in a group. Certainly all of these methods have been used.</p></article><article class="example example-like" id="lel"><h6 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">10.6</span><span class="period">.</span>
+</h6>
+<p id="tsE">Permutation multiplication is not usually commutative. Let</p>
+<div class="displaymath">
+\begin{align*}
+\sigma
+&amp; =
+\begin{pmatrix}
+1 &amp; 2 &amp; 3 &amp; 4 \\
+4 &amp; 1 &amp; 2 &amp; 3
+\end{pmatrix}\\
+\tau
+&amp; =
+\begin{pmatrix}
+1 &amp; 2 &amp; 3 &amp; 4 \\
+2 &amp; 1 &amp; 4 &amp; 3
+\end{pmatrix}\text{.}
+\end{align*}
+</div>
+<p data-braille="continuation">Then</p>
+<div class="displaymath">
+\begin{equation*}
+\sigma \tau
+=
+\begin{pmatrix}
+1 &amp; 2 &amp; 3 &amp; 4 \\
+1 &amp; 4 &amp; 3 &amp; 2
+\end{pmatrix}\text{,}
+\end{equation*}
+</div>
+<p data-braille="continuation">but</p>
+<div class="displaymath">
+\begin{equation*}
+\tau \sigma
+=
+\begin{pmatrix}
+1 &amp; 2 &amp; 3 &amp; 4 \\
+3 &amp; 2 &amp; 1 &amp; 4
+\end{pmatrix}\text{.}
+\end{equation*}
+</div></article></section><section class="subsection" id="SqN"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">10.2.1</span> <span class="title">Cycle Notation</span>
+</h3>
+<p id="vhR">The notation that we have used to represent permutations up to this point is cumbersome, to say the least. To work effectively with permutation groups, we need a more streamlined method of writing down and manipulating permutations.</p>
+<p id="bpa">A permutation \(\sigma \in S_X\) is a <dfn class="terminology">cycle of length</dfn> \(k\) if there exist elements \(a_1, a_2, \ldots,
+a_k \in X\) such that</p>
+<div class="displaymath">
+\begin{align*}
+\sigma( a_1 ) &amp; = a_2\\
+\sigma( a_2 ) &amp; = a_3\\
+&amp; \vdots\\
+\sigma( a_k ) &amp; = a_1
+\end{align*}
+</div>
+<p data-braille="continuation">and \(\sigma( x) = x\) for all other elements \(x \in X\text{.}\) We will write \((a_1, a_2, \ldots,
+a_k )\) to denote the cycle \(\sigma\text{.}\)  Cycles are the building blocks of all permutations.</p>
+<article class="example example-like" id="DhP"><h6 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">10.7</span><span class="period">.</span>
+</h6>
+<p id="ZzN">The permutation</p>
+<div class="displaymath">
+\begin{equation*}
+\sigma =
+\begin{pmatrix}
+1 &amp; 2 &amp; 3 &amp; 4 &amp; 5 &amp; 6 &amp; 7\\
+6 &amp; 3 &amp; 5 &amp; 1 &amp; 4 &amp; 2 &amp; 7
+\end{pmatrix}
+=
+(1 6 2 3 5 4 )
+\end{equation*}
+</div>
+<p data-braille="continuation">is a cycle of length \(6\text{,}\) whereas</p>
+<div class="displaymath">
+\begin{equation*}
+\tau =
+\begin{pmatrix}
+1 &amp; 2 &amp; 3 &amp; 4 &amp; 5 &amp; 6 \\
+1 &amp; 4 &amp; 2 &amp; 3 &amp; 5 &amp; 6
+\end{pmatrix}
+=
+(2 4 3)
+\end{equation*}
+</div>
+<p data-braille="continuation">is a cycle of length \(3\text{.}\)</p>
+<p id="FGW">Not every permutation is a cycle. Consider the permutation</p>
+<div class="displaymath">
+\begin{equation*}
+\begin{pmatrix}
+1 &amp; 2 &amp; 3 &amp; 4 &amp; 5 &amp; 6 \\
+2 &amp; 4 &amp; 1 &amp; 3 &amp; 6 &amp; 5
+\end{pmatrix}
+= (1 2 4 3)(5 6)\text{.}
+\end{equation*}
+</div>
+<p data-braille="continuation">This permutation actually contains a cycle of length 2 and a cycle of length \(4\text{.}\)</p></article><article class="example example-like" id="joY"><h6 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">10.8</span><span class="period">.</span>
+</h6>
+<p id="lOf">It is very easy to compute products of cycles. Suppose that</p>
+<div class="displaymath">
+\begin{equation*}
+\sigma = (1 3 5 2 ) \quad \text{and} \quad \tau = (2 5 6)\text{.}
+\end{equation*}
+</div>
+<p data-braille="continuation">If we think of \(\sigma\) as</p>
+<div class="displaymath">
+\begin{equation*}
+1 \mapsto 3, \qquad
+3 \mapsto 5, \qquad
+5 \mapsto 2, \qquad
+2 \mapsto 1\text{,}
+\end{equation*}
+</div>
+<p data-braille="continuation">and \(\tau\) as</p>
+<div class="displaymath">
+\begin{equation*}
+2 \mapsto 5, \qquad
+5 \mapsto 6, \qquad
+6 \mapsto 2\text{,}
+\end{equation*}
+</div>
+<p data-braille="continuation">then for \(\sigma \tau\) remembering that we apply \(\tau\) first and then \(\sigma\text{,}\) it must be the case that</p>
+<div class="displaymath">
+\begin{equation*}
+1 \mapsto 3, \qquad
+3 \mapsto 5, \qquad
+5 \mapsto 6, \qquad
+6 \mapsto 2 \mapsto 1\text{,}
+\end{equation*}
+</div>
+<p data-braille="continuation">or \(\sigma \tau =  (1 3 5 6 )\text{.}\) If \(\mu = (1634)\text{,}\) then \(\sigma \mu = (1 6 5 2)(3 4)\text{.}\)</p></article><p id="Hwj">Two cycles in \(S_X\text{,}\) \(\sigma = (a_1, a_2, \ldots,
+a_k )\) and \(\tau = (b_1, b_2, \ldots,
+b_l )\text{,}\) are <dfn class="terminology">disjoint</dfn>  if \(a_i \neq b_j\) for all \(i\) and \(j\text{.}\)</p>
+<article class="example example-like" id="Pwh"><h6 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">10.9</span><span class="period">.</span>
+</h6>
+<p id="RVo">The cycles \((1 3 5)\) and \((2 7 )\) are disjoint; however, the cycles \((1 3 5)\) and \((3 4 7 )\) are not. Calculating their products, we find that</p>
+<div class="displaymath">
+\begin{align*}
+(1 3 5)(2 7 ) &amp; = (1 3 5)(2 7 )\\
+(1 3 5)(3 4 7 ) &amp; = (1 3 4 7 5)\text{.}
+\end{align*}
+</div>
+<p data-braille="continuation">The product of two cycles that are not disjoint may reduce to something less complicated; the product of disjoint cycles cannot be simplified.</p></article><article class="proposition theorem-like" id="XaG"><h6 class="heading">
+<span class="type">Proposition</span><span class="space"> </span><span class="codenumber">10.10</span><span class="period">.</span>
+</h6>
+<p id="IBC">Let \(\sigma\) and \(\tau\) be two disjoint cycles in \(S_X\text{.}\) Then \(\sigma \tau = \tau \sigma\text{.}\)</p></article><article class="proof" id="ijF"><h6 class="heading"><span class="type">Proof<span class="period">.</span></span></h6>
+<p id="GMp">Let \(\sigma = (a_1, a_2, \ldots,
+a_k )\) and \(\tau = (b_1, b_2, \ldots, b_l )\text{.}\) We must show that \(\sigma \tau(x) = \tau \sigma(x)\) for all \(x \in X\text{.}\) If \(x\) is neither in \(\{ a_1, a_2, \ldots,
+a_k \}\) nor \(\{b_1, b_2, \ldots, b_l \}\text{,}\) then both \(\sigma\) and \(\tau\) fix \(x\text{.}\) That is, \(\sigma(x)=x\) and \(\tau(x)=x\text{.}\) Hence,</p>
+<div class="displaymath">
+\begin{equation*}
+\sigma \tau(x) = \sigma( \tau(x)) = \sigma(x) = x = \tau(x) = \tau( \sigma(x)) =  \tau \sigma(x)\text{.}
+\end{equation*}
+</div>
+<p data-braille="continuation"><em class="emphasis">Do not forget that we are multiplying permutations right to left, which is the opposite of the order in which we usually multiply group elements.</em> Now suppose that \(x \in \{ a_1, a_2, \ldots, a_k \}\text{.}\) Then \(\sigma( a_i ) = a_{(i \bmod k) + 1}\text{;}\) that is,</p>
+<div class="displaymath">
+\begin{align*}
+a_1 &amp; \mapsto a_2\\
+a_2 &amp; \mapsto a_3\\
+&amp; \vdots\\
+a_{k-1} &amp; \mapsto a_k\\
+a_k &amp; \mapsto  a_1\text{.}
+\end{align*}
+</div>
+<p data-braille="continuation">However, \(\tau(a_i) = a_i\) since \(\sigma\) and \(\tau\) are disjoint. Therefore,</p>
+<div class="displaymath">
+\begin{align*}
+\sigma \tau(a_i) &amp; = \sigma( \tau(a_i))\\
+&amp; = \sigma(a_i)\\
+&amp; = a_{(i \bmod k)+1}\\
+&amp; = \tau( a_{(i \bmod k)+1} )\\
+&amp; = \tau( \sigma(a_i) )\\
+&amp; = \tau \sigma(a_i)\text{.}
+\end{align*}
+</div>
+<p data-braille="continuation">Similarly, if \(x \in \{b_1, b_2, \ldots,
+b_l  \}\text{,}\) then \(\sigma\) and \(\tau\) also commute.</p></article><article class="theorem theorem-like" id="qTx"><h6 class="heading">
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">10.11</span><span class="period">.</span>
+</h6>
+<p id="Qgb">Every permutation in \(S_n\) can be written as the product of disjoint cycles.</p></article><article class="proof" id="pOe"><h6 class="heading"><span class="type">Proof<span class="period">.</span></span></h6>
+<p id="mTy">We can assume that \(X = \{ 1, 2, \ldots, n \}\text{.}\) If \(\sigma \in S_n\) and we define \(X_1\) to be \(\{ \sigma(1), \sigma^2(1), \ldots \}\text{,}\) then the set \(X_1\) is finite since \(X\) is finite. Now let \(i\) be the first integer in \(X\) that is not in \(X_1\) and define \(X_2\) by \(\{ \sigma(i), \sigma^2(i), \ldots \}\text{.}\) Again, \(X_2\) is a finite set. Continuing in this manner, we can define finite disjoint sets \(X_3, X_4, \ldots\text{.}\) Since \(X\) is a finite set, we are guaranteed that this process will end and there will be only a finite number of these sets, say \(r\text{.}\) If \(\sigma_i\) is the cycle defined by</p>
+<div class="displaymath">
+\begin{equation*}
+\sigma_i( x ) = 
+\begin{cases}
+\sigma( x ) &amp; x \in X_i \\
+x   &amp; x \notin X_i
+\end{cases}\text{,}
+\end{equation*}
+</div>
+<p data-braille="continuation">then \(\sigma = \sigma_1 \sigma_2 \cdots \sigma_r\text{.}\) Since the sets \(X_1, X_2, \ldots, X_r\) are disjoint, the cycles \(\sigma_1, \sigma_2, \ldots, \sigma_r\) must also be disjoint.</p></article><article class="example example-like" id="vDq"><h6 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">10.12</span><span class="period">.</span>
+</h6>
+<p id="ycx">Let</p>
+<div class="displaymath">
+\begin{align*}
+\sigma &amp; =
+\begin{pmatrix}
+1 &amp; 2 &amp; 3 &amp; 4 &amp; 5 &amp; 6 \\
+6 &amp; 4 &amp; 3 &amp; 1 &amp; 5 &amp; 2
+\end{pmatrix}\\
+\tau &amp; =
+\begin{pmatrix}
+1 &amp; 2 &amp; 3 &amp; 4 &amp; 5 &amp; 6 \\
+3 &amp; 2 &amp; 1 &amp; 5 &amp; 6 &amp; 4
+\end{pmatrix}\text{.}
+\end{align*}
+</div>
+<p data-braille="continuation">Using cycle notation, we can write</p>
+<div class="displaymath">
+\begin{align*}
+\sigma      &amp; = (1624)\\
+\tau        &amp; = (13)(456)\\
+\sigma \tau &amp; = (1 3 6) ( 2 4 5)\\
+\tau \sigma &amp; = (1 4 3 )(2 5 6)\text{.}
+\end{align*}
+</div></article><article class="remark remark-like" id="bKz"><h6 class="heading">
+<span class="type">Remark</span><span class="space"> </span><span class="codenumber">10.13</span><span class="period">.</span>
+</h6>
+<p id="WFh">From this point forward we will find it convenient to use cycle notation to represent permutations. When using cycle notation, we often denote the identity permutation by \((1)\text{.}\)</p></article></section><section class="worksheet" id="VeP"><h3 class="heading hide-type">
+<span class="type">Worksheet</span> <span class="codenumber">10.2.2</span> <span class="title">Activity: Writing Cycles and Permutations</span>
+</h3>
+<section class="introduction" id="gJn"><p id="LLd">Goal: Understand how elements of \(S_n\) can be represented as cycles and products of cycles.</p></section><article class="exercise exercise-like" id="MQw"><h6 class="heading"><span class="codenumber">1<span class="period">.</span></span></h6>
+<p id="rSm">Can every permutation in \(S_n\) be represented using cycle notation?  How could you represent the permutation \(\begin{pmatrix}1 \amp 2 \amp 3 \amp 4 \amp 5 \amp 6 \amp 7 \amp 8 \amp 9 \\ 3 \amp 5 \amp 2 \amp 8 \amp 7 \amp 9 \amp 6 \amp 1 \amp 4  \end{pmatrix}\text{?}\)</p>
+<div class="solutions"></div></article><article class="exercise exercise-like" id="sXF"><h6 class="heading"><span class="codenumber">2<span class="period">.</span></span></h6>
+<p id="XZv">How should we define “cycle”?  Write a definition.  Some considerations: is \((132)(45)\) a single cycle or two cycles?  Is \((3124)\) a cycle?  What should we call the <dfn class="terminology">length</dfn> of a cycle?</p>
+<div class="solutions"></div></article><article class="exercise exercise-like" id="ZeO"><h6 class="heading"><span class="codenumber">3<span class="period">.</span></span></h6>
+<p id="EgE">Here are a few permutations of \(S_7\text{,}\) written as products of cycles.  Are there other ways to write each of these using cycle notation?  What makes two products of cycles the <em class="emphasis">same</em>?</p>
+<div class="displaymath">
+\begin{equation*}
+(142)(2534)(46)(135) \qquad\quad (12546) \qquad\quad (16)(14)(15)(12) \qquad\quad (12)(37)(25)(37)(45)(46)
+\end{equation*}
+</div>
+<div class="solutions"></div></article><hr class="pagebreak">
+<p id="IQx">A <em class="emphasis">transposition</em> (or \(2\)-cycle) is a cycle of <em class="emphasis">length</em> 2.  That is, it swaps (transposes) a pair of elements.</p>
+<article class="exercise exercise-like" id="FlX"><h6 class="heading"><span class="codenumber">4<span class="period">.</span></span></h6>
+<p id="knN">Can the cycle \((13254)\) be written as the product of transpositions?  Can it be written as the product of transpositions in more than one way?</p>
+<div class="solutions"></div></article><article class="exercise exercise-like" id="ltg"><h6 class="heading"><span class="codenumber">5<span class="period">.</span></span></h6>
+<p id="QuW">What about the product \((124)(2354)\text{?}\)</p>
+<div class="solutions"></div></article><article class="exercise exercise-like" id="RAp"><h6 class="heading"><span class="codenumber">6<span class="period">.</span></span></h6>
+<p id="wCf">Can you write \((13)(24)(45)(15)(26)(13)\) as the product of more than 6 transpositions?  Fewer than 6 transpositions?  Can you write it as the product of an odd number of transpositions?</p>
+<div class="solutions"></div></article><article class="exercise exercise-like" id="xHy"><h6 class="heading"><span class="codenumber">7<span class="period">.</span></span></h6>
+<p id="cJo">What numbers of transpositions can you write the identity \((1)\) as?</p>
+<div class="solutions"></div></article></section><section class="subsection" id="yxW"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">10.2.3</span> <span class="title">Transpositions</span>
+</h3>
+<p id="nDs">The simplest permutation is a cycle of length \(2\text{.}\) Such cycles are called <dfn class="terminology">transpositions</dfn>.  Since</p>
+<div class="displaymath">
+\begin{equation*}
+(a_1, a_2, \ldots, a_n ) = (a_1 a_n ) (a_1 a_{n-1} ) \cdots ( a_1 a_3 ) (a_1 a_2 )\text{,}
+\end{equation*}
+</div>
+<p data-braille="continuation">any cycle can be written as the product of transpositions, leading to the following proposition.</p>
+<article class="proposition theorem-like" id="nYR"><h6 class="heading">
+<span class="type">Proposition</span><span class="space"> </span><span class="codenumber">10.14</span><span class="period">.</span>
+</h6>
+<p id="oIL">Any permutation of a finite set containing at least two elements can be written as the product of transpositions.</p></article><article class="example example-like" id="Anj"><h6 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">10.15</span><span class="period">.</span>
+</h6>
+<p id="ejG">Consider the permutation</p>
+<div class="displaymath">
+\begin{equation*}
+( 1 6 ) (2 5 3) = (1 6 )( 2 3 )( 2 5 ) = (1 6 )( 4 5 )(2 3 )( 4 5 )(2 5 )\text{.}
+\end{equation*}
+</div>
+<p data-braille="continuation">As we can see, there is no unique way to represent permutation as the product of transpositions. For instance, we can write the identity permutation as \((1 2 )(1 2 )\text{,}\) as \((1 3 )(2 4 )(1 3 )( 2 4 )\text{,}\) and in many other ways. However, as it turns out, no permutation can be written as the product of both an even number of transpositions and an odd number of transpositions. For instance, we could represent the permutation \((1 6)\) by</p>
+<div class="displaymath">
+\begin{equation*}
+(2 3 )(1 6)( 2 3)
+\end{equation*}
+</div>
+<p data-braille="continuation">or by</p>
+<div class="displaymath">
+\begin{equation*}
+(3 5) (1 6) (1 3) (1 6) (1 3) (3 5) (5 6)\text{,}
+\end{equation*}
+</div>
+<p data-braille="continuation">but \((1 6)\) will always be the product of an odd number of transpositions.</p></article><article class="lemma theorem-like" id="Uga"><h6 class="heading">
+<span class="type">Lemma</span><span class="space"> </span><span class="codenumber">10.16</span><span class="period">.</span>
+</h6>
+<p id="AXd">If the identity is written as the product of \(r\) transpositions,</p>
+<div class="displaymath">
+\begin{equation*}
+\identity = \tau_1 \tau_2 \cdots \tau_r\text{,}
+\end{equation*}
+</div>
+<p data-braille="continuation">then \(r\) is an even number.</p></article><article class="proof" id="uxX"><h6 class="heading"><span class="type">Proof<span class="period">.</span></span></h6>
+<p id="TaH">We will employ induction  on \(r\text{.}\) A transposition cannot be the identity; hence, \(r \gt 1\text{.}\) If \(r=2\text{,}\) then we are done. Suppose that \(r \gt 2\text{.}\) In this case the product of the last two transpositions, \(\tau_{r-1} \tau_r\text{,}\) must be one of the following cases:</p>
+<div class="displaymath">
+\begin{align*}
+(a b)(a b) &amp; = \identity\\
+(b c)(a b) &amp; = (a c)(b c)\\
+(c d)(a b) &amp; = (a b)(c d)\\
+(a c)(a b) &amp; = (a b)(b c)\text{,}
+\end{align*}
+</div>
+<p data-braille="continuation">where \(a\text{,}\) \(b\text{,}\) \(c\text{,}\) and \(d\) are distinct.</p>
+<p id="zhQ">The first equation simply says that a transposition is its own inverse. If this case occurs, delete \(\tau_{r-1} \tau_r\) from the product to obtain</p>
+<div class="displaymath">
+\begin{equation*}
+\identity = \tau_1 \tau_2 \cdots \tau_{r - 3} \tau_{r - 2}\text{.}
+\end{equation*}
+</div>
+<p data-braille="continuation">By induction \(r - 2\) is even; hence, \(r\) must be even.</p>
+<p id="foZ">In each of the other three cases, we can replace \(\tau_{r - 1} \tau_r\) with the right-hand side of the corresponding equation to obtain a new product of \(r\) transpositions for the identity. In this new product the last occurrence of \(a\) will be in the next-to-the-last transposition. We can continue this process with \(\tau_{r - 2} \tau_{r - 1}\) to obtain either a product of \(r - 2\) transpositions or a new product of \(r\) transpositions where the last occurrence of \(a\) is in \(\tau_{r - 2}\text{.}\) If the identity is the product of \(r - 2\) transpositions, then again we are done, by our induction hypothesis; otherwise, we will repeat the procedure with \(\tau_{r - 3} \tau_{r - 2}\text{.}\)</p>
+<p id="Lwi">At some point either we will have two adjacent, identical transpositions canceling each other out or \(a\) will be shuffled so that it will appear only in the first transposition. However, the latter case cannot occur, because the identity would not fix \(a\) in this instance. Therefore, the identity permutation must be the product of \(r-2\) transpositions and, again by our induction hypothesis, we are done.</p></article><article class="theorem theorem-like" id="HRI"><h6 class="heading">
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">10.17</span><span class="period">.</span>
+</h6>
+<p id="wnk">If a permutation \(\sigma\) can be expressed as the product of an even number of transpositions, then any other product of transpositions equaling \(\sigma\) must also contain an even number of transpositions. Similarly, if \(\sigma\) can be expressed as the product of an odd number of transpositions, then any other product of transpositions equaling \(\sigma\) must also contain an odd number of transpositions.</p></article><article class="proof" id="VVn"><h6 class="heading"><span class="type">Proof<span class="period">.</span></span></h6>
+<p id="rDr">Suppose that</p>
+<div class="displaymath">
+\begin{equation*}
+\sigma = \sigma_1 \sigma_2 \cdots \sigma_m = \tau_1 \tau_2 \cdots \tau_n\text{,}
+\end{equation*}
+</div>
+<p data-braille="continuation">where \(m\) is even. We must show that \(n\) is also an even number. The inverse of \(\sigma\) is \(\sigma_m \cdots \sigma_1\text{.}\) Since</p>
+<div class="displaymath">
+\begin{equation*}
+\identity = \sigma \sigma_m \cdots \sigma_1 = \tau_1  \cdots \tau_n \sigma_m \cdots \sigma_1\text{,}
+\end{equation*}
+</div>
+<p data-braille="continuation">\(n\) must be even by <a class="xref" data-knowl="./knowl/lemma-identity-even-trans.html" title="Lemma 2.60">Lemma 2.60</a>. The proof for the case in which \(\sigma\) can be expressed as an odd number of transpositions is left as an exercise.</p></article><p id="TKB">In light of <a class="xref" data-knowl="./knowl/theorem-even-and-odd.html" title="Theorem 2.61">Theorem 2.61</a>, we define a permutation to be <dfn class="terminology">even</dfn>  if it can be expressed as an even number of transpositions and <dfn class="terminology">odd</dfn>  if it can be expressed as an odd number of transpositions.</p></section><section class="subsection" id="eFf"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">10.2.4</span> <span class="title">The Alternating Groups</span>
+</h3>
+<p id="zRK">One of the most important subgroups of \(S_n\) is the set of all even permutations, \(A_n\text{.}\)  The group \(A_n\) is called the <dfn class="terminology">alternating group on \(n\) letters</dfn>. </p>
+<article class="theorem theorem-like" id="gus"><h6 class="heading">
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">10.18</span><span class="period">.</span>
+</h6>
+<p id="cut">The set \(A_n\) is a subgroup of \(S_n\text{.}\)</p></article><article class="proof" id="Ccw"><h6 class="heading"><span class="type">Proof<span class="period">.</span></span></h6>
+<p id="XKA">Since the product of two even permutations must also be an even permutation, \(A_n\) is closed. The identity is an even permutation and therefore is in \(A_n\text{.}\) If \(\sigma\) is an even permutation, then</p>
+<div class="displaymath">
+\begin{equation*}
+\sigma = \sigma_1 \sigma_2 \cdots \sigma_r\text{,}
+\end{equation*}
+</div>
+<p data-braille="continuation">where \(\sigma_i\) is a transposition and \(r\) is even. Since the inverse of any transposition is itself,</p>
+<div class="displaymath">
+\begin{equation*}
+\sigma^{-1} = \sigma_r \sigma_{r-1} \cdots \sigma_1
+\end{equation*}
+</div>
+<p data-braille="continuation">is also in \(A_n\text{.}\)</p></article><article class="proposition theorem-like" id="MBB"><h6 class="heading">
+<span class="type">Proposition</span><span class="space"> </span><span class="codenumber">10.19</span><span class="period">.</span>
+</h6>
+<p id="UPU">The number of even permutations in \(S_n\text{,}\) \(n \geq 2\text{,}\) is equal to the number of odd permutations; hence, the order of \(A_n\) is \(n!/2\text{.}\)</p></article><article class="proof" id="OqO"><h6 class="heading"><span class="type">Proof<span class="period">.</span></span></h6>
+<p id="DRJ">Let \(A_n\) be the set of even permutations in \(S_n\) and \(B_n\) be the set of odd permutations. If we can show that there is a bijection between these sets, they must contain the same number of elements. Fix a transposition \(\sigma\) in \(S_n\text{.}\) Since \(n \geq 2\text{,}\) such a \(\sigma\) exists. Define</p>
+<div class="displaymath">
+\begin{equation*}
+\lambda_{\sigma} : A_n \rightarrow B_n
+\end{equation*}
+</div>
+<p data-braille="continuation">by</p>
+<div class="displaymath">
+\begin{equation*}
+\lambda_{\sigma} ( \tau ) = \sigma  \tau \text{.}
+\end{equation*}
+</div>
+<p data-braille="continuation">Suppose that \(\lambda_{\sigma} ( \tau ) = \lambda_{\sigma} ( \mu )\text{.}\) Then \(\sigma  \tau = \sigma  \mu\) and so</p>
+<div class="displaymath">
+\begin{equation*}
+\tau = \sigma^{-1} \sigma \tau = \sigma^{-1} \sigma \mu = \mu\text{.}
+\end{equation*}
+</div>
+<p data-braille="continuation">Therefore, \(\lambda_{\sigma}\) is one-to-one. We will leave the proof that \(\lambda_{\sigma}\) is surjective to the reader.</p></article><article class="example example-like" id="sIK"><h6 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">10.20</span><span class="period">.</span>
+</h6>
+<p id="KqP">The group \(A_4\) is the subgroup of \(S_4\) consisting of even permutations. There are twelve elements in  \(A_4\text{:}\)</p>
+<div class="displaymath">
+\begin{align*}
+&amp; (1)    &amp;&amp; (12)(34) &amp;&amp; (13)(24) &amp;&amp; (14)(23)\\
+&amp; (123)  &amp;&amp; (132)    &amp;&amp; (124)    &amp;&amp; (142)\\
+&amp; (134)  &amp;&amp; (143)    &amp;&amp; (234)    &amp;&amp; (243)\text{.}
+\end{align*}
+</div>
+<p data-braille="continuation">One of the end-of-chapter exercises will be to write down all the subgroups of \(A_4\text{.}\) You will find that there is no subgroup of order 6. Does this surprise you?</p></article></section><section class="subsection" id="KMo"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">10.2.5</span> <span class="title">Historical Note</span>
+</h3>
+<p id="fYT">Lagrange  first thought of permutations as functions from a set to itself, but it was Cauchy who developed the basic theorems and notation for permutations. He was the first to use cycle notation. Augustin-Louis Cauchy  (1789–1857) was born in Paris at the height of the French Revolution. His family soon left Paris for the village of Arcueil to escape the Reign of Terror. One of the family's neighbors there was Pierre-Simon Laplace  (1749–1827), who encouraged him to seek a career in mathematics. Cauchy began his career as a mathematician by solving a problem in geometry given to him by Lagrange. Cauchy wrote over 800 papers on such diverse topics as differential equations, finite groups, applied mathematics, and complex analysis. He was one of the mathematicians responsible for making calculus rigorous. Perhaps more theorems and concepts in mathematics have the name Cauchy attached to them than that of any other mathematician.</p></section><section class="exercises" id="PKP"><h3 class="heading hide-type">
+<span class="type">Exercises</span> <span class="codenumber">10.2.6</span> <span class="title">Practice Problems</span>
+</h3>
+<article class="exercise exercise-like" id="NHh"><h6 class="heading"><span class="codenumber">1<span class="period">.</span></span></h6>
+<p id="NVC">Write the following permutations in cycle notation.</p>
+<ol class="lower-alpha cols2">
+<li id="sIX"><div class="displaymath" id="IBP">
+\begin{equation*}
+\begin{pmatrix}
+1 &amp; 2 &amp; 3 &amp; 4 &amp; 5 \\
+2 &amp; 4 &amp; 1 &amp; 5 &amp; 3
+\end{pmatrix}
+\end{equation*}
+</div></li>
+<li id="YQg"><div class="displaymath" id="oIY">
+\begin{equation*}
+\begin{pmatrix}
+1 &amp; 2 &amp; 3 &amp; 4 &amp; 5 \\
+4 &amp; 2 &amp; 5 &amp; 1 &amp; 3
+\end{pmatrix}
+\end{equation*}
+</div></li>
+<li id="EXp"><div class="displaymath" id="UQh">
+\begin{equation*}
+\begin{pmatrix}
+1 &amp; 2 &amp; 3 &amp; 4 &amp; 5 \\
+3 &amp; 5 &amp; 1 &amp; 4 &amp; 2
+\end{pmatrix}
+\end{equation*}
+</div></li>
+<li id="ley"><div class="displaymath" id="AXq">
+\begin{equation*}
+\begin{pmatrix}
+1 &amp; 2 &amp; 3 &amp; 4 &amp; 5 \\
+1 &amp; 4 &amp; 3 &amp; 2 &amp; 5
+\end{pmatrix}
+\end{equation*}
+</div></li>
+</ol>
+<div class="solutions">
+<a data-knowl="" class="id-ref answer-knowl original" data-refid="hk-qTK" id="qTK"><span class="type">Answer</span></a><div class="hidden-content tex2jax_ignore" id="hk-qTK"><div class="answer solution-like"><p id="YuH">(a) \((12453)\text{;}\) (b) \((14)(35)\text{;}\) (c) \((13)(25)\text{;}\) (d) \((24)\text{.}\)</p></div></div>
+</div></article><article class="exercise exercise-like" id="tOq"><h6 class="heading"><span class="codenumber">2<span class="period">.</span></span></h6>
+<p id="ucL">Compute each of the following.</p>
+<ol class="lower-alpha cols2">
+<li id="RlH"><p id="hez">\(\displaystyle (1345)(234)\)</p></li>
+<li id="xsQ"><p id="NlI">\(\displaystyle (12)(1253)\)</p></li>
+<li id="dzZ"><p id="tsR">\(\displaystyle (143)(23)(24)\)</p></li>
+<li id="JHi"><p id="ZAa">\(\displaystyle (1423)(34)(56)(1324)\)</p></li>
+<li id="pOr"><p id="FHj">\(\displaystyle (1254)(13)(25)\)</p></li>
+<li id="VVA"><p id="lOs">\(\displaystyle (1254) (13)(25)^2\)</p></li>
+<li id="CcJ"><p id="RVB">\(\displaystyle (1254)^{-1} (123)(45) (1254)\)</p></li>
+<li id="ijS"><p id="ycK">\(\displaystyle (1254)^2 (123)(45)\)</p></li>
+<li id="Orb"><p id="ejT">\(\displaystyle (123)(45) (1254)^{-2}\)</p></li>
+<li id="uyk"><p id="Krc">\(\displaystyle (1254)^{100}\)</p></li>
+<li id="aFt"><p id="qyl">\(\displaystyle |(1254)|\)</p></li>
+<li id="GMC"><p id="WFu">\(\displaystyle |(1254)^2|\)</p></li>
+<li id="mTL"><p id="CMD">\(\displaystyle (12)^{-1}\)</p></li>
+<li id="TaU"><p id="iTM">\(\displaystyle (12537)^{-1}\)</p></li>
+<li id="zid"><p id="PaV">\(\displaystyle [(12)(34)(12)(47)]^{-1}\)</p></li>
+<li id="fpm"><p id="vie">\(\displaystyle [(1235)(467)]^{-1}\)</p></li>
+</ol>
+<div class="solutions">
+<a data-knowl="" class="id-ref answer-knowl original" data-refid="hk-XaT" id="XaT"><span class="type">Answer</span></a><div class="hidden-content tex2jax_ignore" id="hk-XaT"><div class="answer solution-like"><p id="EBQ">(a) \((135)(24)\text{;}\) (b) \((253)\text{;}\) (c) \((14)(23)\text{;}\) (d) \((12)(56)\text{;}\) (e) \((1324)\text{;}\) (f) \((13254)\text{;}\) (g) \((134)(25)\text{;}\) (h) \((14)(235)\text{;}\) (i) \((143)(25)\text{;}\) (j) \((1)\text{;}\) (k) \(4\) (i.e., the order of the element); (l) \(2\text{;}\) (m) \((12)\text{;}\) (n) \((17352)\text{;}\) (o) \((374)\text{;}\) (p) \((476)(1532)\text{.}\)</p></div></div>
+</div></article><article class="exercise exercise-like" id="ZVz"><h6 class="heading"><span class="codenumber">3<span class="period">.</span></span></h6>
+<p id="ajU">Express the following permutations as products of transpositions and identify them as even or odd.</p>
+<ol class="lower-alpha cols2">
+<li id="Lwv"><p id="bpn">\(\displaystyle (14356)\)</p></li>
+<li id="rDE"><p id="Hww">\(\displaystyle (156)(234)\)</p></li>
+<li id="XKN"><p id="nDF">\(\displaystyle (1426)(142)\)</p></li>
+<li id="DRW"><p id="TKO">\(\displaystyle (17254)(1423)(154632)\)</p></li>
+<li id="jZf"><p id="zRX">\(\displaystyle (142637)\)</p></li>
+</ol>
+<div class="solutions">
+<a data-knowl="" class="id-ref answer-knowl original" data-refid="hk-Dic" id="Dic"><span class="type">Answer</span></a><div class="hidden-content tex2jax_ignore" id="hk-Dic"><div class="answer solution-like"><p id="kIZ">(a) \((16)(15)(13)(14)\) (even); (b) \((15)(56)(23)(24)\) (even); (c) \((16)(14)(12)\) (odd); (d) \((17)(72)(25)(54)(14)(42)(23)(15)(54)(46)(63)(32)\) (even); (e) \((14)(42)(26)(63)(37)\) (odd).</p></div></div>
+</div></article><article class="exercise exercise-like" id="GcI"><h6 class="heading"><span class="codenumber">5<span class="period">.</span></span></h6>
+<p id="Grd">List all of the subgroups of \(S_4\text{.}\) Find each of the following sets:</p>
+<ol class="lower-alpha">
+<li id="Qgo"><p id="fZg">\(\displaystyle \{ \sigma \in S_4 : \sigma(1) = 3 \}\)</p></li>
+<li id="wnx"><p id="Mgp">\(\displaystyle \{ \sigma \in S_4 : \sigma(2) = 2 \}\)</p></li>
+<li id="cuG"><p id="sny">\(\{ \sigma \in S_4 : \sigma(1) = 3\) and \(\sigma(2) = 2 \}\text{.}\)</p></li>
+</ol>
+<p data-braille="continuation">Are any of these sets subgroups of \(S_4\text{?}\)</p>
+<div class="solutions">
+<a data-knowl="" class="id-ref hint-knowl original" data-refid="hk-jpl" id="jpl"><span class="type">Hint</span></a><div class="hidden-content tex2jax_ignore" id="hk-jpl"><div class="hint solution-like">
+<p id="JlJ">(a) \(\{ (13), (13)(24), (132), (134), (1324), (1342) \}\) is not a subgroup.</p>
+<p id="psS">(b) \(\{(1), (134), (143), (13), (14), (34)\}\) is a subgroup.</p>
+<p id="VAb">(c) \(\{(13), (134)\}\) is not a subgroup.</p>
+</div></div>
+</div></article><article class="exercise exercise-like" id="mjR"><h6 class="heading"><span class="codenumber">6<span class="period">.</span></span></h6>
+<p id="mym">Find all of the subgroups in \(A_4\text{.}\) What is the order of each subgroup?</p>
+<div class="solutions">
+<a data-knowl="" class="id-ref hint-knowl original" data-refid="hk-Pwu" id="Pwu"><span class="type">Hint</span></a><div class="hidden-content tex2jax_ignore" id="hk-Pwu"><div class="hint solution-like"><p id="BHk">There are subgroups of orders 1, 2, 3, 4, and 12.  You have multiple choices for the subgroups of order 2 and 3.</p></div></div>
+</div></article><article class="exercise exercise-like" id="Sra"><h6 class="heading"><span class="codenumber">7<span class="period">.</span></span></h6>
+<p id="SFv">Find all possible orders of elements in \(S_7\) and \(A_7\text{.}\)</p>
+<div class="solutions">
+<a data-knowl="" class="id-ref answer-knowl original" data-refid="hk-vDD" id="vDD"><span class="type">Answer</span></a><div class="hidden-content tex2jax_ignore" id="hk-vDD"><div class="answer solution-like"><p id="QQi">The possible orders in \(S_7\) are 1, 2, 3, 4, 5, 6, 7, 10, and 12.  In \(A_7\) you can only have orders 1, 2, 3, 5, 6, and 7.</p></div></div>
+</div></article><article class="exercise exercise-like" id="yyj"><h6 class="heading"><span class="codenumber">8<span class="period">.</span></span></h6>
+<p id="yME">Show that \(A_{10}\) contains an element of order \(15\text{.}\)</p>
+<div class="solutions">
+<a data-knowl="" class="id-ref hint-knowl original" data-refid="hk-bKM" id="bKM"><span class="type">Hint</span></a><div class="hidden-content tex2jax_ignore" id="hk-bKM"><div class="hint solution-like"><p id="hOt">\((12345)(678)\text{.}\)</p></div></div>
+</div></article><article class="exercise exercise-like" id="eFs"><h6 class="heading"><span class="codenumber">9<span class="period">.</span></span></h6>
+<p id="eTN">Does \(A_8\) contain an element of order \(26\text{?}\)</p>
+<div class="solutions">
+<a data-knowl="" class="id-ref answer-knowl original" data-refid="hk-HRV" id="HRV"><span class="type">Answer</span></a><div class="hidden-content tex2jax_ignore" id="hk-HRV"><div class="answer solution-like"><p id="wXr">No.  We will give a good reason why in chapter 6.</p></div></div>
+</div></article><article class="exercise exercise-like" id="KMB"><h6 class="heading"><span class="codenumber">10<span class="period">.</span></span></h6>
+<p id="LaW">Find an element of largest order in \(S_n\) for \(n = 3, \ldots, 10\text{.}\)</p>
+<div class="solutions">
+<a data-knowl="" class="id-ref answer-knowl original" data-refid="hk-nZe" id="nZe"><span class="type">Answer</span></a><div class="hidden-content tex2jax_ignore" id="hk-nZe"><div class="answer solution-like"><p id="deA">\((123)\text{,}\)          \((1234)\text{,}\)          \((12)(345)\text{,}\) \((123456)\text{,}\)          \((123)(4567)\text{,}\)          \((123)(45678)\text{,}\)          \((1234)(56789)\text{,}\)          \((12)(345)(678910)\text{.}\)</p></div></div>
+</div></article></section><section class="exercises" id="hzY"><h3 class="heading hide-type">
+<span class="type">Exercises</span> <span class="codenumber">10.2.7</span> <span class="title">Collected Homework</span>
+</h3>
+<article class="exercise exercise-like" id="cQf"><h6 class="heading"><span class="codenumber">1<span class="period">.</span></span></h6>
+<p id="pex">The identity can be written as \(\varepsilon = (13)(24)(35)(14)(12)(15)(34)(45)\text{.}\) Mimic the proof that \(\varepsilon\) must be even and show how to eliminate \(x = 5\) from the product of transpositions and write \(\varepsilon\) as the product of 2 fewer transpositions in the process.  Show all intermediate steps.</p></article><article class="exercise exercise-like" id="IXo"><h6 class="heading"><span class="codenumber">2<span class="period">.</span></span></h6>
+<p id="VlG">Bonus: One way you could prove that \(|A_n| = \frac{n!}{2}\) is to show that \(S_n\) has an equal number of even permutations as odd permutations.  One way you could do this is by finding a bijection from the set of even permutations to the set of odd permutations.  Define \(f:A_n \to \overline{A_n}\) (here \(\overline{A_n}\) is the compliment of \(A_n\text{,}\) so the set of all odd permutations) by \(f(\tau) = (12)\tau\text{.}\)</p>
+<p id="BsP">Prove that \(f\) really is a bijection.  Careful: there are multiple ways to write permutations as products of transpositions.</p></article></section></section></div></main>
+</div>
+<script src="https://unpkg.com/prismjs@v1.22.0/components/prism-core.min.js"></script><script src="https://unpkg.com/prismjs@v1.22.0/plugins/autoloader/prism-autoloader.min.js"></script>
+</body>
+</html>

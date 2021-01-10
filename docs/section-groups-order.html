@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*       on 2021-01-10T15:15:30-07:00       *-->
+<!--*   A recent stable commit (2020-08-09):   *-->
+<!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<html lang="en-US">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>AATA Cyclic Groups and Orders of Elements</title>
+<meta name="Keywords" content="Authored in PreTeXt">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script src="https://sagecell.sagemath.org/embedded_sagecell.js"></script><script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [['\\(','\\)']]
+    },
+    asciimath2jax: {
+        ignoreClass: ".*",
+        processClass: "has_am"
+    },
+    jax: ["input/AsciiMath"],
+    extensions: ["asciimath2jax.js"],
+    TeX: {
+        extensions: ["extpfeil.js", "autobold.js", "https://pretextbook.org/js/lib/mathjaxknowl.js", "AMScd.js", ],
+        // scrolling to fragment identifiers is controlled by other Javascript
+        positionToHash: false,
+        equationNumbers: { autoNumber: "none", useLabelIds: true, },
+        TagSide: "right",
+        TagIndent: ".8em",
+    },
+    // HTML-CSS output Jax to be dropped for MathJax 3.0
+    "HTML-CSS": {
+        scale: 88,
+        mtextFontInherit: true,
+    },
+    CommonHTML: {
+        scale: 88,
+        mtextFontInherit: true,
+    },
+});
+</script><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS_CHTML-full"></script><link href="https://unpkg.com/prismjs@v1.22.0/themes/prism.css" rel="stylesheet">
+<script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/jquery.min.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/0.13/pretext.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/0.13/pretext_add_on.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script xmlns:svg="http://www.w3.org/2000/svg">sagecellEvalName='Evaluate (Sage)';
+</script><link xmlns:svg="http://www.w3.org/2000/svg" href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://fonts.googleapis.com/css?family=Inconsolata:400,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/pretext.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/pretext_add_on.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/banner_default.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/toc_default.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/knowls_default.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/style_default.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/colors_default.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/setcolors.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="custom-styles.css">
+<!-- 2019-10-12: Temporary - CSS file for experiments with styling --><link xmlns:svg="http://www.w3.org/2000/svg" href="developer.css" rel="stylesheet" type="text/css">
+</head>
+<body id="judson-AATA" class="mathbook-book has-toc has-sidebar-left">
+<a class="assistive" href="#content">Skip to main content</a><div xmlns:svg="http://www.w3.org/2000/svg" class="hidden-content" style="display:none">\(\newcommand{\identity}{\mathrm{id}}
+\newcommand{\notdivide}{\nmid}
+\newcommand{\notsubset}{\not\subset}
+\newcommand{\lcm}{\operatorname{lcm}}
+\newcommand{\gf}{\operatorname{GF}}
+\newcommand{\inn}{\operatorname{Inn}}
+\newcommand{\aut}{\operatorname{Aut}}
+\newcommand{\Hom}{\operatorname{Hom}}
+\newcommand{\cis}{\operatorname{cis}}
+\newcommand{\chr}{\operatorname{char}}
+\newcommand{\Null}{\operatorname{Null}}
+\newcommand{\transpose}{\text{t}}
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\Q}{\mathbb{Q}}
+\newcommand{\R}{\mathbb{R}}
+\def\C{\mathbb{C}}
+\newcommand{\st}{:}
+\newcommand{\inv}{^{-1}}
+\newcommand{\bC}{\mathbb{C}}
+      \newcommand{\F}{\mathscr{F}}
+      \newcommand{\FR}{\mathscr{F}(\R)}
+      \newcommand{\DR}{\mathscr{D}(\R)}
+      \def\s{\varrho}
+      \def\theterm{Spring 2021}
+      \def\thecourse{MATH 322}
+\newcommand{\lt}{&lt;}
+\newcommand{\gt}{&gt;}
+\newcommand{\amp}{&amp;}
+\)</div>
+<header id="masthead" class="smallbuttons"><div class="banner"><div class="container">
+<a id="logo-link" href="http://abstract.pugetsound.edu" target="_blank"><img src="images/cover_aata_2020.png" alt="Logo image"></a><div class="title-container">
+<h1 class="heading"><a href="aata-toc.html"><span class="title">Abstract Algebra:</span> <span class="subtitle">Theory and Applications, Remixed!</span></a></h1>
+<p class="byline">Thomas W. Judson</p>
+</div>
+</div></div>
+<nav xmlns:svg="http://www.w3.org/2000/svg" id="primary-navbar" class="navbar"><div class="container">
+<div class="navbar-top-buttons">
+<button class="sidebar-left-toggle-button button active" aria-label="Show or hide table of contents sidebar">Contents</button><div class="tree-nav toolbar toolbar-divisor-3">
+<a class="index-button toolbar-item button" href="index-1.html" title="Index">Index</a><span class="threebuttons"><a id="previousbutton" class="previous-button toolbar-item button" href="struct-more.html" title="Previous">Prev</a><a id="upbutton" class="up-button button toolbar-item" href="struct-more.html" title="Up">Up</a><a id="nextbutton" class="next-button button toolbar-item" href="section-groups-lagrange.html" title="Next">Next</a></span>
+</div>
+</div>
+<div class="navbar-bottom-buttons toolbar toolbar-divisor-4">
+<button class="sidebar-left-toggle-button button toolbar-item active">Contents</button><a class="previous-button toolbar-item button" href="struct-more.html" title="Previous">Prev</a><a class="up-button button toolbar-item" href="struct-more.html" title="Up">Up</a><a class="next-button button toolbar-item" href="section-groups-lagrange.html" title="Next">Next</a>
+</div>
+</div></nav></header><div class="page">
+<div xmlns:svg="http://www.w3.org/2000/svg" id="sidebar-left" class="sidebar" role="navigation"><div class="sidebar-content">
+<nav id="toc"><ul>
+<li class="link frontmatter">
+<a href="aata.html" data-scroll="Wih"><span class="title">Front Matter</span></a><ul>
+<li><a href="colophon-1.html" data-scroll="colophon-1">Colophon</a></li>
+<li><a href="acknowledgement-1.html" data-scroll="acknowledgement-1">Acknowledgements</a></li>
+<li><a href="preface-1.html" data-scroll="JEk">Preface to the Remixed Version</a></li>
+<li><a href="preface-2.html" data-scroll="Cpq">Original Preface</a></li>
+</ul>
+</li>
+<li class="link part"><a href="part-groups.html" data-scroll="part-groups"><span class="codenumber">I</span> <span class="title">Groups</span></a></li>
+<li class="link">
+<a href="sets.html" data-scroll="xcu"><span class="codenumber">1</span> <span class="title">Preliminaries</span></a><ul>
+<li><a href="section-note-on-proofs.html" data-scroll="yRH">A Short Note on Proofs</a></li>
+<li><a href="section-sets-and-functions.html" data-scroll="eYQ">Sets and Functions</a></li>
+<li><a href="section-equivalence-relations.html" data-scroll="VFe">Equivalence Relations and Partitions</a></li>
+<li><a href="section-math-induction.html" data-scroll="bUT">Mathematical Induction</a></li>
+<li><a href="exercises-sets.html" data-scroll="mDp">Additional Exercises</a></li>
+<li><a href="sets-references.html" data-scroll="ztb">References and Suggested Readings</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="groups.html" data-scroll="ZbN"><span class="codenumber">2</span> <span class="title">Groups</span></a><ul>
+<li><a href="section-mod-n-sym.html" data-scroll="nfs">Integer Equivalence Classes and Symmetries</a></li>
+<li><a href="section-groups-define.html" data-scroll="TmB">Definitions and Examples</a></li>
+<li><a href="section-basic-properties.html" data-scroll="Rxo">Basic Properties of Groups</a></li>
+<li><a href="section-subgroups.html" data-scroll="ztK">Subgroups</a></li>
+<li><a href="cyclic.html" data-scroll="MzR">Cyclic Subgroups</a></li>
+<li><a href="section-permutation-definitions.html" data-scroll="Wyg">Permutation Groups</a></li>
+<li><a href="exercises-groups.html" data-scroll="OCI">Additional Exercises</a></li>
+<li><a href="groups-exercises-detecting-errors.html" data-scroll="uJR">Additional Exercises: Detecting Errors</a></li>
+<li><a href="groups-references.html" data-scroll="muP">References and Suggested Readings</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="cosets.html" data-scroll="Uzy"><span class="codenumber">3</span> <span class="title">Cosets and Factor Groups</span></a><ul>
+<li><a href="section-cosets.html" data-scroll="xMb">Cosets</a></li>
+<li><a href="section-factor-groups.html" data-scroll="avo">Factor Groups and Normal Subgroups</a></li>
+<li><a href="exercises-cosets.html" data-scroll="FqA">Exercises</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="isomorph.html" data-scroll="OUu"><span class="codenumber">4</span> <span class="title">Isomorphisms and Homomorphisms</span></a><ul>
+<li><a href="section-isomorph-definitions.html" data-scroll="Evp">Definition and Examples</a></li>
+<li><a href="section-group-homomorphisms.html" data-scroll="uOI">Group Homomorphisms</a></li>
+<li><a href="section-group-isomorphism-theorems.html" data-scroll="aVR">The Isomorphism Theorems</a></li>
+<li><a href="exercises-isomorph.html" data-scroll="VeC">Additional Exercises</a></li>
+<li><a href="homomorph-exercises-automorphisms.html" data-scroll="Jes">Additional Exercises: Automorphisms</a></li>
+</ul>
+</li>
+<li class="link part"><a href="part-rings-and-fields.html" data-scroll="part-rings-and-fields"><span class="codenumber">II</span> <span class="title">Rings and Fields</span></a></li>
+<li class="link">
+<a href="rings.html" data-scroll="bhz"><span class="codenumber">5</span> <span class="title">Rings</span></a><ul>
+<li><a href="section-rings-definitions.html" data-scroll="kBl">Rings</a></li>
+<li><a href="section-domains-and-fields.html" data-scroll="QIu">Integral Domains and Fields</a></li>
+<li><a href="section-ring-homomorphisms.html" data-scroll="wPD">Ring Homomorphisms and Ideals</a></li>
+<li><a href="section-maximal-prime-ideals.html" data-scroll="cWM">Maximal and Prime Ideals</a></li>
+<li><a href="section-software-application.html" data-scroll="JdV">An Application to Software Design</a></li>
+<li><a href="exercises-rings.html" data-scroll="LYB">Additional Exercises</a></li>
+<li><a href="rings-exercises-programming.html" data-scroll="sfK">Programming Exercise</a></li>
+<li><a href="rings-references.html" data-scroll="JSg">References and Suggested Readings</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="poly.html" data-scroll="tPt"><span class="codenumber">6</span> <span class="title">Polynomials</span></a><ul>
+<li><a href="section-division-algorithm.html" data-scroll="Icc">The Integers</a></li>
+<li><a href="section-poly-rings.html" data-scroll="Djf">Polynomial Rings</a></li>
+<li><a href="section-poly-division-algorithm.html" data-scroll="jqo">The Division Algorithm</a></li>
+<li><a href="section-irreducible-poly.html" data-scroll="Pxx">Irreducible Polynomials</a></li>
+<li><a href="sec-factoring-c-r.html" data-scroll="icb">Factoring over \(\C\) and \(\R\)</a></li>
+<li><a href="exercises-poly.html" data-scroll="eGv">Additional Exercises</a></li>
+<li><a href="practice-euclidean-algorithm.html" data-scroll="BUS">Additional Exercises: The Euclidean Algorithm</a></li>
+<li><a href="poly-exercises-cubics-quartics.html" data-scroll="KNE">Additional Exercises:  Solving the Cubic and Quartic Equations</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="domains.html" data-scroll="HlR"><span class="codenumber">7</span> <span class="title">Integral Domains</span></a><ul>
+<li><a href="section-field-of-fractions.html" data-scroll="cTV">Fields of Fractions</a></li>
+<li><a href="section-factorization-domains.html" data-scroll="Jbe">Factorization in Integral Domains</a></li>
+<li><a href="reading-questions-22.html" data-scroll="drU">Reading Questions</a></li>
+<li><a href="exercises-domains.html" data-scroll="kyu">Exercises</a></li>
+<li><a href="domains-references.html" data-scroll="CJg">References and Suggested Readings</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="fields.html" data-scroll="pNh"><span class="codenumber">8</span> <span class="title">Fields</span></a><ul>
+<li><a href="section-constructions.html" data-scroll="ctw">Geometric Constructions</a></li>
+<li><a href="section-fields-intro.html" data-scroll="GTt">Introduction</a></li>
+<li><a href="section-extension-fields.html" data-scroll="dGQ">Extension Fields</a></li>
+<li><a href="fields-subsection-algebraic-elements.html" data-scroll="acq">Algebraic Elements</a></li>
+<li><a href="section-fields-vectorspaces-review.html" data-scroll="UWY">A Review of Vector Spaces</a></li>
+<li><a href="section-fields-vectorspaces.html" data-scroll="Scs">Extension Fields as Vector Spaces</a></li>
+<li><a href="section-constructions-conc.html" data-scroll="XhK">What's Not Constructible</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="galois.html" data-scroll="hgP"><span class="codenumber">9</span> <span class="title">Galois Theory</span></a><ul>
+<li><a href="section-galois-splitting-fields.html" data-scroll="wmn">Splitting Fields</a></li>
+<li><a href="section-galois-field-automorphisms.html" data-scroll="iWc">Field Automorphisms</a></li>
+<li><a href="section-galois-fund-theorem-galois-theory.html" data-scroll="Pdl">The Fundamental Theorem</a></li>
+</ul>
+</li>
+<li class="link part"><a href="part-more-group-theory.html" data-scroll="part-more-group-theory"><span class="codenumber">III</span> <span class="title">More Group Theory</span></a></li>
+<li class="link">
+<a href="groups.html" data-scroll="nRa"><span class="codenumber">10</span> <span class="title">Some of the Structure of Groups</span></a><ul>
+<li><a href="section-groups-cayley.html" data-scroll="CTu">Isomorphisms and Cayley's Theorem</a></li>
+<li><a href="section-groups-permutations.html" data-scroll="mjE">Permutation Groups</a></li>
+<li><a href="section-solvable-groups.html" data-scroll="WbU">Solvable Groups</a></li>
+<li><a href="section-simplicity-of-an.html" data-scroll="GCx">The Simplicity of the Alternating Group</a></li>
+<li><a href="section-galois-applications.html" data-scroll="vku">Applications: Galois Groups</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="struct-more.html" data-scroll="YWA"><span class="codenumber">11</span> <span class="title">More of the Structure of Groups</span></a><ul>
+<li><a href="section-groups-order.html" data-scroll="hVk" class="active">Cyclic Groups and Orders of Elements</a></li>
+<li><a href="section-groups-lagrange.html" data-scroll="BOb">Lagrange's Theorem and its consequences</a></li>
+<li><a href="section-direct-products.html" data-scroll="kCy">Direct Products</a></li>
+<li><a href="section-finite-abelian-groups.html" data-scroll="pUL">Finite Abelian Groups</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="crypt.html" data-scroll="uCn"><span class="codenumber">12</span> <span class="title">Introduction to Cryptography</span></a><ul>
+<li><a href="section-private-key-crypt.html" data-scroll="Qkr">Private Key Cryptography</a></li>
+<li><a href="section-public-key-crypt.html" data-scroll="wrA">Public Key Cryptography</a></li>
+<li><a href="ws_groups-RSA-lab.html" data-scroll="zaZ">Activity: RSA Cryptography Lab</a></li>
+<li><a href="section-method-of-repeated-squares.html" data-scroll="YOj">The Method of Repeated Squares</a></li>
+<li><a href="exercises-crypt.html" data-scroll="rHH">Exercises</a></li>
+<li><a href="crypt-exercises-additional.html" data-scroll="XOQ">Additional Exercises: Primality and Factoring</a></li>
+<li><a href="crypt-references.html" data-scroll="yqf">References and Suggested Readings</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="actions.html" data-scroll="elJ"><span class="codenumber">13</span> <span class="title">Group Actions</span></a><ul>
+<li><a href="section-groups-acting-on-sets.html" data-scroll="nFv">Groups Acting on Sets</a></li>
+<li><a href="section-class-equation.html" data-scroll="TME">The Class Equation</a></li>
+<li><a href="section-burnsides-counting-theorem.html" data-scroll="zTN">Burnside's Counting Theorem</a></li>
+<li><a href="exercises-actions.html" data-scroll="PcL">Exercises</a></li>
+<li><a href="actions-exercises-programming.html" data-scroll="vjU">Programming Exercise</a></li>
+<li><a href="actions-references.html" data-scroll="VdC">References and Suggested Reading</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="sylow.html" data-scroll="TkO"><span class="codenumber">14</span> <span class="title">The Sylow Theorems</span></a><ul>
+<li><a href="section-sylow-theorems.html" data-scroll="ILJ">The Sylow Theorems</a></li>
+<li><a href="section-sylow-applications.html" data-scroll="oSS">Examples and Applications</a></li>
+<li><a href="reading-questions-23.html" data-scroll="EPk">Reading Questions</a></li>
+<li><a href="exercises-sylow.html" data-scroll="kiZ">Exercises</a></li>
+<li><a href="sylow-exercises-project.html" data-scroll="Qqi">A Project</a></li>
+<li><a href="sylow-references.html" data-scroll="Sgz">References and Suggested Readings</a></li>
+</ul>
+</li>
+<li class="link part"><a href="part-additional.html" data-scroll="part-additional"><span class="codenumber">IV</span> <span class="title">Additional Topics</span></a></li>
+<li class="link">
+<a href="matrix.html" data-scroll="CSk"><span class="codenumber">15</span> <span class="title">Matrix Groups and Symmetry</span></a><ul>
+<li><a href="section-matrix-groups.html" data-scroll="geN">Matrix Groups</a></li>
+<li><a href="section-symmetry.html" data-scroll="MlW">Symmetry</a></li>
+<li><a href="reading-questions-24.html" data-scroll="jhg">Reading Questions</a></li>
+<li><a href="exercises-matrix.html" data-scroll="nJm">Exercises</a></li>
+<li><a href="matrix-references.html" data-scroll="IcT">References and Suggested Readings</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="algcodes.html" data-scroll="jTr"><span class="codenumber">16</span> <span class="title">Algebraic Coding Theory</span></a><ul>
+<li><a href="section-error-detecting-correcting-codes.html" data-scroll="lIE">Error-Detecting and Correcting Codes</a></li>
+<li><a href="section-linear-codes.html" data-scroll="RPN">Linear Codes</a></li>
+<li><a href="section-parity-check.html" data-scroll="xWW">Parity-Check and Generator Matrices</a></li>
+<li><a href="section-efficient-decoding.html" data-scroll="eef">Efficient Decoding</a></li>
+<li><a href="reading-questions-25.html" data-scroll="gmA">Reading Questions</a></li>
+<li><a href="exercises-algcodes.html" data-scroll="NfU">Exercises</a></li>
+<li><a href="algcodes-exercises-programming.html" data-scroll="tnd">Programming Exercises</a></li>
+<li><a href="algcodes-references.html" data-scroll="GJf">References and Suggested Readings</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="finite.html" data-scroll="Gnc"><span class="codenumber">17</span> <span class="title">Finite Fields</span></a><ul>
+<li><a href="section-finite-field.html" data-scroll="jzF">Structure of a Finite Field</a></li>
+<li><a href="section-poly-codes.html" data-scroll="PGO">Polynomial Codes</a></li>
+<li><a href="reading-questions-26.html" data-scroll="RdC">Reading Questions</a></li>
+<li><a href="exercises-finite.html" data-scroll="KWV">Exercises</a></li>
+<li><a href="finite-exercises-bch-codes.html" data-scroll="ree">Additional Exercises: Error Correction for <abbr class="acronym">BCH</abbr> Codes</a></li>
+<li><a href="finite-references.html" data-scroll="Yrk">References and Suggested Readings</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="boolean.html" data-scroll="dAp"><span class="codenumber">18</span> <span class="title">Lattices and Boolean Algebras</span></a><ul>
+<li><a href="section-boolean-lattices.html" data-scroll="Tbk">Lattices</a></li>
+<li><a href="section-boolean-algebras.html" data-scroll="zit">Boolean Algebras</a></li>
+<li><a href="section-algebra-of-circuits.html" data-scroll="fpC">The Algebra of Electrical Circuits</a></li>
+<li><a href="reading-questions-27.html" data-scroll="nQZ">Reading Questions</a></li>
+<li><a href="exercises-boolean.html" data-scroll="uyA">Exercises</a></li>
+<li><a href="boolean-exercises-programming.html" data-scroll="aFJ">Programming Exercises</a></li>
+<li><a href="boolean-references.html" data-scroll="QcR">References and Suggested Readings</a></li>
+</ul>
+</li>
+<li class="link backmatter"><a href="backmatter.html" data-scroll="uDN"><span class="title">Reference</span></a></li>
+<li class="link"><a href="appendix-gfdl.html" data-scroll="gAi"><span class="codenumber">A</span> <span class="title">GNU Free Documentation License</span></a></li>
+<li class="link"><a href="solutions-1.html" data-scroll="aKW"><span class="codenumber">B</span> <span class="title">Hints and Answers to Selected Exercises</span></a></li>
+<li class="link"><a href="appendix-2.html" data-scroll="MHr"><span class="codenumber">C</span> <span class="title">Notation</span></a></li>
+<li class="link"><a href="index-1.html" data-scroll="index-1"><span class="title">Index</span></a></li>
+<li class="link"><a href="colophon-2.html" data-scroll="colophon-2"><span class="title">Colophon</span></a></li>
+</ul></nav><div class="extras"><nav><a class="mathbook-link" href="https://pretextbook.org">Authored in PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" alt="Powered by MathJax"></a></nav></div>
+</div></div>
+<main class="main"><div id="content" class="pretext-content"><section xmlns:svg="http://www.w3.org/2000/svg" class="section" id="hVk"><h2 class="heading hide-type">
+<span class="type">Section</span> <span class="codenumber">11.1</span> <span class="title">Cyclic Groups and Orders of Elements</span>
+</h2>
+<section class="introduction" id="Inh"><p id="YfZ">Given an element \(a\) in a group \(G\text{,}\) we can consider what happens when we multiply \(a\) by itself (or if we are writing the group additively, add \(a\) to itself).  Depending on what group we are in, if we continue to multiply the result by \(a\text{,}\) we might eventually find ourselves back at the identity.  How long does this take?  That is precisely the question that the <em class="emphasis">order</em> of a group element addresses.  We will see that this relatively simple idea has far reaching consequences.</p></section><section class="worksheet" id="Dbl"><h3 class="heading hide-type">
+<span class="type">Worksheet</span> <span class="codenumber">11.1.1</span> <span class="title">Powers mod Powers</span>
+</h3>
+<section class="introduction" id="BlY"><p id="mda">Main Question: What is the remainder when you divide \(a^p\) by \(p\text{?}\)</p></section><article class="exercise exercise-like" id="hth"><h6 class="heading"><span class="codenumber">1<span class="period">.</span></span></h6>
+<p id="Skj">Compute \(a^p\) for various values of \(a\) and \(p\text{.}\)  What is your conjecture?</p></article><p id="WUc">Find the remainders when you perform the following divisions.  Try different values of \(a\text{.}\)</p>
+<article class="exercise exercise-like" id="NAq"><h6 class="heading"><span class="codenumber">2<span class="period">.</span></span></h6>
+<p id="yrs">\(a^6\) divided by 10?</p></article><article class="exercise exercise-like" id="tHz"><h6 class="heading"><span class="codenumber">3<span class="period">.</span></span></h6>
+<p id="eyB">\(a^9\) divided by 15?</p></article><article class="exercise exercise-like" id="ZOI"><h6 class="heading"><span class="codenumber">4<span class="period">.</span></span></h6>
+<p id="KFK">\(a^{13}\) divided by 21?</p></article><article class="exercise exercise-like" id="FVR"><h6 class="heading"><span class="codenumber">5<span class="period">.</span></span></h6>
+<p id="qMT">\(a^{2321}\) divided by \(2419\text{?}\)</p></article></section><section class="worksheet" id="ACe"><h3 class="heading hide-type">
+<span class="type">Worksheet</span> <span class="codenumber">11.1.2</span> <span class="title">Activity: Orders of Permutations</span>
+</h3>
+<section class="introduction" id="ptf"><p id="jDT">The <em class="emphasis">order</em> of an element \(g\) in a group \(G\) is the least natural number \(n\) such that \(g^n = e\text{,}\) if such a number exists (otherwise we say the order of \(g\) is infinite).</p></section><article class="exercise exercise-like" id="VAo"><h6 class="heading"><span class="codenumber">1<span class="period">.</span></span></h6>
+<p id="PLc">Find the orders of the elements of \(S_5\) below:</p>
+<div class="displaymath">
+\begin{equation*}
+\alpha = (12) \hspace{1in}\alpha = (123) \hspace{1in} \alpha = (1234) \hspace{1in} \alpha = (12345)
+\end{equation*}
+</div>
+<div class="solutions"></div></article><article class="exercise exercise-like" id="BHx"><h6 class="heading"><span class="codenumber">2<span class="period">.</span></span></h6>
+<p id="vSl">Find an element of \(S_5\) that has an order different from those found above.</p>
+<div class="solutions"></div></article><article class="exercise exercise-like" id="hOG"><h6 class="heading"><span class="codenumber">3<span class="period">.</span></span></h6>
+<p id="bZu">Let \(\alpha\) be an element of \(S_5\text{.}\)  What is \(\alpha^{120}\text{?}\)</p>
+<div class="solutions"></div></article><article class="exercise exercise-like" id="NVP"><h6 class="heading"><span class="codenumber">4<span class="period">.</span></span></h6>
+<p id="IgD">Is there an element in \(S_5\) that has order \(120\text{?}\)</p>
+<div class="solutions"></div></article><article class="exercise exercise-like" id="ucY"><h6 class="heading"><span class="codenumber">5<span class="period">.</span></span></h6>
+<p id="onM">What is the largest order of any element in \(S_5\text{?}\)</p>
+<div class="solutions"></div></article></section><section class="subsection" id="Oct"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">11.1.3</span> <span class="title">Cyclic Subgroups</span>
+</h3>
+<p id="Eni">Often a subgroup will depend entirely on a single element of the group; that is, knowing that particular element will allow us to compute any other element in the subgroup.</p>
+<article class="example example-like" id="mFd"><h6 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">11.1</span><span class="period">.</span>
+</h6>
+<p id="baF">Suppose that we consider \(3 \in {\mathbb Z}\) and look at all multiples (both positive and negative) of \(3\text{.}\) As a set, this is</p>
+<div class="displaymath">
+\begin{equation*}
+3 {\mathbb Z} = \{ \ldots, -3, 0, 3, 6, \ldots \}\text{.}
+\end{equation*}
+</div>
+<p data-braille="continuation">It is easy to see that \(3 {\mathbb Z}\) is a subgroup of the integers. This subgroup is completely determined by the element \(3\) since we can obtain all of the other elements of the group by taking multiples of \(3\text{.}\) Every element in the subgroup is “generated” by \(3\text{.}\)</p></article><article class="example example-like" id="SMm"><h6 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">11.2</span><span class="period">.</span>
+</h6>
+<p id="HhO">If \(H = \{ 2^n : n \in {\mathbb Z} \}\text{,}\) then \(H\) is a subgroup of the multiplicative group of nonzero rational numbers, \({\mathbb Q}^*\text{.}\) If \(a = 2^m\) and \(b = 2^n\) are in \(H\text{,}\) then \(ab^{-1} = 2^m 2^{-n} = 2^{m-n}\) is also in \(H\text{.}\) Thus \(H\) is a subgroup of \({\mathbb Q}^*\) determined by the element \(2\text{.}\)</p></article><article class="theorem theorem-like" id="aqL"><h6 class="heading">
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">11.3</span><span class="period">.</span>
+</h6>
+<p id="Kcu">Let \(G\) be a group and \(a\) be any element in \(G\text{.}\) Then the set </p>
+<div class="displaymath">
+\begin{equation*}
+\langle a \rangle  = \{ a^k : k \in {\mathbb Z} \}
+\end{equation*}
+</div>
+<p data-braille="continuation">is a subgroup of \(G\text{.}\) Furthermore, \(\langle a \rangle\) is the smallest subgroup of \(G\) that contains \(a\text{.}\)</p></article><article class="proof" id="ouq"><h6 class="heading"><span class="type">Proof<span class="period">.</span></span></h6>
+<p id="tej">The identity is in \(\langle a \rangle \) since \(a^0 = e\text{.}\) If \(g\) and \(h\) are any two elements in \(\langle a \rangle \text{,}\) then by the definition of \(\langle a \rangle\) we can write \(g = a^m\) and \(h = a^n\) for some integers \(m\) and \(n\text{.}\) So \(gh = a^m a^n = a^{m+n}\) is again in \(\langle a \rangle \text{.}\) Finally, if \(g = a^n\) in \(\langle a \rangle \text{,}\) then the inverse \(g^{-1} = a^{-n}\) is also in \(\langle a \rangle \text{.}\) Clearly, any subgroup \(H\) of \(G\) containing \(a\) must contain all the powers of \(a\) by closure; hence, \(H\) contains \(\langle a \rangle \text{.}\) Therefore, \(\langle a \rangle \) is the smallest subgroup of \(G\) containing \(a\text{.}\)</p></article><article class="remark remark-like" id="roW"><h6 class="heading">
+<span class="type">Remark</span><span class="space"> </span><span class="codenumber">11.4</span><span class="period">.</span>
+</h6>
+<p id="rYQ">If we are using the “+” notation, as in the case of the integers under addition, we write \(\langle a \rangle = \{ na : n \in {\mathbb Z} \}\text{.}\)</p></article><p id="kur">For \(a \in G\text{,}\) we call \(\langle a \rangle \) the <dfn class="terminology">cyclic subgroup</dfn>  generated by \(a\text{.}\) If \(G\) contains some element \(a\) such that \(G = \langle a \rangle \text{,}\) then \(G\) is a <dfn class="terminology">cyclic group</dfn>.  In this case \(a\) is a <dfn class="terminology">generator</dfn> of \(G\text{.}\) If \(a\) is an element of a group \(G\text{,}\) we define the <dfn class="terminology">order</dfn>  of \(a\) to be the smallest positive integer \(n\) such that \(a^n= e\text{,}\) and we write \(|a| = n\text{.}\)  If there is no such integer \(n\text{,}\) we say that the order of \(a\) is infinite and write \(|a| = \infty\) to denote the order of \(a\text{.}\)</p>
+<article class="example example-like" id="yTv"><h6 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">11.5</span><span class="period">.</span>
+</h6>
+<p id="noX">Notice that a cyclic group can have more than a single generator. Both \(1\) and \(5\) generate \({\mathbb Z}_6\text{;}\) hence, \({\mathbb Z}_6\) is a cyclic group. Not every element in a cyclic group is necessarily a generator of the group. The order of \(2 \in {\mathbb Z}_6\) is \(3\text{.}\) The cyclic subgroup generated by \(2\) is \(\langle 2 \rangle = \{ 0, 2, 4 \}\text{.}\)</p></article><p id="QBA">The groups \({\mathbb Z}\) and \({\mathbb Z}_n\) are cyclic groups. The elements \(1\) and \(-1\) are generators for \({\mathbb Z}\text{.}\) We can certainly generate \({\mathbb Z}_n\) with 1 although there may be other generators of \({\mathbb Z}_n\text{,}\) as in the case of \({\mathbb Z}_6\text{.}\)</p>
+<article class="example example-like" id="faE"><h6 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">11.6</span><span class="period">.</span>
+</h6>
+<p id="Twg">The group of units, \(U(9)\text{,}\) in \({\mathbb Z}_9\) is a cyclic group. As a set, \(U(9)\) is \(\{ 1, 2, 4, 5, 7, 8  \}\text{.}\) The element 2 is a generator for \(U(9)\) since</p>
+<div class="displaymath">
+\begin{align*}
+2^1 &amp; = 2 \qquad 2^2 = 4\\
+2^3 &amp; = 8 \qquad 2^4 = 7\\
+2^5 &amp; =  5 \qquad 2^6 = 1\text{.}
+\end{align*}
+</div></article><article class="example example-like" id="LhN"><h6 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">11.7</span><span class="period">.</span>
+</h6>
+<p id="zDp">Not every group is a cyclic group. Consider the symmetry group of an equilateral triangle \(S_3\text{.}\) The multiplication table for this group is <a class="xref" data-knowl="./knowl/table-s3.html" title="Figure 2.7">Figure 2.7</a>. The subgroups of \(S_3\) are shown in <a class="xref" data-knowl="./knowl/figure-subgrps-s3.html" title="Figure 2.39">Figure 2.39</a>. Notice that every subgroup is cyclic; however, no single element generates the entire group.</p>
+<figure class="figure figure-like" id="fKy"><div class="image-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><img src="images/cyclic-s3-subgroups.svg" role="img" style="width: 100%; height: auto;" alt=""></div>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">11.8<span class="period">.</span></span><span class="space"> </span>Subgroups of \(S_3\)</figcaption></figure></article><article class="theorem theorem-like" id="GxU"><h6 class="heading">
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">11.9</span><span class="period">.</span>
+</h6>
+<p id="qjD">Every cyclic group is abelian.</p></article><article class="proof" id="UBz"><h6 class="heading"><span class="type">Proof<span class="period">.</span></span></h6>
+<p id="Zls">Let \(G\) be a cyclic group and \(a \in G\) be a generator for \(G\text{.}\) If \(g\) and \(h\) are in \(G\text{,}\) then they can be written as powers of \(a\text{,}\) say \(g = a^r\) and \(h = a^s\text{.}\) Since</p>
+<div class="displaymath">
+\begin{equation*}
+g  h = a^r a^s = a^{r+s} = a^{s+r} = a^s a^r = h g\text{,}
+\end{equation*}
+</div>
+<p data-braille="continuation">\(G\) is abelian.</p></article></section><section class="subsection" id="ujC"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">11.1.4</span> <span class="title">Subgroups of Cyclic Groups</span>
+</h3>
+<p id="wIJ">We can ask some interesting questions about cyclic subgroups of a group and subgroups of a cyclic group. If \(G\) is a group, which subgroups of \(G\) are cyclic? If \(G\) is a cyclic group, what type of subgroups does \(G\) possess?</p>
+<article class="theorem theorem-like" id="Xwf"><h6 class="heading">
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">11.10</span><span class="period">.</span>
+</h6>
+<p id="WqM">Every subgroup of a cyclic group is cyclic.</p></article><article class="proof" id="AII"><h6 class="heading"><span class="type">Proof<span class="period">.</span></span></h6>
+<p id="FsB">The main tools used in this proof are the division algorithm and the Principle of Well-Ordering. Let \(G\) be a cyclic group generated by \(a\) and suppose that \(H\) is a subgroup of \(G\text{.}\) If \(H = \{ e \}\text{,}\) then trivially \(H\) is cyclic. Suppose that \(H\) contains some other element \(g\) distinct from the identity. Then \(g\) can be written as \(a^n\) for some integer \(n\text{.}\) Since \(H\) is a subgroup, \(g^{-1} = a^{-n}\) must also be in \(H\text{.}\) Since either \(n\) or \(-n\) is positive, we can assume that \(H\) contains positive powers of \(a\) and \(n \gt 0\text{.}\) Let \(m\) be the smallest natural number such that \(a^m \in H\text{.}\) Such an \(m\) exists by the Principle of Well-Ordering.</p>
+<p id="lzK">We claim that \(h = a^m\) is a generator for \(H\text{.}\) We must show that every \(h' \in H\) can be written as a power of \(h\text{.}\) Since \(h' \in H\) and \(H\) is a subgroup of \(G\text{,}\) \(h' = a^k\) for some integer \(k\text{.}\) Using the division algorithm, we can find numbers \(q\) and \(r\) such that \(k = mq +r\) where \(0 \leq r \lt m\text{;}\) hence,</p>
+<div class="displaymath">
+\begin{equation*}
+a^k = a^{mq +r} = (a^m)^q a^r = h^q a^r\text{.}
+\end{equation*}
+</div>
+<p data-braille="continuation">So \(a^r = a^k h^{-q}\text{.}\) Since \(a^k\) and \(h^{-q}\) are in \(H\text{,}\) \(a^r\) must also be in \(H\text{.}\) However, \(m\) was the smallest positive number such that \(a^m\) was in \(H\text{;}\) consequently, \(r=0\) and so \(k=mq\text{.}\) Therefore,</p>
+<div class="displaymath">
+\begin{equation*}
+h' = a^k = a^{mq} =  h^q
+\end{equation*}
+</div>
+<p data-braille="continuation">and \(H\) is generated by \(h\text{.}\)</p></article><article class="corollary theorem-like" id="PRG"><h6 class="heading">
+<span class="type">Corollary</span><span class="space"> </span><span class="codenumber">11.11</span><span class="period">.</span>
+</h6>
+<p id="OMn">The subgroups of \({\mathbb Z}\) are exactly \(n{\mathbb Z}\) for \(n = 0, 1, 2,\ldots\text{.}\)</p></article><article class="proposition theorem-like" id="jKx"><h6 class="heading">
+<span class="type">Proposition</span><span class="space"> </span><span class="codenumber">11.12</span><span class="period">.</span>
+</h6>
+<p id="iFe">Let \(G\) be a cyclic group of order \(n\) and suppose that \(a\) is a generator for \(G\text{.}\) Then \(a^k=e\) if and only if \(n\) divides \(k\text{.}\)</p></article><article class="proof" id="MXa"><h6 class="heading"><span class="type">Proof<span class="period">.</span></span></h6>
+<p id="RGT">First suppose that \(a^k=e\text{.}\) By the division algorithm, \(k = nq + r\) where \(0 \leq r \lt n\text{;}\) hence,</p>
+<div class="displaymath">
+\begin{equation*}
+e = a^k = a^{nq + r} = a^{nq} a^r = e a^r = a^r\text{.}
+\end{equation*}
+</div>
+<p data-braille="continuation">Since the smallest positive integer \(m\) such that \(a^m = e\) is \(n\text{,}\) \(r= 0\text{.}\)</p>
+<p id="xOc">Conversely, if \(n\) divides \(k\text{,}\) then \(k=ns\) for some integer \(s\text{.}\) Consequently,</p>
+<div class="displaymath">
+\begin{equation*}
+a^k = a^{ns} = (a^n)^s = e^s = e\text{.}
+\end{equation*}
+</div></article><article class="theorem theorem-like" id="DDo"><h6 class="heading">
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">11.13</span><span class="period">.</span>
+</h6>
+<p id="CxV">Let \(G\) be a cyclic group of order \(n\) and suppose that \(a \in G\) is a generator of the group. If \(b = a^k\text{,}\) then the order of \(b\) is \(n/d\text{,}\) where \(d = \gcd(k,n)\text{.}\)</p></article><article class="proof" id="gPR"><h6 class="heading"><span class="type">Proof<span class="period">.</span></span></h6>
+<p id="dVl">We wish to find the smallest integer \(m\) such that \(e = b^m = a^{km}\text{.}\) By <a class="xref" data-knowl="./knowl/proposition-cyclic-subgrp-order.html" title="Proposition 2.43">Proposition 2.43</a>, this is the smallest integer \(m\) such that \(n\) divides \(km\) or, equivalently, \(n/d\) divides \(m(k/d)\text{.}\) Since \(d\) is the greatest common divisor of \(n\) and \(k\text{,}\) \(n/d\) and \(k/d\) are relatively prime. Hence, for \(n/d\) to divide \(m(k/d)\) it must divide \(m\text{.}\) The smallest such \(m\) is \(n/d\text{.}\)</p></article><article class="corollary theorem-like" id="vYP"><h6 class="heading">
+<span class="type">Corollary</span><span class="space"> </span><span class="codenumber">11.14</span><span class="period">.</span>
+</h6>
+<p id="uTw">The generators of \({\mathbb Z}_n\) are the integers \(r\) such that \(1 \leq r \lt n\) and \(\gcd(r,n) = 1\text{.}\)</p></article><article class="example example-like" id="cfY"><h6 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">11.15</span><span class="period">.</span>
+</h6>
+<p id="LRH">Let us examine the group \({\mathbb Z}_{16}\text{.}\) The numbers \(1\text{,}\) \(3\text{,}\) \(5\text{,}\) \(7\text{,}\) \(9\text{,}\) \(11\text{,}\) \(13\text{,}\) and \(15\) are the elements of \({\mathbb Z}_{16}\) that are relatively prime to \(16\text{.}\) Each of these elements generates \({\mathbb Z}_{16}\text{.}\) For example,</p>
+<div class="displaymath">
+\begin{align*}
+1 \cdot 9  &amp; =  9  &amp;  2 \cdot 9  &amp; = 2  &amp; 3 \cdot 9  &amp; = 11\\
+4 \cdot 9  &amp; =  4  &amp;  5 \cdot 9  &amp; = 13 &amp; 6 \cdot 9 &amp; = 6\\
+7 \cdot 9  &amp; =  15 &amp; 8 \cdot 9  &amp; = 8  &amp; 9 \cdot 9 &amp;  = 1\\
+10 \cdot 9 &amp; =  10 &amp; 11 \cdot 9 &amp; = 3  &amp; 12 \cdot 9 &amp;  = 12\\
+13 \cdot 9 &amp; =  5 &amp; 14 \cdot 9 &amp; = 14 &amp;  15 \cdot 9 &amp; = 7\text{.}
+\end{align*}
+</div></article></section></section></div></main>
+</div>
+<script src="https://unpkg.com/prismjs@v1.22.0/components/prism-core.min.js"></script><script src="https://unpkg.com/prismjs@v1.22.0/plugins/autoloader/prism-autoloader.min.js"></script>
+</body>
+</html>

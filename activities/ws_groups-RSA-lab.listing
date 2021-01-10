@@ -1,0 +1,7 @@
+dec_message_array = []
+for num in encrypted:
+    decrypted = power_mod(num, D, n)
+    digits = decrypted.digits(base=128)
+    letters = [chr(ascii) for ascii in digits]
+    dec_message_array.append(''.join(letters))
+' '.join(dec_message_array)

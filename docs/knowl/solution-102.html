@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*       on 2021-01-10T15:19:10-07:00       *-->
+<!--*   A recent stable commit (2020-08-09):   *-->
+<!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body>
+<div class="solution solution-like">
+<h6 xmlns:svg="http://www.w3.org/2000/svg" class="heading">
+<span class="type">Solution</span><span class="space"> </span><span class="codenumber">8.3.1.6.1</span><span class="period">.</span>
+</h6>
+<p>We work in \(\Q[x]/\langle p(x) \rangle\text{,}\) where \(p(x) = x^3 + 3x^2 - x + 2\text{.}\)  We must find a polynomial \(t(x) \in \Q[x]\) such that</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{equation*}
+1 + \langle p(x) \rangle = (2+3x^2)(t(x)) + \langle p(x) \rangle\text{,}
+\end{equation*}
+</div>
+<p data-braille="continuation">which is equivalent to finding polynomials \(t(x)\) and \(s(x)\) such that</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{equation*}
+1 = s(x)p(x) + t(x)(2+3x^2)\text{.}
+\end{equation*}
+</div>
+<p data-braille="continuation">We know such \(s(x)\) and \(t(x)\) exist by Bezout's theorem and the fact that \(p(x)\) is irreducible, so \(\gcd(p(x), 2+3x^2) = 1\text{.}\)</p>
+<p>The Euclidean Algorithm gives us:</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{align*}
+x^3 + 3x^2 - x + 2 \amp = \left(\frac{x}{3}+1\right)\left(3x^2 + 2\right) + \frac{-5x}{3} \\
+3x^2 + 2 \amp = \left(\frac{-9x}{5}\right)\left(\frac{-5x}{3}\right) + 2\text{.}
+\end{align*}
+</div>
+<p data-braille="continuation">Then working backwards we find:</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{align*}
+1 \amp = \frac{1}{2}(3x^2 + 2) + \left(\frac{9x}{10}\right)\left(\frac{-5x}{3}\right) \\
+1 \amp = \frac{1}{2}(3x^2+2) +\left(\frac{9x}{10}\right)\left((x^3 + 3x^2 - x + 2) - \left(\frac{x}{3}+1\right)\left(3x^2 + 2\right) \right)  \\
+1 \amp = \left(\frac{1}{2} - \frac{9x}{10}\frac{x}{3} - \frac{9x}{10}\right)(3x^2 + 2) + \left(\frac{9x}{10}\right)(x^3 + 3x^2 - x + 2) \text{.}
+\end{align*}
+</div>
+<p data-braille="continuation">So we have \(s(x) = \frac{9x}{10}\) and crucially \(t(x) = \frac{1}{2} - \frac{9}{10}x - \frac{3}{10}x^2\text{.}\)</p>
+<p xmlns:svg="http://www.w3.org/2000/svg">Shifting back to \(E\text{,}\) we see that the inverse of \(2+ 3\s^2\) is \(\frac{1}{2} - \frac{9}{10}\s - \frac{3}{10}\s^2\)</p>
+</div>
+<span class="incontext"><a href="section-extension-fields.html#VlT">in-context</a></span>
+</body>
+</html>

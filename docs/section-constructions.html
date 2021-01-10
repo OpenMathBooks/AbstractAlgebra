@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*       on 2021-01-10T15:15:02-07:00       *-->
+<!--*   A recent stable commit (2020-08-09):   *-->
+<!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<html lang="en-US">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>AATA Geometric Constructions</title>
+<meta name="Keywords" content="Authored in PreTeXt">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script src="https://sagecell.sagemath.org/embedded_sagecell.js"></script><script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [['\\(','\\)']]
+    },
+    asciimath2jax: {
+        ignoreClass: ".*",
+        processClass: "has_am"
+    },
+    jax: ["input/AsciiMath"],
+    extensions: ["asciimath2jax.js"],
+    TeX: {
+        extensions: ["extpfeil.js", "autobold.js", "https://pretextbook.org/js/lib/mathjaxknowl.js", "AMScd.js", ],
+        // scrolling to fragment identifiers is controlled by other Javascript
+        positionToHash: false,
+        equationNumbers: { autoNumber: "none", useLabelIds: true, },
+        TagSide: "right",
+        TagIndent: ".8em",
+    },
+    // HTML-CSS output Jax to be dropped for MathJax 3.0
+    "HTML-CSS": {
+        scale: 88,
+        mtextFontInherit: true,
+    },
+    CommonHTML: {
+        scale: 88,
+        mtextFontInherit: true,
+    },
+});
+</script><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS_CHTML-full"></script><link href="https://unpkg.com/prismjs@v1.22.0/themes/prism.css" rel="stylesheet">
+<script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/jquery.min.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/0.13/pretext.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/0.13/pretext_add_on.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script xmlns:svg="http://www.w3.org/2000/svg">sagecellEvalName='Evaluate (Sage)';
+</script><link xmlns:svg="http://www.w3.org/2000/svg" href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://fonts.googleapis.com/css?family=Inconsolata:400,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/pretext.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/pretext_add_on.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/banner_default.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/toc_default.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/knowls_default.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/style_default.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/colors_default.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/setcolors.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="custom-styles.css">
+<!-- 2019-10-12: Temporary - CSS file for experiments with styling --><link xmlns:svg="http://www.w3.org/2000/svg" href="developer.css" rel="stylesheet" type="text/css">
+</head>
+<body id="judson-AATA" class="mathbook-book has-toc has-sidebar-left">
+<a class="assistive" href="#content">Skip to main content</a><div xmlns:svg="http://www.w3.org/2000/svg" class="hidden-content" style="display:none">\(\newcommand{\identity}{\mathrm{id}}
+\newcommand{\notdivide}{\nmid}
+\newcommand{\notsubset}{\not\subset}
+\newcommand{\lcm}{\operatorname{lcm}}
+\newcommand{\gf}{\operatorname{GF}}
+\newcommand{\inn}{\operatorname{Inn}}
+\newcommand{\aut}{\operatorname{Aut}}
+\newcommand{\Hom}{\operatorname{Hom}}
+\newcommand{\cis}{\operatorname{cis}}
+\newcommand{\chr}{\operatorname{char}}
+\newcommand{\Null}{\operatorname{Null}}
+\newcommand{\transpose}{\text{t}}
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\Q}{\mathbb{Q}}
+\newcommand{\R}{\mathbb{R}}
+\def\C{\mathbb{C}}
+\newcommand{\st}{:}
+\newcommand{\inv}{^{-1}}
+\newcommand{\bC}{\mathbb{C}}
+      \newcommand{\F}{\mathscr{F}}
+      \newcommand{\FR}{\mathscr{F}(\R)}
+      \newcommand{\DR}{\mathscr{D}(\R)}
+      \def\s{\varrho}
+      \def\theterm{Spring 2021}
+      \def\thecourse{MATH 322}
+\newcommand{\lt}{&lt;}
+\newcommand{\gt}{&gt;}
+\newcommand{\amp}{&amp;}
+\)</div>
+<header id="masthead" class="smallbuttons"><div class="banner"><div class="container">
+<a id="logo-link" href="http://abstract.pugetsound.edu" target="_blank"><img src="images/cover_aata_2020.png" alt="Logo image"></a><div class="title-container">
+<h1 class="heading"><a href="aata-toc.html"><span class="title">Abstract Algebra:</span> <span class="subtitle">Theory and Applications, Remixed!</span></a></h1>
+<p class="byline">Thomas W. Judson</p>
+</div>
+</div></div>
+<nav xmlns:svg="http://www.w3.org/2000/svg" id="primary-navbar" class="navbar"><div class="container">
+<div class="navbar-top-buttons">
+<button class="sidebar-left-toggle-button button active" aria-label="Show or hide table of contents sidebar">Contents</button><div class="tree-nav toolbar toolbar-divisor-3">
+<a class="index-button toolbar-item button" href="index-1.html" title="Index">Index</a><span class="threebuttons"><a id="previousbutton" class="previous-button toolbar-item button" href="fields.html" title="Previous">Prev</a><a id="upbutton" class="up-button button toolbar-item" href="fields.html" title="Up">Up</a><a id="nextbutton" class="next-button button toolbar-item" href="section-fields-intro.html" title="Next">Next</a></span>
+</div>
+</div>
+<div class="navbar-bottom-buttons toolbar toolbar-divisor-4">
+<button class="sidebar-left-toggle-button button toolbar-item active">Contents</button><a class="previous-button toolbar-item button" href="fields.html" title="Previous">Prev</a><a class="up-button button toolbar-item" href="fields.html" title="Up">Up</a><a class="next-button button toolbar-item" href="section-fields-intro.html" title="Next">Next</a>
+</div>
+</div></nav></header><div class="page">
+<div xmlns:svg="http://www.w3.org/2000/svg" id="sidebar-left" class="sidebar" role="navigation"><div class="sidebar-content">
+<nav id="toc"><ul>
+<li class="link frontmatter">
+<a href="aata.html" data-scroll="Wih"><span class="title">Front Matter</span></a><ul>
+<li><a href="colophon-1.html" data-scroll="colophon-1">Colophon</a></li>
+<li><a href="acknowledgement-1.html" data-scroll="acknowledgement-1">Acknowledgements</a></li>
+<li><a href="preface-1.html" data-scroll="JEk">Preface to the Remixed Version</a></li>
+<li><a href="preface-2.html" data-scroll="Cpq">Original Preface</a></li>
+</ul>
+</li>
+<li class="link part"><a href="part-groups.html" data-scroll="part-groups"><span class="codenumber">I</span> <span class="title">Groups</span></a></li>
+<li class="link">
+<a href="sets.html" data-scroll="xcu"><span class="codenumber">1</span> <span class="title">Preliminaries</span></a><ul>
+<li><a href="section-note-on-proofs.html" data-scroll="yRH">A Short Note on Proofs</a></li>
+<li><a href="section-sets-and-functions.html" data-scroll="eYQ">Sets and Functions</a></li>
+<li><a href="section-equivalence-relations.html" data-scroll="VFe">Equivalence Relations and Partitions</a></li>
+<li><a href="section-math-induction.html" data-scroll="bUT">Mathematical Induction</a></li>
+<li><a href="exercises-sets.html" data-scroll="mDp">Additional Exercises</a></li>
+<li><a href="sets-references.html" data-scroll="ztb">References and Suggested Readings</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="groups.html" data-scroll="ZbN"><span class="codenumber">2</span> <span class="title">Groups</span></a><ul>
+<li><a href="section-mod-n-sym.html" data-scroll="nfs">Integer Equivalence Classes and Symmetries</a></li>
+<li><a href="section-groups-define.html" data-scroll="TmB">Definitions and Examples</a></li>
+<li><a href="section-basic-properties.html" data-scroll="Rxo">Basic Properties of Groups</a></li>
+<li><a href="section-subgroups.html" data-scroll="ztK">Subgroups</a></li>
+<li><a href="cyclic.html" data-scroll="MzR">Cyclic Subgroups</a></li>
+<li><a href="section-permutation-definitions.html" data-scroll="Wyg">Permutation Groups</a></li>
+<li><a href="exercises-groups.html" data-scroll="OCI">Additional Exercises</a></li>
+<li><a href="groups-exercises-detecting-errors.html" data-scroll="uJR">Additional Exercises: Detecting Errors</a></li>
+<li><a href="groups-references.html" data-scroll="muP">References and Suggested Readings</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="cosets.html" data-scroll="Uzy"><span class="codenumber">3</span> <span class="title">Cosets and Factor Groups</span></a><ul>
+<li><a href="section-cosets.html" data-scroll="xMb">Cosets</a></li>
+<li><a href="section-factor-groups.html" data-scroll="avo">Factor Groups and Normal Subgroups</a></li>
+<li><a href="exercises-cosets.html" data-scroll="FqA">Exercises</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="isomorph.html" data-scroll="OUu"><span class="codenumber">4</span> <span class="title">Isomorphisms and Homomorphisms</span></a><ul>
+<li><a href="section-isomorph-definitions.html" data-scroll="Evp">Definition and Examples</a></li>
+<li><a href="section-group-homomorphisms.html" data-scroll="uOI">Group Homomorphisms</a></li>
+<li><a href="section-group-isomorphism-theorems.html" data-scroll="aVR">The Isomorphism Theorems</a></li>
+<li><a href="exercises-isomorph.html" data-scroll="VeC">Additional Exercises</a></li>
+<li><a href="homomorph-exercises-automorphisms.html" data-scroll="Jes">Additional Exercises: Automorphisms</a></li>
+</ul>
+</li>
+<li class="link part"><a href="part-rings-and-fields.html" data-scroll="part-rings-and-fields"><span class="codenumber">II</span> <span class="title">Rings and Fields</span></a></li>
+<li class="link">
+<a href="rings.html" data-scroll="bhz"><span class="codenumber">5</span> <span class="title">Rings</span></a><ul>
+<li><a href="section-rings-definitions.html" data-scroll="kBl">Rings</a></li>
+<li><a href="section-domains-and-fields.html" data-scroll="QIu">Integral Domains and Fields</a></li>
+<li><a href="section-ring-homomorphisms.html" data-scroll="wPD">Ring Homomorphisms and Ideals</a></li>
+<li><a href="section-maximal-prime-ideals.html" data-scroll="cWM">Maximal and Prime Ideals</a></li>
+<li><a href="section-software-application.html" data-scroll="JdV">An Application to Software Design</a></li>
+<li><a href="exercises-rings.html" data-scroll="LYB">Additional Exercises</a></li>
+<li><a href="rings-exercises-programming.html" data-scroll="sfK">Programming Exercise</a></li>
+<li><a href="rings-references.html" data-scroll="JSg">References and Suggested Readings</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="poly.html" data-scroll="tPt"><span class="codenumber">6</span> <span class="title">Polynomials</span></a><ul>
+<li><a href="section-division-algorithm.html" data-scroll="Icc">The Integers</a></li>
+<li><a href="section-poly-rings.html" data-scroll="Djf">Polynomial Rings</a></li>
+<li><a href="section-poly-division-algorithm.html" data-scroll="jqo">The Division Algorithm</a></li>
+<li><a href="section-irreducible-poly.html" data-scroll="Pxx">Irreducible Polynomials</a></li>
+<li><a href="sec-factoring-c-r.html" data-scroll="icb">Factoring over \(\C\) and \(\R\)</a></li>
+<li><a href="exercises-poly.html" data-scroll="eGv">Additional Exercises</a></li>
+<li><a href="practice-euclidean-algorithm.html" data-scroll="BUS">Additional Exercises: The Euclidean Algorithm</a></li>
+<li><a href="poly-exercises-cubics-quartics.html" data-scroll="KNE">Additional Exercises:  Solving the Cubic and Quartic Equations</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="domains.html" data-scroll="HlR"><span class="codenumber">7</span> <span class="title">Integral Domains</span></a><ul>
+<li><a href="section-field-of-fractions.html" data-scroll="cTV">Fields of Fractions</a></li>
+<li><a href="section-factorization-domains.html" data-scroll="Jbe">Factorization in Integral Domains</a></li>
+<li><a href="reading-questions-22.html" data-scroll="drU">Reading Questions</a></li>
+<li><a href="exercises-domains.html" data-scroll="kyu">Exercises</a></li>
+<li><a href="domains-references.html" data-scroll="CJg">References and Suggested Readings</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="fields.html" data-scroll="pNh"><span class="codenumber">8</span> <span class="title">Fields</span></a><ul>
+<li><a href="section-constructions.html" data-scroll="ctw" class="active">Geometric Constructions</a></li>
+<li><a href="section-fields-intro.html" data-scroll="GTt">Introduction</a></li>
+<li><a href="section-extension-fields.html" data-scroll="dGQ">Extension Fields</a></li>
+<li><a href="fields-subsection-algebraic-elements.html" data-scroll="acq">Algebraic Elements</a></li>
+<li><a href="section-fields-vectorspaces-review.html" data-scroll="UWY">A Review of Vector Spaces</a></li>
+<li><a href="section-fields-vectorspaces.html" data-scroll="Scs">Extension Fields as Vector Spaces</a></li>
+<li><a href="section-constructions-conc.html" data-scroll="XhK">What's Not Constructible</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="galois.html" data-scroll="hgP"><span class="codenumber">9</span> <span class="title">Galois Theory</span></a><ul>
+<li><a href="section-galois-splitting-fields.html" data-scroll="wmn">Splitting Fields</a></li>
+<li><a href="section-galois-field-automorphisms.html" data-scroll="iWc">Field Automorphisms</a></li>
+<li><a href="section-galois-fund-theorem-galois-theory.html" data-scroll="Pdl">The Fundamental Theorem</a></li>
+</ul>
+</li>
+<li class="link part"><a href="part-more-group-theory.html" data-scroll="part-more-group-theory"><span class="codenumber">III</span> <span class="title">More Group Theory</span></a></li>
+<li class="link">
+<a href="groups.html" data-scroll="nRa"><span class="codenumber">10</span> <span class="title">Some of the Structure of Groups</span></a><ul>
+<li><a href="section-groups-cayley.html" data-scroll="CTu">Isomorphisms and Cayley's Theorem</a></li>
+<li><a href="section-groups-permutations.html" data-scroll="mjE">Permutation Groups</a></li>
+<li><a href="section-solvable-groups.html" data-scroll="WbU">Solvable Groups</a></li>
+<li><a href="section-simplicity-of-an.html" data-scroll="GCx">The Simplicity of the Alternating Group</a></li>
+<li><a href="section-galois-applications.html" data-scroll="vku">Applications: Galois Groups</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="struct-more.html" data-scroll="YWA"><span class="codenumber">11</span> <span class="title">More of the Structure of Groups</span></a><ul>
+<li><a href="section-groups-order.html" data-scroll="hVk">Cyclic Groups and Orders of Elements</a></li>
+<li><a href="section-groups-lagrange.html" data-scroll="BOb">Lagrange's Theorem and its consequences</a></li>
+<li><a href="section-direct-products.html" data-scroll="kCy">Direct Products</a></li>
+<li><a href="section-finite-abelian-groups.html" data-scroll="pUL">Finite Abelian Groups</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="crypt.html" data-scroll="uCn"><span class="codenumber">12</span> <span class="title">Introduction to Cryptography</span></a><ul>
+<li><a href="section-private-key-crypt.html" data-scroll="Qkr">Private Key Cryptography</a></li>
+<li><a href="section-public-key-crypt.html" data-scroll="wrA">Public Key Cryptography</a></li>
+<li><a href="ws_groups-RSA-lab.html" data-scroll="zaZ">Activity: RSA Cryptography Lab</a></li>
+<li><a href="section-method-of-repeated-squares.html" data-scroll="YOj">The Method of Repeated Squares</a></li>
+<li><a href="exercises-crypt.html" data-scroll="rHH">Exercises</a></li>
+<li><a href="crypt-exercises-additional.html" data-scroll="XOQ">Additional Exercises: Primality and Factoring</a></li>
+<li><a href="crypt-references.html" data-scroll="yqf">References and Suggested Readings</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="actions.html" data-scroll="elJ"><span class="codenumber">13</span> <span class="title">Group Actions</span></a><ul>
+<li><a href="section-groups-acting-on-sets.html" data-scroll="nFv">Groups Acting on Sets</a></li>
+<li><a href="section-class-equation.html" data-scroll="TME">The Class Equation</a></li>
+<li><a href="section-burnsides-counting-theorem.html" data-scroll="zTN">Burnside's Counting Theorem</a></li>
+<li><a href="exercises-actions.html" data-scroll="PcL">Exercises</a></li>
+<li><a href="actions-exercises-programming.html" data-scroll="vjU">Programming Exercise</a></li>
+<li><a href="actions-references.html" data-scroll="VdC">References and Suggested Reading</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="sylow.html" data-scroll="TkO"><span class="codenumber">14</span> <span class="title">The Sylow Theorems</span></a><ul>
+<li><a href="section-sylow-theorems.html" data-scroll="ILJ">The Sylow Theorems</a></li>
+<li><a href="section-sylow-applications.html" data-scroll="oSS">Examples and Applications</a></li>
+<li><a href="reading-questions-23.html" data-scroll="EPk">Reading Questions</a></li>
+<li><a href="exercises-sylow.html" data-scroll="kiZ">Exercises</a></li>
+<li><a href="sylow-exercises-project.html" data-scroll="Qqi">A Project</a></li>
+<li><a href="sylow-references.html" data-scroll="Sgz">References and Suggested Readings</a></li>
+</ul>
+</li>
+<li class="link part"><a href="part-additional.html" data-scroll="part-additional"><span class="codenumber">IV</span> <span class="title">Additional Topics</span></a></li>
+<li class="link">
+<a href="matrix.html" data-scroll="CSk"><span class="codenumber">15</span> <span class="title">Matrix Groups and Symmetry</span></a><ul>
+<li><a href="section-matrix-groups.html" data-scroll="geN">Matrix Groups</a></li>
+<li><a href="section-symmetry.html" data-scroll="MlW">Symmetry</a></li>
+<li><a href="reading-questions-24.html" data-scroll="jhg">Reading Questions</a></li>
+<li><a href="exercises-matrix.html" data-scroll="nJm">Exercises</a></li>
+<li><a href="matrix-references.html" data-scroll="IcT">References and Suggested Readings</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="algcodes.html" data-scroll="jTr"><span class="codenumber">16</span> <span class="title">Algebraic Coding Theory</span></a><ul>
+<li><a href="section-error-detecting-correcting-codes.html" data-scroll="lIE">Error-Detecting and Correcting Codes</a></li>
+<li><a href="section-linear-codes.html" data-scroll="RPN">Linear Codes</a></li>
+<li><a href="section-parity-check.html" data-scroll="xWW">Parity-Check and Generator Matrices</a></li>
+<li><a href="section-efficient-decoding.html" data-scroll="eef">Efficient Decoding</a></li>
+<li><a href="reading-questions-25.html" data-scroll="gmA">Reading Questions</a></li>
+<li><a href="exercises-algcodes.html" data-scroll="NfU">Exercises</a></li>
+<li><a href="algcodes-exercises-programming.html" data-scroll="tnd">Programming Exercises</a></li>
+<li><a href="algcodes-references.html" data-scroll="GJf">References and Suggested Readings</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="finite.html" data-scroll="Gnc"><span class="codenumber">17</span> <span class="title">Finite Fields</span></a><ul>
+<li><a href="section-finite-field.html" data-scroll="jzF">Structure of a Finite Field</a></li>
+<li><a href="section-poly-codes.html" data-scroll="PGO">Polynomial Codes</a></li>
+<li><a href="reading-questions-26.html" data-scroll="RdC">Reading Questions</a></li>
+<li><a href="exercises-finite.html" data-scroll="KWV">Exercises</a></li>
+<li><a href="finite-exercises-bch-codes.html" data-scroll="ree">Additional Exercises: Error Correction for <abbr class="acronym">BCH</abbr> Codes</a></li>
+<li><a href="finite-references.html" data-scroll="Yrk">References and Suggested Readings</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="boolean.html" data-scroll="dAp"><span class="codenumber">18</span> <span class="title">Lattices and Boolean Algebras</span></a><ul>
+<li><a href="section-boolean-lattices.html" data-scroll="Tbk">Lattices</a></li>
+<li><a href="section-boolean-algebras.html" data-scroll="zit">Boolean Algebras</a></li>
+<li><a href="section-algebra-of-circuits.html" data-scroll="fpC">The Algebra of Electrical Circuits</a></li>
+<li><a href="reading-questions-27.html" data-scroll="nQZ">Reading Questions</a></li>
+<li><a href="exercises-boolean.html" data-scroll="uyA">Exercises</a></li>
+<li><a href="boolean-exercises-programming.html" data-scroll="aFJ">Programming Exercises</a></li>
+<li><a href="boolean-references.html" data-scroll="QcR">References and Suggested Readings</a></li>
+</ul>
+</li>
+<li class="link backmatter"><a href="backmatter.html" data-scroll="uDN"><span class="title">Reference</span></a></li>
+<li class="link"><a href="appendix-gfdl.html" data-scroll="gAi"><span class="codenumber">A</span> <span class="title">GNU Free Documentation License</span></a></li>
+<li class="link"><a href="solutions-1.html" data-scroll="aKW"><span class="codenumber">B</span> <span class="title">Hints and Answers to Selected Exercises</span></a></li>
+<li class="link"><a href="appendix-2.html" data-scroll="MHr"><span class="codenumber">C</span> <span class="title">Notation</span></a></li>
+<li class="link"><a href="index-1.html" data-scroll="index-1"><span class="title">Index</span></a></li>
+<li class="link"><a href="colophon-2.html" data-scroll="colophon-2"><span class="title">Colophon</span></a></li>
+</ul></nav><div class="extras"><nav><a class="mathbook-link" href="https://pretextbook.org">Authored in PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" alt="Powered by MathJax"></a></nav></div>
+</div></div>
+<main class="main"><div id="content" class="pretext-content"><section xmlns:svg="http://www.w3.org/2000/svg" class="section" id="ctw"><h2 class="heading hide-type">
+<span class="type">Section</span> <span class="codenumber">8.1</span> <span class="title">Geometric Constructions</span>
+</h2>
+<section class="introduction" id="Tof"><p id="vhh">In ancient Greece, three classic problems were posed. These problems are geometric in nature and involve straightedge-and-compass constructions from what is now high school geometry; that is, we are allowed to use only a straightedge and compass to solve them. The problems can be stated as follows.</p>
+<ol class="decimal">
+<li id="CEp"><p id="pUy">Given an arbitrary angle, can one trisect the angle into three equal subangles using only a straightedge and compass?</p></li>
+<li id="iLy"><p id="WbH">Given an arbitrary circle, can one construct a square with the same area using only a straightedge and compass?</p></li>
+<li id="OSH"><p id="CiQ">Given a cube, can one construct the edge of another cube having twice the volume of the original? Again, we are only allowed to use a straightedge and compass to do the construction.</p></li>
+</ol>
+<p data-braille="continuation">After puzzling mathematicians for over two thousand years, each of these constructions was finally shown to be impossible. We will use the theory of fields to provide a proof that the solutions do not exist. It is quite remarkable that the long-sought solution to each of these three geometric problems came from abstract algebra.</p>
+<p id="boq">First, let us determine more specifically what we mean by a straightedge and compass, and also examine the nature of these problems in a bit more depth. To begin with, <em class="emphasis">a straightedge is not a ruler</em>. We cannot measure arbitrary lengths with a straightedge. It is merely a tool for drawing a line through two points. The statement that the trisection of an arbitrary angle is impossible means that there is at least one angle that is impossible to trisect with a straightedge-and-compass construction. Certainly it is possible to trisect an angle in special cases. We can construct a \(30^\circ\) angle; hence, it is possible to trisect a \(90^\circ\) angle. However, we will show that it is impossible to construct a \(20^\circ\) angle. Therefore, we cannot trisect a \(60^\circ\) angle.</p></section><section class="worksheet" id="Cka"><h3 class="heading hide-type">
+<span class="type">Worksheet</span> <span class="codenumber">8.1.1</span> <span class="title">Activity: Geometric Constructions</span>
+</h3>
+<section class="introduction" id="acQ"><p id="FeG">Our first application of algebra (to other mathematics) will be to questions of classical geometry.  We will look at geometry as it was done in ancient Greece, except that we will use GeoGebra for our constructions.</p>
+<p id="llP">Our main question is, what can you <em class="emphasis">construct</em> using reasonable, fundamental tools.  The tools are: an <em class="emphasis">unmarked straightedge</em> and a <em class="emphasis">compass</em>.</p>
+<p id="RsY">In GeoGebra, there are many more tools than these. Make sure you only use the “new point” tool (to place points at the intersections of lines and circles), the “line through two points” tool, and the “compass” tool (under the circle menu).  You can also use the arrow to drag things around if you need to.</p>
+<p id="xAh">To get a feel for the sorts of things you can construct, and maybe things you cannot, here are a few challenges.</p></section><article class="exercise exercise-like" id="GjZ"><h6 class="heading"><span class="codenumber">1<span class="period">.</span></span></h6>
+<p id="dHq">Can you construct a \(60^\circ\) angle?  A \(30^\circ\) angle?  If you have constructed any angle at all, can you construct an angle half its measure?  That is, can you <em class="emphasis">bisect</em> an given angle?</p>
+<div class="solutions"></div></article><article class="exercise exercise-like" id="mri"><h6 class="heading"><span class="codenumber">2<span class="period">.</span></span></h6>
+<p id="JOz">Can you construct a square?  Can you double the square?  That is, if you can construct a square, can you construct a square of twice the area?  Careful: this is not a square whose side length is twice the side length of the original.</p>
+<div class="solutions"></div></article><article class="exercise exercise-like" id="Syr"><h6 class="heading"><span class="codenumber">3<span class="period">.</span></span></h6>
+<p id="pVI">Can you double the circle?  That is, can you construct a circle and then construct a second circle of twice the area?</p>
+<div class="solutions"></div></article><article class="exercise exercise-like" id="yFA"><h6 class="heading"><span class="codenumber">4<span class="period">.</span></span></h6>
+<p id="WcR">Here are three much harder, but related challenges.  For each, play around enough to convince yourself these are really hard, if not impossible:</p>
+<ol class="lower-alpha">
+<li id="jwC"><p id="bSd">Can you <em class="emphasis">trisect</em> and angle?  That is, given a constructed angle, can you construct an angle \(1/3\) its measure?</p></li>
+<li id="PDL"><p id="HZm">Can you double the <em class="emphasis">cube</em>?  That is, if you can constructed a cube (or at least a line segment which is the length of the edge of a cube), can you construct cube with twice the volume of the original?</p></li>
+<li id="vKU"><p id="ogv">Can you square the circle?  That is, if you have constructed a circle, can you construct a square that has the same area as the circle?</p></li>
+</ol>
+<div class="solutions"></div></article></section><section class="worksheet" id="tVH"><h3 class="heading hide-type">
+<span class="type">Worksheet</span> <span class="codenumber">8.1.2</span> <span class="title">Activity: Constructible Numbers</span>
+</h3>
+<section class="introduction" id="gXv"><p id="sgu">We have considered what geometric shapes we could or could not construct.  We are left with three big questions: is it possible to <em class="emphasis">trisect an angle</em>, to <em class="emphasis">double a cube</em>, or to <em class="emphasis">square a circle</em>.  To answer these questions, we must “algebratize” geometric constructions.</p>
+<p id="YnD">Start with two constructible points \(0\) and \(1\) <em class="emphasis">one unit</em> apart.  We define <dfn class="terminology">constructible</dfn> recursively from this base case:</p>
+<ol class="lower-alpha">
+<li id="iMI"><p id="bij">A <dfn class="terminology">constructible line</dfn> is a line passing through two constructible points.</p></li>
+<li id="OTR"><p id="Hps">A <dfn class="terminology">constructible circle</dfn> is a circle whose radius is a constructible number and whose center is a constructible point.</p></li>
+<li id="vba"><p id="nwB">A <dfn class="terminology">constructible point</dfn> is the intersection of two constructible lines, two constructible circles, or a constructible line and a constructible circle.</p></li>
+</ol>
+<p id="EuM">We say a number \(a\) is <dfn class="terminology">constructible</dfn> provided \(a = 0\) or there are two constructible points distance \(|a|\) apart.  So far we have constructible numbers 0, 1, and \(-1\text{.}\)  What else is constructible?</p>
+<p id="kBV">For this activity, use GeoGebra.  Use only the “new point” tool (to place points at the intersections of lines, circles, or both), the “line through two points” tool, and the “compass” tool (under the circle menu).  You can also use the arrow to drag things around if you need to.</p></section><article class="exercise exercise-like" id="NeE"><h6 class="heading"><span class="codenumber">1<span class="period">.</span></span></h6>
+<p id="QJe">Show that the numbers 2 and 4 are constructible.  Then show that the number \(3 = 4 - 1\) is constructible.</p>
+<div class="solutions"></div></article><article class="exercise exercise-like" id="tlN"><h6 class="heading"><span class="codenumber">2<span class="period">.</span></span></h6>
+<p id="wQn">If \(a\) and \(b\) are constructible numbers, are the numbers \(a+b\) and \(a-b\) also constructible?</p></article><article class="exercise exercise-like" id="ZsW"><h6 class="heading"><span class="codenumber">3<span class="period">.</span></span></h6>
+<p id="cXw">Suppose \(a\) and \(b\) are constructible.  Construct a triangle containing a base of unit length adjacent to a side of length \(a\text{.}\)  Construct a similar triangle with where the side corresponding the unit length side now has length \(b\text{.}\)  What is the length of the side corresponding to the \(a\)-length side?</p>
+<div class="image-box" style="width: 25%; margin-left: 37.5%; margin-right: 37.5%;"><img src="images/img-construct-product.svg" role="img" style="width: 100%; height: auto;" alt=""></div>
+<div class="solutions"></div></article><article class="exercise exercise-like" id="FAf"><h6 class="heading"><span class="codenumber">4<span class="period">.</span></span></h6>
+<p id="JeF">Explain how you can modify the above construction to prove that if \(a\) and \(b\) are constructible, then \(a/b\) is constructible.</p>
+<div class="solutions"></div></article><article class="exercise exercise-like" id="lHo"><h6 class="heading"><span class="codenumber">5<span class="period">.</span></span></h6>
+<p id="plO">Given constructible number \(c\text{,}\) explain how you can construct the figure below.  The vertical line should be perpendicular to the horizontal line, which is the diameter of the circle.</p>
+<div class="image-box" style="width: 30%; margin-left: 35%; margin-right: 35%;"><img src="images/img-root-construct.svg" role="img" style="width: 100%; height: auto;" alt=""></div>
+<p id="VsX">What is the length of the vertical line?</p>
+<div class="solutions"></div></article><article class="exercise exercise-like" id="ROx"><h6 class="heading"><span class="codenumber">6<span class="period">.</span></span></h6>
+<p id="BAg">Let \(\mathfrak C\) be the set of all constructible numbers.  What sort of set is this?  Is it a group?  A ring?  A field?  Is it one of these we know about already?</p>
+<div class="solutions"></div></article></section><section class="subsection" id="iiI"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">8.1.3</span> <span class="title">Constructible Numbers</span>
+</h3>
+<p id="nhj">A real number \(\alpha\) is <dfn class="terminology">constructible</dfn>  if we can construct a line segment of length \(| \alpha |\) in a finite number of steps from a segment of unit length by using a straightedge and compass.</p>
+<article class="theorem theorem-like" id="TJE"><h6 class="heading">
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">8.1</span><span class="period">.</span>
+</h6>
+<p id="mSO">The set of all constructible real numbers forms a subfield \(F\) of the field of real numbers.</p></article><article class="proof" id="Vds"><h6 class="heading"><span class="type">Proof<span class="period">.</span></span></h6>
+<p id="gtI">Let \(\alpha\) and \(\beta\) be constructible numbers. We must show that \(\alpha + \beta\text{,}\) \(\alpha - \beta\text{,}\) \(\alpha \beta\text{,}\) and \(\alpha / \beta\) (\(\beta \neq 0\)) are also constructible numbers. We can assume that both \(\alpha\) and \(\beta\) are positive with \(\alpha \gt \beta\text{.}\) It is quite obvious how to construct \(\alpha + \beta\) and \(\alpha - \beta\text{.}\) To find a line segment with length \(\alpha \beta\text{,}\) we assume that \(\beta \gt 1\) and construct the triangle in <a class="xref" data-knowl="./knowl/figure-multiplication-construction.html" title="Figure 8.2">Figure 8.2</a> such that triangles \(\triangle ABC\) and \(\triangle ADE\) are similar. Since \(\alpha / 1 = x / \beta\text{,}\) the line segment \(x\) has length \(\alpha \beta\text{.}\) A similar construction can be made if \(\beta \lt 1\text{.}\) We will leave it as an exercise to show that the same triangle can be used to construct \(\alpha / \beta\) for \(\beta \neq 0\text{.}\)</p></article><figure class="figure figure-like" id="rRc"><div class="image-box" style="width: 80%; margin-left: 10%; margin-right: 10%;"><img src="images/fields-multiply.svg" role="img" style="width: 100%; height: auto;" alt=""></div>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">8.2<span class="period">.</span></span><span class="space"> </span>Construction of products</figcaption></figure><article class="lemma theorem-like" id="fXW"><h6 class="heading">
+<span class="type">Lemma</span><span class="space"> </span><span class="codenumber">8.3</span><span class="period">.</span>
+</h6>
+<p id="Lvy">If \(\alpha\) is a constructible number, then \(\sqrt{\alpha}\) is a constructible number.</p></article><article class="proof" id="tGc"><h6 class="heading"><span class="type">Proof<span class="period">.</span></span></h6>
+<p id="MAR">In <a class="xref" data-knowl="./knowl/figure-root-construction.html" title="Figure 8.4">Figure 8.4</a> the triangles \(\triangle ABD\text{,}\) \(\triangle BCD\text{,}\) and \(\triangle ABC\) are similar; hence, \(1 /x = x / \alpha\text{,}\) or \(x^2 = \alpha\text{.}\)</p></article><figure class="figure figure-like" id="XYl"><div class="image-box" style="width: 80%; margin-left: 10%; margin-right: 10%;"><img src="images/fields-root.svg" role="img" style="width: 100%; height: auto;" alt=""></div>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">8.4<span class="period">.</span></span><span class="space"> </span>Construction of roots</figcaption></figure><p id="Tos">By <a class="xref" data-knowl="./knowl/theorem-constructible-numbers.html" title="Theorem 8.1">Theorem 8.1</a>, we can locate in the plane any point \(P =( p, q)\) that has rational coordinates \(p\) and \(q\text{.}\) We need to know what other points can be constructed with a compass and straightedge from points with rational coordinates.</p>
+<article class="lemma theorem-like" id="Mff"><h6 class="heading">
+<span class="type">Lemma</span><span class="space"> </span><span class="codenumber">8.5</span><span class="period">.</span>
+</h6>
+<p id="rCH">Let \(F\) be a subfield of \({\mathbb R}\text{.}\)</p>
+<ol class="decimal">
+<li id="uZQ"><p id="ipZ">If a line contains two points in \(F\text{,}\) then it has the equation \(a x + by + c = 0\text{,}\) where \(a\text{,}\) \(b\text{,}\) and \(c\) are in \(F\text{.}\)</p></li>
+<li id="bgZ"><p id="Oxi">If a circle has a center at a point with coordinates in \(F\) and a radius that is also in \(F\text{,}\) then it has the equation \(x^2 + y^2 + d x + e y + f = 0\text{,}\) where \(d\text{,}\) \(e\text{,}\) and \(f\) are in \(F\text{.}\)</p></li>
+</ol></article><article class="proof" id="ZNl"><h6 class="heading"><span class="type">Proof<span class="period">.</span></span></h6>
+<p id="sIa">Let \((x_1, y_1)\) and \((x_2, y_2)\) be points on a line whose coordinates are in \(F\text{.}\) If \(x_1 = x_2\text{,}\) then the equation of the line through the two points is \(x - x_1 = 0\text{,}\) which has the form \(a x + by + c = 0\text{.}\) If \(x_1 \neq x_2\text{,}\) then the equation of the line through the two points is given by</p>
+<div class="displaymath">
+\begin{equation*}
+y - y_1 = \left( \frac{y_2 - y_1}{x_2 - x_1} \right) (x - x_1)\text{,}
+\end{equation*}
+</div>
+<p data-braille="continuation">which can also be put into the proper form.</p>
+<p id="YPj">To prove the second part of the lemma, suppose that \((x_1, y_1)\) is the center of a circle of radius \(r\text{.}\) Then the circle has the equation</p>
+<div class="displaymath">
+\begin{equation*}
+(x - x_1)^2 + (y - y_1)^2 - r^2 = 0\text{.}
+\end{equation*}
+</div>
+<p data-braille="continuation">This equation can easily be put into the appropriate form.</p></article><p id="zvB">Starting with a field of constructible numbers \(F\text{,}\) we have three possible ways of constructing additional points in \({\mathbb R}\) with a compass and straightedge.</p>
+<ol class="decimal">
+<li id="Hoi"><p id="uEr">To find possible new points in \({\mathbb R}\text{,}\) we can take the intersection of two lines, each of which passes through two known points with coordinates in \(F\text{.}\)</p></li>
+<li id="nvr"><p id="aLA">The intersection of a line that passes through two points that have coordinates in \(F\) and a circle whose center has coordinates in \(F\) with radius of a length in \(F\) will give new points in \({\mathbb R}\text{.}\)</p></li>
+<li id="TCA"><p id="GSJ">We can obtain new points in \({\mathbb R}\) by intersecting two circles whose centers have coordinates in \(F\) and whose radii are of lengths in \(F\text{.}\)</p></li>
+</ol>
+<p data-braille="continuation">The first case gives no new points in \({\mathbb R}\text{,}\) since the solution of two equations of the form \(a x + by + c = 0\) having coefficients in \(F\) will always be in \(F\text{.}\) The third case can be reduced to the second case. Let</p>
+<div class="displaymath">
+\begin{gather*}
+x^2 + y^2 + d_1 x + e_1 y + f_1 = 0\\
+x^2 + y^2 + d_2 x + e_2 y + f_2 = 0
+\end{gather*}
+</div>
+<p data-braille="continuation"> be the equations of two circles, where \(d_i\text{,}\) \(e_i\text{,}\) and \(f_i\) are in \(F\) for \(i = 1, 2\text{.}\) These circles have the same intersection as the circle</p>
+<div class="displaymath">
+\begin{equation*}
+x^2 + y^2 + d_1 x +e_1 x + f_1 = 0
+\end{equation*}
+</div>
+<p data-braille="continuation">and the line</p>
+<div class="displaymath">
+\begin{equation*}
+(d_1 - d_2) x + b(e_2 - e_1)y + (f_2 - f_1) = 0\text{.}
+\end{equation*}
+</div>
+<p data-braille="continuation">The last equation is that of the chord passing through the intersection points of the two circles. Hence, the intersection of two circles can be reduced to the case of an intersection of a line with a circle.</p>
+<p id="fCK">Considering the case of the intersection of a line and a circle, we must determine the nature of the solutions of the equations</p>
+<div class="displaymath">
+\begin{align*}
+a x + by + c &amp; = 0\\
+x^2 + y^2 + d x + e y + f &amp; = 0\text{.}
+\end{align*}
+</div>
+<p data-braille="continuation">If we eliminate \(y\) from these equations, we obtain an equation of the form \(Ax^2 + B x + C = 0\text{,}\) where \(A\text{,}\) \(B\text{,}\) and \(C\) are in \(F\text{.}\) The \(x\) coordinate of the intersection points is given by</p>
+<div class="displaymath">
+\begin{equation*}
+x = \frac{- B \pm \sqrt{B^2 - 4 A C} }{2 A}
+\end{equation*}
+</div>
+<p data-braille="continuation">and is in \(F( \sqrt{\alpha}\, )\text{,}\) where \(\alpha = B^2 - 4 A C \gt 0\text{.}\) We have proven the following lemma.</p>
+<article class="lemma theorem-like" id="smo"><h6 class="heading">
+<span class="type">Lemma</span><span class="space"> </span><span class="codenumber">8.6</span><span class="period">.</span>
+</h6>
+<p id="XJQ">Let \(F\) be a field of constructible numbers. Then the points determined by the intersections of lines and circles in \(F\) lie in the field \(F( \sqrt{\alpha}\, )\) for some \(\alpha\) in \(F\text{.}\)</p></article><p id="sPO">So what is the field of <em class="emphasis">all</em> constructible numbers?  This will definitely contain \(\Q\text{,}\) but then we can repeatedly add square roots of elements.  And not just elements from \(\Q\text{,}\) but also square roots of elements found in extension fields we got by taking square roots previously.</p>
+<p id="YWX">This brings us to the idea of an <dfn class="terminology">itterated extension</dfn>: you get an extension field by adding a new number, then get another extension field by adding a new number to the first extension field.  And we can keep going as far as we like.</p>
+<p id="Feg">So what we have now is that every constructable number is an element of some extension field of some extension field of some extension field of … some extension field of \(\Q\text{,}\) each extension of the form \(F(\sqrt{\alpha_i})\) where \(\alpha_i \in F\) (but the \(F\)s are changing as we go up the line).  We can state this more cleanly as follows.</p>
+<article class="theorem theorem-like" id="gBw"><h6 class="heading">
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">8.7</span><span class="period">.</span>
+</h6>
+<p id="MIF">A real number \(\alpha\) is a constructible number if and only if there exists a  sequence of fields</p>
+<div class="displaymath">
+\begin{equation*}
+{\mathbb Q} = F_0 \subset F_1 \subset \cdots \subset F_k
+\end{equation*}
+</div>
+<p data-braille="continuation">such that \(F_i = F_{i-1}( \sqrt{ \alpha_i}\, )\) with \(\alpha_i \in F_i\) and \(\alpha \in F_k\text{.}\) </p></article><p id="llp">Now if we want the field of <em class="emphasis">all</em> constructible numbers, we need to extend this process forever.  This shows that the field of constructible numbers is not a “finite” extension of \(\Q\text{,}\) although it is still an <em class="emphasis">algebraic</em> extension.</p>
+<p id="Rsy">What does all of this have to do with solving the problems of doubling the cube, squaring the circle, and trisecting an angle?  To answer this question we need to use what we have developed about the <em class="emphasis">size</em> of a field extension: its <dfn class="terminology">degree</dfn>.</p></section><section class="exercises" id="zph"><h3 class="heading hide-type">
+<span class="type">Exercises</span> <span class="codenumber">8.1.4</span> <span class="title">Collected Homework</span>
+</h3>
+<article class="exercise exercise-like" id="aMx"><h6 class="heading"><span class="codenumber">1<span class="period">.</span></span></h6>
+<p id="ThY">Write up a careful argument for question 4 from the activity <a href="section-constructions.html#tVH" class="internal" title="Worksheet 8.1.2: Activity: Constructible Numbers">Constructible Numbers</a>: Prove that if \(a\) and \(b\) are constructible numbers, with \(b \ne 0\text{,}\) then \(a/b\) is also constructible.</p>
+<div class="solutions">
+<a data-knowl="" class="id-ref hint-knowl original" data-refid="hk-GTG" id="GTG"><span class="type">Hint</span></a><div class="hidden-content tex2jax_ignore" id="hk-GTG"><div class="hint solution-like"><p id="naP">As suggested in the worksheet, you will modify the argument that \(a\cdot b\) is constructible when \(a\) and \(b\) are.  That is, you should use similar triangles.  Make sure you explain why you can construct the similar triangles you need, and also why the side you find really is \(a/b\text{.}\)</p></div></div>
+</div></article></section></section></div></main>
+</div>
+<script src="https://unpkg.com/prismjs@v1.22.0/components/prism-core.min.js"></script><script src="https://unpkg.com/prismjs@v1.22.0/plugins/autoloader/prism-autoloader.min.js"></script>
+</body>
+</html>

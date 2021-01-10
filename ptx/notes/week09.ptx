@@ -1,0 +1,234 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<section xml:id="notes-week9" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>Week 9: March 9-13</title>
+
+
+<subsection xml:id="notes-3-9">
+  <title>Monday and Wednesday: Solvability by Radicals</title>
+  <p>
+			Here is the main question we asked after the last exam: What do the roots of <m>x^5 - 5x - 2</m> look like? Is there something analogous to the quadratic formula that will tell us the roots?
+  </p>
+
+  <p>
+			Approach: Describe the splitting field <m>E</m>, and consider <m>\mathop{\mathrm{Gal}}(E:\mathbb Q)</m> and its subgroups. Use properties of groups to say something interesting about the subgroups. Translate this back to say something interesting about the splitting field (and its subfields). Translate that to say something about the polynomial.
+  </p>
+
+  <p>
+			Today, let’s remind ourselves about what we know from Galois theory.
+  </p>
+
+  <p>
+    <ul>
+      <li>
+        <p>
+			Given a polynomial <m>p(x)</m>, we can find its <em>splitting field</em>
+          <m>E</m>, the smallest extension field in which the polynomial factors into linear terms (splits).
+        </p>
+      </li>
+
+      <li>
+        <p>
+			We can look at automorphisms of the splitting field that <em>fix</em> the base field (usually <m>\mathbb Q</m>, which has to be fixed anyway).
+        </p>
+      </li>
+
+      <li>
+        <p>
+			These automorphisms must send roots of irreducible polynomials to roots of the same irreducible polynomial. If <m>p(x)</m> is not irreducible, then we need to look at its irreducible factors to see what the automorphisms look like.
+        </p>
+      </li>
+
+      <li>
+        <p>
+			The set of all <m>\mathbb Q</m>-fixing automorphisms of <m>E</m> forms a group (under composition) called the <em>Galois group of <m>E</m> over <m>\mathbb Q</m>
+        </em>, written <m>\mathop{\mathrm{Gal}}(E:\mathbb Q)</m>.
+      </p>
+    </li>
+
+    <li>
+      <p>
+			There is a strong connection between the field extension and the Galois group, which is the content of the <em>Fundamental Theorem of Galois Theory</em>.
+      </p>
+    </li>
+
+    <li>
+      <p>
+			One of these is that the size of the Galois group is equal to the degree of the field extension. But there is more.
+      </p>
+    </li>
+
+    <li>
+      <p>
+			If we look at a subgroup <m>H</m> of <m>\mathop{\mathrm{Gal}}(E:\mathbb Q)</m>, we get a subset of the automorphisms of <m>E</m> that fix <m>\mathbb Q</m>. We consider the set of elements in <m>E</m> that are fixed by all the automorphisms in <m>H</m>. This is a field <m>F</m>, and thus an <em>intermediate field</em> between <m>\mathbb Q</m> and <m>E</m>. We call it the <em>fixed field</em> of <m>H</m>.
+      </p>
+    </li>
+
+    <li>
+      <p>
+			On the other hand, if we take an intermediate field <m>I</m> (so <m>\mathbb Q\subset I \subset E</m>) we can consider <m>\mathop{\mathrm{Gal}}(E:I)</m>, the group of all automorphisms of <m>E</m> that fix <m>I</m>. We call this group the <em>fixer</em> of <m>I</m>.
+      </p>
+    </li>
+
+    <li>
+      <p>
+			These match up exactly! We could prove: If <m>H</m> is the fixer of <m>I</m>, then <m>I</m> is the fixed field of <m>H</m>, and if <m>I</m> is the fixed field of <m>H</m>, then <m>H</m> is the fixer of <m>I</m>.
+      </p>
+    </li>
+
+    <li>
+      <p>
+			And it gets even better. Suppose that <m>I</m> is not just an intermediate field, but is itself a splitting field from some polynomial. In this case it makes sense to consider <m>\mathop{\mathrm{Gal}}(I:\mathbb Q)</m> as well.
+      </p>
+    </li>
+
+    <li>
+      <p>
+			These are automorphisms of <m>I</m> that fix <m>\mathbb Q</m>. Now technically none of these automorphisms belong to <m>\mathop{\mathrm{Gal}}(E:\mathbb Q)</m>, but they are related. By a homomorphism!
+      </p>
+    </li>
+
+    <li>
+      <p>
+			Given an automorphism in <m>\mathop{\mathrm{Gal}}(E:\mathbb Q)</m>, consider its restriction to <m>I</m>. That is, simply restrict the domain to only include elements from <m>I</m>. It turns out that the function that takes a automorphism to its restriction is a homomorphism. And where there’s a homomorphism, there is a kernel. These will be the automorphisms of <m>\mathop{\mathrm{Gal}}(E:\mathbb Q)</m> which are the identity on <m>I</m>. That is, exactly the elements of <m>\mathop{\mathrm{Gal}}(E:I)</m>.
+      </p>
+    </li>
+
+    <li>
+      <p>
+			So by the Fundamental Homomorphism Theorem, <me>\mathop{\mathrm{Gal}}(I:\mathbb Q) \cong [\mathop{\mathrm{Gal}}(E:\mathbb Q)]/[\mathop{\mathrm{Gal}}(E:I)]</me> In particular, we see that the fixer of a splitting field is a normal subgroup.
+      </p>
+
+      <p>
+			Show the Galois correspondence for the whole diagram of intermediate fields of <m>\mathbb Q(\sqrt{2},\sqrt{3})</m>.
+      </p>
+
+      <p>
+			The field <m>\mathbb Q(\sqrt{2},\sqrt{3}, \sqrt{7})</m> has Galois group isomorphic to <m>\mathbb Z_2\times\mathbb Z_2\times\mathbb Z_2</m>. Consider the two subnormal series <me>\mathbb Z_2\times\mathbb Z_2\times\mathbb Z_2 \supset \langle (1,0,0), (0,1,0)\rangle \supset \{(0,0,0)\}</me>
+        <me>\mathbb Z_2\times\mathbb Z_2\times\mathbb Z_2 \supset \langle (0,0,1)\rangle \supset \{(0,0,0)\}</me> What intermediate fields do these match up with?
+      </p>
+    </li>
+
+  </ul>
+</p>
+
+
+  <p>
+				Let's try to understand why there is nothing like the quadratic formula for polynomials in general. Specifically, there is no quintic (or higher) formula.
+  </p>
+
+  <p>
+    <ul>
+      <li>
+        <p>
+				What do we mean by something like the quadratic formula? We mean solvability by radicals. That is, is there some way to express the roots of a polynomial in terms of field operations and <m>n</m>th roots?
+        </p>
+      </li>
+
+      <li>
+        <p>
+				This question can be framed in the language of extension fields. Remember, we know that every polynomial has roots in some extension field. Asking what the roots look like is asking what the extension field looks like.
+        </p>
+      </li>
+
+      <li>
+        <p>
+				In particular, we need to see if the roots lie in a field extension obtained by taking <m>n</m>th roots of elements in lower fields.
+        </p>
+      </li>
+
+      <li>
+        <p>
+				We say that an extension <m>E</m> of a field <m>F</m> is an <em>extension by radicals</em> if there is a chain of subfields <me>F = F_0 \subseteq F_1 \subseteq F_2 \subseteq \cdots \subseteq F_r = E</me> such that for <m>i = 1,2,\ldots, 3</m> we have <m>F_i = F_{k-1}(\alpha_i)</m> and <m>\alpha_i^{n_i} \in F_{i-1}</m>.
+        </p>
+      </li>
+
+      <li>
+        <p>
+				Then a polynomial <m>f(x)</m> is <em>solvable by radicals</em> over <m>F</m> if the splitting field <m>K</m> of <m>f(x)</m> over <m>F</m> is contained in an extension of <m>F</m> by radicals.
+        </p>
+      </li>
+
+      <li>
+        <p>
+				An easy example of a polynomial that is solvable by radicals is <m>x^n - a</m> (for any <m>a \in \mathbb Q</m>). We can say exactly what the roots look like. Let <m>\omega</m> be a primitive <m>n</m>th root of unity (what does this mean?), so the roots are <m>\sqrt[n]{a}\omega^{k}</m> for <m>k \in \{0,1,\ldots, n-1\}</m>.
+        </p>
+      </li>
+
+      <li>
+        <p>
+				We wish to make a connection to groups. We do so using Galois theory. Let the splitting field for <m>x^n - a</m> over <m>\mathbb Q</m> be <m>E</m>. What does <m>\mathop{\mathrm{Gal}}(E:\mathbb Q)</m> look like?
+        </p>
+      </li>
+
+      <li>
+        <p>
+				First extend <m>\mathbb Q</m> by <m>\omega</m>. We can check that <m>\mathop{\mathrm{Gal}}(\mathbb Q(\omega):\mathbb Q)</m> is abelian, and thus solvable. Then extend again to get <m>E</m> (we know <m>E \supseteq \mathbb Q(\omega)</m>). We can argue that <m>\mathop{\mathrm{Gal}}(E:\mathbb Q(\omega))</m> is also abelian, and thus solvable. Then put it together (look at the two series).
+        </p>
+      </li>
+
+      <li>
+        <p>
+				What this says is that at least in this special case, since the polynomial is solvable by radicals, the splitting field’s Galois group is solvable. This holds in general. Essentially, just repeat the process for each extension (putting in the primitive roots of unity as required).
+        </p>
+      </li>
+
+      <li>
+        <p>
+				The converse happens to also be true. So a polynomial is solvable by radicals if and only if the Galois group of its splitting field is a solvable group.
+        </p>
+      </li>
+
+      <li>
+        <p>
+				Now consider the polynomial <m>p(x) = x^5 - 6x^3 - 27x - 3</m>. This is irreducible by Eisenstein. Thus there are 5 distinct roots in some splitting field <m>E</m>.
+        </p>
+      </li>
+
+      <li>
+        <p>
+				What do the roots look like? By either graphing or doing some calculus, we can verify that there are exactly three real roots (there are only two critical points). Thus there are exactly two complex roots.
+        </p>
+      </li>
+
+      <li>
+        <p>
+				The automorphisms of the splitting field are determined by what they do to the five roots. So each automorphism can be viewed as an element of <m>S_5</m>.
+        </p>
+      </li>
+
+      <li>
+        <p>
+				One automorphism is complex conjugation. This leaves the three real roots fixed, and permutes the other two. So in <m>S_5</m>, this is a transposition.
+        </p>
+      </li>
+
+      <li>
+        <p>
+				We also know that <m>\mathop{\mathrm{Gal}}(E:\mathbb Q)</m> has order that is a multiple of 5. We get this by considering the tower of extensions of <m>\mathbb Q</m> in <m>E</m>: the first extension must be of degree 5, so the degree <m>[E:\mathbb Q]</m> is a multiple of 5, and this is the same as the order of <m>\mathop{\mathrm{Gal}}(E:\mathbb Q)</m>. By Cauchy’s theorem, <m>\mathop{\mathrm{Gal}}(E:\mathbb Q)</m> must have an element of order 5. In <m>S_5</m> this is necessarily a 5-cycle.
+        </p>
+      </li>
+
+      <li>
+        <p>
+				So <m>\mathop{\mathrm{Gal}}(E:\mathbb Q)</m> is a subgroup of <m>S_5</m> that contains a 2-cycle and a 5-cycle. We can show that this means that <m>\mathop{\mathrm{Gal}}(E:\mathbb Q) \cong S_5</m>. In fact, <m>S_5</m> is generated by any 2-cycle and any 5-cycle.
+        </p>
+      </li>
+
+      <li>
+        <p>
+				Now consider the composition series for <m>S_5</m>:          <me>S_5 \supset A_5 \supset \{0\}</me> Since <m>A_5</m> is simple, we get that <m>S_5</m> is not solvable. And this means that <m>p(x)</m> is not solvable by radicals. Ta Daa.
+        </p>
+      </li>
+
+    </ul>
+  </p>
+</subsection>
+
+<subsection xml:id="notes-3-13">
+  <title>Friday: Project work</title>
+    <p>
+      Today you have the option of working with your group on your final project, either in class or from home.
+    </p>
+</subsection>
+</section>

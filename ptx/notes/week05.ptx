@@ -1,0 +1,239 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<section xml:id="notes-week5" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>Week 5: February 10-14</title>
+  <subsection xml:id="notes-2-10">
+<title>Galois Theory</title>
+
+<p>
+			We have been investigating fields for the last few weeks. One application of this was to see that certain numbers (and shapes) are not <em>constructible</em>. It is surprising that we can make such a concrete connection between geometry and algebra (although <em>analytic</em> geometry is just this: describing geometric objects with equations and numbers).
+</p>
+
+<p>
+			This was not our primary reason to study fields though. So why are we doing all this in an algebra class? Why does UNC think you should learn this before teaching high school algebra? Well basic algebra is largely about solving equations, and when those equations involve polynomials of degree greater than 2, this becomes very challenging.
+</p>
+
+<p>
+			Our goal for the next few classes is to better understand the relationship between polynomials and field extensions. This will lead us to our final application: deciding when you can solve a polynomial using radicals.
+</p>
+
+
+<paragraphs>
+  <title>Monday: Derivatives and Roots</title>
+
+  <p>
+    <ul>
+      <li>
+        <p>
+				Recall what we know about extension fields and their relationship to minimum polynomials.
+        </p>
+      </li>
+
+      <li>
+        <p>
+				If a polynomial <m>p(x)</m> has degree <m>n</m>, what can you say about the number of roots it has (in a large enough extension field)?
+        </p>
+      </li>
+
+      <li>
+        <p>
+				We know it must have at most <m>n</m> roots, but these might not be distinct. But what if <m>p(x)</m> is irreducible?
+        </p>
+
+        <p>
+				Let <m>p(x) \in F[x]</m> be irreducible, and assume that <m>F</m> has characteristic <m>0</m>. Then <m>p(x)</m> does not have any repeated roots.
+        </p>
+
+        <p>
+				The cool thing about this proof is that it uses derivatives. But we define these purely formally. But still the usual way.
+        </p>
+
+        <p>
+				Suppose <m>p(x) = a_0 + a_1x + a_2x^2 + \cdots + a_nx^n</m> does have a repeated root (in some extension field), call it <m>c</m>. Then <m>p(x) = (x-c)^2q(x)</m> for some polynomial <m>q(x)</m>. Now consider <m>p'(x)</m>:          <me>p'(x) = 2(x-c)q(x) + (x-c)^2q'(x) = (x-c)(2q(x0 + (x-c)q'(x))</me> So <m>x-c</m> is a factor of <m>p'(x)</m> so <m>c</m> is a root.
+        </p>
+
+        <p>
+				Since <m>p(x)</m> is irreducible and has <m>c</m> as a root, <m>p(x)</m> must be the minimum polynomial for <m>c</m>. This says that every polynomial which has <m>c</m> as a root is a multiple of <m>p(x)</m>. In other words, <m>p'(x)</m> is a multiple of <m>p(x)</m>. But unless <m>p'(x) = 0</m>, this is impossible because <m>p'(x)</m> has smaller degree than <m>p(x)</m>.
+        </p>
+
+        <p>
+				So <m>p'(x) = na_nx^{n-1} + \cdots + a_1 = 0</m> would imply that <m>na_n = 0</m>. This cannot happen in a field of characteristic 0 (although if we were in <m>\mathbb Z_5[x]</m> this would be problematic).
+        </p>
+      </li>
+
+      <li>
+        <p>
+				From here on out, let’s consider fields of characteristic 0 only (that is, extensions of <m>\mathbb Q</m>). Now irreducible polynomials have only distinct roots.
+        </p>
+      </li>
+
+      <li>
+        <p>
+				Now do the field extension thing for these roots. What can happen?
+        </p>
+      </li>
+
+      <li>
+        <p>
+				We can adjoin a root, and then in that bigger field, the polynomial factors. But does it factor into linear terms? Maybe, maybe not. If not, then we could find a root to one of the factors and adjoin that as well. Eventually, we will adjoin enough roots to get an extension field in which the polynomial factors completely (into linear factors).
+        </p>
+      </li>
+
+      <li>
+        <p>
+				This extension field is call the <em>root field</em> or <em>splitting field</em> of the polynomial (because in that field, the polynomial <q>splits</q> into linear factors).
+        </p>
+
+        <p>
+				What is the splitting field of <m>p(x) = x^3 + 2</m>? What is its degree over <m>\mathbb Q</m>?
+        </p>
+
+        <p>
+				What is the degree of the splitting field of <m>p(x) = x^4 - 10x^2 + 25x - 5</m>? Well, <m>p(x)</m> is irreducible, so there is at least one root <m>\alpha</m> which we can adjoin to <m>\mathbb Q</m> to get the degree 4 field extension <m>\mathbb Q(\alpha)</m>. Now what? From the polynomial’s graph, we know that there are 2 real roots, so 2 complex roots. If <m>\alpha</m> was one of the real roots, then we are not yet in the splitting field. So we need to add another root <m>\beta</m>. This might be of degree 2 or 3, depending on how <m>p(x)</m> factored in <m>\mathbb Q(\alpha)</m>. It get’s messy.
+        </p>
+      </li>
+
+      <li>
+        <p>
+				Notice that if <m>c</m> and <m>d</m> are two distinct roots of <m>p(x)</m>, then <m>F(c) \cong F(d)</m>. Why?
+        </p>
+      </li>
+
+      <li>
+        <p>
+				In fact, what can we say about isomorphisms between field extensions?
+        </p>
+      </li>
+
+    </ul>
+  </p>
+</paragraphs>
+</subsection>
+
+<subsection xml:id="notes-2-12">
+  <title>Wednesday and Friday: Isomorphisms and Automorphisms of Extension Fields </title>
+  <p>
+				To understand splitting fields better, and to understand how the roots of polynomials relate to each other, we want to consider isomorphisms between extension fields.
+  </p>
+
+  <p>
+    <ul>
+      <li>
+        <p>
+				Suppose you have two extensions <m>\mathbb Q(\alpha)</m> and <m>\mathbb Q(\beta)</m> of <m>\mathbb Q</m>. How might these be related to each other?
+        </p>
+      </li>
+
+      <li>
+        <p>
+				Specifically, what if <m>\alpha</m> and <m>\beta</m> are both roots of the same polynomial? Then each are isomorphic to <m>\mathbb Q[x]/\langle p(x)\rangle</m>, so isomorphic to each other.
+        </p>
+      </li>
+
+      <li>
+        <p>
+				What does that isomorphism look like? Where can it send elements from <m>\mathbb Q</m>? Where does it send <m>\alpha</m>?
+        </p>
+      </li>
+
+      <li>
+        <p>
+				Since the 0 and 1 need to be sent to themselves, all of <m>\mathbb Q</m> must be sent to itself!
+        </p>
+      </li>
+
+      <li>
+        <p>
+				Elements in <m>\mathbb Q(\alpha)</m> look like <m>a_0 + a_1\alpha + a_2\alpha^2 + \cdots + a_{n-1}\alpha^n</m>. Apply the isomorphism to this! If we send <m>\alpha</m> to <m>\beta</m>, this works.
+        </p>
+      </li>
+
+      <li>
+        <p>
+				More in general, if you have an isomorphism from <m>\mathbb Q(\alpha)</m> to <m>\mathbb Q(\beta)</m>, consider what happens to polynomials in <m>\mathbb Q[x]</m> under this isomorphism. In particular, consider the minimum polynomial for <m>\alpha</m> and <m>\beta</m>.
+        </p>
+      </li>
+
+    </ul>
+  </p>
+
+
+
+
+
+  <p>
+    <ul>
+      <li>
+        <p>
+				Let’s consider the set of all automorphisms of a field, call it <m>\mathop{\mathrm{Aut}}(F)</m>. It is easy to see that <m>\mathop{\mathrm{Aut}}(F)</m> is a group (under composition).
+        </p>
+      </li>
+
+      <li>
+        <p>
+				Now consider a field extension <m>E</m> of <m>F</m> and the elements of <m>\mathop{\mathrm{Aut}}(E)</m>. Instead of looking at all the automorphisms, look only at the automorphisms that <em>fix</em>
+          <m>F</m>. That is, <m>\sigma(a) = a</m> for all <m>a \in F</m>.
+        </p>
+      </li>
+
+      <li>
+        <p>
+				Call the set of these automorphisms <m>\mathop{\mathrm{Gal}}(E:F)</m>. This is called the <em>Galois group</em> of <m>E</m> over <m>F</m>. It is called a group because it is! Show this.
+        </p>
+
+        <p>
+				Consider <m>E = \mathbb Q(\sqrt{3}, \sqrt{5})</m>. This is an extension of <m>\mathbb Q</m>, but also of <m>\mathbb Q(\sqrt{3})</m> and <m>\mathbb Q(\sqrt{5})</m>. Describe <m>G(E/\Q)</m>. What group is this? (It is <m>\mathbb Z_2 \times \mathbb Z_2</m>.)
+        </p>
+      </li>
+
+      <li>
+        <p>
+				So what does this have to do with polynomials?
+        </p>
+      </li>
+
+      <li>
+        <p>
+				Well if <m>p(x)</m> is a polynomial in <m>F[x]</m>, and suppose <m>E</m> is an extension of <m>F</m> containing (some of the) roots of <m>p(x)</m>. Then any automorphism in <m>G(E/F)</m> defines a permutation of the roots of <m>p(x)</m> that lie in <m>E</m>, since roots are sent to roots.
+        </p>
+      </li>
+
+      <li>
+        <p>
+				The converse of the above is also true. That is, if <m>a</m> and <m>b</m> are roots of the same polynomial, then there is an isomorphism <m>\varphi:F(a) \to F(b)</m> that fixes <m>F</m>.
+        </p>
+      </li>
+
+      <li>
+        <p>
+				Now we are ready to think about how large the Galois group can be. Say <m>p(x)</m> is a polynomial in <m>F[x]</m> and <m>E</m> is the splitting field for <m>p(x)</m> over <m>F</m>. As long as <m>f</m> has no repeated roots, then <m>|G(E/F)| = [E:F]</m>.
+        </p>
+
+        <p>
+				Proceed by induction on the degree of <m>p(x)</m>. If the degree is 1, then <m>E = F</m> and we are done. Assume the result holds for all polynomials of degree <m>k \lt n</m> and that <m>p(x)</m> has degree <m>n</m>.
+        </p>
+
+        <p>
+				Now let <m>q(x)</m> be an irreducible factor of <m>p(x)</m> (maybe <m>q(x) = p(x)</m>), with degree <m>m</m>. The roots of <m>q(x)</m> lie in <m>E</m>, so pick one of them, call it <m>a</m>. We have <me>[E:F(a)] = n/m ~~\text{ and }~~[F(a):F] = m</me> Now <m>q(x)</m> has exactly <m>m</m> roots, all of them in <m>E</m>. For each root <m>b</m> we have an isomorphism from <m>F(a)</m> to <m>F(b)</m> which fixes <m>F</m>. So there are <m>m</m> such isomorphisms.
+        </p>
+
+        <p>
+				Consider <m>G(E/F(a))</m>. This is the set of all automorphisms of <m>E</m> that fix <m>F(a)</m>. By our inductive hypothesis, we have <m>|G(E/F(a))| = [E:F(a)] = n/m</m>. Each of these composed with an isomorphism between <m>F(a)</m> and <m>F(b)</m> gives an element of <m>G(E/F)</m>.
+        </p>
+      </li>
+
+      <li>
+        <!-- <p>
+				We did not get to this one:
+        </p> -->
+
+        <p>
+				Find the Galois group of <m>p(x) = x^4 + x^3 + x^2 + x + 1</m> over <m>\mathbb Q</m>. Note this is irreducible over <m>\mathbb Q</m> by Eisenstein (and substitution of <m>x+1</m> for <m>x</m>). To find the roots, first multiply by <m>(x-1)</m> to get <m>x^5 - 1</m>. Let <m>a</m> be a fifth root of unity. Then <m>\mathbb Q(a)</m> is the splitting field and has degree 4 over <m>\mathbb Q</m>. What are the automorphisms? Well, send <m>a</m> to <m>a^i</m> for <m>i = 1,2,3,4</m>. The automorphism <m>\sigma_2</m> which sends <m>a</m> to <m>a^2</m> generates <m>G(\mathbb Q(a)/\mathbb Q)</m>, so the group is <m>\mathbb Z_4</m>.
+        </p>
+      </li>
+
+    </ul>
+  </p>
+
+</subsection>
+</section>

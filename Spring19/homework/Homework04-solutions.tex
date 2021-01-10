@@ -1,0 +1,187 @@
+\documentclass[11pt]{exam}
+
+\usepackage{amsmath, amssymb, amsthm, multicol}
+\usepackage{graphicx}
+\usepackage{textcomp}
+\usepackage{tikz}
+\usepackage{mathrsfs}
+%\usepackage[top=1in, bottom=1in, left=1in, right=1in]{geometry}
+%\usepackage{framed}
+
+
+%\newenvironment{ques}[2]{\vskip 1ex \noindent{\bf Question #1:}\marginpar{(#2 pts)}}{}
+%\newenvironment{sol}{\begin{framed} \noindent{\em Solution:}}{\end{framed}\vskip 1em}
+
+
+
+\def\d{\displaystyle}
+\def\b{\mathbf}
+\def\N{\mathbb{N}}
+\def\R{\mathbb{R}}
+\def\Z{\mathbb{Z}}
+\def\Q{\mathbb{Q}}
+\def\C{\mathbb{C}}
+\def\F{\mathscr{F}}
+\def\st{~:~}
+\def\bar{\overline}
+\def\inv{^{-1}}
+\def\imp{\rightarrow}
+\def\and{\wedge}
+\def\onto{\twoheadrightarrow}
+\DeclareMathOperator{\Gal}{Gal}
+
+
+%\pointname{pts}
+\pointsinmargin
+\marginpointname{pts}
+\marginbonuspointname{bns-pts}
+\addpoints
+\pagestyle{head}
+\printanswers
+
+\firstpageheader{MATH 322}{\bf Homework 4 Solutions}{Due: Friday, March 1}
+
+
+
+
+\begin{document}
+
+\noindent \textbf{Instructions}: Same rules as usual.  Work together, write-up alone, no internet!
+\vskip 1ex
+
+\begin{questions}
+
+\question[5] We have seen that the group $D_4$ is isomorphic to a subgroup of $S_4$ (by numbering the vertices of the square).  However, by Cayley's theorem, $D_4$ is also isomorphic to a subgroup of $S_8$.  Find it.  For at least one non-identity element, explain carefully how you found the corresponding element of $S_8$.
+
+\begin{solution}
+The solutions depends on how you set up the group table (if you list elements in different orders, you will get different permutations).  Here is one group table:
+
+\def\arraystretch{1.75}%
+\begin{tabular}{c|cccccccc}
+      & $R_0$ & $R_1$ & $R_2$ & $R_3$ & $H$   & $V$   & $D_1$ & $D_2$ \\ \hline
+  
+$R_0$ & $R_0$ & $R_1$ & $R_2$ & $R_3$ & $H$   & $V$   & $D_1$ & $D_2$ \\
+
+$R_1$ & $R_1$ & $R_2$ & $R_3$ & $R_0$ & $D_1$ & $D_2$ & $V$   & $H$ \\
+
+$R_2$ & $R_2$ & $R_3$ & $R_0$ & $R_1$ & $V$   & $H$   & $D_2$ & $D_1$ \\
+
+$R_3$ & $R_3$ & $R_0$ & $R_1$ & $R_2$ & $D_2$ & $D_1$ & $H$   & $V$ \\
+
+$H$   & $H$   & $D_2$ & $V$   & $D_1$ & $R_0$ & $R_2$ & $R_3$ & $R_1$ \\
+
+$V$   & $V$   & $D_1$ & $H$   & $D_2$ & $R_2$ & $R_0$ & $R_1$ & $R_3$ \\
+
+$D_1$ & $D_1$ & $H$   & $D_2$ & $V$   & $R_1$ & $R_3$ & $R_0$ & $R_2$ \\
+
+$D_2$ & $D_2$ & $V$   & $D_1$ & $H$   & $R_3$ & $R_1$ & $R_2$ & $R_0$ 
+\end{tabular}
+
+Give this, the permutations are:
+\begin{multicols}{2}
+$\lambda_{R_0} = (1)$
+
+$\lambda_{R_1} = (1234)(5768)$
+
+$\lambda_{R_2} = (13)(24)(56)(78)$
+
+$\lambda_{R_3} = (1432)(5867)$
+
+$\lambda_{H} = (15)(28)(36)(47)$
+
+$\lambda_V = (16)(27)(35)(48)$
+
+$\lambda_{D_1} = (17)(25)(38)(46)$
+
+$\lambda_{D_2} = (18)(26)(37)(45)$
+\end{multicols}
+\end{solution}
+
+
+
+
+\question[10] Practice working with cycles.
+\begin{parts}
+\part For $\alpha = (123456)$, find $\alpha^2$, $\alpha^3$, $\alpha^4$, etc.
+
+\begin{solution}
+We have $\alpha^2 = (135)(246)$.  $\alpha^3 = (14)(25)(36)$, $\alpha^4 = (153)(264)$, $\alpha^5 = (165432)$, $\alpha^6 = (1)$, and then the pattern repeats.
+\end{solution}
+
+\part In $S_5$, find a cycle square root of each of the following cycles (that is, find a cycle $\alpha$ such that $\alpha^2$ is the given element): $(132)$, $(12345)$, and $(13)(24)$ (you will find different square roots for each, of course).
+\begin{solution}
+$(123)^2 = (132)$\\ $(14253)^2 = (12345)$. \\ $(1234)^2 = (13)(24)$.
+\end{solution}
+
+\part Prove that if $\alpha = (a_1a_2\cdots a_s)$ for $s$ odd (i.e., $\alpha$ has odd length), then $\alpha$ is the square of some cycle of length $s$.
+\begin{solution}
+We need every other element of the cycle to be $a_1, a_2, a_3, \ldots$.  Since $s$ is odd, this will work and still give us just a single cycle.  We get $(a_1 a_{\frac{s+1}{2}+1} a_2 a_{\frac{s+1}{2}+2} a_3 \cdots a_{\frac{s+1}{2}})$.  Another way to see this: we know that $\alpha^{s+1} = \alpha$, since the order of $\alpha$ is $s$.  But $s+1$ is even, so we can consider $\alpha^{\frac{s+1}{2}}$.
+\end{solution}
+\part Prove that if $\alpha$ is of (even) length $s = 2t$, then $\alpha^2$ is the product of two cycles of length $t$.
+
+\begin{solution}
+The two cycles will be $(a_1a_3a_5\cdots a_{s-1})$ and $(a_2a_4a_6\cdots a_s)$.  Each of these has length $t$.
+\end{solution}
+
+\part Prove that if the length of $\alpha$ is prime, then every power of $\alpha$ is a cycle.
+\begin{solution}
+If $\alpha^k$ can be written as a product of $n$ cycles, then each cycle would have length $l/n$, where $l$ is the length $\alpha$.  This means that $l$ must be a multiple of $n$.  But if the length is prime, that means $n$ is either 1, or $l$.  In the first case, we are done.  In the second, we have that $\alpha^k = (1)$.
+\end{solution}
+\end{parts} 
+
+\question[6] Recall that we say a permutation is \emph{even} if it is possible to write it as the product of an even number of transpositions.  On the other hand, the \emph{length} of a cycle is the number of numbers appearing in the cycle.
+\begin{parts}
+\part Prove that the product of two even permutations is even, the product of two odd permutations is even, and the product of an even and an odd permutation is odd.
+\begin{solution}
+Suppose we have two permutations $\alpha$ and $\beta$ and that $\alpha$ can be written as $k$ transpositions and $\beta$ can be written as $j$ transpositions.  Then $\alpha\beta$ can be written as $k+j$ transpositions.  If $\alpha$ and $\beta$ are both even, then $k$ and $j$ must both be even, and so $k+j$ must also be even.  Since the product can be written as an even number of transpositions, it \emph{must} be written as an even number of transpositions, so $\alpha\beta$ is even.  Similarly, if $\alpha$ and $\beta$ are both odd, then $k+j$ is even (it is the sum of two odd numbers).  Finally, if $\alpha$ is even and $\beta$ is odd (or visa-versa) then $k+j$ is odd, so $\alpha\beta$ is an odd permutation.
+\end{solution}
+
+
+\part Prove that a cycle of length $l$ is even if and only if $l$ is odd.  Note you must prove two directions here: if $l$ is odd, then the cycle is even, and if $l$ is even, then the cycle is odd.
+\begin{solution}
+We note that $(a_1a_2a_3\cdots a_l)$ can be written as a product of transpositions as $(a_1a_2)(a_2a_3)(a_3a_4)\cdots(a_{l-1}a_l)$.  Thus a cycle of length $l$ can be written as $l-1$ transpositions.  If $l\ge 3$ is odd, then the permutation is even, since it can (and therefore must) be written as an even number ($l-1$) of transpositions.  If $l = 1$ then we are looking at the identity, which we proved is even since $(1) = (12)(12)$. Conversely, if $l$ is even, then $l-1$ is odd, so the permutation can (must) be written as an odd number of transpositions and is therefore odd.
+\end{solution}
+
+\end{parts}
+
+
+\question[4] Let $\alpha = (a_1a_1\cdots a_s)$ and $\beta = (b_1b_2\cdots b_r)$ be two disjoint cycles.  Find a transposition $\gamma$ such that $\alpha\beta\gamma$ is a cycle.  Then show that $\alpha\gamma\beta$ and $\gamma\alpha\beta$ are also cycles.
+
+\begin{solution}
+We can take $\gamma = (a_sb_r)$.  Then $\alpha\beta\gamma = (a_1a_2\cdots a_sb_1b_2\cdots b_r)$.  Using this same $\gamma$, we have $\alpha\gamma\beta = (a_1a_2\cdots a_sb_rb_1b_2\cdots b_{r-1})$.  Similarly, $\gamma\alpha\beta = (a_1a_2\cdots a_{s-1}b_rb_1b_2\cdots b_{r-1}a_s)$.
+\end{solution}
+
+
+\question[5] The identity can be written as $\varepsilon = (13)(24)(35)(14)(12)(15)(34)(45)$.
+Mimic the proof that $\varepsilon$ must be even and show how to eliminate $x = 5$ from the product of transpositions and write $\varepsilon$ as the product of 2 fewer transpositions in the process.  Show all intermediate steps.
+
+\begin{solution}
+  We look for the last occurrence of 5, which is in the final transposition.  Now $(34)(45) = (35)(34)$, so we can write
+  \[\varepsilon = (13)(24)(35)(14)(12)(15)(35)(34)\]
+  Now $(15)(35) = (35)(13)$ so we gets
+   \[\varepsilon = (13)(24)(35)(14)(12)(35)(13)(34)\]
+   Then $(12)(35) = (35)(12)$ since the transpositions are disjoint so,
+   \[\varepsilon = (13)(24)(35)(14)(35)(12)(13)(34)\]
+   and similarly
+   \[\varepsilon = (13)(24)(35)(35)(14)(12)(13)(34)\]
+   But $(35)(35) = (1)$ so we end up with
+   \[\varepsilon = (13)(24)(14)(12)(13)(34)\]
+\end{solution}
+
+
+
+
+\bonusquestion[5] Bonus: Let $\alpha = (1372)(26374)(587)(1846)$.  Write $\alpha^{2016}$ as a single cycle or the product of disjoint cycles. Explain how you know your answer is correct.
+\begin{solution}
+ First write $\alpha$ as a product of disjoint cycles, because doing so makes taking powers much easier (or in this case {\em possible}).  We get $\alpha = (14758)(263)$.  
+ 
+ Now $\alpha^{2016} = (14758)^{2016}(263)^{2016}$.  However, $2016 = 2015 + 1$ and $2015$ is divisible by 5.  Also $2016$ is divisible by 3.  So $\alpha^{2016} = (14758)^1(263)^0$ because raising a 5-cycle to a multiple of 5 will give the identity, and raising a 3-cycle to a power of 3 will give the identity.  Thus
+ \[\alpha^{2016} = (14758)\]
+\end{solution}
+
+\vfill
+\end{questions}
+
+\end{document}
+
+

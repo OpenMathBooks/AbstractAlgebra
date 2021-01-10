@@ -1,0 +1,136 @@
+\documentclass[11pt]{exam}
+
+\usepackage{amsmath, amssymb, amsthm, multicol}
+\usepackage{graphicx}
+\usepackage{textcomp}
+\usepackage{tikz}
+\usepackage{mathrsfs}
+%\usepackage[top=1in, bottom=1in, left=1in, right=1in]{geometry}
+%\usepackage{framed}
+
+
+%\newenvironment{ques}[2]{\vskip 1ex \noindent{\bf Question #1:}\marginpar{(#2 pts)}}{}
+%\newenvironment{sol}{\begin{framed} \noindent{\em Solution:}}{\end{framed}\vskip 1em}
+
+
+
+\def\d{\displaystyle}
+\def\b{\mathbf}
+\def\N{\mathbb{N}}
+\def\R{\mathbb{R}}
+\def\Z{\mathbb{Z}}
+\def\Q{\mathbb{Q}}
+\def\C{\mathbb{C}}
+\def\F{\mathscr{F}}
+\def\st{~:~}
+\def\bar{\overline}
+\def\inv{^{-1}}
+\def\imp{\rightarrow}
+\def\and{\wedge}
+\def\onto{\twoheadrightarrow}
+\DeclareMathOperator{\Gal}{Gal}
+\DeclareMathOperator{\ord}{ord}
+\DeclareMathOperator{\lcm}{lcm}
+
+
+%\pointname{pts}
+\pointsinmargin
+\marginpointname{pts}
+\marginbonuspointname{bns-pts}
+\addpoints
+\pagestyle{head}
+\printanswers
+
+\firstpageheader{MATH 322}{\bf Homework 6 Solutions}{Due: Wednesday, March 27}
+
+
+
+
+\begin{document}
+
+\noindent \textbf{Instructions}: Same rules as usual.  Work together, write-up alone, no internet!
+\vskip 1ex
+
+\begin{questions}
+  
+  \question[6] For any prime $p$, a \emph{$p$-group} is a group of order $p^n$ for some $n$. 
+  \begin{parts}
+  \part Explain why every element of a $p$ group has order that is a power of $p$.
+  \begin{solution}
+  This is by Lagrange's theorem.  The order of the group is a power of the prime $p$.  Since every element must have an order that divides the order of the group, every element of the group has order a power of $p$.
+  \end{solution}
+  \part Prove that for any group $G$, if every element has order some power of $p$, then $G$ is a $p$-group.  Hint: apply Cauchy's theorem.
+  \begin{solution}
+  Suppose the order of $G$ was not a power of $p$.  Then there would be some other prime $q$ which divides the order of $G$.  By Cauchy's theorem, this means that there would be an element of order $q$, contradicting our assumption that every element has order some power of $q$ (no prime is a power of any other prime).
+  \end{solution}
+  \end{parts}
+
+  %Impossible: \question Express $S_4$ as the inner direct product of two of its subgroups.  Recall that this means the subgroups $H$ and $K$ must satisfy $H \cap K = \{e\}$ and $HK = S_4$.  Then express $S_4$ as the (outer) direct product of two well known groups.  
+
+  \question[6] Prove, using inner direct products, that $\Z_{mn} \cong \Z_{m}\times\Z_n$ if and only if $\gcd(m,n) = 1$.  Note that the textbook has a proof of this using other methods, but you must use inner direct products for credit here.
+
+  \begin{solution}
+  Consider $\Z_{mn} = \{0,1,2,\ldots, mn\}$.  Consider the cyclic subgroups \\ $\langle m\rangle = \{0, m, 2m, \ldots (n-1)m\} \cong \Z_n$ and $\langle n \rangle = \{0, n, 2n, \ldots, (m-1)n\} \cong \Z_m$.  Is $\Z_{mn}$ the inner direct product of $\langle m\rangle$ and $\langle n \rangle$?  
+  
+  To make this so requires that everything in $\Z_{mn}$ can be written as the sum of an element from $\langle m\rangle $ and an element from $\langle n\rangle$, and that $\langle m \rangle \cap \langle n \rangle = \{0\}$.  Notice that the first condition is equivalent to saying that for every $k \in \Z_{mn}$, there are integers $r$ and $s$ such that $rm + sn = k$.  This is equivalent to saying that for some integers $r$ and $s$, $rm + sn = 1$ (because then we could multiply both sides by $k$).  By Bezout's lemma, this happens if and only if $\gcd(m,n) = 1$.  
+  
+  The second condition also requires that $\gcd(m,n) = 1$, since we need the least common multiple of $m$ and $n$ to be $mn$.  
+  \end{solution}
+
+
+
+  \question[6] Consider the group $U_{35} = \{1,2,3,4,6,8,9,11,12,13,16,17,18,19,22,23,24,26,27,29,31,32,33,34\}$ under the operation of multiplication modulo $35$.  The orders of the elements are:
+
+  \uplevel{\scriptsize 
+  \begin{tabular}{c|*{23}{c|}c}
+  $g$&1&2&3&4&6&8&9&11&12&13&16&17&18&19&22&23&24&26&27&29&31&32&33&34\\ \hline
+  $\ord(g)$&1&12&12&6&2&4&6&3&12&4&3&12&12&6&4&12&6&6&4&2&6&12&12&2
+  \end{tabular}
+  }
+  
+  \begin{parts}
+  \part Find two $p$-groups $H$ and $K$ such that $U_{35}$ is the internal direct product of $H$ and $K$.  Briefly explain why your groups work.
+
+  \begin{solution}
+  The only primes which divide $|U_{35}|$ are 2 and 3, so we are looking for a $2$-group and a $3$-group.  We take $G(2) = \{1,6,8,13,22, 27, 29, 34\}$ to be the group of elements whose orders are powers of $2$ and $G(3) = \{1, 11, 16\}$ to be the group of elements whose orders are powers of 3.  Clearly $G(2) \cap G(3) = \{1\}$, and we can also show that $G(2)\cdot G(3) = U_{35}$ by simply multiplying out every pair of elements, one from $G(2)$ and the other from $G(3)$ (we will get exactly the elements of $U_{35}$).
+  \end{solution}
+
+  \part Let $H$ be the larger of the two groups above.  Show how to decompose it as the internal direct product of $\langle a \rangle$ and $H'$ where $a$ is of maximal order and $H'$ is some other subgroup of $H$.
+  \begin{solution}
+  $H = G(2)$.  We take any element of $G(2)$ of maximal order.  That is, consider $\langle 8 \rangle = \{1, 8, 29, 22\}$.  For $H'$ we need a 2-element subgroup generated by an element not in $\langle 8\rangle$.  So let $H' = \{1, 6\}$.  Again, the intersection is clearly just $\{1\}$ and multiplying the elements of $\langle 8 \rangle$ by $6$ gives the other elements of $H$.
+  \end{solution}
+
+  \part Using the decompositions above (perhaps repeating the second step as needed), write $U_{35}$ as the direct product of groups of the form $\Z_{p^k}$ ($p$ prime).
+  \begin{solution}
+  $G(3) \cong \Z_{3}$ and $H' \cong \Z_2$.  Since $\langle 8\rangle$ contains an element of order 4 we have $\langle 8 \rangle \cong \Z_{4}$.  Thus 
+  \[U_{35} \cong \Z_2 \times \Z_3 \times \Z_4.\]
+  \end{solution}
+  \end{parts}
+
+  %\question[4] Suppose $G$ is a group of order $p^2$ for some prime $p$.
+  %\begin{parts}
+  %\part What are the possible orders of the elements of $G$?  What are the orders of the elements in $G$ if $G$ is not cyclic?
+  %\part Suppose $G$ is not cyclic and $a \ne e$ is an element of $G$.  %FIX
+  %\end{parts}
+
+  \question[6] Describe all abelian groups of order 200 (up to isomorphism).  Explain how you know you have them all.
+
+  \begin{solution}
+  We have $200 = 2^3\cdot 5^2$, so each abelian group will be isomorphic to the direct product of a $2$-group of order 8 and a $5$-group of order 25.  There are two $5$-groups of order 25: $\Z_5\times \Z_5$ and $\Z_{25}$ (the first has no element of order 25, the other does have such an element).  There are three 2-groups of order 8, depending on whether there are elements of order 8, none of order 8 but some of order 4, and none of order 4: $\Z_8$, $\Z_4\times \Z_2$ and $\Z_2\times \Z_2 \times \Z_2$.  Thus the 6 abelian groups of order 200 are:
+  \[\Z_8\times \Z_{25} \qquad \Z_4\times\Z_2\times \Z_{25} \qquad \Z_2\times\Z_2\times\Z_2 \times \Z_{25} \]
+  \[\Z_8\times\Z_{5}\times\Z_5 \qquad \Z_4\times \Z_2 \times \Z_5\times\Z_5 \qquad \Z_2\times\Z_2 \times\Z_2 \times\Z_5\times\Z_5 \]
+
+  \end{solution}
+
+  \question[6] Let $G$, $H$, and $K$ be finite abelian groups.  Suppose $G\times H \cong G\times K$.  Prove that $H \cong K$.  %Then give a counterexample to show this is not true in general.
+
+  \begin{solution}
+  The Fundamental Theorem of Finite Abelian Groups says that every finite abelian group can be written uniquely as the direct product of cyclic $p$-groups (each group in the product is $\Z_{p^k}$ for a prime $p$ positive integer $k$).  Suppose that $H \not\cong K$.  Then writing each as a direct product of cyclic $p$-groups would give different direct products.  Now take the direct product of these decompositions with $G$, also written as the direct product of cyclic $p$-groups.  This would say that the way we write $G\times H$ as the direct product of cyclic $p$-groups is different than the way we write $G \times K$ is the direct product of cyclic $p$-groups, which says that $G \times H \not\cong G \times K$.
+  \end{solution}
+
+
+\end{questions}
+
+\end{document}
+
+

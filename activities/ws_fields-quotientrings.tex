@@ -1,0 +1,47 @@
+\documentclass[11pt]{book}
+
+\input{worksheets-preamble.tex}
+\begin{document}
+%
+%
+\typeout{************************************************}
+\typeout{Worksheet  Activity: Quotient Rings that are Extension Fields}
+\typeout{************************************************}
+%
+\newgeometry{left=1in, right=1in, top=1in, bottom=1.25cm}
+\begin{worksheet-subsection}{Activity: Quotient Rings that are Extension Fields}{}{Activity: Quotient Rings that are Extension Fields}{}{}{x:worksheet:ws_fields-quotientrings}
+\begin{introduction}{}%
+Let's explore the connection between extension fields and quotient rings. We have seen that \(F[x]/\langle p(x) \rangle \cong F(\alpha)\), where \(\alpha\) is a root of its minimal polynomial \(p(x)\).  The goal of this activity is to see how working in quotient rings help us realize \(E = F(\alpha)\) as a field.%
+\par
+We will start easy.  For now, let \(E = \Q(\sqrt{2})\).%
+\end{introduction}%
+\begin{divisionexercise}{1}{}{0.1}{p:exercise:fKY}%
+What quotient ring is \(E\) isomorphic to?%
+\end{divisionexercise}%
+\begin{divisionexercise}{2}{}{0.1}{p:exercise:LSh}%
+One element in \(E\) is \(1+3\sqrt{2}\).  What element in the quotient ring does this correspond to?%
+\end{divisionexercise}%
+\begin{divisionexercise}{3}{}{0.3}{p:exercise:rZq}%
+What will \(\gcd(3x+1, x^2 - 2)\) be?  How do you know?  Then verify you are correct using the Euclidean algorithm.%
+\end{divisionexercise}%
+\clearpage
+\begin{divisionexercise}{4}{}{0.3}{p:exercise:Ygz}%
+Bezout's identity says that for any polynomials \(a(x)\) and \(b(x)\), there are polynomials \(s(x)\) and \(t(x)\) such that%
+\begin{equation*}
+\gcd(a(x), b(x)) = s(x)a(x) + t(x)b(x)\text{.}
+\end{equation*}
+Find \(s(x)\) and \(t(x)\) in our case, by working backwards from the Euclidean algorithm above.%
+\end{divisionexercise}%
+\begin{divisionexercise}{5}{}{0.3}{p:exercise:EnI}%
+What does Bezout's identity have to do with the expression%
+\begin{equation*}
+1+\langle x^2 - 2\rangle = (3x+1 + \langle x^2 - 2\rangle)(t(x) + \langle x^2 - 2\rangle)
+\end{equation*}
+and what does this have to do with finding inverses?  In particular, what is \((1+3\sqrt{2})\inv\) in \(E\)?%
+\end{divisionexercise}%
+\begin{divisionexercise}{6}{}{}{p:exercise:kuR}%
+Now let's try this again with a more complicated polynomial.  As in the earlier activity, take \(p(x) = x^3 + 3x^2 - x + 2\) and let \(\s\) be a root.  Use quotient rings to find the inverse of the element \(2 + 3\s^2\) in \(E = \Q(\s)\).%
+\end{divisionexercise}%
+\end{worksheet-subsection}
+\restoregeometry
+\end{document}

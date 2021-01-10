@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*       on 2021-01-10T15:18:42-07:00       *-->
+<!--*   A recent stable commit (2020-08-09):   *-->
+<!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body>
+<div class="solution solution-like">
+<h6 xmlns:svg="http://www.w3.org/2000/svg" class="heading">
+<span class="type">Solution</span><span class="space"> </span><span class="codenumber">6.45.1</span><span class="period">.</span>
+</h6>
+<p xmlns:svg="http://www.w3.org/2000/svg">Note that the rational roots theorem tells us that the only possible rational roots are \(\pm 1\text{,}\) \(\pm 2\text{,}\) \(\pm 3\) and \(\pm 6\text{.}\) Plugging these in, we see quickly that \(-1\) and \(3\) are roots.</p>
+<p xmlns:svg="http://www.w3.org/2000/svg">After dividing by \((x+1)(x-3)\) we are left with \((x^7 - 2)\text{,}\) which is irreducible over \(\mathbb Q\) by Eisenstein.</p>
+<p xmlns:svg="http://www.w3.org/2000/svg">Now let’s work over \(\mathbb C\text{.}\) We can find the roots of \(x^7 - 2\) by writing \(2 = 2e^{i0} = 2e^{i2\pi} = 2e^{i4\pi} = \cdots = 2e^{i12\pi}\text{.}\)</p>
+<p>Taking \(7\)th roots:</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{equation*}
+x = \sqrt[7]{2}, x = \sqrt[7]{2}e^{i2\pi/7}, x = \sqrt[7]{2}e^{i4\pi/7}, \ldots, x = \sqrt[7]{2}e^{i12\pi/7}\text{.}
+\end{equation*}
+</div>
+<p>This allows us to write down the 9 factors of degree 1 for \(p(x)\) over \(\mathbb C\text{.}\)</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{equation*}
+x^7-2 = (x-\sqrt[7]{2})(x-\sqrt[7]{2}e^{i2\pi/7})(x-\sqrt[7]{2}e^{i4\pi/7})\cdots(x-\sqrt[7]{2}e^{i12\pi/7})\text{.}
+\end{equation*}
+</div>
+<p>Finally, over \(\mathbb R\) we can multiply out each pair of complex conjugate factors. To find them, look at the unit circle. This gives:</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{equation*}
+\begin{aligned}
+p(x)  = (x+1)(x-3)(x-\sqrt[7]{2})&amp;(x^2 - 2^{8/7}\cos(2\pi/7)x + 2^{2/7})\cdot \\ &amp; \cdot(x^2 - 2^{8/7}\cos(4\pi/7)x + 2^{2/7})(x^2 - 2^{8/7}\cos(6\pi/7)x + 2^{2/7})\end{aligned}
+\end{equation*}
+</div>
+</div>
+<span class="incontext"><a href="sec-factoring-c-r.html#wPA">in-context</a></span>
+</body>
+</html>

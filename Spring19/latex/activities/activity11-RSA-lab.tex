@@ -1,0 +1,398 @@
+%**************************************%
+%*    Generated from PreTeXt source   *%
+%*    on 2019-03-08T12:08:19-07:00    *%
+%*                                    *%
+%*      https://pretextbook.org       *%
+%*                                    *%
+%**************************************%
+\documentclass[oneside,11pt,]{article}
+%% Custom Preamble Entries, early (use latex.preamble.early)
+%% Default LaTeX packages
+%%   1.  always employed (or nearly so) for some purpose, or
+%%   2.  a stylewriter may assume their presence
+\usepackage{geometry}
+%% Some aspects of the preamble are conditional,
+%% the LaTeX engine is one such determinant
+\usepackage{ifthen}
+%% etoolbox has a variety of modern conveniences
+\usepackage{etoolbox}
+\usepackage{ifxetex,ifluatex}
+%% Raster graphics inclusion
+\usepackage{graphicx}
+%% Color support, xcolor package
+%% Always loaded, for: add/delete text, author tools
+%% Here, since tcolorbox loads tikz, and tikz loads xcolor
+\PassOptionsToPackage{usenames,dvipsnames,svgnames,table}{xcolor}
+\usepackage{xcolor}
+%% Colored boxes, and much more, though mostly styling
+%% skins library provides "enhanced" skin, employing tikzpicture
+%% boxes may be configured as "breakable" or "unbreakable"
+%% "raster" controls grids of boxes, aka side-by-side
+\usepackage{tcolorbox}
+\tcbuselibrary{skins}
+\tcbuselibrary{breakable}
+\tcbuselibrary{raster}
+%% We load some "stock" tcolorbox styles that we use a lot
+%% Placement here is provisional, there will be some color work also
+%% First, black on white, no border, transparent, but no assumption about titles
+\tcbset{ bwminimalstyle/.style={size=minimal, boxrule=-0.3pt, frame empty,
+colback=white, colbacktitle=white, coltitle=black, opacityfill=0.0} }
+%% Second, bold title, run-in to text/paragraph/heading
+%% Space afterwards will be controlled by environment,
+%% dependent of constructions of the tcb title
+\tcbset{ runintitlestyle/.style={fonttitle=\normalfont\bfseries, attach title to upper} }
+%% Spacing prior to each exercise, anywhere
+\tcbset{ exercisespacingstyle/.style={before skip={1.5ex plus 0.5ex}} }
+%% Spacing prior to each block
+\tcbset{ blockspacingstyle/.style={before skip={2.0ex plus 0.5ex}} }
+%% xparse allows the construction of more robust commands,
+%% this is a necessity for isolating styling and behavior
+%% The tcolorbox library of the same name loads the base library
+\tcbuselibrary{xparse}
+%% Hyperref should be here, but likes to be loaded late
+%%
+%% Inline math delimiters, \(, \), need to be robust
+%% 2016-01-31:  latexrelease.sty  supersedes  fixltx2e.sty
+%% If  latexrelease.sty  exists, bugfix is in kernel
+%% If not, bugfix is in  fixltx2e.sty
+%% See:  https://tug.org/TUGboat/tb36-3/tb114ltnews22.pdf
+%% and read "Fewer fragile commands" in distribution's  latexchanges.pdf
+\IfFileExists{latexrelease.sty}{}{\usepackage{fixltx2e}}
+%% Text height identically 9 inches, text width varies on point size
+%% See Bringhurst 2.1.1 on measure for recommendations
+%% 75 characters per line (count spaces, punctuation) is target
+%% which is the upper limit of Bringhurst's recommendations
+\geometry{letterpaper,total={374pt,9.0in}}
+%% Custom Page Layout Adjustments (use latex.geometry)
+%% This LaTeX file may be compiled with pdflatex, xelatex, or lualatex executables
+%% LuaTeX is not explicitly supported, but we do accept additions from knowledgeable users
+%% The conditional below provides  pdflatex  specific configuration last
+%% The following provides engine-specific capabilities
+%% Generally, xelatex is necessary non-Western fonts
+\ifthenelse{\boolean{xetex} \or \boolean{luatex}}{%
+%% begin: xelatex and lualatex-specific configuration
+\ifxetex\usepackage{xltxtra}\fi
+%% realscripts is the only part of xltxtra relevant to lualatex 
+\ifluatex\usepackage{realscripts}\fi
+%% fontspec package provides extensive control of system fonts,
+%% meaning *.otf (OpenType), and apparently *.ttf (TrueType)
+%% that live *outside* your TeX/MF tree, and are controlled by your *system*
+%% fontspec will make Latin Modern (lmodern) the default font
+\usepackage{fontspec}
+%% 
+%% Extensive support for other languages
+\usepackage{polyglossia}
+%% Set main/default language based on pretext/@xml:lang value
+%% document language code is "en-US", US English
+%% usmax variant has extra hypenation
+\setmainlanguage[variant=usmax]{english}
+%% Enable secondary languages based on discovery of @xml:lang values
+%% Enable fonts/scripts based on discovery of @xml:lang values
+%% Western languages should be ably covered by Latin Modern Roman
+%% end: xelatex and lualatex-specific configuration
+}{%
+%% begin: pdflatex-specific configuration
+\usepackage[utf8]{inputenc}
+%% PreTeXt will create a UTF-8 encoded file
+%% begin: font setup and configuration for use with pdflatex
+\usepackage{lmodern}
+\usepackage[T1]{fontenc}
+%% end: font setup and configuration for use with pdflatex
+%% end: pdflatex-specific configuration
+}
+%% Monospace font: Inconsolata (zi4)
+%% Sponsored by TUG: http://levien.com/type/myfonts/inconsolata.html
+%% See package documentation for excellent instructions
+%% One caveat, seem to need full file name to locate OTF files
+%% Loads the "upquote" package as needed, so we don't have to
+%% Upright quotes might come from the  textcomp  package, which we also use
+%% We employ the shapely \ell to match Google Font version
+%% pdflatex: "varqu" option produces best upright quotes
+%% xelatex,lualatex: add StylisticSet 1 for shapely \ell
+%% xelatex,lualatex: add StylisticSet 2 for plain zero
+%% xelatex,lualatex: we add StylisticSet 3 for upright quotes
+%% 
+\ifthenelse{\boolean{xetex} \or \boolean{luatex}}{%
+%% begin: xelatex and lualatex-specific monospace font
+\usepackage{zi4}
+\setmonofont[BoldFont=Inconsolatazi4-Bold.otf,StylisticSet={1,3}]{Inconsolatazi4-Regular.otf}
+%% end: xelatex and lualatex-specific monospace font
+}{%
+%% begin: pdflatex-specific monospace font
+%% "varqu" option provides textcomp \textquotedbl glyph
+%% "varl"  option provides shapely "ell"
+\usepackage[varqu,varl]{zi4}
+%% end: pdflatex-specific monospace font
+}
+%% \mono macro for content of "c" element, and XML parts
+\newcommand{\mono}[1]{\texttt{#1}}
+%% Symbols, align environment, bracket-matrix
+\usepackage{amsmath}
+\usepackage{amssymb}
+%% allow page breaks within display mathematics anywhere
+%% level 4 is maximally permissive
+%% this is exactly the opposite of AMSmath package philosophy
+%% there are per-display, and per-equation options to control this
+%% split, aligned, gathered, and alignedat are not affected
+\allowdisplaybreaks[4]
+%% allow more columns to a matrix
+%% can make this even bigger by overriding with  latex.preamble.late  processing option
+\setcounter{MaxMatrixCols}{30}
+%%
+%%
+%% Division Titles, and Page Headers/Footers
+%% titlesec package, loading "titleps" package cooperatively
+%% See code comments about the necessity and purpose of "explicit" option
+\usepackage[explicit, pagestyles]{titlesec}
+\renewpagestyle{plain}{
+    \sethead{MATH 322}{}{Spring 2019}
+    \setfoot[][\thepage][]
+    {}{\thepage}{}
+    }
+\renewpagestyle{headings}[\small\sffamily]{
+    \sethead[\thepage][\sectiontitle][]
+    {}{\sectiontitle}{\thepage}
+    \setfoot[foot/even/headings/article][][]
+    {foot/odd or one-sided/headings/article}{}{}
+    }
+%% Set global/default page style for document due
+%% to potential re-definitions after documentclass
+\pagestyle{plain}
+%%
+%% Create globally-available macros to be provided for style writers
+%% These are redefined for each occurence of each division
+\newcommand{\divisionnameptx}{\relax}%
+\newcommand{\titleptx}{\relax}%
+\newcommand{\subtitleptx}{\relax}%
+\newcommand{\shortitleptx}{\relax}%
+\newcommand{\authorsptx}{\relax}%
+\newcommand{\epigraphptx}{\relax}%
+%% Create environments for possible occurences of each division
+%% Environment for a PTX "worksheet" at the level of a LaTeX "section"
+\NewDocumentEnvironment{worksheet-section}{mmmmmm}
+{%
+\renewcommand{\divisionnameptx}{Worksheet}%
+\renewcommand{\titleptx}{#1}%
+\renewcommand{\subtitleptx}{#2}%
+\renewcommand{\shortitleptx}{#3}%
+\renewcommand{\authorsptx}{#4}%
+\renewcommand{\epigraphptx}{#5}%
+\section[#3]{#1}%
+\label{#6}%
+}{}%
+%% Environment for a PTX "worksheet" at the level of a LaTeX "section"
+\NewDocumentEnvironment{worksheet-section-numberless}{mmmmmm}
+{%
+\renewcommand{\divisionnameptx}{Worksheet}%
+\renewcommand{\titleptx}{#1}%
+\renewcommand{\subtitleptx}{#2}%
+\renewcommand{\shortitleptx}{#3}%
+\renewcommand{\authorsptx}{#4}%
+\renewcommand{\epigraphptx}{#5}%
+\section*{#1}%
+\addcontentsline{toc}{section}{#3}
+\label{#6}%
+}{}%
+%%
+%% Styles for the traditional LaTeX divisions
+\titleformat{\chapter}[display]
+    	{\Large\filcenter\scshape\bfseries}
+    	{\rule[4pt]{.3\textwidth}{2pt} \hspace{2ex} \large\textsc{\chaptertitlename} \thechapter \hspace{3ex} \rule[4pt]{0.3\textwidth}{2pt} }
+    	{0.0em}
+    	{\titlerule\vspace{1ex}\huge\textsc #1}
+    	[\vspace{.75ex}\titlerule]
+    \titlespacing*{\chapter}{0pt}{-2em}{2em}
+\titleformat{\subparagraph}[block]
+      {\normalfont\filcenter\scshape\bfseries}
+      {\theparagraph}
+      {1em}
+      {#1}
+      [\normalsize\authorsptx]
+\titleformat{\section}
+    {\large\filcenter\scshape\bfseries}
+    {\thesection}
+    {1em}
+    {#1}
+    [\large\authorsptx]
+\titleformat{name=\section,numberless}
+    {\large\filcenter\bfseries}
+    {}
+    {0.0em}
+    {#1}
+\titlespacing*{\section}{0pt}{-5em}{1em}
+\titleformat{\subsection}
+    {\large\filcenter\scshape\bfseries}
+    {\thesubsection}
+    {1em}
+    {#1}
+    [\normalsize\authorsptx]
+\titleformat{\subsubsection}
+      {\filcenter\scshape\bfseries}
+      {\thesubsubsection}
+      {1em}
+      {#1}
+      [\normalsize\authorsptx]
+%%
+%% Semantic Macros
+%% To preserve meaning in a LaTeX file
+%% Only defined here if required in this document
+%% Subdivision Numbering, Chapters, Sections, Subsections, etc
+%% Subdivision numbers may be turned off at some level ("depth")
+%% A section *always* has depth 1, contrary to us counting from the document root
+%% The latex default is 3.  If a larger number is present here, then
+%% removing this command may make some cross-references ambiguous
+%% The precursor variable $numbering-maxlevel is checked for consistency in the common XSL file
+\setcounter{secnumdepth}{2}
+%% begin: General AMS environment setup
+%% Environments built with amsthm package
+\usepackage{amsthm}
+%% Numbering for Theorems, Conjectures, Examples, Figures, etc
+%% Controlled by  numbering.theorems.level  processing parameter
+%% Numbering: all theorem-like numbered consecutively
+%% i.e. Corollary 4.3 follows Theorem 4.2
+%% Always need some theorem environment to set base numbering scheme
+%% even if document has no theorems (but has other environments)
+%% Create a never-used style first, always
+%% simply to provide a global counter to use, namely "cthm"
+\newtheorem{cthm}{BadTheoremStringName}[subsection]
+%% AMS "proof" environment is not used, but we leave previously
+%% implemented \qedhere in place, should the LaTeX be recycled
+\renewcommand{\qedhere}{\relax}
+%% end: General AMS environment setup
+%%
+%% xparse environments for introductions and conclusions of divisions
+%%
+%% introduction: in a structured division
+\NewDocumentEnvironment{introduction}{m}
+{\notblank{#1}{\noindent\textbf{#1}\space}{}}{\par\medskip}
+%% Divisional exercises (and worksheet) as LaTeX environments
+%% Third argument is option for extra workspace in worksheets
+%% Hanging indent occupies a 5ex width slot prior to left margin
+%% Experimentally this seems just barely sufficient for a bold "888."
+%% Division exercises, not in exercise group
+\tcbset{ divisionexercisestyle/.style={bwminimalstyle, runintitlestyle, exercisespacingstyle, left=5ex, breakable, parbox=false } }
+\newtcolorbox{divisionexercise}[4]{divisionexercisestyle, before title={\hspace{-5ex}\makebox[5ex][l]{#1.}}, title={\notblank{#2}{#2\space}{}}, phantom={\hypertarget{#4}{}}, after={\notblank{#3}{\newline\rule{\workspacestrutwidth}{#3\textheight}\newline}{}}}
+%% Worksheet exercises may have workspaces
+\newlength{\workspacestrutwidth}
+%% @workspace strut is invisible
+\setlength{\workspacestrutwidth}{0pt}
+%% Localize LaTeX supplied names (possibly none)
+%% hyperref driver does not need to be specified, it will be detected
+%% Footnote marks in tcolorbox have broken linking under
+%% hyperref, so it is necessary to turn off all linking
+%% It *must* be given as a package option, not with \hypersetup
+\usepackage[hyperfootnotes=false]{hyperref}
+%% configure hyperref's  \url  to match listings' inline verbatim
+\renewcommand\UrlFont{\small\ttfamily}
+%% Hyperlinking active in electronic PDFs, all links solid and blue
+\hypersetup{colorlinks=true,linkcolor=blue,citecolor=blue,filecolor=blue,urlcolor=blue}
+\hypersetup{pdftitle={}}
+%% If you manually remove hyperref, leave in this next command
+\providecommand\phantomsection{}
+%% Graphics Preamble Entries
+\usepackage{tikz}
+\usetikzlibrary{backgrounds}
+\usetikzlibrary{arrows,matrix}
+\usetikzlibrary{snakes}
+%% If tikz has been loaded, replace ampersand with \amp macro
+%% extpfeil package for certain extensible arrows,
+%% as also provided by MathJax extension of the same name
+%% NB: this package loads mtools, which loads calc, which redefines
+%%     \setlength, so it can be removed if it seems to be in the 
+%%     way and your math does not use:
+%%     
+%%     \xtwoheadrightarrow, \xtwoheadleftarrow, \xmapsto, \xlongequal, \xtofrom
+%%     
+%%     we have had to be extra careful with variable thickness
+%%     lines in tables, and so also load this package late
+\usepackage{extpfeil}
+%% Custom Preamble Entries, late (use latex.preamble.late)
+%% Begin: Author-provided packages
+%% (From  docinfo/latex-preamble/package  elements)
+%% End: Author-provided packages
+%% Begin: Author-provided macros
+%% (From  docinfo/macros  element)
+%% Plus three from MBX for XML characters
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\Q}{\mathbb{Q}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\C}{\mathbb{C}}
+\usepackage{mathabx}
+\newcommand{\s}{\Saturn}
+\newcommand{\identity}{\mathrm{id}}
+\newcommand{\notdivide}{\nmid}
+\newcommand{\notsubset}{\not\subset}
+\newcommand{\lcm}{\operatorname{lcm}}
+\newcommand{\gf}{\operatorname{GF}}
+\newcommand{\inn}{\operatorname{Inn}}
+\newcommand{\aut}{\operatorname{Aut}}
+\newcommand{\Hom}{\operatorname{Hom}}
+\newcommand{\cis}{\operatorname{cis}}
+\newcommand{\chr}{\operatorname{char}}
+\newcommand{\Null}{\operatorname{Null}}
+\newcommand{\transpose}{\text{t}}
+\newcommand{\inv}{^{-1}}
+\newcommand{\st}{:}
+\newcommand{\lt}{<}
+\newcommand{\gt}{>}
+\newcommand{\amp}{&}
+%% End: Author-provided macros
+%% Title page information for article
+\title{}
+\date{}
+\begin{document}
+%% Target for xref to top-level element is ToC
+\addtocontents{toc}{\protect\hypertarget{activity11-RSA-lab}{}}
+%
+%
+\typeout{************************************************}
+\typeout{Worksheet  Activity: RSA Cryptography Lab}
+\typeout{************************************************}
+%
+\newgeometry{left=1in, right=1in, top=1in, bottom=1.25cm}
+\begin{worksheet-section-numberless}{Activity: RSA Cryptography Lab}{}{Activity: RSA Cryptography Lab}{}{}{ws_groups-RSA-lab}
+\begin{introduction}{}%
+\hypertarget{p-1}{}%
+Let's implement the ideas behind RSA cyprtography to create a public encryption key that you can use to have your friends send you secure messages.%
+\par
+\hypertarget{p-2}{}%
+We will use SAGE to compete this activity.  The easiest way to get started with this is to use the online SAGE cell at \href{}{https:\slash{}\slash{}sagecell.sagemath.org\slash{}}.  Of course if you have SAGE installed, you can use that.%
+\end{introduction}%
+\begin{divisionexercise}{1}{}{0.01}{exercise-1}%
+\hypertarget{p-3}{}%
+First you will need to select two very large prime numbers.  Let's shoot for 20-25 digits. Luckily, SAGE has the command \mono{next\_prime()} which will give you the next prime larger than your input.  So pick a random input and get two primes.  You will want to save these as a constant.  So \mono{p = next\_prime(20)} for example.%
+\end{divisionexercise}%
+\begin{divisionexercise}{2}{}{0.01}{exercise-2}%
+\hypertarget{p-4}{}%
+Now you can compute \(n = pq\) and \(m = (p-1)(q-1)\).  Notice that you \emph{could} ask SAGE to find \(\varphi(n)\) using \mono{euler\_phi(n)}, but you should think about why this is a really really really bad idea.%
+\end{divisionexercise}%
+\begin{divisionexercise}{3}{}{0.01}{exercise-3}%
+\hypertarget{p-5}{}%
+Now we need \(E\) and \(D\).  Recall that we want \(\gcd(E,m) = 1\) and \(DE \equiv 1 \pmod{m}\).  How are you going to find these?%
+\par
+\hypertarget{p-6}{}%
+SAGE has the command \mono{gcd(E, m)} that will compute the gcd of the two inputs.  There is also the command \mono{inverse\_mod(E, m)} which will run the Euclidean algorithm forwards and backwards on \(E\) and \(m\).%
+\end{divisionexercise}%
+\begin{divisionexercise}{4}{}{0.01}{exercise-4}%
+\hypertarget{p-7}{}%
+You can now publish the encryption pair \((n,E)\) so your friends can send you messages.  If they had a message \(x\) to send you, they would simply need to compute \(x^E \pmod(n)\).  SAGE can do this with \mono{mod(x\textasciicircum{}E,n)}, but if \(x\) and \(E\) are large, this would take a really long time.%
+\par
+\hypertarget{p-8}{}%
+Luckily, there is a better way: \mono{power\_mod(x,E,n)} computes the same thing, but uses the method of repeated squaring to make this much more efficient.  You will need to use this to decrypt the message \(y\) when you take \(y^D \pmod{n}\).  So once you get a message, do that.%
+\end{divisionexercise}%
+\begin{divisionexercise}{5}{}{0.01}{exercise-5}%
+\hypertarget{p-9}{}%
+The last piece of the puzzle is what to do with the number you get out of the decryption.  You will find some \(x\), but need that to be translated into text you can read.%
+\par
+\hypertarget{p-10}{}%
+This depends on the agreed upon method for translating a string of symbols into numbers.  Suppose we have a string called \mono{message}.  We can create a list of ASCII code values (0 through 127) using \mono{digits = [ord(letter) for letter in message]}.  That is, \mono{ord()} converts a single letter into its ASCII code.%
+\par
+\hypertarget{p-11}{}%
+We then must convert a collection of letters into a single number base 128.  SAGE can do this using the \mono{ZZ()} function.  So \mono{ZZ(digits,128)}.  This will only work if \(128^k \lt n\), where \(k\) is the number of digits.  So in practice, we would break the longer message into chunks and encrypt each chunk separately.%
+\par
+\hypertarget{p-12}{}%
+To undo this coding, you can break down the received message \mono{received} using \mono{digits = received.digits(base=128)}, which makes a list of digits.  Then you can create a list of letters using \mono{letters = [chr(ascii) for ascii in digits]}.  Finally, put these letters into a string using \mono{\textquotesingle{}\textquotesingle{}.join(letters)}.%
+\end{divisionexercise}%
+\end{worksheet-section-numberless}
+\restoregeometry
+\end{document}

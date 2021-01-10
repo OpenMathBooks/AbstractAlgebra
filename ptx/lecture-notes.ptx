@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<chapter xmlns:xi="http://www.w3.org/2001/XInclude" xml:id="ch-lecture-notes">
+  <title>Lecture Notes</title>
+  <introduction>
+    <p>
+      These are the daily lecture notes for MATH 322: Introductory Abstract Algebra, taught in Spring 2020 at the University of Northern Colorado.  
+    </p>
+  </introduction>
+
+  <xi:include href="notes/week01.ptx" />
+  <xi:include href="notes/week02.ptx" />
+  <xi:include href="notes/week03.ptx" />
+  <xi:include href="notes/week04.ptx" />
+  <xi:include href="notes/week05.ptx" />
+  <xi:include href="notes/week06.ptx" />
+  <xi:include href="notes/week07.ptx" />
+  <xi:include href="notes/week08.ptx" />
+  <xi:include href="notes/week09.ptx" />
+  <xi:include href="notes/week10.ptx" />
+  <xi:include href="notes/week11.ptx" />
+  <xi:include href="notes/week12.ptx" />
+  <xi:include href="notes/week13.ptx" />
+
+</chapter>

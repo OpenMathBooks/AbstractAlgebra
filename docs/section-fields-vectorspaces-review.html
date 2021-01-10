@@ -1,0 +1,558 @@
+<!DOCTYPE html>
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*       on 2021-01-10T15:15:09-07:00       *-->
+<!--*   A recent stable commit (2020-08-09):   *-->
+<!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<html lang="en-US">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>AATA A Review of Vector Spaces</title>
+<meta name="Keywords" content="Authored in PreTeXt">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script src="https://sagecell.sagemath.org/embedded_sagecell.js"></script><script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [['\\(','\\)']]
+    },
+    asciimath2jax: {
+        ignoreClass: ".*",
+        processClass: "has_am"
+    },
+    jax: ["input/AsciiMath"],
+    extensions: ["asciimath2jax.js"],
+    TeX: {
+        extensions: ["extpfeil.js", "autobold.js", "https://pretextbook.org/js/lib/mathjaxknowl.js", "AMScd.js", ],
+        // scrolling to fragment identifiers is controlled by other Javascript
+        positionToHash: false,
+        equationNumbers: { autoNumber: "none", useLabelIds: true, },
+        TagSide: "right",
+        TagIndent: ".8em",
+    },
+    // HTML-CSS output Jax to be dropped for MathJax 3.0
+    "HTML-CSS": {
+        scale: 88,
+        mtextFontInherit: true,
+    },
+    CommonHTML: {
+        scale: 88,
+        mtextFontInherit: true,
+    },
+});
+</script><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS_CHTML-full"></script><link href="https://unpkg.com/prismjs@v1.22.0/themes/prism.css" rel="stylesheet">
+<script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/jquery.min.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/0.13/pretext.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/0.13/pretext_add_on.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script xmlns:svg="http://www.w3.org/2000/svg">sagecellEvalName='Evaluate (Sage)';
+</script><link xmlns:svg="http://www.w3.org/2000/svg" href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://fonts.googleapis.com/css?family=Inconsolata:400,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/pretext.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/pretext_add_on.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/banner_default.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/toc_default.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/knowls_default.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/style_default.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/colors_default.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/setcolors.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="custom-styles.css">
+<!-- 2019-10-12: Temporary - CSS file for experiments with styling --><link xmlns:svg="http://www.w3.org/2000/svg" href="developer.css" rel="stylesheet" type="text/css">
+</head>
+<body id="judson-AATA" class="mathbook-book has-toc has-sidebar-left">
+<a class="assistive" href="#content">Skip to main content</a><div xmlns:svg="http://www.w3.org/2000/svg" class="hidden-content" style="display:none">\(\newcommand{\identity}{\mathrm{id}}
+\newcommand{\notdivide}{\nmid}
+\newcommand{\notsubset}{\not\subset}
+\newcommand{\lcm}{\operatorname{lcm}}
+\newcommand{\gf}{\operatorname{GF}}
+\newcommand{\inn}{\operatorname{Inn}}
+\newcommand{\aut}{\operatorname{Aut}}
+\newcommand{\Hom}{\operatorname{Hom}}
+\newcommand{\cis}{\operatorname{cis}}
+\newcommand{\chr}{\operatorname{char}}
+\newcommand{\Null}{\operatorname{Null}}
+\newcommand{\transpose}{\text{t}}
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\Q}{\mathbb{Q}}
+\newcommand{\R}{\mathbb{R}}
+\def\C{\mathbb{C}}
+\newcommand{\st}{:}
+\newcommand{\inv}{^{-1}}
+\newcommand{\bC}{\mathbb{C}}
+      \newcommand{\F}{\mathscr{F}}
+      \newcommand{\FR}{\mathscr{F}(\R)}
+      \newcommand{\DR}{\mathscr{D}(\R)}
+      \def\s{\varrho}
+      \def\theterm{Spring 2021}
+      \def\thecourse{MATH 322}
+\newcommand{\lt}{&lt;}
+\newcommand{\gt}{&gt;}
+\newcommand{\amp}{&amp;}
+\)</div>
+<header id="masthead" class="smallbuttons"><div class="banner"><div class="container">
+<a id="logo-link" href="http://abstract.pugetsound.edu" target="_blank"><img src="images/cover_aata_2020.png" alt="Logo image"></a><div class="title-container">
+<h1 class="heading"><a href="aata-toc.html"><span class="title">Abstract Algebra:</span> <span class="subtitle">Theory and Applications, Remixed!</span></a></h1>
+<p class="byline">Thomas W. Judson</p>
+</div>
+</div></div>
+<nav xmlns:svg="http://www.w3.org/2000/svg" id="primary-navbar" class="navbar"><div class="container">
+<div class="navbar-top-buttons">
+<button class="sidebar-left-toggle-button button active" aria-label="Show or hide table of contents sidebar">Contents</button><div class="tree-nav toolbar toolbar-divisor-3">
+<a class="index-button toolbar-item button" href="index-1.html" title="Index">Index</a><span class="threebuttons"><a id="previousbutton" class="previous-button toolbar-item button" href="fields-subsection-algebraic-elements.html" title="Previous">Prev</a><a id="upbutton" class="up-button button toolbar-item" href="fields.html" title="Up">Up</a><a id="nextbutton" class="next-button button toolbar-item" href="section-fields-vectorspaces.html" title="Next">Next</a></span>
+</div>
+</div>
+<div class="navbar-bottom-buttons toolbar toolbar-divisor-4">
+<button class="sidebar-left-toggle-button button toolbar-item active">Contents</button><a class="previous-button toolbar-item button" href="fields-subsection-algebraic-elements.html" title="Previous">Prev</a><a class="up-button button toolbar-item" href="fields.html" title="Up">Up</a><a class="next-button button toolbar-item" href="section-fields-vectorspaces.html" title="Next">Next</a>
+</div>
+</div></nav></header><div class="page">
+<div xmlns:svg="http://www.w3.org/2000/svg" id="sidebar-left" class="sidebar" role="navigation"><div class="sidebar-content">
+<nav id="toc"><ul>
+<li class="link frontmatter">
+<a href="aata.html" data-scroll="Wih"><span class="title">Front Matter</span></a><ul>
+<li><a href="colophon-1.html" data-scroll="colophon-1">Colophon</a></li>
+<li><a href="acknowledgement-1.html" data-scroll="acknowledgement-1">Acknowledgements</a></li>
+<li><a href="preface-1.html" data-scroll="JEk">Preface to the Remixed Version</a></li>
+<li><a href="preface-2.html" data-scroll="Cpq">Original Preface</a></li>
+</ul>
+</li>
+<li class="link part"><a href="part-groups.html" data-scroll="part-groups"><span class="codenumber">I</span> <span class="title">Groups</span></a></li>
+<li class="link">
+<a href="sets.html" data-scroll="xcu"><span class="codenumber">1</span> <span class="title">Preliminaries</span></a><ul>
+<li><a href="section-note-on-proofs.html" data-scroll="yRH">A Short Note on Proofs</a></li>
+<li><a href="section-sets-and-functions.html" data-scroll="eYQ">Sets and Functions</a></li>
+<li><a href="section-equivalence-relations.html" data-scroll="VFe">Equivalence Relations and Partitions</a></li>
+<li><a href="section-math-induction.html" data-scroll="bUT">Mathematical Induction</a></li>
+<li><a href="exercises-sets.html" data-scroll="mDp">Additional Exercises</a></li>
+<li><a href="sets-references.html" data-scroll="ztb">References and Suggested Readings</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="groups.html" data-scroll="ZbN"><span class="codenumber">2</span> <span class="title">Groups</span></a><ul>
+<li><a href="section-mod-n-sym.html" data-scroll="nfs">Integer Equivalence Classes and Symmetries</a></li>
+<li><a href="section-groups-define.html" data-scroll="TmB">Definitions and Examples</a></li>
+<li><a href="section-basic-properties.html" data-scroll="Rxo">Basic Properties of Groups</a></li>
+<li><a href="section-subgroups.html" data-scroll="ztK">Subgroups</a></li>
+<li><a href="cyclic.html" data-scroll="MzR">Cyclic Subgroups</a></li>
+<li><a href="section-permutation-definitions.html" data-scroll="Wyg">Permutation Groups</a></li>
+<li><a href="exercises-groups.html" data-scroll="OCI">Additional Exercises</a></li>
+<li><a href="groups-exercises-detecting-errors.html" data-scroll="uJR">Additional Exercises: Detecting Errors</a></li>
+<li><a href="groups-references.html" data-scroll="muP">References and Suggested Readings</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="cosets.html" data-scroll="Uzy"><span class="codenumber">3</span> <span class="title">Cosets and Factor Groups</span></a><ul>
+<li><a href="section-cosets.html" data-scroll="xMb">Cosets</a></li>
+<li><a href="section-factor-groups.html" data-scroll="avo">Factor Groups and Normal Subgroups</a></li>
+<li><a href="exercises-cosets.html" data-scroll="FqA">Exercises</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="isomorph.html" data-scroll="OUu"><span class="codenumber">4</span> <span class="title">Isomorphisms and Homomorphisms</span></a><ul>
+<li><a href="section-isomorph-definitions.html" data-scroll="Evp">Definition and Examples</a></li>
+<li><a href="section-group-homomorphisms.html" data-scroll="uOI">Group Homomorphisms</a></li>
+<li><a href="section-group-isomorphism-theorems.html" data-scroll="aVR">The Isomorphism Theorems</a></li>
+<li><a href="exercises-isomorph.html" data-scroll="VeC">Additional Exercises</a></li>
+<li><a href="homomorph-exercises-automorphisms.html" data-scroll="Jes">Additional Exercises: Automorphisms</a></li>
+</ul>
+</li>
+<li class="link part"><a href="part-rings-and-fields.html" data-scroll="part-rings-and-fields"><span class="codenumber">II</span> <span class="title">Rings and Fields</span></a></li>
+<li class="link">
+<a href="rings.html" data-scroll="bhz"><span class="codenumber">5</span> <span class="title">Rings</span></a><ul>
+<li><a href="section-rings-definitions.html" data-scroll="kBl">Rings</a></li>
+<li><a href="section-domains-and-fields.html" data-scroll="QIu">Integral Domains and Fields</a></li>
+<li><a href="section-ring-homomorphisms.html" data-scroll="wPD">Ring Homomorphisms and Ideals</a></li>
+<li><a href="section-maximal-prime-ideals.html" data-scroll="cWM">Maximal and Prime Ideals</a></li>
+<li><a href="section-software-application.html" data-scroll="JdV">An Application to Software Design</a></li>
+<li><a href="exercises-rings.html" data-scroll="LYB">Additional Exercises</a></li>
+<li><a href="rings-exercises-programming.html" data-scroll="sfK">Programming Exercise</a></li>
+<li><a href="rings-references.html" data-scroll="JSg">References and Suggested Readings</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="poly.html" data-scroll="tPt"><span class="codenumber">6</span> <span class="title">Polynomials</span></a><ul>
+<li><a href="section-division-algorithm.html" data-scroll="Icc">The Integers</a></li>
+<li><a href="section-poly-rings.html" data-scroll="Djf">Polynomial Rings</a></li>
+<li><a href="section-poly-division-algorithm.html" data-scroll="jqo">The Division Algorithm</a></li>
+<li><a href="section-irreducible-poly.html" data-scroll="Pxx">Irreducible Polynomials</a></li>
+<li><a href="sec-factoring-c-r.html" data-scroll="icb">Factoring over \(\C\) and \(\R\)</a></li>
+<li><a href="exercises-poly.html" data-scroll="eGv">Additional Exercises</a></li>
+<li><a href="practice-euclidean-algorithm.html" data-scroll="BUS">Additional Exercises: The Euclidean Algorithm</a></li>
+<li><a href="poly-exercises-cubics-quartics.html" data-scroll="KNE">Additional Exercises:  Solving the Cubic and Quartic Equations</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="domains.html" data-scroll="HlR"><span class="codenumber">7</span> <span class="title">Integral Domains</span></a><ul>
+<li><a href="section-field-of-fractions.html" data-scroll="cTV">Fields of Fractions</a></li>
+<li><a href="section-factorization-domains.html" data-scroll="Jbe">Factorization in Integral Domains</a></li>
+<li><a href="reading-questions-22.html" data-scroll="drU">Reading Questions</a></li>
+<li><a href="exercises-domains.html" data-scroll="kyu">Exercises</a></li>
+<li><a href="domains-references.html" data-scroll="CJg">References and Suggested Readings</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="fields.html" data-scroll="pNh"><span class="codenumber">8</span> <span class="title">Fields</span></a><ul>
+<li><a href="section-constructions.html" data-scroll="ctw">Geometric Constructions</a></li>
+<li><a href="section-fields-intro.html" data-scroll="GTt">Introduction</a></li>
+<li><a href="section-extension-fields.html" data-scroll="dGQ">Extension Fields</a></li>
+<li><a href="fields-subsection-algebraic-elements.html" data-scroll="acq">Algebraic Elements</a></li>
+<li><a href="section-fields-vectorspaces-review.html" data-scroll="UWY" class="active">A Review of Vector Spaces</a></li>
+<li><a href="section-fields-vectorspaces.html" data-scroll="Scs">Extension Fields as Vector Spaces</a></li>
+<li><a href="section-constructions-conc.html" data-scroll="XhK">What's Not Constructible</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="galois.html" data-scroll="hgP"><span class="codenumber">9</span> <span class="title">Galois Theory</span></a><ul>
+<li><a href="section-galois-splitting-fields.html" data-scroll="wmn">Splitting Fields</a></li>
+<li><a href="section-galois-field-automorphisms.html" data-scroll="iWc">Field Automorphisms</a></li>
+<li><a href="section-galois-fund-theorem-galois-theory.html" data-scroll="Pdl">The Fundamental Theorem</a></li>
+</ul>
+</li>
+<li class="link part"><a href="part-more-group-theory.html" data-scroll="part-more-group-theory"><span class="codenumber">III</span> <span class="title">More Group Theory</span></a></li>
+<li class="link">
+<a href="groups.html" data-scroll="nRa"><span class="codenumber">10</span> <span class="title">Some of the Structure of Groups</span></a><ul>
+<li><a href="section-groups-cayley.html" data-scroll="CTu">Isomorphisms and Cayley's Theorem</a></li>
+<li><a href="section-groups-permutations.html" data-scroll="mjE">Permutation Groups</a></li>
+<li><a href="section-solvable-groups.html" data-scroll="WbU">Solvable Groups</a></li>
+<li><a href="section-simplicity-of-an.html" data-scroll="GCx">The Simplicity of the Alternating Group</a></li>
+<li><a href="section-galois-applications.html" data-scroll="vku">Applications: Galois Groups</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="struct-more.html" data-scroll="YWA"><span class="codenumber">11</span> <span class="title">More of the Structure of Groups</span></a><ul>
+<li><a href="section-groups-order.html" data-scroll="hVk">Cyclic Groups and Orders of Elements</a></li>
+<li><a href="section-groups-lagrange.html" data-scroll="BOb">Lagrange's Theorem and its consequences</a></li>
+<li><a href="section-direct-products.html" data-scroll="kCy">Direct Products</a></li>
+<li><a href="section-finite-abelian-groups.html" data-scroll="pUL">Finite Abelian Groups</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="crypt.html" data-scroll="uCn"><span class="codenumber">12</span> <span class="title">Introduction to Cryptography</span></a><ul>
+<li><a href="section-private-key-crypt.html" data-scroll="Qkr">Private Key Cryptography</a></li>
+<li><a href="section-public-key-crypt.html" data-scroll="wrA">Public Key Cryptography</a></li>
+<li><a href="ws_groups-RSA-lab.html" data-scroll="zaZ">Activity: RSA Cryptography Lab</a></li>
+<li><a href="section-method-of-repeated-squares.html" data-scroll="YOj">The Method of Repeated Squares</a></li>
+<li><a href="exercises-crypt.html" data-scroll="rHH">Exercises</a></li>
+<li><a href="crypt-exercises-additional.html" data-scroll="XOQ">Additional Exercises: Primality and Factoring</a></li>
+<li><a href="crypt-references.html" data-scroll="yqf">References and Suggested Readings</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="actions.html" data-scroll="elJ"><span class="codenumber">13</span> <span class="title">Group Actions</span></a><ul>
+<li><a href="section-groups-acting-on-sets.html" data-scroll="nFv">Groups Acting on Sets</a></li>
+<li><a href="section-class-equation.html" data-scroll="TME">The Class Equation</a></li>
+<li><a href="section-burnsides-counting-theorem.html" data-scroll="zTN">Burnside's Counting Theorem</a></li>
+<li><a href="exercises-actions.html" data-scroll="PcL">Exercises</a></li>
+<li><a href="actions-exercises-programming.html" data-scroll="vjU">Programming Exercise</a></li>
+<li><a href="actions-references.html" data-scroll="VdC">References and Suggested Reading</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="sylow.html" data-scroll="TkO"><span class="codenumber">14</span> <span class="title">The Sylow Theorems</span></a><ul>
+<li><a href="section-sylow-theorems.html" data-scroll="ILJ">The Sylow Theorems</a></li>
+<li><a href="section-sylow-applications.html" data-scroll="oSS">Examples and Applications</a></li>
+<li><a href="reading-questions-23.html" data-scroll="EPk">Reading Questions</a></li>
+<li><a href="exercises-sylow.html" data-scroll="kiZ">Exercises</a></li>
+<li><a href="sylow-exercises-project.html" data-scroll="Qqi">A Project</a></li>
+<li><a href="sylow-references.html" data-scroll="Sgz">References and Suggested Readings</a></li>
+</ul>
+</li>
+<li class="link part"><a href="part-additional.html" data-scroll="part-additional"><span class="codenumber">IV</span> <span class="title">Additional Topics</span></a></li>
+<li class="link">
+<a href="matrix.html" data-scroll="CSk"><span class="codenumber">15</span> <span class="title">Matrix Groups and Symmetry</span></a><ul>
+<li><a href="section-matrix-groups.html" data-scroll="geN">Matrix Groups</a></li>
+<li><a href="section-symmetry.html" data-scroll="MlW">Symmetry</a></li>
+<li><a href="reading-questions-24.html" data-scroll="jhg">Reading Questions</a></li>
+<li><a href="exercises-matrix.html" data-scroll="nJm">Exercises</a></li>
+<li><a href="matrix-references.html" data-scroll="IcT">References and Suggested Readings</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="algcodes.html" data-scroll="jTr"><span class="codenumber">16</span> <span class="title">Algebraic Coding Theory</span></a><ul>
+<li><a href="section-error-detecting-correcting-codes.html" data-scroll="lIE">Error-Detecting and Correcting Codes</a></li>
+<li><a href="section-linear-codes.html" data-scroll="RPN">Linear Codes</a></li>
+<li><a href="section-parity-check.html" data-scroll="xWW">Parity-Check and Generator Matrices</a></li>
+<li><a href="section-efficient-decoding.html" data-scroll="eef">Efficient Decoding</a></li>
+<li><a href="reading-questions-25.html" data-scroll="gmA">Reading Questions</a></li>
+<li><a href="exercises-algcodes.html" data-scroll="NfU">Exercises</a></li>
+<li><a href="algcodes-exercises-programming.html" data-scroll="tnd">Programming Exercises</a></li>
+<li><a href="algcodes-references.html" data-scroll="GJf">References and Suggested Readings</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="finite.html" data-scroll="Gnc"><span class="codenumber">17</span> <span class="title">Finite Fields</span></a><ul>
+<li><a href="section-finite-field.html" data-scroll="jzF">Structure of a Finite Field</a></li>
+<li><a href="section-poly-codes.html" data-scroll="PGO">Polynomial Codes</a></li>
+<li><a href="reading-questions-26.html" data-scroll="RdC">Reading Questions</a></li>
+<li><a href="exercises-finite.html" data-scroll="KWV">Exercises</a></li>
+<li><a href="finite-exercises-bch-codes.html" data-scroll="ree">Additional Exercises: Error Correction for <abbr class="acronym">BCH</abbr> Codes</a></li>
+<li><a href="finite-references.html" data-scroll="Yrk">References and Suggested Readings</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="boolean.html" data-scroll="dAp"><span class="codenumber">18</span> <span class="title">Lattices and Boolean Algebras</span></a><ul>
+<li><a href="section-boolean-lattices.html" data-scroll="Tbk">Lattices</a></li>
+<li><a href="section-boolean-algebras.html" data-scroll="zit">Boolean Algebras</a></li>
+<li><a href="section-algebra-of-circuits.html" data-scroll="fpC">The Algebra of Electrical Circuits</a></li>
+<li><a href="reading-questions-27.html" data-scroll="nQZ">Reading Questions</a></li>
+<li><a href="exercises-boolean.html" data-scroll="uyA">Exercises</a></li>
+<li><a href="boolean-exercises-programming.html" data-scroll="aFJ">Programming Exercises</a></li>
+<li><a href="boolean-references.html" data-scroll="QcR">References and Suggested Readings</a></li>
+</ul>
+</li>
+<li class="link backmatter"><a href="backmatter.html" data-scroll="uDN"><span class="title">Reference</span></a></li>
+<li class="link"><a href="appendix-gfdl.html" data-scroll="gAi"><span class="codenumber">A</span> <span class="title">GNU Free Documentation License</span></a></li>
+<li class="link"><a href="solutions-1.html" data-scroll="aKW"><span class="codenumber">B</span> <span class="title">Hints and Answers to Selected Exercises</span></a></li>
+<li class="link"><a href="appendix-2.html" data-scroll="MHr"><span class="codenumber">C</span> <span class="title">Notation</span></a></li>
+<li class="link"><a href="index-1.html" data-scroll="index-1"><span class="title">Index</span></a></li>
+<li class="link"><a href="colophon-2.html" data-scroll="colophon-2"><span class="title">Colophon</span></a></li>
+</ul></nav><div class="extras"><nav><a class="mathbook-link" href="https://pretextbook.org">Authored in PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" alt="Powered by MathJax"></a></nav></div>
+</div></div>
+<main class="main"><div id="content" class="pretext-content"><section xmlns:svg="http://www.w3.org/2000/svg" class="section" id="UWY"><h2 class="heading hide-type">
+<span class="type">Section</span> <span class="codenumber">8.5</span> <span class="title">A Review of Vector Spaces</span>
+</h2>
+<section class="introduction" id="LVx"><p id="Beh">To further analyze extension fields, we must shift our perspective.  Instead of considering extension fields as a type of field, we will consider them instead as a <em class="emphasis">vector space</em>.  (This is not crazy: we did a similar thing when trying to understand the integers.  We could consider them as a group, but when we consider them as a ring, we learn more.)</p>
+<p id="hlq">Here is the plan: we will briefly review the main ideas about vector spaces in general, in case it has been a while since you thought about the topic.  Then we will leverage the machinery of linear algebra to discover new results about extension fields.</p>
+<p id="Nsz">In a linear algebra class, you probably thought of vectors primarily as <em class="emphasis">column</em> vectors: lists of tuples such as \(\begin{bmatrix}3\\0\\1\end{bmatrix}\) of \(\begin{bmatrix}4\\-2\end{bmatrix}\text{.}\)  These are exaples of vectors in \(\R^3\) and \(\R^2\text{,}\) respectively, and \(\R^3\) and \(\R^2\) are indeed examples of vector <em class="emphasis">spaces</em>.</p>
+<p id="tzI">The more abstract approach is to consider a set together with some operations that must satisfy some axioms.  Then, just like we saw with groups and rings, we can generalize what works for those generic vectors to other mathematical objects.  For example, the set of all polynomials of degree no more than 2 looks very much like \(\R^3\) as a vector space.</p>
+<p id="ZGR">Our goal is to view an extension field as a vector space, so let's say carefully what a vector space is using the abstract, axiomatic approach.</p></section><section class="subsection" id="Ogj"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">8.5.1</span> <span class="title">Definitions and Examples</span>
+</h3>
+<p id="Vbb">A <dfn class="terminology">vector space</dfn> \(V\) over a field \(F\) is an abelian group with a <dfn class="terminology">scalar product</dfn>  \(\alpha \cdot v\) or \(\alpha v\) defined for all \(\alpha \in F\) and all \(v \in V\) satisfying the following axioms.</p>
+<ul class="disc">
+<li id="mXo"><p id="POs">\(\alpha(\beta v) =(\alpha \beta)v\text{;}\)</p></li>
+<li id="Tex"><p id="vVB">\((\alpha + \beta)v =\alpha v + \beta v\text{;}\)</p></li>
+<li id="zlG"><p id="ccK">\(\alpha(u + v) = \alpha u + \alpha v\text{;}\)</p></li>
+<li id="fsP"><p id="IjT">\(1v=v\text{;}\)</p></li>
+</ul>
+<p data-braille="continuation">where \(\alpha, \beta \in F\) and \(u, v \in V\text{.}\)</p>
+<p id="Bik">The elements of \(V\) are called <dfn class="terminology">vectors</dfn>; the elements of \(F\) are called <dfn class="terminology">scalars</dfn>. It is important to notice that in most cases two vectors cannot be multiplied. In general, it is only possible to multiply a vector with a scalar. To differentiate between the scalar zero and the vector zero, we will write them as 0 and \({\mathbf 0}\text{,}\) respectively.</p>
+<p id="hpt">Let us examine several examples of vector spaces. Some of them will be quite familiar; others will seem less so.</p>
+<article class="example example-like" id="OQd"><h6 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">8.21</span><span class="period">.</span>
+</h6>
+<p id="sjX">The \(n\)-tuples of real numbers, denoted by \({\mathbb R}^n\text{,}\) form a vector space over \({\mathbb R}\text{.}\) Given vectors \(u = (u_1, \ldots,
+u_n)\) and \(v = (v_1, \ldots,
+v_n)\) in \({\mathbb R}^n\) and \(\alpha\) in \({\mathbb R}\text{,}\) we can define vector addition by</p>
+<div class="displaymath">
+\begin{equation*}
+u + v = (u_1, \ldots, u_n) + (v_1, \ldots, v_n) = (u_1 + v_1, \ldots, u_n + v_n)
+\end{equation*}
+</div>
+<p data-braille="continuation">and scalar multiplication by</p>
+<div class="displaymath">
+\begin{equation*}
+\alpha u = \alpha(u_1, \ldots, u_n)= (\alpha u_1, \ldots, \alpha u_n)\text{.}
+\end{equation*}
+</div></article><article class="example example-like" id="uXm"><h6 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">8.22</span><span class="period">.</span>
+</h6>
+<p id="Yrg">If \(F\) is a field, then \(F[x]\) is a vector space over \(F\text{.}\) The vectors in \(F[x]\) are simply polynomials, and vector addition is just polynomial addition. If \(\alpha \in F\) and \(p(x) \in F[x]\text{,}\) then scalar multiplication is defined by \(\alpha p(x)\text{.}\)</p></article><article class="example example-like" id="bev"><h6 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">8.23</span><span class="period">.</span>
+</h6>
+<p id="Eyp">The set of all continuous real-valued functions on a closed interval \([a,b]\) is a vector space over \({\mathbb R}\text{.}\) If \(f(x)\) and \(g(x)\) are continuous on \([a, b]\text{,}\) then \((f+g)(x)\) is defined to be \(f(x) + g(x)\text{.}\) Scalar multiplication is defined by \((\alpha f)(x) = \alpha f(x)\) for \(\alpha \in {\mathbb R}\text{.}\) For example, if \(f(x) = \sin x\) and \(g(x)= x^2\text{,}\) then \((2f + 5g)(x) =2 \sin x + 5 x^2\text{.}\)</p></article><article class="example example-like" id="HlE"><h6 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">8.24</span><span class="period">.</span>
+</h6>
+<p id="kFy">Let \(V = {\mathbb Q}(\sqrt{2}\, ) = \{ a + b \sqrt{2} : a, b \in {\mathbb Q } \}\text{.}\) Then \(V\) is a vector space over \({\mathbb Q}\text{.}\) If \(u = a + b \sqrt{2}\) and \(v = c + d \sqrt{2}\text{,}\) then \(u + v = (a + c) + (b + d ) \sqrt{2}\) is again in \(V\text{.}\) Also, for \(\alpha \in {\mathbb Q}\text{,}\) \(\alpha v\) is in \(V\text{.}\) We will leave it as an exercise to verify that all of the vector space axioms hold for \(V\text{.}\)</p></article><p id="FOa">Just as we were able to prove some basic, fundamental facts about groups from the axioms, we can easily verify some facts for vector spaces.</p>
+<article class="proposition theorem-like" id="dZb"><h6 class="heading">
+<span class="type">Proposition</span><span class="space"> </span><span class="codenumber">8.25</span><span class="period">.</span>
+</h6>
+<p id="HsV">Let \(V\) be a vector space over \(F\text{.}\) Then each of the following statements is true.</p>
+<ol class="decimal">
+<li id="LzY"><p id="orc">\(0v ={\mathbf 0}\) for all \(v \in V\text{.}\)</p></li>
+<li id="rHh"><p id="Uyl">\(\alpha {\mathbf 0} = {\mathbf 0}\) for all \(\alpha \in F\text{.}\)</p></li>
+<li id="XOq"><p id="AFu">If \(\alpha v = {\mathbf 0}\text{,}\) then either \(\alpha = 0\) or \(v = {\mathbf 0}\text{.}\)</p></li>
+<li id="DVz"><p id="gMD">\((-1) v = -v\) for all \(v \in V\text{.}\)</p></li>
+<li id="kcI"><p id="MTM">\(-(\alpha v) = (-\alpha)v = \alpha(-v)\) for all \(\alpha \in F\) and all \(v \in V\text{.}\)</p></li>
+</ol></article><article class="proof" id="YjP"><h6 class="heading"><span class="type">Proof<span class="period">.</span></span></h6>
+<p id="egs">To prove (1), observe that</p>
+<div class="displaymath">
+\begin{equation*}
+0 v = (0 + 0)v = 0v + 0v;
+\end{equation*}
+</div>
+<p data-braille="continuation">consequently, \({\mathbf 0} + 0 v = 0v + 0v\text{.}\) Since \(V\) is an abelian group, \({\mathbf 0} = 0v\text{.}\)</p>
+<p id="KnB">The proof of (2) is almost identical to the proof of (1). For (3), we are done if \(\alpha = 0\text{.}\) Suppose that \(\alpha \neq 0\text{.}\) Multiplying both sides of \(\alpha v = {\mathbf 0}\) by \(1/ \alpha\text{,}\) we have \(v = {\mathbf 0}\text{.}\)</p>
+<p id="quK">To show (4), observe that</p>
+<div class="displaymath">
+\begin{equation*}
+v + (-1)v = 1v + (-1)v = (1-1)v = 0v = {\mathbf 0}\text{,}
+\end{equation*}
+</div>
+<p data-braille="continuation">and so \(-v = (-1)v\text{.}\) We will leave the proof of (5) as an exercise.</p></article></section><section class="subsection" id="uns"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">8.5.2</span> <span class="title">Subspaces</span>
+</h3>
+<p id="NwC">Just as groups have subgroups and rings have subrings, vector spaces also have substructures. Let \(V\) be a vector space over a field \(F\text{,}\) and \(W\) a subset of \(V\text{.}\) Then \(W\) is a <dfn class="terminology">subspace</dfn> of \(V\) if it is closed under vector addition and scalar multiplication; that is, if \(u, v \in W\) and \(\alpha \in F\text{,}\) it will always be the case that \(u + v\) and \(\alpha v\) are also in \(W\text{.}\)</p>
+<article class="example example-like" id="nsN"><h6 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">8.26</span><span class="period">.</span>
+</h6>
+<p id="QMH">Let \(W\) be the subspace of \({\mathbb R}^3\) defined by \(W = \{ (x_1, 2 x_1 + x_2, x_1 - x_2) : x_1, x_2 \in {\mathbb R} \}\text{.}\) We claim that \(W\) is a  subspace of \({\mathbb R}^3\text{.}\) Since</p>
+<div class="displaymath">
+\begin{align*}
+\alpha (x_1, 2 x_1 + x_2, x_1 - x_2) &amp; =  (\alpha x_1, \alpha(2 x_1 + x_2), \alpha( x_1 - x_2))\\
+&amp; =  (\alpha x_1, 2(\alpha x_1) + \alpha x_2, \alpha x_1 -\alpha x_2)\text{,}
+\end{align*}
+</div>
+<p data-braille="continuation">\(W\) is closed under scalar multiplication. To show that \(W\) is closed under vector addition, let \(u = (x_1, 2 x_1 + x_2, x_1 - x_2)\) and \(v = (y_1, 2 y_1 + y_2, y_1 - y_2)\) be vectors in \(W\text{.}\) Then</p>
+<div class="displaymath">
+\begin{equation*}
+u + v = (x_1 + y_1, 2( x_1 + y_1) +( x_2 + y_2), (x_1 + y_1) - (x_2+ y_2))\text{.}
+\end{equation*}
+</div></article><article class="example example-like" id="TzW"><h6 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">8.27</span><span class="period">.</span>
+</h6>
+<p id="wTQ">Let \(W\) be the subset of polynomials of \(F[x]\) with no odd-power terms. If \(p(x)\) and \(q(x)\) have no odd-power terms, then neither will \(p(x) + q(x)\text{.}\) Also, \(\alpha p(x) \in W\) for \(\alpha \in F\) and \(p(x) \in W\text{.}\)</p></article><p id="lVj">For groups and rings, a natural way to get a subgroup or subring was to look at the set of all elements <em class="emphasis">generated</em> by one or more elements.  For vector spaces, the set of elements (vectors) that are generated by a few particular elements is called a <dfn class="terminology">spanning set</dfn>.</p>
+<p id="tDL">More in general, let \(V\) be any vector space over a field \(F\) and suppose that \(v_1, v_2, \ldots,
+v_n\) are vectors in \(V\) and \(\alpha_1, \alpha_2, \ldots, \alpha_n\) are scalars in \(F\text{.}\) Any vector \(w\) in \(V\) of the form</p>
+<div class="displaymath">
+\begin{equation*}
+w = \sum_{i=1}^n \alpha_i v_i = \alpha_1 v_1 + \alpha_2 v_2 + \cdots + \alpha_n v_n
+\end{equation*}
+</div>
+<p data-braille="continuation">is called a <dfn class="terminology">linear combination</dfn>  of the vectors \(v_1, v_2, \ldots, v_n\text{.}\) The <dfn class="terminology">spanning set</dfn>  of vectors \(v_1, v_2, \ldots,
+v_n\) is the set of vectors obtained from all possible linear combinations of \(v_1, v_2, \ldots, v_n\text{.}\) If \(W\) is the spanning set of \(v_1, v_2, \ldots, v_n\text{,}\) then we say that \(W\) is <dfn class="terminology">spanned</dfn> by \(v_1, v_2, \ldots, v_n\text{.}\)</p>
+<article class="proposition theorem-like" id="Kgk"><h6 class="heading">
+<span class="type">Proposition</span><span class="space"> </span><span class="codenumber">8.28</span><span class="period">.</span>
+</h6>
+<p id="nAe">Let \(S= \{v_1, v_2, \ldots,
+v_n \}\) be vectors in a vector space \(V\text{.}\) Then the span of \(S\) is a subspace of \(V\text{.}\)</p></article><article class="proof" id="EqY"><h6 class="heading"><span class="type">Proof<span class="period">.</span></span></h6>
+<p id="WBT">Let \(u\) and \(v\) be in \(S\text{.}\) We can write both of these vectors as  linear combinations of the \(v_i\)'s:</p>
+<div class="displaymath">
+\begin{align*}
+u &amp; =  \alpha_1 v_1 + \alpha_2 v_2 + \cdots + \alpha_n v_n\\
+v &amp; =  \beta_1 v_1 + \beta_2 v_2 + \cdots + \beta_n v_n\text{.}
+\end{align*}
+</div>
+<p data-braille="continuation">Then</p>
+<div class="displaymath">
+\begin{equation*}
+u + v =( \alpha_1 + \beta_1) v_1 + (\alpha_2+ \beta_2) v_2 + \cdots + (\alpha_n + \beta_n) v_n
+\end{equation*}
+</div>
+<p data-braille="continuation">is a linear combination of the \(v_i\)'s. For \(\alpha \in F\text{,}\)</p>
+<div class="displaymath">
+\begin{equation*}
+\alpha u = (\alpha \alpha_1) v_1 + ( \alpha \alpha_2) v_2 + \cdots + (\alpha \alpha_n ) v_n
+\end{equation*}
+</div>
+<p data-braille="continuation">is in the span of \(S\text{.}\)</p></article></section><section class="subsection" id="auB"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">8.5.3</span> <span class="title">Linear Independence</span>
+</h3>
+<p id="ZKU">Let \(S = \{v_1, v_2, \ldots,
+v_n\}\) be a set of vectors in a vector space \(V\text{.}\) If there exist scalars \(\alpha_1, \alpha_2 \ldots \alpha_n \in F\) such that not all of the \(\alpha_i\)'s are zero and</p>
+<div class="displaymath">
+\begin{equation*}
+\alpha_1 v_1 + \alpha_2 v_2 + \cdots + \alpha_n v_n = {\mathbf 0 }\text{,}
+\end{equation*}
+</div>
+<p data-braille="continuation">then \(S\) is said to be <dfn class="terminology">linearly dependent</dfn>.  If the set \(S\) is not linearly dependent, then it is said to be <dfn class="terminology">linearly independent</dfn>.  More specifically, \(S\) is a linearly independent set if</p>
+<div class="displaymath">
+\begin{equation*}
+\alpha_1 v_1 + \alpha_2 v_2 + \cdots + \alpha_n v_n = {\mathbf 0 }
+\end{equation*}
+</div>
+<p data-braille="continuation">implies that</p>
+<div class="displaymath">
+\begin{equation*}
+\alpha_1 = \alpha_2 = \cdots = \alpha_n = 0
+\end{equation*}
+</div>
+<p data-braille="continuation">for any set of scalars \(\{ \alpha_1, \alpha_2 \ldots \alpha_n \}\text{.}\)</p>
+<article class="proposition theorem-like" id="qnt"><h6 class="heading">
+<span class="type">Proposition</span><span class="space"> </span><span class="codenumber">8.29</span><span class="period">.</span>
+</h6>
+<p id="THn">Let \(\{ v_1, v_2, \ldots,
+v_n \}\) be a set of linearly independent vectors in a vector space. Suppose that</p>
+<div class="displaymath">
+\begin{equation*}
+v = \alpha_1 v_1 + \alpha_2 v_2 + \cdots + \alpha_n v_n = \beta_1 v_1 + \beta_2 v_2 + \cdots + \beta_n v_n\text{.}
+\end{equation*}
+</div>
+<p data-braille="continuation">Then \(\alpha_1 = \beta_1, \alpha_2 = \beta_2, \ldots, \alpha_n = \beta_n\text{.}\)</p></article><article class="proof" id="kyh"><h6 class="heading"><span class="type">Proof<span class="period">.</span></span></h6>
+<p id="CJc">If</p>
+<div class="displaymath">
+\begin{equation*}
+v = \alpha_1 v_1 + \alpha_2 v_2 + \cdots + \alpha_n v_n = \beta_1 v_1 + \beta_2 v_2 + \cdots + \beta_n v_n\text{,}
+\end{equation*}
+</div>
+<p data-braille="continuation">then</p>
+<div class="displaymath">
+\begin{equation*}
+(\alpha_1 - \beta_1) v_1 + (\alpha_2 - \beta_2) v_2 + \cdots + (\alpha_n - \beta_n) v_n = {\mathbf 0}\text{.}
+\end{equation*}
+</div>
+<p data-braille="continuation">Since \(v_1, \ldots, v_n\) are linearly independent, \(\alpha_i - \beta_i = 0\) for \(i = 1, \ldots, n\text{.}\)</p></article><p id="FSd">The definition of linear dependence makes more sense if we consider the following proposition.</p>
+<article class="proposition theorem-like" id="WuC"><h6 class="heading">
+<span class="type">Proposition</span><span class="space"> </span><span class="codenumber">8.30</span><span class="period">.</span>
+</h6>
+<p id="zOw">A set \(\{ v_1, v_2, \dots,
+v_n \}\) of vectors in a vector space \(V\) is linearly dependent if and only if one of the \(v_i\)'s is a linear combination of the rest.</p></article><article class="proof" id="QFq"><h6 class="heading"><span class="type">Proof<span class="period">.</span></span></h6>
+<p id="iQl">Suppose that \(\{ v_1, v_2, \dots,
+v_n \}\) is a set of linearly dependent vectors. Then there exist scalars \(\alpha_1, \ldots, \alpha_n\) such that</p>
+<div class="displaymath">
+\begin{equation*}
+\alpha_1 v_1 + \alpha_2 v_2 + \cdots + \alpha_n v_n = {\mathbf 0 }\text{,}
+\end{equation*}
+</div>
+<p data-braille="continuation">with at least one of the \(\alpha_i\)'s not equal to zero. Suppose that \(\alpha_k \neq 0\text{.}\) Then</p>
+<div class="displaymath">
+\begin{equation*}
+v_k = - \frac{\alpha_1}{\alpha_k} v_1 - \cdots - \frac{\alpha_{k - 1}}{\alpha_k} v_{k-1} - \frac{\alpha_{k + 1}}{\alpha_k} v_{k + 1} - \cdots - \frac{\alpha_n}{\alpha_k} v_n\text{.}
+\end{equation*}
+</div>
+<p id="OXu">Conversely, suppose that</p>
+<div class="displaymath">
+\begin{equation*}
+v_k = \beta_1 v_1 + \cdots + \beta_{k - 1} v_{k - 1} + \beta_{k + 1} v_{k + 1} + \cdots + \beta_n v_n\text{.}
+\end{equation*}
+</div>
+<p data-braille="continuation">Then</p>
+<div class="displaymath">
+\begin{equation*}
+\beta_1 v_1 + \cdots + \beta_{k - 1} v_{k - 1} - v_k + \beta_{k + 1} v_{k + 1} + \cdots + \beta_n v_n = {\mathbf 0}\text{.}
+\end{equation*}
+</div></article><p id="lZm">The following proposition is a consequence of the fact that any system of homogeneous linear equations with more unknowns than equations will have a nontrivial solution. We leave the details of the proof for the end-of-chapter exercises.</p>
+<article class="proposition theorem-like" id="CBL"><h6 class="heading">
+<span class="type">Proposition</span><span class="space"> </span><span class="codenumber">8.31</span><span class="period">.</span>
+</h6>
+<p id="fVF">Suppose that a vector space \(V\) is spanned by \(n\) vectors. If \(m \gt n\text{,}\) then any set of \(m\) vectors in \(V\) must be linearly dependent.</p></article><p id="Sgv">A set \(\{ e_1, e_2, \ldots,
+e_n \}\) of vectors in a vector space \(V\) is called a <dfn class="terminology">basis</dfn> for \(V\) if \(\{ e_1, e_2, \ldots,
+e_n \}\) is a linearly independent set that spans \(V\text{.}\)</p>
+<article class="example example-like" id="zHf"><h6 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">8.32</span><span class="period">.</span>
+</h6>
+<p id="daZ">The vectors \(e_1 = (1, 0, 0)\text{,}\) \(e_2 = (0, 1, 0)\text{,}\) and \(e_3 =(0, 0, 1)\) form a basis for \({\mathbb R}^3\text{.}\) The set certainly spans \({\mathbb R}^3\text{,}\) since any arbitrary vector \((x_1, x_2, x_3)\) in \({\mathbb R}^3\) can be written as \(x_1 e_1 + x_2 e_2 + x_3 e_3\text{.}\) Also, none of the vectors \(e_1, e_2, e_3\) can be written as a linear combination of the other two; hence, they are linearly independent. The vectors \(e_1, e_2, e_3\) are not the only basis of \({\mathbb R}^3\text{:}\) the set \(\{ (3, 2, 1), (3, 2, 0), (1, 1, 1) \}\) is also a basis for \({\mathbb R}^3\text{.}\)</p></article><article class="example example-like" id="fOo"><h6 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">8.33</span><span class="period">.</span>
+</h6>
+<p id="Jii">Let \({\mathbb Q}( \sqrt{2}\, ) = \{ a + b \sqrt{2} : a, b \in {\mathbb Q} \}\text{.}\) The sets \(\{1, \sqrt{2}\, \}\) and \(\{1 + \sqrt{2}, 1 - \sqrt{2}\, \}\) are both bases of \({\mathbb Q}( \sqrt{2}\, )\text{.}\)</p></article><p id="ynE">From the last two examples it should be clear that a given vector space has several bases. In fact, there are an infinite number of bases for both of these examples. <em class="emphasis">In general, there is no unique basis for a vector space.</em> However, every basis of \({\mathbb R}^3\) consists of exactly three vectors, and every basis of \({\mathbb Q}(\sqrt{2}\, )\) consists of exactly two vectors. This is a consequence of the next proposition.</p>
+<article class="proposition theorem-like" id="iIU"><h6 class="heading">
+<span class="type">Proposition</span><span class="space"> </span><span class="codenumber">8.34</span><span class="period">.</span>
+</h6>
+<p id="McO">Let \(\{ e_1, e_2, \ldots, e_m \}\) and \(\{ f_1, f_2, \ldots,
+f_n \}\) be two bases for a vector space \(V\text{.}\) Then \(m = n\text{.}\)</p></article><article class="proof" id="wMz"><h6 class="heading"><span class="type">Proof<span class="period">.</span></span></h6>
+<p id="veD">Since \(\{ e_1, e_2, \ldots,
+e_m \}\) is a basis, it is a linearly independent set. By <a class="xref" data-knowl="./knowl/proposition-linearly-independent.html" title="Proposition 8.31">Proposition 8.31</a>, \(n \leq m\text{.}\) Similarly, \(\{ f_1, f_2, \ldots,
+f_n \}\) is a linearly independent set, and the last proposition implies that \(m \leq n\text{.}\) Consequently, \(m = n\text{.}\)</p></article><p id="euN">If \(\{ e_1, e_2, \ldots, e_n \}\) is a basis for a vector space \(V\text{,}\) then we say that the <dfn class="terminology">dimension</dfn> of \(V\) is \(n\) and we write \(\dim V =n\text{.}\)  We will leave the proof of the following theorem as an exercise.</p>
+<article class="theorem theorem-like" id="xRS"><h6 class="heading">
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">8.35</span><span class="period">.</span>
+</h6>
+<p id="blM">Let \(V\) be a vector space of dimension \(n\text{.}\)</p>
+<ol class="decimal">
+<li id="QjR"><p id="taV">If \(S = \{v_1, \ldots,
+v_n \}\) is a set of linearly independent vectors for \(V\text{,}\) then \(S\) is a basis for \(V\text{.}\)</p></li>
+<li id="wra"><p id="Zie">If \(S = \{v_1, \ldots,
+v_n \}\) spans \(V\text{,}\) then \(S\) is a basis for \(V\text{.}\)</p></li>
+<li id="cyj">
+<p id="Fpn">If \(S = \{v_1, \ldots,
+v_k \}\) is a set of linearly independent vectors for \(V\) with \(k \lt n\text{,}\) then there exist vectors \(v_{k + 1}, \ldots, v_n\) such that</p>
+<div class="displaymath">
+\begin{equation*}
+\{v_1, \ldots, v_k, v_{k + 1}, \ldots, v_n \}
+\end{equation*}
+</div>
+<p data-braille="continuation">is a basis for \(V\text{.}\)</p>
+</li>
+</ol></article></section></section></div></main>
+</div>
+<script src="https://unpkg.com/prismjs@v1.22.0/components/prism-core.min.js"></script><script src="https://unpkg.com/prismjs@v1.22.0/plugins/autoloader/prism-autoloader.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,106 @@
+
+\documentclass[12pt]{article}
+
+\usepackage{amssymb, amsmath, amsthm, mathrsfs, multicol, graphicx}
+\usepackage[top=.25in, bottom=1in, left=1in, right=1in]{geometry}
+\usepackage{fancyhdr}
+\usepackage{url}
+\usepackage{enumitem}
+\usepackage{pdfpages}
+\usepackage{tikz}
+\usetikzlibrary{positioning,matrix,arrows}
+
+
+\usepackage{xcolor}
+
+\pagecolor[rgb]{0,0,0}
+\color[rgb]{1,1,1}
+
+\pagestyle{empty}
+\include{macros-descrete}
+
+\theoremstyle{plain}
+\newtheorem*{theorem}{Theorem}
+\newtheorem*{proposition}{Proposition}
+\newtheorem*{lemma}{Lemma}
+\newtheorem{problem}{Problem}
+\newtheorem{question}{Question}
+\newtheorem{answer}{Answer}
+
+\theoremstyle{definition}
+\newtheorem*{definition}{Def}
+\newtheorem*{example}{Ex}
+
+\theoremstyle{remark}
+\newtheorem*{remark}{Remark}
+\newtheorem*{solution}{Solution}
+
+\setlength\parindent{0pt}
+
+%%% macros %%%%%
+\newcommand{\ex}{\noindent\textbf{Ex:} }
+
+\def\d{\displaystyle}
+% \def\uplevel#1{\end{itemize}#1\begin{itemize}}
+\def\deg{^\circ}
+\def\st{~:~}
+
+\def\imp{\rightarrow}
+\def\Imp{\Rightarrow}
+\def\iff{\Leftrightarrow}
+\def\Iff{\Leftrightarrow}
+\def\land{\wedge}
+
+
+
+\def\N{\mathbb N}
+\def\Z{\mathbb Z}
+\def\R{\mathbb R}
+\def\Q{\mathbb Q}
+\def\P{\mathbb P}
+\def\E{\mathbb E}
+\def\O{\mathbb O}
+\def\F{\mathbb F}
+\def\pow{\mathcal{P}}
+\def\b{\mathbf}
+\def\st{~|~}
+\def\bar{\overline}
+\def\inv{^{-1}}
+
+\newcommand{\vtx}[2]{node[fill,circle,inner sep=0pt, minimum size=5pt,label=#1:#2]{}}
+\newcommand{\va}[1]{\vtx{above}{#1}}
+\newcommand{\vb}[1]{\vtx{below}{#1}}
+\newcommand{\vr}[1]{\vtx{right}{#1}}
+\newcommand{\vl}[1]{\vtx{left}{#1}}
+\renewcommand{\v}{\vtx{above}{}}
+
+%headers and footers:
+
+
+%opening
+
+\begin{document}
+
+\Large
+\begin{center}
+ \textbf{\LARGE Applications to Combinatorics}\\
+ Friday, April 10
+\end{center}
+
+How many ways could King Arthur and his 9 favorite knights sit around their 10 seat round table?
+\vfill
+You have 31 flavors of ice-cream to choose from.
+\begin{enumerate}
+  \item How many cones can you make using 3 distinct flavors?
+  \item How many milkshakes can you make using 3 distinct flavors?
+\end{enumerate}
+\vfill
+
+\clearpage
+
+King Arthur wants to put out placemats for his round table.  Each of the 10 spots could get a blue or a gold placemat.  How many different ways could he arrange the placemats?
+
+\vfill
+
+
+\end{document}

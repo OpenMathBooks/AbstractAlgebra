@@ -1,0 +1,615 @@
+<!DOCTYPE html>
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*       on 2021-01-10T15:14:49-07:00       *-->
+<!--*   A recent stable commit (2020-08-09):   *-->
+<!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<html lang="en-US">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>AATA Factoring over \(\C\) and \(\R\)</title>
+<meta name="Keywords" content="Authored in PreTeXt">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script src="https://sagecell.sagemath.org/embedded_sagecell.js"></script><script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [['\\(','\\)']]
+    },
+    asciimath2jax: {
+        ignoreClass: ".*",
+        processClass: "has_am"
+    },
+    jax: ["input/AsciiMath"],
+    extensions: ["asciimath2jax.js"],
+    TeX: {
+        extensions: ["extpfeil.js", "autobold.js", "https://pretextbook.org/js/lib/mathjaxknowl.js", "AMScd.js", ],
+        // scrolling to fragment identifiers is controlled by other Javascript
+        positionToHash: false,
+        equationNumbers: { autoNumber: "none", useLabelIds: true, },
+        TagSide: "right",
+        TagIndent: ".8em",
+    },
+    // HTML-CSS output Jax to be dropped for MathJax 3.0
+    "HTML-CSS": {
+        scale: 88,
+        mtextFontInherit: true,
+    },
+    CommonHTML: {
+        scale: 88,
+        mtextFontInherit: true,
+    },
+});
+</script><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS_CHTML-full"></script><link href="https://unpkg.com/prismjs@v1.22.0/themes/prism.css" rel="stylesheet">
+<script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/jquery.min.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/0.13/pretext.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/0.13/pretext_add_on.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script xmlns:svg="http://www.w3.org/2000/svg">sagecellEvalName='Evaluate (Sage)';
+</script><link xmlns:svg="http://www.w3.org/2000/svg" href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://fonts.googleapis.com/css?family=Inconsolata:400,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/pretext.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/pretext_add_on.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/banner_default.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/toc_default.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/knowls_default.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/style_default.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/colors_default.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/setcolors.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="custom-styles.css">
+<!-- 2019-10-12: Temporary - CSS file for experiments with styling --><link xmlns:svg="http://www.w3.org/2000/svg" href="developer.css" rel="stylesheet" type="text/css">
+</head>
+<body id="judson-AATA" class="mathbook-book has-toc has-sidebar-left">
+<a class="assistive" href="#content">Skip to main content</a><div xmlns:svg="http://www.w3.org/2000/svg" class="hidden-content" style="display:none">\(\newcommand{\identity}{\mathrm{id}}
+\newcommand{\notdivide}{\nmid}
+\newcommand{\notsubset}{\not\subset}
+\newcommand{\lcm}{\operatorname{lcm}}
+\newcommand{\gf}{\operatorname{GF}}
+\newcommand{\inn}{\operatorname{Inn}}
+\newcommand{\aut}{\operatorname{Aut}}
+\newcommand{\Hom}{\operatorname{Hom}}
+\newcommand{\cis}{\operatorname{cis}}
+\newcommand{\chr}{\operatorname{char}}
+\newcommand{\Null}{\operatorname{Null}}
+\newcommand{\transpose}{\text{t}}
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\Q}{\mathbb{Q}}
+\newcommand{\R}{\mathbb{R}}
+\def\C{\mathbb{C}}
+\newcommand{\st}{:}
+\newcommand{\inv}{^{-1}}
+\newcommand{\bC}{\mathbb{C}}
+      \newcommand{\F}{\mathscr{F}}
+      \newcommand{\FR}{\mathscr{F}(\R)}
+      \newcommand{\DR}{\mathscr{D}(\R)}
+      \def\s{\varrho}
+      \def\theterm{Spring 2021}
+      \def\thecourse{MATH 322}
+\newcommand{\lt}{&lt;}
+\newcommand{\gt}{&gt;}
+\newcommand{\amp}{&amp;}
+\)</div>
+<header id="masthead" class="smallbuttons"><div class="banner"><div class="container">
+<a id="logo-link" href="http://abstract.pugetsound.edu" target="_blank"><img src="images/cover_aata_2020.png" alt="Logo image"></a><div class="title-container">
+<h1 class="heading"><a href="aata-toc.html"><span class="title">Abstract Algebra:</span> <span class="subtitle">Theory and Applications, Remixed!</span></a></h1>
+<p class="byline">Thomas W. Judson</p>
+</div>
+</div></div>
+<nav xmlns:svg="http://www.w3.org/2000/svg" id="primary-navbar" class="navbar"><div class="container">
+<div class="navbar-top-buttons">
+<button class="sidebar-left-toggle-button button active" aria-label="Show or hide table of contents sidebar">Contents</button><div class="tree-nav toolbar toolbar-divisor-3">
+<a class="index-button toolbar-item button" href="index-1.html" title="Index">Index</a><span class="threebuttons"><a id="previousbutton" class="previous-button toolbar-item button" href="section-irreducible-poly.html" title="Previous">Prev</a><a id="upbutton" class="up-button button toolbar-item" href="poly.html" title="Up">Up</a><a id="nextbutton" class="next-button button toolbar-item" href="exercises-poly.html" title="Next">Next</a></span>
+</div>
+</div>
+<div class="navbar-bottom-buttons toolbar toolbar-divisor-4">
+<button class="sidebar-left-toggle-button button toolbar-item active">Contents</button><a class="previous-button toolbar-item button" href="section-irreducible-poly.html" title="Previous">Prev</a><a class="up-button button toolbar-item" href="poly.html" title="Up">Up</a><a class="next-button button toolbar-item" href="exercises-poly.html" title="Next">Next</a>
+</div>
+</div></nav></header><div class="page">
+<div xmlns:svg="http://www.w3.org/2000/svg" id="sidebar-left" class="sidebar" role="navigation"><div class="sidebar-content">
+<nav id="toc"><ul>
+<li class="link frontmatter">
+<a href="aata.html" data-scroll="Wih"><span class="title">Front Matter</span></a><ul>
+<li><a href="colophon-1.html" data-scroll="colophon-1">Colophon</a></li>
+<li><a href="acknowledgement-1.html" data-scroll="acknowledgement-1">Acknowledgements</a></li>
+<li><a href="preface-1.html" data-scroll="JEk">Preface to the Remixed Version</a></li>
+<li><a href="preface-2.html" data-scroll="Cpq">Original Preface</a></li>
+</ul>
+</li>
+<li class="link part"><a href="part-groups.html" data-scroll="part-groups"><span class="codenumber">I</span> <span class="title">Groups</span></a></li>
+<li class="link">
+<a href="sets.html" data-scroll="xcu"><span class="codenumber">1</span> <span class="title">Preliminaries</span></a><ul>
+<li><a href="section-note-on-proofs.html" data-scroll="yRH">A Short Note on Proofs</a></li>
+<li><a href="section-sets-and-functions.html" data-scroll="eYQ">Sets and Functions</a></li>
+<li><a href="section-equivalence-relations.html" data-scroll="VFe">Equivalence Relations and Partitions</a></li>
+<li><a href="section-math-induction.html" data-scroll="bUT">Mathematical Induction</a></li>
+<li><a href="exercises-sets.html" data-scroll="mDp">Additional Exercises</a></li>
+<li><a href="sets-references.html" data-scroll="ztb">References and Suggested Readings</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="groups.html" data-scroll="ZbN"><span class="codenumber">2</span> <span class="title">Groups</span></a><ul>
+<li><a href="section-mod-n-sym.html" data-scroll="nfs">Integer Equivalence Classes and Symmetries</a></li>
+<li><a href="section-groups-define.html" data-scroll="TmB">Definitions and Examples</a></li>
+<li><a href="section-basic-properties.html" data-scroll="Rxo">Basic Properties of Groups</a></li>
+<li><a href="section-subgroups.html" data-scroll="ztK">Subgroups</a></li>
+<li><a href="cyclic.html" data-scroll="MzR">Cyclic Subgroups</a></li>
+<li><a href="section-permutation-definitions.html" data-scroll="Wyg">Permutation Groups</a></li>
+<li><a href="exercises-groups.html" data-scroll="OCI">Additional Exercises</a></li>
+<li><a href="groups-exercises-detecting-errors.html" data-scroll="uJR">Additional Exercises: Detecting Errors</a></li>
+<li><a href="groups-references.html" data-scroll="muP">References and Suggested Readings</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="cosets.html" data-scroll="Uzy"><span class="codenumber">3</span> <span class="title">Cosets and Factor Groups</span></a><ul>
+<li><a href="section-cosets.html" data-scroll="xMb">Cosets</a></li>
+<li><a href="section-factor-groups.html" data-scroll="avo">Factor Groups and Normal Subgroups</a></li>
+<li><a href="exercises-cosets.html" data-scroll="FqA">Exercises</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="isomorph.html" data-scroll="OUu"><span class="codenumber">4</span> <span class="title">Isomorphisms and Homomorphisms</span></a><ul>
+<li><a href="section-isomorph-definitions.html" data-scroll="Evp">Definition and Examples</a></li>
+<li><a href="section-group-homomorphisms.html" data-scroll="uOI">Group Homomorphisms</a></li>
+<li><a href="section-group-isomorphism-theorems.html" data-scroll="aVR">The Isomorphism Theorems</a></li>
+<li><a href="exercises-isomorph.html" data-scroll="VeC">Additional Exercises</a></li>
+<li><a href="homomorph-exercises-automorphisms.html" data-scroll="Jes">Additional Exercises: Automorphisms</a></li>
+</ul>
+</li>
+<li class="link part"><a href="part-rings-and-fields.html" data-scroll="part-rings-and-fields"><span class="codenumber">II</span> <span class="title">Rings and Fields</span></a></li>
+<li class="link">
+<a href="rings.html" data-scroll="bhz"><span class="codenumber">5</span> <span class="title">Rings</span></a><ul>
+<li><a href="section-rings-definitions.html" data-scroll="kBl">Rings</a></li>
+<li><a href="section-domains-and-fields.html" data-scroll="QIu">Integral Domains and Fields</a></li>
+<li><a href="section-ring-homomorphisms.html" data-scroll="wPD">Ring Homomorphisms and Ideals</a></li>
+<li><a href="section-maximal-prime-ideals.html" data-scroll="cWM">Maximal and Prime Ideals</a></li>
+<li><a href="section-software-application.html" data-scroll="JdV">An Application to Software Design</a></li>
+<li><a href="exercises-rings.html" data-scroll="LYB">Additional Exercises</a></li>
+<li><a href="rings-exercises-programming.html" data-scroll="sfK">Programming Exercise</a></li>
+<li><a href="rings-references.html" data-scroll="JSg">References and Suggested Readings</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="poly.html" data-scroll="tPt"><span class="codenumber">6</span> <span class="title">Polynomials</span></a><ul>
+<li><a href="section-division-algorithm.html" data-scroll="Icc">The Integers</a></li>
+<li><a href="section-poly-rings.html" data-scroll="Djf">Polynomial Rings</a></li>
+<li><a href="section-poly-division-algorithm.html" data-scroll="jqo">The Division Algorithm</a></li>
+<li><a href="section-irreducible-poly.html" data-scroll="Pxx">Irreducible Polynomials</a></li>
+<li><a href="sec-factoring-c-r.html" data-scroll="icb" class="active">Factoring over \(\C\) and \(\R\)</a></li>
+<li><a href="exercises-poly.html" data-scroll="eGv">Additional Exercises</a></li>
+<li><a href="practice-euclidean-algorithm.html" data-scroll="BUS">Additional Exercises: The Euclidean Algorithm</a></li>
+<li><a href="poly-exercises-cubics-quartics.html" data-scroll="KNE">Additional Exercises:  Solving the Cubic and Quartic Equations</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="domains.html" data-scroll="HlR"><span class="codenumber">7</span> <span class="title">Integral Domains</span></a><ul>
+<li><a href="section-field-of-fractions.html" data-scroll="cTV">Fields of Fractions</a></li>
+<li><a href="section-factorization-domains.html" data-scroll="Jbe">Factorization in Integral Domains</a></li>
+<li><a href="reading-questions-22.html" data-scroll="drU">Reading Questions</a></li>
+<li><a href="exercises-domains.html" data-scroll="kyu">Exercises</a></li>
+<li><a href="domains-references.html" data-scroll="CJg">References and Suggested Readings</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="fields.html" data-scroll="pNh"><span class="codenumber">8</span> <span class="title">Fields</span></a><ul>
+<li><a href="section-constructions.html" data-scroll="ctw">Geometric Constructions</a></li>
+<li><a href="section-fields-intro.html" data-scroll="GTt">Introduction</a></li>
+<li><a href="section-extension-fields.html" data-scroll="dGQ">Extension Fields</a></li>
+<li><a href="fields-subsection-algebraic-elements.html" data-scroll="acq">Algebraic Elements</a></li>
+<li><a href="section-fields-vectorspaces-review.html" data-scroll="UWY">A Review of Vector Spaces</a></li>
+<li><a href="section-fields-vectorspaces.html" data-scroll="Scs">Extension Fields as Vector Spaces</a></li>
+<li><a href="section-constructions-conc.html" data-scroll="XhK">What's Not Constructible</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="galois.html" data-scroll="hgP"><span class="codenumber">9</span> <span class="title">Galois Theory</span></a><ul>
+<li><a href="section-galois-splitting-fields.html" data-scroll="wmn">Splitting Fields</a></li>
+<li><a href="section-galois-field-automorphisms.html" data-scroll="iWc">Field Automorphisms</a></li>
+<li><a href="section-galois-fund-theorem-galois-theory.html" data-scroll="Pdl">The Fundamental Theorem</a></li>
+</ul>
+</li>
+<li class="link part"><a href="part-more-group-theory.html" data-scroll="part-more-group-theory"><span class="codenumber">III</span> <span class="title">More Group Theory</span></a></li>
+<li class="link">
+<a href="groups.html" data-scroll="nRa"><span class="codenumber">10</span> <span class="title">Some of the Structure of Groups</span></a><ul>
+<li><a href="section-groups-cayley.html" data-scroll="CTu">Isomorphisms and Cayley's Theorem</a></li>
+<li><a href="section-groups-permutations.html" data-scroll="mjE">Permutation Groups</a></li>
+<li><a href="section-solvable-groups.html" data-scroll="WbU">Solvable Groups</a></li>
+<li><a href="section-simplicity-of-an.html" data-scroll="GCx">The Simplicity of the Alternating Group</a></li>
+<li><a href="section-galois-applications.html" data-scroll="vku">Applications: Galois Groups</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="struct-more.html" data-scroll="YWA"><span class="codenumber">11</span> <span class="title">More of the Structure of Groups</span></a><ul>
+<li><a href="section-groups-order.html" data-scroll="hVk">Cyclic Groups and Orders of Elements</a></li>
+<li><a href="section-groups-lagrange.html" data-scroll="BOb">Lagrange's Theorem and its consequences</a></li>
+<li><a href="section-direct-products.html" data-scroll="kCy">Direct Products</a></li>
+<li><a href="section-finite-abelian-groups.html" data-scroll="pUL">Finite Abelian Groups</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="crypt.html" data-scroll="uCn"><span class="codenumber">12</span> <span class="title">Introduction to Cryptography</span></a><ul>
+<li><a href="section-private-key-crypt.html" data-scroll="Qkr">Private Key Cryptography</a></li>
+<li><a href="section-public-key-crypt.html" data-scroll="wrA">Public Key Cryptography</a></li>
+<li><a href="ws_groups-RSA-lab.html" data-scroll="zaZ">Activity: RSA Cryptography Lab</a></li>
+<li><a href="section-method-of-repeated-squares.html" data-scroll="YOj">The Method of Repeated Squares</a></li>
+<li><a href="exercises-crypt.html" data-scroll="rHH">Exercises</a></li>
+<li><a href="crypt-exercises-additional.html" data-scroll="XOQ">Additional Exercises: Primality and Factoring</a></li>
+<li><a href="crypt-references.html" data-scroll="yqf">References and Suggested Readings</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="actions.html" data-scroll="elJ"><span class="codenumber">13</span> <span class="title">Group Actions</span></a><ul>
+<li><a href="section-groups-acting-on-sets.html" data-scroll="nFv">Groups Acting on Sets</a></li>
+<li><a href="section-class-equation.html" data-scroll="TME">The Class Equation</a></li>
+<li><a href="section-burnsides-counting-theorem.html" data-scroll="zTN">Burnside's Counting Theorem</a></li>
+<li><a href="exercises-actions.html" data-scroll="PcL">Exercises</a></li>
+<li><a href="actions-exercises-programming.html" data-scroll="vjU">Programming Exercise</a></li>
+<li><a href="actions-references.html" data-scroll="VdC">References and Suggested Reading</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="sylow.html" data-scroll="TkO"><span class="codenumber">14</span> <span class="title">The Sylow Theorems</span></a><ul>
+<li><a href="section-sylow-theorems.html" data-scroll="ILJ">The Sylow Theorems</a></li>
+<li><a href="section-sylow-applications.html" data-scroll="oSS">Examples and Applications</a></li>
+<li><a href="reading-questions-23.html" data-scroll="EPk">Reading Questions</a></li>
+<li><a href="exercises-sylow.html" data-scroll="kiZ">Exercises</a></li>
+<li><a href="sylow-exercises-project.html" data-scroll="Qqi">A Project</a></li>
+<li><a href="sylow-references.html" data-scroll="Sgz">References and Suggested Readings</a></li>
+</ul>
+</li>
+<li class="link part"><a href="part-additional.html" data-scroll="part-additional"><span class="codenumber">IV</span> <span class="title">Additional Topics</span></a></li>
+<li class="link">
+<a href="matrix.html" data-scroll="CSk"><span class="codenumber">15</span> <span class="title">Matrix Groups and Symmetry</span></a><ul>
+<li><a href="section-matrix-groups.html" data-scroll="geN">Matrix Groups</a></li>
+<li><a href="section-symmetry.html" data-scroll="MlW">Symmetry</a></li>
+<li><a href="reading-questions-24.html" data-scroll="jhg">Reading Questions</a></li>
+<li><a href="exercises-matrix.html" data-scroll="nJm">Exercises</a></li>
+<li><a href="matrix-references.html" data-scroll="IcT">References and Suggested Readings</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="algcodes.html" data-scroll="jTr"><span class="codenumber">16</span> <span class="title">Algebraic Coding Theory</span></a><ul>
+<li><a href="section-error-detecting-correcting-codes.html" data-scroll="lIE">Error-Detecting and Correcting Codes</a></li>
+<li><a href="section-linear-codes.html" data-scroll="RPN">Linear Codes</a></li>
+<li><a href="section-parity-check.html" data-scroll="xWW">Parity-Check and Generator Matrices</a></li>
+<li><a href="section-efficient-decoding.html" data-scroll="eef">Efficient Decoding</a></li>
+<li><a href="reading-questions-25.html" data-scroll="gmA">Reading Questions</a></li>
+<li><a href="exercises-algcodes.html" data-scroll="NfU">Exercises</a></li>
+<li><a href="algcodes-exercises-programming.html" data-scroll="tnd">Programming Exercises</a></li>
+<li><a href="algcodes-references.html" data-scroll="GJf">References and Suggested Readings</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="finite.html" data-scroll="Gnc"><span class="codenumber">17</span> <span class="title">Finite Fields</span></a><ul>
+<li><a href="section-finite-field.html" data-scroll="jzF">Structure of a Finite Field</a></li>
+<li><a href="section-poly-codes.html" data-scroll="PGO">Polynomial Codes</a></li>
+<li><a href="reading-questions-26.html" data-scroll="RdC">Reading Questions</a></li>
+<li><a href="exercises-finite.html" data-scroll="KWV">Exercises</a></li>
+<li><a href="finite-exercises-bch-codes.html" data-scroll="ree">Additional Exercises: Error Correction for <abbr class="acronym">BCH</abbr> Codes</a></li>
+<li><a href="finite-references.html" data-scroll="Yrk">References and Suggested Readings</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="boolean.html" data-scroll="dAp"><span class="codenumber">18</span> <span class="title">Lattices and Boolean Algebras</span></a><ul>
+<li><a href="section-boolean-lattices.html" data-scroll="Tbk">Lattices</a></li>
+<li><a href="section-boolean-algebras.html" data-scroll="zit">Boolean Algebras</a></li>
+<li><a href="section-algebra-of-circuits.html" data-scroll="fpC">The Algebra of Electrical Circuits</a></li>
+<li><a href="reading-questions-27.html" data-scroll="nQZ">Reading Questions</a></li>
+<li><a href="exercises-boolean.html" data-scroll="uyA">Exercises</a></li>
+<li><a href="boolean-exercises-programming.html" data-scroll="aFJ">Programming Exercises</a></li>
+<li><a href="boolean-references.html" data-scroll="QcR">References and Suggested Readings</a></li>
+</ul>
+</li>
+<li class="link backmatter"><a href="backmatter.html" data-scroll="uDN"><span class="title">Reference</span></a></li>
+<li class="link"><a href="appendix-gfdl.html" data-scroll="gAi"><span class="codenumber">A</span> <span class="title">GNU Free Documentation License</span></a></li>
+<li class="link"><a href="solutions-1.html" data-scroll="aKW"><span class="codenumber">B</span> <span class="title">Hints and Answers to Selected Exercises</span></a></li>
+<li class="link"><a href="appendix-2.html" data-scroll="MHr"><span class="codenumber">C</span> <span class="title">Notation</span></a></li>
+<li class="link"><a href="index-1.html" data-scroll="index-1"><span class="title">Index</span></a></li>
+<li class="link"><a href="colophon-2.html" data-scroll="colophon-2"><span class="title">Colophon</span></a></li>
+</ul></nav><div class="extras"><nav><a class="mathbook-link" href="https://pretextbook.org">Authored in PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" alt="Powered by MathJax"></a></nav></div>
+</div></div>
+<main class="main"><div id="content" class="pretext-content"><section xmlns:svg="http://www.w3.org/2000/svg" class="section" id="icb"><h2 class="heading hide-type">
+<span class="type">Section</span> <span class="codenumber">6.5</span> <span class="title">Factoring over \(\C\) and \(\R\)</span>
+</h2>
+<section class="introduction" id="YmQ"><p id="kue">We will now consider how to factor over the larger fields \(\R\) and \(\C\text{.}\)  It will turn out that even if we only care about factoring polynomials over the real numbers, working in the complex numbers is helpful.  Thus we begin by reviewing a bit about the complex numbers and describing some of their group structure.</p></section><section class="subsection" id="sHa"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">6.5.1</span> <span class="title">Multiplicative Group of Complex Numbers</span>
+</h3>
+<p id="cHr">The <dfn class="terminology">complex numbers</dfn> are defined as</p>
+<div class="displaymath">
+\begin{equation*}
+{\mathbb C} = \{ a + bi : a, b \in {\mathbb R} \}\text{,}
+\end{equation*}
+</div>
+<p data-braille="continuation">where \(i^2 = -1\text{.}\) If \(z = a + bi\text{,}\) then \(a\) is the <dfn class="terminology">real part</dfn> of \(z\) and \(b\) is the <dfn class="terminology">imaginary part</dfn> of \(z\text{.}\)</p>
+<p id="IOA">To add two complex numbers \(z=a+bi\) and \(w= c+di\text{,}\) we just add the corresponding real and imaginary parts:</p>
+<div class="displaymath">
+\begin{equation*}
+z + w=(a + bi ) + (c + di)  =  (a + c) + (b + d)i\text{.}
+\end{equation*}
+</div>
+<p data-braille="continuation">Remembering that \(i^2 = -1\text{,}\) we multiply complex numbers just like polynomials. The product of \(z\) and \(w\) is</p>
+<div class="displaymath">
+\begin{equation*}
+(a + bi )(c + di)  =   ac + bdi^2 + adi + bci =  (ac -bd) +(ad + bc)i\text{.}
+\end{equation*}
+</div>
+<p id="oVJ">Every nonzero complex number \(z = a +bi\) has a multiplicative inverse; that is, there exists a \(z^{-1} \in {\mathbb C}^\ast\) such that \(z z^{-1} = z^{-1} z = 1\text{.}\) If \(z = a + bi\text{,}\) then</p>
+<div class="displaymath">
+\begin{equation*}
+z^{-1} = \frac{a-bi}{ a^2 + b^2  }\text{.}
+\end{equation*}
+</div>
+<p data-braille="continuation">The <dfn class="terminology">complex conjugate</dfn>  of a complex number \(z = a + bi\) is defined to be \(\overline{z} = a- bi\text{.}\) The <dfn class="terminology">absolute value</dfn> or <dfn class="terminology">modulus</dfn> of  \(z = a + bi\)  is \(|z| = \sqrt{a^2 + b^2}\text{.}\)</p>
+<article class="example example-like" id="KYZ"><h6 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">6.30</span><span class="period">.</span>
+</h6>
+<p id="aSe">Let \(z = 2 + 3i\) and \(w = 1-2i\text{.}\) Then</p>
+<div class="displaymath">
+\begin{equation*}
+z + w = (2 + 3i) + (1 - 2i) = 3 + i
+\end{equation*}
+</div>
+<p data-braille="continuation">and</p>
+<div class="displaymath">
+\begin{equation*}
+z  w = (2 + 3i)(1 - 2i ) = 8 - i\text{.}
+\end{equation*}
+</div>
+<p data-braille="continuation">Also,</p>
+<div class="displaymath">
+\begin{align*}
+z^{-1} &amp; = \frac{2}{13} - \frac{3}{13}i\\
+|z| &amp; = \sqrt{13}\\
+\overline{z} &amp; = 2-3i\text{.}
+\end{align*}
+</div></article><figure class="figure figure-like" id="Nyt"><div class="image-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><img src="images/cyclic-complex-rectangular.svg" role="img" style="width: 100%; height: auto;" alt="The complex plane where the horizontal axis is the x-axis or real axis and the verticle axis is the y-axis or imaginary axis. The point z1 = 2 + 3i is in the upper right quadrant, the point z2 = 1- 2i in the lower right quadrant, and z3 = -3 + 2i in the upper right quadrant."></div>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">6.31<span class="period">.</span></span><span class="space"> </span>Rectangular coordinates of a complex number</figcaption></figure><p id="VcS">There are several ways of graphically representing complex numbers. We can represent a complex number \(z = a +bi\) as an ordered pair on the \(xy\) plane where \(a\) is the \(x\) (or real) coordinate and \(b\) is the \(y\) (or imaginary) coordinate. This is called the <dfn class="terminology">rectangular</dfn> or <dfn class="terminology">Cartesian</dfn> representation. The rectangular representations of \(z_1 = 2 + 3i\text{,}\)          \(z_2 = 1 - 2i\text{,}\) and \(z_3 = - 3 + 2i\) are depicted in <a class="xref" data-knowl="./knowl/figure-rectcoord.html" title="Figure 6.31">Figure 6.31</a>.</p>
+<figure class="figure figure-like" id="tFC"><div class="image-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><img src="images/cyclic-complex-polar.svg" role="img" style="width: 100%; height: auto;" alt="The complex plane where the horizontal axis is the x-axis or real axis and the verticle axis is the y-axis or imaginary axis.  The point a + bi is in the upper right quadrant.  The point is also determined by a ray that at an angle of theta counterclockwise from the horizontal axis having a length of r."></div>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">6.32<span class="period">.</span></span><span class="space"> </span>Polar coordinates of a complex number</figcaption></figure><p id="Bkb">Nonzero complex numbers can also be represented using <dfn class="terminology">polar coordinates</dfn>. To specify any nonzero point on the plane, it suffices to give an angle \(\theta\) from the positive \(x\) axis in the counterclockwise direction and a distance \(r\) from the origin, as in  <a class="xref" data-knowl="./knowl/figure-polarcoord.html" title="Figure 6.32">Figure 6.32</a>. We can see that</p>
+<div class="displaymath">
+\begin{equation*}
+z = a + bi = r( \cos \theta + i \sin \theta)\text{.}
+\end{equation*}
+</div>
+<p data-braille="continuation">Hence,</p>
+<div class="displaymath">
+\begin{equation*}
+r = |z| = \sqrt{a^2 + b^2}
+\end{equation*}
+</div>
+<p data-braille="continuation">and</p>
+<div class="displaymath">
+\begin{align*}
+a &amp; = r \cos \theta\\
+b &amp; = r \sin \theta\text{.}
+\end{align*}
+</div>
+<p data-braille="continuation">We sometimes abbreviate \(r( \cos \theta + i \sin \theta)\) as \(r \cis \theta\text{.}\)  To assure that the representation of \(z\) is  well-defined, we also require that \(0^{\circ} \leq \theta \lt 360^{\circ}\text{.}\) If the measurement is in radians, then \(0 \leq \theta \lt2 \pi\text{.}\)</p>
+<article class="example example-like" id="rgi"><h6 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">6.33</span><span class="period">.</span>
+</h6>
+<p id="GZn">Suppose that \(z = 2 \cis  60^{\circ}\text{.}\) Then</p>
+<div class="displaymath">
+\begin{equation*}
+a  =  2 \cos 60^{\circ} = 1
+\end{equation*}
+</div>
+<p data-braille="continuation">and</p>
+<div class="displaymath">
+\begin{equation*}
+b = 2 \sin 60^{\circ} = \sqrt{3}\text{.}
+\end{equation*}
+</div>
+<p data-braille="continuation">Hence, the rectangular representation is \(z = 1+\sqrt{3}\, i\text{.}\)</p>
+<p id="ngw">Conversely, if we are given a rectangular representation of a complex number, it is often useful to know the number's polar representation. If \(z = 3 \sqrt{2} - 3 \sqrt{2}\, i\text{,}\) then</p>
+<div class="displaymath">
+\begin{equation*}
+r = \sqrt{a^2 + b^2} = \sqrt{36 } = 6
+\end{equation*}
+</div>
+<p data-braille="continuation">and</p>
+<div class="displaymath">
+\begin{equation*}
+\theta = \arctan \left( \frac{b}{a} \right) = \arctan( - 1) = 315^{\circ}\text{,}
+\end{equation*}
+</div>
+<p data-braille="continuation">so \(3 \sqrt{2} - 3 \sqrt{2}\, i=6 \cis  315^{\circ}\text{.}\)</p></article><p id="hrk">The polar representation of a complex number makes it easy to find products and powers of complex numbers. The proof of the following proposition is straightforward and is left as an exercise.</p>
+<article class="proposition theorem-like" id="ahX"><h6 class="heading">
+<span class="type">Proposition</span><span class="space"> </span><span class="codenumber">6.34</span><span class="period">.</span>
+</h6>
+<p id="lrj">Let \(z = r \cis \theta\) and \(w = s \cis \phi\) be two nonzero complex numbers. Then</p>
+<div class="displaymath">
+\begin{equation*}
+zw = r s \cis( \theta + \phi)\text{.}
+\end{equation*}
+</div></article><article class="example example-like" id="Xnr"><h6 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">6.35</span><span class="period">.</span>
+</h6>
+<p id="TnF">If \(z = 3 \cis( \pi / 3 )\) and \(w = 2 \cis(\pi / 6 )\text{,}\) then \(zw = 6 \cis( \pi / 2 ) = 6i\text{.}\)</p></article><article class="theorem theorem-like" id="uaO"><h6 class="heading">
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">6.36</span><span class="period">.</span><span class="space"> </span><span class="title">DeMoivre.</span>
+</h6>
+<p id="sVI">Let \(z = r \cis \theta\) be a nonzero complex number. Then</p>
+<div class="displaymath">
+\begin{equation*}
+[r \cis \theta  ]^n = r^n \cis( n \theta)
+\end{equation*}
+</div>
+<p data-braille="continuation">for \(n = 1, 2, \ldots\text{.}\)</p></article><article class="proof" id="sVv"><h6 class="heading"><span class="type">Proof<span class="period">.</span></span></h6>
+<p id="IeG">We will use induction on \(n\text{.}\) For \(n = 1\) the theorem is trivial. Assume that the theorem is true for all \(k\) such that \(1  \leq k \leq n\text{.}\) Then</p>
+<div class="displaymath">
+\begin{align*}
+z^{n+1} &amp; = z^n z\\
+&amp; = r^n( \cos  n \theta + i \sin n \theta ) r( \cos \theta + i\sin \theta )\\
+&amp; = r^{n+1} [( \cos n \theta \cos \theta - \sin n \theta \sin \theta ) + i ( \sin n \theta \cos \theta + \cos n \theta \sin \theta)]\\
+&amp; = r^{n+1} [ \cos( n \theta + \theta) + i \sin( n \theta + \theta) ]\\
+&amp; = r^{n+1} [ \cos( n +1) \theta + i \sin( n+1) \theta  ]\text{.}
+\end{align*}
+</div></article><article class="example example-like" id="DuA"><h6 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">6.37</span><span class="period">.</span>
+</h6>
+<p id="zuO">Suppose that \(z= 1+i\) and we wish to compute \(z^{10}\text{.}\) Rather than computing \((1 + i)^{10}\) directly, it is much easier to switch to polar coordinates and calculate \(z^{10}\) using DeMoivre's Theorem:</p>
+<div class="displaymath">
+\begin{align*}
+z^{10} &amp; = (1+i)^{10}\\
+&amp; = \left( \sqrt{2} \cis \left( \frac{\pi }{4} \right) \right)^{10}\\
+&amp; = ( \sqrt{2}\, )^{10} \cis \left( \frac{5\pi }{2} \right)\\
+&amp; = 32  \cis \left( \frac{\pi }{2} \right)\\
+&amp; = 32i\text{.}
+\end{align*}
+</div></article><article class="paragraphs" id="WYW"><h5 class="heading"><span class="title">The Circle Group and the Roots of Unity.</span></h5>
+<p id="RMN">The multiplicative group of the complex numbers, \({\mathbb C}^*\text{,}\) possesses some interesting subgroups. Whereas \({\mathbb Q}^*\) and \({\mathbb R}^*\) have no interesting subgroups of finite order, \({\mathbb C}^*\) has many. We first consider the <dfn class="terminology">circle group</dfn>, </p>
+<div class="displaymath">
+\begin{equation*}
+{\mathbb T} = \{ z \in {\mathbb C} : |z| = 1 \}\text{.}
+\end{equation*}
+</div>
+<p data-braille="continuation">The following proposition is a direct result of <a class="xref" data-knowl="./knowl/proposition-polar-mult.html" title="Proposition 6.34">Proposition 6.34</a> .</p>
+<article class="proposition theorem-like" id="CaM"><h6 class="heading">
+<span class="type">Proposition</span><span class="space"> </span><span class="codenumber">6.38</span><span class="period">.</span>
+</h6>
+<p id="Rys">The circle group is a subgroup of \({\mathbb C}^*\text{.}\)</p></article><p id="xTW">Although the circle group has infinite order, it has many interesting finite subgroups. Suppose that \(H = \{ 1, -1, i, -i \}\text{.}\) Then \(H\) is a subgroup of the circle group. Also, \(1\text{,}\)        \(-1\text{,}\)        \(i\text{,}\) and \(-i\) are exactly those complex numbers that satisfy the equation \(z^4 = 1\text{.}\) The complex numbers satisfying the equation \(z^n=1\) are called the <dfn class="terminology">\(n\)th roots of unity</dfn>. </p>
+<article class="theorem theorem-like" id="VTD"><h6 class="heading">
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">6.39</span><span class="period">.</span>
+</h6>
+<p id="ZcR">If \(z^n = 1\text{,}\) then the \(n\)th roots of unity are</p>
+<div class="displaymath">
+\begin{equation*}
+z = \cis\left( \frac{2 k \pi}{n } \right)\text{,}
+\end{equation*}
+</div>
+<p data-braille="continuation">where \(k = 0, 1, \ldots, n-1\text{.}\) Furthermore, the \(n\)th roots of unity form a cyclic subgroup of \({\mathbb T}\) of order \(n\)</p></article><article class="proof" id="ZcE"><h6 class="heading"><span class="type">Proof<span class="period">.</span></span></h6>
+<p id="olP">By DeMoivre's Theorem,</p>
+<div class="displaymath">
+\begin{equation*}
+z^n = \cis \left( n \frac{2 k \pi}{n } \right) = \cis( 2 k \pi ) = 1\text{.}
+\end{equation*}
+</div>
+<p data-braille="continuation">The \(z\)'s are distinct since the numbers \(2 k \pi /n\) are all distinct and are greater than or equal to 0 but less than \(2 \pi\text{.}\) The fact that these are all of the roots of the equation \(z^n=1\) follows from from <a class="xref" data-knowl="./knowl/corollary-poly-zeros.html" title="Corollary 6.16">Corollary 6.16</a>, which states that a polynomial of degree \(n\) can have at most \(n\) roots. We will leave the proof that the \(n\)th roots of unity form a cyclic subgroup of \({\mathbb T}\) as an exercise.</p></article><p id="ebf">A generator for the group of the \(n\)th roots of unity is called a <dfn class="terminology">primitive \(n\)th root of unity</dfn>. </p>
+<article class="example example-like" id="ihV"><h6 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">6.40</span><span class="period">.</span>
+</h6>
+<p id="fBX">The 8th roots of unity can be represented as eight equally spaced points on the unit circle (<a class="xref" data-knowl="./knowl/figure-rtsunity.html" title="Figure 6.41">Figure 6.41</a>). The primitive 8th roots of unity are</p>
+<div class="displaymath">
+\begin{align*}
+\omega &amp; = \frac{\sqrt{2}}{2}  + \frac{\sqrt{2}}{2} i\\
+\omega^3 &amp; = -\frac{\sqrt{2}}{2}  + \frac{\sqrt{2}}{2} i\\
+\omega^5 &amp; = -\frac{\sqrt{2}}{2}  - \frac{\sqrt{2}}{2} i\\
+\omega^7 &amp; = \frac{\sqrt{2}}{2}  - \frac{\sqrt{2}}{2}i\text{.}
+\end{align*}
+</div>
+<figure class="figure figure-like" id="LJg"><div class="image-box" style="width: 80%; margin-left: 10%; margin-right: 10%;"><img src="images/cyclic-roots-unity.svg" role="img" style="width: 100%; height: auto;" alt="The 8 roots of unity are spaced evenly around the unit circle beginning with 1 on the positive horizontal axis and followed by omega, i, the cube of omega, -1, omega to the fifth power, -i, and omega to the seventh power."></div>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">6.41<span class="period">.</span></span><span class="space"> </span>8th roots of unity</figcaption></figure></article></article></section><section class="subsection" id="sBg"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">6.5.2</span> <span class="title">Factoring With and Without Complex Numbers</span>
+</h3>
+<p id="VVa">Every odd degree polynomial has a root in \(\R\) (how do we know?), so no odd degree polynomial (of degree at least 3) can be irreducible over \(\R\text{.}\)  What about even degree polynomials?  For example, what about \(x^2 + 3\text{?}\)</p>
+<p id="Ccj">Well, that polynomial has roots, but they are complex roots, in particular, non-real complex roots.</p>
+<p id="ijs">Let's see how to factor in the complex numbers.  It turns out (although hard to prove) that over \(\C\text{,}\) every polynomial factors into linear terms.  The  <em class="emphasis">Fundamental Theorem of Algebra</em> says: Every non-constant polynomial in \(\mathbb C[x]\) has a complex root.</p>
+<p id="OqB">What does this tell us about the irreducible polynomials in \(\C[x]\text{?}\) They are exactly the degree 1 polynomials. If \(a(x)\) is a polynomial for degree greater than 1 in \(\C[x]\text{,}\) then it must have a complex root \(c\text{,}\) so \(x-c\) is a factor. Applying this repeatedly, we find</p>
+<div class="displaymath">
+\begin{equation*}
+a(x) = k(x-c_1)(x-c_2)\cdots(x-c_n)\text{.}
+\end{equation*}
+</div>
+<p data-braille="continuation">There will be exactly \(n\) roots (although note that the roots might not be distinct).</p>
+<p id="uxK">What about simple polynomials like \(x^5 - 1\text{.}\)  Okay, that is not irreducible, since 1 is a root.  Does it have any other roots?</p>
+<article class="example example-like" id="Ojk"><h6 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">6.42</span><span class="period">.</span>
+</h6>
+<p id="TvT">Factor \(x^5-1\text{.}\)</p>
+<div class="solutions"></div></article><p id="aET">The example above is perhaps a little simplistic.  In particular, \(r = 1\) here, so we didn't need to do anything with that.  In general, if we had \(re^{i\theta}\) and took the \(n\)th root, we would get \(\sqrt[n]{r}e^{i\theta/n}\text{.}\)</p>
+<article class="example example-like" id="uqt"><h6 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">6.43</span><span class="period">.</span>
+</h6>
+<p id="zDc">Factor \(x^3 + 5\) over the complex numbers.</p>
+<div class="solutions"></div></article><p id="GMc">Could we factor the polynomial \(x^3+5\) over \(\R\text{?}\)  We could simply use long division to factor out \(x+\sqrt[3]{5}\text{,}\) although that might be messy.  Notice though that if we did, then the quotient will be a degree 2 polynomial with real coefficients.</p>
+<p id="mTl">There is a better way.  We should be able to get the same polynomial by multiplying the two complex factors from the example above.</p>
+<article class="example example-like" id="axC"><h6 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">6.44</span><span class="period">.</span>
+</h6>
+<p id="fKl">Factor \(x^3+5\) over the real numbers.</p>
+<div class="solutions"></div></article><p id="Tau">Will something like this always work? If \(a+bi\) is a root of \(a(x)\text{,}\) then \(a-bi\) is also a root of \(a(x)\) (in \(\C\)). That is, if \(r\) is a root, so is its complex conjugate \(\overline r\) is as well.</p>
+<p id="zhD">How do we know? Well the function \(f(r) = \overline r\) is a ring homomorphism from \(\mathbb C\to \mathbb C\text{.}\) Check this. But then if \(a(r) = 0\text{,}\) apply \(f\) to both sides to get \(a(\overline r) = 0\text{.}\)</p>
+<p id="foM">This is great: if \(x-r\) is a factor of \(a(x)\) in \(\mathbb C[x]\text{,}\) then so is \(x-\overline r\text{.}\) But notice:</p>
+<div class="displaymath">
+\begin{equation*}
+(x-r)(x-\overline r) = x^2 - 2ax + (a^2 + b^2)
+\end{equation*}
+</div>
+<p data-braille="continuation">is a quadratic polynomial with <em class="emphasis">real</em> coefficients.</p>
+<p id="LvV">This shows that every polynomial in \(\mathbb R[x]\) can be factored into polynomials of degree 1 or 2 in \(\mathbb R[x]\text{.}\)</p>
+<p id="rDe">Thus the irreducible polynomials in \(\mathbb R[x]\) are exactly the linear polynomials and the quadratics with negative discriminant (i.e., \(b^2 - 4ac \lt 0\)).</p>
+<p id="XKn">Here is another example.</p>
+<article class="example example-like" id="GEL"><h6 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">6.45</span><span class="period">.</span>
+</h6>
+<p id="LRu">Factor \(p(x) = x^9 - 2x^8 - 3x^7 - 2x^2 + 4x + 6\) completely over \(\mathbb Q\text{,}\) \(\mathbb R\) and \(\mathbb C\text{.}\)</p>
+<div class="solutions"></div></article></section><section class="exercises" id="pGA"><h3 class="heading hide-type">
+<span class="type">Exercises</span> <span class="codenumber">6.5.3</span> <span class="title">Practice Problems</span>
+</h3>
+<article class="exercise exercise-like" id="wlA"><h6 class="heading"><span class="codenumber">1<span class="period">.</span></span></h6>
+<p id="AeI">Evaluate each of the following.</p>
+<ol class="lower-alpha cols2">
+<li id="HXp"><p id="qig">\(\displaystyle (3-2i)+ (5i-6)\)</p></li>
+<li id="oey"><p id="Wpp">\(\displaystyle (4-5i)-\overline{(4i -4)}\)</p></li>
+<li id="UlH"><p id="Cwy">\(\displaystyle (5-4i)(7+2i)\)</p></li>
+<li id="AsQ"><p id="iDH">\(\displaystyle (9-i) \overline{(9-i)}\)</p></li>
+<li id="gzZ"><p id="OKQ">\(\displaystyle i^{45}\)</p></li>
+<li id="MHi"><p id="uRZ">\(\displaystyle (1+i)+\overline{(1+i)}\)</p></li>
+</ol>
+<div class="solutions">
+<a data-knowl="" class="id-ref hint-knowl original" data-refid="hk-klD" id="klD"><span class="type">Hint</span></a><div class="hidden-content tex2jax_ignore" id="hk-klD"><div class="hint solution-like"><p id="ubb">(a) \(-3 + 3i\text{;}\) (c) \(43- 18i\text{;}\) (e) \(i\)</p></div></div>
+</div></article><article class="exercise exercise-like" id="csJ"><h6 class="heading"><span class="codenumber">2<span class="period">.</span></span></h6>
+<p id="glR">Convert the following complex numbers to the form \(a + bi\text{.}\)</p>
+<ol class="lower-alpha cols2">
+<li id="sOr"><p id="aZi">\(\displaystyle 2 e^{\pi / 6}\)</p></li>
+<li id="YVA"><p id="Hgr">\(\displaystyle 5 e^{9\pi/4}\)</p></li>
+<li id="FcJ"><p id="nnA">\(\displaystyle 3 e^{\pi}\)</p></li>
+<li id="ljS"><p id="TuJ">\(\displaystyle \frac{1}{2}e^{7\pi/4}\)</p></li>
+</ol>
+<div class="solutions">
+<a data-knowl="" class="id-ref hint-knowl original" data-refid="hk-wzV" id="wzV"><span class="type">Hint</span></a><div class="hidden-content tex2jax_ignore" id="hk-wzV"><div class="hint solution-like"><p id="aik">(a) \(\sqrt{3} + i\text{;}\) (c) \(-3\text{.}\)</p></div></div>
+</div></article><article class="exercise exercise-like" id="IzS"><h6 class="heading"><span class="codenumber">3<span class="period">.</span></span></h6>
+<p id="Mta">Change the following complex numbers to polar representation.</p>
+<ol class="lower-alpha cols3">
+<li id="Rrb"><p id="zBS">\(\displaystyle 1-i\)</p></li>
+<li id="xyk"><p id="fJb">\(\displaystyle -5\)</p></li>
+<li id="dFt"><p id="LQk">\(\displaystyle 2+2i\)</p></li>
+<li id="JMC"><p id="rXt">\(\displaystyle \sqrt{3} + i\)</p></li>
+<li id="pTL"><p id="YeC">\(\displaystyle -3i\)</p></li>
+<li id="WaU"><p id="ElL">\(\displaystyle 2i + 2 \sqrt{3}\)</p></li>
+</ol>
+<div class="solutions">
+<a data-knowl="" class="id-ref hint-knowl original" data-refid="hk-IOn" id="IOn"><span class="type">Hint</span></a><div class="hidden-content tex2jax_ignore" id="hk-IOn"><div class="hint solution-like"><p id="Gpt">(a) \(\sqrt{2} \cis( 7 \pi /4)\text{;}\) (c) \(2 \sqrt{2} \cis( \pi /4)\text{;}\) (e) \(3 \cis(3 \pi/2)\text{.}\)</p></div></div>
+</div></article><article class="exercise exercise-like" id="oHb"><h6 class="heading"><span class="codenumber">4<span class="period">.</span></span></h6>
+<p id="sAj">Calculate each of the following expressions.</p>
+<ol class="lower-alpha cols2">
+<li id="Cid"><p id="ksU">\(\displaystyle (1+i)^{-1}\)</p></li>
+<li id="ipm"><p id="QAd">\(\displaystyle (1 - i)^{6}\)</p></li>
+<li id="Owv"><p id="wHm">\(\displaystyle (\sqrt{3} + i)^{5}\)</p></li>
+<li id="uDE"><p id="cOv">\(\displaystyle (-i)^{10}\)</p></li>
+<li id="aKN"><p id="IVE">\(\displaystyle ((1-i)/2)^{4}\)</p></li>
+<li id="GRW"><p id="pcN">\(\displaystyle (-\sqrt{2} - \sqrt{2}\, i)^{12}\)</p></li>
+<li id="mZf"><p id="VjW">\(\displaystyle (-2 + 2i)^{-5}\)</p></li>
+</ol>
+<div class="solutions">
+<a data-knowl="" class="id-ref hint-knowl original" data-refid="hk-VcF" id="VcF"><span class="type">Hint</span></a><div class="hidden-content tex2jax_ignore" id="hk-VcF"><div class="hint solution-like"><p id="mwC">(a) \((1 - i)/2\text{;}\) (c) \(16(i - \sqrt{3}\, )\text{;}\) (e) \(-1/4\text{.}\)</p></div></div>
+</div></article><article class="exercise exercise-like" id="WxD"><h6 class="heading"><span class="codenumber">5<span class="period">.</span></span></h6>
+<p id="UfN">Prove that the function \(\phi:\bC \to \bC\) given by \(\phi(z) = \bar z\) is a ring homomorphism.  Here \(\bar z = a-bi\) is the complex conjugate of \(z = a+bi\)</p>
+<div class="solutions"></div></article><article class="exercise exercise-like" id="CEM"><h6 class="heading"><span class="codenumber">6<span class="period">.</span></span></h6>
+<p id="AmW">Let \(z\) be a complex number.  Prove that the sum \(z + \bar z\) and product \(z\cdot \bar z\) or the number with its conjugate are always real numbers.</p>
+<div class="solutions"></div></article><article class="exercise exercise-like" id="iLV"><h6 class="heading"><span class="codenumber">7<span class="period">.</span></span></h6>
+<p id="guf">Is \(x^7 - 1\) irreducible over \(\bC\text{?}\)  How many roots should it have?  Find all of them.  Hint: use the polar form of complex numbers, \(re^{i\vartheta}\text{.}\)</p>
+<div class="solutions"></div></article><article class="exercise exercise-like" id="OTe"><h6 class="heading"><span class="codenumber">8<span class="period">.</span></span></h6>
+<p id="MBo">Factor \(x^8 - 5x^7 - 14x^6 + x^2 - 5x - 14\) completely over \(\Q\text{,}\)            \(\bC\) and \(\R\)</p>
+<div class="solutions"></div></article></section><section class="exercises" id="VNJ"><h3 class="heading hide-type">
+<span class="type">Exercises</span> <span class="codenumber">6.5.4</span> <span class="title">Collected Homework</span>
+</h3>
+<article class="exercise exercise-like" id="van"><h6 class="heading"><span class="codenumber">1<span class="period">.</span></span></h6>
+<p id="sIx">Factor the polynomial \(p(x) = x^7 + 2x^6 - 3x - 6\) completely (into irreducible factors) over \(\Q\text{,}\) then over \(\bC\text{,}\) and then over \(\R\text{.}\)</p>
+<div class="solutions">
+<a data-knowl="" class="id-ref hint-knowl original" data-refid="hk-gBj" id="gBj"><span class="type">Hint</span></a><div class="hidden-content tex2jax_ignore" id="hk-gBj"><div class="hint solution-like"><p id="noK">Do the factoring in that order.</p></div></div>
+</div></article><article class="exercise exercise-like" id="bhw"><h6 class="heading"><span class="codenumber">2<span class="period">.</span></span></h6>
+<p id="YPG">True or false: \(x^4 + 20x^3 + 5x^2+ 10x + 15\) is irreducible in \(\R[x]\text{.}\)  Briefly explain.</p></article></section></section></div></main>
+</div>
+<script src="https://unpkg.com/prismjs@v1.22.0/components/prism-core.min.js"></script><script src="https://unpkg.com/prismjs@v1.22.0/plugins/autoloader/prism-autoloader.min.js"></script>
+</body>
+</html>

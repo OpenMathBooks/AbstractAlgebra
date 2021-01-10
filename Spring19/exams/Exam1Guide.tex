@@ -1,0 +1,267 @@
+\documentclass[10pt]{exam}
+
+\usepackage{amsmath, amssymb, amsthm, mathrsfs, multicol, wasysym}
+\usepackage{graphicx}
+\usepackage{textcomp}
+\usepackage{tikz}
+\usepackage{answers}
+
+\renewcommand{\labelitemi}{\Large\Square}
+\renewcommand{\labelitemii}{\Large\Circle}
+\input{macros}
+
+
+
+%\pointname{pts}
+\pointsinmargin
+\marginpointname{pts}
+\addpoints
+\pagestyle{head}
+%\printanswers
+
+
+\def\filename{Exam1Guide}
+\def\doctitle{Exam 1 Study Guide}
+\def\docdate{Spring 2019}
+
+\def\ansfilename{\filename-solutions}
+
+
+				
+\Opensolutionfile{\ansfilename}
+\Newassociation{answer}{Ans}{\ansfilename}
+\Writetofile{\ansfilename}{\protect\documentclass[10pt]{exam} }
+\Writetofile{\ansfilename}{\protect\usepackage{answers, amsthm, amsmath, amssymb, mathrsfs}
+  \protect\pagestyle{head}
+  \protect\firstpageheader{MATH 322}{\bf \doctitle \\ Hints and Answers}{\docdate}
+  \protect\Newassociation{answer}{Ans}{\ansfilename}
+  }
+  
+\begin{Filesave}{\ansfilename}
+\input{macros}
+\usepackage{tikz, multicol}
+\renewenvironment{Ans}[1]{\setcounter{question}{#1}\addtocounter{question}{-1}\question }{}
+\begin{document}
+ \begin{questions}
+\end{Filesave}
+
+
+\firstpageheader{MATH 322}{\bf \doctitle}{\docdate}
+
+
+\begin{document}
+The first exam (take-home due and in-class on Monday, February 18) will cover everything we have discussed so far this semester.  In particular, this means polynomials, field extensions, and the relationship between the two.  Here is a checklist of these topics.
+
+\begin{itemize}
+  \item Field extensions and what they have to do with polynomials.
+  \item Rings of polynomials and their ideals.
+  \item Quotient rings of polynomial rings.
+  \item Minimum polynomials.
+  \item The degree of a field extension.
+  \item Bases for algebraic field extensions.
+  \item Constructible numbers.
+  \item Splitting fields.
+  \item Field automorphisms of splitting fields.
+  \item Galois groups.
+  \item Topics from last semester which might be helpful:
+  \begin{itemize}
+    \item The Division Algorithm for polynomials (along with long divison).
+    \item The Euclidean Algorithm for polynomials.
+    \item Greatest Common Divisors and Bezout's Lemma.
+    \item Irreducible polynomials.
+  %  \item Polynomials as functions and substitution
+  %  \item The relationship between roots and factors
+    \item Factoring in $\Q$ (including the rational roots theorem and Eisenstein's criterion).
+    \item Homomorphisms (the homomorphism property, and the Fundamental Homomorphism Theorem).
+  %  \item Factoring in $\C$ and $\R$
+  
+  \end{itemize}
+\end{itemize}
+
+
+The activities, quizzes, and homework should give you a good idea of the types of questions to expect.  Copies of these assignments, with solutions, are available on Canvas.
+
+Additionally, the questions below would all make fine exam questions.\footnote{Disclaimer: Question on the actual exam may be easier or harder than those given her.  There might be types of questions on this study guide not covered on the exam and questions on the exam not covered in this study guide.  Questions on the exam might be asked in a different way than here.  If solving a question lasts longer than four hours, contact your professor immediately.}  
+
+
+
+\subsection*{Sample Questions}
+
+
+\begin{questions}
+
+
+\question Give an example of an ideal $J \subseteq \Q[x]$ and two non-zero polynomial $a(x), b(x) \in \Q[x]$ such that $(J+a(x))(J+b(x)) = J+0$.  Does such an example prove that $\Q[x]/J$ is NOT an integral domain?  Explain.
+
+	\begin{answer}
+		There are lots of examples that work.  Take $J = \langle x^2 - 3\rangle$, $a(x) = x^3 - 3x$ and $b(x) = x+1$.  Then $(J+a(x))(J+b(x)) = J+a(x)b(x) = J+ x^4 + x^3 - 3x^2 - 3x$, but this polynomial is a multiple of $x^2 - 3$ so is already in $J$.  Thus $J+a(x)b(x) = J = J+0$.  Note though that $J+a(x) = J$ already, so this does not prove that $\Q[x]/J$ is not an integral domain.  In fact, for this $J$, $\Q[x]/J$ \emph{is} an integral domain, since $x^2 - 3$ is irreducible.  If we picked a non-irreducible polynomial to generate $J$, then we would be able to find $a(x), b(x) \notin J$ with $(J+a(x))(J+b(x)) = J$, which would make $J+a(x)$ a zero divisor.  Remember, zero divisors need to be non-zero elements.
+	\end{answer}
+
+
+
+% 
+% 
+% \question Let $A$ be a commutative ring with unity and $J$ be an ideal of $A$.  Suppose that for every $a \notin J$, there is some element $b \in A$, such that the element $ab-1 \in J$.  Prove that $A/J$ is a field.
+% 
+% \begin{answer}
+% 	 Note that the unity in $A/J$ is just $J+1$ since $(J+a)(J+1) = J+a\cdot 1 = J+a$.  
+% 
+% 	We want to show that for any $a \notin J$, the coset $J+a$ has an inverse (if $a \in J$ then $J+a = J$, which is the additive identity, which should not have a multiplicative inverse). In other words, we want to show there is some coset $J+b$ such that $(J+a)(J+b) = J+1$.  Consider any $a \notin J$ and the element $b \in A$ such that $ab - 1 \in J$.  This is equivalent to saying that $J+ab = J+1$.  But $J+ab = (J+a)(J+b)$ so we have found the inverse of $J+a$: it's $J+b$.
+% \end{answer}
+
+\question Consider the following fact about polynomials:
+\[(3x^2 - 14x + 24)(x^2 + 3x + 6) - (3x-5)(x^3 - 4) = 124.\]
+\begin{parts}
+	\part Does the polynomial $x^2 + 3x + 6$ have an inverse in $\Q[x]$?  Find it or explain why not.
+	\part Does the coset $\langle x^3 - 4\rangle + x^2 + 3x + 6$ have an inverse in $\Q[x]/\langle x^3 - 4\rangle$?  Find it or explain why not.
+	\part Does the number $6 + 3 \sqrt[3]{4} + \sqrt[3]{4}^2$ have an inverse in the field $\Q(\sqrt[3]{4})$?  Find it or explain why not.
+	\part Explain the relationship between parts (b) and (c) and what this has to do with the fact about polynomials above.
+\end{parts}
+
+\begin{answer}
+	\begin{parts}
+		\part No, there is no polynomial that would work here because whenever you multiply polynomials together, the degree increases, so there is no way to get down to the degree 0 polynomail 1.
+		\part Yes.  In fact, we know the inverse is $\langle x^4 - 3 \rangle + \frac{3}{124}x^2 - \frac{14}{124}x + \frac{24}{124}$.
+		\part Yes.  We have $(6 + 3\sqrt[3]{4} + \sqrt[3]{4}^2)^{-1} = \frac{24}{124} - \frac{14}{124}\sqrt[3]{4} + \frac{3}{124}\sqrt[3]{4}^2$.
+		\part We know that $\Q[x]/\langle x^3 - 4\rangle \cong \Q(\sqrt[3]{4})$, where the isomorphism is based on the evaluation homomorphism, evaluating at $\sqrt[3]{4}$.  The way we know our answer to part (b) is correct is using the fact about polynomials.  Saying that $s(x)a(x) + t(x)b(x) = 1$ (which we can get from the fact by dividing through by 124) is to say that $1$ is an element of the coset $\langle b(x) \rangle + s(x)a(x) = (\langle b(x)\rangle +s(x))(\langle b(x) \rangle + a(x))$.  This is the same as saying that $\langle b(x) \rangle + s(x)a(x) = \langle b(x)\rangle + 1$, which says that $\langle b(x) \rangle + s(x)$ is the inverse of $\langle b(x) \rangle + a(x)$.
+	\end{parts}
+\end{answer}
+
+
+
+\question Let $\alpha = \frac{3+\sqrt{5}}{2}$.
+\begin{parts}
+	\part Describe the field $\Q(\alpha)$.  List two elements of the field (which are not in $\Q$).
+	\part Find a quotient ring of $\Q[x]$ which is isomorphic to $\Q(\alpha)$.  Prove your answer is correct using a particular Fundamental theorem.
+	\part What elements in the quotient ring correspond to the two elements you listed in part (a)?   Explain.
+	\part One of the elements of $\Q(\alpha)$ is $\alpha^4 + 2 \alpha^3 + 7$.  Which element (in standard form) is this?  Use the correspondence to polynomials to help answer this question.
+	\part How does $\Q(\alpha)$ relate to $\Q(\sqrt{5})$?   Explain.
+\end{parts}
+
+	\begin{answer}
+	\begin{parts}
+		\part Elements of $\Q(\alpha)$ have the form $a + b\alpha$ (we do not every need $\alpha^2$, as we will see by consider the minimal polynomial for $\alpha$ below).  So for example, we have $2 + 4\alpha = 8 + 2\sqrt{5}$ and $-3 +  2\alpha = \sqrt{5}$.
+		\part The minimum polynomial for $\alpha$ is $x^2 - 3x + 1$.  We know this is the minimum polynomial because $\alpha$ is irrational (since $\sqrt{5}$ is) so cannot be the root to any degree 1 polynomial.  Further, if we consider the homomorphism $\sigma_\alpha:\Q[x] \to \Q(\alpha)$ defined by $\sigma(p(x)) = p(\alpha)$, we see that $K = \langle x^2 - 3x + 1\rangle$ is the kernel (every polynomial which has $\alpha$ as a root is a multiple of $\alpha$'s minimum polynomial).  Thus by the Fundamental Homomorphism Theorem, $\Q[x]/\langle x^2 - 3x + 1\rangle \cong \Q(\alpha)$. 
+		\part Let $K = \langle x^2 - 3x + 1\rangle$.  Then $2 + 4\alpha$ corresponds to $K + (4x+2)$ and $-3 + 2 \alpha$ corresponds to $K + (2x - 3)$.
+		\part $\alpha^4 + 2 \alpha^3 + 7$ corresponds to the coset $K + (x^4 + 2x^3 + 7)$.  We can ``reduce'' this coset using the division algorithm.  We get $x^4 + 2x^3 + 7 = (x^2+5x+14)(x^2 - 3x + 1) + 37x -7$.  Thus $K + (x^4 + 2x^3 + 7) = K + (37x - 7)$, so $\alpha^4 + 2\alpha^3 + 7 = 37\alpha - 7$
+		\part We must have that $\Q(\alpha) = \Q(\sqrt{5})$.  We see that $\alpha \in \Q(\sqrt{5})$ so $\Q(\sqrt{5})$ is an extension field of $\Q(\alpha)$.  But $\Q(\alpha)$ is already a degree 2 extension of $\Q$, so $\Q(\sqrt{5})$ must be a degree 1 extension of $\Q(\alpha)$, which is to say that $\sqrt{5}$ is already in $\Q(\alpha)$.  Indeed, we have $\sqrt{5} = -3 + 2 \alpha$.
+	\end{parts}
+	\end{answer}
+
+
+
+\question Use polynomials to find the inverse of $\sqrt[3]{7} + 4$ in the field $\Q(\sqrt[3]{7})$.  Write your answer in the form $a + b\sqrt[3]{7} + c\sqrt[3]{7}^2$
+
+\begin{answer}
+It is easier to work in $\Q[x]/\langle x^3 - 7\rangle$, which is isomorphic to $\Q(\sqrt[3]{7})$, since $x^3 - 7$ is the minimum polynomial for $\sqrt[3]{7}$ over $\Q$.  Under that isomorphism, $\sqrt[3]{7} + 4$ corresponds to the coset $\langle x^3 - 7\rangle + x + 4$.  We find the inverse coset by using the Euclidean algorithm on $x^3 -7$ and $x+4$.  We get 
+\[x^3-7 = (x^2 - 4x + 16)(x+4) - 71\]
+We can rewrite this as $71 = -(x^3 - 7) + (x^2 - 4x + 16)(x+4)$ or better:
+\[1 = \frac{-1}{71}(x^3- 7) + \frac{1}{71}(x^2 - 4x + 16)(x+4)\]
+Thinking back to cosets, this means:
+\[\langle x^3 -7\rangle + 1 = (\langle x^3 - 7\rangle + \frac{1}{71}x^2 - \frac{4}{71}x + \frac{16}{71})(\langle x^3 - 7\rangle + x+4)\]
+This gives us the inverse coset we were looking for.  Now going back to $\Q(\sqrt[3]{7})$ we see that the inverse of $\sqrt[3]{7} + 4$ is $\frac{16}{71} -\frac{4}{71}\sqrt[3]{7} + \frac{1}{71}\sqrt[3]{7}^2$.
+\end{answer}
+
+
+
+
+
+\question Give an example of a field $E$ that is a degree $7$ extension of $\Q$.  Justify your answer.
+
+\begin{answer}
+ $\Q(\sqrt[7]{2})$ is such an example, because it is isomorphic to $\Q[x]/\langle x^7 - 2\rangle$.  Since $x^7 - 2$ is irreducible over $\Q$, by say Eisenstein's criterion, and has $\sqrt[7]{2}$ as a root, $x^7-2$ is the minimum polynomial for $\sqrt[7]{2}$.  It has degree 7, so the field extension has degree 7 as well.
+\end{answer}
+
+
+
+\question Let $a$ be a root of $x^6+1$ (in $\C$ say).  What is the degree of $\Q(a)$ over $\Q$?  Explain.
+
+\begin{answer}
+It would be tempting to say the degree of $\Q(a)$ over $\Q$ is 6, but $x^6 + 1$ is not irreducible over $\Q$, so it cannot be the minimum polynomial for $a$ over $\Q$.  The polynomial factors as
+\[(x^2 + 1)(x^4 - x^2 + 1)\]
+We know that $a$ is a root of one of these two factors, both of which are irreducible.  Thus $\Q(a)$ either has degree 2 or 4 over $\Q$.
+\end{answer}
+
+
+\question Consider the element $a =\sqrt{3+\sqrt{2}}$.
+\begin{parts}
+\part Is $a$ algebraic over $\Q$?  Explain.
+\part Is $a$ algebraic over $\Q(\sqrt{2})$?  Explain.
+\part Find the degree of $\Q(a)$ over $\Q$ and over $\Q(\sqrt{2})$.
+\part Find a basis for $\Q(a)$ over $\Q$ and a basis for $\Q(a)$ over $\Q(\sqrt{2})$.
+\end{parts} 
+
+\begin{answer}
+\begin{parts}
+\part Yes.  $a$ is a root of the polynomial $x^4 - 6x^2 + 7$.
+\part Yes, $a$ is a root of the polynomial $x^2 - (3+\sqrt{2}) \in \Q(\sqrt{2})[x]$
+\part $[\Q(a):\Q] = 4$ and $[\Q(a):\Q(\sqrt{2})] = 2$.  Note that $\sqrt{2} \in \Q(a)$ so $\Q(a) = \Q(a, \sqrt{2})$.  Also $[\Q(\sqrt{2}):\Q] = 2$ since $\sqrt{2}$ has minimum polynomial $x^2 - 2$.  
+Also, $x^2 - (3+\sqrt{2})$ is irreducible in $\Q(\sqrt{2})$ (If it wasn't there would be a number $a+b\sqrt{2}$ which when squared gave $3+\sqrt{2}$.  But $(a+b\sqrt{2})^2 = a^2 + 2b^2 + 2ab\sqrt{2}$ so this would say that $a^2 + 2b^2 = 3$ and $2ab = 1$, so $b = 1/(2a)$.  
+In other words, $a^2 + 2(1/(2a))^2 = 3$ which says $a^2 + \frac{2}{4a^2} = 3$ or $2a^4 - 6a^2 + 1 = 0$.  But there is no rational number which satisfies this equation by the rational roots theorem.)  This proves that $[\Q(a):\Q(\sqrt{2})] = 2$ and combining this with the fact that $\Q(\sqrt{2})$ is a degree 2 extension over $\Q$, we get $[\Q(a):\Q] = 2 \cdot 2 = 4$.
+\part A basis for $\Q(a)$ over $\Q(\sqrt{2})$ is $\{1, a\}$ (since $\Q(a) = \Q(\sqrt{2}, a)$).  To get a basis for $\Q(a)$ over $\Q$ we need 4 elements: $\{1, a, \sqrt{2}, \sqrt{2}a\}$.
+\end{parts} 
+\end{answer}
+
+
+\question Let $\alpha$ be a root of the polynomial $x^3 + 4x^2 + 10x + 6$.  Prove that $\{1, \alpha, \alpha^2, \alpha^3\}$ is linearly dependent in $\Q(\alpha)$.  Does this mean that $\alpha^3 \in \Q$?
+
+\begin{answer}
+	We know that $\alpha^3 + 4 \alpha^2 + 10\alpha + 6 = 0$, which is to say that there is a non-trivial linear combination of the elements in the set that gives 0.  This is exactly what it means to say that the set is linearly dependent.  However, it is not the case that $\alpha^3 \in \Q$, as it is just a linear combination of $1$, $\alpha$, and $\alpha^2$.
+\end{answer}
+
+
+
+\question Give an example of a polynomial $p(x)$ whose Galois group over $\Q$ is isomorphic to $\Z_2 \times \Z_2\times \Z_2$.  Give the splitting field and describe the elements of the Galois group.  
+
+	\begin{answer}
+		Take $p(x) = x^6-10 x^4+31 x^2-30 = (x^2 - 2) (x^2 - 3) (x^2 - 5)$.  The splitting field is $\Q(\sqrt{2}, \sqrt{3}, \sqrt{5})$, which is a degree 8 extension of $\Q$.  Elements of the Galois group send $\sqrt{2}$ to itself or to $-\sqrt{2}$, send $\sqrt{3}$ to itself or to $-\sqrt{3}$, and send $\sqrt{5}$ to itself or to $-\sqrt{5}$.  These choices can be made independently.
+	\end{answer}
+
+
+\question In the previous problem, the Galois group has subgroups isomorphic to\\ $H_1 = \{(0,0,0), (0,1,0), (0,0,1), (0,1,1)\}$ and to $H_2 = \{(0,0,0), (1,0,0)\}$ (among many others).  Which subfields of the splitting field do these correspond to.  That is, what are the fixed fields for these subgroups.
+
+	\begin{answer}
+		Notice that every element of $H_1$ fixes $\sqrt{2}$.  So the fixed field for $H_1$ is $\Q(\sqrt{2})$.  Stated otherwise, $H_1 \cong \Gal(E:\Q(\sqrt{2})$, where $E$ is the splitting field found in the previous problem.  This makes sense size wise, since the degree of $E$ over $\Q(\sqrt{2})$ is 4, and there are 4 elements in $H_1$.
+		
+		For $H_2$, we must be looking for a field of which $E$ is a degree 2 extension.  We can take $\Q(\sqrt{3}, \sqrt{5})$ as the fixed field.
+	\end{answer}
+
+
+
+\question Decide which of the statements below are true and which are false.  For the true statements, give a short proof or explanation.  For the false statements, provide a counterexample and explain why it is a counterexample.
+\begin{parts}
+\part It is possible to construct a line segment of length $\sqrt{3+\sqrt{7}}$ using a straight edge and compass.
+
+\part It is possible to construct a line segment of length $\sqrt[5]{7}$ using a straight edge and compass.
+
+\part $\Q[x]/\langle x^4 + 3x - 6\rangle $ is a field
+\part $\R[x]/\langle x^4 + 3x - 6\rangle$ is a field.  
+
+\part If $E$ is a degree 4 field extension of $\Q$, then there is always a degree 2 field extension $K$ of $\Q$ between $\Q$ and $E$ (i.e., $\Q \subseteq K \subseteq E$).
+\end{parts}
+
+
+\begin{answer}
+\begin{parts}
+\part True.  We know the field of constructible numbers is an extension of $\Q$ closed under taking square roots.  So 7 is constructible, and then $\sqrt{7}$ is as well.  Since we are in a field, so is $3+\sqrt{7}$, which means $\sqrt{3+\sqrt{7}}$ is also constructible.
+\part False.  $\sqrt[5]{7}$ is a root of the irreducible polynomial $x^5-7$.  Suppose this was constructible.  Then after some finite number of steps, we would have $\sqrt[5]{7}$ constructed, in a finite degree field extension of $\Q$.  This field would contain $\Q(\sqrt[5]{7})$, which is a degree 5 extension of $\Q$.  But we know that all the constructible numbers belong to field extensions of degree $2^n$ for some $n$.
+\part True, since $x^4 + 3x - 6$ is irreducible over $\Q$ by Eisenstein's criterion, we see that $\langle x^4 + 3x - 6\rangle$ is a maximal ideal, so the quotient ring is a field.
+\part False, which we know right away because there is no way for $x^4 + 3x - 2$ to be irreducible in $\R$ (since it has degree greater than 2).  So we have $x^4 + 3x - 6 = a(x)b(x)$ for some polynomials $a(x), b(x) \in \R[x]$.  Then $\langle x^4 + 3x - 6\rangle + a(x)$ is a zero divisor, so cannot have an inverse.
+\part True.  We either have $E = \Q(a,b)$ where $a$ and $b$ are both roots to degree 2 minimum polynomials, in which case $\Q(a)$ is a degree 2 extension between $\Q$ and $E$, or else $E = \Q(a)$ for a single element number which is the root to some irreducible degree 4 polynomial.  In this case, we have a basis for $E$ over $\Q$ as $\{1,a, a^2, a^3\}$.  Then consider the extension $\Q(a^2)$ of $\Q$.  This has degree 2 over $\Q$ since it has basis $\{1, a^2\}$.
+\end{parts}
+\end{answer}
+
+
+
+\end{questions}
+
+
+\Writetofile{\ansfilename}{
+\protect\end{questions}
+  
+\protect\end{document}}
+\Closesolutionfile{\ansfilename}
+
+\end{document}
+
+

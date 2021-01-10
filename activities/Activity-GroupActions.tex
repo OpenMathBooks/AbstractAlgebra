@@ -1,0 +1,76 @@
+\documentclass[11pt]{exam}
+
+\usepackage{amsmath, amssymb, multicol}
+\usepackage{graphicx}
+\usepackage{textcomp}
+\usepackage{tikz}
+\usetikzlibrary{arrows}
+
+\def\d{\displaystyle}
+\def\b{\mathbf}
+\def\R{\mathbb{R}}
+\def\Z{\mathbb{Z}}
+\def\Q{\mathbb{Q}}
+\def\N{\mathbb{N}}
+\def\C{\mathbb{C}}
+\def\st{~:~}
+\def\bar{\overline}
+\def\inv{^{-1}}
+
+
+%\pointname{pts}
+\pointsinmargin
+\marginpointname{pts}
+\addpoints
+\pagestyle{head}
+%\printanswers
+
+\firstpageheader{Math 322}{\bf Group Actions}{Spring 2020}
+
+
+
+\begin{document}
+
+We will consider a new sort of operation: an interaction between a group and a set (which {\em could} be another group, but doesn't have to be).  Here are some relevant definitions.
+
+\begin{itemize}
+
+\item We will call the group $G$ and the set $X$.  An {\em action} of $G$ on $X$ is a function that sends pairs in $G \times X$ to things in $X$.  We write $(g,x) \mapsto gx$, satisfying
+\begin{enumerate}
+\item $ex = x$ for all $x \in X$
+\item $(g_1g_2)x = g_1(g_2x)$ for all $x \in X$ and all $g_1, g_2\in G$.
+\end{enumerate}
+We call $X$ a {\em $G$-set}.
+
+\item Two elements $x, y \in X$ are {\em $G$-equivalent} (written $x \sim y$) provided there is some $g \in G$ such that $gx = y$.
+
+\item The {\em orbit} of an element $x \in X$ (written $\mathcal{O}_x$) is the set of all elements $y \in X$ that are $G$-equivalent to $x$.
+
+\item The {\em fixed point set} of an element $g \in G$ (written $X_g$) is the set of all $x \in X$ such that $gx = x$.
+
+\item The {\em stabilizer subgroup} of an element $x \in X$ (written $G_x$) is the set of all $g \in G$ such that $gx = x$.
+\end{itemize}
+
+To get used to these new definitions, let's work a few examples.
+
+\begin{questions}
+\question Let $X = \{1,2,3,4,5,6\}$ and $G = \{(1), (12)(3456), (35)(46), (12)(3654)\}$ (a subgroup of $S_6$).\\  $G$ acts on $X$ by $(\sigma,x) \mapsto \sigma(x)$. 
+\begin{parts}
+	\part For each $x \in X$, find $\mathcal{O}_x$, the orbit of $x$ in $G$.
+	\vfill  
+	\part For each $g \in G$, find $X_g$, the fixed point set of $g$ in $X$.
+	\vfill
+	\part For each $x \in X$, find $G_x$, the stabilizer subgroup of $x$ in $G$.
+	\vfill
+	\part Do you notice anything about the sizes of the sets you found, how many different sets you found, etc?
+\end{parts}
+
+
+\end{questions}
+
+
+
+\end{document}
+
+
+

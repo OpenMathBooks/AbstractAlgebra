@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<section xml:id="notes-week8" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>Week 8: March 2-6</title>
+
+
+<subsection xml:id="notes-3-2">
+  <title>Monday: Even and Odd Permutations, again</title>
+  <p>
+    On Friday we started to prove that the identity is an even permutation (i.e., that no matter how you write it as a product of transpositions, you will always use an even number of them).  This would be enough to prove that every permutation is either always even or always odd.  Let's start by completing that proof.
+  </p>
+  <p>
+    <ul>
+      
+      <li>
+        <p>
+				Let’s prove: No permutation can be written as both an even number and an odd number of transpositions.
+        </p>
+      </li>
+
+      <li>
+        <p>
+				Consider first how you might write the identity <m>\varepsilon</m> as a product of transpositions. We can prove that the number of transpositions must be even. We do this by rewriting the product using 2 fewer transpositions. This is enough, because it is obvious that <m>\varepsilon</m> can’t be written as one transposition.
+        </p>
+      </li>
+
+      <li>
+        <p>
+				The idea: fix some number <m>x</m> and find the last time <m>x</m> occurs (the right-most <m>x</m>). We move this <m>x</m> to the left until the transposition it is in is next to a copy of itself, in which case you can remove both copies.
+        </p>
+      </li>
+
+      <li>
+        <p>
+				Show this process with an example: <m>\varepsilon = (45)(23)(13)(25)(14)(24)(35)(15)</m> Use <m>x = 3</m>.
+        </p>
+      </li>
+
+      <li>
+        <p>
+				More precisely, what are the possibilities for the transposition directly to the left of <m>(xa)</m>. If it is <m>(xa)</m>, remove both. If it is <m>(bc)</m>, we can swap them, since disjoint cycles commute. If it is <m>(xb)</m>, then write <m>(xb)(xa) = (xa)(ab)</m>. If it is <m>(ab)</m>, then write <m>(ab)(xa) = (xb)(ab)</m>.
+        </p>
+      </li>
+
+      <li>
+        <p>
+				Once we know that <m>\varepsilon</m> is even, suppose <m>\pi</m> is both even and odd. Then so would be <m>\pi^{-1}</m>. But then <m>\pi\circ \pi^{-1}= \varepsilon</m> would be odd.
+        </p>
+      </li>
+
+      <li>
+        <p>
+				Neat. It now makes sense to call a permutation <em>even</em> if it can be written as an even number of permutations, and <em>odd</em> otherwise. That is, the <em>parity</em> of a permutation is a property of the permutation, not just the way we happen to write it.
+        </p>
+      </li>
+
+      <li>
+        <p>
+				We will let <m>A_n</m> denote the set of all even permutations in <m>S_n</m>. What would it take to prove that <m>A_n</m> is a subgroup of <m>S_n</m>?
+        </p>
+      </li>
+
+      <li>
+        <p>
+				How many elements are in <m>A_n</m>? That is, how many of the <m>n!</m> elements of <m>S_n</m> are even?
+        </p>
+      </li>
+
+      <li>
+        <p>
+				To prove that <m>|A_n| = \frac{1}{2}|S_n|</m>, we can define a bijection from the set of even permutations to the set of odd permutations. Do this by picking any transposition <m>\sigma</m> and sending <m>\tau</m> to <m>\sigma\tau</m> (that is, compose the even transposition <m>\tau</m> with <m>\sigma</m>, but this really just means writing <m>\sigma</m> at the start of the transposition <m>\tau</m>). We can prove this is injective and surjective. Thus the set of even permutations will be the same size as the set of odd permutations.
+        </p>
+      </li>
+    </ul>
+  </p>
+
+</subsection>
+<subsection xml:id="notes-3-2b">
+  <title>Monday: Solvable Groups</title>
+  <p>
+		The goal today is to gain familiarity with the definitions of subnormal and normal series, and to understand what a composition or principle series is. This will lead to the definition of a solvable group.
+  </p>
+
+  <p>
+		One preliminary is the notion of a <em>simple group</em>. These are groups that have no non-trivial normal subgroups. One of the great accomplishments of algebra recently is the complete classification of all finite simple groups in 2008. It turns out that the simple groups are only
+  </p>
+
+  <p>
+    <ul>
+      <li>
+        <p>
+          <m>\mathbb Z_p</m> for prime <m>p</m>,
+        </p>
+      </li>
+
+      <li>
+        <p>
+          <m>A_n</m> for <m>n \ge 5</m>,
+        </p>
+      </li>
+
+      <li>
+        <p>
+				  Belong to one of 16 families of groups of Lie type.
+        </p>
+      </li>
+
+      <li>
+        <p>
+				  One of 26 exceptions (called the sporadic groups, 20 of which are subquotients of the <em>Monster group</em> of order <m>2^{46} 3^{20}5^9 7^6 11^2 13^3 17 \cdot 19 \cdot 23 \cdot 29 \cdot 31 \cdot 41 \cdot 47 \cdot 59 \cdot 71 \approx 8\times 10^{53}</m>, the other 6 known as <em>p</em>ariahs).
+        </p>
+      </li>
+
+    </ul>
+  </p>
+
+  <p>
+		For us: <m>\mathbb Z_p</m> or <m>A_n</m>.
+  </p>
+
+  <p>
+		Now do the activity to remind ourselves how subgroups and quotient groups interact.
+  </p>
+</subsection>
+
+
+<subsection xml:id="notes-3-4">
+  <title>Wednesday: Normal Series</title>
+  <p>
+    <ul>
+      <li>
+        <p>
+				Motivating question: Let <m>G</m> be a group with normal subgroup <m>H</m>. Suppose <m>G/H</m> is not simple (that is, it has a normal subgroup). What does that tell us about the relationship between <m>G</m> and <m>H</m>?
+        </p>
+      </li>
+
+      <li>
+        <p>
+				Perhaps consider the example <m>G = \mathbb Z_{60}</m> and <m>H = \langle 6\rangle</m>. What is <m>\mathbb Z_{60}/\langle 6\rangle</m>? It looks like <m>\mathbb Z_{6}</m>. Now <m>\mathbb Z_{6}</m> has a normal subgroup <m>\{0, 3\}</m>. Which subgroup of <m>G/H</m> is this? Can we recognize this as a quotient group itself?
+        </p>
+      </li>
+
+      <li>
+        <p>
+				Finish up the activity from last time.
+        </p>
+      </li>
+
+      <li>
+        <p>
+				The Jordan-Hölder Theorem: Any two composition series of <m>G</m> are isomorphic. By isomorphic, we mean there is a 1-1 correspondence between the quotient groups in the composition series.
+        </p>
+      </li>
+
+      <li>
+        <p>
+				This is really remarkable. It says that however you decompose a group using a subnormal series, you will essentially get the same series (in as much as the quotient groups will match up). In particular, the <em>length</em> of composition series is well defined.
+        </p>
+      </li>
+
+      <li>
+        <p>
+				Another useful definition is this: A group <m>G</m> is <em>solvable</em> if it has a subnormal series <m>\{H_i\}</m> such that all the quotient groups <m>H_{i+1}/H_{i}</m> are abelian. Next week we will see why calling such groups <q>solvable</q> makes sense.
+        </p>
+      </li>
+
+    </ul>
+  </p>
+</subsection>
+
+<subsection xml:id="notes-3-6">
+  <title>Friday: Simplicity of the Alternating Group</title>
+    <p>
+      Today we will work through an activity that proves that <m>S_5</m> is not solvable, by showing that <m>A_5</m> is simple: it contains no non-trivial normal subgroups.
+    </p>
+</subsection>
+</section>

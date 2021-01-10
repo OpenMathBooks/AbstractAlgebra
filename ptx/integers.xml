@@ -1,0 +1,396 @@
+<?xml version="1.0"?>
+<!-- This file is part of the book                    -->
+<!--                                                  -->
+<!-- Abstract Algebra: Theory and Applications        -->
+<!--                                                  -->
+<!-- Text: Copyright (C) 1997-2020  Thomas W. Judson  -->
+<!-- Sage: Copyright (C) 2010-2020  Robert A. Beezer  -->
+<!-- See the file COPYING for copying conditions.     -->
+<!-- This file is part of the book                    -->
+<!--                                                  -->
+<!-- See the file COPYING for copying conditions.     -->
+<chapter xmlns:xi="http://www.w3.org/2001/XInclude" xml:id="integers" permid="mtY">
+  <title>The Integers</title>
+  <introduction permid="Ace">
+    <p permid="vVb">
+      The integers are the building blocks of mathematics.
+      In this chapter we will investigate the fundamental properties of the integers,
+      including mathematical induction,
+      the division algorithm, and the Fundamental Theorem of Arithmetic.
+    </p>
+  </introduction>
+
+ 
+  
+  
+    <!-- Exercises with Solutions  -->
+    <!-- File: integers.xml  -->
+    <!-- Title: The Integers -->
+  <exercises xml:id="exercises-integers" filenamebase="integers" permid="Dsj">
+    <title>Exercises</title>
+
+    <exercise number="1" permid="sTe" xml:id="integers-exercise-pmi-sum-squares">
+      <statement>
+        <p permid="AEU">
+          Prove that
+          <me permid="CIC">
+            1^2 + 2^2 + \cdots + n^2 = \frac{n(n + 1)(2n + 1)}{6}
+          </me>
+          for <m>n \in {\mathbb N}</m>.
+        </p>
+      </statement>
+      <hint permid="pCZ">
+        <p permid="iWP">
+          The base case,
+          <m>S(1): [1(1 + 1)(2(1) + 1)]/6 = 1 = 1^2</m> is true.
+          Assume that <m>S(k): 1^2 + 2^2 + \cdots + k^2 = [k(k + 1)(2k + 1)]/6</m> is true.
+          Then
+          <md permid="iPL">
+            <mrow>1^2 + 2^2 + \cdots + k^2 + (k + 1)^2 &amp; = [k(k + 1)(2k + 1)]/6 + (k + 1)^2</mrow>
+            <mrow>&amp; = [(k + 1)((k + 1) + 1)(2(k + 1) + 1)]/6</mrow>
+          </md>,
+          and so <m>S(k + 1)</m> is true.
+          Thus, <m>S(n)</m> is true for all positive integers <m>n</m>.
+        </p>
+      </hint>
+    </exercise>
+
+    <exercise number="2" permid="Zan" xml:id="integers-exercise-pmi-sum-cubes">
+      <statement>
+        <p permid="gMd">
+          Prove that
+          <me permid="ved">
+            1^3 + 2^3 + \cdots + n^3 = \frac{n^2(n + 1)^2}{4}
+          </me>
+          for <m>n \in {\mathbb N}</m>.
+        </p>
+      </statement>
+    </exercise>
+
+    <exercise number="3" permid="Fhw" xml:id="integers-exercise-pmi-factorial">
+      <statement>
+        <p permid="MTm">
+          Prove that <m>n! \gt 2^n</m> for <m>n \geq 4</m>.
+        </p>
+      </statement>
+      <hint permid="hYA">
+        <p permid="PdY">
+          The base case, <m>S(4): 4! = 24 \gt 16 =2^4</m> is true.
+          Assume <m>S(k): k! \gt 2^k</m> is true.
+          Then <m>(k + 1)! = k! (k + 1) \gt 2^k \cdot 2 = 2^{k + 1}</m>,
+          so <m>S(k + 1)</m> is true.
+          Thus, <m>S(n)</m> is true for all positive integers <m>n</m>.
+        </p>
+      </hint>
+    </exercise>
+
+    <exercise number="4" permid="loF" xml:id="integers-exercise-pmi-0dd-times-x">
+      <statement>
+        <p permid="tav">
+          Prove that
+          <me permid="blm">
+            x + 4x + 7x + \cdots + (3n - 2)x = \frac{n(3n - 1)x}{2}
+          </me>
+          for <m>n \in {\mathbb N}</m>.
+        </p>
+      </statement>
+    </exercise>
+
+    <exercise number="5" permid="RvO" xml:id="integers-exercise-pmi-divisible-by-3">
+      <statement>
+        <p permid="ZhE">
+          Prove that <m>10^{n + 1} + 10^n + 1</m> is divisible by <m>3</m> for <m>n \in {\mathbb N}</m>.
+        </p>
+      </statement>
+    </exercise>
+
+    <exercise number="6" permid="xCX" xml:id="integers-exercise-pmi-divisible-by-99">
+      <statement>
+        <p permid="FoN">
+          Prove that <m>4 \cdot 10^{2n} + 9 \cdot 10^{2n - 1} + 5</m> is divisible by <m>99</m> for <m>n \in {\mathbb N}</m>.
+        </p>
+      </statement>
+    </exercise>
+
+    <exercise number="7" permid="dKg" xml:id="integers-exercise-pmi-geometric-arithmetic-mean">
+      <statement>
+        <p permid="lvW">
+          Show that
+          <me permid="nzE">
+            \sqrt[n]{a_1 a_2 \cdots a_n} \leq \frac{1}{n} \sum_{k = 1}^{n} a_k
+          </me>.
+        </p>
+      </statement>
+    </exercise>
+
+    <exercise number="8" permid="JRp" xml:id="integers-exercise-pmi-leibniz">
+      <statement>
+        <p permid="RDf">
+          Prove the Leibniz rule for <m>f^{(n)} (x)</m>,
+          where <m>f^{(n)}</m> is the <m>n</m>th derivative of <m>f</m>; that is,
+          show that
+          <me permid="Mco">
+            (fg)^{(n)}(x) = \sum_{k = 0}^{n} \binom{n}{k} f^{(k)}(x) g^{(n - k)}(x)
+          </me>.
+        </p>
+      </statement>
+      <hint permid="SPC">
+        <p permid="vlh">
+          Follow the proof in <xref ref="example-integers-binomial-theorem"/>.
+        </p>
+      </hint>
+    </exercise>
+
+    <exercise number="9" permid="pYy" xml:id="integers-exercise-pmi-sum-powers-of-2">
+      <statement>
+        <p permid="xKo">
+          Use induction to prove that
+          <m>1 + 2 + 2^2 + \cdots + 2^n = 2^{n + 1} - 1</m> for <m>n \in {\mathbb N}</m>.
+        </p>
+      </statement>
+    </exercise>
+
+    <exercise number="10" permid="WfH" xml:id="integers-exercise-pmi-sum-n-over-n-plus-one">
+      <statement>
+        <p permid="dRx">
+          Prove that
+          <me permid="sjx">
+            \frac{1}{2}+ \frac{1}{6} + \cdots + \frac{1}{n(n + 1)} = \frac{n}{n + 1}
+          </me>
+          for <m>n \in {\mathbb N}</m>.
+        </p>
+      </statement>
+    </exercise>
+
+    <exercise number="11" permid="CmQ" xml:id="integers-exercise-pmi-less-than-nx">
+      <statement>
+        <p permid="JYG">
+          If <m>x</m> is a nonnegative real number,
+          then show that <m>(1 + x)^n - 1 \geq nx</m> for <m>n = 0, 1, 2, \ldots</m>.
+        </p>
+      </statement>
+      <hint permid="rsm">
+        <p permid="bsq">
+          The base case,
+          <m>S(0): (1 + x)^0 - 1 = 0 \geq 0 = 0 \cdot x</m> is true.
+          Assume <m>S(k): (1 + x)^k -1 \geq kx</m> is true.
+          Then
+          <md permid="kEY">
+            <mrow>(1 + x)^{k + 1} - 1 &amp; = (1 + x)(1 + x)^k -1</mrow>
+            <mrow>&amp; = (1 + x)^k + x(1 + x)^k - 1</mrow>
+            <mrow>&amp; \geq kx + x(1 + x)^k</mrow>
+            <mrow>&amp; \geq kx + x</mrow>
+            <mrow>&amp; = (k + 1)x</mrow>
+          </md>,
+          so <m>S(k + 1)</m> is true.
+          Therefore, <m>S(n)</m> is true for all positive integers <m>n</m>.
+        </p>
+      </hint>
+    </exercise>
+
+    <exercise number="12" permid="itZ" xml:id="integers-exercise-power-sets">
+      <title>Power Sets</title>
+      <statement>
+        <p permid="qfP">
+          Let <m>X</m> be a set.
+          Define the <term>power set</term> of <m>X</m>,
+          denoted <m>{\mathcal P}(X)</m>,
+          to be the set of all subsets  of <m>X</m>.
+
+          <notation>
+            <usage>\mathcal P(X)</usage>
+            <description>power set of <m>X</m></description>
+          </notation>
+
+          For example,
+          <me permid="wTq">
+            {\mathcal P}( \{a, b\} ) = \{ \emptyset, \{a\}, \{b\}, \{a, b\} \}
+          </me>.
+          For every positive integer <m>n</m>,
+          show that a set with exactly <m>n</m> elements has a power set with exactly <m>2^n</m> elements.
+        </p>
+      </statement>
+    </exercise>
+
+    <exercise number="13" permid="OBi" xml:id="integers-exercise-pmi-equivalent">
+      <statement>
+        <p permid="WmY">
+          Prove that the two principles of mathematical induction stated in <xref ref="section-math-induction"/> are equivalent.
+        </p>
+      </statement>
+    </exercise>
+
+    <exercise number="14" permid="uIr" xml:id="integers-exercise-smallest-natural-number">
+      <statement>
+        <p permid="Cuh">
+          Show that the Principle of Well-Ordering for the natural numbers implies that 1 is the smallest natural number.
+          Use this result to show that the Principle of Well-Ordering implies the Principle of Mathematical Induction;
+          that is, show that if <m>S \subset {\mathbb N}</m> such that <m>1 \in S</m> and
+          <m>n + 1 \in S</m> whenever <m>n \in S</m>,
+          then <m>S = {\mathbb N}</m>.
+        </p>
+      </statement>
+    </exercise>
+
+
+
+    <!--Todo Check references to the Fibonacci numbers-->
+
+    <exercise number="17" permid="ndS" xml:id="integers-exercise-fibonacci">
+      <title>Fibonacci Numbers</title>
+      <statement>
+        <p permid="uPI">
+          The Fibonacci numbers are
+          <me permid="daz">
+            1, 1, 2, 3, 5, 8, 13, 21, \ldots
+          </me>.
+          We can define them inductively by <m>f_1 = 1</m>, <m>f_2 = 1</m>,
+          and <m>f_{n + 2} = f_{n + 1} + f_n</m> for <m>n \in {\mathbb N}</m>.
+
+          <ol permid="scg">
+            <li permid="yBm">
+              <p permid="xvT">
+                Prove that <m>f_n \lt 2^n</m>.
+              </p>
+            </li>
+
+            <li permid="eIv">
+              <p permid="dDc">
+                Prove that <m>f_{n + 1} f_{n - 1} = f^2_n + (-1)^n</m>,
+                <m>n \geq 2</m>.
+              </p>
+            </li>
+
+            <li permid="KPE">
+              <p permid="JKl">
+                Prove that <m>f_n = [(1 + \sqrt{5}\, )^n - (1 - \sqrt{5}\, )^n]/ 2^n \sqrt{5}</m>.
+              </p>
+            </li>
+
+            <li permid="qWN">
+              <p permid="pRu">
+                Show that <m>\lim_{n \rightarrow \infty} f_n / f_{n + 1} = (\sqrt{5} - 1)/2</m>.
+              </p>
+            </li>
+
+            <li permid="XdW">
+              <p permid="VYD">
+                Prove that <m>f_n</m> and <m>f_{n + 1}</m> are relatively prime.
+              </p>
+            </li>
+          </ol>
+        </p>
+      </statement>
+      <hint permid="Iqx">
+        <p permid="Hzz">
+          For (a) and (b) use mathematical induction. (c) Show that <m>f_1 = 1</m>,
+          <m>f_2 = 1</m>,
+          and <m>f_{n + 2} = f_{n + 1} + f_n</m>. (d) Use part (c). (e) Use part (b) and <xref ref="integers-exercise-gcd-1"/>.
+        </p>
+      </hint>
+    </exercise>
+
+
+
+  </exercises>
+  <exercises xml:id="integers-exercises-programming" permid="jzs">
+    <title>Programming Exercises</title>
+
+    <exercise permid="Bhx" xml:id="integers-exercise-eratosthenes">
+      <title>The Sieve of Eratosthenes</title>
+      <idx>
+      <h>Sieve of Eratosthenes</h>
+      </idx>
+      <statement>
+        <p permid="ITn">
+          One method of computing all of the prime numbers less than a certain fixed positive integer <m>N</m> is to list all of the numbers <m>n</m> such that <m>1 \lt n \lt N</m>.
+          Begin by eliminating all of the multiples of <m>2</m>.
+          Next eliminate all of the multiples of <m>3</m>.
+          Now eliminate all of the multiples of <m>5</m>.
+          Notice that <m>4</m> has already been crossed out.
+          Continue in this manner,
+          noticing that we do not have to go all the way to <m>N</m>;
+          it suffices to stop at <m>\sqrt{N}</m>.
+          Using this method,
+          compute all of the prime numbers less than <m>N = 250</m>.
+          We can also use this method to find all of the integers that are relatively prime to an integer <m>N</m>.
+          Simply eliminate the prime factors of <m>N</m> and all of their multiples.
+          Using this method,
+          find all of the numbers that are relatively prime to <m>N= 120</m>.
+          Using the Sieve of Eratosthenes,
+          write a program that will compute all of the primes less than an integer <m>N</m>.
+        </p>
+      </statement>
+    </exercise>
+
+    <exercise permid="hoG" xml:id="integers-exercise-ackermann">
+      <idx>
+      <h>Ackermann's function</h>
+      </idx>
+      <statement>
+        <p permid="paw">
+          Let <m>{\mathbb N}^0 = {\mathbb N} \cup \{ 0 \}</m>.
+          Ackermann's function is the function
+          <m>A :{\mathbb N}^0 \times {\mathbb N}^0 \rightarrow {\mathbb N}^0</m> defined by the equations
+          <md permid="tYK">
+            <mrow>A(0, y) &amp; = y + 1,</mrow>
+            <mrow>A(x + 1, 0) &amp; = A(x, 1),</mrow>
+            <mrow>A(x + 1, y + 1) &amp; = A(x, A(x + 1, y))</mrow>
+          </md>.
+          Use this definition to compute <m>A(3, 1)</m>.
+          Write a program to evaluate Ackermann's function.
+          Modify the  program to count the number of statements executed in the program when Ackermann's function is evaluated.
+          How many statements are executed in the evaluation of <m>A(4, 1)</m>?
+          What about <m>A(5, 1)</m>?
+        </p>
+      </statement>
+    </exercise>
+
+    <exercise permid="NvP" xml:id="integers-exercise-program-euclidean-algorithm">
+      <statement>
+        <p permid="VhF">
+          Write a computer program that will implement the Euclidean algorithm.
+          The program should accept two positive integers <m>a</m> and <m>b</m> as input and should output
+          <m>\gcd( a,b)</m> as well as integers <m>r</m> and <m>s</m> such that
+          <me permid="afT">
+            \gcd( a,b) = ra + sb
+          </me>.
+        </p>
+      </statement>
+    </exercise>
+
+  </exercises>
+  <!--Todo Fix intro to references-->
+
+  <references xml:id="integers-references" permid="Dta">
+    <title>References and Suggested Readings</title>
+        <!-- References updated - TWJ 5/4/2010 -->
+        <!--			<p>References [2], [3], and [4] are good sources for elementary number
+theory.</p> -->
+    <biblio type="raw" permid="jAj">
+<!-- was [1] -->
+      Brookshear, J. G.
+      <title>Theory of Computation: Formal Languages, Automata, and Complexity</title>.  Benjamin/Cummings, Redwood City, CA, 1989. Shows the relationships of the theoretical aspects of computer science to set theory and the integers.
+    </biblio>
+
+    <biblio type="raw" permid="PHs">
+<!-- was [2] --><!-- Updated - TWJ 5/4/2010 -->
+      Hardy, G. H. and Wright, E. M.
+      <title>An Introduction to the Theory of Numbers</title>.  6th ed. Oxford University Press, New York, 2008.
+    </biblio>
+
+    <biblio type="raw" permid="vOB">
+<!-- was [3] --><!-- Checked reference - TWJ 5/4/2010 -->
+      Niven, I. and Zuckerman, H. S.
+      <title>An Introduction to the Theory of Numbers</title>.  5th ed. Wiley, New York, 1991.
+    </biblio>
+
+    <biblio type="raw" permid="bVK">
+<!-- was [4] --><!-- Checked reference - TWJ 5/4/2010 -->
+      Vanden Eynden, C.
+      <title>Elementary Number Theory</title>. 2nd ed.  Waveland Press, Long Grove IL, 2001.
+    </biblio>
+  </references>
+
+
+</chapter>

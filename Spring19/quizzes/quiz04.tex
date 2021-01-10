@@ -1,0 +1,77 @@
+ \documentclass[12pt]{exam}
+
+\usepackage{amsmath, amssymb, amsthm, multicol}
+\usepackage{graphicx}
+\usepackage{textcomp}
+
+\def\d{\displaystyle}
+\def\matrix#1{\begin{bmatrix}#1\end{bmatrix}}
+\def\b{\mathbf}
+\def\R{\mathbb{R}}
+\def\Z{\mathbb{Z}}
+\def\Q{\mathbb{Q}}
+\def\and{\wedge}
+\def\imp{\rightarrow}
+\def\inv{^{-1}}
+\DeclareMathOperator{\ord}{ord}
+\def\st{:}
+\def\onto{\twoheadrightarrow}
+\def\Gal{\mathrm{Gal}}
+
+
+
+%\pointname{pts}
+\pointsinmargin
+\marginpointname{pts}
+\marginbonuspointname{bn-pts}
+\addpoints
+\pagestyle{head}
+%\printanswers
+
+\firstpageheader{MATH 322}{\bf Quiz 4}{Monday, February 25}
+
+
+\begin{document}
+
+%space for name
+\noindent {\large\bf Name:} \underline{\hspace{2.5in}}
+\vskip 1em
+
+\begin{questions}
+  \question Let $G$ be a group with elements $\{e, a, b, c, d, f, g, h\}$.  Here is part of the table for $G$:
+  \begin{center}
+    \begin{tabular}{c|cccccccc}
+           & $e$ & $a$ & $b$ & $c$ & $d$ & $f$ & $g$ & $h$ \\ \hline
+       $\vdots$ & &&& \vdots & & & & \\
+       $c$ & $c$ & $b$ & $e$ & $a$ & $h$ & $g$ & $d$ & $f$ \\ 
+       $\vdots$ & &&& \vdots & & & & 
+     \end{tabular}
+  \end{center}
+  \begin{parts}
+    \part[3] Find the left regular representation of $c$ as in Cayley's theorem.  That is, find the permutation $\lambda_c$ in $S_8$ corresponding to $c$.
+    \begin{solution}
+     $\lambda_c = \begin{pmatrix} 1 & 2 & 3 & 4 & 5 & 6 & 7 & 8 \\ 4 & 3 & 1 & 2 & 8 & 7 & 5 & 6\end{pmatrix}$
+    \end{solution}
+
+    \vfill
+    \part[3] Suppose $\lambda_d = \begin{pmatrix}1 & 2 & 3 & 4 & 5 & 6 & 7 & 8\\ 5 & 6 & 7 & 8 & 2 & 1 & 3 & 4\end{pmatrix}$ is the left regular representation of $d$.  Write the row for $d$ in the group table. 
+    \begin{solution}
+     The row will read $d~f~g~h~a~e~b~c$
+    \end{solution}
+
+    \vfill
+    \part[4] If you compute $\lambda_c\lambda_d$ you get another permutation in $S_8$.  Of which element in $G$ is it the left regular representation?  That is, find $x \in G$ such that $\lambda_x = \lambda_c\lambda_d$.  Briefly explain how you know you are right.
+    \begin{solution}
+     $\lambda_c\lambda_d = \lambda_{cd}$ by the way we define regular representations.  But because $G$ is isomorphic to the group of regular representations, we know $\lambda_{cd}$ corresponds to $cd$ which in $G$ equals $h$.  Thus $\lambda_c\lambda_d = \lambda_h$.
+    \end{solution}
+
+    \vfill
+    \vfill
+  \end{parts}
+  
+  \bonusquestion[3] Bonus: Which of the permutations you found above are even?  Briefly explain how you know
+  \vskip 1em
+\end{questions}
+\end{document}
+
+

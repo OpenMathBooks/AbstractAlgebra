@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- This file is part of the course notes for MATH 322 at UNC, based on the book                   -->
+<!--                                                  -->
+<!-- Abstract Algebra: Theory and Applications        -->
+<!--                                                  -->
+<!-- Text: Copyright (C) 1997-2018  Thomas W. Judson  -->
+<!-- Sage: Copyright (C) 2010-2018  Robert A. Beezer  -->
+<!-- See the file COPYING for copying conditions.     -->
+<!-- This file is part of the book                    -->
+<!--                                                  -->
+<!-- See the file COPYING for copying conditions.     -->
+<!-- USE XINCLUDE SWITCH ON XSLTPROC                  -->
+<!-- Master file for AATA                             -->
+<!-- Use XSL stylesheets to create subsets            -->
+<!--    Important: Always process all of the source   -->
+<!--    to preserve numbering and cross-references!   -->
+<!--    So it is never advisable to edit this file    -->
+<mathbook xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en-US">
+  <xi:include href="./bookinfo.ptx" /> <!-- ISBN, website, other metadata -->
+  <book xml:id="math322" permid="aZr">
+    <title>Introduction to Abstract Algebra II</title>
+    <subtitle>Spring 2019</subtitle>
+    
+    <!-- Title Page, Preface, etc. -->
+    <xi:include href="./frontmatter.ptx" />
+    <xi:include href="./ch_fields.ptx" />  
+    <xi:include href="./ch_galois.ptx" />
+    <xi:include href="./ch_groups.ptx" />
+    <xi:include href="./ch_cryptography.ptx" />
+    <xi:include href="./ch_grp-struct.ptx" />
+    <xi:include href="./ch_actions.ptx" />
+    <!-- GFDL, Hints, Notation -->
+    <xi:include href="./backmatter.ptx" />
+  </book>
+</mathbook>
+

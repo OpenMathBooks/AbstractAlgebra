@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<section xml:id="notes-week11" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>Week 11: March 30 - April 3</title>
+
+
+<subsection xml:id="notes-3-30">
+<title>Monday: RSA Cryptography</title>
+<p>
+				Here is the idea: we want to publicly publish an encryption key that can be used to encode data, that cannot be decrypted unless you know the private decryption key.
+  <ul>
+    <li>
+      <p>
+				How do we encode the message? First, suppose you have some standard method to make the message into a number (or sequence of numbers). Call such a number <m>x</m>.
+      </p>
+    </li>
+
+    <li>
+      <p>
+				Now we want to transform <m>x</m> into a encrypted number <m>y</m>. We do this by computing <m>x^E \pmod{n}</m> for some numbers <m>E</m> and <m>n</m>. Then <m>y</m> can be sent.
+      </p>
+    </li>
+
+    <li>
+      <p>
+				For this to work, we need a way to transform <m>y</m> back into <m>x</m>. We will do this by computing <m>y^D \pmod{n}</m>. This would only be secure if <m>D</m> was completely private (so we better not be able to find <m>D</m> from <m>E</m> and <m>n</m>). It would only work if this really did give <m>x</m> back.
+      </p>
+    </li>
+
+    <li>
+      <p>
+				So we want <m>(x^E)^D \cong x \pmod{n}</m>. How can we make sure this happens?
+      </p>
+    </li>
+
+    <li>
+      <p>
+				What if <m>DE = \varphi(n)+1</m>? Or even <m>DE = k\varphi(n)+1</m>? Well, if it happens that <m>x</m> is relatively prime to <m>n</m>, we would have <me>(x^E)^D = x^{DE} = x^{k\varphi(n)}x \equiv 1^k x \pmod{n}</me>
+      </p>
+    </li>
+
+    <li>
+      <p>
+				If <m>x</m> is not relatively prime to <m>n</m>, then we will also be okay, because of how we will pick <m>n</m>.
+      </p>
+
+      <p>
+        <ul>
+          <li>
+            <p>
+				We will have <m>n = pq</m> for primes <m>p</m> and <m>q</m>. Say <m>x</m> is a multiple of <m>p</m> (but not of <m>q</m>).
+            </p>
+          </li>
+
+          <li>
+            <p>
+				So <m>x = rp</m> for some <m>r &lt; q</m>. Then <me>x^{km} = x^{k\varphi(pq)} = (x^\varphi(q))^{k\varphi(p)} \equiv 1 \pmod q</me>
+            </p>
+          </li>
+
+          <li>
+            <p>
+				This means that <m>x^{k\varphi(pq)} = 1 + tq</m> for some <m>t</m>. We get <me>(x^E)^D = x^{k\varphi(pq)}x = (1+tq)x = x + tq(rp) = x+trn \equiv x \pmod n</me>
+            </p>
+          </li>
+
+        </ul>
+      </p>
+    </li>
+
+    <li>
+      <p>
+				Great. So we want <m>DE = k\varphi(n) + 1</m> which is the same as saying <m>DE \equiv 1 \pmod{\varphi(n)}</m>.
+      </p>
+    </li>
+
+    <li>
+      <p>
+				We also want <m>n = pq</m>, so <m>\varphi(n) = \varphi(p)\varphi(q) = (p-1)(q-1)</m>. Use <m>m = \varphi(n)</m>.
+      </p>
+    </li>
+
+    <li>
+      <p>
+				So here is what we want to do:
+      </p>
+
+      <p>
+        <ul>
+          <li>
+            <p>
+				Pick two really big prime number <m>p</m> and <m>q</m>; find <m>n = pq</m> and <m>m = (p-1)(q-1)</m> (these are easy if we start with <m>p</m> and <m>q</m>).
+            </p>
+          </li>
+
+          <li>
+            <p>
+				Find a number <m>E</m> that is relatively prime to <m>m</m>. Just guess and check until you find something.
+            </p>
+          </li>
+
+          <li>
+            <p>
+				Find <m>D</m> such that <m>DE \equiv 1 \pmod{m}</m>. You can do this using the Euclidean algorithm. You will be successful because <m>\gcd(E, m) = 1</m>
+            </p>
+          </li>
+
+          <li>
+            <p>
+				Don’t tell anyone what <m>p</m>,              <m>q</m>,              <m>m</m> or <m>D</m> are. Tell everyone what <m>n</m> and <m>E</m> are.
+            </p>
+          </li>
+
+          <li>
+            <p>
+				Note: we want <m>E</m> to be fairly large. Taking <m>E = 2</m> would always work, but then you could undo the encryption by searching for a square root perhaps. Other considerations are whether it is efficient to compute <m>x^E</m>, which is easier if in binary <m>E</m> doesn’t have too many 1’s.
+            </p>
+          </li>
+
+        </ul>
+      </p>
+    </li>
+
+    <li>
+      <p>
+				Work through an example with small primes. Have a student write down their favorite number <m>x</m> (in secret) and then compute <m>x^E \pmod n</m> (in secret). Then as a class, decrypt the result.
+      </p>
+    </li>
+
+    <li>
+      <p>
+				One concern is how to compute the power mod <m>n</m> in any sort of reasonable way. We can use the method of repeated squares:
+      </p>
+
+      <p>
+        <ul>
+          <li>
+            <p>
+				First, write <m>E</m> as a sum of powers of 2 (like the Egyptians would).
+            </p>
+          </li>
+
+          <li>
+            <p>
+				So now we just need to compute <m>x^{2^{k_1}+2^{k_2}+ \cdots + 2^{k_n}}</m>. This becomes a product of terms for the form <m>x^{2^k}</m> for different <m>k</m>.
+            </p>
+          </li>
+
+          <li>
+            <p>
+				Notice though that <m>x^{2^k} = (x^2)^{2^{k-1}}</m>. In other words, we can keep squaring <m>x</m>,              <m>k</m> times.
+            </p>
+          </li>
+
+          <li>
+            <p>
+				This doesn’t seem to help, except that we can reduce mod <m>n</m> at each step. So as long as we can square a number less than <m>n</m>, we are good.
+            </p>
+          </li>
+
+        </ul>
+      </p>
+    </li>
+
+  </ul>
+</p>
+
+</subsection>
+<subsection xml:id="notes-4-1">
+  <title>Wednesday: RSA Lab</title>
+<p>
+				Today we did the RSA Cryptography <q>lab</q> activity.
+</p>
+  
+</subsection>
+
+<subsection xml:id="notes-4-3">
+  <title>Friday: Direct Products</title>
+  <p>
+    Today we will work through the Direct Products activity.
+  </p>
+</subsection>
+</section>

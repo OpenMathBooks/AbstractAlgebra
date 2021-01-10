@@ -1,0 +1,918 @@
+<?xml version="1.0"?>
+<!-- This file is part of the book                    -->
+<!--                                                  -->
+<!-- Abstract Algebra: Theory and Applications        -->
+<!--                                                  -->
+<!-- Text: Copyright (C) 1997-2020  Thomas W. Judson  -->
+<!-- Sage: Copyright (C) 2010-2020  Robert A. Beezer  -->
+<!-- See the file COPYING for copying conditions.     -->
+<!-- This file is part of the book                    -->
+<!--                                                  -->
+<!-- See the file COPYING for copying conditions.     -->
+<chapter xmlns:xi="http://www.w3.org/2001/XInclude" xml:id="cosets" permid="Uzy">
+  <title>Cosets and Factor Groups</title>
+  <introduction permid="EVb">
+    <p permid="QGQ">
+      Lagrange's Theorem,
+      one of the most important results in finite group theory,
+      states that the order of a subgroup must divide the order of the group.
+      This theorem provides a powerful tool for analyzing finite groups;
+      it gives us an idea of exactly what type of subgroups we might expect a finite group to possess.
+      Central to understanding Lagranges's Theorem is the notion of a coset.
+    </p>
+  </introduction>
+
+  <section xml:id="section-cosets" permid="xMb">
+    <title>Cosets</title>
+    <p permid="oOb">
+      Let <m>G</m> be a group and <m>H</m> a subgroup of <m>G</m>.
+      Define a <term>left coset</term>
+          <idx><h>Coset</h><h>left</h></idx>
+      of <m>H</m> with <term>representative</term><idx><h>Coset</h><h>representative</h></idx> <m>g \in G</m> to be the set
+      <me permid="ZFd">
+        gH = \{ gh : h \in H \}
+      </me>.
+      <term>Right cosets</term>
+          <idx><h>Coset</h><h>right</h></idx>
+      can be defined similarly by
+      <me permid="FMm">
+        Hg = \{ hg : h \in H \}
+      </me>.
+      If left and right cosets coincide or if it is clear from the context to which type of coset that we are referring,
+      we will use the word <em>coset</em>
+      without specifying left or right.
+    </p>
+
+    <example xml:id="example-cosets-z6-cosets" permid="UdZ">
+      <p permid="zIF">
+        Let <m>H</m> be the subgroup of
+        <m>{\mathbb Z}_6</m> consisting of the elements <m>0</m> and <m>3</m>.
+        The cosets are
+        <md permid="lTv">
+          <mrow>0 + H = 3 + H = \{ 0, 3 \}</mrow>
+          <mrow>1 + H = 4 + H = \{ 1, 4 \}</mrow>
+          <mrow>2 + H = 5 + H = \{ 2, 5 \}</mrow>
+        </md>.
+        We will always write the cosets of subgroups of <m>{\mathbb Z}</m> and
+        <m>{\mathbb Z}_n</m> with the additive notation we have used for cosets here.
+        In a commutative group, left and right cosets are always identical.
+      </p>
+    </example>
+
+    <example xml:id="example-cosets-s3-cosets" permid="Ali">
+      <p permid="fPO">
+        Let <m>H</m> be the subgroup of <m>S_3</m> defined by the permutations <m>\{(1), (123), (132) \}</m>.
+        The left cosets of <m>H</m> are
+        <md permid="SaE">
+          <mrow>(1)H = (1 2 3)H =  (132)H = \{(1), (1 23), (132) \}</mrow>
+          <mrow>(1 2)H = (1 3)H = (2 3)H =  \{ (1 2), (1 3), (2 3)  \}</mrow>
+        </md>.
+        The right cosets of <m>H</m> are exactly the same as the left cosets:
+        <md permid="yhN">
+          <mrow>H(1) = H(1 2 3) =  H(132) = \{(1), (1 23), (132) \}</mrow>
+          <mrow>H(1 2) = H(1 3) = H(2 3) =  \{ (1 2), (1 3), (2 3)  \}</mrow>
+        </md>.
+      </p>
+
+      <p permid="LWX">
+        It is not always the case that a left coset is the same as a right coset.
+        Let <m>K</m> be the subgroup of <m>S_3</m> defined by the permutations <m>\{(1), (1 2)\}</m>.
+        Then the left cosets of <m>K</m> are
+        <md permid="eoW">
+          <mrow>(1)K = (1 2)K = \{(1), (1 2)\}</mrow>
+          <mrow>(1 3)K = (1 2 3)K = \{(1 3), (1 2 3)\}</mrow>
+          <mrow>(2 3)K = (1 3 2)K = \{(2 3), (1 3 2)\};</mrow>
+        </md>
+        however, the right cosets of <m>K</m> are
+        <md permid="Kwf">
+          <mrow>K(1) = K(1 2) = \{(1), (1 2)\}</mrow>
+          <mrow>K(1 3) = K(1 3 2) = \{(1 3), (1 3 2)\}</mrow>
+          <mrow>K(2 3) = K(1 2 3) = \{(2 3), (1 2 3)\}</mrow>
+        </md>.
+      </p>
+    </example>
+
+    <p permid="UVk">
+      The following lemma is quite useful when dealing with cosets.
+      (We leave its proof as an exercise.)
+    </p>
+
+    <lemma xml:id="lemma-cosets-theorem-1" permid="vBp">
+      <statement>
+        <p permid="bfV">
+          Let <m>H</m> be a subgroup of a group <m>G</m> and suppose that <m>g_1, g_2 \in G</m>.
+          The following conditions are equivalent.
+
+          <ol permid="fWS">
+            <li permid="ahG">
+              <p permid="dMg">
+                <m>g_1 H = g_2 H</m>;
+              </p>
+            </li>
+
+            <li permid="GoP">
+              <p permid="JTp">
+                <m>H g_1^{-1} = H g_2^{-1}</m>;
+              </p>
+            </li>
+
+            <li permid="mvY">
+              <p permid="qay">
+                <m>g_1 H \subset g_2 H</m>;
+              </p>
+            </li>
+
+            <li permid="SDh">
+              <p permid="WhH">
+                <m>g_2 \in g_1 H</m>;
+              </p>
+            </li>
+
+            <li permid="yKq">
+              <p permid="CoQ">
+                <m>g_1^{-1} g_2 \in H</m>.
+              </p>
+            </li>
+          </ol>
+        </p>
+      </statement>
+    </lemma>
+
+    <p permid="Bct">
+      In all of our examples the cosets of a subgroup <m>H</m> partition the larger group <m>G</m>.
+      The following theorem proclaims that this will always be the case.
+    </p>
+
+    <theorem xml:id="theorem-cosets-theorem-2" permid="SoM">
+      <statement>
+        <p permid="xTs">
+          Let <m>H</m> be a subgroup of a group <m>G</m>.
+          Then the left cosets of <m>H</m> in <m>G</m> partition <m>G</m>.
+          That is, the group <m>G</m> is the disjoint union of the left cosets of <m>H</m> in <m>G</m>.
+        </p>
+      </statement>
+
+      <proof permid="xqC">
+        <p permid="ozG">
+          Let <m>g_1 H</m> and <m>g_2 H</m> be two cosets of <m>H</m> in <m>G</m>.
+          We must show that either <m>g_1 H \cap g_2 H = \emptyset</m> or <m>g_1 H = g_2 H</m>.
+          Suppose that <m>g_1 H \cap g_2 H \neq \emptyset</m> and <m>a \in g_1 H \cap g_2 H</m>.
+          Then by the definition of a left coset,
+          <m>a = g_1 h_1 = g_2 h_2</m> for some elements <m>h_1</m> and <m>h_2</m> in <m>H</m>.
+          Hence, <m>g_1 = g_2 h_2 h_1^{-1}</m> or <m>g_1 \in g_2 H</m>.
+          By <xref ref="lemma-cosets-theorem-1"/>, <m>g_1 H = g_2 H</m>.
+        </p>
+      </proof>
+    </theorem>
+
+    <remark permid="sGJ">
+      <p permid="Esy">
+        There is nothing special in this theorem about left cosets.
+        Right cosets also partition <m>G</m>;
+        the proof of this fact is exactly the same as the proof for left cosets except that all group multiplications are done on the opposite side of <m>H</m>.
+      </p>
+    </remark>
+
+    <p permid="hjC">
+      Let <m>G</m> be a group and <m>H</m> be a subgroup of <m>G</m>.
+      Define the <term>index</term>
+          <idx><h>Index of a subgroup</h></idx>
+          <idx><h>Subgroup</h><h>index of</h></idx>
+      of <m>H</m> in <m>G</m> to be the number of left cosets of <m>H</m> in <m>G</m>.
+      We will denote the index by <m>[G:H]</m>.
+
+      <notation>
+        <usage>[G:H]</usage>
+        <description>index of a subgroup <m>H</m> in a group <m>G</m></description>
+      </notation>
+
+    </p>
+
+    <example xml:id="example-cosets-z6-index" permid="gsr">
+      <p permid="seg">
+        Let <m>G= {\mathbb Z}_6</m> and <m>H = \{ 0, 3 \}</m>.
+        Then <m>[G:H] = 3</m>.
+      </p>
+    </example>
+
+    <example xml:id="example-cosets-s3-index" permid="MzA">
+      <p permid="Ylp">
+        Suppose that <m>G= S_3</m>,
+        <m>H = \{ (1),(123), (132) \}</m>,
+        and <m>K= \{ (1), (12) \}</m>.
+        Then <m>[G:H] = 2</m> and <m>[G:K] = 3</m>.
+      </p>
+    </example>
+
+    <theorem xml:id="theorem-cosets-theorem-3" permid="yvV">
+      <statement>
+        <p permid="eaB">
+          Let <m>H</m> be a subgroup of a group <m>G</m>.
+          The number of left cosets of <m>H</m> in <m>G</m> is the same as the number of right cosets of <m>H</m> in <m>G</m>.
+        </p>
+      </statement>
+
+      <proof permid="dxL">
+        <p permid="UGP">
+          Let <m>{\mathcal L}_H</m> and
+          <m>{\mathcal R}_H</m> denote the set of left and right cosets of <m>H</m> in <m>G</m>,
+          respectively.
+
+          <notation>
+            <usage>\mathcal L_H</usage>
+            <description>the set of left cosets of a subgroup <m>H</m> in a group <m>G</m></description>
+          </notation>
+
+          <notation>
+            <usage>\mathcal R_H</usage>
+            <description>the set of right cosets of a subgroup <m>H</m> in a group <m>G</m></description>
+          </notation>
+
+          If we can define a bijective map <m>\phi : {\mathcal L}_H \rightarrow {\mathcal R}_H</m>,
+          then the theorem will be proved.
+          If <m>gH \in {\mathcal L}_H</m>,
+          let <m>\phi( gH ) = Hg^{-1}</m>.
+          By <xref ref="lemma-cosets-theorem-1"/>, the map <m>\phi</m> is well-defined;
+          that is, if <m>g_1 H = g_2 H</m>,
+          then <m>H g_1^{-1} = H g_2^{-1}</m>.
+          To show that <m>\phi</m> is one-to-one, suppose that
+          <me permid="qDo">
+            H g_1^{-1} = \phi( g_1 H ) = \phi( g_2 H ) = H g_2^{-1}
+          </me>.
+          Again by <xref ref="lemma-cosets-theorem-1"/>, <m>g_1 H = g_2 H</m>.
+          The map <m>\phi</m> is onto since <m>\phi(g^{-1} H ) = H g</m>.
+        </p>
+      </proof>
+    </theorem>
+
+    <reading-questions xml:id="rqs-cosets" permid="JGm">
+      <exercise xml:id="rq-cosets-1" permid="VUE">
+        <statement>
+          <p permid="SZY">
+            Why do we sometimes need to specify <em>left</em> or <em>right</em> cosets instead of just calling them cosets?  When do we not need to worry about this?
+          </p>
+        </statement>
+      </exercise>
+      <exercise xml:id="rq-cosets-2" permid="CbN">
+        <statement>
+          <p permid="zhh">
+            Let <m>G = \Z_6</m> and <m>H = \{0,2,4\}</m>.  List all cosets of <m>H</m> in <m>G</m>.  How many are there?
+          </p>
+        </statement>
+      </exercise>
+      <exercise xml:id="rq-cosets-3" permid="iiW">
+        <statement>
+          <p permid="foq">
+            Let <m>G = S_4</m> and <m>H = \{(1), (12)(34), (13)(24), (14)(23)\}</m>.  What is the index of <m>H</m> in <m>G</m>?  Briefly explain.
+          </p>
+        </statement>
+      </exercise>
+      <exercise xml:id="rq-cosets-4" permid="Oqf">
+        <statement>
+          <p permid="Lvz">
+            After reading the section, what questions do you still have?  Write at least one well formulated question (even if you think you understand everything).
+          </p>
+        </statement>
+      </exercise>
+    </reading-questions>
+    <exercises xml:id="practice-cosets" permid="MtK">
+      <title>Practice Problems</title>
+
+
+      <exercise number="5" permid="uRv">
+        <statement>
+          <p permid="yDm">
+          List the left and right cosets of the subgroups in each of the following.
+
+            <ol cols="2" permid="Meb">
+              <li permid="eRz">
+                <p permid="ivZ">
+                  <m>\langle 8 \rangle</m> in <m>{\mathbb Z}_{24}</m>
+                </p>
+              </li>
+
+              <li permid="KYI">
+                <p permid="ODi">
+                  <m>\langle 3 \rangle</m> in <m>U(8)</m>
+                </p>
+              </li>
+
+              <li permid="rfR">
+                <p permid="uKr">
+                  <m>3 {\mathbb Z}</m> in <m>{\mathbb Z}</m>
+                </p>
+              </li>
+
+              <li permid="Xna">
+                <p permid="aRA">
+                  <m>A_4</m> in <m>S_4</m>
+                </p>
+              </li>
+
+              <li permid="Duj">
+                <p permid="GYJ">
+                  <m>A_n</m> in <m>S_n</m>
+                </p>
+              </li>
+
+              <li permid="jBs">
+                <p permid="nfS">
+                  <m>D_4</m> in <m>S_4</m>
+                </p>
+              </li>
+
+              <li permid="PIB">
+                <p permid="Tnb">
+                  <m>{\mathbb T}</m> in <m>{\mathbb C}^\ast</m>
+                </p>
+              </li>
+
+              <li permid="vPK">
+                <p permid="zuk">
+                  <m>H = \{ (1), (123), (132) \}</m> in <m>S_4</m>
+                </p>
+              </li>
+            </ol>
+          </p>
+        </statement>
+        <hint permid="DPI">
+          <p permid="jPN">
+          (a) <m>\langle 8 \rangle</m>,
+            <m>1 + \langle 8 \rangle</m>,
+            <m>2 + \langle 8 \rangle</m>,
+            <m>3 + \langle 8 \rangle</m>,
+            <m>4 + \langle 8 \rangle</m>,
+            <m>5 + \langle 8 \rangle</m>,
+            <m>6 + \langle 8 \rangle</m>,
+          and <m>7 + \langle 8 \rangle</m>; 
+          </p>
+          <p permid="qqh">
+          (c) <m>3 {\mathbb Z}</m>,
+            <m>1 + 3 {\mathbb Z}</m>, and <m>2 + 3 {\mathbb Z}</m>.
+          </p>
+        </hint>
+      </exercise>
+
+
+      <exercise number="12" permid="LPG">
+        <statement>
+          <p permid="PBx">
+          If <m>ghg^{-1} \in H</m> for all <m>g \in G</m> and <m>h \in H</m>,
+          show that right cosets are identical to left cosets.
+          That is, show that <m>gH = Hg</m> for all <m>g \in G</m>.
+          </p>
+        </statement>
+        <hint permid="hcl">
+          <p permid="wef">
+          Let <m>g_1 \in gH</m>.
+          Show that <m>g_1 \in Hg</m> and thus <m>gH \subset Hg</m>.
+          </p>
+        </hint>
+        <solution permid="OiX">
+          <p permid="APm">
+          Suppose <m>ghg\inv \in H</m> for all <m>g \in G</m> and <m>h \in H</m>.  Consider a fixed <m>g \in G</m>. We want to show that <m>gH = Hg</m>, which we will do by showing that everything in <m>gH</m> is already in <m>Hg</m>, and visa-versa.
+          </p>
+          <p permid="gWv">
+          First, let <m>x \in gH</m>.  This means that <m>x = gh_1</m> for some <m>h_1 \in H</m>.  But then <m>x = gh_1(g\inv g) = (gh_1g\inv)g</m>.  Since <m>gh_1g\inv \in H</m>, we have that <m>x \in Hg</m>.
+          </p>
+          <p permid="NdE">
+          Similarly, if <m>y \in Hg</m>, then <m>y = h_2g</m> for some <m>h_2 \in H</m>.  We have <m>y = (gg\inv)h_2g = g(g\inv hg)</m>.  But <m>g\inv h g \in H</m> (as <m>g\inv \in G</m>, we have <m>(g\inv)h(g\inv)\inv \in H</m>), so <m>y \in gH</m>.
+          </p>
+        </solution>
+      </exercise>
+
+
+      <exercise number="17" permid="Qzz">
+        <statement>
+          <p permid="Ulq">
+          Suppose that <m>[G : H] = 2</m>.
+          If <m>a</m> and <m>b</m> are not in <m>H</m>,
+          show that <m>ab \in H</m>.
+          </p>
+        </statement>
+      </exercise>
+
+      <exercise number="18" permid="wGI">
+        <statement>
+          <p permid="Asz">
+          If <m>[G : H] = 2</m>, prove that <m>gH = Hg</m>.
+          </p>
+        </statement>
+      </exercise>
+
+    </exercises>
+
+
+    <exercises xml:id="collected-cosets" permid="sAT">
+      <title>Collected Homework</title>
+
+      <exercise number="1" permid="kWu">
+        <statement>
+          <p permid="vaa">
+          Let <m>G</m> be a group and <m>H</m> a subgroup of <m>G</m>.  Let <m>a</m> and <m>b</m> be elements of <m>G</m>.  Prove that <m>aH = b H</m> if and only if <m>b\inv a \in H</m>.
+          </p>
+        </statement>
+        <hint permid="uqg">
+          <p permid="Wxq">
+          Remember you need to prove two directions: first assume <m>aH = bH</m> and prove that <m>b\inv a \in H</m>.  Second, assume <m>b\inv a \in H</m>, and prove <m>aH = bH</m>.  To prove this second direction, it would be enough to show that <m>a \in bH</m> using the fact we proved in class.
+          </p>
+        </hint>
+      </exercise>
+    </exercises>
+
+  </section>
+
+<section xml:id="section-factor-groups" permid="avo">
+<title>Factor Groups and Normal Subgroups</title>
+  <introduction permid="ntA">
+    <p permid="HPh">
+      If <m>H</m> is a subgroup of a group <m>G</m>,
+      then right cosets are not always the same as left cosets;
+      that is, it is not always the case that <m>gH = Hg</m> for all <m>g \in G</m>.
+      The subgroups for which this property holds play a critical role in group theory<mdash/>
+they allow for the construction of a new class of groups,
+      called factor or quotient groups.
+      Factor groups may be studied directly or by using homomorphisms,
+      a generalization of isomorphisms.
+      We will study isomorphisms and homomorphisms in <xref ref="isomorph"/>.
+</p>
+</introduction>
+<subsection xml:id="normal-subsection-normal-subgroups" permid="dpU">
+  <title>Normal Subgroups</title>
+  <p permid="fmy">
+        A subgroup <m>H</m> of a group <m>G</m> is <term>normal</term>
+    <idx>
+      <h>Subgroup</h>
+      <h>normal</h>
+    </idx>
+    <idx>
+      <h>Normal subgroup</h>
+    </idx>
+        in G if <m>gH = Hg</m> for all <m>g \in G</m>.
+        That is, a normal subgroup of a group <m>G</m> is one in which the right and left cosets are precisely the same.
+  </p>
+
+  <example xml:id="example-normal-abelian" permid="yXY">
+    <p permid="eCE">
+          Let <m>G</m> be an abelian group.
+          Every subgroup <m>H</m> of <m>G</m> is a normal subgroup.
+          Since <m>gh = hg</m> for all <m>g \in G</m> and <m>h \in H</m>,
+          it will always be the case that <m>gH = Hg</m>.
+    </p>
+  </example>
+
+  <example xml:id="example-normal-s3" permid="ffh">
+    <p permid="KJN">
+          Let <m>H</m> be the subgroup of <m>S_3</m> consisting of elements <m>(1)</m> and <m>(12)</m>.
+          Since
+      <me permid="iQY">
+            (123) H = \{ (123), (13) \} \quad \text{and} \quad H (123) = \{ (123), (23) \}
+      </me>,
+      <m>H</m> cannot be a normal subgroup of <m>S_3</m>.
+          However, the subgroup <m>N</m>,
+          consisting of the permutations <m>(1)</m>,      <m>(123)</m>,
+          and <m>(132)</m>, is normal since the cosets of <m>N</m> are
+      <md permid="OYh">
+        <mrow>N  =   \{ (1), (123), (132) \}</mrow>
+        <mrow>(12) N =  N (12)  =  \{ (12), (13), (23) \}</mrow>
+      </md>.
+    </p>
+  </example>
+
+  <p permid="LtH">
+        The following theorem is fundamental to our understanding of normal subgroups.
+  </p>
+
+  <theorem xml:id="theorem-normal-equivalents" permid="SQP">
+    <statement>
+      <p permid="tLC">
+            Let <m>G</m> be a group and <m>N</m> be a subgroup of <m>G</m>.
+            Then the following statements are equivalent.
+
+        <ol permid="sNn">
+          <li permid="CgZ">
+            <p permid="iYc">
+                  The subgroup <m>N</m> is normal in <m>G</m>.
+            </p>
+          </li>
+
+          <li permid="ioi">
+            <p permid="Pfl">
+                  For all <m>g \in G</m>,              <m>gNg^{-1} \subset N</m>.
+            </p>
+          </li>
+
+          <li permid="Ovr">
+            <p permid="vmu">
+                  For all <m>g \in G</m>,              <m>gNg^{-1} = N</m>.
+            </p>
+          </li>
+        </ol>
+      </p>
+    </statement>
+
+    <proof permid="fPb">
+      <p permid="EkH">
+            (1) <m>\Rightarrow</m> (2).
+            Since <m>N</m> is normal in <m>G</m>,
+        <m>gN = Ng</m> for all <m>g \in G</m>.
+            Hence, for a given <m>g \in G</m> and <m>n \in N</m>,
+            there exists an <m>n'</m> in <m>N</m> such that <m>g n = n' g</m>.
+            Therefore, <m>gng^{-1} = n' \in N</m> or <m>gNg^{-1} \subset N</m>.
+      </p>
+
+      <p permid="krQ">
+            (2) <m>\Rightarrow</m> (3).
+            Let <m>g \in G</m>.
+            Since <m>gNg^{-1} \subset N</m>,
+            we need only show <m>N \subset gNg^{-1}</m>.
+            For <m>n \in N</m>,        <m>g^{-1}ng=g^{-1}n(g^{-1})^{-1} \in N</m>.
+            Hence, <m>g^{-1}ng = n'</m> for some <m>n' \in N</m>.
+            Therefore, <m>n = g n' g^{-1}</m> is in <m>g N g^{-1}</m>.
+      </p>
+
+      <p permid="QyZ">
+            (3) <m>\Rightarrow</m> (1).
+            Suppose that <m>gNg^{-1} = N</m> for all <m>g \in G</m>.
+            Then for any <m>n \in N</m> there exists an
+        <m>n' \in N</m> such that <m>gng^{-1} = n'</m>.
+            Consequently, <m>gn = n' g</m> or <m>gN \subset Ng</m>.
+            Similarly, <m>Ng \subset gN</m>.
+      </p>
+    </proof>
+  </theorem>
+</subsection>
+
+<subsection xml:id="normal-subsection-factor-groups" permid="Jxd">
+  <title>Factor Groups</title>
+  <p permid="rAQ">
+        If <m>N</m> is a normal subgroup of a group <m>G</m>,
+        then the cosets of <m>N</m> in <m>G</m> form a group <m>G/N</m> under the operation <m>(aN) (bN) = abN</m>.
+        This group is called the <term>factor</term>
+    <idx>
+      <h>Group</h>
+      <h>factor</h>
+    </idx>
+        or <term>quotient group</term>
+    <idx>
+      <h>Group</h>
+      <h>quotient</h>
+    </idx>
+        of <m>G</m> and <m>N</m>.
+
+    <notation>
+      <usage>G/N</usage>
+      <description>factor group of <m>G</m> mod <m>N</m>
+      </description>
+    </notation>
+
+        Our first task is to prove that <m>G/N</m> is indeed a group.
+  </p>
+
+  <theorem permid="Lmq">
+    <statement>
+      <p permid="ZSL">
+            Let <m>N</m> be a normal subgroup of a group <m>G</m>.
+            The cosets of <m>N</m> in <m>G</m> form a group <m>G/N</m> of order <m>[G:N]</m>.
+      </p>
+    </statement>
+
+    <proof permid="LWk">
+      <p permid="wGi">
+            The group operation on <m>G/N</m> is <m>(a N ) (b N)= a b N</m>.
+            This operation must be shown to be well-defined;
+            that is, group multiplication must be independent of the choice of  coset representative.
+            Let <m>aN = bN</m> and <m>cN = dN</m>.
+            We must show that
+        <me permid="vfq">
+              (aN) (cN) = acN = bd N = (b N)(d N)
+        </me>.
+            Then <m>a = b n_1</m> and <m>c = d n_2</m> for some <m>n_1</m> and <m>n_2</m> in <m>N</m>.
+            Hence,
+        <md permid="bmz">
+          <mrow>acN &amp; = b n_1 d n_2 N</mrow>
+          <mrow>&amp; = b n_1 d N</mrow>
+          <mrow>&amp; = b n_1 N d</mrow>
+          <mrow>&amp; = b N d</mrow>
+          <mrow>&amp; = b d N</mrow>
+        </md>.
+            The remainder of the theorem is easy:
+        <m>eN = N</m> is the identity and
+        <m>g^{-1} N</m> is the inverse of <m>gN</m>.
+            The order of <m>G/N</m> is,
+            of course, the number of cosets of <m>N</m> in <m>G</m>.
+      </p>
+    </proof>
+  </theorem>
+
+  <p permid="XHZ">
+        It is very important to remember that the elements in a factor group are
+    <em>sets of elements</em> in the original group.
+  </p>
+
+  <example xml:id="example-normal-factor-s3" permid="rtz">
+    <p permid="qQW">
+          Consider the normal subgroup of <m>S_3</m>,
+      <m>N = \{ (1), (123), (132) \}</m>.
+          The cosets of <m>N</m> in <m>S_3</m> are <m>N</m> and <m>(12) N</m>.
+          The factor group <m>S_3 / N</m> has the following multiplication table.
+    </p>
+
+    <sidebyside width="100%" permid="jPa">
+      <!-- math table -->
+      <p permid="WYf">
+        <me permid="HtI">
+              \begin{array}{c|cc}
+              &amp; N &amp; (12) N \\ \hline
+              N &amp; N &amp; (12) N \\
+              (12) N &amp; (12) N &amp; N
+              \end{array}
+        </me>
+      </p>
+    </sidebyside>
+
+    <p permid="Dfo">
+          This group has order 2, and you might think it looks a lot like <m>{\mathbb Z}_2</m> (in <xref ref="isomorph"/>
+ we will see that this group is <term>isomorphic</term> to <m>\Z_2</m>).
+          At first, multiplying cosets seems both complicated and strange;
+          however, notice that <m>S_3 / N</m> is a smaller group.
+          The factor group displays a certain amount of information about <m>S_3</m>.
+          Actually, <m>N = A_3</m>, the group of even permutations,
+          and <m>(12) N = \{ (12), (13), (23) \}</m> is the set of odd permutations.
+          The information captured in <m>G/N</m> is parity;
+          that is, multiplying two even or two odd permutations results in an even permutation,
+          whereas multiplying an odd permutation by an even permutation yields an odd permutation.
+  </p>
+</example>
+
+<example xml:id="example-normal-factor-z3" permid="XAI">
+  <p permid="jmx">
+          Consider the normal subgroup
+    <m>3 {\mathbb Z}</m> of <m>{\mathbb Z}</m>.
+          The cosets of <m>3 {\mathbb Z}</m> in <m>{\mathbb Z}</m> are
+    <md permid="nAR">
+      <mrow>0 + 3 {\mathbb Z} &amp; = \{ \ldots, -3, 0, 3, 6, \ldots \}</mrow>
+      <mrow>1 + 3 {\mathbb Z} &amp; = \{ \ldots, -2, 1, 4, 7, \ldots \}</mrow>
+      <mrow>2 + 3 {\mathbb Z} &amp; = \{ \ldots, -1, 2, 5, 8, \ldots \}</mrow>
+    </md>.
+          The group <m>{\mathbb Z}/ 3 {\mathbb Z}</m> is given by the Cayley table below.
+  </p>
+
+  <sidebyside width="100%" permid="PWj">
+    <!-- math table -->
+    <p permid="PtG">
+      <me permid="TIa">
+              \begin{array}{c|ccc}
+              + &amp; 0 + 3{\mathbb Z} &amp; 1 + 3{\mathbb Z} &amp; 2 + 3{\mathbb Z} \\\hline
+              0 + 3{\mathbb Z} &amp; 0 + 3{\mathbb Z} &amp; 1 + 3{\mathbb Z} &amp; 2 + 3{\mathbb Z} \\
+              1 + 3{\mathbb Z} &amp; 1 + 3{\mathbb Z} &amp; 2 + 3{\mathbb Z} &amp; 0 + 3{\mathbb Z} \\
+              2 + 3{\mathbb Z} &amp; 2 + 3{\mathbb Z} &amp; 0 + 3{\mathbb Z} &amp; 1 + 3{\mathbb Z}
+              \end{array}
+      </me>
+    </p>
+  </sidebyside>
+
+  <p permid="vAP">
+          In general, the subgroup <m>n {\mathbb Z}</m> of <m>{\mathbb Z}</m> is normal.
+          The cosets of <m>{\mathbb Z } / n {\mathbb Z}</m> are
+    <md permid="zPj">
+      <mrow>n {\mathbb Z}</mrow>
+      <mrow>1 + n {\mathbb Z}</mrow>
+      <mrow>2 + n {\mathbb Z}</mrow>
+      <mrow>\vdots</mrow>
+      <mrow>(n-1) + n {\mathbb Z}</mrow>
+    </md>.
+          The sum of the cosets <m>k + n{\mathbb Z}</m> and
+    <m>l + n{\mathbb Z}</m> is <m>k+l + n{\mathbb Z}</m>.
+          Notice that we have written our cosets additively,
+          because the group operation is integer addition.
+  </p>
+</example>
+
+<example xml:id="example-normal-factor_dn" permid="DHR">
+  <p permid="bHY">
+          Consider the dihedral group <m>D_n</m>,
+          generated by the two elements <m>r</m> and <m>s</m>, satisfying the relations
+    <md permid="fWs">
+      <mrow>r^n &amp; = \identity</mrow>
+      <mrow>s^2 &amp; = \identity</mrow>
+      <mrow>srs &amp; = r^{-1}</mrow>
+    </md>.
+          The element <m>r</m> actually generates the cyclic subgroup of rotations,
+    <m>R_n</m>, of <m>D_n</m>.
+          Since <m>srs^{-1} = srs = r^{-1} \in R_n</m>,
+          the group of rotations is a normal subgroup of <m>D_n</m>;
+          therefore, <m>D_n / R_n</m> is a group.
+          The group has exactly two elements, so it will look just like 
+    <m>{\mathbb Z}_2</m>.
+  </p>
+</example>
+</subsection>
+
+<reading-questions xml:id="rqs-factor-groups" permid="BkP">
+<exercise xml:id="rq-factor-groups-1" permid="hrY">
+  <statement>
+    <p permid="FUI">
+            Give two ways we can can be sure that a subgroup <m>H</m> of a group <m>G</m> is normal.
+    </p>
+  </statement>
+</exercise>
+<exercise xml:id="rq-factor-groups-2" permid="Nzh">
+  <statement>
+    <p permid="mbR">
+            What does the notation <m>G/H</m> represent?  What does the notation <m>[G:H]</m> represent?  How are these related?
+    </p>
+  </statement>
+</exercise>
+<exercise xml:id="rq-factor-groups-3" permid="tGq">
+  <statement>
+    <p permid="Sja">
+            The subgroup <m>8\Z</m> is normal in <m>\Z</m>.  In the factor group <m>\Z/8\Z</m>, perform the computation <m>(3+8\Z) + (7+8\Z)</m>.
+    </p>
+  </statement>
+</exercise>
+<exercise xml:id="rq-factor-groups-4" permid="ZNz">
+  <statement>
+    <p permid="yqj">
+            After reading the section, what questions do you still have?  Write at least one well formulated question (even if you think you understand everything).
+    </p>
+  </statement>
+</exercise>
+</reading-questions>
+
+<exercises xml:id="practice-normal" permid="YIc">
+<title>Practice Problems</title>
+<exercise xml:id="ex-d4-normal" permid="RdD">
+  <statement>
+    <p permid="bhj">
+            Let <m>G = D_4</m>, the group of symmetries of a square, and take <m>H = \{r_0, r_2, d_1, d_2\}</m>.  Is <m>H</m> normal in <m>G</m>?  If so, how many elements are in the factor group <m>G/H</m>?  Write out its group table.
+    </p>
+  </statement>
+  <solution permid="axp">
+    <p permid="tkN">
+            Yes, <m>H</m> is normal in <m>G</m>.  You can see this by checking left vs right cosets.  In fact, you see that there will only be two cosets.  If you take any <m>a \in H</m>, we have <m>aH = H = Ha</m>.  What about <m>b \notin H</m>?  You can quickly check that we will have <m>bH = Hb</m>. 
+    </p>
+
+    <p permid="ZrW">
+            The factor group <m>G/H</m> will have order 2, since <m>|G/H| = [G:H] = \frac{|G|}{|H|}</m>.   Thus writing it's group table will be very easy.  Use <m>H</m> and <m>r_1H</m> as the two elements.  <m>H</m> is the identity, and <m>r_1Hr_1H = H</m>.
+    </p>
+  </solution>
+</exercise>
+
+<exercise permid="xkM">
+  <statement>
+    <p permid="Hos">
+            A <term>conjugate</term> of an element <m>x \in G</m> is an element of <m>G</m> with the form <m>gxg\inv</m> for some <m>g \in G</m>.  Using <m>G = D_4</m> and <m>H = \{r_0, r_2, d_1, d_2\}</m>, find all the conjugates of all the elements of <m>H</m>.  What do you notice? 
+    </p>
+  </statement>
+  <solution permid="GEy">
+    <p permid="Fzf">
+            The conjuages of <m>r_0</m> are all <m>r_0</m>, since <m>gr_0g\inv = gg\inv = r_0</m> for any <m>g \in G</m>.  It is easy to check that the conjugates of <m>r_2</m> are allways <m>r_2</m>. Let's find some conjugates of <m>d_1</m>:
+      <md permid="EtM">
+        <mrow>r_0d_1r_0\inv \amp = d_1 </mrow>
+        <mrow>r_1d_1r_1\inv \amp = d_2 </mrow>
+        <mrow>r_2d_1r_2\inv \amp = d_1 </mrow>
+        <mrow>r_3d_1r_3\inv \amp = d_2 </mrow>
+        <mrow>hd_1h\inv \amp = d_2 </mrow>
+        <mrow>vd_1v\inv \amp = d_2 </mrow>
+        <mrow>d_1d_1d_1\inv \amp = d_1 </mrow>
+        <mrow>d_2d_1d_2\inv \amp = d_1 </mrow>
+      </md>.
+            Similarly, the conjugates of <m>d_2</m> will be either <m>d_1</m> or <m>d_2</m>.
+    </p>
+
+    <p permid="lGo">
+            Note that the conjugates for things in <m>H</m> are always (possibly different) things in <m>H</m>.  We say that <m>H</m> is <em>closed</em> under conjugates.  Of course we knew this would happen since <m>H</m> is normal in <m>G</m>.
+    </p>
+  </solution>
+</exercise>
+
+<exercise permid="drV">
+  <statement>
+    <p permid="nvB">
+            Prove that if <m>G</m> is abelian and <m>H</m> is a subgroup, that <m>G/H</m> is abelian.
+    </p>
+  </statement>
+  <solution permid="mLH">
+    <p permid="RNx">
+      <proof permid="SSQ">
+        <p permid="OSR">
+                Consider two arbitrary elements of <m>G/H</m>:          <m>aH</m> and <m>bH</m>.  Note that <m>a,b \in G</m>, so <m>ab = ba</m>. We have 
+          <me permid="YmD">
+                  aHbH = abH = baH = bHaH
+          </me>.
+                Thus <m>G/H</m> is abelian. 
+        </p>
+      </proof>
+    </p>
+  </solution>
+</exercise>
+
+<exercise permid="Jze">
+  <statement>
+    <p permid="TCK">
+            True or false: If <m>H</m> is abelian and <m>G/H</m> is abelian, then <m>G</m> is abelian.  Prove your answer.
+    </p>
+  </statement>
+  <hint permid="yZZ">
+    <p permid="CEz">
+            Look at <xref ref="ex-d4-normal"/>
+.
+    </p>
+  </hint>
+</exercise>
+
+<exercise permid="pGn">
+  <statement>
+    <p permid="zJT">
+            Let <m>G = D_4</m> and <m>H = \{r_0, h\}</m>.  Prove that <m>H</m> is not normal in <m>G</m>.  Then give a specific example of what goes wrong if you try to define coset multiplication on the set of cosets <m>G/H</m>.
+    </p>
+  </statement>
+  <solution permid="fhi">
+    <p permid="xUG">
+            Consider <m>r_1H = \{r_1, d_1\}</m>.  But <m>Hr_1 = \{r_1, d_2\}</m>.  So <m>r_1H \ne Hr_1</m>, so <m>H</m> is not normal.
+    </p>
+
+    <p permid="ebP">
+            To see what goes wrong with defining multiplication, consider <m>r_1Hr_1H = r_1r_1H = r_2H</m>.  This is the coset <m>r_2H = \{r_2, v\}</m>.  But since <m>r_1H = d_1H</m>, we should get the same set if we multiply <m>d_1Hd_1H = d_1d_1H = r_0H</m>.  But of course we don't, since <m>r_0H = H = \{r_0, h\}</m>.
+    </p>
+  </solution>
+</exercise>
+
+<exercise permid="VNw">
+  <statement>
+    <p permid="fRc">
+            Again let <m>G = D_4</m> and <m>H = \{r_0, h\}</m>.  Show that <m>H </m> is not closed under conjugates.
+    </p>
+  </statement>
+  <solution permid="Lor">
+    <p permid="KiY">
+            We know <m>H</m> won't be closed under conjugates because <m>H</m> is not normal in <m>G</m>.  But to be sure, consider <m>r_1hr_1\inv = r_1hr_3 = v</m>.  Since <m>h \in H</m> but <m>v \notin H</m>, we see that <m>H</m> is not closed under conjugates.
+    </p>
+  </solution>
+</exercise>
+</exercises>
+
+
+<exercises xml:id="collected-normal" permid="EPl">
+<title>Collected Homework</title>
+
+<exercise number="C1" permid="BUF">
+  <statement>
+    <p permid="LYl">
+          Let <m>G = S_3</m> and <m>H = \{(1), (13)\}</m>. 
+      <ol permid="XCJ">
+        <li permid="DJS">
+          <p permid="cmC">
+                Find the three (left) cosets of <m>H</m> in <m>G</m>.
+          </p>
+        </li>
+        <li permid="jRb">
+          <p permid="ItL">
+                Explain what goes wrong if you try to define an operation on the set of cosets <m>G/H</m>.  Do this with a specific example using this <m>G</m> and <m>H</m>.
+          </p>
+        </li>
+        <li permid="PYk">
+          <p permid="oAU">
+                Write out all the conjugates of <m>H</m> in <m>G</m>.  That is, find <m>gxg\inv</m> for all <m>x \in H</m> and <m>g \in G</m>.  Is <m>H</m> closed under conjugates?
+          </p>
+        </li>
+        <li permid="wft">
+          <p permid="UId">
+                Show that <m>H</m> is not normal in <m>G</m> using the definition (about left and right cosets).
+          </p>
+        </li>
+      </ol>
+    </p>
+  </statement>
+
+</exercise>
+
+<exercise number="C2" permid="ibO">
+  <statement>
+    <p permid="sfu">
+          BONUS! Prove that if <m>[G : H] = 2</m> then <m>H</m> is normal in <m>G</m>. 
+    </p>
+  </statement>
+  <hint permid="rvA">
+    <p permid="iLI">
+          This is not all that hard.  Try an example (such as <xref ref="ex-d4-normal"/>
+) to see why this works.  Then explain it in general.
+    </p>
+  </hint>
+</exercise>
+</exercises>
+
+</section>
+
+
+
+
+    <!-- Exercises with Solutions  -->
+    <!-- File: cosets.xml  -->
+    <!-- Title: Cosets and Lagrange's Theorem -->
+    <xi:include href="./exercises/cosets-additional.ptx" />
+
+
+
+</chapter>

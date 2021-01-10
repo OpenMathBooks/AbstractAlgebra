@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+
+<appendix xmlns:xi="http://www.w3.org/2001/XInclude" xml:id="review">
+  <title>Review Material from MATH 321</title>
+  <introduction>
+    <p>
+      For reference, here are some sections from the textbook as used in MATH 321, as well as some other sections that review material from other classes, like linear algebra.
+    </p>
+  </introduction>
+  
+  <xi:include href="./sec_review-ring-hom-ideals.ptx"/>
+  <xi:include href="./sec_review-poly.ptx"/>
+  <xi:include href="./sec_review-irreducible-poly.ptx" />
+  <xi:include href="./sec_review-mod-n-sym.ptx" />
+  <xi:include href="./sec_review-cosets.ptx"/>
+  <xi:include href="./sec_review-isom.ptx"/>
+  
+  <!-- <xi:include href="./sec_fields-constructions-intro.ptx"/> -->
+
+  <!-- <xi:include href="./sec_fields-vectorspace-review.ptx"/> -->
+
+  <!-- <xi:include href="./sec_fields-extensions.ptx"/> -->
+
+  <!-- <xi:include href="./sec_fields-splitting-fields.ptx"/> -->
+
+
+
+
+</appendix>

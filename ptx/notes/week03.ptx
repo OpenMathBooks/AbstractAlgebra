@@ -1,0 +1,265 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<section xml:id="notes-week3" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>Week 3: Jan 27-31</title>
+  
+  <subsection xml:id="notes-1-27">
+    <title>Algebraic Numbers and Minimal Polynomials (Monday, January 27)</title>
+    
+    <p>
+      We have seen that if <m>p(x)</m> is an irriducible polynomial in <m>F[x]</m>,with root <m>\alpha</m>, that there is field extension <m>F(\alpha)</m> of <m>F</m>.  In fact, we can take this field extension to be <m>F[x]/\langle p(x) \rangle</m>.  
+    </p>
+
+    <p>
+      Today we think about whether we can start with <m>c \in E</m>, an extension of <m>F</m>, instead of starting with a polynomial.  
+
+      <ul>
+        <li>
+          <p>
+            First we need to agree what it means for a number <m>\alpha</m> in a field <m>E</m> to be <term>algebraic</term> over another field <m>F</m>.  It means that <m>\alpha</m> is the root of some polynomial in <m>F[x]</m>.
+          </p>
+        </li>
+        <li>
+          <p>
+            When <m>F = \Q</m>, then we say that <m>\alpha</m> is an <term>algebraic number</term>. 
+          </p>
+        </li>
+        <li>
+          <p>
+            If <m>\alpha</m> is <em>not</em> the root of a polynomial in <m>F[x]</m>, then it is called <term>transcendental</term> over <m>F</m> (and if <m>F = \Q</m>, simply a <term>transcendental number</term>).
+          </p>
+        </li>
+        <li>
+          <p>
+            Now if <m>E</m> is a field extension of <m>F</m> and contains a number <m>\alpha</m> algebraic over <m>F</m>, we can consider the smallest field containing <m>F</m> and <m>\alpha</m>, which we write <m>F(\alpha)</m>.  Note we have not said anything about a polynomial yet.
+          </p>
+        </li>
+        <li>
+          <p>
+            Is <m>F(\alpha)</m> isomorphic to <m>F[x]/\langle p(x) \rangle</m> for some <m>p(x) \in F[x]</m>?  If so, how much choice do we have for <m>p(x)</m>?
+          </p>
+        </li>
+        <li>
+          <p>
+            Since <m>\alpha</m> is algebraic, there is some polynomial it is the root of.  In fact, there are infinitely many polynomials it is the root of.
+          </p>
+        </li>
+        <li>
+          <p>
+            However, we can prove that there is a unique irreducible monic polynomial <m>p(x) \in F[x]</m> of smallest degree such that <m>p(\alpha) = 0</m>.  Further, any polynomial <m>f(x)</m> for which <m>\alpha</m> is a root is a multiple of <m>p(x)</m>.
+            <ul>
+              <li>
+                <p>
+                  Why is this true?  We consider the evaluation homomorphism!
+                </p>
+              </li>
+              <li>
+                <p>
+                  The easy way: the kernel of the homomorphism contains all polynomials for which <m>\alpha</m> is a root.  Since <m>F[x]</m> is a principle ideal domain, there is a single generator for this ideal.
+                </p>
+              </li>
+              <li>
+                <p>
+                  Here is a better way to understand this (which really just repeats the proof that <m>F[x]</m> is a principle ideal domain).  Let <m>p(x)</m> be any polynomial of least degree that has <m>\alpha</m> as a root.  We can easily make <m>p(x)</m> monic by dividing through by the leading coefficient.
+                </p>
+              </li>
+              <li>
+                <p>
+                  Now suppose <m>f(x)</m> is any other polynomial for which <m>\alpha</m> is a root.  Divide!  That is, by the division algorithm there are <m>q(x)</m> and <m>r(x)</m> such that <m>f(x) =q(x)p(x) + r(x)</m>.  Plug in <m>\alpha</m>: <m>f(\alpha) = q(\alpha)p(\alpha) + r(\alpha)</m>.  But this says that <m>r(\alpha) = 0</m>, so <m>r(x)</m> has <m>\alpha</m> as a root.  This says that <m>r = 0</m> (since otherwise its degree wouls be less than <m>p(x)</m>).
+                </p>
+              </li>
+              <li>
+                <p>
+                  This says that <m>f(x)</m> is a multiple of <m>p(x)</m>.
+                </p>
+              </li>
+            </ul>
+          </p>
+        </li>
+        <li>
+          <p>
+            We call this smallest degree, irreducible monic polynomial the <term>minimal polynomial</term> for <m>\alpha</m> over <m>F</m>.  We will say that the <term>degree of <m>\alpha</m> over <m>F</m></term> is the degree of <m>p(x)</m>.
+          </p>
+        </li>
+        <li>
+          <p>
+            For example, let <m>\alpha = \sqrt{2 + \sqrt{3}}</m>. What does <m>F(\alpha)</m> look like?  First find that the minimal polynomial for this <m>\alpha</m> is <m>p(x) = x^4 - 4x^2 + 1</m>.  (Why is this irreducible?  We will save that for another day.)
+          </p>
+        </li>
+        <li>
+          <p>
+            We can now say that <m>\Q(\alpha) \cong \Q[x]/\langle p(x) \rangle</m>.  But this means that <m>\Q(\alpha) = \{a+b\alpha + c\alpha^2 + d \alpha^3\}</m>.
+          </p>
+        </li>
+        <li>
+          <p>
+            Here is something strange: what if <m>\beta</m> was another root of <m>p(x)</m>?  Then <m>\Q(\beta) \cong \Q[x]/\langle p(x) \rangle</m> as well.  So <m>\Q(\beta) \cong \Q(\alpha)</m>.
+          </p>
+        </li>
+        <li>
+          <p>
+            For example, <m>\Q(\sqrt[3]{2}) \cong \Q(\sqrt[3]{2}e^{2\pi i/3}</m>, since these are both roots of <m>x^3 - 2</m>.
+          </p>
+        </li>
+        <li>
+          <p>
+            In general, we will want to explore how field extensions relate to each other.  How are <m>\Q(\sqrt{2})</m> and <m>\Q(\sqrt{2} + 1)</m> related?  What about <m>\Q(\sqrt{2})</m> and <m>\Q(\sqrt{3})</m>?
+          </p>
+        </li>
+      </ul>
+    </p>
+
+  </subsection>
+
+  <subsection xml:id="notes-1-29">
+    <title>Vector Space Review (Wednesday, January 29)</title>
+    <p>
+			Let’s review some basic ideas from linear algebra.
+    </p>
+
+    <p>
+      <ul>
+        <li>
+          <p>
+            When you first thought about vectors, you worked with a specific example: vectors in <m>\mathbb R^n</m>. These were columns of numbers which we could add together, as well as multiply by constants.
+          </p>
+        </li>
+
+        <li>
+          <p>
+            In general, a vector space is a collection of objects called <em>vectors</em> together with some field of <em>scalars</em> and two operations: addition on the vectors and scalar multiplication (allowing vectors to be multiplied by scalars).
+          </p>
+        </li>
+
+        <li>
+          <p>
+            Just like with groups and rings, there are some axioms that a vector space must adhere to which say how addition and scalar multiplication work. For one, the vectors under addition form an abelian group. Also, scalar multiplication works like you expect (in terms of distributive properties and associativity).
+          </p>
+        </li>
+
+        <li>
+          <p>
+            We are particularly interested to two concepts: linear independence and span.
+          </p>
+        </li>
+
+        <li>
+          <p>
+            A set of vectors is linearly <em>dependent</em> if one of them is a linear combination of the others (in other words, you can get one by adding scalar multiples of the others). Another way to say this is that you can get the zero vector as a non-trivial linear combination of the others. That is <me>a_1\mathrm{\mathbf v}_1+a_2\mathrm{\mathbf v}_2 + \cdots +a_n\mathrm{\mathbf v}_n = \mathbf 0</me> with not all of <m>a_1, a_2, \ldots, a_n</m> equal to 0.
+          </p>
+        </li>
+
+        <li>
+          <p>
+            Thus a set of vectors is linearly independent if the only way to get 0 as a linear combination is for all the scalars to be 0.
+          </p>
+        </li>
+
+        <li>
+          <p>
+            If we can get a vector <m>\mathrm{\mathbf v}_0</m> as a linear combination of, say <m>\mathrm{\mathbf v}_1</m> and <m>\mathrm{\mathbf v}_2</m>, then we say that <m>\mathrm{\mathbf v}_0</m> is in the <em>span</em> of <m>\mathrm{\mathbf v}_1</m> and <m>\mathrm{\mathbf v}_2</m>.
+          </p>
+        </li>
+
+        <li>
+          <p>
+            If we have a set of vectors so that every vector in the vector space is in their span, we say the set of vectors <em>spans</em> the vector space.
+          </p>
+        </li>
+
+        <li>
+          <p>
+            Now think of starting with a single vector and building the largest possible set of linearly independent vectors. Eventually, you will get to a point where you can’t add any more. This is because every vector not in your set is in the span of the set. This maximal set of linearly independent vectors must span the vector space.
+          </p>
+        </li>
+
+        <li>
+          <p>
+            Alternatively, start with a large set of vectors which span the vector space. If any of these are in the span of the remaining vectors, we can get rid of it (we don’t need it to span the vector space). So trim down the set until we get a minimal spanning set. This set must be linearly independent (otherwise we could get rid of the vector which was a linear combination of the others).
+          </p>
+        </li>
+
+        <li>
+          <p>
+            The number of vectors in any maximal independent set will be equal to the number of vectors in all minimal spanning sets. Such sets are called <em>bases</em> for the vector space, and the number of vectors in the set is called the <em>dimension</em> of the vector space.
+          </p>
+        </li>
+
+      </ul>
+    </p>
+  </subsection>
+
+  <subsection xml:id="notes-1-31">
+    <title>Degrees of Field Extensions (Friday, Jan 31)</title>
+    <p>
+			Why do we care about vector spaces? It turns out you can view a field extension as a vector space. This is useful because we can borrow the concept of linear independence, span and dimension and apply them to better understand field extensions.
+    </p>
+
+    <p>
+      <ul>
+        <li>
+          <p>
+            Let <m>F</m> be a field and <m>K</m> and extension field. We can view the elements of <m>K</m> as vectors, and the elements of <m>F</m> as scalars. This makes <m>K</m> into a vector space.
+          </p>
+        </li>
+
+        <li>
+          <p>
+            Vector spaces have dimension (the number of vectors in any basis). We are most interested in when that dimension is finite, say <m>n</m>. In this case we say that <m>K</m> is an <term>extension of degree <m>n</m></term> or that the <term>degree of <m>K</m> over <m>F</m></term> is <m>n</m> and write <me>[K:F]=n.</me>
+          </p>
+        </li>
+
+        <li>
+          <p>
+          Now consider our favorite field extension <m>F(c)</m> over <m>F</m>. Recall this is the smallest field containing both <m>F</m> and <m>c</m>. What is the degree of <m>F(c)</m> over <m>F</m>?
+          </p>
+        </li>
+
+        <li>
+          <p>
+          Suppose <m>c</m> is <em>algebraic</em> over <m>F</m> (that is, it is the root to some polynomial <m>p(x)</m> in <m>F[x]</m>). Well let <m>p(x)</m> be the minimum polynomial of <m>c</m> over <m>F</m>, say of degree <m>n</m>. Then we can write every element of <m>F(c)</m> as <me>a_0 + a_1c + a_2c^2 + \cdots +a_{n-1}c^{n-1}</me> where the <m>a_i</m> are in <m>F</m>. In other words, the set <m>\{1, c, c^2,\ldots, c^{n-1}\}</m> span <m>F(c)</m>.
+          </p>
+        </li>
+
+        <li>
+          <p>
+          Actually, how do we know this? Well let <m>a(c)</m> be any element of <m>F(c)</m>. We know for sure that <m>a(x)</m> is some polynomial (possibly of degree larger than <m>n</m>) because <m>F(c)</m> contains <m>c</m> and is closed under addition and multiplication.
+          </p>
+        </li>
+
+        <li>
+          <p>
+          Now use the division algorithm on <m>a(x)</m> and <m>p(x)</m>. We get <me>a(x) = q(x)p(x) + r(x)</me> where <m>\deg(r(x)) \le n-1</m>. So plug in <m>c</m>: we get <m>a(c) = r(c)</m>. Thus we only need to go up to a <m>c^{n-1}</m> term.
+          </p>
+        </li>
+
+        <li>
+          <p>
+          So <m>\{1, c, c^2, \ldots, c^{n-1}\}</m> spans <m>F(c)</m>. Is the set linearly independent? Well consider a linear combination equal to 0: <me>a_0 + a_1c + a_2c^2 + \cdots + a_{n-1}c^{n-1} = 0</me> If any of the coefficients <m>a_i</m> were non-zero, we would have a polynomial of degree <m>n-1</m> for which <m>c</m> was a root. But <m>p(x)</m> of degree <m>n</m> was the minimum polynomial, so this is impossible. Thus the set is indeed linearly independent.
+          </p>
+        </li>
+
+        <li>
+          <p>
+          Putting these together, we see that <m>\{1, c, c^2, \ldots, c^{n-1}\}</m> is a basis for <m>F(c)</m>, and thus <m>F(c)</m> is a degree <m>n</m> extension of <m>F</m>.
+          </p>
+        </li>
+      </ul>
+    </p>
+
+      <p>
+			What is the degree of <m>\mathbb C</m> over <m>\mathbb R</m>?
+      </p>
+
+      <p>
+			What is the degree of <m>\mathbb Q(\sqrt{5})</m> over <m>\mathbb Q</m>? Well the minimum polynomial for <m>\sqrt{5}</m> is <m>x^2 - 5</m> (why is this minimal?). Thus <m>[\mathbb Q(\sqrt{5}):\mathbb Q] = 2</m>. Notice this confirms our suspicion that every element of <m>\mathbb Q(\sqrt 5)</m> can be written as <m>a + b\sqrt 5</m> for rational <m>a</m> and <m>b</m>.
+      </p>
+
+      <p>
+			What is the degree of <m>\mathbb Q(\sqrt{5},\sqrt{7})</m> over <m>\mathbb Q(\sqrt{5})</m>? What about over <m>\mathbb Q</m>? Well if we start with <m>\mathbb Q(\sqrt{5})</m> as our base field, we must find the minimum polynomial for <m>\sqrt{7}</m>. First, could <m>\sqrt{7}</m> be in <m>\mathbb Q(\sqrt 5)</m>? If it were, then <m>\sqrt{7} = a+b\sqrt{5}</m>. Square both sides and rearrange to get that <m>\sqrt{5}</m> is rational (it is not). Notice that <m>\sqrt{7}</m> is a root of <m>x^2 - 7</m>. This is irreducible over <m>\mathbb Q</m>, but because <m>\sqrt{7} \notin \mathbb Q(\sqrt{5})</m>, it is also irreducible in <m>\mathbb Q(\sqrt{5})</m>. Thus <m>\mathbb Q(\sqrt{5},\sqrt{7})</m> has degree 2 over <m>\mathbb Q(\sqrt{5})</m>. Similarly, it has degree <m>2</m> over <m>\mathbb Q(\sqrt{7})</m>. What about over <m>\mathbb Q</m>? It turns out it has degree 4 over <m>\mathbb Q</m>. Why?
+      </p>
+
+  </subsection>
+
+
+</section>

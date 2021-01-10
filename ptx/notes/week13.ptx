@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<section xml:id="notes-week12" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>Week 13: April 13-17</title>
+
+
+
+<subsection xml:id="notes-4-13">
+		<title>Group Actions</title>
+
+			<p><ul>
+				<li>
+							<p>
+				Consider a group <m>G</m> and a set <m>X</m>. An <em>action</em> of <m>G</m> on <m>X</m> is a function that sends pairs in <m>G \times X</m> to things in <m>X</m>. We write <m>(g,x) \mapsto gx</m>, satisfying
+			</p>
+
+			<p><ol>
+				<li>
+							<p>
+				<m>ex = x</m> for all <m>x \in X</m>
+			</p>
+				</li>
+
+				<li>
+							<p>
+				<m>(g_1g_2)x = g_1(g_2x)</m> for all <m>x \in X</m> and all <m>g_1, g_2\in G</m>.
+			</p>
+				</li>
+
+			</ol></p>
+
+			<p>
+				We call <m>X</m> a <em><m>G</m>-set</em>.
+			</p>
+				</li>
+
+				<li>
+							<p>
+				Two elements <m>x, y \in X</m> are <em><m>G</m>-equivalent</em> (written <m>x \sim y</m>) provided there is some <m>g \in G</m> such that <m>gx = y</m>.
+			</p>
+				</li>
+
+				<li>
+							<p>
+				The <em>orbit</em> of an element <m>x \in X</m> (written <m>\mathcal{O}_x</m>) is the set of all elements <m>y \in X</m> that are <m>G</m>-equivalent to <m>x</m>.
+			</p>
+				</li>
+
+				<li>
+							<p>
+				The <em>fixed point set</em> of an element <m>g \in G</m> (written <m>X_g</m>) is the set of all <m>x \in X</m> such that <m>gx = x</m>.
+			</p>
+				</li>
+
+				<li>
+							<p>
+				The <em>stabilizer subgroup</em> of an element <m>x \in X</m> (written <m>G_x</m>) is the set of all <m>g \in G</m> such that <m>gx = x</m>.
+			</p>
+				</li>
+
+			</ul></p>
+
+			<p>
+				Do an example with <m>D_4</m> acting on the vertices (or edges) of a square.
+			</p>
+
+			<p>
+				We would like to make some observations about how <m>G</m>, <m>X</m>, <m>\mathcal{O}_x</m>, <m>G_x</m> and <m>X_g</m> are related, in terms of sizes. We start with the <em>Orbit-Stabilizer Theorem</em>:
+			</p>
+
+			<p>
+				Let <m>G</m> be a finite group acting on a set <m>X</m>. Then for any <m>x \in X</m>, <me>|G| = |\mathcal{O}_x|\cdot |G_x|</me>
+			</p>
+
+			<p>
+				Fix <m>x \in X</m> and consider the elements of <m>\mathcal{O}_x</m>. These are the elements <m>y \in X</m> such that <m>gx = y</m> for some <m>g \in G</m>. But of course there might be more than one element in <m>G</m> which moves <m>x</m> to <m>y</m>. Say <m>g_1x = y</m> and <m>g_2x = y</m>. Then <m>g_1x = g_2x</m> so <m>g_2^{-1}g_1 x = x</m>. In other words, <m>g_2^{-1}g_1 \in G_x</m>.
+			</p>
+
+			<p>
+				Consider the cosets <m>G/G_x</m> (remember <m>G_x</m> is a subgroup of <m>G</m>, so this makes sense). Each coset has the form <m>gG_x</m> for some <m>g \in G</m>. But look at what we said above: <m>g_2^{-1}g_1 \in G_x</m> precisely when <m>g_1</m> and <m>g_2</m> both move <m>x</m> to the same element in <m>\mathcal{O}_x</m>, and now we are saying that this happens exactly when <m>g_1</m> and <m>g_2</m> are in the same coset. So each different element of <m>\mathcal{O}_x</m> corresponds exactly to a coset of <m>G/G_x</m>. In other words: <me>|\mathcal{O}_x| = |G/G_x| = [G:G_x] = |G|/|G_x|</me> where the last equality is by Lagrange’s theorem.
+			</p>
+
+			<p>
+				Let the <em>fixed point set</em> of an element <m>g \in G</m> (written <m>X_g</m>) be the set of all <m>x \in X</m> such that <m>gx = x</m>. Note here we are indexing by elements from <m>G</m>, instead of from <m>X</m> (as in <m>\mathcal{O}_x</m> or <m>G_x</m>).
+			</p>
+
+			<p>
+				Now we can prove Burnside’s lemma:
+			</p>
+
+			<p>
+				Let <m>k</m> be the number of distinct orbits defined by the action of <m>G</m> on <m>X</m>. Then <me>k = \frac{1}{|G|}\sum_{g \in G}|X_g|.</me> In other words, the number of orbits is the average number of points fixed by the elements in <m>G</m>.
+			</p>
+
+			<p>
+				Let’s count <m>\sum_{g\in G} |X_g|</m>. This counts all the pairs <m>(g,x)</m> such that <m>g</m> fixes <m>x</m>. What if we break this down by <m>x</m> instead of <m>g</m>. We get <me>\sum_{g\in G} |X_g| = \sum_{x\in X} |G_x|</me> Now break it down even further: divide up the sum by orbits. For any single orbit <m>\mathcal{O}_x</m> we want to find <m>\sum_{y \in \mathcal{O}_x} |G_y|</m>. But if <m>x</m> and <m>y</m> are in the same orbit, then <m>|G_x| = |G_y|</m><fn>			<p>
+				How do we know this? Define <m>\varphi:G_x \to G_y</m> by <m>\varphi(a) = gag^{-1}</m> where <m>g</m> is the element which gives <m>gx = y</m>. You can show that <m>gag^{-1}y = y</m>. This is a isomorphism.
+			</p></fn> so <me>\sum_{y \in \mathcal{O}_x} |G_y| = |\mathcal{O}_x|\cdot |G_x| = |G|</me> If we do this for all <m>k</m> orbits, we get <me>\sum_{x \in X} |G_x| = k\cdot |G|</me> but the left hand side is really <m>\sum_{g\in G} |X_g|</m>, as we need.
+			</p>
+
+			<p>
+				Here are some examples.
+			</p>
+
+			<p>
+				How many place mat placements are possible around Arthur’s 10 seat round table using blue and gold place mats? We count the number of orbits of elements in <m>X</m> under a group action of <m>G</m>. What are <m>X</m> and <m>G</m>? Let <m>X</m> be the set of all <q>colorings</q> (place mat placements) and let <m>G</m> be the group of rotations of a 10-gon (a subgroup of <m>D_{10}</m>). We need to find <m>|X_g|</m> for each element <m>g \in G</m> and then average them. How many colorings are fixed by the identity? All of them. What about by a rotation by 36 degrees? Just 2. Same for rotations by 3, 7, 9. Other rotations? We get: <me>\frac{1}{|G|}\sum_{g \in G}|X_g| = \frac{1}{10}(2^{10} + 4\cdot 2^1 + 4\cdot 2^2 + 2^5) = 108</me>
+			</p>
+
+			<p>
+				How many 6-bead bracelets can you make using 3 colors of beads? Note we need all of <m>D_6</m> here. <me>\frac{1}{|G|}\sum_{g \in G}|X_g| = \frac{1}{12}(3^6+2\cdot 3^1 + 2\cdot 3^2 + 3^3 + 3\cdot 3^4 + 3\cdot 3^3 = 92</me>
+			</p>
+
+			<p>
+				How many ways can you color the faces of a cube using 4 colors? We need to decide on the group of symmetries of a cube. This will be homework.
+			</p>
+	
+</subsection>
+</section>

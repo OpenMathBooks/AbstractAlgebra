@@ -1,0 +1,65 @@
+\documentclass[12pt]{exam}
+
+\usepackage{amsmath, amssymb, multicol}
+\usepackage{graphicx}
+\usepackage{textcomp}
+
+\def\d{\displaystyle}
+\def\matrix#1{\begin{bmatrix}#1\end{bmatrix}}
+\def\b{\mathbf}
+\def\R{\mathbb{R}}
+\def\Z{\mathbb{Z}}
+\def\and{\wedge}
+\def\imp{\rightarrow}
+\def\inv{^{-1}}
+
+
+
+%\pointname{pts}
+\pointsinmargin
+\marginpointname{pts}
+\addpoints
+\pagestyle{head}
+\printanswers
+
+\firstpageheader{Math 321}{\bf Quiz 5 Solutions}{Monday, March 25}
+
+
+\begin{document}
+
+%space for name
+\noindent {\large\bf Name:} \underline{\hspace{2.5in}}
+\vskip 1em
+
+\begin{questions}
+\question Suppose $G$ is a group with order $1617 = 3\cdot7^2 \cdot 11$.
+\begin{parts}
+\part Could $G$ contain an element of order 10?  Briefly explain.
+\begin{solution}
+No, by Lagrange's theorem, the order of any element must divide the order of the group, but the order of the group is not divisible by 10.
+\end{solution}
+\vfill
+\part Must $G$ contain an element of order 7?  Briefly explain.
+\begin{solution}
+Yes, by Cauchy's theorem, since $7$ is a prime that divides the order of the group.
+\end{solution}
+\vfill
+\part If $G$ is abelian, what could $G$ be?  List all possibilities (up to isomorphism).  
+\begin{solution}
+By the Fundamental Theorem of Finite Abelian Groups, we know either
+\[G \cong \Z_3 \times \Z_{7^2} \times \Z_{11}\]
+or 
+\[G \cong \Z_3 \times \Z_7 \times \Z_7 \times \Z_{11}.\]
+\end{solution}
+\vfill
+\part Which of the possibilities for $G$ described above (part c) has an element of order 49?  Briefly explain why it does and why the other(s) do not.
+\begin{solution}
+We have that $G$ is isomorphic to the direct product of cyclic groups.  If $G$ has an element of order 49, that element will generate the cyclic group $\Z_{49}$.  So then we would be in the first one.  Notice that the second possibility has elements of order 7, but not 49.  This comes from our understanding of the proof of the Fundamental Theorem of Finite Abelian Groups.
+\end{solution}
+\vfill
+\end{parts}
+
+\end{questions}
+\end{document}
+
+

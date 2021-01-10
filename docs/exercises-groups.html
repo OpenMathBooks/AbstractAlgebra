@@ -1,0 +1,846 @@
+<!DOCTYPE html>
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*       on 2021-01-10T15:14:07-07:00       *-->
+<!--*   A recent stable commit (2020-08-09):   *-->
+<!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<html lang="en-US">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>AATA Additional Exercises</title>
+<meta name="Keywords" content="Authored in PreTeXt">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script src="https://sagecell.sagemath.org/embedded_sagecell.js"></script><script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [['\\(','\\)']]
+    },
+    asciimath2jax: {
+        ignoreClass: ".*",
+        processClass: "has_am"
+    },
+    jax: ["input/AsciiMath"],
+    extensions: ["asciimath2jax.js"],
+    TeX: {
+        extensions: ["extpfeil.js", "autobold.js", "https://pretextbook.org/js/lib/mathjaxknowl.js", "AMScd.js", ],
+        // scrolling to fragment identifiers is controlled by other Javascript
+        positionToHash: false,
+        equationNumbers: { autoNumber: "none", useLabelIds: true, },
+        TagSide: "right",
+        TagIndent: ".8em",
+    },
+    // HTML-CSS output Jax to be dropped for MathJax 3.0
+    "HTML-CSS": {
+        scale: 88,
+        mtextFontInherit: true,
+    },
+    CommonHTML: {
+        scale: 88,
+        mtextFontInherit: true,
+    },
+});
+</script><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS_CHTML-full"></script><link href="https://unpkg.com/prismjs@v1.22.0/themes/prism.css" rel="stylesheet">
+<script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/jquery.min.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/0.13/pretext.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/0.13/pretext_add_on.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script xmlns:svg="http://www.w3.org/2000/svg">sagecellEvalName='Evaluate (Sage)';
+</script><link xmlns:svg="http://www.w3.org/2000/svg" href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://fonts.googleapis.com/css?family=Inconsolata:400,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/pretext.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/pretext_add_on.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/banner_default.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/toc_default.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/knowls_default.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/style_default.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/colors_default.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/setcolors.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="custom-styles.css">
+<!-- 2019-10-12: Temporary - CSS file for experiments with styling --><link xmlns:svg="http://www.w3.org/2000/svg" href="developer.css" rel="stylesheet" type="text/css">
+</head>
+<body id="judson-AATA" class="mathbook-book has-toc has-sidebar-left">
+<a class="assistive" href="#content">Skip to main content</a><div xmlns:svg="http://www.w3.org/2000/svg" class="hidden-content" style="display:none">\(\newcommand{\identity}{\mathrm{id}}
+\newcommand{\notdivide}{\nmid}
+\newcommand{\notsubset}{\not\subset}
+\newcommand{\lcm}{\operatorname{lcm}}
+\newcommand{\gf}{\operatorname{GF}}
+\newcommand{\inn}{\operatorname{Inn}}
+\newcommand{\aut}{\operatorname{Aut}}
+\newcommand{\Hom}{\operatorname{Hom}}
+\newcommand{\cis}{\operatorname{cis}}
+\newcommand{\chr}{\operatorname{char}}
+\newcommand{\Null}{\operatorname{Null}}
+\newcommand{\transpose}{\text{t}}
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\Q}{\mathbb{Q}}
+\newcommand{\R}{\mathbb{R}}
+\def\C{\mathbb{C}}
+\newcommand{\st}{:}
+\newcommand{\inv}{^{-1}}
+\newcommand{\bC}{\mathbb{C}}
+      \newcommand{\F}{\mathscr{F}}
+      \newcommand{\FR}{\mathscr{F}(\R)}
+      \newcommand{\DR}{\mathscr{D}(\R)}
+      \def\s{\varrho}
+      \def\theterm{Spring 2021}
+      \def\thecourse{MATH 322}
+\newcommand{\lt}{&lt;}
+\newcommand{\gt}{&gt;}
+\newcommand{\amp}{&amp;}
+\)</div>
+<header id="masthead" class="smallbuttons"><div class="banner"><div class="container">
+<a id="logo-link" href="http://abstract.pugetsound.edu" target="_blank"><img src="images/cover_aata_2020.png" alt="Logo image"></a><div class="title-container">
+<h1 class="heading"><a href="aata-toc.html"><span class="title">Abstract Algebra:</span> <span class="subtitle">Theory and Applications, Remixed!</span></a></h1>
+<p class="byline">Thomas W. Judson</p>
+</div>
+</div></div>
+<nav xmlns:svg="http://www.w3.org/2000/svg" id="primary-navbar" class="navbar"><div class="container">
+<div class="navbar-top-buttons">
+<button class="sidebar-left-toggle-button button active" aria-label="Show or hide table of contents sidebar">Contents</button><div class="tree-nav toolbar toolbar-divisor-3">
+<a class="index-button toolbar-item button" href="index-1.html" title="Index">Index</a><span class="threebuttons"><a id="previousbutton" class="previous-button toolbar-item button" href="section-permutation-definitions.html" title="Previous">Prev</a><a id="upbutton" class="up-button button toolbar-item" href="groups.html" title="Up">Up</a><a id="nextbutton" class="next-button button toolbar-item" href="groups-exercises-detecting-errors.html" title="Next">Next</a></span>
+</div>
+</div>
+<div class="navbar-bottom-buttons toolbar toolbar-divisor-4">
+<button class="sidebar-left-toggle-button button toolbar-item active">Contents</button><a class="previous-button toolbar-item button" href="section-permutation-definitions.html" title="Previous">Prev</a><a class="up-button button toolbar-item" href="groups.html" title="Up">Up</a><a class="next-button button toolbar-item" href="groups-exercises-detecting-errors.html" title="Next">Next</a>
+</div>
+</div></nav></header><div class="page">
+<div xmlns:svg="http://www.w3.org/2000/svg" id="sidebar-left" class="sidebar" role="navigation"><div class="sidebar-content">
+<nav id="toc"><ul>
+<li class="link frontmatter">
+<a href="aata.html" data-scroll="Wih"><span class="title">Front Matter</span></a><ul>
+<li><a href="colophon-1.html" data-scroll="colophon-1">Colophon</a></li>
+<li><a href="acknowledgement-1.html" data-scroll="acknowledgement-1">Acknowledgements</a></li>
+<li><a href="preface-1.html" data-scroll="JEk">Preface to the Remixed Version</a></li>
+<li><a href="preface-2.html" data-scroll="Cpq">Original Preface</a></li>
+</ul>
+</li>
+<li class="link part"><a href="part-groups.html" data-scroll="part-groups"><span class="codenumber">I</span> <span class="title">Groups</span></a></li>
+<li class="link">
+<a href="sets.html" data-scroll="xcu"><span class="codenumber">1</span> <span class="title">Preliminaries</span></a><ul>
+<li><a href="section-note-on-proofs.html" data-scroll="yRH">A Short Note on Proofs</a></li>
+<li><a href="section-sets-and-functions.html" data-scroll="eYQ">Sets and Functions</a></li>
+<li><a href="section-equivalence-relations.html" data-scroll="VFe">Equivalence Relations and Partitions</a></li>
+<li><a href="section-math-induction.html" data-scroll="bUT">Mathematical Induction</a></li>
+<li><a href="exercises-sets.html" data-scroll="mDp">Additional Exercises</a></li>
+<li><a href="sets-references.html" data-scroll="ztb">References and Suggested Readings</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="groups.html" data-scroll="ZbN"><span class="codenumber">2</span> <span class="title">Groups</span></a><ul>
+<li><a href="section-mod-n-sym.html" data-scroll="nfs">Integer Equivalence Classes and Symmetries</a></li>
+<li><a href="section-groups-define.html" data-scroll="TmB">Definitions and Examples</a></li>
+<li><a href="section-basic-properties.html" data-scroll="Rxo">Basic Properties of Groups</a></li>
+<li><a href="section-subgroups.html" data-scroll="ztK">Subgroups</a></li>
+<li><a href="cyclic.html" data-scroll="MzR">Cyclic Subgroups</a></li>
+<li><a href="section-permutation-definitions.html" data-scroll="Wyg">Permutation Groups</a></li>
+<li><a href="exercises-groups.html" data-scroll="OCI" class="active">Additional Exercises</a></li>
+<li><a href="groups-exercises-detecting-errors.html" data-scroll="uJR">Additional Exercises: Detecting Errors</a></li>
+<li><a href="groups-references.html" data-scroll="muP">References and Suggested Readings</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="cosets.html" data-scroll="Uzy"><span class="codenumber">3</span> <span class="title">Cosets and Factor Groups</span></a><ul>
+<li><a href="section-cosets.html" data-scroll="xMb">Cosets</a></li>
+<li><a href="section-factor-groups.html" data-scroll="avo">Factor Groups and Normal Subgroups</a></li>
+<li><a href="exercises-cosets.html" data-scroll="FqA">Exercises</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="isomorph.html" data-scroll="OUu"><span class="codenumber">4</span> <span class="title">Isomorphisms and Homomorphisms</span></a><ul>
+<li><a href="section-isomorph-definitions.html" data-scroll="Evp">Definition and Examples</a></li>
+<li><a href="section-group-homomorphisms.html" data-scroll="uOI">Group Homomorphisms</a></li>
+<li><a href="section-group-isomorphism-theorems.html" data-scroll="aVR">The Isomorphism Theorems</a></li>
+<li><a href="exercises-isomorph.html" data-scroll="VeC">Additional Exercises</a></li>
+<li><a href="homomorph-exercises-automorphisms.html" data-scroll="Jes">Additional Exercises: Automorphisms</a></li>
+</ul>
+</li>
+<li class="link part"><a href="part-rings-and-fields.html" data-scroll="part-rings-and-fields"><span class="codenumber">II</span> <span class="title">Rings and Fields</span></a></li>
+<li class="link">
+<a href="rings.html" data-scroll="bhz"><span class="codenumber">5</span> <span class="title">Rings</span></a><ul>
+<li><a href="section-rings-definitions.html" data-scroll="kBl">Rings</a></li>
+<li><a href="section-domains-and-fields.html" data-scroll="QIu">Integral Domains and Fields</a></li>
+<li><a href="section-ring-homomorphisms.html" data-scroll="wPD">Ring Homomorphisms and Ideals</a></li>
+<li><a href="section-maximal-prime-ideals.html" data-scroll="cWM">Maximal and Prime Ideals</a></li>
+<li><a href="section-software-application.html" data-scroll="JdV">An Application to Software Design</a></li>
+<li><a href="exercises-rings.html" data-scroll="LYB">Additional Exercises</a></li>
+<li><a href="rings-exercises-programming.html" data-scroll="sfK">Programming Exercise</a></li>
+<li><a href="rings-references.html" data-scroll="JSg">References and Suggested Readings</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="poly.html" data-scroll="tPt"><span class="codenumber">6</span> <span class="title">Polynomials</span></a><ul>
+<li><a href="section-division-algorithm.html" data-scroll="Icc">The Integers</a></li>
+<li><a href="section-poly-rings.html" data-scroll="Djf">Polynomial Rings</a></li>
+<li><a href="section-poly-division-algorithm.html" data-scroll="jqo">The Division Algorithm</a></li>
+<li><a href="section-irreducible-poly.html" data-scroll="Pxx">Irreducible Polynomials</a></li>
+<li><a href="sec-factoring-c-r.html" data-scroll="icb">Factoring over \(\C\) and \(\R\)</a></li>
+<li><a href="exercises-poly.html" data-scroll="eGv">Additional Exercises</a></li>
+<li><a href="practice-euclidean-algorithm.html" data-scroll="BUS">Additional Exercises: The Euclidean Algorithm</a></li>
+<li><a href="poly-exercises-cubics-quartics.html" data-scroll="KNE">Additional Exercises:  Solving the Cubic and Quartic Equations</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="domains.html" data-scroll="HlR"><span class="codenumber">7</span> <span class="title">Integral Domains</span></a><ul>
+<li><a href="section-field-of-fractions.html" data-scroll="cTV">Fields of Fractions</a></li>
+<li><a href="section-factorization-domains.html" data-scroll="Jbe">Factorization in Integral Domains</a></li>
+<li><a href="reading-questions-22.html" data-scroll="drU">Reading Questions</a></li>
+<li><a href="exercises-domains.html" data-scroll="kyu">Exercises</a></li>
+<li><a href="domains-references.html" data-scroll="CJg">References and Suggested Readings</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="fields.html" data-scroll="pNh"><span class="codenumber">8</span> <span class="title">Fields</span></a><ul>
+<li><a href="section-constructions.html" data-scroll="ctw">Geometric Constructions</a></li>
+<li><a href="section-fields-intro.html" data-scroll="GTt">Introduction</a></li>
+<li><a href="section-extension-fields.html" data-scroll="dGQ">Extension Fields</a></li>
+<li><a href="fields-subsection-algebraic-elements.html" data-scroll="acq">Algebraic Elements</a></li>
+<li><a href="section-fields-vectorspaces-review.html" data-scroll="UWY">A Review of Vector Spaces</a></li>
+<li><a href="section-fields-vectorspaces.html" data-scroll="Scs">Extension Fields as Vector Spaces</a></li>
+<li><a href="section-constructions-conc.html" data-scroll="XhK">What's Not Constructible</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="galois.html" data-scroll="hgP"><span class="codenumber">9</span> <span class="title">Galois Theory</span></a><ul>
+<li><a href="section-galois-splitting-fields.html" data-scroll="wmn">Splitting Fields</a></li>
+<li><a href="section-galois-field-automorphisms.html" data-scroll="iWc">Field Automorphisms</a></li>
+<li><a href="section-galois-fund-theorem-galois-theory.html" data-scroll="Pdl">The Fundamental Theorem</a></li>
+</ul>
+</li>
+<li class="link part"><a href="part-more-group-theory.html" data-scroll="part-more-group-theory"><span class="codenumber">III</span> <span class="title">More Group Theory</span></a></li>
+<li class="link">
+<a href="groups.html" data-scroll="nRa"><span class="codenumber">10</span> <span class="title">Some of the Structure of Groups</span></a><ul>
+<li><a href="section-groups-cayley.html" data-scroll="CTu">Isomorphisms and Cayley's Theorem</a></li>
+<li><a href="section-groups-permutations.html" data-scroll="mjE">Permutation Groups</a></li>
+<li><a href="section-solvable-groups.html" data-scroll="WbU">Solvable Groups</a></li>
+<li><a href="section-simplicity-of-an.html" data-scroll="GCx">The Simplicity of the Alternating Group</a></li>
+<li><a href="section-galois-applications.html" data-scroll="vku">Applications: Galois Groups</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="struct-more.html" data-scroll="YWA"><span class="codenumber">11</span> <span class="title">More of the Structure of Groups</span></a><ul>
+<li><a href="section-groups-order.html" data-scroll="hVk">Cyclic Groups and Orders of Elements</a></li>
+<li><a href="section-groups-lagrange.html" data-scroll="BOb">Lagrange's Theorem and its consequences</a></li>
+<li><a href="section-direct-products.html" data-scroll="kCy">Direct Products</a></li>
+<li><a href="section-finite-abelian-groups.html" data-scroll="pUL">Finite Abelian Groups</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="crypt.html" data-scroll="uCn"><span class="codenumber">12</span> <span class="title">Introduction to Cryptography</span></a><ul>
+<li><a href="section-private-key-crypt.html" data-scroll="Qkr">Private Key Cryptography</a></li>
+<li><a href="section-public-key-crypt.html" data-scroll="wrA">Public Key Cryptography</a></li>
+<li><a href="ws_groups-RSA-lab.html" data-scroll="zaZ">Activity: RSA Cryptography Lab</a></li>
+<li><a href="section-method-of-repeated-squares.html" data-scroll="YOj">The Method of Repeated Squares</a></li>
+<li><a href="exercises-crypt.html" data-scroll="rHH">Exercises</a></li>
+<li><a href="crypt-exercises-additional.html" data-scroll="XOQ">Additional Exercises: Primality and Factoring</a></li>
+<li><a href="crypt-references.html" data-scroll="yqf">References and Suggested Readings</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="actions.html" data-scroll="elJ"><span class="codenumber">13</span> <span class="title">Group Actions</span></a><ul>
+<li><a href="section-groups-acting-on-sets.html" data-scroll="nFv">Groups Acting on Sets</a></li>
+<li><a href="section-class-equation.html" data-scroll="TME">The Class Equation</a></li>
+<li><a href="section-burnsides-counting-theorem.html" data-scroll="zTN">Burnside's Counting Theorem</a></li>
+<li><a href="exercises-actions.html" data-scroll="PcL">Exercises</a></li>
+<li><a href="actions-exercises-programming.html" data-scroll="vjU">Programming Exercise</a></li>
+<li><a href="actions-references.html" data-scroll="VdC">References and Suggested Reading</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="sylow.html" data-scroll="TkO"><span class="codenumber">14</span> <span class="title">The Sylow Theorems</span></a><ul>
+<li><a href="section-sylow-theorems.html" data-scroll="ILJ">The Sylow Theorems</a></li>
+<li><a href="section-sylow-applications.html" data-scroll="oSS">Examples and Applications</a></li>
+<li><a href="reading-questions-23.html" data-scroll="EPk">Reading Questions</a></li>
+<li><a href="exercises-sylow.html" data-scroll="kiZ">Exercises</a></li>
+<li><a href="sylow-exercises-project.html" data-scroll="Qqi">A Project</a></li>
+<li><a href="sylow-references.html" data-scroll="Sgz">References and Suggested Readings</a></li>
+</ul>
+</li>
+<li class="link part"><a href="part-additional.html" data-scroll="part-additional"><span class="codenumber">IV</span> <span class="title">Additional Topics</span></a></li>
+<li class="link">
+<a href="matrix.html" data-scroll="CSk"><span class="codenumber">15</span> <span class="title">Matrix Groups and Symmetry</span></a><ul>
+<li><a href="section-matrix-groups.html" data-scroll="geN">Matrix Groups</a></li>
+<li><a href="section-symmetry.html" data-scroll="MlW">Symmetry</a></li>
+<li><a href="reading-questions-24.html" data-scroll="jhg">Reading Questions</a></li>
+<li><a href="exercises-matrix.html" data-scroll="nJm">Exercises</a></li>
+<li><a href="matrix-references.html" data-scroll="IcT">References and Suggested Readings</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="algcodes.html" data-scroll="jTr"><span class="codenumber">16</span> <span class="title">Algebraic Coding Theory</span></a><ul>
+<li><a href="section-error-detecting-correcting-codes.html" data-scroll="lIE">Error-Detecting and Correcting Codes</a></li>
+<li><a href="section-linear-codes.html" data-scroll="RPN">Linear Codes</a></li>
+<li><a href="section-parity-check.html" data-scroll="xWW">Parity-Check and Generator Matrices</a></li>
+<li><a href="section-efficient-decoding.html" data-scroll="eef">Efficient Decoding</a></li>
+<li><a href="reading-questions-25.html" data-scroll="gmA">Reading Questions</a></li>
+<li><a href="exercises-algcodes.html" data-scroll="NfU">Exercises</a></li>
+<li><a href="algcodes-exercises-programming.html" data-scroll="tnd">Programming Exercises</a></li>
+<li><a href="algcodes-references.html" data-scroll="GJf">References and Suggested Readings</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="finite.html" data-scroll="Gnc"><span class="codenumber">17</span> <span class="title">Finite Fields</span></a><ul>
+<li><a href="section-finite-field.html" data-scroll="jzF">Structure of a Finite Field</a></li>
+<li><a href="section-poly-codes.html" data-scroll="PGO">Polynomial Codes</a></li>
+<li><a href="reading-questions-26.html" data-scroll="RdC">Reading Questions</a></li>
+<li><a href="exercises-finite.html" data-scroll="KWV">Exercises</a></li>
+<li><a href="finite-exercises-bch-codes.html" data-scroll="ree">Additional Exercises: Error Correction for <abbr class="acronym">BCH</abbr> Codes</a></li>
+<li><a href="finite-references.html" data-scroll="Yrk">References and Suggested Readings</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="boolean.html" data-scroll="dAp"><span class="codenumber">18</span> <span class="title">Lattices and Boolean Algebras</span></a><ul>
+<li><a href="section-boolean-lattices.html" data-scroll="Tbk">Lattices</a></li>
+<li><a href="section-boolean-algebras.html" data-scroll="zit">Boolean Algebras</a></li>
+<li><a href="section-algebra-of-circuits.html" data-scroll="fpC">The Algebra of Electrical Circuits</a></li>
+<li><a href="reading-questions-27.html" data-scroll="nQZ">Reading Questions</a></li>
+<li><a href="exercises-boolean.html" data-scroll="uyA">Exercises</a></li>
+<li><a href="boolean-exercises-programming.html" data-scroll="aFJ">Programming Exercises</a></li>
+<li><a href="boolean-references.html" data-scroll="QcR">References and Suggested Readings</a></li>
+</ul>
+</li>
+<li class="link backmatter"><a href="backmatter.html" data-scroll="uDN"><span class="title">Reference</span></a></li>
+<li class="link"><a href="appendix-gfdl.html" data-scroll="gAi"><span class="codenumber">A</span> <span class="title">GNU Free Documentation License</span></a></li>
+<li class="link"><a href="solutions-1.html" data-scroll="aKW"><span class="codenumber">B</span> <span class="title">Hints and Answers to Selected Exercises</span></a></li>
+<li class="link"><a href="appendix-2.html" data-scroll="MHr"><span class="codenumber">C</span> <span class="title">Notation</span></a></li>
+<li class="link"><a href="index-1.html" data-scroll="index-1"><span class="title">Index</span></a></li>
+<li class="link"><a href="colophon-2.html" data-scroll="colophon-2"><span class="title">Colophon</span></a></li>
+</ul></nav><div class="extras"><nav><a class="mathbook-link" href="https://pretextbook.org">Authored in PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" alt="Powered by MathJax"></a></nav></div>
+</div></div>
+<main class="main"><div id="content" class="pretext-content"><section xmlns:svg="http://www.w3.org/2000/svg" class="exercises" id="OCI"><h2 class="heading hide-type">
+<span class="type">Exercises</span> <span class="codenumber">2.7</span> <span class="title">Additional Exercises</span>
+</h2>
+<article class="exercise exercise-like" id="KCJ"><h6 class="heading"><span class="codenumber">1<span class="period">.</span></span></h6>
+<p id="Vcb">Describe the symmetries of a square and prove that the set of symmetries is a group. Give a Cayley table for the symmetries. How many ways can the vertices of a square be permuted? Is each permutation necessarily a symmetry of the square? The symmetry group of the square is denoted by \(D_4\text{.}\)</p></article><article class="exercise exercise-like" id="CYk"><h6 class="heading"><span class="codenumber">2<span class="period">.</span></span></h6>
+<p id="NxC">Give an example of two elements \(A\) and \(B\) in \(GL_2({\mathbb R})\) with \(AB \neq BA\text{.}\)</p>
+<div class="solutions">
+<a data-knowl="" class="id-ref hint-knowl original" data-refid="hk-Xfw" id="Xfw"><span class="type">Hint</span></a><div class="hidden-content tex2jax_ignore" id="hk-Xfw"><div class="hint solution-like"><p id="fWF">Pick two matrices. Almost any pair will work.</p></div></div>
+</div></article><article class="exercise exercise-like" id="jft"><h6 class="heading"><span class="codenumber">3<span class="period">.</span></span></h6>
+<p id="tEL">Prove that the product of two matrices in \(SL_2({\mathbb R})\) has determinant one.</p></article><article class="exercise exercise-like" id="PmC"><h6 class="heading"><span class="codenumber">4<span class="period">.</span></span></h6>
+<p id="ZLU">Prove that the set of matrices of the form</p>
+<div class="displaymath">
+\begin{equation*}
+\begin{pmatrix}
+1 &amp; x &amp; y \\
+0 &amp; 1 &amp; z \\
+0 &amp; 0 &amp; 1
+\end{pmatrix}
+\end{equation*}
+</div>
+<p data-braille="continuation">is a group under matrix multiplication. This group, known as the <dfn class="terminology">Heisenberg group</dfn>, is important in quantum physics. Matrix multiplication in the Heisenberg group is defined by</p>
+<div class="displaymath">
+\begin{equation*}
+\begin{pmatrix}
+1 &amp; x &amp; y \\
+0 &amp; 1 &amp; z \\
+0 &amp; 0 &amp; 1
+\end{pmatrix}
+\begin{pmatrix}
+1 &amp; x' &amp; y' \\
+0 &amp; 1 &amp; z' \\
+0 &amp; 0 &amp; 1
+\end{pmatrix}
+=
+\begin{pmatrix}
+1 &amp; x+x' &amp; y+y'+xz' \\
+0 &amp; 1 &amp; z+z' \\
+0 &amp; 0 &amp; 1
+\end{pmatrix}\text{.}
+\end{equation*}
+</div></article><article class="exercise exercise-like" id="vtL"><h6 class="heading"><span class="codenumber">5<span class="period">.</span></span></h6>
+<p id="FTd">Prove that \(\det(AB) = \det(A) \det(B)\) in \(GL_2({\mathbb R})\text{.}\) Use this result to show that the binary operation in the group \(GL_2({\mathbb R})\) is closed; that is, if \(A\) and \(B\) are in \(GL_2({\mathbb R})\text{,}\) then \(AB \in GL_2({\mathbb R})\text{.}\)</p></article><article class="exercise exercise-like" id="bAU"><h6 class="heading"><span class="codenumber">6<span class="period">.</span></span></h6>
+<p id="mam">Let \({\mathbb Z}_2^n = \{ (a_1, a_2, \ldots,
+a_n) : a_i \in {\mathbb Z}_2 \}\text{.}\) Define a binary operation on \({\mathbb Z}_2^n\) by</p>
+<div class="displaymath">
+\begin{equation*}
+(a_1, a_2, \ldots, a_n) + (b_1, b_2, \ldots, b_n) = (a_1 + b_1, a_2 + b_2, \ldots, a_n + b_n)\text{.}
+\end{equation*}
+</div>
+<p data-braille="continuation">Prove that \({\mathbb Z}_2^n\) is a group under this operation. This group is important in algebraic coding theory.</p></article><article class="exercise exercise-like" id="HId"><h6 class="heading"><span class="codenumber">7<span class="period">.</span></span></h6>
+<p id="Shv">Show that \({\mathbb R}^{\ast} = {\mathbb R} \setminus \{0 \}\) is a group under the operation of multiplication.</p></article><article class="exercise exercise-like" id="nPm"><h6 class="heading"><span class="codenumber">8<span class="period">.</span></span></h6>
+<p id="yoE">Given the groups \({\mathbb R}^{\ast}\) and \({\mathbb Z}\text{,}\) let \(G = {\mathbb R}^{\ast} \times {\mathbb Z}\text{.}\) Define a binary operation \(\circ\) on \(G\) by \((a,m) \circ (b,n) = (ab,
+m + n)\text{.}\) Show that \(G\) is a group under this operation.</p></article><article class="exercise exercise-like" id="TWv"><h6 class="heading"><span class="codenumber">9<span class="period">.</span></span></h6>
+<p id="evN">Prove or disprove that every group containing six elements is abelian.</p>
+<div class="solutions">
+<a data-knowl="" class="id-ref hint-knowl original" data-refid="hk-UkQ" id="UkQ"><span class="type">Hint</span></a><div class="hidden-content tex2jax_ignore" id="hk-UkQ"><div class="hint solution-like"><p id="MdO">There is a nonabelian group containing six elements.</p></div></div>
+</div></article><article class="exercise exercise-like" id="AdE"><h6 class="heading"><span class="codenumber">10<span class="period">.</span></span></h6>
+<p id="KCW">Give a specific example of some group \(G\) and elements \(g,
+h \in G\) where \((gh)^n \neq g^nh^n\text{.}\)</p>
+<div class="solutions">
+<a data-knowl="" class="id-ref hint-knowl original" data-refid="hk-gzi" id="gzi"><span class="type">Hint</span></a><div class="hidden-content tex2jax_ignore" id="hk-gzi"><div class="hint solution-like"><p id="skX">Look at the symmetry group of an equilateral triangle or a square.</p></div></div>
+</div></article><article class="exercise exercise-like" id="gkN"><h6 class="heading"><span class="codenumber">11<span class="period">.</span></span></h6>
+<p id="qKf">Give an example of three different groups with eight elements. Why are the groups different?</p>
+<div class="solutions">
+<a data-knowl="" class="id-ref hint-knowl original" data-refid="hk-sNA" id="sNA"><span class="type">Hint</span></a><div class="hidden-content tex2jax_ignore" id="hk-sNA"><div class="hint solution-like"><p id="Ysg">The are five different groups of order 8.</p></div></div>
+</div></article><article class="exercise exercise-like" id="MrW"><h6 class="heading"><span class="codenumber">12<span class="period">.</span></span></h6>
+<p id="WRo">Show that there are \(n!\) permutations of a set containing \(n\) items.</p>
+<div class="solutions">
+<a data-knowl="" class="id-ref hint-knowl original" data-refid="hk-FbS" id="FbS"><span class="type">Hint</span></a><div class="hidden-content tex2jax_ignore" id="hk-FbS"><div class="hint solution-like">
+<p id="Ezp">Let</p>
+<div class="displaymath">
+\begin{equation*}
+\sigma =
+\begin{pmatrix}
+1 &amp; 2 &amp; \cdots &amp; n \\ a_1 &amp; a_2 &amp; \cdots &amp; a_n
+\end{pmatrix}
+\end{equation*}
+</div>
+<p data-braille="continuation">be in \(S_n\text{.}\) All of the \(a_i\)s must be distinct. There are \(n\) ways to choose \(a_1\text{,}\) \(n - 1\) ways to choose \(a_2, \ldots\text{,}\) 2 ways to choose \(a_{n - 1}\text{,}\) and only one way to choose \(a_n\text{.}\) Therefore, we can form \(\sigma\) in \(n(n - 1) \cdots 2 \cdot 1 = n!\) ways.</p>
+</div></div>
+</div></article><article class="exercise exercise-like" id="szf"><h6 class="heading"><span class="codenumber">13<span class="period">.</span></span></h6>
+<p id="CYx">Show that</p>
+<div class="displaymath">
+\begin{equation*}
+0 + a  \equiv a + 0  \equiv a \pmod{ n }
+\end{equation*}
+</div>
+<p data-braille="continuation">for all \(a \in {\mathbb Z}_n\text{.}\)</p></article><article class="exercise exercise-like" id="YGo"><h6 class="heading"><span class="codenumber">14<span class="period">.</span></span></h6>
+<p id="jfG">Prove that there is a multiplicative identity for the integers modulo \(n\text{:}\)</p>
+<div class="displaymath">
+\begin{equation*}
+a \cdot  1   \equiv  a \pmod{n}\text{.}
+\end{equation*}
+</div></article><article class="exercise exercise-like" id="ENx"><h6 class="heading"><span class="codenumber">15<span class="period">.</span></span></h6>
+<p id="PmP">For each \(a \in {\mathbb Z}_n\) find an element \(b \in {\mathbb Z}_n\) such that</p>
+<div class="displaymath">
+\begin{equation*}
+a + b \equiv b + a  \equiv 0 \pmod{ n}\text{.}
+\end{equation*}
+</div></article><article class="exercise exercise-like" id="kUG"><h6 class="heading"><span class="codenumber">16<span class="period">.</span></span></h6>
+<p id="vtY">Show that addition and multiplication mod \(n\) are well defined operations. That is, show that the operations do not depend on the choice of the representative from the equivalence classes mod \(n\text{.}\)</p></article><article class="exercise exercise-like" id="RbP"><h6 class="heading"><span class="codenumber">17<span class="period">.</span></span></h6>
+<p id="bBh">Show that addition and multiplication mod \(n\) are associative operations.</p></article><article class="exercise exercise-like" id="xiY"><h6 class="heading"><span class="codenumber">18<span class="period">.</span></span></h6>
+<p id="HIq">Show that multiplication distributes over addition modulo \(n\text{:}\)</p>
+<div class="displaymath">
+\begin{equation*}
+a(b  + c)  \equiv ab + ac  \pmod{n}\text{.}
+\end{equation*}
+</div></article><article class="exercise exercise-like" id="dqh"><h6 class="heading"><span class="codenumber">19<span class="period">.</span></span></h6>
+<p id="nPz">Let \(a\) and \(b\) be elements in a group \(G\text{.}\) Prove that \(ab^na^{-1} = (aba^{-1})^n\) for \(n \in \mathbb Z\text{.}\)</p>
+<div class="solutions">
+<a data-knowl="" class="id-ref hint-knowl original" data-refid="hk-Chm" id="Chm"><span class="type">Hint</span></a><div class="hidden-content tex2jax_ignore" id="hk-Chm"><div class="hint solution-like"><div class="displaymath" id="kGy">
+\begin{align*}
+(aba^{-1})^n &amp; = (aba^{-1})(aba^{-1}) \cdots (aba^{-1})\\
+&amp; = ab(aa^{-1})b(aa^{-1})b \cdots b(aa^{-1})ba^{-1}\\
+&amp; = ab^na^{-1}\text{.}
+\end{align*}
+</div></div></div>
+</div></article><article class="exercise exercise-like" id="Jxq"><h6 class="heading"><span class="codenumber">20<span class="period">.</span></span></h6>
+<p id="TWI">Let \(U(n)\) be the group of units in \({\mathbb Z}_n\text{.}\) If \(n \gt 2\text{,}\) prove that there is an element \(k \in U(n)\) such that \(k^2 = 1\) and \(k \neq 1\text{.}\)</p></article><article class="exercise exercise-like" id="pEz"><h6 class="heading"><span class="codenumber">21<span class="period">.</span></span></h6>
+<p id="AdR">Prove that the inverse of \(g _1 g_2 \cdots g_n\) is \(g_n^{-1} g_{n-1}^{-1} \cdots g_1^{-1}\text{.}\)</p></article><article class="exercise exercise-like" id="VLI"><h6 class="heading"><span class="codenumber">22<span class="period">.</span></span></h6>
+<p id="gla">Prove the remainder of <a class="xref" data-knowl="./knowl/proposition-group-equations.html" title="Proposition 2.21">Proposition 2.21</a> : if \(G\) is a group and \(a, b \in G\text{,}\) then the equation \(xa = b\) has a unique solution in \(G\text{.}\)</p></article><article class="exercise exercise-like" id="BSR"><h6 class="heading"><span class="codenumber">23<span class="period">.</span></span></h6>
+<p id="Msj">Prove <a class="xref" data-knowl="./knowl/theorem-exponent-laws.html" title="Theorem 2.23">Theorem 2.23</a> .</p></article><article class="exercise exercise-like" id="iaa"><h6 class="heading"><span class="codenumber">24<span class="period">.</span></span></h6>
+<p id="szs">Prove the right and left cancellation laws for a group \(G\text{;}\) that is, show that in the group \(G\text{,}\) \(ba = ca\) implies \(b = c\) and \(ab = ac\) implies \(b = c\) for elements \(a,
+b, c \in G\text{.}\)</p></article><article class="exercise exercise-like" id="Ohj"><h6 class="heading"><span class="codenumber">25<span class="period">.</span></span></h6>
+<p id="YGB">Show that if \(a^2 = e\) for all elements \(a\) in a group \(G\text{,}\) then \(G\) must be abelian.</p>
+<div class="solutions">
+<a data-knowl="" class="id-ref hint-knowl original" data-refid="hk-Tfx" id="Tfx"><span class="type">Hint</span></a><div class="hidden-content tex2jax_ignore" id="hk-Tfx"><div class="hint solution-like"><p id="QNH">Since \(abab = (ab)^2 = e = a^2 b^2 = aabb\text{,}\) we know that \(ba = ab\text{.}\)</p></div></div>
+</div></article><article class="exercise exercise-like" id="uos"><h6 class="heading"><span class="codenumber">26<span class="period">.</span></span></h6>
+<p id="ENK">Show that if \(G\) is a finite group of even order, then there is an \(a \in G\) such that \(a\) is not the identity and \(a^2 = e\text{.}\)</p></article><article class="exercise exercise-like" id="avB"><h6 class="heading"><span class="codenumber">27<span class="period">.</span></span></h6>
+<p id="kUT">Let \(G\) be a group and suppose that \((ab)^2 = a^2b^2\) for all \(a\) and \(b\) in \(G\text{.}\) Prove that \(G\) is an abelian group.</p></article><article class="exercise exercise-like" id="GCK"><h6 class="heading"><span class="codenumber">28<span class="period">.</span></span></h6>
+<p id="Rcc">Find all the subgroups of \({\mathbb Z}_3 \times {\mathbb Z}_3\text{.}\) Use this information to show that \({\mathbb Z}_3 \times {\mathbb Z}_3\) is not the same group as \({\mathbb Z}_9\text{.}\) (See <a class="xref" data-knowl="./knowl/example-groups-z2xz2.html" title="Example 2.28">Example 2.28</a> for a short description of the product of groups.)</p></article><article class="exercise exercise-like" id="mJT"><h6 class="heading"><span class="codenumber">29<span class="period">.</span></span></h6>
+<p id="xjl">Find all the subgroups of the symmetry group of an equilateral triangle.</p>
+<div class="solutions">
+<a data-knowl="" class="id-ref hint-knowl original" data-refid="hk-DWz" id="DWz"><span class="type">Hint</span></a><div class="hidden-content tex2jax_ignore" id="hk-DWz"><div class="hint solution-like"><p id="wUQ">\(H_1 = \{ \identity \}\text{,}\) \(H_2 = \{ \identity, \rho_1, \rho_2 \}\text{,}\) \(H_3 = \{ \identity, \mu_1 \}\text{,}\) \(H_4 = \{ \identity, \mu_2 \}\text{,}\) \(H_5 = \{ \identity, \mu_3 \}\text{,}\)      \(S_3\text{.}\)</p></div></div>
+</div></article><article class="exercise exercise-like" id="SRc"><h6 class="heading"><span class="codenumber">30<span class="period">.</span></span></h6>
+<p id="dqu">Compute the subgroups of the symmetry group of a square.</p></article><article class="exercise exercise-like" id="yYl"><h6 class="heading"><span class="codenumber">31<span class="period">.</span></span></h6>
+<p id="JxD">Let \(H = \{2^k : k \in {\mathbb Z} \}\text{.}\) Show that \(H\) is a subgroup of \({\mathbb Q}^*\text{.}\)</p></article><article class="exercise exercise-like" id="ffu"><h6 class="heading"><span class="codenumber">32<span class="period">.</span></span></h6>
+<p id="pEM">Let \(n = 0, 1, 2, \ldots\) and \(n {\mathbb Z} = \{ nk : k \in {\mathbb Z} \}\text{.}\) Prove that \(n {\mathbb Z}\) is a subgroup of \({\mathbb Z}\text{.}\) Show that these subgroups are the only subgroups of \(\mathbb{Z}\text{.}\)</p></article><article class="exercise exercise-like" id="LmD"><h6 class="heading"><span class="codenumber">33<span class="period">.</span></span></h6>
+<p id="VLV">Let \({\mathbb T} = \{ z \in {\mathbb C}^* : |z| =1 \}\text{.}\) Prove that \({\mathbb T}\) is a subgroup of \({\mathbb C}^*\text{.}\)</p></article><article class="exercise exercise-like" id="rtM"><h6 class="heading"><span class="codenumber">34<span class="period">.</span></span></h6>
+<p id="BTe">Let \(G\) consist of the \(2 \times 2\) matrices of the form</p>
+<div class="displaymath">
+\begin{equation*}
+\begin{pmatrix}
+\cos \theta &amp; -\sin \theta \\
+\sin \theta &amp; \cos \theta
+\end{pmatrix}\text{,}
+\end{equation*}
+</div>
+<p data-braille="continuation">where \(\theta \in {\mathbb R}\text{.}\) Prove that \(G\) is a subgroup of \(SL_2({\mathbb R})\text{.}\)</p></article><article class="exercise exercise-like" id="XAV"><h6 class="heading"><span class="codenumber">35<span class="period">.</span></span></h6>
+<p id="ian">Prove that</p>
+<div class="displaymath">
+\begin{equation*}
+G = \{ a + b \sqrt{2} : a, b \in {\mathbb Q} \text{ and } a \text{ and } b \text{ are not both zero} \}
+\end{equation*}
+</div>
+<p data-braille="continuation">is a subgroup of \({\mathbb R}^{\ast}\) under the group operation of multiplication.</p>
+<div class="solutions">
+<a data-knowl="" class="id-ref hint-knowl original" data-refid="hk-UUK" id="UUK"><span class="type">Hint</span></a><div class="hidden-content tex2jax_ignore" id="hk-UUK"><div class="hint solution-like"><p id="dbZ">The identity of \(G\) is \(1 = 1 + 0 \sqrt{2}\text{.}\) Since \((a + b \sqrt{2}\, )(c + d \sqrt{2}\, ) = (ac + 2bd) + (ad + bc)\sqrt{2}\text{,}\) \(G\) is closed under multiplication. Finally, \((a + b \sqrt{2}\, )^{-1} = a/(a^2 - 2b^2) - b\sqrt{2}/(a^2 - 2 b^2)\text{.}\)</p></div></div>
+</div></article><article class="exercise exercise-like" id="jPn"><h6 class="heading"><span class="codenumber">36<span class="period">.</span></span></h6>
+<p id="Ohw">Let \(G\) be the group of \(2 \times 2\) matrices under addition and</p>
+<div class="displaymath">
+\begin{equation*}
+H =
+\left\{
+\begin{pmatrix}
+a &amp; b \\
+c &amp; d
+\end{pmatrix} :
+a + d = 0
+\right\}\text{.}
+\end{equation*}
+</div>
+<p data-braille="continuation">Prove that \(H\) is a subgroup of \(G\text{.}\)</p></article><article class="exercise exercise-like" id="PWw"><h6 class="heading"><span class="codenumber">37<span class="period">.</span></span></h6>
+<p id="uoF">Prove or disprove: \(SL_2( {\mathbb Z} )\text{,}\) the set of \(2 \times 2\) matrices with integer entries and determinant one, is a subgroup of \(SL_2( {\mathbb R} )\text{.}\)</p></article><article class="exercise exercise-like" id="wdF"><h6 class="heading"><span class="codenumber">38<span class="period">.</span></span></h6>
+<p id="avO">List the subgroups of the quaternion group, \(Q_8\text{.}\)</p></article><article class="exercise exercise-like" id="ckO"><h6 class="heading"><span class="codenumber">39<span class="period">.</span></span></h6>
+<p id="GCX">Prove that the intersection of two subgroups of a group \(G\) is also a subgroup of \(G\text{.}\)</p></article><article class="exercise exercise-like" id="IrX"><h6 class="heading"><span class="codenumber">40<span class="period">.</span></span></h6>
+<p id="mKg">Prove or disprove: If \(H\) and \(K\) are subgroups of a group \(G\text{,}\) then \(H \cup K\) is a subgroup of \(G\text{.}\)</p>
+<div class="solutions">
+<a data-knowl="" class="id-ref hint-knowl original" data-refid="hk-FLM" id="FLM"><span class="type">Hint</span></a><div class="hidden-content tex2jax_ignore" id="hk-FLM"><div class="hint solution-like"><p id="Jji">Look at \(S_3\text{.}\)</p></div></div>
+</div></article><article class="exercise exercise-like" id="ozg"><h6 class="heading"><span class="codenumber">41<span class="period">.</span></span></h6>
+<p id="SRp">Prove or disprove: If \(H\) and \(K\) are subgroups of a group \(G\text{,}\) then \(H K = \{hk : h \in H \text{ and } k \in K \}\) is a subgroup of \(G\text{.}\) What if \(G\) is abelian?</p></article><article class="exercise exercise-like" id="UGp"><h6 class="heading"><span class="codenumber">42<span class="period">.</span></span></h6>
+<p id="yYy">Let \(G\) be a group and \(g \in G\text{.}\) Show that</p>
+<div class="displaymath">
+\begin{equation*}
+Z(G) = \{ x \in G : gx = xg \text{ for all } g \in G \}
+\end{equation*}
+</div>
+<p data-braille="continuation">is a subgroup of \(G\text{.}\) This subgroup is called the <dfn class="terminology">center</dfn> of \(G\text{.}\) </p></article><article class="exercise exercise-like" id="ANy"><h6 class="heading"><span class="codenumber">43<span class="period">.</span></span></h6>
+<p id="ffH">Let \(a\) and \(b\) be elements of a group \(G\text{.}\) If \(a^4 b = ba\) and \(a^3 = e\text{,}\) prove that \(ab = ba\text{.}\)</p>
+<div class="solutions">
+<a data-knowl="" class="id-ref hint-knowl original" data-refid="hk-eow" id="eow"><span class="type">Hint</span></a><div class="hidden-content tex2jax_ignore" id="hk-eow"><div class="hint solution-like"><p id="pqr">\(b a = a^4 b = a^3 a b = ab\)</p></div></div>
+</div></article><article class="exercise exercise-like" id="gUH"><h6 class="heading"><span class="codenumber">44<span class="period">.</span></span></h6>
+<p id="LmQ">Give an example of an infinite group in which every nontrivial subgroup is infinite.</p></article><article class="exercise exercise-like" id="NbQ"><h6 class="heading"><span class="codenumber">45<span class="period">.</span></span></h6>
+<p id="rtZ">If \(xy = x^{-1} y^{-1}\) for all \(x\) and \(y\) in \(G\text{,}\) prove that \(G\) must be abelian.</p></article><article class="exercise exercise-like" id="tiZ"><h6 class="heading"><span class="codenumber">46<span class="period">.</span></span></h6>
+<p id="XBi">Prove or disprove: Every proper subgroup of a nonabelian group is nonabelian.</p></article><article class="exercise exercise-like" id="Zqi"><h6 class="heading"><span class="codenumber">47<span class="period">.</span></span></h6>
+<p id="DIr">Let \(H\) be a subgroup of \(G\) and</p>
+<div class="displaymath">
+\begin{equation*}
+C(H) = \{ g \in G : gh = hg \text{ for all } h \in H \}\text{.}
+\end{equation*}
+</div>
+<p data-braille="continuation">Prove \(C(H)\) is a subgroup of \(G\text{.}\) This subgroup is called the <dfn class="terminology">centralizer</dfn> of \(H\) in \(G\text{.}\)</p></article><article class="exercise exercise-like" id="Fxr"><h6 class="heading"><span class="codenumber">48<span class="period">.</span></span></h6>
+<p id="jPA">Let \(H\) be a subgroup of \(G\text{.}\) If \(g \in G\text{,}\) show that \(gHg^{-1} = \{ghg^{-1} : h\in H\}\) is also a subgroup of \(G\text{.}\)</p></article><article class="exercise exercise-like" id="Ope"><h6 class="heading"><span class="codenumber">49<span class="period">.</span></span></h6>
+<p id="Sim">Prove or disprove each of the following statements.</p>
+<ol class="lower-alpha">
+<li id="UHg"><p id="iZg">All of the generators of \({\mathbb Z}_{60}\) are prime.</p></li>
+<li id="AOp"><p id="Pgp">\(U(8)\) is cyclic.</p></li>
+<li id="gVy"><p id="vny">\({\mathbb Q}\) is cyclic.</p></li>
+<li id="NcH"><p id="buH">If every proper subgroup of a group \(G\) is cyclic, then \(G\) is a cyclic group.</p></li>
+<li id="tjQ"><p id="HBQ">A group with a finite number of subgroups is finite.</p></li>
+</ol>
+<div class="solutions">
+<a data-knowl="" class="id-ref hint-knowl original" data-refid="hk-Ryf" id="Ryf"><span class="type">Hint</span></a><div class="hidden-content tex2jax_ignore" id="hk-Ryf"><div class="hint solution-like"><p id="dcQ">(a) False; (c) false; (e) true.</p></div></div>
+</div></article><article class="exercise exercise-like" id="uwn"><h6 class="heading"><span class="codenumber">50<span class="period">.</span></span></h6>
+<p id="ypv">Find the order of each of the following elements.</p>
+<ol class="lower-alpha cols2">
+<li id="ZqZ"><p id="nIZ">\(\displaystyle 5 \in {\mathbb Z}_{12}\)</p></li>
+<li id="Fyi"><p id="TQi">\(\displaystyle \sqrt{3} \in {\mathbb R}\)</p></li>
+<li id="lFr"><p id="zXr">\(\displaystyle \sqrt{3} \in {\mathbb R}^\ast\)</p></li>
+<li id="RMA"><p id="geA">\(\displaystyle -i \in {\mathbb C}^\ast\)</p></li>
+<li id="xTJ"><p id="MlJ">\(\displaystyle 72 \in {\mathbb Z}_{240}\)</p></li>
+<li id="eaS"><p id="ssS">\(\displaystyle 312 \in {\mathbb Z}_{471}\)</p></li>
+</ol>
+<div class="solutions">
+<a data-knowl="" class="id-ref hint-knowl original" data-refid="hk-dMx" id="dMx"><span class="type">Hint</span></a><div class="hidden-content tex2jax_ignore" id="hk-dMx"><div class="hint solution-like"><p id="JjZ">(a) \(12\text{;}\) (c) infinite; (e) \(10\text{.}\)</p></div></div>
+</div></article><article class="exercise exercise-like" id="aDw"><h6 class="heading"><span class="codenumber">51<span class="period">.</span></span></h6>
+<p id="ewE">List all of the elements in each of the following subgroups.</p>
+<ol class="lower-alpha">
+<li id="Kib"><p id="YAb">The subgroup of \({\mathbb Z}\) generated by \(7\)</p></li>
+<li id="qpk"><p id="EHk">The subgroup of \({\mathbb Z}_{24}\) generated by \(15\)</p></li>
+<li id="Wwt"><p id="kOt">All subgroups of \({\mathbb Z}_{12}\)</p></li>
+<li id="CDC"><p id="QVC">All subgroups of \({\mathbb Z}_{60}\)</p></li>
+<li id="iKL"><p id="xcL">All subgroups of \({\mathbb Z}_{13}\)</p></li>
+<li id="ORU"><p id="djU">All subgroups of \({\mathbb Z}_{48}\)</p></li>
+<li id="uZd"><p id="Jrd">The subgroup generated by 3 in \(U(20)\)</p></li>
+<li id="bgm"><p id="pym">The subgroup generated by 5 in \(U(18)\)</p></li>
+<li id="Hnv"><p id="VFv">The subgroup of \({\mathbb R}^\ast\) generated by \(7\)</p></li>
+<li id="nuE"><p id="BME">The subgroup of \({\mathbb C}^\ast\) generated by \(i\) where \(i^2 = -1\)</p></li>
+<li id="TBN"><p id="hTN">The subgroup of \({\mathbb C}^\ast\) generated by \(2i\)</p></li>
+<li id="zIW"><p id="OaW">The subgroup of \({\mathbb C}^\ast\) generated by \((1 + i) / \sqrt{2}\)</p></li>
+<li id="fQf"><p id="uif">The subgroup of \({\mathbb C}^\ast\) generated by \((1 + \sqrt{3}\, i) / 2\)</p></li>
+</ol>
+<div class="solutions">
+<a data-knowl="" class="id-ref hint-knowl original" data-refid="hk-qaP" id="qaP"><span class="type">Hint</span></a><div class="hidden-content tex2jax_ignore" id="hk-qaP"><div class="hint solution-like"><p id="pri">(a) \(7 {\mathbb Z} = \{ \ldots, -7, 0, 7, 14, \ldots \}\text{;}\) (b) \(\{ 0, 3, 6, 9, 12, 15, 18, 21 \}\text{;}\) (c) \(\{ 0 \}\text{,}\) \(\{ 0, 6 \}\text{,}\)      \(\{ 0, 4, 8 \}\text{,}\)      \(\{ 0, 3, 6, 9 \}\text{,}\) \(\{ 0, 2, 4, 6, 8, 10 \}\text{;}\) (g) \(\{ 1, 3, 7, 9 \}\text{;}\) (j) \(\{ 1, -1, i, -i \}\text{.}\)</p></div></div>
+</div></article><article class="exercise exercise-like" id="GKF"><h6 class="heading"><span class="codenumber">52<span class="period">.</span></span></h6>
+<p id="KDN">Find the subgroups of \(GL_2( {\mathbb R })\) generated by each of the following matrices.</p>
+<ol class="lower-alpha cols3">
+<li id="tTK"><p id="ceB">\(\displaystyle \displaystyle \begin{pmatrix}
+0 &amp; 1 \\
+-1 &amp; 0
+\end{pmatrix}\)</p></li>
+<li id="aaT"><p id="IlK">\(\displaystyle \displaystyle
+\begin{pmatrix}
+0 &amp; 1/3 \\
+3 &amp; 0
+\end{pmatrix}\)</p></li>
+<li id="Gic"><p id="osT">\(\displaystyle \displaystyle
+\begin{pmatrix}
+1 &amp; -1 \\
+1 &amp; 0
+\end{pmatrix}\)</p></li>
+<li id="mpl"><p id="UAc">\(\displaystyle \displaystyle
+\begin{pmatrix}
+1 &amp; -1 \\
+0 &amp; 1
+\end{pmatrix}\)</p></li>
+<li id="Swu"><p id="AHl">\(\displaystyle \displaystyle
+\begin{pmatrix}
+1 &amp; -1 \\
+-1 &amp; 0
+\end{pmatrix}\)</p></li>
+<li id="yDD"><p id="gOu">\(\displaystyle \displaystyle
+\begin{pmatrix}
+\sqrt{3}/ 2 &amp; 1/2 \\
+-1/2 &amp; \sqrt{3}/2
+\end{pmatrix}\)</p></li>
+</ol>
+<div class="solutions">
+<a data-knowl="" class="id-ref hint-knowl original" data-refid="hk-Cph" id="Cph"><span class="type">Hint</span></a><div class="hidden-content tex2jax_ignore" id="hk-Cph"><div class="hint solution-like">
+<p id="Vyr">(a)</p>
+<div class="displaymath">
+\begin{equation*}
+\begin{pmatrix}
+1 &amp; 0 \\
+0 &amp; 1
+\end{pmatrix},
+\begin{pmatrix}
+-1 &amp; 0 \\
+0 &amp; -1
+\end{pmatrix},
+\begin{pmatrix}
+0 &amp; -1 \\
+1 &amp; 0
+\end{pmatrix},
+\begin{pmatrix}
+0 &amp; 1 \\
+-1 &amp; 0
+\end{pmatrix}\text{.}
+\end{equation*}
+</div>
+<p id="BFA">(c)</p>
+<div class="displaymath">
+\begin{equation*}
+\begin{pmatrix}
+1 &amp; 0 \\
+0 &amp; 1
+\end{pmatrix},
+\begin{pmatrix}
+1 &amp; -1 \\
+1 &amp; 0
+\end{pmatrix},
+\begin{pmatrix}
+-1 &amp; 1 \\
+-1 &amp; 0
+\end{pmatrix}, \\
+\begin{pmatrix}
+0 &amp; 1 \\
+-1 &amp; 1
+\end{pmatrix},
+\begin{pmatrix}
+0 &amp; -1 \\
+1 &amp; -1
+\end{pmatrix},
+\begin{pmatrix}
+-1 &amp; 0 \\
+0 &amp; -1
+\end{pmatrix}\text{.}
+\end{equation*}
+</div>
+</div></div>
+</div></article><article class="exercise exercise-like" id="mRO"><h6 class="heading"><span class="codenumber">53<span class="period">.</span></span></h6>
+<p id="qKW">Find the order of every element in \({\mathbb Z}_{18}\text{.}\)</p></article><article class="exercise exercise-like" id="SYX"><h6 class="heading"><span class="codenumber">54<span class="period">.</span></span></h6>
+<p id="WSf">Find the order of every element in the symmetry group of the square, \(D_4\text{.}\)</p></article><article class="exercise exercise-like" id="zgg"><h6 class="heading"><span class="codenumber">55<span class="period">.</span></span></h6>
+<p id="CZo">What are all of the cyclic subgroups of the quaternion group, \(Q_8\text{?}\)</p></article><article class="exercise exercise-like" id="fnp"><h6 class="heading"><span class="codenumber">56<span class="period">.</span></span></h6>
+<p id="jgx">List all of the cyclic subgroups of \(U(30)\text{.}\)</p></article><article class="exercise exercise-like" id="Luy"><h6 class="heading"><span class="codenumber">57<span class="period">.</span></span></h6>
+<p id="PnG">List every generator of each subgroup of order 8 in \({\mathbb Z}_{32}\text{.}\)</p></article><article class="exercise exercise-like" id="rBH"><h6 class="heading"><span class="codenumber">58<span class="period">.</span></span></h6>
+<p id="vuP">Find all elements of finite order in each of the following groups. Here the “\(\ast\)” indicates the set with zero removed.</p>
+<ol class="lower-alpha cols3">
+<li id="PBO"><p id="xMF">\(\displaystyle {\mathbb Z}\)</p></li>
+<li id="vIX"><p id="dTO">\(\displaystyle {\mathbb Q}^\ast\)</p></li>
+<li id="bQg"><p id="KaX">\(\displaystyle {\mathbb R}^\ast\)</p></li>
+</ol>
+<div class="solutions">
+<a data-knowl="" class="id-ref hint-knowl original" data-refid="hk-Tns" id="Tns"><span class="type">Hint</span></a><div class="hidden-content tex2jax_ignore" id="hk-Tns"><div class="hint solution-like"><p id="hMJ">(a) \(0\text{;}\) (b) \(1, -1\text{.}\)</p></div></div>
+</div></article><article class="exercise exercise-like" id="XIQ"><h6 class="heading"><span class="codenumber">59<span class="period">.</span></span></h6>
+<p id="bBY">If \(a^{24} =e\) in a group \(G\text{,}\) what are the possible orders of \(a\text{?}\)</p>
+<div class="solutions">
+<a data-knowl="" class="id-ref hint-knowl original" data-refid="hk-fBK" id="fBK"><span class="type">Hint</span></a><div class="hidden-content tex2jax_ignore" id="hk-fBK"><div class="hint solution-like"><p id="NTS">\(1, 2, 3, 4, 6, 8, 12, 24\text{.}\)</p></div></div>
+</div></article><article class="exercise exercise-like" id="DPZ"><h6 class="heading"><span class="codenumber">60<span class="period">.</span></span></h6>
+<p id="HJh">Find a cyclic group with exactly one generator. Can you find cyclic groups with exactly two generators? Four generators? How about \(n\) generators?</p></article><article class="exercise exercise-like" id="jXi"><h6 class="heading"><span class="codenumber">61<span class="period">.</span></span></h6>
+<p id="nQq">For \(n \leq 20\text{,}\) which groups \(U(n)\) are cyclic? Make a conjecture as to what is true in general. Can you prove your conjecture?</p></article><article class="exercise exercise-like" id="Qer"><h6 class="heading"><span class="codenumber">62<span class="period">.</span></span></h6>
+<p id="TXz">Let</p>
+<div class="displaymath">
+\begin{equation*}
+A =
+\begin{pmatrix}
+0 &amp; 1 \\
+-1 &amp; 0
+\end{pmatrix}
+\qquad \text{and} \qquad
+B =
+\begin{pmatrix}
+0 &amp; -1 \\
+1 &amp; -1
+\end{pmatrix}
+\end{equation*}
+</div>
+<p data-braille="continuation">be elements in \(GL_2( {\mathbb R} )\text{.}\) Show that \(A\) and \(B\) have finite orders but \(AB\) does not.</p></article><article class="exercise exercise-like" id="UOk"><h6 class="heading"><span class="codenumber">63<span class="period">.</span></span></h6>
+<p id="YHs">Prove each of the following statements.</p>
+<ol class="lower-alpha cols2">
+<li id="Tgo"><p id="Brf">\(\displaystyle |z| = | \overline{z}|\)</p></li>
+<li id="znx"><p id="hyo">\(\displaystyle z \overline{z} = |z|^2\)</p></li>
+<li id="fuG"><p id="NFx">\(\displaystyle z^{-1} = \overline{z} / |z|^2\)</p></li>
+<li id="LBP"><p id="tMG">\(\displaystyle |z +w| \leq |z| + |w|\)</p></li>
+<li id="rIY"><p id="ZTP">\(\displaystyle |z - w| \geq | |z| - |w||\)</p></li>
+<li id="XQh"><p id="mih">\(\displaystyle |z w| = |z| |w|\)</p></li>
+</ol></article><article class="exercise exercise-like" id="AVt"><h6 class="heading"><span class="codenumber">64<span class="period">.</span></span></h6>
+<p id="EOB">List and graph the 6th roots of unity. What are the generators of this group? What are the primitive 6th roots of unity?</p></article><article class="exercise exercise-like" id="hcC"><h6 class="heading"><span class="codenumber">65<span class="period">.</span></span></h6>
+<p id="kVK">List and graph the 5th roots of unity. What are the generators of this group? What are the primitive 5th roots of unity?</p></article><article class="exercise exercise-like" id="NjL"><h6 class="heading"><span class="codenumber">66<span class="period">.</span></span></h6>
+<p id="RcT">Calculate each of the following.</p>
+<ol class="lower-alpha cols2">
+<li id="oOs"><p id="Dgs">\(\displaystyle 292^{3171} \pmod{ 582}\)</p></li>
+<li id="UVB"><p id="jnB">\(\displaystyle 2557^{ 341} \pmod{ 5681}\)</p></li>
+<li id="BcK"><p id="PuK">\(\displaystyle 2071^{ 9521} \pmod{ 4724}\)</p></li>
+<li id="hjT"><p id="vBT">\(\displaystyle 971^{ 321} \pmod{ 765}\)</p></li>
+</ol>
+<div class="solutions">
+<a data-knowl="" class="id-ref hint-knowl original" data-refid="hk-ZMy" id="ZMy"><span class="type">Hint</span></a><div class="hidden-content tex2jax_ignore" id="hk-ZMy"><div class="hint solution-like"><p id="SDL">(a) \(292\text{;}\) (c) \(1523\text{.}\)</p></div></div>
+</div></article><article class="exercise exercise-like" id="tqU"><h6 class="heading"><span class="codenumber">67<span class="period">.</span></span></h6>
+<p id="xkc">Let \(a, b \in G\text{.}\) Prove the following statements.</p>
+<ol class="lower-alpha">
+<li id="Nrc"><p id="bJc">The order of \(a\) is the same as the order of \(a^{-1}\text{.}\)</p></li>
+<li id="tyl"><p id="HQl">For all \(g \in G\text{,}\)          \(|a| = |g^{-1}ag|\text{.}\)</p></li>
+<li id="ZFu"><p id="nXu">The order of \(ab\) is the same as the order of \(ba\text{.}\)</p></li>
+</ol></article><article class="exercise exercise-like" id="Zyd"><h6 class="heading"><span class="codenumber">68<span class="period">.</span></span></h6>
+<p id="drl">Let \(p\) and \(q\) be distinct primes. How many generators does \({\mathbb Z}_{pq}\) have?</p></article><article class="exercise exercise-like" id="FFm"><h6 class="heading"><span class="codenumber">69<span class="period">.</span></span></h6>
+<p id="Jyu">Let \(p\) be prime and \(r\) be a positive integer. How many generators does \({\mathbb Z}_{p^r}\) have?</p></article><article class="exercise exercise-like" id="lMv"><h6 class="heading"><span class="codenumber">70<span class="period">.</span></span></h6>
+<p id="pFD">Prove that \({\mathbb Z}_{p}\) has no nontrivial subgroups if \(p\) is prime.</p></article><article class="exercise exercise-like" id="RTE"><h6 class="heading"><span class="codenumber">71<span class="period">.</span></span></h6>
+<p id="VMM">If \(g\) and \(h\) have orders \(15\) and \(16\) respectively in a group \(G\text{,}\) what is the order of \(\langle g \rangle \cap \langle h \rangle \text{?}\)</p>
+<div class="solutions">
+<a data-knowl="" class="id-ref hint-knowl original" data-refid="hk-KDA" id="KDA"><span class="type">Hint</span></a><div class="hidden-content tex2jax_ignore" id="hk-KDA"><div class="hint solution-like"><p id="yKU">\(|\langle g \rangle \cap \langle h \rangle| = 1\text{.}\)</p></div></div>
+</div></article><article class="exercise exercise-like" id="yaN"><h6 class="heading"><span class="codenumber">72<span class="period">.</span></span></h6>
+<p id="BTV">Let \(a\) be an element in a group \(G\text{.}\) What is a generator for the subgroup \(\langle a^m \rangle \cap \langle a^n \rangle\text{?}\)</p></article><article class="exercise exercise-like" id="ehW"><h6 class="heading"><span class="codenumber">73<span class="period">.</span></span></h6>
+<p id="ibe">Prove that \({\mathbb Z}_n\) has an even number of generators for \(n \gt 2\text{.}\)</p></article><article class="exercise exercise-like" id="Kpf"><h6 class="heading"><span class="codenumber">74<span class="period">.</span></span></h6>
+<p id="Oin">Suppose that \(G\) is a group and let \(a\text{,}\)    \(b \in G\text{.}\) Prove that if \(|a| = m\) and \(|b| = n\) with \(\gcd(m,n) = 1\text{,}\) then \(\langle a \rangle \cap \langle b \rangle = \{ e \}\text{.}\)</p></article><article class="exercise exercise-like" id="qwo"><h6 class="heading"><span class="codenumber">75<span class="period">.</span></span></h6>
+<p id="upw">Let \(G\) be an abelian group. Show that the elements of finite order in \(G\) form a subgroup. This subgroup is called the <dfn class="terminology">torsion subgroup</dfn> of \(G\text{.}\)</p>
+<div class="solutions">
+<a data-knowl="" class="id-ref hint-knowl original" data-refid="hk-Pnt" id="Pnt"><span class="type">Hint</span></a><div class="hidden-content tex2jax_ignore" id="hk-Pnt"><div class="hint solution-like"><p id="eSd">The identity element in any group has finite order. Let \(g, h \in G\) have orders \(m\) and \(n\text{,}\) respectively. Since \((g^{-1})^m = e\) and \((gh)^{mn} = e\text{,}\) the elements of finite order in \(G\) form a subgroup of \(G\text{.}\)</p></div></div>
+</div></article><article class="exercise exercise-like" id="WDx"><h6 class="heading"><span class="codenumber">76<span class="period">.</span></span></h6>
+<p id="awF">Let \(G\) be a finite cyclic group of order \(n\) generated by \(x\text{.}\) Show that if \(y = x^k\) where \(\gcd(k,n) = 1\text{,}\) then \(y\) must be a generator of \(G\text{.}\)</p></article><article class="exercise exercise-like" id="CKG"><h6 class="heading"><span class="codenumber">77<span class="period">.</span></span></h6>
+<p id="GDO">If \(G\) is an abelian group that contains a pair of cyclic subgroups of order \(2\text{,}\) show that \(G\) must contain a subgroup of order \(4\text{.}\) Does this subgroup have to be cyclic?</p></article><article class="exercise exercise-like" id="iRP"><h6 class="heading"><span class="codenumber">78<span class="period">.</span></span></h6>
+<p id="mKX">Let \(G\) be an abelian group of order \(pq\) where \(\gcd(p,q) = 1\text{.}\) If \(G\) contains elements \(a\) and \(b\) of order \(p\) and \(q\) respectively, then show that \(G\) is cyclic.</p></article><article class="exercise exercise-like" id="OYY"><h6 class="heading"><span class="codenumber">79<span class="period">.</span></span></h6>
+<p id="SSg">Prove that the subgroups of \(\mathbb Z\) are exactly \(n{\mathbb Z}\) for \(n = 0, 1, 2, \ldots\text{.}\)</p></article><article class="exercise exercise-like" id="vgh"><h6 class="heading"><span class="codenumber">80<span class="period">.</span></span></h6>
+<p id="yZp">Prove that the generators of \({\mathbb Z}_n\) are the integers \(r\) such that \(1 \leq r \lt n\) and \(\gcd(r,n) = 1\text{.}\)</p></article><article class="exercise exercise-like" id="bnq"><h6 class="heading"><span class="codenumber">81<span class="period">.</span></span></h6>
+<p id="fgy">Prove that if \(G\) has no proper nontrivial subgroups, then \(G\) is a cyclic group.</p>
+<div class="solutions">
+<a data-knowl="" class="id-ref hint-knowl original" data-refid="hk-glE" id="glE"><span class="type">Hint</span></a><div class="hidden-content tex2jax_ignore" id="hk-glE"><div class="hint solution-like"><p id="KZm">If \(g\) is an element distinct from the identity in \(G\text{,}\) \(g\) must generate \(G\text{;}\) otherwise, \(\langle g \rangle\) is a nontrivial proper subgroup of \(G\text{.}\)</p></div></div>
+</div></article><article class="exercise exercise-like" id="Huz"><h6 class="heading"><span class="codenumber">82<span class="period">.</span></span></h6>
+<p id="LnH">Prove that the order of an element in a cyclic group \(G\) must divide the order of the group.</p></article><article class="exercise exercise-like" id="nBI"><h6 class="heading"><span class="codenumber">83<span class="period">.</span></span></h6>
+<p id="ruQ">Prove that if \(G\) is a cyclic group of order \(m\) and \(d \mid m\text{,}\) then \(G\) must have a subgroup of order \(d\text{.}\)</p></article><article class="exercise exercise-like" id="TIR"><h6 class="heading"><span class="codenumber">84<span class="period">.</span></span></h6>
+<p id="XBZ">For what integers \(n\) is \(-1\) an \(n\)th root of unity?</p></article><article class="exercise exercise-like" id="zQa"><h6 class="heading"><span class="codenumber">85<span class="period">.</span></span></h6>
+<p id="DJi">If \(z = r( \cos \theta + i \sin \theta)\) and \(w = s(\cos \phi + i \sin \phi)\) are two nonzero complex numbers, show that</p>
+<div class="displaymath">
+\begin{equation*}
+zw = rs[ \cos( \theta + \phi) + i \sin( \theta + \phi)]\text{.}
+\end{equation*}
+</div></article><article class="exercise exercise-like" id="fXj"><h6 class="heading"><span class="codenumber">86<span class="period">.</span></span></h6>
+<p id="jQr">Prove that the circle group is a subgroup of \({\mathbb C}^*\text{.}\)</p></article><article class="exercise exercise-like" id="Mes"><h6 class="heading"><span class="codenumber">87<span class="period">.</span></span></h6>
+<p id="PXA">Prove that the \(n\)th roots of unity form a cyclic subgroup of \({\mathbb T}\) of order \(n\text{.}\)</p></article><article class="exercise exercise-like" id="slB"><h6 class="heading"><span class="codenumber">88<span class="period">.</span></span></h6>
+<p id="weJ">Let \(\alpha \in \mathbb T\text{.}\) Prove that \(\alpha^m =1\) and \(\alpha^n = 1\) if and only if \(\alpha^d = 1\) for \(d = \gcd(m,n)\text{.}\)</p></article><article class="exercise exercise-like" id="YsK"><h6 class="heading"><span class="codenumber">89<span class="period">.</span></span></h6>
+<p id="clS">Let \(z \in {\mathbb C}^\ast\text{.}\) If \(|z| \neq 1\text{,}\) prove that the order of \(z\) is infinite.</p></article><article class="exercise exercise-like" id="EzT"><h6 class="heading"><span class="codenumber">90<span class="period">.</span></span></h6>
+<p id="Itb">Let \(z =\cos \theta + i \sin \theta\) be in \({\mathbb T}\) where \(\theta \in {\mathbb Q}\text{.}\) Prove that the order of \(z\) is infinite.</p></article><article class="exercise exercise-like" id="BzW"><h6 class="heading"><span class="codenumber">91<span class="period">.</span></span></h6>
+<p id="pVL">Find \((a_1, a_2, \ldots, a_n)^{-1}\text{.}\)</p>
+<div class="solutions">
+<a data-knowl="" class="id-ref hint-knowl original" data-refid="hk-WMB" id="WMB"><span class="type">Hint</span></a><div class="hidden-content tex2jax_ignore" id="hk-WMB"><div class="hint solution-like"><p id="tlQ">\((a_1, a_2, \ldots, a_n)^{-1} = (a_1, a_{n}, a_{n-1}, \ldots, a_2)\)</p></div></div>
+</div></article><article class="exercise exercise-like" id="Syh"><h6 class="heading"><span class="codenumber">92<span class="period">.</span></span></h6>
+<p id="GTW">What are the possible cycle structures of elements of \(A_5\text{?}\) What about \(A_6\text{?}\)</p>
+<div class="solutions">
+<a data-knowl="" class="id-ref hint-knowl original" data-refid="hk-ggn" id="ggn"><span class="type">Hint</span></a><div class="hidden-content tex2jax_ignore" id="hk-ggn"><div class="hint solution-like">
+<p id="lHr">Permutations of the form</p>
+<div class="displaymath">
+\begin{equation*}
+(1), (a_1, a_2)(a_3, a_4), (a_1, a_2, a_3), (a_1, a_2, a_3, a_4, a_5)
+\end{equation*}
+</div>
+<p data-braille="continuation">are possible for \(A_5\text{.}\)</p>
+</div></div>
+</div></article><article class="exercise exercise-like" id="yFq"><h6 class="heading"><span class="codenumber">93<span class="period">.</span></span></h6>
+<p id="nbf">Let \(\sigma \in S_n\) have order \(n\text{.}\) Show that for all integers \(i\) and \(j\text{,}\) \(\sigma^i = \sigma^j\) if and only if \(i \equiv j \pmod{n}\text{.}\)</p></article><article class="exercise exercise-like" id="eMz"><h6 class="heading"><span class="codenumber">94<span class="period">.</span></span></h6>
+<p id="Tio">Let \(\sigma = \sigma_1 \cdots \sigma_m \in S_n\) be the product of disjoint cycles. Prove that the order of \(\sigma\) is the least common multiple of the lengths of the cycles \(\sigma_1, \ldots, \sigma_m\text{.}\)</p></article><article class="exercise exercise-like" id="KTI"><h6 class="heading"><span class="codenumber">95<span class="period">.</span></span></h6>
+<p id="zpx">Using cycle notation, list the elements in \(D_5\text{.}\) What are \(r\) and \(s\text{?}\) Write every element as a product of \(r\) and \(s\text{.}\)</p></article><article class="exercise exercise-like" id="raR"><h6 class="heading"><span class="codenumber">96<span class="period">.</span></span></h6>
+<p id="fwG">If the diagonals of a cube are labeled as <a class="xref" data-knowl="./knowl/figure-motions.html" title="Figure 2.74">Figure 2.74</a> , to which motion of the cube does the permutation \((12)(34)\) correspond? What about the other permutations of the diagonals?</p></article><article class="exercise exercise-like" id="Xia"><h6 class="heading"><span class="codenumber">97<span class="period">.</span></span></h6>
+<p id="LDP">Find the group of rigid motions of a tetrahedron. Show that this is the same group as \(A_4\text{.}\)</p></article><article class="exercise exercise-like" id="Dpj"><h6 class="heading"><span class="codenumber">98<span class="period">.</span></span></h6>
+<p id="rKY">Prove that \(S_n\) is nonabelian for \(n \geq 3\text{.}\)</p>
+<div class="solutions">
+<a data-knowl="" class="id-ref hint-knowl original" data-refid="hk-xey" id="xey"><span class="type">Hint</span></a><div class="hidden-content tex2jax_ignore" id="hk-xey"><div class="hint solution-like"><p id="ROA">Calculate \((123)(12)\) and \((12)(123)\text{.}\)</p></div></div>
+</div></article><article class="exercise exercise-like" id="jws"><h6 class="heading"><span class="codenumber">99<span class="period">.</span></span></h6>
+<p id="XSh">Show that \(A_n\) is nonabelian for \(n \geq 4\text{.}\)</p></article><article class="exercise exercise-like" id="PDB"><h6 class="heading"><span class="codenumber">100<span class="period">.</span></span></h6>
+<p id="DZq">Prove that \(D_n\) is nonabelian for \(n \geq 3\text{.}\)</p></article><article class="exercise exercise-like" id="vKK"><h6 class="heading"><span class="codenumber">101<span class="period">.</span></span></h6>
+<p id="kgz">Let \(\sigma \in S_n\) be a cycle. Prove that \(\sigma\) can be written as the product of at most \(n-1\) transpositions.</p></article><article class="exercise exercise-like" id="bRT"><h6 class="heading"><span class="codenumber">102<span class="period">.</span></span></h6>
+<p id="QnI">Let \(\sigma \in S_n\text{.}\) If \(\sigma\) is not a cycle, prove that \(\sigma\) can be written as the product of at most \(n - 2\) transpositions.</p></article><article class="exercise exercise-like" id="HZc"><h6 class="heading"><span class="codenumber">103<span class="period">.</span></span></h6>
+<p id="wuR">If \(\sigma\) can be expressed as an odd number of transpositions, show that any other product of transpositions equaling \(\sigma\) must also be odd.</p></article><article class="exercise exercise-like" id="ogl"><h6 class="heading"><span class="codenumber">104<span class="period">.</span></span></h6>
+<p id="cCa">If \(\sigma\) is a cycle of odd length, prove that \(\sigma^2\) is also a cycle.</p></article><article class="exercise exercise-like" id="Unu"><h6 class="heading"><span class="codenumber">105<span class="period">.</span></span></h6>
+<p id="IJj">Show that a \(3\)-cycle is an even permutation.</p></article><article class="exercise exercise-like" id="AuD"><h6 class="heading"><span class="codenumber">106<span class="period">.</span></span></h6>
+<p id="oQs">Prove that in \(A_n\) with \(n \geq 3\text{,}\) any permutation is a product of cycles of length \(3\text{.}\)</p>
+<div class="solutions">
+<a data-knowl="" class="id-ref hint-knowl original" data-refid="hk-arb" id="arb"><span class="type">Hint</span></a><div class="hidden-content tex2jax_ignore" id="hk-arb"><div class="hint solution-like"><p id="xVJ">Consider the cases \((ab)(bc)\) and \((ab)(cd)\text{.}\)</p></div></div>
+</div></article><article class="exercise exercise-like" id="gBM"><h6 class="heading"><span class="codenumber">107<span class="period">.</span></span></h6>
+<p id="UXB">Prove that any element in \(S_n\) can be written as a finite product of the following permutations.</p>
+<ol class="lower-alpha">
+<li id="ijV"><p id="ZeE">\(\displaystyle (1 2), (13), \ldots, (1n)\)</p></li>
+<li id="Ore"><p id="FlN">\(\displaystyle (1 2), (23), \ldots, (n- 1,n)\)</p></li>
+<li id="uyn"><p id="lsW">\(\displaystyle (12), (1 2 \ldots n )\)</p></li>
+</ol></article><article class="exercise exercise-like" id="MIV"><h6 class="heading"><span class="codenumber">108<span class="period">.</span></span></h6>
+<p id="BeK">Let \(G\) be a group and define a map \(\lambda_g : G \rightarrow G\) by \(\lambda_g(a) = g a\text{.}\) Prove that \(\lambda_g\) is a permutation of \(G\text{.}\)</p></article><article class="exercise exercise-like" id="sQe"><h6 class="heading"><span class="codenumber">109<span class="period">.</span></span></h6>
+<p id="hlT">Prove that there exist \(n!\) permutations of a set containing \(n\) elements.</p></article><article class="exercise exercise-like" id="YXn"><h6 class="heading"><span class="codenumber">110<span class="period">.</span></span></h6>
+<p id="Ntc">Recall that the <dfn class="terminology">center</dfn> of a group \(G\) is</p>
+<div class="displaymath">
+\begin{equation*}
+Z(G) = \{ g \in G : gx = xg \text{ for all } x \in G \}\text{.}
+\end{equation*}
+</div>
+<p data-braille="continuation">Find the center of \(D_8\text{.}\) What about the center of \(D_{10}\text{?}\) What is the center of \(D_n\text{?}\)</p></article><article class="exercise exercise-like" id="Few"><h6 class="heading"><span class="codenumber">111<span class="period">.</span></span></h6>
+<p id="tAl">Let \(\tau = (a_1, a_2, \ldots,
+a_k)\) be a cycle of length \(k\text{.}\)</p>
+<ol class="lower-alpha">
+<li id="TaX">
+<p id="JVG">Prove that if \(\sigma\) is any permutation, then</p>
+<div class="displaymath">
+\begin{equation*}
+\sigma \tau \sigma^{-1 } = ( \sigma(a_1), \sigma(a_2), \ldots, \sigma(a_k))
+\end{equation*}
+</div>
+<p data-braille="continuation">is a cycle of length \(k\text{.}\)</p>
+</li>
+<li id="zig"><p id="qcP">Let \(\mu\) be a cycle of length \(k\text{.}\) Prove that there is a permutation \(\sigma\) such that \(\sigma \tau \sigma^{-1 } = \mu\text{.}\)</p></li>
+</ol>
+<div class="solutions">
+<a data-knowl="" class="id-ref hint-knowl original" data-refid="hk-Lid" id="Lid"><span class="type">Hint</span></a><div class="hidden-content tex2jax_ignore" id="hk-Lid"><div class="hint solution-like"><p id="ecS">For (a), show that \(\sigma \tau \sigma^{-1 }(\sigma(a_i)) = \sigma(a_{i + 1})\text{.}\)</p></div></div>
+</div></article><article class="exercise exercise-like" id="llF"><h6 class="heading"><span class="codenumber">112<span class="period">.</span></span></h6>
+<p id="ZHu">For \(\alpha\) and \(\beta\) in \(S_n\text{,}\) define \(\alpha \sim \beta\) if there exists an \(\sigma \in S_n\) such that \(\sigma \alpha \sigma^{-1} = \beta\text{.}\) Show that \(\sim\) is an equivalence relation on \(S_n\text{.}\)</p></article><article class="exercise exercise-like" id="RsO"><h6 class="heading"><span class="codenumber">113<span class="period">.</span></span></h6>
+<p id="FOD">Let \(\sigma \in S_X\text{.}\) If \(\sigma^n(x) = y\) for some \(n \in \mathbb Z\text{,}\) we will say that \(x \sim y\text{.}\)</p>
+<ol class="lower-alpha">
+<li id="rDH"><p id="iyq">Show that \(\sim\) is an equivalence relation on \(X\text{.}\)</p></li>
+<li id="DRZ">
+<p id="uMI">Define the <dfn class="terminology">orbit</dfn> of \(x \in X\) under \(\sigma \in S_X\) to be the set</p>
+<div class="displaymath">
+\begin{equation*}
+{\mathcal O}_{x, \sigma} = \{ y : x \sim y  \}\text{.}
+\end{equation*}
+</div>
+<p data-braille="continuation">Compute the orbits of each element in \(\{1, 2, 3, 4, 5\}\) under each of the following elements in \(S_5\text{:}\)</p>
+<div class="displaymath">
+\begin{align*}
+\alpha &amp; = (1254)\\
+\beta &amp; = (123)(45)\\
+\gamma &amp; = (13)(25)\text{.}
+\end{align*}
+</div>
+</li>
+<li id="jZi"><p id="aTR">If \({\mathcal O}_{x, \sigma} \cap {\mathcal O}_{y, \sigma} \neq \emptyset\text{,}\) prove that \({\mathcal O}_{x, \sigma} = {\mathcal O}_{y, \sigma}\text{.}\) The orbits under a permutation \(\sigma\) are the equivalence classes corresponding to the equivalence relation \(\sim\text{.}\)</p></li>
+<li id="Qgr"><p id="Hba">A subgroup \(H\) of \(S_X\) is <dfn class="terminology">transitive</dfn> if for every \(x, y \in X\text{,}\) there exists a \(\sigma \in H\) such that \(\sigma(x) = y\text{.}\) Prove that \(\langle \sigma \rangle\) is transitive if and only if \({\mathcal O}_{x, \sigma} = X\) for some \(x \in X\text{.}\)</p></li>
+</ol></article><article class="exercise exercise-like" id="xzX"><h6 class="heading"><span class="codenumber">114<span class="period">.</span></span></h6>
+<p id="lVM">Let \(\alpha \in S_n\) for \(n \geq 3\text{.}\) If \(\alpha \beta = \beta \alpha\) for all \(\beta \in S_n\text{,}\) prove that \(\alpha\) must be the identity permutation; hence, the center of \(S_n\) is the trivial subgroup.</p></article><article class="exercise exercise-like" id="dHg"><h6 class="heading"><span class="codenumber">115<span class="period">.</span></span></h6>
+<p id="ScV">If \(\alpha\) is even, prove that \(\alpha^{-1}\) is also even. Does a corresponding result hold if \(\alpha\) is odd?</p></article><article class="exercise exercise-like" id="AIV"><h6 class="heading"><span class="codenumber">116<span class="period">.</span></span></h6>
+<p id="gQe">If \(\sigma \in A_n\) and \(\tau \in S_n\text{,}\) show that \(\tau^{-1} \sigma \tau \in A_n\text{.}\)</p></article><article class="exercise exercise-like" id="JOp"><h6 class="heading"><span class="codenumber">117<span class="period">.</span></span></h6>
+<p id="yke">Show that \(\alpha^{-1} \beta^{-1} \alpha \beta\) is even for \(\alpha, \beta \in S_n\text{.}\)</p></article><article class="exercise exercise-like" id="pVy"><h6 class="heading"><span class="codenumber">118<span class="period">.</span></span></h6>
+<p id="ern">Let \(r\) and \(s\) be the elements in \(D_n\) described in <a class="xref" data-knowl="./knowl/theorem-dn-generator.html" title="Theorem 2.67">Theorem 2.67</a></p>
+<ol class="lower-alpha">
+<li id="AXt"><p id="rSc">Show that \(srs = r^{-1}\text{.}\)</p></li>
+<li id="heC"><p id="XZl">Show that \(r^k s = s r^{-k}\) in \(D_n\text{.}\)</p></li>
+<li id="NlL"><p id="Egu">Prove that the order of \(r^k \in D_n\) is \(n / \gcd(k,n)\text{.}\)</p></li>
+</ol></article></section></div></main>
+</div>
+<script src="https://unpkg.com/prismjs@v1.22.0/components/prism-core.min.js"></script><script src="https://unpkg.com/prismjs@v1.22.0/plugins/autoloader/prism-autoloader.min.js"></script>
+</body>
+</html>

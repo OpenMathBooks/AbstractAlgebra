@@ -1,0 +1,327 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<section xml:id="notes-week7" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>Week 7: February 24-28</title>
+  <introduction>
+    <p>
+      Monday is the in-class half of exam 1.
+    </p>
+  </introduction>
+  <subsection xml:id="notes-2-26">
+    <title>Wednesday: Cayley's Theorem</title>
+    <p>
+				Main question: What do the roots of <m>x^5 - 5x - 2</m> look like? Is there something analogous to the quadratic formula that will tell us the roots?
+    </p>
+
+    <p>
+				Approach: Describe the splitting field <m>E</m>, and consider <m>G(E/\Q)</m> and its subgroups. Use properties of groups to say something interesting about the subgroups. Translate this back to say something interesting about the splitting field (and its subfields). Translate that to say something about the polynomial.
+    </p>
+
+    <p>
+				But before we can do that, we need to remind ourselves about groups and learn some more advanced tolambdacs in group theory. Let us begin.
+      <ul>
+        <li>
+          <p>
+				Remember the definition of a group. There are three axioms.
+          </p>
+        </li>
+
+        <li>
+          <p>
+				Some examples to keep in mind: <m>D_4</m>,            <m>S_3</m>,            <m>\mathbb Z_n</m> (infinite groups like <m>\mathbb Z</m>,            <m>\mathbb Q</m>, etc will be of less interest).
+          </p>
+        </li>
+
+        <li>
+          <p>
+				How should we <em>represent</em> our groups? Remember that there are lots of groups that look different but end up being the same (isomorphic). So we should think a bit about how to present groups in some standard way.
+          </p>
+        </li>
+
+        <li>
+          <p>
+				    Do the activity: Cayley Permutations.
+          </p>
+        </li>
+
+        <li>
+          <p>
+				    One example of a group from last semester was <m>S_n</m>, the group of permutations on <m>n</m> elements. The symmetric groups, and subgroups of them, are nice to work with, since it is relatively easy to say how to multiply elements.
+          </p>
+        </li>
+
+        <li>
+          <p>
+				    You might wonder if there are any other groups. In some sense the answer is yes: <m>D_4</m>, <m>\mathbb Z_7</m>, <m>\mathbb Z</m>, <m>\mathbb R^*</m>, etc. But some of these turned out to be isomorphic to a symmetric group or at least a subgroup of a symmetric group. Is this always the case?
+          </p>
+        </li>
+
+        <li>
+          <p>
+				    Surprisingly YES! Cayley’s theorem says that every group is isomorphic to a group of permutations. That is, to a subgroup of some symmetric group. In fact, if <m>|G| = n</m> (that is, <m>G</m> has exactly <m>n</m> elements) then <m>G</m> is isomorphic to a subgroup of <m>S_n</m>.
+          </p>
+        </li>
+
+        <li>
+          <p>
+				    Example: Find a group of permutations isomorphic to <m>G = \{a,b,c,d\}</m> whose table is given below
+          </p>
+
+          <table>
+            <caption></caption>
+            <tabular>
+              <row header="yes">
+                <cell halign="center"></cell>
+                <cell halign="center">
+                  <m>a</m>
+                </cell>
+                <cell halign="center">
+                  <m>b</m>
+                </cell>
+                <cell halign="center">
+                  <m>c</m>
+                </cell>
+                <cell halign="center">
+                  <m>d</m>
+                </cell>
+              </row>
+              <row class="odd">
+                <cell halign="center">
+                  <m>a</m>
+                </cell>
+                <cell halign="center">
+                  <m>a</m>
+                </cell>
+                <cell halign="center">
+                  <m>b</m>
+                </cell>
+                <cell halign="center">
+                  <m>c</m>
+                </cell>
+                <cell halign="center">
+                  <m>d</m>
+                </cell>
+              </row>
+              <row class="even">
+                <cell halign="center">
+                  <m>b</m>
+                </cell>
+                <cell halign="center">
+                  <m>b</m>
+                </cell>
+                <cell halign="center">
+                  <m>a</m>
+                </cell>
+                <cell halign="center">
+                  <m>d</m>
+                </cell>
+                <cell halign="center">
+                  <m>c</m>
+                </cell>
+              </row>
+              <row class="odd">
+                <cell halign="center">
+                  <m>c</m>
+                </cell>
+                <cell halign="center">
+                  <m>c</m>
+                </cell>
+                <cell halign="center">
+                  <m>d</m>
+                </cell>
+                <cell halign="center">
+                  <m>a</m>
+                </cell>
+                <cell halign="center">
+                  <m>b</m>
+                </cell>
+              </row>
+              <row class="even">
+                <cell halign="center">
+                  <m>d</m>
+                </cell>
+                <cell halign="center">
+                  <m>d</m>
+                </cell>
+                <cell halign="center">
+                  <m>c</m>
+                </cell>
+                <cell halign="center">
+                  <m>b</m>
+                </cell>
+                <cell halign="center">
+                  <m>a</m>
+                </cell>
+              </row>
+            </tabular>
+          </table>
+
+          <p>
+				    There are many answers. We will give what is called the (left) regular representation of <m>G</m>. We will show that <m>G</m> is a subgroup of <m>S_4</m>. The idea is that we think of the elements as 1, 2, 3, and 4, and assign to each element <m>g \in G</m> the permutation which moves each element to the result of multiplying it by <m>g</m> on the left.
+          </p>
+
+          <p>
+				    So we will have 4 permutations: <m>\lambda_a</m>,            <m>\lambda_b</m>,            <m>\lambda_c</m>, and <m>\lambda_d</m>.            <m>\lambda_a</m> says where each element goes when you multiply it by <m>a</m>. Well, the elements stay put, since <m>a</m> is the identity. So <m>\lambda_a = (1)</m>. Now <m>\lambda_b</m> is the permutation: <q>multiply by <m>b</m> on the left.</q> So <m>\lambda_b = (12)(34)</m>. This is because multiplying by <m>b</m> causes the first and second elements to swap places, and the 3rd and 4th as well: <m>ba = b</m>,          <m>bb = a</m>,          <m>bc = d</m> and <m>bd = c</m>. Next <m>\lambda_c = (13)(24)</m> and finally <m>\lambda_d = (14)(23)</m>.
+        </p>
+      </li>
+
+    </ul>
+  </p>
+
+
+  <paragraphs >
+    <title>Proof of Cayley’s Theorem</title>
+
+    <p>
+      <ul>
+        <li>
+          <p>
+					Cayley’s theorem says that every group is isomorphic to a group of permutations.
+          </p>
+        </li>
+
+        <li>
+          <p>
+					Let’s prove this. Now remember, to show <m>G</m> is isomorphic to <m>H</m>, we must find an isomorphism <m>\varphi:G \to H</m>. We want <m>H</m> to be a subgroup of <m>S_A</m>. So for each <m>a \in G</m>, we want <m>\varphi(a)</m> to be a permutation of the elements in <m>A</m>. What should <m>A</m> be?
+          </p>
+        </li>
+
+        <li>
+          <p>
+					How about...THE ELEMENTS OF <m>G</m>!?!?!? Yes, take <m>A</m> to be the set <m>G</m>.
+          </p>
+        </li>
+
+        <li>
+          <p>
+					Consider the permutation <m>\lambda_a:G \to G</m> defined by <m>\lambda_a(x) = ax</m>. That is, the permutation takes an element in <m>G</m> and sends it to the result of multiplying that element by <m>a</m> (on the left).
+          </p>
+        </li>
+
+        <li>
+          <p>
+            Now, what do we need to prove?
+            <ol>
+              <li>
+                <p>
+                  It better be that <m>\lambda_a</m> is a bijection (so that it is an element of <m>S_G</m>).  So each <m>\lambda_a</m> must be injective (one-to-one) and surjective (onto).
+                </p>
+              </li>
+              <li>
+                <p>
+                  We must show that <m>\bar G = \{\lambda_a \st a \in G\}</m> really is a subgroup of <m>S_G</m>.  So we need to show that <m>\bar G</m> has the identity, is closed under the operation (composition) and is closed under inverses.
+                </p>
+              </li>
+              <li>
+                <p>
+                  It's not enough that <m>\bar G</m> is a subgroup of <m>S_G</m>: it must be the right one.  That is, we must show that <m>\bar G \cong G</m>.  Let <m>\varphi:G \to \bar G</m> be defined by <m>\varphi(a) = \lambda_a</m>.  Now prove this is an isomorphism: <m>\varphi</m> is injective, surjective, and satisfies the homomorphism property.
+                </p>
+              </li>
+            </ol>
+          </p>
+        </li>
+
+      </ul>
+    </p>
+</paragraphs>
+</subsection>
+
+<subsection xml:id="notes-2-28">
+  <title>Even and Odd Permutations</title>
+  <p>
+    <ul>
+      <li>
+        <p>
+				Here is a bar bet. Suppose you have 5 playing cards (all with different numbers) laid out in a row. You and a friend take turns, swapping the position of any two cards at a time. You must work together to get the cards in the correct order and must do so after both of you have had an equal number of turns.
+        </p>
+      </li>
+
+      <li>
+        <p>
+				The bet: you won’t be able to do it, no matter what you try. That is, if I start with the correct arrangement. So how can I pick arrangements which will prevent you from completing the task?
+        </p>
+      </li>
+
+      <li>
+        <p>
+				Notice that what we are really doing is starting with a permutation of the set <m>\{1,2,3,4,5\}</m> and writing it as a product of transpositions. Actually, we are finding the inverse permutation, as a product of transpositions, but it should be clear that by reversing it (whatever that means) we get the original permutation as a product of transpositions. The requirement that both players move the same number of times asks for there to be an <em>even</em> number of transpositions.
+        </p>
+      </li>
+
+      <li>
+        <p>
+				If there are some initial configurations which can not be <q>solved</q> that means that the (inverse of the) permutation <em>cannot</em> be written as the product of an even number of transpositions. There are permutations like this.
+        </p>
+      </li>
+
+      <li>
+        <p>
+				In fact, a permutation can be written as an even number of transpositions if and only if it cannot be written as a product of an odd number of permutations. Given this fact, it makes sense to call a permutation itself either even or odd - doing so is well defined.
+        </p>
+      </li>
+
+
+      <li>
+        <p>
+				Let’s prove: No permutation can be written as both an even number and an odd number of transpositions.
+        </p>
+      </li>
+
+      <li>
+        <p>
+				Consider first how you might write the identity <m>\varepsilon</m> as a product of transpositions. We can prove that the number of transpositions must be even. We do this by rewriting the product using 2 fewer transpositions. This is enough, because it is obvious that <m>\varepsilon</m> can’t be written as one transposition.
+        </p>
+      </li>
+
+      <li>
+        <p>
+				The idea: fix some number <m>x</m> and find the last time <m>x</m> occurs (the right-most <m>x</m>). We move this <m>x</m> to the left until the transposition it is in is next to a copy of itself, in which case you can remove both copies.
+        </p>
+      </li>
+
+      <li>
+        <p>
+				Show this process with an example: <m>\varepsilon = (45)(23)(13)(25)(14)(24)(35)(15)</m> Use <m>x = 3</m>.
+        </p>
+      </li>
+
+      <li>
+        <p>
+				More precisely, what are the possibilities for the transposition directly to the left of <m>(xa)</m>. If it is <m>(xa)</m>, remove both. If it is <m>(bc)</m>, we can swap them, since disjoint cycles commute. If it is <m>(xb)</m>, then write <m>(xb)(xa) = (xa)(ab)</m>. If it is <m>(ab)</m>, then write <m>(ab)(xa) = (xb)(ab)</m>.
+        </p>
+      </li>
+
+      <li>
+        <p>
+				Once we know that <m>\varepsilon</m> is even, suppose <m>\pi</m> is both even and odd. Then so would be <m>\pi^{-1}</m>. But then <m>\pi\circ \pi^{-1}= \varepsilon</m> would be odd.
+        </p>
+      </li>
+
+      <li>
+        <p>
+				Neat. It now makes sense to call a permutation <em>even</em> if it can be written as an even number of permutations, and <em>odd</em> otherwise. That is, the <em>parity</em> of a permutation is a property of the permutation, not just the way we happen to write it.
+        </p>
+      </li>
+
+      <li>
+        <p>
+				We will let <m>A_n</m> denote the set of all even permutations in <m>S_n</m>. What would it take to prove that <m>A_n</m> is a subgroup of <m>S_n</m>?
+        </p>
+      </li>
+
+      <li>
+        <p>
+				How many elements are in <m>A_n</m>? That is, how many of the <m>n!</m> elements of <m>S_n</m> are even?
+        </p>
+      </li>
+
+      <li>
+        <p>
+				To prove that <m>|A_n| = \frac{1}{2}|S_n|</m>, we can define a bijection from the set of even permutations to the set of odd permutations. Do this by picking any transposition <m>\sigma</m> and sending <m>\tau</m> to <m>\sigma\tau</m> (that is, compose the even transposition <m>\tau</m> with <m>\sigma</m>, but this really just means writing <m>\sigma</m> at the start of the transposition <m>\tau</m>). We can prove this is injective and surjective. Thus the set of even permtuations will be the same size as the set of odd permutations.
+        </p>
+      </li>
+    </ul>
+  </p>
+
+</subsection>
+</section>
