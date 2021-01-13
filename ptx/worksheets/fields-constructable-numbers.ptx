@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<worksheet xmlns:xi="http://www.w3.org/2001/XInclude" margin="1in" bottom="1.25cm" xml:id="ws_fields-constructable-numbers" permid="tVH">
+<worksheet xmlns:xi="http://www.w3.org/2001/XInclude" margin="1in" bottom="1.25cm" solutions="no" xml:id="ws_fields-constructable-numbers" permid="tVH">
     <title>Activity: Constructible Numbers</title>
 
     <introduction permid="gXv">
@@ -45,7 +45,7 @@
         </p>
       </statement>
       <solution permid="xVG">
-        
+
       </solution>
     </exercise>
 

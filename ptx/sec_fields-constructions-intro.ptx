@@ -322,11 +322,11 @@
             <!-- Clarified where <m>\alpha_i</m> lives - TWJ 4/23/2011 -->
         
         <p permid="llp">
-          Now if we want the field of <em>all</em> constructible numbers, we need to extend this process forever.  This shows that the field of constructible numbers is not a <q>finite</q> extension of <m>\Q</m>, although it is still an <em>algebraic</em> extension.
+          Now if we want the field of <em>all</em> constructible numbers, we need to extend this process forever.  As we will soon see, this shows that the field of constructible numbers is not a <q>finite</q> extension of <m>\Q</m>, although it is still an <em>algebraic</em> extension.  (We will define these terms in the upcoming sections.)
         </p>      
               
         <p permid="Rsy">
-          What does all of this have to do with solving the problems of doubling the cube, squaring the circle, and trisecting an angle?  To answer this question we need to use what we have developed about the <em>size</em> of a field extension: its <term>degree</term>. 
+          What does all of this have to do with solving the problems of doubling the cube, squaring the circle, and trisecting an angle?  To answer this question we need to develop a notion of <em>size</em> of a field extension, which we will call its <term>degree</term>.  It will turn out that the size of an extension is intimately tied to the degree of the polynomials which have roots in the extension.  But we are getting ahead of ourselves.  In the next section we will re-introduce some basics of fields and their relation to factoring polynomials.
         </p>
       </subsection>
 
