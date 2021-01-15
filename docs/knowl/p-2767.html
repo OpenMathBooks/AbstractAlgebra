@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2021-01-13T09:12:36-07:00       *-->
+<!--*       on 2021-01-14T16:35:04-07:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -15,13 +15,28 @@
 </head>
 <body>
 <h6 xmlns:svg="http://www.w3.org/2000/svg" class="heading"><span class="type">Paragraph</span></h6>
-<p>The polynomial \(x^n - 1\) is solvable by radicals over \({\mathbb Q}\text{.}\) The roots of this polynomial are \(1, \omega, \omega^2, \ldots, \omega^{n - 1}\text{,}\) where</p>
+<p>The group \({\mathbb Z}_{60}\) has  a composition series</p>
 <div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
 \begin{equation*}
-\omega = \cos\left( \frac{2 \pi}{n} \right) + i \sin\left( \frac{2 \pi}{n} \right)\text{.}
+{\mathbb Z}_{60} \supset \langle 3 \rangle \supset  \langle 15 \rangle \supset \langle 30 \rangle  \supset \{ 0 \}
 \end{equation*}
 </div>
-<p data-braille="continuation">The splitting field of \(x^n - 1\) over \({\mathbb Q}\) is \({\mathbb Q}(\omega)\text{.}\)</p>
-<span class="incontext"><a href="section-galois-applications.html#TNr">in-context</a></span>
+<p data-braille="continuation">with factor groups</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{align*}
+{\mathbb Z}_{60} / \langle 3 \rangle &amp; \cong  {\mathbb Z}_{3}\\
+\langle 3 \rangle / \langle 15 \rangle &amp; \cong  {\mathbb Z}_{5}\\
+\langle 15 \rangle / \langle 30 \rangle &amp; \cong  {\mathbb Z}_{2}\\
+\langle 30 \rangle / \{ 0 \} &amp; \cong  {\mathbb Z}_2\text{.}
+\end{align*}
+</div>
+<p data-braille="continuation">Since \({\mathbb Z}_{60}\) is an abelian group, this series is automatically a principal series. Notice that a composition series need not be unique. The series</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{equation*}
+{\mathbb Z}_{60} \supset \langle 2 \rangle \supset \langle 4 \rangle \supset  \langle 20 \rangle \supset \{ 0 \}
+\end{equation*}
+</div>
+<p data-braille="continuation">is also a composition series.</p>
+<span class="incontext"><a href="section-solvable-groups.html#rhv">in-context</a></span>
 </body>
 </html>

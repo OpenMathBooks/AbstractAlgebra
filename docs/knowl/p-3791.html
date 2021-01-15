@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2021-01-13T09:14:38-07:00       *-->
+<!--*       on 2021-01-14T16:36:19-07:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -15,13 +15,13 @@
 </head>
 <body>
 <h6 xmlns:svg="http://www.w3.org/2000/svg" class="heading"><span class="type">Paragraph</span></h6>
-<p>Now suppose that \(b = a_1 \vee \cdots \vee a_n\text{.}\) If \(a\) is an atom less than \(b\text{,}\)</p>
+<p>We first show that \(L\) is a poset under \(\preceq\text{.}\) Since \(a \vee a = a\text{,}\) \(a \preceq a\) and \(\preceq\) is reflexive. To show that \(\preceq\) is antisymmetric, let \(a \preceq b\) and \(b \preceq a\text{.}\) Then \(a \vee b = b\) and \(b \vee a = a\text{.}\)By the commutative law, \(b = a \vee b = b \vee a = a\text{.}\) Finally, we must show that \(\preceq\) is transitive. Let \(a \preceq b\) and \(b \preceq c\text{.}\) Then \(a \vee b = b\) and \(b \vee c = c\text{.}\) Thus,</p>
 <div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
 \begin{equation*}
-a = a \wedge b  = a \wedge( a_1 \vee \cdots \vee a_n ) = (a \wedge a_1) \vee \cdots \vee ( a \wedge a_n )\text{.}
+a \vee c = a \vee (b \vee c ) = ( a \vee b) \vee c = b \vee c = c\text{,}
 \end{equation*}
 </div>
-<p data-braille="continuation">But each term is \(O\) or \(a\) with \(a \wedge a_i\) occurring for only one \(a_i\text{.}\) Hence, by <a class="xref" data-knowl="./knowl/lemma-zero-vee.html" title="Lemma 18.19">Lemma 18.19</a>, \(a = a_i\) for some \(i\text{.}\)</p>
-<span class="incontext"><a href="section-boolean-algebras.html#hWa">in-context</a></span>
+<p data-braille="continuation">or \(a \preceq c\text{.}\)</p>
+<span class="incontext"><a href="section-boolean-lattices.html#zZE">in-context</a></span>
 </body>
 </html>

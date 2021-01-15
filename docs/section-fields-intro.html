@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2021-01-13T09:02:54-07:00       *-->
+<!--*       on 2021-01-14T16:30:18-07:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -11,7 +11,7 @@
 <html lang="en-US">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>AATA Introduction</title>
+<title>AATA A Review of Rings and Fields</title>
 <meta name="Keywords" content="Authored in PreTeXt">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <script src="https://sagecell.sagemath.org/embedded_sagecell.js"></script><script type="text/x-mathjax-config">
@@ -192,7 +192,7 @@ MathJax.Hub.Config({
 <li class="link">
 <a href="fields.html" data-scroll="pNh"><span class="codenumber">8</span> <span class="title">Fields</span></a><ul>
 <li><a href="section-constructions.html" data-scroll="ctw">Geometric Constructions</a></li>
-<li><a href="section-fields-intro.html" data-scroll="GTt" class="active">Introduction</a></li>
+<li><a href="section-fields-intro.html" data-scroll="GTt" class="active">A Review of Rings and Fields</a></li>
 <li><a href="section-extension-fields.html" data-scroll="dGQ">Extension Fields</a></li>
 <li><a href="fields-subsection-algebraic-elements.html" data-scroll="acq">Algebraic Elements</a></li>
 <li><a href="section-fields-vectorspaces-review.html" data-scroll="UWY">A Review of Vector Spaces</a></li>
@@ -308,11 +308,78 @@ MathJax.Hub.Config({
 </ul></nav><div class="extras"><nav><a class="mathbook-link" href="https://pretextbook.org">Authored in PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" alt="Powered by MathJax"></a></nav></div>
 </div></div>
 <main class="main"><div id="content" class="pretext-content"><section xmlns:svg="http://www.w3.org/2000/svg" class="section" id="GTt"><h2 class="heading hide-type">
-<span class="type">Section</span> <span class="codenumber">8.2</span> <span class="title">Introduction</span>
+<span class="type">Section</span> <span class="codenumber">8.2</span> <span class="title">A Review of Rings and Fields</span>
 </h2>
+<section class="introduction" id="introduction-25"><p id="p-2200">The goal of this chapter is to develop a theory of fields that will help us answer questions like those about constructible numbers from the last section, as well as understand what fields can tell us about polynomials.</p>
+<p id="p-2201">Before we can dive into the new details of this study, let's review what we know about rings (since fields are a type of ring) and the quotient structures that rings have.  The next two activities ask you to go back over some topics already covered in the book, and you should feel free to review your notes or the earlier sections to help work through them.</p></section><section class="worksheet" id="YCl"><h3 class="heading hide-type">
+<span class="type">Worksheet</span> <span class="codenumber">8.2.1</span> <span class="title">Activity: Review of Rings and Quotient Rings</span>
+</h3>
+<section class="introduction" id="uFO"><p id="jbq">The goal of this activity is to remind ourselves of basic but crucially important definitions we will need in our study of fields.</p>
+<p id="Piz">You are asked to provide definitions. Some definitions will include terms that also should be defined.  Make sure that you know what every word in a definition means (if not, provide definitions for those words).  For example, a <dfn class="terminology">field</dfn> is a commutative division ring.  If you have not yet defined commutative ring and division ring, you should say what these mean.</p></section><article class="exercise exercise-like" id="aMX"><h6 class="heading"><span class="codenumber">1<span class="period">.</span></span></h6>
+<p id="vpI">Give a definition of a <dfn class="terminology">ring</dfn>.</p>
+<div class="solutions"></div></article><article class="exercise exercise-like" id="GUg"><h6 class="heading"><span class="codenumber">2<span class="period">.</span></span></h6>
+<p id="bwR">What is a <dfn class="terminology">commutative ring with unity</dfn>?  How is this different from a ring?  (Note, “unity” is also sometimes called “identity”.)</p>
+<div class="solutions"></div></article><article class="exercise exercise-like" id="nbp"><h6 class="heading"><span class="codenumber">3<span class="period">.</span></span></h6>
+<p id="HEa">What is a <dfn class="terminology">commutative division ring</dfn>?  What does “division” refer to here, and how is this different from a ring in general?</p>
+<div class="solutions"></div></article><article class="exercise exercise-like" id="Tiy"><h6 class="heading"><span class="codenumber">4<span class="period">.</span></span></h6>
+<p id="nLj">Give the definition of an <dfn class="terminology">integral domain</dfn>.  How does this relate to the other types of structures you defined above?</p>
+<div class="solutions"></div></article><article class="exercise exercise-like" id="zpH"><h6 class="heading"><span class="codenumber">5<span class="period">.</span></span></h6>
+<p id="TSs">What is an <dfn class="terminology">ideal</dfn>?  What is the difference between an ideal and a <dfn class="terminology">subring</dfn>?</p>
+<div class="solutions"></div></article><hr class="pagebreak">
+<article class="exercise exercise-like" id="fwQ"><h6 class="heading"><span class="codenumber">6<span class="period">.</span></span></h6>
+<p id="zZB">Consider the integers \(\Z\) (an integral doamin, right?).  What does the notation \(\langle 3 \rangle\) mean?  What sort of thing is this?  What is \(\langle r \rangle\) in general?</p>
+<div class="solutions"></div></article><article class="exercise exercise-like" id="LDZ"><h6 class="heading"><span class="codenumber">7<span class="period">.</span></span></h6>
+<p id="ggK">What is \(\Q[x]\text{?}\)  Then give an example of an ideal in \(\Q[x]\text{,}\) using proper notation and by listing out some of the elements in the ideal.</p>
+<div class="solutions"></div></article><article class="exercise exercise-like" id="rLi"><h6 class="heading"><span class="codenumber">8<span class="period">.</span></span></h6>
+<p id="MnT">Give the definition of a <dfn class="terminology">quotient ring</dfn> (i.e. a <dfn class="terminology">factor ring</dfn>).  What do elements of a quotient ring look like?  How are the operations defined?</p>
+<div class="solutions"></div></article><article class="exercise exercise-like" id="XSr"><h6 class="heading"><span class="codenumber">9<span class="period">.</span></span></h6>
+<p id="svc">Illustrate you you wrote about quotient rings above using two examples: First, \(\Z/\langle 3 \rangle\text{,}\) and then \(\Q[x]/\langle x^2 + 1\rangle\text{.}\)  How many elements are in each of these quotient rings?  What do the elements look like?  Show how to add/multiply elements.</p>
+<div class="solutions"></div></article></section><section class="worksheet" id="Kdh"><h3 class="heading hide-type">
+<span class="type">Worksheet</span> <span class="codenumber">8.2.2</span> <span class="title">Activity: Review of the Euclidean Algorithm</span>
+</h3>
+<section class="introduction" id="kQD"><p id="cgL">The goal of this activity is to remember how to use the Eulcidea Algorithm to find the greatest common divisor of two elements in a ring (numbers or polynomials, for us) and write the gcd as a linear combination of the two elements (which Bezout's lemma tells us we can do).</p>
+<article class="example example-like" id="EJu"><h6 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">8.8</span><span class="period">.</span>
+</h6>
+<p id="PSt">Let's find the gcd of \(945\) and \(2415\text{.}\) Repeatedly use the division algorithm:</p>
+<div class="displaymath">
+\begin{align*}
+2415 &amp; = 945 \cdot 2 + 525\\
+945 &amp; = 525 \cdot 1 + 420\\
+525 &amp; = 420 \cdot 1 + 105\\
+420 &amp; = 105 \cdot 4 + 0\text{.}
+\end{align*}
+</div>
+<p data-braille="continuation">Check: \(105\) divides all the quotients and remainders, and any other divisor of \(945\) and \(2415\) would also divide \(105\text{.}\) Therefore, \(\gcd( 945, 2415 ) = 105\text{.}\)</p>
+<p id="vZC">Now work backwards to obtain numbers \(r\) and \(s\) such that \(945 r + 2415 s = 105\text{.}\)</p>
+<div class="displaymath">
+\begin{align*}
+105 &amp; = 525 + (-1) \cdot 420\\
+&amp; = 525 + (-1) \cdot [945 + (-1) \cdot 525]\\
+&amp; = 2 \cdot 525 + (-1) \cdot 945\\
+&amp; = 2 \cdot [2415 + (-2) \cdot 945] + (-1) \cdot 945\\
+&amp; = 2 \cdot 2415 + (-5) \cdot 945\text{.}
+\end{align*}
+</div>
+<p data-braille="continuation">So \(r = -5\) and \(s= 2\text{.}\)</p></article></section><article class="exercise exercise-like" id="QXM"><h6 class="heading"><span class="codenumber">1<span class="period">.</span></span></h6>
+<p id="InU">Find the greatest common divisor of 471 and 564 using the Euclidean Algorithm and then find integers \(r\) and \(s\) such that \(\gcd(471,564) = 471r+564s\text{.}\)</p>
+<div class="solutions"></div></article><article class="exercise exercise-like" id="xeV"><h6 class="heading"><span class="codenumber">2<span class="period">.</span></span></h6>
+<p id="ovd">In the quotient ring \(\Z/\langle 564 \rangle\text{,}\) find an element \(a + \langle 564\rangle\) such that \((a+\langle 564\rangle)(471 + \langle 564\rangle) = 3 + \langle 564 \rangle\text{.}\)  Explain why the previous question is helpful here.</p>
+<div class="solutions"></div></article><article class="exercise exercise-like" id="dme"><h6 class="heading"><span class="codenumber">3<span class="period">.</span></span></h6>
+<p id="UCm">Is \(471 + \langle 564\rangle\) a unit in \(\Z/\langle 564\rangle\text{?}\)  Explain.</p>
+<div class="solutions"></div></article><hr class="pagebreak">
+<article class="exercise exercise-like" id="Jtn"><h6 class="heading"><span class="codenumber">4<span class="period">.</span></span></h6>
+<p id="AJv">In \(\Q[x]\text{,}\) find the gcd of the polynomials \(a(x) = x^3 + 1\) and \(b(x) = x^4 + x^3 + 2x^2 + x - 1\text{.}\)  Then express the gcd as a combination of the two polynomials (as in Bezout's lemma).</p>
+<div class="solutions"></div></article><article class="exercise exercise-like" id="pAw"><h6 class="heading"><span class="codenumber">5<span class="period">.</span></span></h6>
+<p id="gQE">Find the greatest common divisor of \(x^{24}-1\) and \(x^{15}-1\) in \(\Q[x]\text{,}\) and then express the gcd as a combination of the two polynomials.</p>
+<div class="solutions"></div></article><article class="exercise exercise-like" id="VHF"><h6 class="heading"><span class="codenumber">6<span class="period">.</span></span></h6>
+<p id="MXN">Find a coset \(a(x) + \langle x^{24}-1\rangle\) of \(\Q[x]/\langle x^{24}-1\rangle\) such that \((a(x) + \langle x^{24}-1\rangle)(x^{15}-1 + \langle x^{24}-1\rangle) = x^3-1 + \langle x^{24}-1\rangle\text{.}\)</p>
+<div class="solutions"></div></article></section><section class="subsection" id="subsec-fields-for-polynomials"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">8.2.3</span> <span class="title">Fields for Polynomials</span>
+</h3>
 <p id="ThL">Recall that a <dfn class="terminology">field</dfn> is a commutative division ring.  That is, a field is a type of ring (i.e., a set together with two operations, addition and multiplication, satisfying the ring axioms).  The ring is commutative (meaning <em class="emphasis">multiplication</em> commutes; addition is commutative in all rings), and every non-zero element in the ring has a multiplicative inverse.</p>
-<p id="zoU">We have seen only a few examples of fields so far: certainly the rational numbers \(\Q\) are a field, as are the real numbers \(\R\) and the complex numbers \(\C\text{.}\)  We have also considered <em class="emphasis">finite</em> fields such as \(\Z_3\text{,}\) \(\Z_5\text{,}\) and \(\Z_7\) (but not \(\Z_6\) which is not even an integral domain).</p>
-<p id="fwd">In fact, we have seen other fields as well: \(\Q[x]/\langle x - 1\rangle\) is a field, which happens to be isomorphic to \(\Q\text{.}\)  Another example is \(\Q[x]/\langle x^2 - 2\rangle\text{,}\) which is not isomorphic to \(\Q\text{,}\) but still happens to be a field.   When we considered quotient ring like these before, we focused on its structure as a quotient ring, not worrying too much about its structure as a field.  That is about to change.</p>
+<p id="zoU">A few examples of fields so far include the rational numbers \(\Q\text{,}\) as well as the real numbers \(\R\) and the complex numbers \(\C\text{.}\)  We have also considered <em class="emphasis">finite</em> fields such as \(\Z_3\text{,}\) \(\Z_5\text{,}\) and \(\Z_7\) (but not \(\Z_6\) which is not even an integral domain).</p>
+<p id="fwd">In fact, we have seen other fields as well: the quotient ring \(\Q[x]/\langle x - 1\rangle\) is a field, which happens to be isomorphic to \(\Q\text{.}\)  Another example is \(\Q[x]/\langle x^2 - 2\rangle\text{,}\) which is not isomorphic to \(\Q\text{,}\) but still happens to be a field.   When we considered quotient rings like these before, we focused on their structure as a quotient ring, not worrying too much about its structure as a field.  That is about to change.</p>
 <p id="LDm">A reasonable place to start is to consider how different fields relate to each other.  This is not unlike studying <em class="emphasis">subgroups</em> to better understand groups, or subrings and ideals to better understand rings.  One notable difference is that with fields, we often think about expanding a smaller field into a larger one, rather than restricting a larger group into a (smaller) subgroup.</p>
 <p id="rKv"> Given some field \(F\text{,}\) we can ask whether it is contained in a larger field. Think of the rational numbers, which reside inside the real numbers, while in turn, the real numbers live inside the complex numbers. We would say that the rational numbers are a <dfn class="terminology">subfield</dfn> of the real numbers, or say that the real numbers are a <dfn class="terminology">extension field</dfn> of the rational numbers.  Indeed, we often think of the real numbers as the field you get by adding all the “gaps” in the number line to the rational numbers; we extend the rationals to get the reals.  Similarly, if you start with the real numbers and “throw in” the imaginary number \(i\text{,}\) you get the complex numbers (an extension field of both \(\Q\) and \(\R\)).  The smaller field \(F\) is called the <dfn class="terminology">base field</dfn>. We write \(F \subset E\text{.}\)</p>
 <p id="XRE">Are there other fields hanging out around these traditional choices?  Is there a field <em class="emphasis">between</em> \(\Q\) and \(\R\text{?}\)  We will see that the answer to this is an overwhelming <em class="emphasis">yes</em>!  Most of what we  mean by <em class="emphasis">field theory</em> is precisely the study of fields that are extensions of \(\Q\text{.}\)</p>
@@ -352,7 +419,7 @@ p(x) = (x - \sqrt{2} ) (x + \sqrt{2} )( x - \sqrt{3})(x + \sqrt{3})\text{.}
 <p data-braille="continuation">This was found by rationalizing the denominator of \(\frac{1}{a+b\sqrt{2}}\) by multiplying by \(a-b\sqrt{2}\) in both the numerator and denominator.  That works fine for this simple example, but we will need to think about other methods for more complicated extensions.</p>
 <p id="wuo">Here is another example:</p>
 <article class="example example-like" id="qbC"><h6 class="heading">
-<span class="type">Example</span><span class="space"> </span><span class="codenumber">8.8</span><span class="period">.</span>
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">8.9</span><span class="period">.</span>
 </h6>
 <p id="oIb">Let's start with \(\Q(\sqrt{2})\) as our base field, and take another extension.  That is, let</p>
 <div class="displaymath">
@@ -361,9 +428,8 @@ F = {\mathbb Q}( \sqrt{2}\,) = \{ a + b \sqrt{2} : a, b \in {\mathbb Q} \}
 \end{equation*}
 </div>
 <p data-braille="continuation">and let \(E =  {\mathbb Q }( \sqrt{2} + \sqrt{3}\,)\) be the smallest field containing both \({\mathbb Q}\) and the real number \(\sqrt{2} + \sqrt{3}\text{.}\) For now, assume both \(E\) and \(F\) are fields, so they are both extension fields of the rational numbers. We claim that \(E\) is an extension field of \(F\text{.}\) To see this, we need only show that \(\sqrt{2}\) is in \(E\text{.}\) Since \(\sqrt{2} + \sqrt{3}\) is in \(E\text{,}\) \(1 / (\sqrt{2} + \sqrt{3}\,) = \sqrt{3} - \sqrt{2}\) must also be in \(E\text{.}\) Taking linear combinations of \(\sqrt{2} + \sqrt{3}\) and \(\sqrt{3} - \sqrt{2}\text{,}\) we find that \(\sqrt{2}\) and \(\sqrt{3}\) must both be in \(E\text{.}\)</p>
-<p id="naC">Note that this also shows that \(E\) is an extension field of \(\Q(\sqrt{3})\text{.}\)  Later we will consider how \(E\) relates to the fields \(\Q(\sqrt{2}, \sqrt{3})\text{,}\) the smallest field that contains both \(\sqrt{2}\) and \(\sqrt{3}\text{.}\)</p></article><p id="cBx">The example above make sense using real numbers we already know about.  Our next goal will be to simply add a arbitrary root of a polynomial, perhaps without even knowing which real (or complex) number that root is.  Surprisingly, this will work!  To get a feel for this, attempt the problems on the following activity.</p>
-<section class="worksheet" id="TwG"><h3 class="heading hide-type">
-<span class="type">Worksheet</span> <span class="codenumber"></span> <span class="title">Activity: Extending Fields to Factor</span>
+<p id="naC">Note that this also shows that \(E\) is an extension field of \(\Q(\sqrt{3})\text{.}\)  Later we will consider how \(E\) relates to the fields \(\Q(\sqrt{2}, \sqrt{3})\text{,}\) the smallest field that contains both \(\sqrt{2}\) and \(\sqrt{3}\text{.}\)</p></article><p id="cBx">The example above make sense using real numbers we already know about.  Our next goal will be to simply add a arbitrary root of a polynomial, perhaps without even knowing which real (or complex) number that root is.  Surprisingly, this will work!  To get a feel for this, attempt the problems on the following activity.</p></section><section class="worksheet" id="TwG"><h3 class="heading hide-type">
+<span class="type">Worksheet</span> <span class="codenumber">8.2.4</span> <span class="title">Activity: Extending Fields to Factor</span>
 </h3>
 <section class="introduction" id="BOB"><p id="xOC">Goal: Build the smallest field possible in which \(p(x) = x^3 + 3x^2 - x + 2\) is NOT irreducible.</p>
 <p id="dVL">Note that \(p(x)\) is irreducible over \(\Q\) because it has no roots in \(\Q\) (why is this and why is that enough?).  So let's invent a new number, call it \(\s\text{,}\) and insist that \(\s\) is a root of \(p(x)\text{.}\)  Then consider the smallest field \(E\) larger than \(\Q\) that also contains \(\s\text{.}\)</p></section><article class="exercise exercise-like" id="hVK"><h6 class="heading"><span class="codenumber">1<span class="period">.</span></span></h6>

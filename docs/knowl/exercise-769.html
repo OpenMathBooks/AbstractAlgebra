@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2021-01-13T09:13:07-07:00       *-->
+<!--*       on 2021-01-14T16:35:22-07:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -12,37 +12,25 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta name="robots" content="noindex, nofollow">
+<script>$(function () {
+    // Make *any* div with class 'sagecell-sage' an executable Sage cell
+    // Their results will be linked, only within language type
+    sagecell.makeSagecell({inputLocation: 'div.sagecell-sage',
+                           linked: true,
+                           languages: ['sage'],
+                           evalButtonText: 'Evaluate (Sage)'});
+});
+</script>
 </head>
 <body>
 <article class="exercise exercise-like"><h6 xmlns:svg="http://www.w3.org/2000/svg" class="heading">
-<span class="type">Exercise</span><span class="space"> </span><span class="codenumber">2<span class="period">.</span></span><span class="space"> </span><span class="title">Primality Testing.</span>
+<span class="type">Worksheet Exercise</span><span class="space"> </span><span class="codenumber">5<span class="period">.</span></span>
 </h6>
-<p>Recall <a class="xref" data-knowl="./knowl/theorem-little-fermat.html" title="Theorem 11.26: Fermat's Little Theorem">Fermat's Little Theorem 11.26</a> from <a href="section-groups-lagrange.html" class="internal" title="Section 11.2: Lagrange's Theorem and its consequences">Section 11.2</a>. Let \(p\) be prime with \(\gcd(a, p) = 1\text{.}\) Then \(a^{p-1} \equiv 1 \pmod{p}\text{.}\) We can use Fermat's Little Theorem as a screening test for primes. For example, \(15\) cannot be prime since</p>
-<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
-\begin{equation*}
-2^{15-1} \equiv 2^{14} \equiv 4 \pmod{15}\text{.}
-\end{equation*}
-</div>
-<p data-braille="continuation">However, \(17\) is a potential prime since</p>
-<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
-\begin{equation*}
-2^{17-1} \equiv 2^{16} \equiv 1 \pmod{17}\text{.}
-\end{equation*}
-</div>
-<p data-braille="continuation">We say that an odd composite number \(n\) is a <dfn xmlns:svg="http://www.w3.org/2000/svg" class="terminology">pseudoprime</dfn>  if</p>
-<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
-\begin{equation*}
-2^{n-1} \equiv 1 \pmod{n}\text{.}
-\end{equation*}
-</div>
-<p data-braille="continuation">Which of the following numbers are primes and which are pseudoprimes?</p>
-<ol class="lower-alpha cols3">
-<li><p xmlns:svg="http://www.w3.org/2000/svg">\(\displaystyle 342\)</p></li>
-<li><p xmlns:svg="http://www.w3.org/2000/svg">\(\displaystyle 811\)</p></li>
-<li><p xmlns:svg="http://www.w3.org/2000/svg">601</p></li>
-<li><p xmlns:svg="http://www.w3.org/2000/svg">\(\displaystyle 561\)</p></li>
-<li><p xmlns:svg="http://www.w3.org/2000/svg">\(\displaystyle 771\)</p></li>
-<li><p xmlns:svg="http://www.w3.org/2000/svg">\(\displaystyle 631\)</p></li>
-</ol></article><span class="incontext"><a href="crypt-exercises-additional.html#CQG">in-context</a></span>
+<p xmlns:svg="http://www.w3.org/2000/svg">The last piece of the puzzle is what to do with the number you get out of the decryption.  You will find some \(x\text{,}\) but need that to be translated into text you can read.</p>
+<p xmlns:svg="http://www.w3.org/2000/svg">This depends on the agreed upon method for translating a string of symbols into numbers.  For this lab, you can use the following code do decrypt the message:</p>
+<div class="sagecell-sage" id="cnC"><script type="text/x-sage">digits = decrypted.digits(base=128)
+letters = [chr(ascii) for ascii in digits]
+''.join(letters)
+</script></div></article><span class="incontext"><a href="ws_groups-RSA-lab.html#nSa">in-context</a></span>
 </body>
 </html>

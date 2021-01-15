@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2021-01-13T09:13:06-07:00       *-->
+<!--*       on 2021-01-14T16:35:22-07:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -12,38 +12,24 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta name="robots" content="noindex, nofollow">
+<script>$(function () {
+    // Make *any* div with class 'sagecell-sage' an executable Sage cell
+    // Their results will be linked, only within language type
+    sagecell.makeSagecell({inputLocation: 'div.sagecell-sage',
+                           linked: true,
+                           languages: ['sage'],
+                           evalButtonText: 'Evaluate (Sage)'});
+});
+</script>
 </head>
 <body>
 <article class="exercise exercise-like"><h6 xmlns:svg="http://www.w3.org/2000/svg" class="heading">
-<span class="type">Exercise</span><span class="space"> </span><span class="codenumber">1<span class="period">.</span></span>
+<span class="type">Worksheet Exercise</span><span class="space"> </span><span class="codenumber">4<span class="period">.</span></span>
 </h6>
-<p xmlns:svg="http://www.w3.org/2000/svg">A better algorithm for factoring odd positive integers is <dfn class="terminology">Fermat's factorization algorithm</dfn>. </p>
-<ol class="lower-alpha">
-<li>
-<p>Let \(n= ab\) be an odd composite number. Prove that \(n\) can be written as the difference of two perfect squares:</p>
-<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
-\begin{equation*}
-n = x^2 - y^2 = (x - y)(x + y)\text{.}
-\end{equation*}
-</div>
-<p data-braille="continuation">Consequently, a positive odd integer can be factored exactly when we can find integers \(x\) and \(y\) such that \(n = x^2 - y^2\text{.}\)</p>
-</li>
-<li><p xmlns:svg="http://www.w3.org/2000/svg">Write a program to implement the following factorization algorithm based on the observation in part (a). The expression <code class="code-inline tex2jax_ignore">ceiling(sqrt(n))</code>means the smallest integer greater than or equal to the square root of \(n\text{.}\) Write another program to do factorization using trial division and compare the speed of the two algorithms. Which algorithm is faster and why?</p></li>
-</ol>
-<div class="sidebyside"><div class="sbsrow" style="margin-left:0%;margin-right:0%;"><div class="sbspanel" style="width:100%;justify-content:flex-start;"><pre class="program"><code class="language-none">x := ceiling(sqrt(n))
-y := 1
-
-1 : while x^2 - y^2 &gt; n do
-    y := y + 1
-
-if x^2 - y^2 &lt; n then
-    x := x + 1
-    y := 1
-    goto 1
-else if x^2 - y^2 = 0 then
-    a := x - y
-    b := x + y
-    write n = a * b
-</code></pre></div></div></div></article><span class="incontext"><a href="crypt-exercises-additional.html#WJx">in-context</a></span>
+<p xmlns:svg="http://www.w3.org/2000/svg">When you get an encrypted message, you can assign it to the variable <code class="code-inline tex2jax_ignore">encrypted</code>and then decrypt it using the <code class="code-inline tex2jax_ignore">power_mod</code>function.</p>
+<div class="sagecell-sage" id="wgt"><script type="text/x-sage">encrypted = #paste encrypted message here
+decrypted = power_mod(encrypted, D, n)
+decrypted
+</script></div></article><span class="incontext"><a href="ws_groups-RSA-lab.html#HKR">in-context</a></span>
 </body>
 </html>

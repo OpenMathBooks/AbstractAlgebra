@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2021-01-13T09:14:41-07:00       *-->
+<!--*       on 2021-01-14T16:36:22-07:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -15,7 +15,13 @@
 </head>
 <body>
 <h6 xmlns:svg="http://www.w3.org/2000/svg" class="heading"><span class="type">Paragraph</span></h6>
-<p xmlns:svg="http://www.w3.org/2000/svg">Prove or disprove: \({\mathbb Z}\) is a poset under the relation \(a \preceq b\) if \(a \mid b\text{.}\)</p>
-<span class="incontext"><a href="exercises-boolean.html#pfa">in-context</a></span>
+<p>If \(b\) is an atom, let \(a =b\text{.}\) Otherwise, choose an element \(b_1\text{,}\) not equal to \(O\) or \(b\text{,}\) such that \(b_1 \preceq b\text{.}\) We are guaranteed that this is possible since \(b\) is not an atom. If \(b_1\) is an atom, then we are done. If not, choose \(b_2\text{,}\) not equal to \(O\) or \(b_1\text{,}\) such that  \(b_2 \preceq b_1\text{.}\) Again, if \(b_2\) is an atom, let \(a = b_2\text{.}\) Continuing this process, we can obtain a chain</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{equation*}
+O \preceq \cdots \preceq b_3 \preceq b_2 \preceq b_1 \preceq b\text{.}
+\end{equation*}
+</div>
+<p data-braille="continuation">Since \(B\) is a finite Boolean algebra, this chain must be finite. That is, for some \(k\text{,}\) \(b_k\) is an atom. Let \(a = b_k\text{.}\)</p>
+<span class="incontext"><a href="section-boolean-algebras.html#QXP">in-context</a></span>
 </body>
 </html>

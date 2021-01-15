@@ -2,18 +2,36 @@
 
 
 <section xmlns:xi="http://www.w3.org/2001/XInclude" xml:id="section-fields-intro" permid="GTt">
-  <title>Introduction</title>
+  <title>A Review of Rings and Fields</title>
+
+  <introduction>
+    <p>
+      The goal of this chapter is to develop a theory of fields that will help us answer questions like those about constructible numbers from the last section, as well as understand what fields can tell us about polynomials.
+    </p>
+
+    <p>
+      Before we can dive into the new details of this study, let's review what we know about rings (since fields are a type of ring) and the quotient structures that rings have.  The next two activities ask you to go back over some topics already covered in the book, and you should feel free to review your notes or the earlier sections to help work through them.
+    </p>
+  </introduction>
+
+    <xi:include href="worksheets/rings-review1.ptx" />
+    <xi:include href="worksheets/rings-review2.ptx" />
+
+  <subsection xml:id="subsec-fields-for-polynomials">
+    <title>Fields for Polynomials</title>
+    
+
 
     <p permid="ThL">
       Recall that a <term>field</term> is a commutative division ring.  That is, a field is a type of ring (i.e., a set together with two operations, addition and multiplication, satisfying the ring axioms).  The ring is commutative (meaning <em>multiplication</em> commutes; addition is commutative in all rings), and every non-zero element in the ring has a multiplicative inverse.
     </p>
     
     <p permid="zoU">
-      We have seen only a few examples of fields so far: certainly the rational numbers <m>\Q</m> are a field, as are the real numbers <m>\R</m> and the complex numbers <m>\C</m>.  We have also considered <em>finite</em> fields such as <m>\Z_3</m>, <m>\Z_5</m>, and <m>\Z_7</m> (but not <m>\Z_6</m> which is not even an integral domain). 
+      A few examples of fields so far include the rational numbers <m>\Q</m>, as well as the real numbers <m>\R</m> and the complex numbers <m>\C</m>.  We have also considered <em>finite</em> fields such as <m>\Z_3</m>, <m>\Z_5</m>, and <m>\Z_7</m> (but not <m>\Z_6</m> which is not even an integral domain). 
       
     </p>
     <p permid="fwd">
-      In fact, we have seen other fields as well: <m>\Q[x]/\langle x - 1\rangle</m> is a field, which happens to be isomorphic to <m>\Q</m>.  Another example is <m>\Q[x]/\langle x^2 - 2\rangle</m>, which is not isomorphic to <m>\Q</m>, but still happens to be a field.   When we considered quotient ring like these before, we focused on its structure as a quotient ring, not worrying too much about its structure as a field.  That is about to change.
+      In fact, we have seen other fields as well: the quotient ring <m>\Q[x]/\langle x - 1\rangle</m> is a field, which happens to be isomorphic to <m>\Q</m>.  Another example is <m>\Q[x]/\langle x^2 - 2\rangle</m>, which is not isomorphic to <m>\Q</m>, but still happens to be a field.   When we considered quotient rings like these before, we focused on their structure as a quotient ring, not worrying too much about its structure as a field.  That is about to change.
     </p>
     
     <p permid="LDm">      
@@ -114,7 +132,7 @@
     </p>
 
 
-  
+  </subsection>
   <xi:include href="./worksheets/fields-intro.ptx"/>
   
   

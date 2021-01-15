@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2021-01-13T09:14:39-07:00       *-->
+<!--*       on 2021-01-14T16:36:21-07:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -15,17 +15,13 @@
 </head>
 <body>
 <h6 xmlns:svg="http://www.w3.org/2000/svg" class="heading"><span class="type">Paragraph</span></h6>
-<p>Given a complex circuit, we can now apply the techniques of Boolean algebra to reduce it to a simpler one. Consider the circuit in  <a class="xref" data-knowl="./knowl/figure-circuit-2.html" title="Figure 18.32">Figure 18.32</a>. Since</p>
+<p>For \(a \in B\text{,}\) \(O \vee a = a\text{;}\) hence, \(O \preceq a\) and \(O\) is the smallest element in \(B\text{.}\) To show that \(I\) is the largest element in \(B\text{,}\) we will first show that \(a \vee b = b\) is equivalent to \(a \wedge b = a\text{.}\) Since \(a \vee I = a\) for all \(a \in B\text{,}\) using the absorption laws we can determine that</p>
 <div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
-\begin{align*}
-(a \vee b) \wedge (a \vee b') \wedge (a \vee b) &amp; = (a \vee b) \wedge (a \vee b) \wedge (a \vee b')\\
-&amp; = (a \vee b) \wedge (a \vee b')\\
-&amp; = a \vee ( b \wedge b')\\
-&amp; = a \vee O\\
-&amp; = a\text{,}
-\end{align*}
+\begin{equation*}
+a \vee I =(a \wedge I) \vee I = I \vee ( I \wedge a) = I
+\end{equation*}
 </div>
-<p data-braille="continuation">we can replace the more complicated circuit with a circuit containing the single switch \(a\) and achieve the same function.</p>
-<span class="incontext"><a href="section-algebra-of-circuits.html#xOS">in-context</a></span>
+<p data-braille="continuation">or \(a \preceq I\) for all \(a\) in \(B\text{.}\) Finally, since we know that \(B\) is complemented by (5), \(B\) must be a Boolean algebra.</p>
+<span class="incontext"><a href="section-boolean-algebras.html#YCo">in-context</a></span>
 </body>
 </html>

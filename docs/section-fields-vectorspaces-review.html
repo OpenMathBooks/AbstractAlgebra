@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2021-01-13T09:03:04-07:00       *-->
+<!--*       on 2021-01-14T16:30:23-07:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -192,7 +192,7 @@ MathJax.Hub.Config({
 <li class="link">
 <a href="fields.html" data-scroll="pNh"><span class="codenumber">8</span> <span class="title">Fields</span></a><ul>
 <li><a href="section-constructions.html" data-scroll="ctw">Geometric Constructions</a></li>
-<li><a href="section-fields-intro.html" data-scroll="GTt">Introduction</a></li>
+<li><a href="section-fields-intro.html" data-scroll="GTt">A Review of Rings and Fields</a></li>
 <li><a href="section-extension-fields.html" data-scroll="dGQ">Extension Fields</a></li>
 <li><a href="fields-subsection-algebraic-elements.html" data-scroll="acq">Algebraic Elements</a></li>
 <li><a href="section-fields-vectorspaces-review.html" data-scroll="UWY" class="active">A Review of Vector Spaces</a></li>
@@ -328,7 +328,7 @@ MathJax.Hub.Config({
 <p id="Bik">The elements of \(V\) are called <dfn class="terminology">vectors</dfn>; the elements of \(F\) are called <dfn class="terminology">scalars</dfn>. It is important to notice that in most cases two vectors cannot be multiplied. In general, it is only possible to multiply a vector with a scalar. To differentiate between the scalar zero and the vector zero, we will write them as 0 and \({\mathbf 0}\text{,}\) respectively.</p>
 <p id="hpt">Let us examine several examples of vector spaces. Some of them will be quite familiar; others will seem less so.</p>
 <article class="example example-like" id="OQd"><h6 class="heading">
-<span class="type">Example</span><span class="space"> </span><span class="codenumber">8.21</span><span class="period">.</span>
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">8.22</span><span class="period">.</span>
 </h6>
 <p id="sjX">The \(n\)-tuples of real numbers, denoted by \({\mathbb R}^n\text{,}\) form a vector space over \({\mathbb R}\text{.}\) Given vectors \(u = (u_1, \ldots,
 u_n)\) and \(v = (v_1, \ldots,
@@ -344,17 +344,17 @@ u + v = (u_1, \ldots, u_n) + (v_1, \ldots, v_n) = (u_1 + v_1, \ldots, u_n + v_n)
 \alpha u = \alpha(u_1, \ldots, u_n)= (\alpha u_1, \ldots, \alpha u_n)\text{.}
 \end{equation*}
 </div></article><article class="example example-like" id="uXm"><h6 class="heading">
-<span class="type">Example</span><span class="space"> </span><span class="codenumber">8.22</span><span class="period">.</span>
-</h6>
-<p id="Yrg">If \(F\) is a field, then \(F[x]\) is a vector space over \(F\text{.}\) The vectors in \(F[x]\) are simply polynomials, and vector addition is just polynomial addition. If \(\alpha \in F\) and \(p(x) \in F[x]\text{,}\) then scalar multiplication is defined by \(\alpha p(x)\text{.}\)</p></article><article class="example example-like" id="bev"><h6 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">8.23</span><span class="period">.</span>
 </h6>
-<p id="Eyp">The set of all continuous real-valued functions on a closed interval \([a,b]\) is a vector space over \({\mathbb R}\text{.}\) If \(f(x)\) and \(g(x)\) are continuous on \([a, b]\text{,}\) then \((f+g)(x)\) is defined to be \(f(x) + g(x)\text{.}\) Scalar multiplication is defined by \((\alpha f)(x) = \alpha f(x)\) for \(\alpha \in {\mathbb R}\text{.}\) For example, if \(f(x) = \sin x\) and \(g(x)= x^2\text{,}\) then \((2f + 5g)(x) =2 \sin x + 5 x^2\text{.}\)</p></article><article class="example example-like" id="HlE"><h6 class="heading">
+<p id="Yrg">If \(F\) is a field, then \(F[x]\) is a vector space over \(F\text{.}\) The vectors in \(F[x]\) are simply polynomials, and vector addition is just polynomial addition. If \(\alpha \in F\) and \(p(x) \in F[x]\text{,}\) then scalar multiplication is defined by \(\alpha p(x)\text{.}\)</p></article><article class="example example-like" id="bev"><h6 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">8.24</span><span class="period">.</span>
+</h6>
+<p id="Eyp">The set of all continuous real-valued functions on a closed interval \([a,b]\) is a vector space over \({\mathbb R}\text{.}\) If \(f(x)\) and \(g(x)\) are continuous on \([a, b]\text{,}\) then \((f+g)(x)\) is defined to be \(f(x) + g(x)\text{.}\) Scalar multiplication is defined by \((\alpha f)(x) = \alpha f(x)\) for \(\alpha \in {\mathbb R}\text{.}\) For example, if \(f(x) = \sin x\) and \(g(x)= x^2\text{,}\) then \((2f + 5g)(x) =2 \sin x + 5 x^2\text{.}\)</p></article><article class="example example-like" id="HlE"><h6 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">8.25</span><span class="period">.</span>
 </h6>
 <p id="kFy">Let \(V = {\mathbb Q}(\sqrt{2}\, ) = \{ a + b \sqrt{2} : a, b \in {\mathbb Q } \}\text{.}\) Then \(V\) is a vector space over \({\mathbb Q}\text{.}\) If \(u = a + b \sqrt{2}\) and \(v = c + d \sqrt{2}\text{,}\) then \(u + v = (a + c) + (b + d ) \sqrt{2}\) is again in \(V\text{.}\) Also, for \(\alpha \in {\mathbb Q}\text{,}\) \(\alpha v\) is in \(V\text{.}\) We will leave it as an exercise to verify that all of the vector space axioms hold for \(V\text{.}\)</p></article><p id="FOa">Just as we were able to prove some basic, fundamental facts about groups from the axioms, we can easily verify some facts for vector spaces.</p>
 <article class="proposition theorem-like" id="dZb"><h6 class="heading">
-<span class="type">Proposition</span><span class="space"> </span><span class="codenumber">8.25</span><span class="period">.</span>
+<span class="type">Proposition</span><span class="space"> </span><span class="codenumber">8.26</span><span class="period">.</span>
 </h6>
 <p id="HsV">Let \(V\) be a vector space over \(F\text{.}\) Then each of the following statements is true.</p>
 <ol class="decimal">
@@ -383,7 +383,7 @@ v + (-1)v = 1v + (-1)v = (1-1)v = 0v = {\mathbf 0}\text{,}
 </h3>
 <p id="NwC">Just as groups have subgroups and rings have subrings, vector spaces also have substructures. Let \(V\) be a vector space over a field \(F\text{,}\) and \(W\) a subset of \(V\text{.}\) Then \(W\) is a <dfn class="terminology">subspace</dfn> of \(V\) if it is closed under vector addition and scalar multiplication; that is, if \(u, v \in W\) and \(\alpha \in F\text{,}\) it will always be the case that \(u + v\) and \(\alpha v\) are also in \(W\text{.}\)</p>
 <article class="example example-like" id="nsN"><h6 class="heading">
-<span class="type">Example</span><span class="space"> </span><span class="codenumber">8.26</span><span class="period">.</span>
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">8.27</span><span class="period">.</span>
 </h6>
 <p id="QMH">Let \(W\) be the subspace of \({\mathbb R}^3\) defined by \(W = \{ (x_1, 2 x_1 + x_2, x_1 - x_2) : x_1, x_2 \in {\mathbb R} \}\text{.}\) We claim that \(W\) is a  subspace of \({\mathbb R}^3\text{.}\) Since</p>
 <div class="displaymath">
@@ -398,7 +398,7 @@ v + (-1)v = 1v + (-1)v = (1-1)v = 0v = {\mathbf 0}\text{,}
 u + v = (x_1 + y_1, 2( x_1 + y_1) +( x_2 + y_2), (x_1 + y_1) - (x_2+ y_2))\text{.}
 \end{equation*}
 </div></article><article class="example example-like" id="TzW"><h6 class="heading">
-<span class="type">Example</span><span class="space"> </span><span class="codenumber">8.27</span><span class="period">.</span>
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">8.28</span><span class="period">.</span>
 </h6>
 <p id="wTQ">Let \(W\) be the subset of polynomials of \(F[x]\) with no odd-power terms. If \(p(x)\) and \(q(x)\) have no odd-power terms, then neither will \(p(x) + q(x)\text{.}\) Also, \(\alpha p(x) \in W\) for \(\alpha \in F\) and \(p(x) \in W\text{.}\)</p></article><p id="lVj">For groups and rings, a natural way to get a subgroup or subring was to look at the set of all elements <em class="emphasis">generated</em> by one or more elements.  For vector spaces, the set of elements (vectors) that are generated by a few particular elements is called a <dfn class="terminology">spanning set</dfn>.</p>
 <p id="tDL">More in general, let \(V\) be any vector space over a field \(F\) and suppose that \(v_1, v_2, \ldots,
@@ -411,7 +411,7 @@ w = \sum_{i=1}^n \alpha_i v_i = \alpha_1 v_1 + \alpha_2 v_2 + \cdots + \alpha_n 
 <p data-braille="continuation">is called a <dfn class="terminology">linear combination</dfn>  of the vectors \(v_1, v_2, \ldots, v_n\text{.}\) The <dfn class="terminology">spanning set</dfn>  of vectors \(v_1, v_2, \ldots,
 v_n\) is the set of vectors obtained from all possible linear combinations of \(v_1, v_2, \ldots, v_n\text{.}\) If \(W\) is the spanning set of \(v_1, v_2, \ldots, v_n\text{,}\) then we say that \(W\) is <dfn class="terminology">spanned</dfn> by \(v_1, v_2, \ldots, v_n\text{.}\)</p>
 <article class="proposition theorem-like" id="Kgk"><h6 class="heading">
-<span class="type">Proposition</span><span class="space"> </span><span class="codenumber">8.28</span><span class="period">.</span>
+<span class="type">Proposition</span><span class="space"> </span><span class="codenumber">8.29</span><span class="period">.</span>
 </h6>
 <p id="nAe">Let \(S= \{v_1, v_2, \ldots,
 v_n \}\) be vectors in a vector space \(V\text{.}\) Then the span of \(S\) is a subspace of \(V\text{.}\)</p></article><article class="proof" id="EqY"><h6 class="heading"><span class="type">Proof<span class="period">.</span></span></h6>
@@ -458,7 +458,7 @@ v_n\}\) be a set of vectors in a vector space \(V\text{.}\) If there exist scala
 </div>
 <p data-braille="continuation">for any set of scalars \(\{ \alpha_1, \alpha_2 \ldots \alpha_n \}\text{.}\)</p>
 <article class="proposition theorem-like" id="qnt"><h6 class="heading">
-<span class="type">Proposition</span><span class="space"> </span><span class="codenumber">8.29</span><span class="period">.</span>
+<span class="type">Proposition</span><span class="space"> </span><span class="codenumber">8.30</span><span class="period">.</span>
 </h6>
 <p id="THn">Let \(\{ v_1, v_2, \ldots,
 v_n \}\) be a set of linearly independent vectors in a vector space. Suppose that</p>
@@ -482,7 +482,7 @@ v = \alpha_1 v_1 + \alpha_2 v_2 + \cdots + \alpha_n v_n = \beta_1 v_1 + \beta_2 
 </div>
 <p data-braille="continuation">Since \(v_1, \ldots, v_n\) are linearly independent, \(\alpha_i - \beta_i = 0\) for \(i = 1, \ldots, n\text{.}\)</p></article><p id="FSd">The definition of linear dependence makes more sense if we consider the following proposition.</p>
 <article class="proposition theorem-like" id="WuC"><h6 class="heading">
-<span class="type">Proposition</span><span class="space"> </span><span class="codenumber">8.30</span><span class="period">.</span>
+<span class="type">Proposition</span><span class="space"> </span><span class="codenumber">8.31</span><span class="period">.</span>
 </h6>
 <p id="zOw">A set \(\{ v_1, v_2, \dots,
 v_n \}\) of vectors in a vector space \(V\) is linearly dependent if and only if one of the \(v_i\)'s is a linear combination of the rest.</p></article><article class="proof" id="QFq"><h6 class="heading"><span class="type">Proof<span class="period">.</span></span></h6>
@@ -512,28 +512,28 @@ v_k = \beta_1 v_1 + \cdots + \beta_{k - 1} v_{k - 1} + \beta_{k + 1} v_{k + 1} +
 \end{equation*}
 </div></article><p id="lZm">The following proposition is a consequence of the fact that any system of homogeneous linear equations with more unknowns than equations will have a nontrivial solution. We leave the details of the proof for the end-of-chapter exercises.</p>
 <article class="proposition theorem-like" id="CBL"><h6 class="heading">
-<span class="type">Proposition</span><span class="space"> </span><span class="codenumber">8.31</span><span class="period">.</span>
+<span class="type">Proposition</span><span class="space"> </span><span class="codenumber">8.32</span><span class="period">.</span>
 </h6>
 <p id="fVF">Suppose that a vector space \(V\) is spanned by \(n\) vectors. If \(m \gt n\text{,}\) then any set of \(m\) vectors in \(V\) must be linearly dependent.</p></article><p id="Sgv">A set \(\{ e_1, e_2, \ldots,
 e_n \}\) of vectors in a vector space \(V\) is called a <dfn class="terminology">basis</dfn> for \(V\) if \(\{ e_1, e_2, \ldots,
 e_n \}\) is a linearly independent set that spans \(V\text{.}\)</p>
 <article class="example example-like" id="zHf"><h6 class="heading">
-<span class="type">Example</span><span class="space"> </span><span class="codenumber">8.32</span><span class="period">.</span>
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">8.33</span><span class="period">.</span>
 </h6>
 <p id="daZ">The vectors \(e_1 = (1, 0, 0)\text{,}\) \(e_2 = (0, 1, 0)\text{,}\) and \(e_3 =(0, 0, 1)\) form a basis for \({\mathbb R}^3\text{.}\) The set certainly spans \({\mathbb R}^3\text{,}\) since any arbitrary vector \((x_1, x_2, x_3)\) in \({\mathbb R}^3\) can be written as \(x_1 e_1 + x_2 e_2 + x_3 e_3\text{.}\) Also, none of the vectors \(e_1, e_2, e_3\) can be written as a linear combination of the other two; hence, they are linearly independent. The vectors \(e_1, e_2, e_3\) are not the only basis of \({\mathbb R}^3\text{:}\) the set \(\{ (3, 2, 1), (3, 2, 0), (1, 1, 1) \}\) is also a basis for \({\mathbb R}^3\text{.}\)</p></article><article class="example example-like" id="fOo"><h6 class="heading">
-<span class="type">Example</span><span class="space"> </span><span class="codenumber">8.33</span><span class="period">.</span>
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">8.34</span><span class="period">.</span>
 </h6>
 <p id="Jii">Let \({\mathbb Q}( \sqrt{2}\, ) = \{ a + b \sqrt{2} : a, b \in {\mathbb Q} \}\text{.}\) The sets \(\{1, \sqrt{2}\, \}\) and \(\{1 + \sqrt{2}, 1 - \sqrt{2}\, \}\) are both bases of \({\mathbb Q}( \sqrt{2}\, )\text{.}\)</p></article><p id="ynE">From the last two examples it should be clear that a given vector space has several bases. In fact, there are an infinite number of bases for both of these examples. <em class="emphasis">In general, there is no unique basis for a vector space.</em> However, every basis of \({\mathbb R}^3\) consists of exactly three vectors, and every basis of \({\mathbb Q}(\sqrt{2}\, )\) consists of exactly two vectors. This is a consequence of the next proposition.</p>
 <article class="proposition theorem-like" id="iIU"><h6 class="heading">
-<span class="type">Proposition</span><span class="space"> </span><span class="codenumber">8.34</span><span class="period">.</span>
+<span class="type">Proposition</span><span class="space"> </span><span class="codenumber">8.35</span><span class="period">.</span>
 </h6>
 <p id="McO">Let \(\{ e_1, e_2, \ldots, e_m \}\) and \(\{ f_1, f_2, \ldots,
 f_n \}\) be two bases for a vector space \(V\text{.}\) Then \(m = n\text{.}\)</p></article><article class="proof" id="wMz"><h6 class="heading"><span class="type">Proof<span class="period">.</span></span></h6>
 <p id="veD">Since \(\{ e_1, e_2, \ldots,
-e_m \}\) is a basis, it is a linearly independent set. By <a class="xref" data-knowl="./knowl/proposition-linearly-independent.html" title="Proposition 8.31">Proposition 8.31</a>, \(n \leq m\text{.}\) Similarly, \(\{ f_1, f_2, \ldots,
+e_m \}\) is a basis, it is a linearly independent set. By <a class="xref" data-knowl="./knowl/proposition-linearly-independent.html" title="Proposition 8.32">Proposition 8.32</a>, \(n \leq m\text{.}\) Similarly, \(\{ f_1, f_2, \ldots,
 f_n \}\) is a linearly independent set, and the last proposition implies that \(m \leq n\text{.}\) Consequently, \(m = n\text{.}\)</p></article><p id="euN">If \(\{ e_1, e_2, \ldots, e_n \}\) is a basis for a vector space \(V\text{,}\) then we say that the <dfn class="terminology">dimension</dfn> of \(V\) is \(n\) and we write \(\dim V =n\text{.}\)  We will leave the proof of the following theorem as an exercise.</p>
 <article class="theorem theorem-like" id="xRS"><h6 class="heading">
-<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">8.35</span><span class="period">.</span>
+<span class="type">Theorem</span><span class="space"> </span><span class="codenumber">8.36</span><span class="period">.</span>
 </h6>
 <p id="blM">Let \(V\) be a vector space of dimension \(n\text{.}\)</p>
 <ol class="decimal">

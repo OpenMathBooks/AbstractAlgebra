@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2021-01-13T09:12:08-07:00       *-->
+<!--*       on 2021-01-14T16:34:46-07:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -15,16 +15,20 @@
 </head>
 <body>
 <h6 xmlns:svg="http://www.w3.org/2000/svg" class="heading"><span class="type">Paragraph</span></h6>
-<p>Suppose that at least one of the \(a_i\)'s is in \(E\) but not in \(F\text{.}\) By rearranging the \(\alpha_i\)'s we may assume that \(a_1\) is nonzero. Since any nonzero multiple of a solution is also a solution, we can also assume that \(a_1 = 1\text{.}\) Of all possible solutions fitting this description, we choose the one with the smallest number of nonzero terms. Again, by rearranging \(\alpha_2, \ldots, \alpha_{n + 1}\) if necessary, we can assume that \(a_2\) is in \(E\) but not in \(F\text{.}\) Since \(F\) is the subfield of \(E\) that is fixed elementwise by \(G\text{,}\) there exists a \(\sigma_i\) in \(G\) such that \(\sigma_i( a_2 ) \neq a_2\text{.}\) Applying \(\sigma_i\) to each equation in the system, we end up with the same homogeneous system, since \(G\) is a group. Therefore, \(x_1 = \sigma_i(a_1) = 1\text{,}\) \(x_2 = \sigma_i(a_2)\text{,}\) \(\ldots\text{,}\) \(x_{n + 1} = \sigma_i(a_{n+1} )\) is also a solution of the original system. We know that a linear combination of two solutions of a homogeneous system is also a solution; consequently,</p>
+<p>Suppose that \(E\) is a finite extension of an infinite field (it turns out that there is no problem if \(F\) is a finite field, although we will not consider this case now anyway). We will prove the result for \(F(\alpha, \beta)\text{.}\) The general case easily follows when we use mathematical induction. Let \(f(x)\) and \(g(x)\) be  the minimal polynomials of \(\alpha\) and \(\beta\text{,}\) respectively. Let \(K\) be the field in which both \(f(x)\) and \(g(x)\) split. Suppose that \(f(x)\) has zeros \(\alpha = \alpha_1, \ldots, \alpha_n\) in \(K\) and \(g(x)\) has zeros \(\beta = \beta_1, \ldots, \beta_m\) in \(K\text{.}\) All of these zeros have multiplicity \(1\text{,}\) since \(E\) is separable over \(F\text{.}\) Since \(F\) is infinite, we can find an \(a\) in \(F\) such that</p>
 <div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
-\begin{align*}
-x_1 &amp; = 1 -1 = 0\\
-x_2 &amp; = a_2 - \sigma_i(a_2)\\
-&amp; \vdots &amp;\\
-x_{n + 1} &amp; = a_{n + 1} - \sigma_i(a_{n + 1})
-\end{align*}
+\begin{equation*}
+a \neq \frac{\alpha_i - \alpha}{\beta - \beta_j}
+\end{equation*}
 </div>
-<p data-braille="continuation">must be another solution of the system. This is a nontrivial solution because \(\sigma_i( a_2 ) \neq a_2\text{,}\) and has fewer nonzero entries than our original solution. This is a contradiction, since the number of nonzero solutions to our original solution was assumed to be minimal. We can therefore conclude that \(a_1, \ldots, a_{n + 1} \in F\text{.}\)</p>
-<span class="incontext"><a href="section-galois-fund-theorem-galois-theory.html#lhb">in-context</a></span>
+<p data-braille="continuation">for all \(i\) and \(j\) with \(j \neq 1\text{.}\) Therefore, \(a( \beta - \beta_j ) \neq \alpha_i - \alpha\text{.}\) Let \(\gamma = \alpha + a \beta\text{.}\) Then</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{equation*}
+\gamma = \alpha + a \beta \neq \alpha_i + a \beta_j;
+\end{equation*}
+</div>
+<p data-braille="continuation">hence, \(\gamma - a \beta_j \neq \alpha_i\) for all \(i,
+j\) with \(j \neq 1\text{.}\) Define \(h(x) \in F( \gamma )[x]\) by \(h(x) = f( \gamma - ax)\text{.}\) Then \(h( \beta ) = f( \alpha ) = 0\text{.}\) However, \(h( \beta_j ) \neq 0\) for \(j \neq 1\text{.}\) Hence, \(h(x)\) and \(g(x)\) have a single common factor in \(F( \gamma )[x]\text{;}\) that is, the minimal polynomial of \(\beta\) over \(F( \gamma )\) must be linear, since \(\beta\) is the only zero common to both \(g(x)\) and \(h(x)\text{.}\) So \(\beta \in F( \gamma )\) and \(\alpha = \gamma - a \beta\) is in \(F( \gamma )\text{.}\) Hence, \(F( \alpha, \beta ) = F( \gamma )\text{.}\)</p>
+<span class="incontext"><a href="section-galois-splitting-fields.html#MEr">in-context</a></span>
 </body>
 </html>

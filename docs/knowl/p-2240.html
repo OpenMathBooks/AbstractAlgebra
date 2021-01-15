@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2021-01-13T09:11:40-07:00       *-->
+<!--*       on 2021-01-14T16:34:30-07:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -15,7 +15,16 @@
 </head>
 <body>
 <h6 xmlns:svg="http://www.w3.org/2000/svg" class="heading"><span class="type">Paragraph</span></h6>
-<p xmlns:svg="http://www.w3.org/2000/svg">We will start easy.  For now, let \(E = \Q(\sqrt{2})\text{.}\)</p>
-<span class="incontext"><a href="section-extension-fields.html#eFF">in-context</a></span>
+<p>Let's use the Euclidean algorithm:</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{align*}
+x^{24} - 1 =  \amp x^9(x^{15} - 1) + x^9 - 1 \\
+x^{15} - 1 =  \amp x^6(x^{9} - 1) + x^6 - 1 \\
+x^{9} - 1 =  \amp x^3(x^{6} - 1) + x^3 - 1 \\
+x^{6} - 1 =  \amp (x^3+1)(x^{3} - 1) + 0 
+\end{align*}
+</div>
+<p data-braille="continuation">Thus the gcd is \(x^3-1\text{.}\)</p>
+<span class="incontext"><a href="section-fields-intro.html#XwS">in-context</a></span>
 </body>
 </html>

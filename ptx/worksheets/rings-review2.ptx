@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<worksheet xmlns:xi="http://www.w3.org/2001/XInclude" margin="1in" bottom="1.25cm" solutions="yes" xml:id="ws_rings-review2" permid="Kdh">
+<worksheet xmlns:xi="http://www.w3.org/2001/XInclude" margin="1in" bottom="1.25cm" solutions="no" xml:id="ws_rings-review2" permid="Kdh">
     <title>Activity: Review of the Euclidean Algorithm</title>
 
     <introduction permid="kQD">
       <p permid="cgL">
-        The goal of this activity is to remember how to use the Eulcidea Algorithm to find the greatest common divisor of two elements in a ring (numbers or polynomials, for us) and write the gcd as a linear combination of the two elements (which Bezout's lemma tells us we can do).
+        The goal of this activity is to remember how to use the Eulcidean Algorithm to find the greatest common divisor of two elements in a ring (numbers or polynomials, for us) and write the gcd as a linear combination of the two elements (which Bezout's lemma tells us we can do).
       </p>
 
       <example xml:id="example-integers-gcd" permid="EJu">

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<worksheet xmlns:xi="http://www.w3.org/2001/XInclude" margin="1in" bottom="1.25cm" solutions="yes" xml:id="ws_rings-review1" permid="YCl">
+<worksheet xmlns:xi="http://www.w3.org/2001/XInclude" margin="1in" bottom="1.25cm" solutions="no" xml:id="ws_rings-review1" permid="YCl">
     <title>Activity: Review of Rings and Quotient Rings</title>
 
     <introduction permid="uFO">
@@ -10,7 +10,7 @@
         </p>
         
         <p permid="Piz">
-          You will be asked to provide definitions. Some definitions will include terms that also should be defined.  Make sure that everyone knows what every word in a definition means (if not, provide definitions for those words).  For example, a <term>field</term> is a commutative division ring.  If you have not yet defined commutative ring and division ring, you should say what these mean. 
+          You are asked to provide definitions. Some definitions will include terms that also should be defined.  Make sure that you know what every word in a definition means (if not, provide definitions for those words).  For example, a <term>field</term> is a commutative division ring.  If you have not yet defined commutative ring and division ring, you should say what these mean. 
         </p>
     </introduction>
 
