@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2021-01-14T16:34:43-07:00       *-->
+<!--*       on 2021-01-21T16:41:04-07:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -15,13 +15,25 @@
 </head>
 <body>
 <h6 xmlns:svg="http://www.w3.org/2000/svg" class="heading"><span class="type">Paragraph</span></h6>
-<p>Let us determine an extension field of \({\mathbb Q}\) containing \(\sqrt{3} + \sqrt{5}\text{.}\) It is easy to determine that the minimal  polynomial of \(\sqrt{3} + \sqrt{5}\) is \(x^4 - 16 x^2 + 4\text{.}\) It follows that</p>
+<p>Let us compute a basis for \({\mathbb Q}( \sqrt[3]{5}, \sqrt{5} \, i )\text{,}\) where \(\sqrt{5}\) is the positive square root of \(5\) and \(\sqrt[3]{5}\) is the real cube root of \(5\text{.}\) We know that \(\sqrt{5} \, i \notin {\mathbb Q}(\sqrt[3]{5}\, )\text{,}\) so</p>
 <div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
 \begin{equation*}
-[{\mathbb Q}( \sqrt{3} + \sqrt{5}\, ) : {\mathbb Q} ] = 4\text{.}
+[ {\mathbb Q}(\sqrt[3]{5}, \sqrt{5}\, i) : {\mathbb Q}(\sqrt[3]{5}\, )] = 2\text{.}
 \end{equation*}
 </div>
-<p data-braille="continuation">We know that \(\{ 1, \sqrt{3}\, \}\) is a basis for \({\mathbb Q}( \sqrt{3}\, )\) over \({\mathbb Q}\text{.}\) Hence, \(\sqrt{3} + \sqrt{5}\) cannot be in \({\mathbb Q}( \sqrt{3}\, )\text{.}\) It follows that \(\sqrt{5}\) cannot be in \({\mathbb Q}( \sqrt{3}\, )\) either. Therefore, \(\{ 1, \sqrt{5}\, \}\) is a basis for \({\mathbb Q}( \sqrt{3}, \sqrt{5}\, ) = ( {\mathbb Q}(\sqrt{3}\, ))( \sqrt{5}\, )\) over \({\mathbb Q}( \sqrt{3}\, )\) and \(\{ 1, \sqrt{3}, \sqrt{5}, \sqrt{3} \sqrt{5} = \sqrt{15}\, \}\) is a basis for \({\mathbb Q}( \sqrt{3}, \sqrt{5}\, ) = {\mathbb Q}( \sqrt{3} + \sqrt{5}\, )\) over \({\mathbb Q}\text{.}\) This example shows that it is possible that some extension \(F( \alpha_1, \ldots, \alpha_n )\) is actually a simple extension of \(F\) even though \(n \gt 1\text{.}\)</p>
-<span class="incontext"><a href="section-fields-vectorspaces.html#FGm">in-context</a></span>
+<p data-braille="continuation">It is easy to determine that \(\{ 1, \sqrt{5}i\, \}\) is a basis for \({\mathbb Q}( \sqrt[3]{5}, \sqrt{5}\, i )\) over \({\mathbb Q}( \sqrt[3]{5}\, )\text{.}\) We also know that \(\{ 1, \sqrt[3]{5}, (\sqrt[3]{5}\, )^2  \}\) is a basis for \({\mathbb Q}(\sqrt[3]{5}\, )\) over \({\mathbb Q}\text{.}\) Hence, a basis for \({\mathbb Q}(\sqrt[3]{5}, \sqrt{5}\, i )\) over \({\mathbb Q}\) is</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{equation*}
+\{ 1, \sqrt{5}\, i, \sqrt[3]{5}, (\sqrt[3]{5}\, )^2, (\sqrt[6]{5}\, )^5 i, (\sqrt[6]{5}\, )^7 i = 5 \sqrt[6]{5}\, i \text{ or } \sqrt[6]{5}\, i \}\text{.}
+\end{equation*}
+</div>
+<p data-braille="continuation">Notice that \(\sqrt[6]{5}\, i\) is a zero of \(x^6 + 5\text{.}\) We can show that this polynomial is irreducible over \({\mathbb Q}\) using Eisenstein's Criterion, where we let \(p = 5\text{.}\) Consequently,</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{equation*}
+{\mathbb Q} \subset {\mathbb Q}( \sqrt[6]{5}\, i) \subset {\mathbb Q}( \sqrt[3]{5}, \sqrt{5}\, i )\text{.}
+\end{equation*}
+</div>
+<p data-braille="continuation">But it must be the case that \({\mathbb Q}( \sqrt[6]{5}\, i) = {\mathbb Q}( \sqrt[3]{5}, \sqrt{5}\, i )\text{,}\) since the degree of both of these extensions is \(6\text{.}\)</p>
+<span class="incontext"><a href="section-fields-vectorspaces.html#lNv">in-context</a></span>
 </body>
 </html>

@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2021-01-14T16:34:48-07:00       *-->
+<!--*       on 2021-01-21T16:41:09-07:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -15,12 +15,19 @@
 </head>
 <body>
 <h6 xmlns:svg="http://www.w3.org/2000/svg" class="heading"><span class="type">Paragraph</span></h6>
-<p>We can now confirm that the Galois group of \({\mathbb Q}( \sqrt{3}, \sqrt{5}\, )\) over \({\mathbb Q}\) in <a class="xref" data-knowl="./knowl/example-galois-q-sqrt5.html" title="Example 9.12">Example 9.12</a> is indeed isomorphic to \({\mathbb Z}_2 \times {\mathbb Z}_2\text{.}\) Certainly the group \(H = \{ \identity, \sigma, \tau, \mu \}\) is a subgroup of \(G({\mathbb Q}( \sqrt{3}, \sqrt{5}\, )/{\mathbb Q})\text{;}\) however, \(H\) must be all of \(G({\mathbb Q}( \sqrt{3}, \sqrt{5}\, )/{\mathbb Q})\text{,}\) since</p>
+<p>Let us compute the Galois group of</p>
 <div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
 \begin{equation*}
-|H| = [{\mathbb Q}( \sqrt{3}, \sqrt{5}\, ):{\mathbb Q}] = |G({\mathbb Q}( \sqrt{3}, \sqrt{5}\, )/{\mathbb Q})| = 4\text{.}
+f(x) = x^4 + x^3 + x^2 + x + 1
 \end{equation*}
 </div>
-<span class="incontext"><a href="section-galois-field-automorphisms.html#CPg">in-context</a></span>
+<p data-braille="continuation">over \({\mathbb Q}\text{.}\) First let's check that \(f(x)\) is irreducible over \(\Q\text{.}\)  To do this, consider a new polynomial \(g(x) = f(x+1)\) (essentially doing a change of variables).  We have</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{equation*}
+g(x) = x^4 + 5x^3 + 10x^2 + 10x + 5.
+\end{equation*}
+</div>
+<p data-braille="continuation">This is irreducible by Eisenstein's criterion.  But if \(f(x)\) factored, then so would \(g(x)\text{,}\) so we see that \(f(x)\) is irreducible.</p>
+<span class="incontext"><a href="section-galois-field-automorphisms.html#eqK">in-context</a></span>
 </body>
 </html>

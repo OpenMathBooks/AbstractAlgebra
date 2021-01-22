@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2021-01-14T16:36:19-07:00       *-->
+<!--*       on 2021-01-21T16:42:39-07:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -15,13 +15,25 @@
 </head>
 <body>
 <h6 xmlns:svg="http://www.w3.org/2000/svg" class="heading"><span class="type">Paragraph</span></h6>
-<p>Let \(A\) be in \({\mathcal P}(X)\text{.}\) Recall that the complement of \(A\) is</p>
+<p>In a lattice \(L\text{,}\) the binary operations \(\vee\) and \(\wedge\) satisfy commutative and associative laws; however, they need not satisfy the distributive law</p>
 <div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
 \begin{equation*}
-A' = X \setminus A = \{ x : x \in X \text{ and } x \notin A \}\text{.}
+a \wedge ( b \vee c ) = (a \wedge b ) \vee ( a \wedge c );
 \end{equation*}
 </div>
-<p data-braille="continuation">We know that \(A \cup A' = X\) and \(A \cap A' = \emptyset\text{.}\) We can generalize this example for lattices. A lattice \(L\) with a largest element \(I\) and a smallest element \(O\) is <dfn xmlns:svg="http://www.w3.org/2000/svg" class="terminology">complemented</dfn>  if for each \(a \in L\text{,}\) there exists an \(a'\) such that \(a \vee a' = I\) and \(a \wedge a' = O\text{.}\) </p>
-<span class="incontext"><a href="section-boolean-algebras.html#qkt">in-context</a></span>
+<p data-braille="continuation">however, in \({\mathcal P}(X)\) the distributive law is satisfied since</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{equation*}
+A \cap ( B \cup C ) = (A \cap B ) \cup ( A \cap C )
+\end{equation*}
+</div>
+<p data-braille="continuation">for \(A, B, C \in {\mathcal P}(X)\text{.}\) We will say that a lattice \(L\) is <dfn xmlns:svg="http://www.w3.org/2000/svg" class="terminology">distributive</dfn> if the following distributive law holds:</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{equation*}
+a \wedge ( b \vee c ) = (a \wedge b ) \vee ( a \wedge c )
+\end{equation*}
+</div>
+<p data-braille="continuation">for all \(a, b, c \in L\text{.}\)</p>
+<span class="incontext"><a href="section-boolean-algebras.html#WrC">in-context</a></span>
 </body>
 </html>

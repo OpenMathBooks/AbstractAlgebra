@@ -15,7 +15,7 @@
     </p>
     
     <p permid="CjA">
-      One obvious way to ensure this happens is to include the root of that polynomial in the field.  We previously defined <m>E = \Q(\sqrt{2}) = \{a + b\sqrt{2} \st a, b \in \Q</m> as an extension field of <m>\Q</m>.  In this field, the polynomial <m>x^2 - 2</m> has a root, so can be factored.
+      One obvious way to ensure this happens is to include the root of that polynomial in the field.  We previously defined <m>E = \Q(\sqrt{2}) = \{a + b\sqrt{2} \st a, b \in \Q\}</m> as an extension field of <m>\Q</m>.  In this field, the polynomial <m>x^2 - 2</m> has a root, so can be factored.
     </p>
     
     <p permid="iqJ">
@@ -82,10 +82,8 @@
         We summarize these computations in the following tables,
         which tell us how to add and multiply elements in <m>E</m>.
       </p>
-      <table xml:id="table-addition-z2-alpha" permid="UmH">
-        <!-- math table -->
-        <caption>Addition Table for <m>{\mathbb Z}_2(\alpha)</m></caption>
         <p permid="CLG">
+        Addition Table for <m>{\mathbb Z}_2(\alpha)</m>:
           <me permid="mLK">
             \begin{array}{c|cccc}
             + &amp; 0 &amp; 1 &amp; \alpha &amp; 1 + \alpha \\
@@ -96,13 +94,10 @@
             1 + \alpha &amp; 1 + \alpha &amp; \alpha &amp; 1 &amp; 0
             \end{array}
           </me>
-        </p>
-      </table>
-      
-      <table xml:id="table-multiplication-z2-alpha" permid="AtQ">
-        <!-- math table -->
-        <caption>Multiplication Table for <m>{\mathbb Z}_2(\alpha)</m></caption>
-        <p permid="iSP">
+        Multiplication Table for <m>{\mathbb Z}_2(\alpha)</m>:
+
+
+
           <me permid="SST">
             \begin{array}{c|cccc}
             \cdot &amp; 0 &amp; 1 &amp; \alpha &amp; 1 + \alpha \\
@@ -114,7 +109,6 @@
             \end{array}
           </me>
         </p>
-      </table>
     </example>
 
     <p permid="aMk">

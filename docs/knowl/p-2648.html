@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2021-01-14T16:34:55-07:00       *-->
+<!--*       on 2021-01-21T16:41:16-07:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -15,7 +15,45 @@
 </head>
 <body>
 <h6 xmlns:svg="http://www.w3.org/2000/svg" class="heading"><span class="type">Paragraph</span></h6>
-<p xmlns:svg="http://www.w3.org/2000/svg">Though it is natural to multiply elements in a group from left to right, functions are composed from right to left. Let \(\sigma\) and \(\tau\) be permutations on a set \(X\text{.}\) To compose \(\sigma\) and \(\tau\) as functions, we calculate \((\sigma \circ \tau)(x) = \sigma( \tau(x))\text{.}\) That is, we do \(\tau\) first, then \(\sigma\text{.}\) There are several ways to approach this inconsistency. <em class="emphasis">We will adopt the convention of multiplying permutations right to left. To compute \(\sigma \tau\text{,}\) do \(\tau\) first and then \(\sigma\text{.}\)</em> That is, by \(\sigma \tau (x)\) we mean \(\sigma( \tau( x))\text{.}\) (Another way of solving this problem would be to write functions on the right; that is, instead of writing \(\sigma(x)\text{,}\) we could write \((x)\sigma\text{.}\) We could also multiply permutations left to right to agree with the usual way of multiplying elements in a group. Certainly all of these methods have been used.</p>
-<span class="incontext"><a href="section-groups-permutations.html#qxY">in-context</a></span>
+<p>Permutation multiplication is not usually commutative. Let</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{align*}
+\sigma
+&amp; =
+\begin{pmatrix}
+1 &amp; 2 &amp; 3 &amp; 4 \\
+4 &amp; 1 &amp; 2 &amp; 3
+\end{pmatrix}\\
+\tau
+&amp; =
+\begin{pmatrix}
+1 &amp; 2 &amp; 3 &amp; 4 \\
+2 &amp; 1 &amp; 4 &amp; 3
+\end{pmatrix}\text{.}
+\end{align*}
+</div>
+<p data-braille="continuation">Then</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{equation*}
+\sigma \tau
+=
+\begin{pmatrix}
+1 &amp; 2 &amp; 3 &amp; 4 \\
+1 &amp; 4 &amp; 3 &amp; 2
+\end{pmatrix}\text{,}
+\end{equation*}
+</div>
+<p data-braille="continuation">but</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{equation*}
+\tau \sigma
+=
+\begin{pmatrix}
+1 &amp; 2 &amp; 3 &amp; 4 \\
+3 &amp; 2 &amp; 1 &amp; 4
+\end{pmatrix}\text{.}
+\end{equation*}
+</div>
+<span class="incontext"><a href="section-groups-permutations.html#tsE">in-context</a></span>
 </body>
 </html>

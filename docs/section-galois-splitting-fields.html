@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2021-01-14T16:30:28-07:00       *-->
+<!--*       on 2021-01-21T16:36:41-07:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -334,7 +334,7 @@ p(x) = ( x - \alpha_1 )(x - \alpha_2) \cdots (x - \alpha_n)\text{.}
 <span class="type">Theorem</span><span class="space"> </span><span class="codenumber">9.3</span><span class="period">.</span>
 </h6>
 <p id="aEw">Let \(p(x) \in F[x]\) be a nonconstant polynomial. Then there exists a splitting field \(E\) for \(p(x)\text{.}\)</p></article><article class="proof" id="IPa"><h6 class="heading"><span class="type">Proof<span class="period">.</span></span></h6>
-<p id="Pvx">We will use mathematical induction on the degree of \(p(x)\text{.}\) If \(\deg p(x) = 1\text{,}\) then \(p(x)\) is a linear polynomial and \(E = F\text{.}\) Assume that the theorem is true for all polynomials of degree \(k\) with \(1 \leq k \lt n\) and let \(\deg p(x) = n\text{.}\) We can assume that \(p(x)\) is irreducible; otherwise, by our induction hypothesis, we are done. By <a class="xref" data-knowl="./knowl/theorem-fundamental-of-field-theory.html" title="Theorem 8.13">Theorem 8.13</a>, there exists a field \(K\) such that \(p(x)\) has a zero \(\alpha_1\) in \(K\text{.}\) Hence, \(p(x) = (x - \alpha_1)q(x)\text{,}\) where \(q(x) \in K[x]\text{.}\) Since \(\deg q(x) = n -1\text{,}\) there exists a splitting field \(E \supset K\) of \(q(x)\) that contains the zeros \(\alpha_2, \ldots, \alpha_n\) of \(p(x)\) by our induction hypothesis. Consequently,</p>
+<p id="Pvx">We will use mathematical induction on the degree of \(p(x)\text{.}\) If \(\deg p(x) = 1\text{,}\) then \(p(x)\) is a linear polynomial and \(E = F\text{.}\) Assume that the theorem is true for all polynomials of degree \(k\) with \(1 \leq k \lt n\) and let \(\deg p(x) = n\text{.}\) We can assume that \(p(x)\) is irreducible; otherwise, by our induction hypothesis, we are done. By <a class="xref" data-knowl="./knowl/theorem-fundamental-of-field-theory.html" title="Theorem 8.11">Theorem 8.11</a>, there exists a field \(K\) such that \(p(x)\) has a zero \(\alpha_1\) in \(K\text{.}\) Hence, \(p(x) = (x - \alpha_1)q(x)\text{,}\) where \(q(x) \in K[x]\text{.}\) Since \(\deg q(x) = n -1\text{,}\) there exists a splitting field \(E \supset K\) of \(q(x)\) that contains the zeros \(\alpha_2, \ldots, \alpha_n\) of \(p(x)\) by our induction hypothesis. Consequently,</p>
 <div class="displaymath">
 \begin{equation*}
 E = K(\alpha_2, \ldots, \alpha_n) = F(\alpha_1, \ldots, \alpha_n)
@@ -345,7 +345,7 @@ E = K(\alpha_2, \ldots, \alpha_n) = F(\alpha_1, \ldots, \alpha_n)
 <span class="type">Lemma</span><span class="space"> </span><span class="codenumber">9.4</span><span class="period">.</span>
 </h6>
 <p id="fop">Let \(\phi : E \rightarrow F\) be an isomorphism of fields. Let \(K\) be an extension field of \(E\) and \(\alpha \in K\) be algebraic over \(E\) with minimal polynomial \(p(x)\text{.}\) Suppose that \(L\) is an extension field of \(F\) such that \(\beta\) is root of the polynomial in \(F[x]\) obtained from \(p(x)\) under the image of \(\phi\text{.}\) Then \(\phi\) extends to a unique isomorphism \(\overline{\phi} : E( \alpha ) \rightarrow F( \beta )\) such that \(\overline{\phi}( \alpha ) = \beta\) and \(\overline{\phi}\) agrees with \(\phi\) on \(E\text{.}\)</p></article><article class="proof" id="NyT"><h6 class="heading"><span class="type">Proof<span class="period">.</span></span></h6>
-<p id="vCG">If \(p(x)\) has degree \(n\text{,}\) then by <a class="xref" data-knowl="./knowl/theorem-simple_extension.html" title="Theorem 8.20">Theorem 8.20</a> we can write any element in \(E( \alpha )\) as a linear combination of \(1, \alpha, \ldots, \alpha^{n - 1}\text{.}\) Therefore, the isomorphism that we are seeking must be</p>
+<p id="vCG">If \(p(x)\) has degree \(n\text{,}\) then by <a class="xref" data-knowl="./knowl/theorem-simple_extension.html" title="Theorem 8.18">Theorem 8.18</a> we can write any element in \(E( \alpha )\) as a linear combination of \(1, \alpha, \ldots, \alpha^{n - 1}\text{.}\) Therefore, the isomorphism that we are seeking must be</p>
 <div class="displaymath">
 \begin{equation*}
 \overline{\phi}( a_0 + a_1 \alpha + \cdots + a_{n - 1} \alpha^{n - 1}) = \phi(a_0) + \phi(a_1) \beta + \cdots + \phi(a_{n - 1}) \beta^{n - 1}\text{,}
@@ -364,7 +364,7 @@ a_0 + a_1 \alpha + \cdots + a_{n - 1} \alpha^{n - 1}
 \phi( a_0 + a_1 x + \cdots + a_n x^n ) =  \phi( a_0 ) + \phi(a_1) x + \cdots + \phi(a_n) x^n\text{.}
 \end{equation*}
 </div>
-<p data-braille="continuation">This extension agrees with the original isomorphism \(\phi : E \rightarrow F\text{,}\) since constant polynomials get mapped to constant polynomials. By assumption, \(\phi(p(x)) = q(x)\text{;}\) hence, \(\phi\) maps \(\langle p(x) \rangle\) onto \(\langle q(x) \rangle\text{.}\) Consequently, we have an isomorphism \(\psi : E[x] / \langle p(x) \rangle \rightarrow F[x]/\langle q(x) \rangle\text{.}\) By <a class="xref" data-knowl="./knowl/proposition-minimal-poly.html" title="Proposition 8.19">Proposition 8.19</a>, we have isomorphisms \(\sigma: E[x]/\langle p(x) \rangle \rightarrow E(\alpha)\) and \(\tau : F[x]/\langle q(x) \rangle \rightarrow F( \beta )\text{,}\) defined by evaluation at \(\alpha\) and \(\beta\text{,}\) respectively. Therefore, \(\overline{\phi} = \tau \psi \sigma^{-1}\) is the required isomorphism.</p>
+<p data-braille="continuation">This extension agrees with the original isomorphism \(\phi : E \rightarrow F\text{,}\) since constant polynomials get mapped to constant polynomials. By assumption, \(\phi(p(x)) = q(x)\text{;}\) hence, \(\phi\) maps \(\langle p(x) \rangle\) onto \(\langle q(x) \rangle\text{.}\) Consequently, we have an isomorphism \(\psi : E[x] / \langle p(x) \rangle \rightarrow F[x]/\langle q(x) \rangle\text{.}\) By <a class="xref" data-knowl="./knowl/proposition-minimal-poly.html" title="Proposition 8.17">Proposition 8.17</a>, we have isomorphisms \(\sigma: E[x]/\langle p(x) \rangle \rightarrow E(\alpha)\) and \(\tau : F[x]/\langle q(x) \rangle \rightarrow F( \beta )\text{,}\) defined by evaluation at \(\alpha\) and \(\beta\text{,}\) respectively. Therefore, \(\overline{\phi} = \tau \psi \sigma^{-1}\) is the required isomorphism.</p>
 <div class="sidebyside"><div class="sbsrow" style="margin-left:20%;margin-right:20%;"><div class="sbspanel" style="width:100%;justify-content:flex-start;"><img src="images/fields-extension-isomorph.svg" role="img" style="width: 100%; height: auto;" alt=""></div></div></div>
 <p id="HQY">We leave the proof of uniqueness as a exercise.</p></article><article class="theorem theorem-like" id="xGb"><h6 class="heading">
 <span class="type">Theorem</span><span class="space"> </span><span class="codenumber">9.5</span><span class="period">.</span>

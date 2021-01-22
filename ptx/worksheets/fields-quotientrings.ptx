@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<worksheet xmlns:xi="http://www.w3.org/2001/XInclude" margin="1in" bottom="1.25cm" solutions="yes" xml:id="ws_fields-quotientrings" permid="guS">
+<worksheet xmlns:xi="http://www.w3.org/2001/XInclude" margin="1in" bottom="1.25cm" solutions="no" xml:id="ws_fields-quotientrings" permid="guS">
     <title>Activity: Quotient Rings that are Extension Fields</title>
 
     <introduction permid="zDP">
-        <p permid="yyw">Let's explore the connection between extension fields and quotient rings. We have seen that <m>F[x]/\langle p(x) \rangle \cong F(\alpha)</m>, where <m>\alpha</m> is a root of its minimal polynomial <m>p(x)</m>.  The goal of this activity is to see how working in quotient rings help us realize <m>E = F(\alpha)</m> as a field.</p>
+        <p permid="yyw">Let's explore the connection between extension fields and quotient rings. We will see that <m>F[x]/\langle p(x) \rangle \cong F(\alpha)</m>, where <m>\alpha</m> is a root of its minimal polynomial <m>p(x)</m> (i.e., <m>p(x)</m> is the unique monic irreducible polynomial that has <m>\alpha</m> as a root).  The goal of this activity is to see how working in quotient rings help us realize <m>E = F(\alpha)</m> as a field.</p>
         
         <p permid="eFF">
           We will start easy.  For now, let <m>E = \Q(\sqrt{2})</m>.
@@ -45,7 +45,7 @@
       </statement>
       <solution permid="cQs">
         <p permid="NHu">
-          The gcd will be 1, since <m>x^2 - 2</m> is irreducible.  We have <m>x^2 - 2 = (\frac{1}{3}x -\frac{1}{9}(3x+1)) - \frac{17}{9}</m>.  The next step will necessarily give us zero remainder, so the gcd is <m>-\frac{17}{9}</m>$.  But we can multiply by any constant, so we also have gcd equal to 1. 
+          The gcd will be 1, since <m>x^2 - 2</m> is irreducible.  We have <m>x^2 - 2 = (\frac{1}{3}x -\frac{1}{9}(3x+1)) - \frac{17}{9}</m>.  The next step will necessarily give us zero remainder, so the gcd is <m>-\frac{17}{9}</m>.  But we can multiply by any constant, so we also have gcd equal to 1. 
         </p>
       </solution>
     </exercise>
