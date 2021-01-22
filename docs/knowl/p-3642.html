@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2021-01-21T16:42:28-07:00       *-->
+<!--*       on 2021-01-22T16:11:33-07:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -15,12 +15,15 @@
 </head>
 <body>
 <h6 xmlns:svg="http://www.w3.org/2000/svg" class="heading"><span class="type">Paragraph</span></h6>
-<p>The polynomial \(x^2 - 2\) is separable over \({\mathbb Q}\) since it factors as \((x - \sqrt{2}\, )(x + \sqrt{2}\, )\text{.}\) In fact, \({\mathbb Q}(\sqrt{2}\, )\) is a separable extension of \({\mathbb Q}\text{.}\) Let \(\alpha =  a + b \sqrt{2}\) be any element in \({\mathbb Q}(\sqrt{2}\, )\text{.}\) If \(b = 0\text{,}\) then \(\alpha\) is a root of \(x - a\text{.}\) If \(b \neq 0\text{,}\) then \(\alpha\) is the root  of the separable polynomial</p>
+<p>Let \(f(x)\) be separable. Then \(f(x)\) factors over some extension field of \(F\) as \(f(x) = (x - \alpha_1) (x - \alpha_2) \cdots (x - \alpha_n)\text{,}\) where \(\alpha_i \neq \alpha_j\) for \(i \neq j\text{.}\) Taking the derivative of \(f(x)\text{,}\) we see that</p>
 <div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
-\begin{equation*}
-x^2 - 2 a x + a^2 - 2 b^2 = (x - (a + b \sqrt{2}\, ))(x - (a - b \sqrt{2}\, ))\text{.}
-\end{equation*}
+\begin{align*}
+f'(x) &amp; = (x - \alpha_2) \cdots (x - \alpha_n)\\
+&amp; + (x - \alpha_1) (x - \alpha_3) \cdots (x - \alpha_n)\\
+&amp; + \cdots + (x - \alpha_1) \cdots (x - \alpha_{n - 1})\text{.}
+\end{align*}
 </div>
-<span class="incontext"><a href="section-finite-field.html#Ucz">in-context</a></span>
+<p data-braille="continuation">Hence, \(f(x)\) and \(f'(x)\) can have no common factors.</p>
+<span class="incontext"><a href="section-finite-field.html#Ycy">in-context</a></span>
 </body>
 </html>

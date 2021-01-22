@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<exercises xmlns:xi="http://www.w3.org/2001/XInclude" xml:id="homework-fields-extensions">
+  
+<title>Collected Homework</title>
+
+  <exercise>
+    <introduction>
+      <p>
+        The number <m>\phi = \frac{1+\sqrt{5}}{2}</m> (which happens to be the <em>Golden Ratio</em>) is not an element of <m>\Q</m>, but of course is an element of <m>\Q(\phi)</m>.  Let's explore that field a bit.
+      </p>
+    </introduction>
+    <task>
+      <statement>
+        <p>
+          Find a polynomial with rational coefficients that has <m>\phi</m> as a root.  Call this polynomial <m>p(x)</m>.
+        </p>
+      </statement>
+      <hint>
+        <p>
+          Try setting <m>\phi = x</m> and do some algebra to get rid of any square roots.
+        </p>
+      </hint>
+    </task>
+    <task>
+      <statement>
+        <p>
+          What quotient ring is isomorphic to the field <m>\Q(\phi)</m>?  List two non-zero elements of that quotient ring and say which elements of <m>\Q(\phi)</m> they correspond to.
+        </p>
+      </statement>
+    </task>
+    <task>
+      <p>
+        Which coset does <m>\phi</m> itself correspond to?  Take this coset and plug it into <m>p(x)</m> to verify that the coset is a root of <m>p(x)</m> (show your work).
+      </p>
+    </task>
+    <task>
+      <p>
+        The element <m>\phi^3</m> is an element of <m>\Q(\phi)</m> but can be expressed as <m>a+b\phi</m> for <m>a, b \in \Q</m>.  Find <m>a</m> and <m>b</m>.  Then find the corresponding element for both <m>\phi^3</m> and <m>a+b\phi</m> in the quotient ring and check that these two cosets are the same as each other.
+      </p>
+    </task>
+  </exercise>
+    
+</exercises>

@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2021-01-21T16:42:30-07:00       *-->
+<!--*       on 2021-01-22T16:11:35-07:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -15,45 +15,63 @@
 </head>
 <body>
 <h6 xmlns:svg="http://www.w3.org/2000/svg" class="heading"><span class="type">Paragraph</span></h6>
-<p>We will induct on \(n\text{.}\) If \(n = 2\text{,}\) then the determinant is \(\alpha_2 - \alpha_1\text{.}\) Let us assume the result for \(n - 1\) and consider the polynomial \(p(x)\) defined by</p>
+<p>Suppose that</p>
 <div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
 \begin{equation*}
-p(x) = \det
+g( \omega^r) = g(\omega^{r + 1}) = \cdots = g( \omega^{r + s - 1}) = 0\text{.}
+\end{equation*}
+</div>
+<p data-braille="continuation">Let \(f(x)\) be some polynomial in \(C\) with \(s\) or fewer nonzero coefficients. We can assume that</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{equation*}
+f(x) = a_{i_0} x^{i_0} + a_{i_1} x^{i_1} + \cdots + a_{i_{s - 1}} x^{i_{s - 1}}
+\end{equation*}
+</div>
+<p data-braille="continuation">be some polynomial in \(C\text{.}\) It will suffice to show that all of the \(a_i\)'s must be 0. Since</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{equation*}
+g( \omega^r) = g(\omega^{r + 1}) = \cdots = g( \omega^{r + s - 1}) = 0
+\end{equation*}
+</div>
+<p data-braille="continuation">and \(g(x)\) divides \(f(x)\text{,}\)</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{equation*}
+f( \omega^r) = f(\omega^{r + 1}) = \cdots = f( \omega^{r + s - 1}) = 0\text{.}
+\end{equation*}
+</div>
+<p data-braille="continuation">Equivalently, we have the following system of equations:</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{align*}
+a_{i_0} (\omega^r)^{i_0} + a_{i_1} (\omega^r)^{i_1} + \cdots + a_{i_{s - 1}} (\omega^r)^{i_{s - 1}} &amp; = 0\\
+a_{i_0} (\omega^{r + 1})^{i_0} + a_{i_1} (\omega^{r + 1})^{i_2} + \cdots + a_{i_{s-1}} (\omega^{r+1})^{i_{s-1}} &amp; = 0\\
+&amp; \vdots\\
+a_{i_0} (\omega^{r + s - 1})^{i_0} + a_{i_1} (\omega^{r + s - 1})^{i_1} + \cdots + a_{i_{s - 1}} (\omega^{r + s - 1})^{i_{s - 1}} &amp; = 0\text{.}
+\end{align*}
+</div>
+<p data-braille="continuation">Therefore, \((a_{i_0}, a_{i_1}, \ldots,
+a_{i_{s - 1}})\) is a solution to the homogeneous system of linear equations</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{align*}
+(\omega^{i_0})^r x_0 + (\omega^{i_1})^r x_1 + \cdots + (\omega^{i_{s - 1}})^r x_{n - 1} &amp; = 0\\
+(\omega^{i_0})^{r + 1} x_0 + (\omega^{i_1})^{r + 1} x_1 + \cdots + (\omega^{i_{s - 1}})^{r + 1} x_{n - 1} &amp; = 0\\
+&amp; \vdots\\
+(\omega^{i_0})^{r + s - 1} x_0 + (\omega^{i_1})^{r + s - 1} x_1 + \cdots + (\omega^{i_{s - 1}})^{r + s - 1} x_{n - 1} &amp; = 0\text{.}
+\end{align*}
+</div>
+<p data-braille="continuation">However, this system has a unique solution, since the determinant of the matrix</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{equation*}
 \begin{pmatrix}
-1              &amp; 1              &amp; \cdots &amp; 1              &amp; 1 \\
-\alpha_1       &amp; \alpha_2       &amp; \cdots &amp; \alpha_{n-1}   &amp; x \\
-\alpha_1^2     &amp; \alpha_2^2     &amp; \cdots &amp; \alpha_{n-1}^2 &amp; x^2 \\
-\vdots         &amp; \vdots         &amp; \ddots &amp; \vdots         &amp; \vdots \\
-\alpha_1^{n-1} &amp; \alpha_2^{n-1} &amp; \cdots &amp; \alpha_{n-1}^{n-1} &amp; x^{n-1}
-\end{pmatrix}\text{.}
+(\omega^{i_0})^r &amp; (\omega^{i_1})^r &amp; \cdots &amp; (\omega^{i_{s-1}})^r \\
+(\omega^{i_0})^{r+1} &amp; (\omega^{i_1})^{r+1} &amp; \cdots &amp;
+(\omega^{i_{s-1}})^{r+1} \\
+\vdots &amp; \vdots         &amp; \ddots &amp; \vdots \\
+(\omega^{i_0})^{r+s-1} &amp; (\omega^{i_1})^{r+s-1} &amp; \cdots &amp;
+(\omega^{i_{s-1}})^{r+s-1} 
+\end{pmatrix}
 \end{equation*}
 </div>
-<p data-braille="continuation">Expanding this determinant by cofactors on the last column, we see that \(p(x)\) is a polynomial of at most degree \(n-1\text{.}\) Moreover, the roots of \(p(x)\) are \(\alpha_1, \ldots, \alpha_{n-1}\text{,}\) since the substitution of any one of these elements in the last column will produce a column identical to the last column in the matrix. Remember that the determinant of a matrix is zero if it has two identical columns. Therefore,</p>
-<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
-\begin{equation*}
-p(x) = (x - \alpha_1)(x - \alpha_2) \cdots (x - \alpha_{n-1}) \beta\text{,}
-\end{equation*}
-</div>
-<p data-braille="continuation">where</p>
-<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
-\begin{equation*}
-\beta = (-1)^{n + n} \det
-\begin{pmatrix}
-1              &amp; 1              &amp; \cdots &amp; 1 \\
-\alpha_1       &amp; \alpha_2       &amp; \cdots &amp; \alpha_{n-1} \\
-\alpha_1^2     &amp; \alpha_2^2     &amp; \cdots &amp; \alpha_{n-1}^2 \\
-\vdots         &amp; \vdots         &amp; \ddots &amp; \vdots \\
-\alpha_1^{n-2} &amp; \alpha_2^{n-2} &amp; \cdots &amp; \alpha_{n-1}^{n-2} 
-\end{pmatrix}\text{.}
-\end{equation*}
-</div>
-<p data-braille="continuation">By our induction hypothesis,</p>
-<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
-\begin{equation*}
-\beta = (-1)^{n+n} \prod_{1 \leq j \lt i \leq n - 1} (\alpha_i - \alpha_j)\text{.}
-\end{equation*}
-</div>
-<p data-braille="continuation">If we let \(x = \alpha_n\text{,}\) the result now follows immediately.</p>
-<span class="incontext"><a href="section-poly-codes.html#hwk">in-context</a></span>
+<p data-braille="continuation">can be shown to be nonzero using <a class="xref" data-knowl="./knowl/lemma-vandermode-det.html" title="Lemma 17.20">Lemma 17.20</a> and the basic properties of determinants (Exercise). Therefore, this solution must be \(a_{i_0} = a_{i_1} = \cdots = a_{i_{s - 1}} = 0\text{.}\)</p>
+<span class="incontext"><a href="section-poly-codes.html#NDt">in-context</a></span>
 </body>
 </html>

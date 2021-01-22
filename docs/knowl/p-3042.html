@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2021-01-21T16:41:43-07:00       *-->
+<!--*       on 2021-01-22T16:10:49-07:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -15,19 +15,19 @@
 </head>
 <body>
 <h6 xmlns:svg="http://www.w3.org/2000/svg" class="heading"><span class="type">Paragraph</span></h6>
-<p>Now let us examine why the <abbr xmlns:svg="http://www.w3.org/2000/svg" class="acronym">RSA</abbr> cryptosystem works. We know that \(DE \equiv 1 \pmod{ m}\text{;}\) hence, there exists a \(k\) such that</p>
+<p>There is a problem of message verification in public key cryptosystems. Since the encoding key is public knowledge, anyone has the ability to send an encoded message. If Alice receives a message from Bob, she would like to be able to verify that it was Bob who actually sent the message. Suppose that Bob's encrypting key is \((n', E')\) and his decrypting key is \((n', D')\text{.}\) Also, suppose that Alice's encrypting key is \((n, E)\) and her decrypting key is \((n, D)\text{.}\) Since encryption keys are public information, they can exchange coded messages at their convenience. Bob wishes to assure Alice that the message he is sending is authentic. Before Bob sends the message \(x\) to Alice, he decrypts  \(x\) with his own key:</p>
 <div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
 \begin{equation*}
-DE = km + 1 = k \phi(n) + 1\text{.}
+x' = x ^{D'} \bmod n'\text{.}
 \end{equation*}
 </div>
-<p data-braille="continuation">There are two cases to consider. In the first case assume that \(\gcd(x, n) = 1\text{.}\) Then by <a class="xref" data-knowl="./knowl/theorem-eulers_theorem.html" title="Theorem 11.25: Euler's Theorem">Theorem 11.25</a>,</p>
+<p data-braille="continuation">Anyone can change \(x'\) back to \(x\) just by encryption, but only Bob has the ability to form \(x'\text{.}\) Now Bob encrypts \(x'\) with Alice's encryption key to form</p>
 <div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
 \begin{equation*}
-y^D = (x^E)^D = x^{DE} = x^{km + 1} = (x^{\phi(n)})^k x = (1)^k x = x \bmod n\text{.}
+y' = {x'}^E  \bmod n\text{,}
 \end{equation*}
 </div>
-<p data-braille="continuation">So we see that Alice recovers the original message \(x\) when she computes \(y^D \bmod n\text{.}\)</p>
-<span class="incontext"><a href="section-public-key-crypt.html#jAF">in-context</a></span>
+<p data-braille="continuation">a message that only Alice can decode. Alice decodes the message and then encodes the result with Bob's key to read the original message, a message that could have only been sent by Bob.</p>
+<span class="incontext"><a href="section-public-key-crypt.html#bWg">in-context</a></span>
 </body>
 </html>

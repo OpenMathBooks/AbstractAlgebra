@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2021-01-21T16:41:43-07:00       *-->
+<!--*       on 2021-01-22T16:10:50-07:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -12,29 +12,18 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta name="robots" content="noindex, nofollow">
-<script>$(function () {
-    // Make *any* div with class 'sagecell-sage' an executable Sage cell
-    // Their results will be linked, only within language type
-    sagecell.makeSagecell({inputLocation: 'div.sagecell-sage',
-                           linked: true,
-                           languages: ['sage'],
-                           evalButtonText: 'Evaluate (Sage)'});
-});
-</script>
 </head>
 <body>
 <article class="exercise exercise-like"><h6 xmlns:svg="http://www.w3.org/2000/svg" class="heading">
-<span class="type">Worksheet Exercise</span><span class="space"> </span><span class="codenumber">3<span class="period">.</span></span>
+<span class="type">Exercise</span><span class="space"> </span><span class="codenumber">3<span class="period">.</span></span>
 </h6>
-<p xmlns:svg="http://www.w3.org/2000/svg">Now we need \(E\) and \(D\text{.}\)  Recall that we want \(\gcd(E,m) = 1\) and \(DE \equiv 1 \pmod{m}\text{.}\)  How are you going to find these?</p>
-<p xmlns:svg="http://www.w3.org/2000/svg">SAGE has the command <code class="code-inline tex2jax_ignore">gcd(E, m)</code>that will compute the gcd of the two inputs.  You could try factoring \(m\) and looking for a reasonably large value of \(E\text{,}\) or just guess and check until you find a suitable \(E\text{.}\)</p>
-<p xmlns:svg="http://www.w3.org/2000/svg">To find \(D\text{,}\) there is the command <code class="code-inline tex2jax_ignore">inverse_mod(E, m)</code>which will run the Euclidean algorithm forwards and backwards on \(E\) and \(m\text{.}\)</p>
-<div class="sagecell-sage" id="XDJ"><script type="text/x-sage"># repeatedly pick E until gcd(E,m) = 1.
-E = 35
-gcd(E,m)
-</script></div>
-<div class="sagecell-sage" id="DKS"><script type="text/x-sage">D = inverse_mod(E,m)
-D
-</script></div></article><span class="incontext"><a href="ws_groups-RSA-lab.html#bDI">in-context</a></span>
+<p xmlns:svg="http://www.w3.org/2000/svg">Assuming that monoalphabetic code was used to encode the following secret message, what was the original message?</p>
+<pre class="code-block tex2jax_ignore">APHUO EGEHP PEXOV FKEUH CKVUE CHKVE APHUO
+EGEHU EXOVL EXDKT VGEFT EHFKE UHCKF TZEXO
+VEZDT TVKUE XOVKV ENOHK ZFTEH TEHKQ LEROF
+PVEHP PEXOV ERYKP GERYT GVKEG XDRTE RGAGA
+</pre>
+<p xmlns:svg="http://www.w3.org/2000/svg">What is the significance of this message in the history of cryptography?</p>
+<div class="solutions"><a class="hint-knowl original" data-knowl="./knowl/hint-161-hidden.html" title="Hint 12.5.3.1"><span xmlns:svg="http://www.w3.org/2000/svg" class="type">Hint</span></a></div></article><span class="incontext"><a href="exercises-crypt.html#Bbt">in-context</a></span>
 </body>
 </html>
