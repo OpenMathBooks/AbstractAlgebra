@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2021-01-22T16:11:17-07:00       *-->
+<!--*       on 2021-01-25T10:40:13-07:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -15,7 +15,18 @@
 </head>
 <body>
 <h6 xmlns:svg="http://www.w3.org/2000/svg" class="heading"><span class="type">Paragraph</span></h6>
-<p xmlns:svg="http://www.w3.org/2000/svg">Uncoded messages may be composed of letters or characters, but typically they consist of binary \(m\)-tuples. These messages are encoded into codewords, consisting of binary \(n\)-tuples, by a device called an <dfn class="terminology">encoder</dfn>. The message is transmitted and then decoded. We will consider the occurrence of errors during transmission. An <dfn class="terminology">error</dfn> occurs if there is a change in one or more bits in the codeword. A <dfn class="terminology">decoding scheme</dfn> is a method that either converts an arbitrarily received \(n\)-tuple into a meaningful decoded message or gives an error message for that \(n\)-tuple. If the received message is a codeword (one of the special \(n\)-tuples allowed to be transmitted), then the decoded message must be the unique message that was encoded into the codeword. For received non-codewords, the decoding scheme will give an error indication, or, if we are more clever, will actually try to correct the error and reconstruct the original message. Our goal is to transmit error-free messages as cheaply and quickly as possible.</p>
-<span class="incontext"><a href="section-error-detecting-correcting-codes.html#pnr">in-context</a></span>
+<p>Fix \(k\) different coordinates. We first compute the probability that an error has occurred in this fixed set of coordinates. The probability of an error occurring in a particular one of these \(k\) coordinates is \(q\text{;}\) the probability that an error will not occur in any of the remaining \(n-k\) coordinates is \(p\text{.}\) The probability of each of these \(n\) independent events is \(q^{k}p^{n-k}\text{.}\) The number of possible error patterns with exactly \(k\) errors occurring is equal to</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{equation*}
+\binom{n}{k}  = \frac{n!}{k!(n - k)!}\text{,}
+\end{equation*}
+</div>
+<p data-braille="continuation">the number of combinations of \(n\) things taken \(k\) at a time. Each of these error patterns has probability \(q^{k}p^{n-k}\) of occurring; hence, the probability of all of these error patterns is</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{equation*}
+\binom{n}{k}  q^{k}p^{n - k}\text{.}
+\end{equation*}
+</div>
+<span class="incontext"><a href="section-error-detecting-correcting-codes.html#duy">in-context</a></span>
 </body>
 </html>

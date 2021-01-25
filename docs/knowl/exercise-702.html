@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2021-01-22T16:10:21-07:00       *-->
+<!--*       on 2021-01-25T10:39:13-07:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -15,9 +15,29 @@
 </head>
 <body>
 <article class="exercise exercise-like"><h6 xmlns:svg="http://www.w3.org/2000/svg" class="heading">
-<span class="type">Worksheet Exercise</span><span class="space"> </span><span class="codenumber">1<span class="period">.</span></span>
+<span class="type">Exercise</span><span class="space"> </span><span class="codenumber">1<span class="period">.</span></span>
 </h6>
-<p xmlns:svg="http://www.w3.org/2000/svg">Write the \(4\times 4\) group tables for \(\Z_4\) and  \(U(8)\text{,}\) the group of <em class="emphasis">units</em>  of \(\Z_8\) (numbers relatively prime to 8) under multiplication.</p>
-<div class="solutions"></div></article><span class="incontext"><a href="section-groups-cayley.html#UQu">in-context</a></span>
+<p xmlns:svg="http://www.w3.org/2000/svg">Let's prove Cayley's theorem.  Here is the overall structure, including the “big idea”.  After this, you are asked to provide the details.</p>
+<article class="proof"><h6 xmlns:svg="http://www.w3.org/2000/svg" class="heading"><span class="type">Proof<span class="period">.</span></span></h6>
+<p xmlns:svg="http://www.w3.org/2000/svg">Let \(G\) be a graph.  We will define a group of permuations \(\overline{G}\) that is isomorphic to \(G\text{.}\) For any \(g \in G\text{,}\) define a  function \(\lambda_g : G \rightarrow G\) by \(\lambda_g(a) = ga\text{.}\) [Show \(\lambda_g\) is a permutation of \(G\text{,}\) i.e., a bijection.]</p>
+<p>Now we are ready to define our group \(\overline{G}\text{.}\) Let</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{equation*}
+\overline{G} = \{ \lambda_g \st g \in G \}\text{.}
+\end{equation*}
+</div>
+<p data-braille="continuation">We must show that \(\overline{G}\) is a group (where the operation is composition of functions).   [Show that \(\overline{G}\) is subgroup of \(S_G\) by showing it contains the identity, is closed under the operation, and is closed under inverses.]</p>
+<p xmlns:svg="http://www.w3.org/2000/svg">We can define an isomorphism from \(G\) to \(\overline{G}\) by \(\phi : g \mapsto \lambda_g\text{.}\)  We must prove this is really an isomorphism.  [Show that \(\phi\) is a bijection and satisfies the homomorphism property.]</p></article><p>Now fill in the gaps:</p>
+<ol class="lower-alpha">
+<li><p xmlns:svg="http://www.w3.org/2000/svg">Prove that \(\lambda_g\) is injective (one-to-one).</p></li>
+<li><p xmlns:svg="http://www.w3.org/2000/svg">Prove that \(\lambda_g\) is surjective (onto).</p></li>
+<li><p xmlns:svg="http://www.w3.org/2000/svg">Prove that \(\overline{G}\) contains the identity.</p></li>
+<li><p xmlns:svg="http://www.w3.org/2000/svg">Prove that \(\overline{G}\) is closed under the operation (composition).</p></li>
+<li><p xmlns:svg="http://www.w3.org/2000/svg">Prove that \(\overline{G}\) is closed under inverses.</p></li>
+<li><p xmlns:svg="http://www.w3.org/2000/svg">Prove that \(\phi\) is injective.</p></li>
+<li><p xmlns:svg="http://www.w3.org/2000/svg">Prove that \(\phi\) is surjective.</p></li>
+<li><p xmlns:svg="http://www.w3.org/2000/svg">Prove that \(\phi\) satisfies the homomorphism property.</p></li>
+</ol>
+<div class="solutions"><a class="hint-knowl original" data-knowl="./knowl/hint-155-hidden.html" title="Hint 10.1.4.1.1"><span xmlns:svg="http://www.w3.org/2000/svg" class="type">Hint</span></a></div></article><span class="incontext"><a href="section-groups-cayley.html#MXn">in-context</a></span>
 </body>
 </html>

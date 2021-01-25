@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2021-01-22T16:11:12-07:00       *-->
+<!--*       on 2021-01-25T10:40:08-07:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -15,23 +15,38 @@
 </head>
 <body>
 <h6 xmlns:svg="http://www.w3.org/2000/svg" class="heading"><span class="type">Paragraph</span></h6>
-<p>Let us examine the orthogonal group on \({\mathbb R}^2\) a bit more closely. An element \(A \in O(2)\) is determined by its action on \({\mathbf e}_1 = (1, 0)^\transpose\) and \({\mathbf e}_2 = (0, 1)^\transpose\text{.}\) If \(A{\mathbf e}_1 = (a,b)^\transpose\text{,}\) then \(a^2 + b^2 = 1\text{,}\) since the length of a vector must be preserved when it is multiplied by \(A\text{.}\) Since multiplication of an element of \(O(2)\) preserves length and orthogonality, \(A{\mathbf e}_2 = \pm(-b, a)^\transpose\text{.}\) If we choose \(A{\mathbf e}_2 = (-b, a)^\transpose\text{,}\) then</p>
+<p>We simply need to find all of the finite subgroups \(G\) of \(E(2)\text{.}\) Any finite symmetry group \(G\) in \({\mathbb R}^2\) must fix the origin  and must be a finite subgroup of \(O(2)\text{,}\) since translations and glide reflections have infinite order. By <a class="xref" data-knowl="./knowl/example-o2.html" title="Example 15.10">Example 15.10</a>, elements in \(O(2)\) are either rotations of the form</p>
 <div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
 \begin{equation*}
-A
-=
-\begin{pmatrix}
-a &amp; -b \\
-b &amp; a
-\end{pmatrix}
+R_{\theta}
 =
 \begin{pmatrix}
 \cos \theta &amp; - \sin \theta \\
 \sin \theta &amp; \cos \theta
-\end{pmatrix},
+\end{pmatrix}
 \end{equation*}
 </div>
-<p data-braille="continuation">where \(0 \leq \theta \lt 2 \pi\text{.}\) The matrix \(A\) rotates a vector in \(\mathbb R^2\) counterclockwise about the origin by an angle of \(\theta\) (<a class="xref" data-knowl="./knowl/figure-o2.html" title="Figure 15.9">Figure 15.9</a>).</p>
-<span class="incontext"><a href="section-matrix-groups.html#wAv">in-context</a></span>
+<p data-braille="continuation">or reflections of the form</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{equation*}
+T_{\phi}
+=
+\begin{pmatrix}
+\cos \phi &amp;  - \sin \phi \\
+\sin \phi &amp; \cos \phi
+\end{pmatrix}
+\begin{pmatrix}
+1 &amp; 0 \\
+0 &amp; -1
+\end{pmatrix}
+=
+\begin{pmatrix}
+\cos \phi &amp;  \sin \phi \\
+\sin \phi &amp; - \cos \phi
+\end{pmatrix}\text{.}
+\end{equation*}
+</div>
+<p data-braille="continuation">Notice that \(\det(R_{\theta})=1\text{,}\) \(\det(T_{\phi})=-1\text{,}\) and \(T_{\phi}^2=I\text{.}\) We can divide the proof up into two cases. In the first case, all of the elements in \(G\) have determinant one. In the second case, there exists at least one element in \(G\) with determinant \(-1\text{.}\)</p>
+<span class="incontext"><a href="section-symmetry.html#CpH">in-context</a></span>
 </body>
 </html>

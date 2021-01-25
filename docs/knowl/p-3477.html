@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2021-01-22T16:11:19-07:00       *-->
+<!--*       on 2021-01-25T10:40:15-07:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -15,13 +15,28 @@
 </head>
 <body>
 <h6 xmlns:svg="http://www.w3.org/2000/svg" class="heading"><span class="type">Paragraph</span></h6>
-<p>Suppose that a codeword \({\mathbf x}\) is sent and the word \({\mathbf y}\) is received with at most \(n\) errors. Then \(d( {\mathbf x}, {\mathbf y}) \leq n\text{.}\) If \({\mathbf z}\) is any codeword other than \({\mathbf x}\text{,}\) then</p>
+<p>Define the <dfn xmlns:svg="http://www.w3.org/2000/svg" class="terminology">inner product</dfn>  of two binary \(n\)-tuples to be</p>
 <div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
 \begin{equation*}
-2n+1 \leq d( {\mathbf x}, {\mathbf z}) \leq d( {\mathbf x}, {\mathbf y}) + d( {\mathbf y}, {\mathbf z}) \leq n + d( {\mathbf y}, {\mathbf z})\text{.}
+{\mathbf x} \cdot {\mathbf y} = x_1 y_1 + \cdots + x_n y_n\text{,}
 \end{equation*}
 </div>
-<p data-braille="continuation">Hence, \(d({\mathbf y}, {\mathbf z} ) \geq n+1\) and \({\mathbf y}\) will be correctly decoded as \({\mathbf x}\text{.}\) Now suppose that \({\mathbf x}\) is transmitted and \({\mathbf y}\) is received and that at least one error  has occurred, but not more than \(2n\) errors. Then \(1 \leq d( {\mathbf x}, {\mathbf y} ) \leq 2n\text{.}\) Since the minimum distance between codewords is \(2n +1\text{,}\) \({\mathbf y}\) cannot be a codeword. Consequently, the code can detect between \(1\) and \(2n\) errors.</p>
-<span class="incontext"><a href="section-error-detecting-correcting-codes.html#JBH">in-context</a></span>
+<p data-braille="continuation">where \({\mathbf x} = (x_1, x_2, \ldots,
+x_n)^\transpose\) and \({\mathbf y} = (y_1, y_2, \ldots,
+y_n)^\transpose\) are column vectors.<a class="fn-knowl original" data-knowl="./knowl/fn-7-hidden.html" title="Footnote 3"><sup> 3 </sup></a> For example, if \({\mathbf x} = (011001)^\transpose\) and \({\mathbf y} = (110101)^\transpose\text{,}\) then \({\mathbf x} \cdot {\mathbf y} = 0\text{.}\) We can also look at an inner product as the product of a row matrix with a column matrix; that is,</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{align*}
+{\mathbf x} \cdot {\mathbf y} &amp; = {\mathbf x}^\transpose  {\mathbf y}\\
+&amp; =
+\begin{pmatrix}
+x_1 &amp; x_2 &amp; \cdots &amp; x_n
+\end{pmatrix}
+\begin{pmatrix}
+y_1 \\ y_2 \\ \vdots \\ y_n
+\end{pmatrix}\\
+&amp; = x_{1}y_{1} + x_{2}y_{2} + \cdots + x_{n}y_{n}\text{.}
+\end{align*}
+</div>
+<span class="incontext"><a href="section-linear-codes.html#Bgk">in-context</a></span>
 </body>
 </html>

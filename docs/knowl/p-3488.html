@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2021-01-22T16:11:20-07:00       *-->
+<!--*       on 2021-01-25T10:40:16-07:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -15,28 +15,38 @@
 </head>
 <body>
 <h6 xmlns:svg="http://www.w3.org/2000/svg" class="heading"><span class="type">Paragraph</span></h6>
-<p>Define the <dfn xmlns:svg="http://www.w3.org/2000/svg" class="terminology">inner product</dfn>  of two binary \(n\)-tuples to be</p>
+<p>Observe that the rows in \(H\)  represent the parity checks on certain bit positions in a \(6\)-tuple. The \(1\)s in the identity matrix serve as parity checks for the \(1\)s in the same row. If \({\mathbf x} = (x_1, x_2, x_3, x_4, x_5, x_6)\text{,}\) then</p>
 <div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
 \begin{equation*}
-{\mathbf x} \cdot {\mathbf y} = x_1 y_1 + \cdots + x_n y_n\text{,}
+{\mathbf 0}
+=
+H{\mathbf x}
+=
+\begin{pmatrix}
+x_2 + x_3 + x_4 \\
+x_1 + x_2 + x_5\\
+x_1 + x_3 + x_6
+\end{pmatrix}\text{,}
 \end{equation*}
 </div>
-<p data-braille="continuation">where \({\mathbf x} = (x_1, x_2, \ldots,
-x_n)^\transpose\) and \({\mathbf y} = (y_1, y_2, \ldots,
-y_n)^\transpose\) are column vectors.<a class="fn-knowl original" data-knowl="./knowl/fn-7-hidden.html" title="Footnote 3"><sup> 3 </sup></a> For example, if \({\mathbf x} = (011001)^\transpose\) and \({\mathbf y} = (110101)^\transpose\text{,}\) then \({\mathbf x} \cdot {\mathbf y} = 0\text{.}\) We can also look at an inner product as the product of a row matrix with a column matrix; that is,</p>
+<p data-braille="continuation">which yields a system of equations:</p>
 <div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
 \begin{align*}
-{\mathbf x} \cdot {\mathbf y} &amp; = {\mathbf x}^\transpose  {\mathbf y}\\
-&amp; =
-\begin{pmatrix}
-x_1 &amp; x_2 &amp; \cdots &amp; x_n
-\end{pmatrix}
-\begin{pmatrix}
-y_1 \\ y_2 \\ \vdots \\ y_n
-\end{pmatrix}\\
-&amp; = x_{1}y_{1} + x_{2}y_{2} + \cdots + x_{n}y_{n}\text{.}
+x_2 + x_3 + x_4 &amp; = 0\\
+x_1 + x_2 + x_5 &amp; = 0\\
+x_1 + x_3 + x_6 &amp; = 0\text{.}
 \end{align*}
 </div>
-<span class="incontext"><a href="section-linear-codes.html#Bgk">in-context</a></span>
+<p data-braille="continuation">Here \(x_4\) serves as a check bit for \(x_2\) and \(x_3\text{;}\) \(x_5\) is a check bit for \(x_1\) and \(x_2\text{;}\) and \(x_6\) is a check bit for \(x_1\) and \(x_3\text{.}\) The identity matrix keeps \(x_4\text{,}\) \(x_5\text{,}\) and \(x_6\) from having to check on each other. Hence, \(x_1\text{,}\) \(x_2\text{,}\) and \(x_3\) can be arbitrary but \(x_4\text{,}\) \(x_5\text{,}\) and \(x_6\) must be chosen to ensure parity. The null space of \(H\) is easily computed to be</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{equation*}
+\begin{array}{cccc}
+(000000) &amp; (001101) &amp; (010110) &amp; (011011) \\
+(100011) &amp; (101110) &amp; (110101) &amp; (111000).
+\end{array}
+\end{equation*}
+</div>
+<p data-braille="continuation">An even easier way to compute the null space is with the generator matrix \(G\) (<a class="xref" data-knowl="./knowl/table-matrix-gen-code.html" title="Table 16.24: A matrix-generated code">Table 16.24</a>).</p>
+<span class="incontext"><a href="section-parity-check.html#zMw">in-context</a></span>
 </body>
 </html>

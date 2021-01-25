@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2021-01-22T16:10:35-07:00       *-->
+<!--*       on 2021-01-25T10:39:28-07:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -15,40 +15,13 @@
 </head>
 <body>
 <h6 xmlns:svg="http://www.w3.org/2000/svg" class="heading"><span class="type">Paragraph</span></h6>
-<p>The only remaining possible case is a disjoint product of the form</p>
+<p>The roots of \(x^n - a\) are \(\sqrt[n]{a}, \omega \sqrt[n]{a}, \ldots, \omega^{n-1} \sqrt[n]{a}\text{,}\) where \(\omega\) is a primitive \(n\)th root of unity. Suppose that \(F\) contains all of its \(n\)th roots of unity. If \(\zeta\) is one of the roots of  \(x^n - a\text{,}\) then distinct roots of \(x^n - a\) are \(\zeta, \omega \zeta, \ldots, \omega^{n - 1} \zeta\text{,}\) and \(E = F(\zeta)\text{.}\) Since \(G(E/F)\) permutes the roots \(x^n - a\text{,}\) the elements in  \(G(E/F)\) must be determined by their action on these roots. Let \(\sigma\)  and \(\tau\) be in \(G(E/F)\) and suppose that \(\sigma( \zeta ) = \omega^i \zeta\) and \(\tau( \zeta ) = \omega^j \zeta\text{.}\) If \(F\) contains the roots of unity, then</p>
 <div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
 \begin{equation*}
-\sigma = \tau (a_1 a_2) (a_3 a_4)\text{,}
+\sigma \tau( \zeta ) = \sigma( \omega^j \zeta) = \omega^j \sigma( \zeta ) = \omega^{i+j} \zeta = \omega^i \tau( \zeta ) = \tau( \omega^i \zeta ) = \tau \sigma( \zeta )\text{.}
 \end{equation*}
 </div>
-<p data-braille="continuation">where \(\tau\) is the product of an even number of disjoint \(2\)-cycles. But</p>
-<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
-\begin{equation*}
-\sigma^{-1}(a_1 a_2 a_3)\sigma(a_1 a_2 a_3)^{-1}
-\end{equation*}
-</div>
-<p data-braille="continuation">is in \(N\) since \((a_1 a_2 a_3)\sigma(a_1 a_2 a_3)^{-1}\) is in \(N\text{;}\) and so</p>
-<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
-\begin{align*}
-\sigma^{-1}(a_1 a_2 a_3)\sigma(a_1 a_2 a_3)^{-1} &amp; = \tau^{-1} (a_1 a_2) (a_3 a_4) (a_1 a_2 a_3) \tau (a_1 a_2)(a_3 a_4)(a_1 a_2 a_3)^{-1}\\
-&amp; = (a_1 a_3)(a_2 a_4)\text{.}
-\end{align*}
-</div>
-<p data-braille="continuation">Since \(n \geq 5\text{,}\) we can find \(b \in \{1, 2, \ldots,
-n \}\) such that \(b \neq a_1, a_2, a_3, a_4\text{.}\) Let \(\mu = (a_1 a_3 b)\text{.}\) Then</p>
-<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
-\begin{equation*}
-\mu^{-1} (a_1 a_3)(a_2 a_4) \mu (a_1 a_3)(a_2 a_4) \in N
-\end{equation*}
-</div>
-<p data-braille="continuation">and</p>
-<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
-\begin{align*}
-\mu^{-1} (a_1 a_3)(a_2 a_4) \mu (a_1 a_3)(a_2 a_4) &amp; = (a_1 b a_3)(a_1 a_3)(a_2 a_4) (a_1 a_3 b)(a_1 a_3)(a_2 a_4)\\
-&amp; = (a_1 a_3 b )\text{.}
-\end{align*}
-</div>
-<p data-braille="continuation">Therefore, \(N\) contains a \(3\)-cycle. This completes the proof of the lemma.</p>
-<span class="incontext"><a href="section-simplicity-of-an.html#hxk">in-context</a></span>
+<p data-braille="continuation">Therefore, \(\sigma \tau = \tau \sigma\) and \(G(E/F)\) is abelian, and \(G(E/F)\) must be solvable.</p>
+<span class="incontext"><a href="section-galois-applications.html#aHW">in-context</a></span>
 </body>
 </html>

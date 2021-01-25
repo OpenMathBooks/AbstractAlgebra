@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2021-01-22T16:11:12-07:00       *-->
+<!--*       on 2021-01-25T10:40:07-07:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -15,15 +15,20 @@
 </head>
 <body>
 <h6 xmlns:svg="http://www.w3.org/2000/svg" class="heading"><span class="type">Paragraph</span></h6>
-<p>\((3) \Rightarrow (2)\text{.}\) Since</p>
+<p>For any arbitrary isometry, \(f\text{,}\) \(T_{\mathbf x} f\) will fix the origin for some vector \({\mathbf x}\) in \({\mathbb R}^2\text{;}\) hence, \(T_{\mathbf x} f({\mathbf y}) = A {\mathbf y}\) for some matrix \(A \in O(2)\text{.}\) Consequently, \(f({\mathbf y}) = A {\mathbf y} + {\mathbf x}\text{.}\) Given the isometries</p>
 <div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
 \begin{align*}
-\langle {\mathbf x}, {\mathbf x} \rangle &amp; = \langle A{\mathbf x}, A{\mathbf x} \rangle\\
-&amp; = {\mathbf x}^\transpose A^\transpose A {\mathbf x}\\
-&amp; = \langle {\mathbf x}, A^\transpose A{\mathbf x} \rangle\text{,}
+f({\mathbf y}) &amp; = A {\mathbf y} + {\mathbf x}_1\\
+g({\mathbf y}) &amp; = B {\mathbf y} + {\mathbf x}_2\text{,}
 \end{align*}
 </div>
-<p data-braille="continuation">we know that \(\langle {\mathbf x}, (A^\transpose A - I){\mathbf x} \rangle = 0\) for all \({\mathbf x}\text{.}\) Therefore, \(A^\transpose A -I = 0\) or \(A^{-1} = A^\transpose\text{.}\)</p>
-<span class="incontext"><a href="section-matrix-groups.html#RyF">in-context</a></span>
+<p data-braille="continuation">their composition is</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{equation*}
+f(g({\mathbf y})) = f(B {\mathbf y} + {\mathbf x}_2) = AB {\mathbf y} + A{\mathbf x}_2 + {\mathbf x}_1\text{.}
+\end{equation*}
+</div>
+<p data-braille="continuation">This last computation allows us to identify the group of isometries on \({\mathbb R}^2\) with \(E(2)\text{.}\)</p>
+<span class="incontext"><a href="section-symmetry.html#Vdf">in-context</a></span>
 </body>
 </html>

@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2021-01-22T16:10:45-07:00       *-->
+<!--*       on 2021-01-25T10:39:42-07:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -12,72 +12,29 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta name="robots" content="noindex, nofollow">
+<script>$(function () {
+    // Make *any* div with class 'sagecell-sage' an executable Sage cell
+    // Their results will be linked, only within language type
+    sagecell.makeSagecell({inputLocation: 'div.sagecell-sage',
+                           linked: true,
+                           languages: ['sage'],
+                           evalButtonText: 'Evaluate (Sage)'});
+});
+</script>
 </head>
 <body>
 <article class="exercise exercise-like"><h6 xmlns:svg="http://www.w3.org/2000/svg" class="heading">
-<span class="type">Exercise</span><span class="space"> </span><span class="codenumber">1<span class="period">.</span></span>
+<span class="type">Worksheet Exercise</span><span class="space"> </span><span class="codenumber">3<span class="period">.</span></span>
 </h6>
-<p>Consider the group \(U(35) = \{1,2,3,4,6,8,9,11,12,13,16,17,18,19,22,23,24,26,27,29,31,32,33,34\}\) under the operation of multiplication modulo \(35\text{.}\)  The orders of the elements are: <div class="tabular-box natural-width"><table xmlns:svg="http://www.w3.org/2000/svg" class="tabular">
-<tr>
-<td class="c m b2 r2 l0 t0 lines">\(​g\)</td>
-<td class="c m b2 r2 l0 t0 lines">1</td>
-<td class="c m b2 r2 l0 t0 lines">2</td>
-<td class="c m b2 r2 l0 t0 lines">3</td>
-<td class="c m b2 r2 l0 t0 lines">4</td>
-<td class="c m b2 r2 l0 t0 lines">6</td>
-<td class="c m b2 r2 l0 t0 lines">8</td>
-<td class="c m b2 r2 l0 t0 lines">9</td>
-<td class="c m b2 r2 l0 t0 lines">11</td>
-<td class="c m b2 r2 l0 t0 lines">12</td>
-<td class="c m b2 r2 l0 t0 lines">13</td>
-<td class="c m b2 r2 l0 t0 lines">16</td>
-<td class="c m b2 r2 l0 t0 lines">17</td>
-<td class="c m b2 r2 l0 t0 lines">18</td>
-<td class="c m b2 r2 l0 t0 lines">19</td>
-<td class="c m b2 r2 l0 t0 lines">22</td>
-<td class="c m b2 r2 l0 t0 lines">23</td>
-<td class="c m b2 r2 l0 t0 lines">24</td>
-<td class="c m b2 r2 l0 t0 lines">26</td>
-<td class="c m b2 r2 l0 t0 lines">27</td>
-<td class="c m b2 r2 l0 t0 lines">29</td>
-<td class="c m b2 r2 l0 t0 lines">31</td>
-<td class="c m b2 r2 l0 t0 lines">32</td>
-<td class="c m b2 r2 l0 t0 lines">33</td>
-<td class="c m b2 r0 l0 t0 lines" data-braille="last-cell">34</td>
-</tr>
-<tr>
-<td class="c m b0 r2 l0 t0 lines">\(\ord(g)\)</td>
-<td class="c m b0 r2 l0 t0 lines">1</td>
-<td class="c m b0 r2 l0 t0 lines">12</td>
-<td class="c m b0 r2 l0 t0 lines">12</td>
-<td class="c m b0 r2 l0 t0 lines">6</td>
-<td class="c m b0 r2 l0 t0 lines">2</td>
-<td class="c m b0 r2 l0 t0 lines">4</td>
-<td class="c m b0 r2 l0 t0 lines">6</td>
-<td class="c m b0 r2 l0 t0 lines">3</td>
-<td class="c m b0 r2 l0 t0 lines">12</td>
-<td class="c m b0 r2 l0 t0 lines">4</td>
-<td class="c m b0 r2 l0 t0 lines">3</td>
-<td class="c m b0 r2 l0 t0 lines">12</td>
-<td class="c m b0 r2 l0 t0 lines">12</td>
-<td class="c m b0 r2 l0 t0 lines">6</td>
-<td class="c m b0 r2 l0 t0 lines">4</td>
-<td class="c m b0 r2 l0 t0 lines">12</td>
-<td class="c m b0 r2 l0 t0 lines">6</td>
-<td class="c m b0 r2 l0 t0 lines">6</td>
-<td class="c m b0 r2 l0 t0 lines">4</td>
-<td class="c m b0 r2 l0 t0 lines">2</td>
-<td class="c m b0 r2 l0 t0 lines">6</td>
-<td class="c m b0 r2 l0 t0 lines">12</td>
-<td class="c m b0 r2 l0 t0 lines">12</td>
-<td class="c m b0 r0 l0 t0 lines" data-braille="last-cell">2</td>
-</tr>
-</table></div></p>
-<ol class="lower-alpha">
-<li><p xmlns:svg="http://www.w3.org/2000/svg">Find two \(p\)-groups \(H\) and \(K\) such that \(U(35)\) is the internal direct product of \(H\) and \(K\text{.}\)  Briefly explain why your groups work.</p></li>
-<li><p xmlns:svg="http://www.w3.org/2000/svg">Let \(H\) be the larger of the two groups above.  Show how to decompose it as the internal direct product of \(\langle a \rangle\) and \(H'\) where \(a\) is of maximal order and \(H'\) is some other subgroup of \(H\text{.}\)</p></li>
-<li><p xmlns:svg="http://www.w3.org/2000/svg">Using the decompositions above (perhaps repeating the second step as needed), write \(U(35)\) as the direct product of groups of the form \(\Z_{p^k}\) (\(p\) prime).</p></li>
-</ol>
-<div class="solutions"></div></article><span class="incontext"><a href="section-direct-products.html#qcM">in-context</a></span>
+<p xmlns:svg="http://www.w3.org/2000/svg">Now we need \(E\) and \(D\text{.}\)  Recall that we want \(\gcd(E,m) = 1\) and \(DE \equiv 1 \pmod{m}\text{.}\)  How are you going to find these?</p>
+<p xmlns:svg="http://www.w3.org/2000/svg">SAGE has the command <code class="code-inline tex2jax_ignore">gcd(E, m)</code>that will compute the gcd of the two inputs.  You could try factoring \(m\) and looking for a reasonably large value of \(E\text{,}\) or just guess and check until you find a suitable \(E\text{.}\)</p>
+<p xmlns:svg="http://www.w3.org/2000/svg">To find \(D\text{,}\) there is the command <code class="code-inline tex2jax_ignore">inverse_mod(E, m)</code>which will run the Euclidean algorithm forwards and backwards on \(E\) and \(m\text{.}\)</p>
+<div class="sagecell-sage" id="XDJ"><script type="text/x-sage"># repeatedly pick E until gcd(E,m) = 1.
+E = 35
+gcd(E,m)
+</script></div>
+<div class="sagecell-sage" id="DKS"><script type="text/x-sage">D = inverse_mod(E,m)
+D
+</script></div></article><span class="incontext"><a href="ws_groups-RSA-lab.html#bDI">in-context</a></span>
 </body>
 </html>

@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2021-01-22T16:11:48-07:00       *-->
+<!--*       on 2021-01-25T10:40:43-07:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -15,17 +15,17 @@
 </head>
 <body>
 <h6 xmlns:svg="http://www.w3.org/2000/svg" class="heading"><span class="type">Paragraph</span></h6>
-<p>The join of \(a\) and \(b\) is preserved by \(\phi\) since</p>
+<p>Given a complex circuit, we can now apply the techniques of Boolean algebra to reduce it to a simpler one. Consider the circuit in  <a class="xref" data-knowl="./knowl/figure-circuit-2.html" title="Figure 18.32">Figure 18.32</a>. Since</p>
 <div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
 \begin{align*}
-\phi(a \vee b) &amp; = \phi( a_1 \vee \cdots \vee a_n \vee b_1 \vee \cdots \vee b_m )\\
-&amp; = \{ a_1, \ldots, a_n, b_1, \ldots, b_m \}\\
-&amp; = \{ a_1, \ldots, a_n \} \cup \{ b_1, \ldots, b_m \}\\
-&amp; = \phi( a_1 \vee \cdots \vee a_n ) \cup \phi( b_1 \wedge \cdots \vee b_m )\\
-&amp; = \phi(a) \cup \phi(b)\text{.}
+(a \vee b) \wedge (a \vee b') \wedge (a \vee b) &amp; = (a \vee b) \wedge (a \vee b) \wedge (a \vee b')\\
+&amp; = (a \vee b) \wedge (a \vee b')\\
+&amp; = a \vee ( b \wedge b')\\
+&amp; = a \vee O\\
+&amp; = a\text{,}
 \end{align*}
 </div>
-<p data-braille="continuation">Similarly, \(\phi( a \wedge b ) = \phi(a) \cap \phi(b)\text{.}\)</p>
-<span class="incontext"><a href="section-boolean-algebras.html#arB">in-context</a></span>
+<p data-braille="continuation">we can replace the more complicated circuit with a circuit containing the single switch \(a\) and achieve the same function.</p>
+<span class="incontext"><a href="section-algebra-of-circuits.html#xOS">in-context</a></span>
 </body>
 </html>

@@ -302,7 +302,7 @@
     </p>
   </paragraphs>
   
-  <xi:include href="./exercises/fields-algebraic.ptx" />
+  <!-- <xi:include href="./exercises/fields-algebraic.ptx" /> -->
   <xi:include href="./exercises/fields-algebraic-collected.ptx" />
   
 </section>

@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2021-01-22T16:10:15-07:00       *-->
+<!--*       on 2021-01-25T10:39:09-07:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -15,12 +15,19 @@
 </head>
 <body>
 <h6 xmlns:svg="http://www.w3.org/2000/svg" class="heading"><span class="type">Paragraph</span></h6>
-<p>We can now confirm that the Galois group of \({\mathbb Q}( \sqrt{3}, \sqrt{5}\, )\) over \({\mathbb Q}\) in <a class="xref" data-knowl="./knowl/example-galois-q-sqrt5.html" title="Example 9.12">Example 9.12</a> is indeed isomorphic to \({\mathbb Z}_2 \times {\mathbb Z}_2\text{.}\) Certainly the group \(H = \{ \identity, \sigma, \tau, \mu \}\) is a subgroup of \(G({\mathbb Q}( \sqrt{3}, \sqrt{5}\, )/{\mathbb Q})\text{;}\) however, \(H\) must be all of \(G({\mathbb Q}( \sqrt{3}, \sqrt{5}\, )/{\mathbb Q})\text{,}\) since</p>
+<p>Let \(\sigma_i(a) = a\) and \(\sigma_i(b)=b\text{.}\) Then</p>
 <div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
 \begin{equation*}
-|H| = [{\mathbb Q}( \sqrt{3}, \sqrt{5}\, ):{\mathbb Q}] = |G({\mathbb Q}( \sqrt{3}, \sqrt{5}\, )/{\mathbb Q})| = 4\text{.}
+\sigma_i(a \pm b) = \sigma_i(a) \pm \sigma_i(b) = a \pm b
 \end{equation*}
 </div>
-<span class="incontext"><a href="section-galois-field-automorphisms.html#CPg">in-context</a></span>
+<p data-braille="continuation">and</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{equation*}
+\sigma_i(a b) = \sigma_i(a) \sigma_i(b) = a  b\text{.}
+\end{equation*}
+</div>
+<p data-braille="continuation">If \(a \neq 0\text{,}\) then  \(\sigma_i(a^{-1}) = [\sigma_i(a)]^{-1} = a^{-1}\text{.}\) Finally, \(\sigma_i(0) = 0\) and \(\sigma_i(1)=1\) since \(\sigma_i\) is an automorphism.</p>
+<span class="incontext"><a href="section-galois-fund-theorem-galois-theory.html#sLA">in-context</a></span>
 </body>
 </html>

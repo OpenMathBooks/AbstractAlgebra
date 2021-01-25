@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2021-01-22T16:11:33-07:00       *-->
+<!--*       on 2021-01-25T10:40:29-07:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -15,15 +15,27 @@
 </head>
 <body>
 <h6 xmlns:svg="http://www.w3.org/2000/svg" class="heading"><span class="type">Paragraph</span></h6>
-<p>Let \(G\) be a finite subgroup of \(F^\ast\) of order \(n\text{.}\) By the Fundamental Theorem of Finite Abelian Groups (<a class="xref" data-knowl="./knowl/theorem-finite-abelian-groups.html" title="Theorem 11.47: Fundamental Theorem of Finite Abelian Groups">Theorem 11.47</a>),</p>
+<p>To calculate a generator matrix for \(C\text{,}\) we merely need to examine the way the polynomials \(1\text{,}\) \(x\text{,}\) and \(x^2\) are encoded:</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{align*}
+(1 + x^3) \cdot 1 &amp; = 1 + x^3\\
+(1 + x^3)x &amp; = x + x^4\\
+(1 + x^3)x^2 &amp; = x^2 + x^5\text{.}
+\end{align*}
+</div>
+<p data-braille="continuation">We obtain the code corresponding to the generator matrix \(G_1\) in <a class="xref" data-knowl="./knowl/example-finite-6-3-linear-code.html" title="Example 17.14">Example 17.14</a>. The parity-check matrix for this code is</p>
 <div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
 \begin{equation*}
-G \cong {\mathbb Z}_{p_1^{e_1}} \times \cdots \times {\mathbb Z}_{p_k^{e_k}}\text{,}
+H
+= 
+\begin{pmatrix}
+1 &amp; 0 &amp; 0 &amp; 1 &amp; 0 &amp; 0 \\
+0 &amp; 1 &amp; 0 &amp; 0 &amp; 1 &amp; 0 \\
+0 &amp; 0 &amp; 1 &amp; 0 &amp; 0 &amp; 1 
+\end{pmatrix}\text{.}
 \end{equation*}
 </div>
-<p data-braille="continuation">where \(n = p_1^{e_1} \cdots p_k^{e_k}\) and the  \(p_1, \ldots,
-p_k\) are (not necessarily distinct) primes. Let \(m\) be the least common multiple of \(p_1^{e_1}, \ldots,
-p_k^{e_k}\text{.}\) Then \(G\) contains an element of order \(m\text{.}\) Since every \(\alpha\) in \(G\) satisfies \(x^r - 1\) for some \(r\) dividing \(m\text{,}\) \(\alpha\) must also be a root of \(x^m - 1\text{.}\) Since \(x^m -1\) has at most \(m\) roots in \(F\text{,}\) \(n \leq m\text{.}\) On the other hand, we know that \(m \leq |G|\text{;}\) therefore, \(m = n\text{.}\) Thus, \(G\) contains an element of order \(n\) and must be cyclic.</p>
-<span class="incontext"><a href="section-finite-field.html#ITA">in-context</a></span>
+<p data-braille="continuation">Since the smallest weight of any nonzero codeword is \(2\text{,}\) this code has the ability to detect all single errors.</p>
+<span class="incontext"><a href="section-poly-codes.html#YMs">in-context</a></span>
 </body>
 </html>
