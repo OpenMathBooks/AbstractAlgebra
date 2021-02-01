@@ -12,19 +12,6 @@
         </p>
     </introduction>
 
-    <exercise workspace="7%" permid="Oys">
-      <statement>
-        <p permid="BeH">
-        Find a basis for <m>\Q(\sqrt[3]{5})</m> over <m>\Q</m>.  What is <m>[\Q(\sqrt[3]{5}):\Q]</m>?
-        </p>
-      </statement>
-      <solution permid="Til">
-        <p permid="XSe">
-          One possible basis is <m>\{1, \sqrt[3]{5}, \sqrt[3]{5}^2\}</m>.  Thus <m>[\Q(\sqrt[3]{5}):\Q] = 3</m>. 
-        </p>
-      </solution>
-    </exercise>
-
     <exercise workspace="7%" permid="uFB">
         <statement>
         <p permid="hlQ"> 
@@ -37,7 +24,19 @@
          </p>
        </solution>
     </exercise>
-    
+
+    <exercise workspace="7%" permid="Oys">
+      <statement>
+        <p permid="BeH">
+        Find a basis for <m>\Q(\sqrt[3]{5})</m> over <m>\Q</m>.  What is <m>[\Q(\sqrt[3]{5}):\Q]</m>?
+        </p>
+      </statement>
+      <solution permid="Til">
+        <p permid="XSe">
+          One possible basis is <m>\{1, \sqrt[3]{5}, \sqrt[3]{5}^2\}</m>.  Thus <m>[\Q(\sqrt[3]{5}):\Q] = 3</m>. 
+        </p>
+      </solution>
+    </exercise>   
 
         
     <exercise workspace="7%" permid="aMK">
@@ -56,7 +55,7 @@
         <exercise workspace="17%" permid="GTT">
           <statement>
             <p permid="tAi">
-              What is the connection between the degree of a field extension and polynomials?  Investigate this.  In particular, if you claim that you can always find a basis in some systematic way, how do you know it is really a basis?  How do you know the basis is linearly independent?  How do you know it spans?
+              What is the general rule here?  Some things to think about: If you claim that you can always find a basis in some systematic way, how do you know it is really a basis?  How do you know the basis is linearly independent?  How do you know it spans?
             </p>
           </statement>
           <solution permid="LDM">
@@ -73,21 +72,126 @@
         <exercise workspace="7%" permid="nbc">
           <statement>
             <p permid="ZHr">
-              The polynomial <m>q(x) = x^7-6 x^6-7 x^5+51 x^4-60 x^2-21</m> has <m>\alpha</m> (from question 3) and <m>\sqrt{7}</m> as roots.  Does this mean <m>[\Q(\sqrt{7}):\Q] = [\Q(\alpha):\Q] = 7</m>?  Why not?
+              The polynomial <m>q(x) = x^5 -7x^3 - 5x^2 + 35</m> has <m>\sqrt{7}</m> and <m>sqrt[3]{5}</m> as roots.  Does this mean <m>[\Q(\sqrt{7}):\Q] = [\Q(\sqrt[3]{5}):\Q] = 5</m>?  Why not?
             </p>
           
           </statement>
           <solution permid="rKV">
             <p permid="cBX">
-              Clearly this cannot be true, since we already said that these degrees were <m>2</m> and <m>5</m> respectively.  They key thing that made our argument work above was that the polynomial was a <em>minimal</em> polynomial.  
+              Clearly this cannot be true, since we already said that these degrees were <m>2</m> and <m>3</m> respectively.  They key thing that made our argument work above was that the polynomial was a <em>minimal</em> polynomial.  
             </p>
             
             <p permid="IJg">
-              To further see that this is silly, what would the basis for <m>\Q(\sqrt{7})</m> be if it had size 7?  Would it be <m>\{1, \sqrt{7}, \sqrt{7}^2,\ldots, \sqrt{7}^6\}</m>?  That is clearly linearly dependent, since <m>\sqrt{7}^2</m> is a multiple of 1.  
+              To further see that this is silly, what would the basis for <m>\Q(\sqrt{7})</m> be if it had size 7?  Would it be <m>\{1, \sqrt{7}, \sqrt{7}^2,\ldots, \sqrt{7}^4\}</m>?  That is clearly linearly dependent, since <m>\sqrt{7}^2</m> is a multiple of 1.  
             </p>
           </solution>
         </exercise>
     
+        <pagebreak />
+        
+        <p permid="suP">
+          We now have a fairly good idea how to work with <m>\Q(\alpha)</m>.  What if we consider <m>\Q(\sqrt[3]{5}, \sqrt{7})</m>, the smallest field containing <m>\Q</m>, <m>\sqrt{7}</m>, and also <m>\sqrt[3]{5}</m>?
+
+        </p>
       
+
+        <exercise workspace="15%" permid="ScS">
+          <statement>
+            <p permid="YBY">
+          We can think of this as an extension of an extension.  Take <m>\Q(\sqrt[3]{5})</m> as our base field.  Adjoin to that <m>\sqrt{7}</m> to get <m>\Q(\sqrt[3]{5}, \sqrt{7})</m>.  
+          What is <m>[\Q(\sqrt[3]{5}, \sqrt{7}):\Q(\sqrt[3]{5})]</m>?  Use the general rule we discovered above and also find a basis
+            </p>
+          </statement>
+          <solution permid="WML">
+            <p permid="bwE">
+          Over <m>\Q(\sqrt[3]{5})</m>, the minimal polynomial for <m>\sqrt{7}</m> is still <m>x^2 - 7</m>.  For what else could it be?  The only way that there could be a smaller degree polynomial would be for there to be a degree 1 polynomial, but in that case, we would have <m>\sqrt{7} \in \Q(\sqrt[3]{5})</m>.  It is not obvious, but this is not the case.
+            </p>
+
+            <p permid="HDN">
+          Given that, we know that the <m>[\Q(\sqrt[3]{5}, \sqrt{7}):\Q(\sqrt[3]{5})] = 2</m>.
+            </p>
+            <p permid="nKW">
+           A basis will be <m>\{1, \sqrt{7}\}</m>. 
+            </p>
+          </solution>
+        </exercise>
+
+
+        <exercise workspace="15%" permid="erk">
+          <statement>
+            <p permid="kQq">
+          Using the basis above and the basis for <m>\Q(\sqrt[3]{5})</m> over <m>\Q</m>, find a basis for <m>\Q(\sqrt[3]{5}, \sqrt{7})</m> over <m>\Q</m>.  
+            </p>
+          </statement>
+          <solution permid="jbd">
+            <p permid="TSf">
+          A basis for <m>\Q(\sqrt[3]{5})</m> over <m>\Q</m> is <m>\{1, \sqrt[3]{5}, \sqrt[3]{5}^2\}</m>.  So every element of <m>\Q(\sqrt[3]{5})</m> can be written in the form <m>a+b\sqrt[3]{5} + c \sqrt[3]{5}^2</m>.  
+          These are the coefficients we can multiply by basis elements <m>\{1, \sqrt{7}\}</m> for
+              <m>\Q(\sqrt[3]{5},\sqrt{7})</m> over <m>\Q(\sqrt[3]{5})</m>.  So a general element in <m>\Q(\sqrt[3]{5}, \sqrt{7})</m> has the form 
+              <me permid="dlR">
+            a+b\sqrt[3]{5} + c\sqrt[3]{5}^2 + a'\sqrt{7} + b'\sqrt[3]{5}\sqrt{7} + c'\sqrt[3]{5}^2\sqrt{7}.
+              </me>
+          A basis is thus 
+              <me permid="Jta">
+            \{1, \sqrt[3]{5}, \sqrt[3]{5}^2, \sqrt{7}, \sqrt[3]{5}\sqrt{7}, \sqrt[3]{5}^2\sqrt{7} \}.
+              </me>
+
+            </p>
+          </solution>
+        </exercise>
+
+        <exercise workspace="15%" permid="Kyt">
+          <statement>
+            <p permid="QXz">
+              What is <m>[\Q(\sqrt[3]{5}, \sqrt{7}):\Q]</m>?  What is the general rule for degrees of extensions of extensions?
+            </p>
+          </statement>
+          <solution permid="Pim">
+            <p permid="zZo">
+              From looking at the basis above, we see that the degree over <m>\Q</m> is 6, which is of course, <m>2 \cdot 3</m>.  It certainly appears this will always work.  In other words, if <m>K</m> is an extension of <m>F</m>, which is an extension of <m>E</m>, we have 
+              <me permid="pAj">
+                [K:E] = [K:F]\cdot [F:E].
+              </me>
+
+            </p>
+          </solution>
+        </exercise>
+
+        <exercise workspace="15%">
+          <statement>
+            <p>
+              What if we started with <m>\Q(\sqrt{7})</m> and then adjoined <m>\sqrt[3]{5}</m>?  Repeat the analysis you did above to make sure we get the same results about degree and basis.
+            </p>
+          </statement>
+          <solution>
+            <p>
+              We do indeed get the same thing.  The minimal polynomial for <m>\sqrt[3]{5}</m> is <m>x^3 - 5</m>, even over the extension field <m>\Q(\sqrt{7})</m>.  Thus <m>[\Q(\sqrt{7},\sqrt[3]{5}):\Q(\sqrt{7})] = 3</m>.  A basis is <m>\{1, \sqrt[3]{5}, \sqrt[3]{5}^2\}</m>.  
+            </p>
+
+            <p>
+              If we combine this with the basis for <m>\Q(\sqrt{7})</m> over <m>\Q</m>, we get a basis for <m>\Q(\sqrt[3]{5}, \sqrt{7})</m> over <m>\Q</m>: <m>\{1, \sqrt{7}, \sqrt[3]{5}, \sqrt{7}\sqrt[3]{5}, \sqrt[3]{5}^2, \sqrt{7}\sqrt[3]{5}^2\}</m>, containing 6 elements, as expected.
+            </p>
+          </solution>
+        </exercise>
+
+        <exercise workspace="0%" permid="qFC">
+          <statement>
+            <p permid="xeI">
+              What is <m>[\Q(\sqrt{2}, \sqrt[4]{2}):\Q]</m>?
+            </p>
+
+          </statement>
+          <solution permid="vpv">
+            <p permid="ggx">
+              At first, this might look like a counterexample to the <q>tower rule</q> we gave above.  The minimum polynomial for <m>\sqrt[4]{2}</m> over <m>\Q</m> is <m>x^4 - 2</m>, which has degree 4.  The minimum polynomial for <m>\sqrt{2}</m> is <m>x^2 - 2</m>.  
+              However, <m>[\Q(\sqrt{2}, \sqrt[4]{2}):\Q] = 4</m>, not 8.  This can be seen easily by noticing that <m>\Q(\sqrt{2}, \sqrt[4]{2}) = \Q(\sqrt[4]{2})</m>, as this already contains <m>\sqrt{2}</m>.
+            </p>
+
+            <p permid="MnG">
+              The point is that the tower rule is correct: you do multiply the degrees of each extension.  But these degrees are not always the degree of the minimal polynomials over the base field.  Each time you go up one floor in the tower, you must again ask what the minimum polynomial for the next element you adjoin is.
+            </p>
+          </solution>
+        </exercise>
+    
 
 </worksheet>

@@ -36,7 +36,7 @@
     <exercise permid="Qns">
       <statement>
         <p permid="UXl">
-          Using all of your work above, find the <em>minimal</em> polynomial for <m>a</m> over <m>\Q</m> and prove it is irreducible (using the previous question).
+          Using all of your work above, find (or explain why you have already found) the <em>minimal</em> polynomial for <m>a</m> over <m>\Q</m> and prove it is irreducible (using the previous question).
         </p>
       </statement>
     </exercise>

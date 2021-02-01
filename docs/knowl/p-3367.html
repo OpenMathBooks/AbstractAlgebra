@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2021-01-25T10:40:07-07:00       *-->
+<!--*       on 2021-02-01T10:12:27-07:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -15,13 +15,45 @@
 </head>
 <body>
 <h6 xmlns:svg="http://www.w3.org/2000/svg" class="heading"><span class="type">Paragraph</span></h6>
-<p>An <dfn xmlns:svg="http://www.w3.org/2000/svg" class="terminology">isometry</dfn>  or <dfn xmlns:svg="http://www.w3.org/2000/svg" class="terminology">rigid motion</dfn>  in \({\mathbb R}^n\) is a distance-preserving function \(f\) from \({\mathbb R}^n\) to \({\mathbb R}^n\text{.}\) This means that \(f\) must satisfy</p>
+<p>If we choose \(A{\mathbf e}_2 = (b, -a)^\transpose\text{,}\) then we obtain the matrix</p>
 <div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
 \begin{equation*}
-\| f({\mathbf x}) - f({\mathbf y}) \| =\|{\mathbf x} - {\mathbf y} \|
+B
+=
+\begin{pmatrix}
+a &amp; b \\
+b &amp; -a
+\end{pmatrix}
+=
+\begin{pmatrix}
+\cos \theta &amp; \sin \theta \\
+\sin \theta &amp; -\cos \theta
+\end{pmatrix}.
 \end{equation*}
 </div>
-<p data-braille="continuation">for all \({\mathbf x}, {\mathbf y} \in {\mathbb R}^n\text{.}\) It is not difficult to show that \(f\) must be a one-to-one map. By <a class="xref" data-knowl="./knowl/theorem-orthnormal-matrix.html" title="Theorem 15.8">Theorem 15.8</a>, any element in \(O(n)\) is an isometry on \({\mathbb R}^n\text{;}\) however, \(O(n)\) does not include all possible isometries on \({\mathbb R}^n\text{.}\) Translation by a vector \({\mathbf x}\text{,}\) \(T_{\mathbf y}({\mathbf x}) = {\mathbf x} + {\mathbf y}\) is also an isometry (<a class="xref" data-knowl="./knowl/figure-isometries.html" title="Figure 15.11">Figure 15.11</a>); however, \(T\) cannot be in \(O(n)\) since it is not a linear map.</p>
-<span class="incontext"><a href="section-symmetry.html#ION">in-context</a></span>
+<p data-braille="continuation">Here, \(\det B = -1\) and</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{equation*}
+B^2
+=
+\begin{pmatrix}
+1 &amp; 0 \\
+0 &amp; 1
+\end{pmatrix}.
+\end{equation*}
+</div>
+<p data-braille="continuation">A reflection about the horizontal axis is given by the matrix</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{equation*}
+C
+=
+\begin{pmatrix}
+1 &amp; 0 \\
+0 &amp; -1
+\end{pmatrix},
+\end{equation*}
+</div>
+<p data-braille="continuation">and \(B = AC\) (see <a class="xref" data-knowl="./knowl/figure-o2.html" title="Figure 15.9">Figure 15.9</a>). Thus, a reflection about a line \(\ell\) is simply a reflection about the horizontal axis followed by a rotation.</p>
+<span class="incontext"><a href="section-matrix-groups.html#IPo">in-context</a></span>
 </body>
 </html>

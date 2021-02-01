@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2021-01-25T10:39:42-07:00       *-->
+<!--*       on 2021-02-01T10:12:03-07:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -15,19 +15,18 @@
 </head>
 <body>
 <h6 xmlns:svg="http://www.w3.org/2000/svg" class="heading"><span class="type">Paragraph</span></h6>
-<p>There is a problem of message verification in public key cryptosystems. Since the encoding key is public knowledge, anyone has the ability to send an encoded message. If Alice receives a message from Bob, she would like to be able to verify that it was Bob who actually sent the message. Suppose that Bob's encrypting key is \((n', E')\) and his decrypting key is \((n', D')\text{.}\) Also, suppose that Alice's encrypting key is \((n, E)\) and her decrypting key is \((n, D)\text{.}\) Since encryption keys are public information, they can exchange coded messages at their convenience. Bob wishes to assure Alice that the message he is sending is authentic. Before Bob sends the message \(x\) to Alice, he decrypts  \(x\) with his own key:</p>
+<p>For the other case, assume that \(\gcd(x, n) \neq 1\text{.}\) Since \(n = pq\) and \(x \lt n\text{,}\) we know \(x\) is a multiple of \(p\) or a multiple of \(q\text{,}\) but not both. We will describe the first possibility only, since the second is entirely similar. There is then an integer \(r\text{,}\) with \(r \lt q\) and \(x = rp\text{.}\) Note that we have \(\gcd(x, q) = 1\) and that \(m=\phi(n)=(p - 1)(q - 1)=\phi(p)\phi(q)\text{.}\) Then, using <a class="xref" data-knowl="./knowl/theorem-eulers_theorem.html" title="Theorem 11.25: Euler's Theorem">Theorem 11.25</a>, but now mod \(q\text{,}\)</p>
 <div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
 \begin{equation*}
-x' = x ^{D'} \bmod n'\text{.}
+x^{km} = x^{k\phi(p)\phi(q)} = (x^{\phi(q)})^{k\phi(p)} = (1)^{k\phi(p)} = 1 \bmod q\text{.}
 \end{equation*}
 </div>
-<p data-braille="continuation">Anyone can change \(x'\) back to \(x\) just by encryption, but only Bob has the ability to form \(x'\text{.}\) Now Bob encrypts \(x'\) with Alice's encryption key to form</p>
+<p data-braille="continuation">So there is an integer \(t\) such that \(x^{km}=1 + tq\text{.}\) Thus, Alice also recovers the message in this case,</p>
 <div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
 \begin{equation*}
-y' = {x'}^E  \bmod n\text{,}
+y^D = x^{km + 1} = x^{km} x = (1 + tq) x = x + tq(rp) = x + trn = x \bmod n\text{.}
 \end{equation*}
 </div>
-<p data-braille="continuation">a message that only Alice can decode. Alice decodes the message and then encodes the result with Bob's key to read the original message, a message that could have only been sent by Bob.</p>
-<span class="incontext"><a href="section-public-key-crypt.html#bWg">in-context</a></span>
+<span class="incontext"><a href="section-public-key-crypt.html#PHO">in-context</a></span>
 </body>
 </html>

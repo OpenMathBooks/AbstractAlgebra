@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2021-01-25T10:39:24-07:00       *-->
+<!--*       on 2021-02-01T10:11:45-07:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -15,19 +15,70 @@
 </head>
 <body>
 <h6 xmlns:svg="http://www.w3.org/2000/svg" class="heading"><span class="type">Paragraph</span></h6>
-<p>The group \(S_4\) is solvable since</p>
+<p>Suppose now that the theorem is true for all groups having a composition series of length \(k\text{,}\) where \(1 \leq k \lt n\text{.}\) Let</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{gather*}
+G = H_n \supset H_{n-1} \supset \cdots \supset H_1 \supset H_0 = \{ e \}\\
+G = K_m \supset K_{m-1} \supset \cdots \supset K_1 \supset K_0 = \{ e \}
+\end{gather*}
+</div>
+<p data-braille="continuation">be two composition series for \(G\text{.}\) We can form two new subnormal series for \(G\) since \(H_i \cap K_{m-1}\) is normal in \(H_{i+1} \cap K_{m-1}\) and \(K_j \cap H_{n-1}\) is normal in \(K_{j+1} \cap H_{n-1}\text{:}\)</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{gather*}
+G = H_n \supset H_{n-1} \supset H_{n-1} \cap K_{m-1} \supset \cdots \supset H_0 \cap K_{m-1} = \{ e \}\\
+G = K_m \supset K_{m-1} \supset K_{m-1} \cap H_{n-1} \supset \cdots \supset K_0 \cap H_{n-1} = \{ e \}\text{.}
+\end{gather*}
+</div>
+<p data-braille="continuation">Since \(H_i \cap K_{m-1}\) is normal in \(H_{i+1} \cap K_{m-1}\text{,}\) the Second Isomorphism Theorem implies that</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{align*}
+(H_{i+1} \cap K_{m-1}) / (H_i \cap K_{m-1}) &amp; =  (H_{i+1} \cap K_{m-1}) / (H_i \cap ( H_{i+1} \cap K_{m-1} ))\\
+&amp; \cong  H_i (H_{i+1} \cap K_{m-1})/ H_i\text{,}
+\end{align*}
+</div>
+<p data-braille="continuation">where \(H_i\) is normal in \(H_i (H_{i+1} \cap K_{m-1})\text{.}\) Since \(\{ H_i \}\) is a composition series, \(H_{i+1} / H_i\) must be simple; consequently, \(H_i (H_{i+1} \cap K_{m-1})/ H_i\) is either \(H_{i+1}/H_i\) or \(H_i/H_i\text{.}\) That is, \(H_i (H_{i+1} \cap K_{m-1})\) must be either \(H_i\) or \(H_{i+1}\text{.}\) Removing any nonproper inclusions from the series</p>
 <div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
 \begin{equation*}
-S_4 \supset A_4 \supset \{ (1), (12)(34), (13)(24), (14)(23) \} \supset \{ (1) \}
+H_{n-1} \supset H_{n-1} \cap K_{m-1} \supset \cdots \supset H_0 \cap K_{m-1} = \{ e \}\text{,}
 \end{equation*}
 </div>
-<p data-braille="continuation">has abelian factor groups; however, for \(n \geq 5\) the series</p>
+<p data-braille="continuation">we have a composition series for \(H_{n-1}\text{.}\) Our induction hypothesis says that this series must be equivalent to the composition series</p>
 <div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
 \begin{equation*}
-S_n \supset A_n \supset \{ (1) \}
+H_{n-1} \supset \cdots \supset H_1 \supset H_0 = \{ e \}\text{.}
 \end{equation*}
 </div>
-<p data-braille="continuation">is a composition series for \(S_n\) with a nonabelian factor group. Therefore, \(S_n\) is not a solvable group for \(n \geq 5\text{.}\)</p>
-<span class="incontext"><a href="section-solvable-groups.html#jCW">in-context</a></span>
+<p data-braille="continuation">Hence, the composition series</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{equation*}
+G = H_n \supset H_{n-1} \supset \cdots \supset H_1 \supset H_0 = \{ e \}
+\end{equation*}
+</div>
+<p data-braille="continuation">and</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{equation*}
+G = H_n \supset H_{n-1} \supset H_{n-1} \cap K_{m-1} \supset \cdots \supset H_0 \cap K_{m-1} = \{ e \}
+\end{equation*}
+</div>
+<p data-braille="continuation">are equivalent. If \(H_{n-1} = K_{m-1}\text{,}\) then the composition series \(\{H_i \}\) and \(\{ K_j \}\) are equivalent and we are done; otherwise, \(H_{n-1} K_{m-1}\)  is a normal subgroup of \(G\) properly containing \(H_{n-1}\text{.}\) In this case \(H_{n-1} K_{m-1} = G\) and we can apply the Second Isomorphism Theorem once again; that is,</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{equation*}
+K_{m-1} / (K_{m-1} \cap H_{n-1}) \cong (H_{n-1} K_{m-1}) / H_{n-1} = G/H_{n-1}\text{.}
+\end{equation*}
+</div>
+<p data-braille="continuation">Therefore,</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{equation*}
+G = H_n \supset H_{n-1} \supset H_{n-1} \cap K_{m-1} \supset \cdots \supset H_0 \cap K_{m-1} = \{ e \}
+\end{equation*}
+</div>
+<p data-braille="continuation">and</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{equation*}
+G = K_m \supset K_{m-1} \supset K_{m-1} \cap H_{n-1} \supset \cdots \supset K_0 \cap H_{n-1} = \{ e \}
+\end{equation*}
+</div>
+<p data-braille="continuation">are equivalent and the proof of the theorem is complete.</p>
+<span class="incontext"><a href="section-solvable-groups.html#wWH">in-context</a></span>
 </body>
 </html>

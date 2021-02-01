@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2021-01-25T10:39:41-07:00       *-->
+<!--*       on 2021-02-01T10:12:02-07:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -15,27 +15,25 @@
 </head>
 <body>
 <h6 xmlns:svg="http://www.w3.org/2000/svg" class="heading"><span class="type">Paragraph</span></h6>
-<p>A cryptosystem would be more secure if a ciphertext letter could represent more than one plaintext letter. To give an example of this type of cryptosystem, called a <dfn xmlns:svg="http://www.w3.org/2000/svg" class="terminology">polyalphabetic cryptosystem</dfn>, we will generalize affine codes by using matrices. The idea works roughly the same as before; however, instead of encrypting one letter at a time we will encrypt pairs of letters. We can store a pair of letters \(p_1\) and \(p_2\) in a vector</p>
+<p>Let us investigate a slightly more sophisticated cryptosystem. Suppose that the encoding function is given by</p>
 <div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
 \begin{equation*}
-{\mathbf p} = 
-\begin{pmatrix}
-p_1 \\ p_2
-\end{pmatrix}\text{.}
+f(p) = ap + b \bmod 26\text{.}
 \end{equation*}
 </div>
-<p data-braille="continuation">Let \(A\) be a \(2 \times 2\) invertible matrix with entries in \({\mathbb Z}_{26}\text{.}\) We can define an encoding function by</p>
+<p data-braille="continuation">We first need to find out when a decoding function \(f^{-1}\) exists. Such a decoding function exists when we can solve the equation</p>
 <div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
 \begin{equation*}
-f({\mathbf p}) = A {\mathbf p} + {\mathbf b}\text{,}
+c = ap + b \bmod 26
 \end{equation*}
 </div>
-<p data-braille="continuation">where \({\mathbf b}\) is a fixed column vector and matrix operations are performed in \({\mathbb Z}_{26}\text{.}\) The decoding function must be</p>
+<p data-braille="continuation">for \(p\text{.}\) By <a class="xref" data-knowl="./knowl/proposition-zn-equiv-classes.html" title="Proposition 2.4">Proposition 2.4</a>, this is possible exactly when \(a\) has an inverse or, equivalently, when \(\gcd( a, 26) =1\text{.}\) In this case</p>
 <div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
 \begin{equation*}
-f^{-1}({\mathbf p}) = A^{-1} {\mathbf p} - A^{-1} {\mathbf b}\text{.}
+f^{-1}(p) = a^{-1} p - a^{-1} b \bmod 26\text{.}
 \end{equation*}
 </div>
-<span class="incontext"><a href="section-private-key-crypt.html#Edq">in-context</a></span>
+<p data-braille="continuation">Such a cryptosystem is called an <dfn xmlns:svg="http://www.w3.org/2000/svg" class="terminology">affine cryptosystem</dfn>. </p>
+<span class="incontext"><a href="section-private-key-crypt.html#XWh">in-context</a></span>
 </body>
 </html>

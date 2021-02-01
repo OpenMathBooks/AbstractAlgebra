@@ -5,8 +5,6 @@
   <title>Extension Fields as Vector Spaces</title>
   
 
-  <xi:include href="worksheets/fields-extension-degree.ptx" />
-  <xi:include href="worksheets/fields-extension-iterated.ptx" />
   
   <subsection xml:id="subsec-fields-vectorspaces-degree" permid="yjB">
     <title>Back to Extension Fields</title>
@@ -316,6 +314,9 @@
       </proof>
     </theorem>
   </subsection>
+
+<xi:include href="worksheets/fields-extension-degree.ptx" />
+<!-- <xi:include href="worksheets/fields-extension-iterated.ptx" /> -->
 
   <subsection xml:id="fields-subsection-algebraic-closure" permid="Cbz">
     <title>Algebraic Closure</title>

@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2021-01-25T10:39:28-07:00       *-->
+<!--*       on 2021-02-01T10:11:49-07:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -15,25 +15,25 @@
 </head>
 <body>
 <h6 xmlns:svg="http://www.w3.org/2000/svg" class="heading"><span class="type">Paragraph</span></h6>
-<p>Since \(E\) is a radical extension of \(F\text{,}\) there exists a chain of subfields</p>
+<p>Now suppose that \(F\) does not contain a primitive \(n\)th root of unity. Let \(\omega\) be a generator of the cyclic group of the \(n\)th roots of unity. Let \(\alpha\) be a zero of \(x^n - a\text{.}\) Since \(\alpha\) and \(\omega \alpha\) are both in the splitting field of \(x^n - a\text{,}\) \(\omega = (\omega \alpha)/ \alpha\) is also in \(E\text{.}\) Let \(K = F( \omega)\text{.}\) Then \(F \subset K \subset E\text{.}\) Since \(K\) is the splitting field of \(x^n - 1\text{,}\) \(K\) is a normal extension of \(F\text{.}\) Therefore, any automorphism \(\sigma\) in \(G(F( \omega)/ F)\) is determined by \(\sigma( \omega)\text{.}\) It must be the case that \(\sigma( \omega ) = \omega^i\) for some integer \(i\) since all of the zeros of \(x^n - 1\) are powers of \(\omega\text{.}\) If \(\tau( \omega ) = \omega^j\) is in \(G(F(\omega)/F)\text{,}\) then</p>
 <div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
 \begin{equation*}
-F = F_0 \subset F_1 \subset F_2 \subset \cdots \subset F_r = E
+\sigma \tau( \omega ) = \sigma( \omega^j ) = [ \sigma( \omega )]^j = \omega^{ij} = [\tau( \omega ) ]^i = \tau( \omega^i )  = \tau \sigma( \omega )\text{.}
 \end{equation*}
 </div>
-<p data-braille="continuation">such for \(i = 1, 2, \ldots, r\text{,}\) we have  \(F_i = F_{i - 1}(\alpha_i)\) and \(\alpha_i^{n_i} \in F_{i-1}\) for some positive integer \(n_i\text{.}\) We will build a normal radical extension of \(F\text{,}\)</p>
+<p data-braille="continuation">Therefore, \(G(F( \omega ) / F)\) is abelian. By the Fundamental Theorem of Galois Theory the series</p>
 <div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
 \begin{equation*}
-F = K_0 \subset K_1 \subset K_2 \subset \cdots \subset K_r = K
+\{ \identity \} \subset G(E/ F(\omega)) \subset G(E/F)
 \end{equation*}
 </div>
-<p data-braille="continuation">such that \(K \supseteq E\text{.}\) Define \(K_1\) for be the splitting field of \(x^{n_1} - \alpha_1^{n_1}\text{.}\) The roots of this polynomial are \(\alpha_1, \alpha_1 \omega, \alpha_1 \omega^2, \ldots, \alpha_1 \omega^{n_1 - 1}\text{,}\) where \(\omega\) is a primitive \(n_1\)th root of unity. If \(F\) contains all of its \(n_1\) roots of unity, then \(K_1 = F(\alpha_!)\text{.}\) On the other hand, suppose that \(F\) does not contain a primitive \(n_1\)th root of unity. If \(\beta\) is a root of \(x^{n_1} - \alpha_1^{n_1}\text{,}\) then all of the roots of  \(x^{n_1} - \alpha_1^{n_1}\) must be \(\beta, \omega \beta, \ldots, \omega^{n_1-1}\text{,}\) where  \(\omega\) is a primitive  \(n_1\)th root of unity. In this case, \(K_1 = F(\omega \beta)\text{.}\) Thus, \(K_1\) is a normal radical extension of \(F\) containing \(F_1\text{.}\) Continuing in this manner, we obtain</p>
+<p data-braille="continuation">is a normal series. By our previous argument, \(G(E/F(\omega))\) is abelian. Since</p>
 <div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
 \begin{equation*}
-F = K_0 \subset K_1 \subset K_2 \subset \cdots \subset K_r = K
+G(E/F) /G(E/F( \omega)) \cong G(F(\omega)/F)
 \end{equation*}
 </div>
-<p data-braille="continuation">such that \(K_i\) is a normal extension of \(K_{i-1}\) and \(K_i \supseteq F_i\) for \(i = 1, 2, \ldots, r\text{.}\)</p>
-<span class="incontext"><a href="section-galois-applications.html#mWo">in-context</a></span>
+<p data-braille="continuation">is also abelian, \(G(E/F)\) is solvable.</p>
+<span class="incontext"><a href="section-galois-applications.html#GPf">in-context</a></span>
 </body>
 </html>

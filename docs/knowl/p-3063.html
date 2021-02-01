@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2021-01-25T10:39:42-07:00       *-->
+<!--*       on 2021-02-01T10:12:03-07:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -15,55 +15,13 @@
 </head>
 <body>
 <h6 xmlns:svg="http://www.w3.org/2000/svg" class="heading"><span class="type">Paragraph</span></h6>
-<p>We will compute \(271^{321} \pmod{ 481}\text{.}\) Notice that</p>
+<p>The first thing to notice is that any number \(a\) can be written as the sum of distinct powers of \(2\text{;}\) that is, we can write</p>
 <div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
 \begin{equation*}
-321 = 2^0 +2^6 + 2^8;
+a = 2^{k_1} + 2^{k_2} + \cdots + 2^{k_n}\text{,}
 \end{equation*}
 </div>
-<p data-braille="continuation">hence, computing \(271^{ 321} \pmod{ 481}\) is the same as computing</p>
-<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
-\begin{equation*}
-271^{ 2^0 +2^6 + 2^8 } \equiv 271^{ 2^0 } \cdot 271^{2^6 } \cdot 271^{ 2^8 } \pmod{ 481}\text{.}
-\end{equation*}
-</div>
-<p data-braille="continuation">So it will suffice to compute \(271^{ 2^i } \pmod{ 481}\) where \(i = 0, 6, 8\text{.}\) It is very easy to see that</p>
-<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
-\begin{equation*}
-271^{ 2^1}  = 73{,}441 \equiv 329 \pmod{ 481}\text{.}
-\end{equation*}
-</div>
-<p data-braille="continuation">We can square this result to obtain a value for \(271^{ 2^2} \pmod{481}\text{:}\)</p>
-<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
-\begin{align*}
-271^{ 2^2}  &amp; \equiv (271^{ 2^1})^2 \pmod{ 481}\\
-&amp; \equiv (329)^2 \pmod{481}\\
-&amp; \equiv 108{,}241 \pmod{481}\\
-&amp; \equiv 16 \pmod{481}\text{.}
-\end{align*}
-</div>
-<p data-braille="continuation">We are using the fact that \((a^{2^n})^2  \equiv a^{2 \cdot 2^n} \equiv a^{ 2^{n+1} } \pmod{ n}\text{.}\) Continuing, we can calculate</p>
-<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
-\begin{equation*}
-271^{ 2^6 } \equiv 419 \pmod{481}
-\end{equation*}
-</div>
-<p data-braille="continuation">and</p>
-<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
-\begin{equation*}
-271^{ 2^8 }  \equiv 16 \pmod{481}\text{.}
-\end{equation*}
-</div>
-<p data-braille="continuation">Therefore,</p>
-<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
-\begin{align*}
-271^{ 321} &amp; \equiv 271^{ 2^0 +2^6 + 2^8 } \pmod{481}\\
-&amp; \equiv 271^{ 2^0 } \cdot 271^{ 2^6 } \cdot 271^{ 2^8 } \pmod{481}\\
-&amp; \equiv 271 \cdot 419 \cdot 16 \pmod{ 481}\\
-&amp; \equiv 1{,}816{,}784 \pmod{ 481}\\
-&amp; \equiv 47 \pmod{ 481}\text{.}
-\end{align*}
-</div>
-<span class="incontext"><a href="section-method-of-repeated-squares.html#rQp">in-context</a></span>
+<p data-braille="continuation">where \(k_1 \lt k_2 \lt \cdots \lt k_n\text{.}\) This is just the binary representation of \(a\text{.}\) For example, the binary representation of 57 is 111001, since we can write \(57 = 2^0 + 2^3 + 2^4 + 2^5\text{.}\)</p>
+<span class="incontext"><a href="section-method-of-repeated-squares.html#JcV">in-context</a></span>
 </body>
 </html>

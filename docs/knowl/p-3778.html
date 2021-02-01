@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2021-01-25T10:40:38-07:00       *-->
+<!--*       on 2021-02-01T10:12:58-07:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -15,7 +15,13 @@
 </head>
 <body>
 <h6 xmlns:svg="http://www.w3.org/2000/svg" class="heading"><span class="type">Paragraph</span></h6>
-<p xmlns:svg="http://www.w3.org/2000/svg">Let us investigate the example of the power set, \({\mathcal P}(X)\text{,}\) of a set \(X\) more closely. The power set is a lattice that is ordered by inclusion. By the definition of the power set, the largest element in \({\mathcal P}(X)\) is \(X\) itself and the smallest element is \(\emptyset\text{,}\) the empty set. For any set \(A\) in \({\mathcal P}(X)\text{,}\) we know that \(A \cap X = A\) and \(A \cup \emptyset = A\text{.}\) This suggests the following definition for lattices. An element \(I\) in a poset \(X\) is a <dfn class="terminology">largest element</dfn> if \(a \preceq I\) for all \(a \in X\text{.}\)  An element \(O\) is a <dfn class="terminology">smallest element</dfn> of \(X\) if \(O \preceq a\) for all \(a \in X\text{.}\) </p>
-<span class="incontext"><a href="section-boolean-algebras.html#Kdk">in-context</a></span>
+<p>We first show that \(L\) is a poset under \(\preceq\text{.}\) Since \(a \vee a = a\text{,}\) \(a \preceq a\) and \(\preceq\) is reflexive. To show that \(\preceq\) is antisymmetric, let \(a \preceq b\) and \(b \preceq a\text{.}\) Then \(a \vee b = b\) and \(b \vee a = a\text{.}\)By the commutative law, \(b = a \vee b = b \vee a = a\text{.}\) Finally, we must show that \(\preceq\) is transitive. Let \(a \preceq b\) and \(b \preceq c\text{.}\) Then \(a \vee b = b\) and \(b \vee c = c\text{.}\) Thus,</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{equation*}
+a \vee c = a \vee (b \vee c ) = ( a \vee b) \vee c = b \vee c = c\text{,}
+\end{equation*}
+</div>
+<p data-braille="continuation">or \(a \preceq c\text{.}\)</p>
+<span class="incontext"><a href="section-boolean-lattices.html#zZE">in-context</a></span>
 </body>
 </html>
