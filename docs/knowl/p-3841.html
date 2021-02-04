@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2021-02-01T11:48:42-07:00       *-->
+<!--*       on 2021-02-04T11:27:30-07:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -15,7 +15,17 @@
 </head>
 <body>
 <h6 xmlns:svg="http://www.w3.org/2000/svg" class="heading"><span class="type">Paragraph</span></h6>
-<p xmlns:svg="http://www.w3.org/2000/svg">As often occurs, this basic research in pure mathematics later became indispensable in a wide variety of applications. Boolean algebras and logic have become essential in the design of the large-scale integrated circuitry found on today's computer chips. Sociologists have used lattices and Boolean algebras to model social hierarchies; biologists have used them to describe biosystems.</p>
-<span class="incontext"><a href="section-algebra-of-circuits.html#GNf">in-context</a></span>
+<p>Given a complex circuit, we can now apply the techniques of Boolean algebra to reduce it to a simpler one. Consider the circuit in  <a class="xref" data-knowl="./knowl/figure-circuit-2.html" title="Figure 18.32">Figure 18.32</a>. Since</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{align*}
+(a \vee b) \wedge (a \vee b') \wedge (a \vee b) &amp; = (a \vee b) \wedge (a \vee b) \wedge (a \vee b')\\
+&amp; = (a \vee b) \wedge (a \vee b')\\
+&amp; = a \vee ( b \wedge b')\\
+&amp; = a \vee O\\
+&amp; = a\text{,}
+\end{align*}
+</div>
+<p data-braille="continuation">we can replace the more complicated circuit with a circuit containing the single switch \(a\) and achieve the same function.</p>
+<span class="incontext"><a href="section-algebra-of-circuits.html#xOS">in-context</a></span>
 </body>
 </html>

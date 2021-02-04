@@ -5,16 +5,21 @@
     <title>Collected Homework</title>
 
     <exercise permid="xzU">
-      <statement>
+      <introduction>
         <p permid="iqW">
           Prove, using field extensions, that a regular 9-gon is not constructible (with a compass and straight-edge).
         </p>
-      </statement>
-      <hint permid="JOm">
-        <p permid="WcE">
-          Your proof should mimic the proof we did in class that <m>20^\circ</m> is not constructible.  That is, your proof should talk about field extensions and polynomials (do not just argue that it is impossible because if we could construct it, we would then be able to construct <m>20^\circ</m> which we know is impossible).
+      </introduction>
+      <task>
+        <p>
+          First explain why constructing a regular 9-gon is equivalent to constructing a <m>40^\circ</m> angle.  
         </p>
-      </hint>
+      </task>
+      <task>
+        <p>
+          Now prove that <m>40^\circ</m> is not constructible.  Your proof should mimic the proof we did in class that <m>20^\circ</m> is not constructible.  Make sure you are talking about field extensions and polynomials (do not just argue that it is impossible because if we could construct it, we would then be able to construct <m>20^\circ</m> which we know is impossible).
+        </p>
+      </task>
     </exercise>
     <exercise permid="dHd">
       <statement>

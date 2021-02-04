@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2021-02-01T11:47:00-07:00       *-->
+<!--*       on 2021-02-04T11:25:10-07:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -15,13 +15,19 @@
 </head>
 <body>
 <h6 xmlns:svg="http://www.w3.org/2000/svg" class="heading"><span class="type">Paragraph</span></h6>
-<p>We can extend \(\phi\) to be an isomorphism from \(E[x]\) to \(F[x]\text{,}\) which we will also denote by \(\phi\text{,}\) by letting</p>
+<p>If \(p(x)\) has degree \(n\text{,}\) then by <a class="xref" data-knowl="./knowl/theorem-simple_extension.html" title="Theorem 8.18">Theorem 8.18</a> we can write any element in \(E( \alpha )\) as a linear combination of \(1, \alpha, \ldots, \alpha^{n - 1}\text{.}\) Therefore, the isomorphism that we are seeking must be</p>
 <div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
 \begin{equation*}
-\phi( a_0 + a_1 x + \cdots + a_n x^n ) =  \phi( a_0 ) + \phi(a_1) x + \cdots + \phi(a_n) x^n\text{.}
+\overline{\phi}( a_0 + a_1 \alpha + \cdots + a_{n - 1} \alpha^{n - 1}) = \phi(a_0) + \phi(a_1) \beta + \cdots + \phi(a_{n - 1}) \beta^{n - 1}\text{,}
 \end{equation*}
 </div>
-<p data-braille="continuation">This extension agrees with the original isomorphism \(\phi : E \rightarrow F\text{,}\) since constant polynomials get mapped to constant polynomials. By assumption, \(\phi(p(x)) = q(x)\text{;}\) hence, \(\phi\) maps \(\langle p(x) \rangle\) onto \(\langle q(x) \rangle\text{.}\) Consequently, we have an isomorphism \(\psi : E[x] / \langle p(x) \rangle \rightarrow F[x]/\langle q(x) \rangle\text{.}\) By <a class="xref" data-knowl="./knowl/proposition-minimal-poly.html" title="Proposition 8.17">Proposition 8.17</a>, we have isomorphisms \(\sigma: E[x]/\langle p(x) \rangle \rightarrow E(\alpha)\) and \(\tau : F[x]/\langle q(x) \rangle \rightarrow F( \beta )\text{,}\) defined by evaluation at \(\alpha\) and \(\beta\text{,}\) respectively. Therefore, \(\overline{\phi} = \tau \psi \sigma^{-1}\) is the required isomorphism.</p>
-<span class="incontext"><a href="section-galois-splitting-fields.html#bJP">in-context</a></span>
+<p data-braille="continuation">where</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{equation*}
+a_0 + a_1 \alpha + \cdots + a_{n - 1} \alpha^{n - 1}
+\end{equation*}
+</div>
+<p data-braille="continuation">is an element in \(E(\alpha)\text{.}\) The fact that \(\overline{\phi}\) is an isomorphism could be checked by direct computation; however, it is easier to observe that \(\overline{\phi}\) is a composition of maps that we already know to be isomorphisms.</p>
+<span class="incontext"><a href="section-galois-splitting-fields.html#vCG">in-context</a></span>
 </body>
 </html>

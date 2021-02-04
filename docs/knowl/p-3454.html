@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2021-02-01T11:48:11-07:00       *-->
+<!--*       on 2021-02-04T11:26:52-07:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -15,9 +15,18 @@
 </head>
 <body>
 <h6 xmlns:svg="http://www.w3.org/2000/svg" class="heading"><span class="type">Paragraph</span></h6>
-<p xmlns:svg="http://www.w3.org/2000/svg">Let \({\mathbf x} = (x_1, \ldots,
-x_n)\) and \({\mathbf y} = (y_1, \ldots,
-y_n)\) be binary \(n\)-tuples. The <dfn class="terminology">Hamming distance</dfn>  or <dfn class="terminology">distance</dfn>, \(d({\mathbf x}, {\mathbf y})\text{,}\) between \({\mathbf x}\) and \({\mathbf y}\) is the number of bits in which \({\mathbf x}\) and \({\mathbf y}\) differ. The distance between two codewords is the minimum number of transmission errors required to change one codeword into the other. The <dfn class="terminology">minimum distance</dfn> for a code, \(d_{\min}\text{,}\) is the minimum of all distances \(d({\mathbf x}, {\mathbf y})\text{,}\) where \({\mathbf x}\) and \({\mathbf y}\) are distinct codewords. The <dfn class="terminology">weight</dfn>,  \(w({\mathbf x})\text{,}\) of a binary codeword \({\mathbf x}\) is the number of \(1\)s in \({\mathbf x}\text{.}\) Clearly, \(w({\mathbf x}) = d({\mathbf x}, {\mathbf 0})\text{,}\) where \({\mathbf 0} = (00 \cdots 0)\text{.}\) </p>
-<span class="incontext"><a href="section-error-detecting-correcting-codes.html#EaQ">in-context</a></span>
+<p>Fix \(k\) different coordinates. We first compute the probability that an error has occurred in this fixed set of coordinates. The probability of an error occurring in a particular one of these \(k\) coordinates is \(q\text{;}\) the probability that an error will not occur in any of the remaining \(n-k\) coordinates is \(p\text{.}\) The probability of each of these \(n\) independent events is \(q^{k}p^{n-k}\text{.}\) The number of possible error patterns with exactly \(k\) errors occurring is equal to</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{equation*}
+\binom{n}{k}  = \frac{n!}{k!(n - k)!}\text{,}
+\end{equation*}
+</div>
+<p data-braille="continuation">the number of combinations of \(n\) things taken \(k\) at a time. Each of these error patterns has probability \(q^{k}p^{n-k}\) of occurring; hence, the probability of all of these error patterns is</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{equation*}
+\binom{n}{k}  q^{k}p^{n - k}\text{.}
+\end{equation*}
+</div>
+<span class="incontext"><a href="section-error-detecting-correcting-codes.html#duy">in-context</a></span>
 </body>
 </html>

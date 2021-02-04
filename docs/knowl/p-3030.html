@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2021-02-01T11:47:42-07:00       *-->
+<!--*       on 2021-02-04T11:26:06-07:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -15,19 +15,7 @@
 </head>
 <body>
 <h6 xmlns:svg="http://www.w3.org/2000/svg" class="heading"><span class="type">Paragraph</span></h6>
-<p>Now let us examine why the <abbr xmlns:svg="http://www.w3.org/2000/svg" class="acronym">RSA</abbr> cryptosystem works. We know that \(DE \equiv 1 \pmod{ m}\text{;}\) hence, there exists a \(k\) such that</p>
-<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
-\begin{equation*}
-DE = km + 1 = k \phi(n) + 1\text{.}
-\end{equation*}
-</div>
-<p data-braille="continuation">There are two cases to consider. In the first case assume that \(\gcd(x, n) = 1\text{.}\) Then by <a class="xref" data-knowl="./knowl/theorem-eulers_theorem.html" title="Theorem 11.25: Euler's Theorem">Theorem 11.25</a>,</p>
-<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
-\begin{equation*}
-y^D = (x^E)^D = x^{DE} = x^{km + 1} = (x^{\phi(n)})^k x = (1)^k x = x \bmod n\text{.}
-\end{equation*}
-</div>
-<p data-braille="continuation">So we see that Alice recovers the original message \(x\) when she computes \(y^D \bmod n\text{.}\)</p>
-<span class="incontext"><a href="section-public-key-crypt.html#jAF">in-context</a></span>
+<p xmlns:svg="http://www.w3.org/2000/svg">The <abbr class="acronym">RSA</abbr> cryptosystem introduced by R. Rivest,  A. Shamir,  and L. Adleman  in 1978, is based on the difficulty of factoring large numbers. Though it is not a difficult task to find two large random primes and multiply them together, factoring a 150-digit number that is the product of two large primes would take 100 million computers operating at 10 million instructions per second about 50 million years under the fastest algorithms available in the early 1990s. Although the algorithms have improved, factoring a number that is a product of two large primes is still computationally prohibitive.</p>
+<span class="incontext"><a href="section-public-key-crypt.html#rfe">in-context</a></span>
 </body>
 </html>

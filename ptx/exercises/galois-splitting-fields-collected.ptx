@@ -5,33 +5,57 @@
     <title>Collected Homework</title>
 
 <exercise permid="faR">
-  <statement>
+  <introduction>
     <p permid="ouD">
-      Consider the field <m>\Q(\sqrt[4]{3}, i)</m>.
-      <ol permid="Lia">
-        <li permid="rpj">
-          <p permid="PRT">
-            Is this a splitting field for some polynomial in <m>\Q[x]</m>?  If so, what is the degree of that polynomial.
+      Consider the field <m>\Q(\sqrt[4]{3}, i)</m>.  Note this is the same field as <m>\Q(\sqrt[4]{3}, \sqrt[4]{3}i)</m>.
+    </p>
+  </introduction>
+      <task>
+        <statement>
+          <p>
+            Is this a splitting field for some polynomial in <m>\Q[x]</m>?  If so, what is that polynomial, and what is its degree?
           </p>
-        </li>
-        <li permid="Xws">
-          <p permid="vZc">
+        </statement>   
+        <hint>
+          <p>
+            Guess a polynomial for one of these roots and then try to factor it completely over the complex numbers to see if that polynomial splits in the field.
+          </p>
+        </hint>       
+      </task>
+      <task>
+        <statement>
+          <p>
             What is the <m>[Q(\sqrt[4]{3}, i):\Q]</m>?  Explain how you know.
           </p>
-        </li>
-        <li permid="DDB">
-          <p permid="cgl">
+        </statement>          
+      </task>
+      <task>
+        <statement>
+          <p>
             It turns out that there are exactly 8 different fields between <m>\Q</m> and <m>\Q(\sqrt[4]{3}, i)</m>.  Find at least four of these (more if you can) and draw a large tower diagram showing how these are related (with degrees marked appropriately).
           </p>
-        </li>
-        <li permid="jKK">
-          <p permid="Inu">
-            Bonus! (but not really that hard, just not something we have done in a while): Prove that the fields <m>\Q(\sqrt[4]{3})</m> and <m>\Q(\sqrt[4]{3}i)</m> are isomorphic, but not equal.  Note, this fact might be helpful for the previous parts.
+        </statement>
+        <hint>
+          <p>
+            The next part of this problem might be helpful (and you can assume it is true for this part).
           </p>
-        </li>
-      </ol>
-    </p>
-  </statement>
+        </hint>
+      </task>
+      <task>
+        <statement>
+          <p>
+            Prove that the fields <m>\Q(\sqrt[4]{3})</m> and <m>\Q(\sqrt[4]{3}i)</m> are isomorphic, but not equal.  Note, this fact might be helpful for the previous parts.
+          </p>
+        </statement>
+      </task>
 </exercise>
+
+  <exercise>
+    <statement>
+      <p>
+        Bonus: The field <m>\Q(\sqrt[3]{7}, \sqrt{2}i)</m> can also be written as <m>\Q(\gamma)</m> for a primitive element <m>\gamma</m>.  Find such a <m>\gamma</m> by working through the proof of <xref ref="theorem-primitive-element"/> with this example.  Explain how you found the number <m>a</m> from the theorem.
+      </p>
+    </statement>
+  </exercise>
    
   </exercises>

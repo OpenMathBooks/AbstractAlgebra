@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2021-02-01T11:47:03-07:00       *-->
+<!--*       on 2021-02-04T11:25:14-07:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -15,12 +15,25 @@
 </head>
 <body>
 <h6 xmlns:svg="http://www.w3.org/2000/svg" class="heading"><span class="type">Paragraph</span></h6>
-<p>We can now confirm that the Galois group of \({\mathbb Q}( \sqrt{3}, \sqrt{5}\, )\) over \({\mathbb Q}\) in <a class="xref" data-knowl="./knowl/example-galois-q-sqrt5.html" title="Example 9.12">Example 9.12</a> is indeed isomorphic to \({\mathbb Z}_2 \times {\mathbb Z}_2\text{.}\) Certainly the group \(H = \{ \identity, \sigma, \tau, \mu \}\) is a subgroup of \(G({\mathbb Q}( \sqrt{3}, \sqrt{5}\, )/{\mathbb Q})\text{;}\) however, \(H\) must be all of \(G({\mathbb Q}( \sqrt{3}, \sqrt{5}\, )/{\mathbb Q})\text{,}\) since</p>
+<p>We will use mathematical induction on the degree of \(f(x)\text{.}\) If the degree of \(f(x)\) is \(0\) or \(1\text{,}\) then \(E = F\) and there is nothing to show. Assume that the result holds for all polynomials of degree \(k\) with \(0 \leq k \lt n\text{.}\) Suppose that the degree of \(f(x)\) is \(n\text{.}\) Let \(p(x)\) be an irreducible factor of \(f(x)\) of degree \(r\text{.}\) Since all of the roots of \(p(x)\) are in \(E\text{,}\) we can choose one of these roots, say \(\alpha\text{,}\) so that \(F \subset F( \alpha ) \subset E\text{.}\) Then</p>
 <div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
 \begin{equation*}
-|H| = [{\mathbb Q}( \sqrt{3}, \sqrt{5}\, ):{\mathbb Q}] = |G({\mathbb Q}( \sqrt{3}, \sqrt{5}\, )/{\mathbb Q})| = 4\text{.}
+[E: F(\alpha)] = n/r \quad \text{and} \quad [F(\alpha): F] = r\text{.}
 \end{equation*}
 </div>
-<span class="incontext"><a href="section-galois-field-automorphisms.html#CPg">in-context</a></span>
+<p data-braille="continuation">If \(\beta\) is any other root of \(p(x)\text{,}\) then \(F \subset F( \beta ) \subset E\text{.}\) By <a class="xref" data-knowl="./knowl/lemma-field-isomorphism.html" title="Lemma 9.4">Lemma 9.4</a>, there exists a unique isomorphism \(\sigma: F( \alpha ) \rightarrow F( \beta )\) for each such \(\beta\) that fixes \(F\) elementwise. Since \(E\) is a splitting field of \(p(x)\text{,}\) there are exactly \(r\) such isomorphisms. For each of these automorphisms, we can use our induction hypothesis on \([E: F(\alpha)] = n/r \lt n\) to conclude that</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{equation*}
+|G(E/F(\alpha))| = [E:F(\alpha)]\text{.}
+\end{equation*}
+</div>
+<p data-braille="continuation">Consequently, there are</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{equation*}
+[E:F] = [E:F(\alpha)] [F( \alpha):F] = n
+\end{equation*}
+</div>
+<p data-braille="continuation">possible automorphisms of \(E\) that fix \(F\text{,}\) or \(|G(E/F)| = [E:F]\text{.}\)</p>
+<span class="incontext"><a href="section-galois-field-automorphisms.html#obH">in-context</a></span>
 </body>
 </html>

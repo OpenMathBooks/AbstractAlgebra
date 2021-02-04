@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2021-02-01T11:48:28-07:00       *-->
+<!--*       on 2021-02-04T11:27:17-07:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -15,63 +15,21 @@
 </head>
 <body>
 <h6 xmlns:svg="http://www.w3.org/2000/svg" class="heading"><span class="type">Paragraph</span></h6>
-<p>Suppose that</p>
+<p>Let \(\alpha_1, \ldots, \alpha_n\) be elements in a field \(F\) with \(n \geq 2\text{.}\) Then</p>
 <div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
 \begin{equation*}
-g( \omega^r) = g(\omega^{r + 1}) = \cdots = g( \omega^{r + s - 1}) = 0\text{.}
-\end{equation*}
-</div>
-<p data-braille="continuation">Let \(f(x)\) be some polynomial in \(C\) with \(s\) or fewer nonzero coefficients. We can assume that</p>
-<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
-\begin{equation*}
-f(x) = a_{i_0} x^{i_0} + a_{i_1} x^{i_1} + \cdots + a_{i_{s - 1}} x^{i_{s - 1}}
-\end{equation*}
-</div>
-<p data-braille="continuation">be some polynomial in \(C\text{.}\) It will suffice to show that all of the \(a_i\)'s must be 0. Since</p>
-<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
-\begin{equation*}
-g( \omega^r) = g(\omega^{r + 1}) = \cdots = g( \omega^{r + s - 1}) = 0
-\end{equation*}
-</div>
-<p data-braille="continuation">and \(g(x)\) divides \(f(x)\text{,}\)</p>
-<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
-\begin{equation*}
-f( \omega^r) = f(\omega^{r + 1}) = \cdots = f( \omega^{r + s - 1}) = 0\text{.}
-\end{equation*}
-</div>
-<p data-braille="continuation">Equivalently, we have the following system of equations:</p>
-<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
-\begin{align*}
-a_{i_0} (\omega^r)^{i_0} + a_{i_1} (\omega^r)^{i_1} + \cdots + a_{i_{s - 1}} (\omega^r)^{i_{s - 1}} &amp; = 0\\
-a_{i_0} (\omega^{r + 1})^{i_0} + a_{i_1} (\omega^{r + 1})^{i_2} + \cdots + a_{i_{s-1}} (\omega^{r+1})^{i_{s-1}} &amp; = 0\\
-&amp; \vdots\\
-a_{i_0} (\omega^{r + s - 1})^{i_0} + a_{i_1} (\omega^{r + s - 1})^{i_1} + \cdots + a_{i_{s - 1}} (\omega^{r + s - 1})^{i_{s - 1}} &amp; = 0\text{.}
-\end{align*}
-</div>
-<p data-braille="continuation">Therefore, \((a_{i_0}, a_{i_1}, \ldots,
-a_{i_{s - 1}})\) is a solution to the homogeneous system of linear equations</p>
-<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
-\begin{align*}
-(\omega^{i_0})^r x_0 + (\omega^{i_1})^r x_1 + \cdots + (\omega^{i_{s - 1}})^r x_{n - 1} &amp; = 0\\
-(\omega^{i_0})^{r + 1} x_0 + (\omega^{i_1})^{r + 1} x_1 + \cdots + (\omega^{i_{s - 1}})^{r + 1} x_{n - 1} &amp; = 0\\
-&amp; \vdots\\
-(\omega^{i_0})^{r + s - 1} x_0 + (\omega^{i_1})^{r + s - 1} x_1 + \cdots + (\omega^{i_{s - 1}})^{r + s - 1} x_{n - 1} &amp; = 0\text{.}
-\end{align*}
-</div>
-<p data-braille="continuation">However, this system has a unique solution, since the determinant of the matrix</p>
-<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
-\begin{equation*}
+\det
 \begin{pmatrix}
-(\omega^{i_0})^r &amp; (\omega^{i_1})^r &amp; \cdots &amp; (\omega^{i_{s-1}})^r \\
-(\omega^{i_0})^{r+1} &amp; (\omega^{i_1})^{r+1} &amp; \cdots &amp;
-(\omega^{i_{s-1}})^{r+1} \\
-\vdots &amp; \vdots         &amp; \ddots &amp; \vdots \\
-(\omega^{i_0})^{r+s-1} &amp; (\omega^{i_1})^{r+s-1} &amp; \cdots &amp;
-(\omega^{i_{s-1}})^{r+s-1} 
+1              &amp; 1              &amp; \cdots &amp; 1 \\
+\alpha_1       &amp; \alpha_2       &amp; \cdots &amp; \alpha_n \\
+\alpha_1^2     &amp; \alpha_2^2     &amp; \cdots &amp; \alpha_n^2 \\
+\vdots         &amp; \vdots         &amp; \ddots &amp; \vdots \\
+\alpha_1^{n-1} &amp; \alpha_2^{n-1} &amp; \cdots &amp; \alpha_n^{n-1} 
 \end{pmatrix}
+= \prod_{1 \leq j \lt i \leq n} (\alpha_i - \alpha_j)\text{.}
 \end{equation*}
 </div>
-<p data-braille="continuation">can be shown to be nonzero using <a class="xref" data-knowl="./knowl/lemma-vandermode-det.html" title="Lemma 17.20">Lemma 17.20</a> and the basic properties of determinants (Exercise). Therefore, this solution must be \(a_{i_0} = a_{i_1} = \cdots = a_{i_{s - 1}} = 0\text{.}\)</p>
-<span class="incontext"><a href="section-poly-codes.html#NDt">in-context</a></span>
+<p data-braille="continuation">In particular, if the \(\alpha_i\)'s are distinct, then the determinant is nonzero.</p>
+<span class="incontext"><a href="section-poly-codes.html#bGY">in-context</a></span>
 </body>
 </html>
