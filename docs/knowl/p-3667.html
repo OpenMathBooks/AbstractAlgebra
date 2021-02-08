@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2021-02-04T11:27:17-07:00       *-->
+<!--*       on 2021-02-08T11:10:20-07:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -15,27 +15,19 @@
 </head>
 <body>
 <h6 xmlns:svg="http://www.w3.org/2000/svg" class="heading"><span class="type">Paragraph</span></h6>
-<p>If we factor \(x^7 - 1\) into irreducible components, we have</p>
+<p>Rings of polynomials have a great deal of structure; therefore, our immediate goal is to establish a link between polynomial codes and ring theory. Recall that \(x^n - 1 = (x - 1)( x^{n - 1} + \cdots + x + 1)\text{.}\) The factor ring</p>
 <div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
 \begin{equation*}
-x^7 - 1 = (1 + x)(1 + x + x^3)(1+ x^2 + x^3)\text{.}
+R_n = {\mathbb Z}_2[x]/ \langle x^n - 1 \rangle
 \end{equation*}
 </div>
-<p data-braille="continuation">We see that \(g(t) = (1 + t + t^3)\) generates an ideal \(C\) in \(R_7\text{.}\) This code is a \((7, 4)\)-block code. As in <a class="xref" data-knowl="./knowl/example-finite-generator-63-code.html" title="Example 17.15">Example 17.15</a>, it is easy to calculate a generator matrix by examining what \(g(t)\) does to the polynomials 1, \(t\text{,}\) \(t^2\text{,}\) and \(t^3\text{.}\) A generator matrix for \(C\) is</p>
+<p data-braille="continuation">can be considered to be the ring of polynomials of the form</p>
 <div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
 \begin{equation*}
-G =
-\begin{pmatrix}
-1 &amp; 0 &amp; 0 &amp; 0 \\
-1 &amp; 1 &amp; 0 &amp; 0 \\
-0 &amp; 1 &amp; 1 &amp; 0 \\
-1 &amp; 0 &amp; 1 &amp; 1 \\
-0 &amp; 1 &amp; 0 &amp; 1 \\
-0 &amp; 0 &amp; 1 &amp; 0 \\
-0 &amp; 0 &amp; 0 &amp; 1
-\end{pmatrix}\text{.}
+f(t) = a_0 + a_1 t + \cdots + a_{n - 1} t^{n - 1}
 \end{equation*}
 </div>
-<span class="incontext"><a href="section-poly-codes.html#ETB">in-context</a></span>
+<p data-braille="continuation">that satisfy the condition \(t^n = 1\text{.}\) It is an easy exercise to show that \({\mathbb Z}_2^n\) and \(R_n\) are isomorphic as vector spaces. We will often identify elements in \({\mathbb Z}_2^n\) with elements in \({\mathbb Z}[x] / \langle x^n - 1 \rangle\text{.}\) In this manner we can interpret a linear code as a subset of \({\mathbb Z}[x] / \langle x^n - 1 \rangle\text{.}\)</p>
+<span class="incontext"><a href="section-poly-codes.html#sjK">in-context</a></span>
 </body>
 </html>

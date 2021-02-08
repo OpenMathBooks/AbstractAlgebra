@@ -44,7 +44,7 @@
       <task>
         <statement>
           <p>
-            Prove that the fields <m>\Q(\sqrt[4]{3})</m> and <m>\Q(\sqrt[4]{3}i)</m> are isomorphic, but not equal.  Note, this fact might be helpful for the previous parts.
+            Prove that the fields <m>\Q(\sqrt[4]{3})</m> and <m>\Q(\sqrt[4]{3}i)</m> are isomorphic, but not equal. 
           </p>
         </statement>
       </task>

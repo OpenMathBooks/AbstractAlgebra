@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2021-02-04T11:25:47-07:00       *-->
+<!--*       on 2021-02-08T11:09:22-07:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -15,7 +15,19 @@
 </head>
 <body>
 <h6 xmlns:svg="http://www.w3.org/2000/svg" class="heading"><span class="type">Paragraph</span></h6>
-<p xmlns:svg="http://www.w3.org/2000/svg">It seems fitting that the last theorem that we will state and prove is the Fundamental Theorem of Algebra. This theorem was first proven by Gauss in his doctoral thesis. Prior to Gauss's proof, mathematicians suspected that there might exist polynomials over the real and complex numbers having no solutions. The Fundamental Theorem of Algebra states that every polynomial over the complex numbers factors into distinct linear factors.</p>
-<span class="incontext"><a href="section-galois-applications.html#NCG">in-context</a></span>
+<p>Since \(f(x)\) is solvable by radicals there exists an extension \(E\) of \(F\) by radicals \(F = F_0 \subset F_1 \subset \cdots \subset F_n = E\text{.}\) By  <a class="xref" data-knowl="./knowl/lemma-radical-extension.html" title="Lemma 10.36">Lemma 10.36</a>, we can assume that \(E\) is a splitting field \(f(x)\) and \(F_i\) is normal over \(F_{i - 1}\text{.}\) By the Fundamental Theorem of Galois Theory, \(G(E/F_i)\) is a normal subgroup of \(G(E/F_{i - 1})\text{.}\) Therefore, we have a subnormal series of subgroups of \(G(E/F)\text{:}\)</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{equation*}
+\{ \identity \} \subset G(E/F_{n - 1}) \subset \cdots \subset G(E/F_1) \subset G(E/F)\text{.}
+\end{equation*}
+</div>
+<p data-braille="continuation">Again by the Fundamental Theorem of Galois Theory, we know that</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{equation*}
+G(E/F_{i - 1})/G(E/F_i) \cong G(F_i/F_{i - 1})\text{.}
+\end{equation*}
+</div>
+<p data-braille="continuation">By <a class="xref" data-knowl="./knowl/lemma-xn-a-solvable.html" title="Lemma 10.35">Lemma 10.35</a>, \(G(F_i/F_{i - 1})\) is solvable; hence, \(G(E/F)\) is also solvable.</p>
+<span class="incontext"><a href="section-galois-applications.html#Tdx">in-context</a></span>
 </body>
 </html>

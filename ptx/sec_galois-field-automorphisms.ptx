@@ -5,7 +5,15 @@
       <title>Field Automorphisms</title>
 
         <p permid="sqb">
-          Our first task is to establish a link between group theory and field theory by examining automorphisms of fields.
+          Our goal now is to establish a link between group theory and field theory by examining automorphisms of fields.
+        </p>
+
+        <p>
+          Suppose <m>\alpha</m> and <m>\beta</m> are two roots of the same irreducible polynomial <m>p(x) \in F[x]</m>.  Since <m>F[x]/\langle p(x)\rangle</m> is isomorphic to both <m>F(\alpha)</m> and <m>F(\beta)</m>, we get that there is an isomorphism from <m>F(\alpha)</m> to <m>F(\beta)</m> by following the isomorphism from <m>F(\alpha) \to F[x]/\langle p(x) \rangle</m> and then from <m>F[x]/\langle p(x) \rangle \to F(\beta)</m>.  This isomorphism sends <m>\alpha</m> to <m>\beta</m> but sends every element of <m>F</m> to itself.
+        </p>
+
+        <p>
+          Now we can continue to add roots of <m>p(x)</m> until we arrive at the splitting field.  If we extend the isomorphism we had above to the splitting field, then it will be an isomorphism from the splitting field to itself.  An isomorphism <m>\varphi:E \to E</m> is called an <term>automorphism</term> (a <q>self-isomorphism</q>).  Since the domain and codomain are equal, we can easily compose automorphism.  We can think of automorphism as special kinds of permutations of the set, which we already know together form a group.
         </p>
 
         <proposition permid="ZgR">
@@ -24,6 +32,10 @@
             </p>
           </proof>
         </proposition>
+
+        <p>
+          In the context of field extensions, we can consider only those automorphisms of a field that <em>preserve</em> of <term>fix</term> elements from the base field.  That is, for every element <m>\alpha in F</m>, we require that <m>\varphi(\alpha) = \alpha</m>.  Restricting to just these special automorphisms also gives us a group:
+        </p>
 
         <proposition permid="Foa">
           <statement>
@@ -48,7 +60,7 @@
         </proposition>
 
         <p permid="Yxk">
-          Let <m>E</m> be a field extension of <m>F</m>.
+          These <m>F</m>-fixing automorphisms will be very useful, so we give the group of them a special name.  Let <m>E</m> be a field extension of <m>F</m>.
           We will denote the full group of automorphisms of <m>E</m> by <m>\aut(E)</m>.
           We define the <term>Galois group</term>
               <idx><h>Group</h><h>Galois</h></idx>
@@ -57,7 +69,7 @@
           <me permid="QbN">
             G(E/F) = \{ \sigma \in \aut(E) : \sigma(\alpha) = \alpha \text{ for all } \alpha \in F \}
           </me>.
-          If <m>f(x)</m> is a polynomial in <m>F[x]</m> and <m>E</m> is the splitting field of <m>f(x)</m> over <m>F</m>,
+          We will often want to consider the Galois group relative to a particular polynomial.  If <m>f(x)</m> is a polynomial in <m>F[x]</m> and <m>E</m> is the splitting field of <m>f(x)</m> over <m>F</m>,
           then we define the Galois group of <m>f(x)</m> to be <m>G(E/F)</m>.
 
           <notation>
@@ -114,6 +126,10 @@
           </p>
         </example>
 
+        <p>
+          As illustrated in the example above, automorphisms in the Galois group send roots of polynomials somewhere.  But what sorts of elements can be the image of such roots?  The next proposition proves that roots can <em>only</em> be sent to other roots of the same polynomial!
+        </p>
+
         <proposition xml:id="proposition-roots-permute" permid="lvj">
           <statement>
             <p permid="USK">
@@ -143,18 +159,17 @@
 
         <p permid="EEt">
           Let <m>E</m> be an algebraic extension of a field <m>F</m>.
-          Two elements <m>\alpha, \beta \in E</m> are <term>conjugate</term>
+          We say that two elements <m>\alpha, \beta \in E</m> are <term>conjugate</term>
               <idx><h>Conjugate elements</h></idx>
           over <m>F</m> if they have the same minimal polynomial.
           For example,
           in the field <m>{\mathbb Q}( \sqrt{2}\, )</m> the elements
           <m>\sqrt{2}</m> and <m>-\sqrt{2}</m> are conjugate over
-          <m>{\mathbb Q}</m> since they are both roots of the irreducible polynomial <m>x^2 - 2</m>.
+          <m>{\mathbb Q}</m> since they are both roots of the irreducible polynomial <m>x^2 - 2</m>.  
         </p>
 
         <p permid="kLC">
-          A converse of the last proposition exists.
-          The proof follows directly from <xref ref="lemma-field-isomorphism"/>.
+          The previous proposition says that automorphisms in <m>G(E/F)</m> must send elements to their conjugates.  (But note that an element is always conjugate with itself, and can be sent to itself by an automorphism; after all, the identity automorphism is an element of <m>G(E/F)</m>.)  A sort of converse of this would say that if two elements of conjugate, then there exists an automorphism that sends one to the other.  This is true, and the proof follows directly from <xref ref="lemma-field-isomorphism"/>.
         </p>
 
         <proposition permid="RCs">
@@ -166,6 +181,10 @@
             </p>
           </statement>
         </proposition>
+
+        <p>
+          In <xref ref="example-galois-q-sqrt5"/>, we noticed that the size of the Galois group was 4, and this was also the degree of the field extension <m>E</m> over <m>F</m>.  We can now prove that this is no coincidence.
+        </p>
 
         <theorem xml:id="theorem-extension-order" permid="gLq">
           <statement>
