@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2021-02-08T11:03:06-07:00       *-->
+<!--*       on 2021-02-12T14:42:36-07:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -59,7 +59,7 @@ MathJax.Hub.Config({
 <!-- 2019-10-12: Temporary - CSS file for experiments with styling --><link xmlns:svg="http://www.w3.org/2000/svg" href="developer.css" rel="stylesheet" type="text/css">
 </head>
 <body id="judson-AATA" class="mathbook-book has-toc has-sidebar-left">
-<a class="assistive" href="#content">Skip to main content</a><div xmlns:svg="http://www.w3.org/2000/svg" class="hidden-content" style="display:none">\(\newcommand{\identity}{\mathrm{id}}
+<a class="assistive" href="#content">Skip to main content</a><div xmlns:svg="http://www.w3.org/2000/svg" id="latex-macros" class="hidden-content" style="display:none">\(\newcommand{\identity}{\mathrm{id}}
 \newcommand{\notdivide}{\nmid}
 \newcommand{\notsubset}{\not\subset}
 \newcommand{\lcm}{\operatorname{lcm}}
@@ -320,7 +320,7 @@ MathJax.Hub.Config({
 [E:F]= n\text{.}
 \end{equation*}
 </div>
-<p data-braille="continuation">to indicate the dimension of \(E\) over \(F\text{.}\) </p>
+<p class="continuation">to indicate the dimension of \(E\) over \(F\text{.}\) </p>
 <article class="theorem theorem-like" id="hdp"><h6 class="heading">
 <span class="type">Theorem</span><span class="space"> </span><span class="codenumber">8.35</span><span class="period">.</span>
 </h6>
@@ -331,19 +331,19 @@ MathJax.Hub.Config({
 1, \alpha, \ldots, {\alpha}^n
 \end{equation*}
 </div>
-<p data-braille="continuation">cannot be linearly independent. Hence, there exist \(a_i \in F\text{,}\) not all zero, such that</p>
+<p class="continuation">cannot be linearly independent. Hence, there exist \(a_i \in F\text{,}\) not all zero, such that</p>
 <div class="displaymath">
 \begin{equation*}
 a_n {\alpha}^n + a_{n - 1} {\alpha}^{n - 1} + \cdots + a_1 \alpha + a_0 = 0\text{.}
 \end{equation*}
 </div>
-<p data-braille="continuation">Therefore,</p>
+<p class="continuation">Therefore,</p>
 <div class="displaymath">
 \begin{equation*}
 p(x) = a_n x^n + \cdots + a_0 \in F[x]
 \end{equation*}
 </div>
-<p data-braille="continuation">is a nonzero polynomial with \(p( \alpha ) = 0\text{.}\)</p></article><article class="remark remark-like" id="CLt"><h6 class="heading">
+<p class="continuation">is a nonzero polynomial with \(p( \alpha ) = 0\text{.}\)</p></article><article class="remark remark-like" id="CLt"><h6 class="heading">
 <span class="type">Remark</span><span class="space"> </span><span class="codenumber">8.36</span><span class="period">.</span>
 </h6>
 <p id="eiW"><a class="xref" data-knowl="./knowl/theorem-finite-extension.html" title="Theorem 8.35">Theorem 8.35</a> says that every finite extension of a field \(F\) is an algebraic extension. The converse is false, however. We will leave it as an exercise to show that the set of all elements in \({\mathbb R}\) that are algebraic over \({\mathbb Q}\) forms an infinite field extension of \({\mathbb Q}\text{.}\)</p></article><p id="Cqh">The next theorem is a counting theorem, similar to Lagrange's Theorem in group theory. <a class="xref" data-knowl="./knowl/theorem-tower-indices.html" title="Theorem 8.37">Theorem 8.37</a> will prove to be an extremely useful tool in our investigation of finite field extensions.</p>
@@ -362,7 +362,7 @@ p(x) = a_n x^n + \cdots + a_0 \in F[x]
 u = \sum_{j = 1}^{m} \left( \sum_{i = 1}^{n} a_{ij} \alpha_i  \right) \beta_j = \sum_{i,j} a_{ij} ( \alpha_i \beta_j )\text{.}
 \end{equation*}
 </div>
-<p data-braille="continuation">So the \(mn\) vectors \(\alpha_i \beta_j\) must span \(K\) over \(F\text{.}\)</p>
+<p class="continuation">So the \(mn\) vectors \(\alpha_i \beta_j\) must span \(K\) over \(F\text{.}\)</p>
 <p id="miU">We must show that \(\{ \alpha_i \beta_j \}\) are linearly independent. Recall that a set of vectors \(v_1, v_2, \ldots,
 v_n\) in a vector space \(V\) are linearly independent if</p>
 <div class="displaymath">
@@ -370,31 +370,31 @@ v_n\) in a vector space \(V\) are linearly independent if</p>
 c_1 v_1 + c_2 v_2 + \cdots + c_n v_n = 0
 \end{equation*}
 </div>
-<p data-braille="continuation">implies that</p>
+<p class="continuation">implies that</p>
 <div class="displaymath">
 \begin{equation*}
 c_1 = c_2 = \cdots = c_n = 0\text{.}
 \end{equation*}
 </div>
-<p data-braille="continuation">Let</p>
+<p class="continuation">Let</p>
 <div class="displaymath">
 \begin{equation*}
 u = \sum_{i,j} c_{ij} ( \alpha_i \beta_j ) = 0
 \end{equation*}
 </div>
-<p data-braille="continuation">for \(c_{ij} \in F\text{.}\) We need to prove that all of the \(c_{ij}\)'s are zero. We can rewrite \(u\) as</p>
+<p class="continuation">for \(c_{ij} \in F\text{.}\) We need to prove that all of the \(c_{ij}\)'s are zero. We can rewrite \(u\) as</p>
 <div class="displaymath">
 \begin{equation*}
 \sum_{j = 1}^{m} \left( \sum_{i = 1}^{n} c_{ij} \alpha_i \right) \beta_j = 0\text{,}
 \end{equation*}
 </div>
-<p data-braille="continuation">where \(\sum_i c_{ij} \alpha_i \in E\text{.}\) Since the \(\beta_j\)'s are linearly independent over \(E\text{,}\) it must be the case that</p>
+<p class="continuation">where \(\sum_i c_{ij} \alpha_i \in E\text{.}\) Since the \(\beta_j\)'s are linearly independent over \(E\text{,}\) it must be the case that</p>
 <div class="displaymath">
 \begin{equation*}
 \sum_{i = 1}^n c_{ij} \alpha_i = 0
 \end{equation*}
 </div>
-<p data-braille="continuation">for all \(j\text{.}\) However, the \(\alpha_j\) are also linearly independent  over \(F\text{.}\) Therefore, \(c_{ij} = 0\) for all \(i\) and \(j\text{,}\) which completes the proof.</p></article><p id="ixq">The following corollary is easily proved using mathematical induction.</p>
+<p class="continuation">for all \(j\text{.}\) However, the \(\alpha_j\) are also linearly independent  over \(F\text{.}\) Therefore, \(c_{ij} = 0\) for all \(i\) and \(j\text{,}\) which completes the proof.</p></article><p id="ixq">The following corollary is easily proved using mathematical induction.</p>
 <article class="corollary theorem-like" id="FFZ"><h6 class="heading">
 <span class="type">Corollary</span><span class="space"> </span><span class="codenumber">8.38</span><span class="period">.</span>
 </h6>
@@ -422,7 +422,7 @@ k\) and \(F_{i+1}\) is a finite extension of \(F_i\text{,}\) then \(F_k\) is a f
 [{\mathbb Q}( \sqrt{3} + \sqrt{5}\, ) : {\mathbb Q} ] = 4\text{.}
 \end{equation*}
 </div>
-<p data-braille="continuation">We know that \(\{ 1, \sqrt{3}\, \}\) is a basis for \({\mathbb Q}( \sqrt{3}\, )\) over \({\mathbb Q}\text{.}\) Hence, \(\sqrt{3} + \sqrt{5}\) cannot be in \({\mathbb Q}( \sqrt{3}\, )\text{.}\) It follows that \(\sqrt{5}\) cannot be in \({\mathbb Q}( \sqrt{3}\, )\) either. Therefore, \(\{ 1, \sqrt{5}\, \}\) is a basis for \({\mathbb Q}( \sqrt{3}, \sqrt{5}\, ) = ( {\mathbb Q}(\sqrt{3}\, ))( \sqrt{5}\, )\) over \({\mathbb Q}( \sqrt{3}\, )\) and \(\{ 1, \sqrt{3}, \sqrt{5}, \sqrt{3} \sqrt{5} = \sqrt{15}\, \}\) is a basis for \({\mathbb Q}( \sqrt{3}, \sqrt{5}\, ) = {\mathbb Q}( \sqrt{3} + \sqrt{5}\, )\) over \({\mathbb Q}\text{.}\) This example shows that it is possible that some extension \(F( \alpha_1, \ldots, \alpha_n )\) is actually a simple extension of \(F\) even though \(n \gt 1\text{.}\)</p></article><article class="example example-like" id="WEk"><h6 class="heading">
+<p class="continuation">We know that \(\{ 1, \sqrt{3}\, \}\) is a basis for \({\mathbb Q}( \sqrt{3}\, )\) over \({\mathbb Q}\text{.}\) Hence, \(\sqrt{3} + \sqrt{5}\) cannot be in \({\mathbb Q}( \sqrt{3}\, )\text{.}\) It follows that \(\sqrt{5}\) cannot be in \({\mathbb Q}( \sqrt{3}\, )\) either. Therefore, \(\{ 1, \sqrt{5}\, \}\) is a basis for \({\mathbb Q}( \sqrt{3}, \sqrt{5}\, ) = ( {\mathbb Q}(\sqrt{3}\, ))( \sqrt{5}\, )\) over \({\mathbb Q}( \sqrt{3}\, )\) and \(\{ 1, \sqrt{3}, \sqrt{5}, \sqrt{3} \sqrt{5} = \sqrt{15}\, \}\) is a basis for \({\mathbb Q}( \sqrt{3}, \sqrt{5}\, ) = {\mathbb Q}( \sqrt{3} + \sqrt{5}\, )\) over \({\mathbb Q}\text{.}\) This example shows that it is possible that some extension \(F( \alpha_1, \ldots, \alpha_n )\) is actually a simple extension of \(F\) even though \(n \gt 1\text{.}\)</p></article><article class="example example-like" id="WEk"><h6 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">8.41</span><span class="period">.</span>
 </h6>
 <p id="lNv">Let us compute a basis for \({\mathbb Q}( \sqrt[3]{5}, \sqrt{5} \, i )\text{,}\) where \(\sqrt{5}\) is the positive square root of \(5\) and \(\sqrt[3]{5}\) is the real cube root of \(5\text{.}\) We know that \(\sqrt{5} \, i \notin {\mathbb Q}(\sqrt[3]{5}\, )\text{,}\) so</p>
@@ -431,19 +431,19 @@ k\) and \(F_{i+1}\) is a finite extension of \(F_i\text{,}\) then \(F_k\) is a f
 [ {\mathbb Q}(\sqrt[3]{5}, \sqrt{5}\, i) : {\mathbb Q}(\sqrt[3]{5}\, )] = 2\text{.}
 \end{equation*}
 </div>
-<p data-braille="continuation">It is easy to determine that \(\{ 1, \sqrt{5}i\, \}\) is a basis for \({\mathbb Q}( \sqrt[3]{5}, \sqrt{5}\, i )\) over \({\mathbb Q}( \sqrt[3]{5}\, )\text{.}\) We also know that \(\{ 1, \sqrt[3]{5}, (\sqrt[3]{5}\, )^2  \}\) is a basis for \({\mathbb Q}(\sqrt[3]{5}\, )\) over \({\mathbb Q}\text{.}\) Hence, a basis for \({\mathbb Q}(\sqrt[3]{5}, \sqrt{5}\, i )\) over \({\mathbb Q}\) is</p>
+<p class="continuation">It is easy to determine that \(\{ 1, \sqrt{5}i\, \}\) is a basis for \({\mathbb Q}( \sqrt[3]{5}, \sqrt{5}\, i )\) over \({\mathbb Q}( \sqrt[3]{5}\, )\text{.}\) We also know that \(\{ 1, \sqrt[3]{5}, (\sqrt[3]{5}\, )^2  \}\) is a basis for \({\mathbb Q}(\sqrt[3]{5}\, )\) over \({\mathbb Q}\text{.}\) Hence, a basis for \({\mathbb Q}(\sqrt[3]{5}, \sqrt{5}\, i )\) over \({\mathbb Q}\) is</p>
 <div class="displaymath">
 \begin{equation*}
 \{ 1, \sqrt{5}\, i, \sqrt[3]{5}, (\sqrt[3]{5}\, )^2, (\sqrt[6]{5}\, )^5 i, (\sqrt[6]{5}\, )^7 i = 5 \sqrt[6]{5}\, i \text{ or } \sqrt[6]{5}\, i \}\text{.}
 \end{equation*}
 </div>
-<p data-braille="continuation">Notice that \(\sqrt[6]{5}\, i\) is a zero of \(x^6 + 5\text{.}\) We can show that this polynomial is irreducible over \({\mathbb Q}\) using Eisenstein's Criterion, where we let \(p = 5\text{.}\) Consequently,</p>
+<p class="continuation">Notice that \(\sqrt[6]{5}\, i\) is a zero of \(x^6 + 5\text{.}\) We can show that this polynomial is irreducible over \({\mathbb Q}\) using Eisenstein's Criterion, where we let \(p = 5\text{.}\) Consequently,</p>
 <div class="displaymath">
 \begin{equation*}
 {\mathbb Q} \subset {\mathbb Q}( \sqrt[6]{5}\, i) \subset {\mathbb Q}( \sqrt[3]{5}, \sqrt{5}\, i )\text{.}
 \end{equation*}
 </div>
-<p data-braille="continuation">But it must be the case that \({\mathbb Q}( \sqrt[6]{5}\, i) = {\mathbb Q}( \sqrt[3]{5}, \sqrt{5}\, i )\text{,}\) since the degree of both of these extensions is \(6\text{.}\)</p></article><article class="theorem theorem-like" id="trH"><h6 class="heading">
+<p class="continuation">But it must be the case that \({\mathbb Q}( \sqrt[6]{5}\, i) = {\mathbb Q}( \sqrt[3]{5}, \sqrt{5}\, i )\text{,}\) since the degree of both of these extensions is \(6\text{.}\)</p></article><article class="theorem theorem-like" id="trH"><h6 class="heading">
 <span class="type">Theorem</span><span class="space"> </span><span class="codenumber">8.42</span><span class="period">.</span>
 </h6>
 <p id="VUD">Let \(E\) be a field extension of \(F\text{.}\) Then  the following statements are equivalent.</p>
@@ -457,7 +457,7 @@ k\) and \(F_{i+1}\) is a finite extension of \(F_i\text{,}\) then \(F_k\) is a f
 E = F(\alpha_1, \ldots, \alpha_n) \supset F(\alpha_1, \ldots, \alpha_{n-1} ) \supset \cdots \supset F( \alpha_1 ) \supset F\text{,}
 \end{equation*}
 </div>
-<p data-braille="continuation">where each field \(F(\alpha_1, \ldots, \alpha_i)\) is algebraic over \(F(\alpha_1, \ldots, \alpha_{i-1})\text{.}\)</p>
+<p class="continuation">where each field \(F(\alpha_1, \ldots, \alpha_i)\) is algebraic over \(F(\alpha_1, \ldots, \alpha_{i-1})\text{.}\)</p>
 </li>
 </ol></article><article class="proof" id="Qtz"><h6 class="heading"><span class="type">Proof<span class="period">.</span></span></h6>
 <p id="yxm">(1) \(\Rightarrow\) (2). Let \(E\) be a finite algebraic extension of \(F\text{.}\) Then \(E\) is a finite dimensional vector space over \(F\) and there exists a basis consisting of elements \(\alpha_1, \ldots, \alpha_n\) in \(E\) such that \(E = F(\alpha_1, \ldots, \alpha_n)\text{.}\) Each \(\alpha_i\) is algebraic over \(F\) by <a class="xref" data-knowl="./knowl/theorem-finite-extension.html" title="Theorem 8.35">Theorem 8.35</a>.</p>
@@ -467,26 +467,26 @@ E = F(\alpha_1, \ldots, \alpha_n) \supset F(\alpha_1, \ldots, \alpha_{n-1} ) \su
 E = F(\alpha_1, \ldots, \alpha_n) \supset F(\alpha_1, \ldots, \alpha_{n - 1} ) \supset \cdots \supset F( \alpha_1 ) \supset F\text{,}
 \end{equation*}
 </div>
-<p data-braille="continuation">where each field \(F(\alpha_1, \ldots, \alpha_i)\) is algebraic over \(F(\alpha_1, \ldots, \alpha_{i - 1})\text{.}\)</p>
+<p class="continuation">where each field \(F(\alpha_1, \ldots, \alpha_i)\) is algebraic over \(F(\alpha_1, \ldots, \alpha_{i - 1})\text{.}\)</p>
 <p id="KLE">(3) \(\Rightarrow\) (1). Let</p>
 <div class="displaymath">
 \begin{equation*}
 E = F(\alpha_1, \ldots, \alpha_n) \supset F(\alpha_1, \ldots, \alpha_{n - 1} ) \supset \cdots \supset F( \alpha_1 ) \supset F\text{,}
 \end{equation*}
 </div>
-<p data-braille="continuation">where each field \(F(\alpha_1, \ldots, \alpha_i)\) is algebraic over \(F(\alpha_1, \ldots, \alpha_{i - 1})\text{.}\) Since</p>
+<p class="continuation">where each field \(F(\alpha_1, \ldots, \alpha_i)\) is algebraic over \(F(\alpha_1, \ldots, \alpha_{i - 1})\text{.}\) Since</p>
 <div class="displaymath">
 \begin{equation*}
 F(\alpha_1, \ldots, \alpha_i) =  F(\alpha_1, \ldots, \alpha_{i - 1} )(\alpha_i)
 \end{equation*}
 </div>
-<p data-braille="continuation">is simple extension and \(\alpha_i\) is algebraic over \(F(\alpha_1, \ldots, \alpha_{i - 1})\text{,}\) it follows that</p>
+<p class="continuation">is simple extension and \(\alpha_i\) is algebraic over \(F(\alpha_1, \ldots, \alpha_{i - 1})\text{,}\) it follows that</p>
 <div class="displaymath">
 \begin{equation*}
 [ F(\alpha_1, \ldots, \alpha_i) : F(\alpha_1, \ldots, \alpha_{i - 1} )]
 \end{equation*}
 </div>
-<p data-braille="continuation">is finite for each \(i\text{.}\) Therefore, \([E : F]\) is finite.</p></article></section><section class="worksheet" id="FOA"><h3 class="heading hide-type">
+<p class="continuation">is finite for each \(i\text{.}\) Therefore, \([E : F]\) is finite.</p></article></section><section class="worksheet" id="FOA"><h3 class="heading hide-type">
 <span class="type">Worksheet</span> <span class="codenumber">8.6.2</span> <span class="title">Activity: Dimension and Degree</span>
 </h3>
 <section class="introduction" id="irj"><p id="oQp">Recall that a <em class="emphasis">basis</em> for a vector space is a linearly independent spanning set, and that the <em class="emphasis">dimension</em> of a vector space is the size of a (any) basis for the space.</p>
@@ -536,7 +536,7 @@ F(\alpha_1, \ldots, \alpha_i) =  F(\alpha_1, \ldots, \alpha_{i - 1} )(\alpha_i)
 a+b\sqrt[3]{5} + c\sqrt[3]{5}^2 + a'\sqrt{7} + b'\sqrt[3]{5}\sqrt{7} + c'\sqrt[3]{5}^2\sqrt{7}.
 \end{equation*}
 </div>
-<p data-braille="continuation">A basis is thus</p>
+<p class="continuation">A basis is thus</p>
 <div class="displaymath">
 \begin{equation*}
 \{1, \sqrt[3]{5}, \sqrt[3]{5}^2, \sqrt{7}, \sqrt[3]{5}\sqrt{7}, \sqrt[3]{5}^2\sqrt{7} \}.
@@ -590,7 +590,7 @@ a+b\sqrt[3]{5} + c\sqrt[3]{5}^2 + a'\sqrt{7} + b'\sqrt[3]{5}\sqrt{7} + c'\sqrt[3
 p(x) = (x - \alpha)(x - \beta)q_2(x)\text{,}
 \end{equation*}
 </div>
-<p data-braille="continuation">where \(\deg q_2(x) = \deg p(x) -2\text{.}\) The process must eventually stop since the degree of \(p(x)\) is finite.</p>
+<p class="continuation">where \(\deg q_2(x) = \deg p(x) -2\text{.}\) The process must eventually stop since the degree of \(p(x)\) is finite.</p>
 <p id="Dhf">Conversely, suppose that every nonconstant polynomial \(p(x)\) in \(F[x]\) factors into linear factors. Let \(ax - b\) be such a factor. Then \(p( b/a ) = 0\text{.}\) Consequently, \(F\) is algebraically closed.</p></article><article class="corollary theorem-like" id="nCv"><h6 class="heading">
 <span class="type">Corollary</span><span class="space"> </span><span class="codenumber">8.46</span><span class="period">.</span>
 </h6>

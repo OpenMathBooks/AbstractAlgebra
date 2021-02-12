@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2021-02-08T11:03:31-07:00       *-->
+<!--*       on 2021-02-12T14:42:51-07:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -59,7 +59,7 @@ MathJax.Hub.Config({
 <!-- 2019-10-12: Temporary - CSS file for experiments with styling --><link xmlns:svg="http://www.w3.org/2000/svg" href="developer.css" rel="stylesheet" type="text/css">
 </head>
 <body id="judson-AATA" class="mathbook-book has-toc has-sidebar-left">
-<a class="assistive" href="#content">Skip to main content</a><div xmlns:svg="http://www.w3.org/2000/svg" class="hidden-content" style="display:none">\(\newcommand{\identity}{\mathrm{id}}
+<a class="assistive" href="#content">Skip to main content</a><div xmlns:svg="http://www.w3.org/2000/svg" id="latex-macros" class="hidden-content" style="display:none">\(\newcommand{\identity}{\mathrm{id}}
 \newcommand{\notdivide}{\nmid}
 \newcommand{\notsubset}{\not\subset}
 \newcommand{\lcm}{\operatorname{lcm}}
@@ -319,7 +319,7 @@ MathJax.Hub.Config({
 G = H_n \supset H_{n-1} \supset \cdots \supset H_1 \supset H_0 = \{e\}
 \end{equation*}
 </div>
-<p data-braille="continuation">is a <dfn class="terminology">subnormal series</dfn> provided each \(H_i\) is normal in \(H_{i+1}\text{,}\) and a <dfn class="terminology">normal series</dfn> if each \(H_i\) is normal in \(G\text{.}\)</p>
+<p class="continuation">is a <dfn class="terminology">subnormal series</dfn> provided each \(H_i\) is normal in \(H_{i+1}\text{,}\) and a <dfn class="terminology">normal series</dfn> if each \(H_i\) is normal in \(G\text{.}\)</p>
 <p id="dHD">A non-trivial group \(G\) is called <dfn class="terminology">simple</dfn> provided it has no non-trivial normal subgroups.  We say that a subnormal series is a <dfn class="terminology">composition series</dfn> and that a normal series is a <dfn class="terminology">principle series</dfn> if every quotient group \(H_{i+1}/H_i\) is simple.</p></section><article class="exercise exercise-like" id="bSq"><h6 class="heading"><span class="codenumber">1<span class="period">.</span></span></h6>
 <p id="JOM">Find a subnormal series for \(D_4\text{.}\) Is it a normal series?</p>
 <div class="solutions"></div></article><article class="exercise exercise-like" id="HZz"><h6 class="heading"><span class="codenumber">2<span class="period">.</span></span></h6>
@@ -337,7 +337,7 @@ G = H_n \supset H_{n-1} \supset \cdots \supset H_1 \supset H_0 = \{e\}
 G = H_n \supset H_{n-1} \supset \cdots \supset H_1 \supset H_0 = \{ e \}\text{,}
 \end{equation*}
 </div>
-<p data-braille="continuation">where \(H_i\) is a normal subgroup of \(H_{i+1}\text{.}\) If each subgroup \(H_i\) is normal in \(G\text{,}\) then the series is called a <dfn class="terminology">normal series</dfn>.  The <dfn class="terminology">length</dfn> of a  subnormal or normal series is the number of proper inclusions.</p>
+<p class="continuation">where \(H_i\) is a normal subgroup of \(H_{i+1}\text{.}\) If each subgroup \(H_i\) is normal in \(G\text{,}\) then the series is called a <dfn class="terminology">normal series</dfn>.  The <dfn class="terminology">length</dfn> of a  subnormal or normal series is the number of proper inclusions.</p>
 <article class="example example-like" id="bvH"><h6 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">10.21</span><span class="period">.</span>
 </h6>
@@ -356,7 +356,7 @@ G = H_n \supset H_{n-1} \supset \cdots \supset H_1 \supset H_0 = \{ e \}\text{,}
 D_4 \supset \{ (1), (12)(34), (13)(24), (14)(23) \} \supset \{  (1), (12)(34) \} \supset \{ (1) \}\text{.}
 \end{equation*}
 </div>
-<p data-braille="continuation">The subgroup \(\{  (1), (12)(34) \}\) is not normal in \(D_4\text{;}\) consequently, this series is not a normal series.</p></article><p id="Sjm">A subnormal (normal) series \(\{ K_j \}\) is a <dfn class="terminology">refinement of a subnormal (normal) series</dfn> \(\{ H_i \}\) if \(\{ H_i \} \subset \{ K_j \}\text{.}\) That is, each \(H_i\) is one of the \(K_j\text{.}\)</p>
+<p class="continuation">The subgroup \(\{  (1), (12)(34) \}\) is not normal in \(D_4\text{;}\) consequently, this series is not a normal series.</p></article><p id="Sjm">A subnormal (normal) series \(\{ K_j \}\) is a <dfn class="terminology">refinement of a subnormal (normal) series</dfn> \(\{ H_i \}\) if \(\{ H_i \} \subset \{ K_j \}\text{.}\) That is, each \(H_i\) is one of the \(K_j\text{.}\)</p>
 <article class="example example-like" id="nJZ"><h6 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">10.23</span><span class="period">.</span>
 </h6>
@@ -366,7 +366,7 @@ D_4 \supset \{ (1), (12)(34), (13)(24), (14)(23) \} \supset \{  (1), (12)(34) \}
 {\mathbb Z} \supset 3{\mathbb Z} \supset 9{\mathbb Z} \supset 45{\mathbb Z} \supset 90{\mathbb Z} \supset 180{\mathbb Z} \supset \{0\}
 \end{equation*}
 </div>
-<p data-braille="continuation">is a refinement of the series</p>
+<p class="continuation">is a refinement of the series</p>
 <div class="displaymath">
 \begin{equation*}
 {\mathbb Z} \supset 9{\mathbb Z} \supset 45{\mathbb Z} \supset 180{\mathbb Z} \supset \{0\}\text{.}
@@ -382,7 +382,7 @@ D_4 \supset \{ (1), (12)(34), (13)(24), (14)(23) \} \supset \{  (1), (12)(34) \}
 {\mathbb Z}_{60} \supset \langle 4 \rangle \supset  \langle 20 \rangle \supset \{ 0 \}
 \end{gather*}
 </div>
-<p data-braille="continuation">of the group \({\mathbb Z}_{60}\) are isomorphic since</p>
+<p class="continuation">of the group \({\mathbb Z}_{60}\) are isomorphic since</p>
 <div class="displaymath">
 \begin{gather*}
 {\mathbb Z}_{60} / \langle 3 \rangle \cong \langle 20 \rangle / \{ 0 \} \cong {\mathbb Z}_{3}\\
@@ -400,7 +400,7 @@ D_4 \supset \{ (1), (12)(34), (13)(24), (14)(23) \} \supset \{  (1), (12)(34) \}
 {\mathbb Z}_{60} \supset \langle 3 \rangle \supset  \langle 15 \rangle \supset \langle 30 \rangle  \supset \{ 0 \}
 \end{equation*}
 </div>
-<p data-braille="continuation">with factor groups</p>
+<p class="continuation">with factor groups</p>
 <div class="displaymath">
 \begin{align*}
 {\mathbb Z}_{60} / \langle 3 \rangle &amp; \cong  {\mathbb Z}_{3}\\
@@ -409,13 +409,13 @@ D_4 \supset \{ (1), (12)(34), (13)(24), (14)(23) \} \supset \{  (1), (12)(34) \}
 \langle 30 \rangle / \{ 0 \} &amp; \cong  {\mathbb Z}_2\text{.}
 \end{align*}
 </div>
-<p data-braille="continuation">Since \({\mathbb Z}_{60}\) is an abelian group, this series is automatically a principal series. Notice that a composition series need not be unique. The series</p>
+<p class="continuation">Since \({\mathbb Z}_{60}\) is an abelian group, this series is automatically a principal series. Notice that a composition series need not be unique. The series</p>
 <div class="displaymath">
 \begin{equation*}
 {\mathbb Z}_{60} \supset \langle 2 \rangle \supset \langle 4 \rangle \supset  \langle 20 \rangle \supset \{ 0 \}
 \end{equation*}
 </div>
-<p data-braille="continuation">is also a composition series.</p></article><article class="example example-like" id="gfA"><h6 class="heading">
+<p class="continuation">is also a composition series.</p></article><article class="example example-like" id="gfA"><h6 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">10.26</span><span class="period">.</span>
 </h6>
 <p id="XoE">For \(n \geq 5\text{,}\) the series</p>
@@ -424,7 +424,7 @@ D_4 \supset \{ (1), (12)(34), (13)(24), (14)(23) \} \supset \{  (1), (12)(34) \}
 S_n \supset A_n \supset \{ (1) \}
 \end{equation*}
 </div>
-<p data-braille="continuation">is a composition series for \(S_n\) since \(S_n / A_n \cong {\mathbb Z}_2\) and \(A_n\) is simple.</p></article><article class="example example-like" id="MmJ"><h6 class="heading">
+<p class="continuation">is a composition series for \(S_n\) since \(S_n / A_n \cong {\mathbb Z}_2\) and \(A_n\) is simple.</p></article><article class="example example-like" id="MmJ"><h6 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">10.27</span><span class="period">.</span>
 </h6>
 <p id="DvN">Not every group has a composition series or a principal series. Suppose that</p>
@@ -433,7 +433,7 @@ S_n \supset A_n \supset \{ (1) \}
 \{ 0 \} = H_0 \subset H_1 \subset \cdots \subset H_{n-1} \subset H_n = {\mathbb Z}
 \end{equation*}
 </div>
-<p data-braille="continuation">is a subnormal series for the integers under addition. Then \(H_1\) must be of the form \(k {\mathbb Z}\) for some \(k \in {\mathbb N}\text{.}\) In this case \(H_1 / H_0 \cong k {\mathbb Z}\) is an infinite cyclic group with many nontrivial proper normal subgroups.</p></article><p id="KEN">Although composition series need not be unique as in the case of \({\mathbb Z}_{60}\text{,}\) it turns out that any two composition series are related. The factor groups of the two composition series for \({\mathbb Z}_{60}\) are \({\mathbb Z}_2\text{,}\) \({\mathbb Z}_2\text{,}\) \({\mathbb Z}_3\text{,}\) and \({\mathbb Z}_5\text{;}\) that is, the two composition series are isomorphic. The Jordan-Hölder Theorem says that this is always the case.</p>
+<p class="continuation">is a subnormal series for the integers under addition. Then \(H_1\) must be of the form \(k {\mathbb Z}\) for some \(k \in {\mathbb N}\text{.}\) In this case \(H_1 / H_0 \cong k {\mathbb Z}\) is an infinite cyclic group with many nontrivial proper normal subgroups.</p></article><p id="KEN">Although composition series need not be unique as in the case of \({\mathbb Z}_{60}\text{,}\) it turns out that any two composition series are related. The factor groups of the two composition series for \({\mathbb Z}_{60}\) are \({\mathbb Z}_2\text{,}\) \({\mathbb Z}_2\text{,}\) \({\mathbb Z}_3\text{,}\) and \({\mathbb Z}_5\text{;}\) that is, the two composition series are isomorphic. The Jordan-Hölder Theorem says that this is always the case.</p>
 <article class="theorem theorem-like" id="yje"><h6 class="heading">
 <span class="type">Theorem</span><span class="space"> </span><span class="codenumber">10.28</span><span class="period">.</span><span class="space"> </span><span class="title">Jordan-Hölder.</span>
 </h6>
@@ -446,63 +446,63 @@ G = H_n \supset H_{n-1} \supset \cdots \supset H_1 \supset H_0 = \{ e \}\\
 G = K_m \supset K_{m-1} \supset \cdots \supset K_1 \supset K_0 = \{ e \}
 \end{gather*}
 </div>
-<p data-braille="continuation">be two composition series for \(G\text{.}\) We can form two new subnormal series for \(G\) since \(H_i \cap K_{m-1}\) is normal in \(H_{i+1} \cap K_{m-1}\) and \(K_j \cap H_{n-1}\) is normal in \(K_{j+1} \cap H_{n-1}\text{:}\)</p>
+<p class="continuation">be two composition series for \(G\text{.}\) We can form two new subnormal series for \(G\) since \(H_i \cap K_{m-1}\) is normal in \(H_{i+1} \cap K_{m-1}\) and \(K_j \cap H_{n-1}\) is normal in \(K_{j+1} \cap H_{n-1}\text{:}\)</p>
 <div class="displaymath">
 \begin{gather*}
 G = H_n \supset H_{n-1} \supset H_{n-1} \cap K_{m-1} \supset \cdots \supset H_0 \cap K_{m-1} = \{ e \}\\
 G = K_m \supset K_{m-1} \supset K_{m-1} \cap H_{n-1} \supset \cdots \supset K_0 \cap H_{n-1} = \{ e \}\text{.}
 \end{gather*}
 </div>
-<p data-braille="continuation">Since \(H_i \cap K_{m-1}\) is normal in \(H_{i+1} \cap K_{m-1}\text{,}\) the Second Isomorphism Theorem implies that</p>
+<p class="continuation">Since \(H_i \cap K_{m-1}\) is normal in \(H_{i+1} \cap K_{m-1}\text{,}\) the Second Isomorphism Theorem implies that</p>
 <div class="displaymath">
 \begin{align*}
 (H_{i+1} \cap K_{m-1}) / (H_i \cap K_{m-1}) &amp; =  (H_{i+1} \cap K_{m-1}) / (H_i \cap ( H_{i+1} \cap K_{m-1} ))\\
 &amp; \cong  H_i (H_{i+1} \cap K_{m-1})/ H_i\text{,}
 \end{align*}
 </div>
-<p data-braille="continuation">where \(H_i\) is normal in \(H_i (H_{i+1} \cap K_{m-1})\text{.}\) Since \(\{ H_i \}\) is a composition series, \(H_{i+1} / H_i\) must be simple; consequently, \(H_i (H_{i+1} \cap K_{m-1})/ H_i\) is either \(H_{i+1}/H_i\) or \(H_i/H_i\text{.}\) That is, \(H_i (H_{i+1} \cap K_{m-1})\) must be either \(H_i\) or \(H_{i+1}\text{.}\) Removing any nonproper inclusions from the series</p>
+<p class="continuation">where \(H_i\) is normal in \(H_i (H_{i+1} \cap K_{m-1})\text{.}\) Since \(\{ H_i \}\) is a composition series, \(H_{i+1} / H_i\) must be simple; consequently, \(H_i (H_{i+1} \cap K_{m-1})/ H_i\) is either \(H_{i+1}/H_i\) or \(H_i/H_i\text{.}\) That is, \(H_i (H_{i+1} \cap K_{m-1})\) must be either \(H_i\) or \(H_{i+1}\text{.}\) Removing any nonproper inclusions from the series</p>
 <div class="displaymath">
 \begin{equation*}
 H_{n-1} \supset H_{n-1} \cap K_{m-1} \supset \cdots \supset H_0 \cap K_{m-1} = \{ e \}\text{,}
 \end{equation*}
 </div>
-<p data-braille="continuation">we have a composition series for \(H_{n-1}\text{.}\) Our induction hypothesis says that this series must be equivalent to the composition series</p>
+<p class="continuation">we have a composition series for \(H_{n-1}\text{.}\) Our induction hypothesis says that this series must be equivalent to the composition series</p>
 <div class="displaymath">
 \begin{equation*}
 H_{n-1} \supset \cdots \supset H_1 \supset H_0 = \{ e \}\text{.}
 \end{equation*}
 </div>
-<p data-braille="continuation">Hence, the composition series</p>
+<p class="continuation">Hence, the composition series</p>
 <div class="displaymath">
 \begin{equation*}
 G = H_n \supset H_{n-1} \supset \cdots \supset H_1 \supset H_0 = \{ e \}
 \end{equation*}
 </div>
-<p data-braille="continuation">and</p>
+<p class="continuation">and</p>
 <div class="displaymath">
 \begin{equation*}
 G = H_n \supset H_{n-1} \supset H_{n-1} \cap K_{m-1} \supset \cdots \supset H_0 \cap K_{m-1} = \{ e \}
 \end{equation*}
 </div>
-<p data-braille="continuation">are equivalent. If \(H_{n-1} = K_{m-1}\text{,}\) then the composition series \(\{H_i \}\) and \(\{ K_j \}\) are equivalent and we are done; otherwise, \(H_{n-1} K_{m-1}\)  is a normal subgroup of \(G\) properly containing \(H_{n-1}\text{.}\) In this case \(H_{n-1} K_{m-1} = G\) and we can apply the Second Isomorphism Theorem once again; that is,</p>
+<p class="continuation">are equivalent. If \(H_{n-1} = K_{m-1}\text{,}\) then the composition series \(\{H_i \}\) and \(\{ K_j \}\) are equivalent and we are done; otherwise, \(H_{n-1} K_{m-1}\)  is a normal subgroup of \(G\) properly containing \(H_{n-1}\text{.}\) In this case \(H_{n-1} K_{m-1} = G\) and we can apply the Second Isomorphism Theorem once again; that is,</p>
 <div class="displaymath">
 \begin{equation*}
 K_{m-1} / (K_{m-1} \cap H_{n-1}) \cong (H_{n-1} K_{m-1}) / H_{n-1} = G/H_{n-1}\text{.}
 \end{equation*}
 </div>
-<p data-braille="continuation">Therefore,</p>
+<p class="continuation">Therefore,</p>
 <div class="displaymath">
 \begin{equation*}
 G = H_n \supset H_{n-1} \supset H_{n-1} \cap K_{m-1} \supset \cdots \supset H_0 \cap K_{m-1} = \{ e \}
 \end{equation*}
 </div>
-<p data-braille="continuation">and</p>
+<p class="continuation">and</p>
 <div class="displaymath">
 \begin{equation*}
 G = K_m \supset K_{m-1} \supset K_{m-1} \cap H_{n-1} \supset \cdots \supset K_0 \cap H_{n-1} = \{ e \}
 \end{equation*}
 </div>
-<p data-braille="continuation">are equivalent and the proof of the theorem is complete.</p></article><p id="qLW">A group \(G\) is <dfn class="terminology">solvable</dfn>  if it has a subnormal series \(\{ H_i \}\) such that all of the factor groups \(H_{i+1} / H_i\) are abelian. Solvable groups will play a fundamental role when we study Galois theory and the solution of polynomial equations.</p>
+<p class="continuation">are equivalent and the proof of the theorem is complete.</p></article><p id="qLW">A group \(G\) is <dfn class="terminology">solvable</dfn>  if it has a subnormal series \(\{ H_i \}\) such that all of the factor groups \(H_{i+1} / H_i\) are abelian. Solvable groups will play a fundamental role when we study Galois theory and the solution of polynomial equations.</p>
 <article class="example example-like" id="stS"><h6 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">10.29</span><span class="period">.</span>
 </h6>
@@ -512,13 +512,13 @@ G = K_m \supset K_{m-1} \supset K_{m-1} \cap H_{n-1} \supset \cdots \supset K_0 
 S_4 \supset A_4 \supset \{ (1), (12)(34), (13)(24), (14)(23) \} \supset \{ (1) \}
 \end{equation*}
 </div>
-<p data-braille="continuation">has abelian factor groups; however, for \(n \geq 5\) the series</p>
+<p class="continuation">has abelian factor groups; however, for \(n \geq 5\) the series</p>
 <div class="displaymath">
 \begin{equation*}
 S_n \supset A_n \supset \{ (1) \}
 \end{equation*}
 </div>
-<p data-braille="continuation">is a composition series for \(S_n\) with a nonabelian factor group. Therefore, \(S_n\) is not a solvable group for \(n \geq 5\text{.}\)</p></article></section><section class="exercises" id="RAc"><h3 class="heading hide-type">
+<p class="continuation">is a composition series for \(S_n\) with a nonabelian factor group. Therefore, \(S_n\) is not a solvable group for \(n \geq 5\text{.}\)</p></article></section><section class="exercises" id="RAc"><h3 class="heading hide-type">
 <span class="type">Exercises</span> <span class="codenumber">10.3.3</span> <span class="title">Collected Homework</span>
 </h3>
 <article class="exercise exercise-like" id="vRY"><h6 class="heading"><span class="codenumber">1<span class="period">.</span></span></h6>

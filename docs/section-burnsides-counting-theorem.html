@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2021-02-08T11:04:06-07:00       *-->
+<!--*       on 2021-02-12T14:43:10-07:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -59,7 +59,7 @@ MathJax.Hub.Config({
 <!-- 2019-10-12: Temporary - CSS file for experiments with styling --><link xmlns:svg="http://www.w3.org/2000/svg" href="developer.css" rel="stylesheet" type="text/css">
 </head>
 <body id="judson-AATA" class="mathbook-book has-toc has-sidebar-left">
-<a class="assistive" href="#content">Skip to main content</a><div xmlns:svg="http://www.w3.org/2000/svg" class="hidden-content" style="display:none">\(\newcommand{\identity}{\mathrm{id}}
+<a class="assistive" href="#content">Skip to main content</a><div xmlns:svg="http://www.w3.org/2000/svg" id="latex-macros" class="hidden-content" style="display:none">\(\newcommand{\identity}{\mathrm{id}}
 \newcommand{\notdivide}{\nmid}
 \newcommand{\notsubset}{\not\subset}
 \newcommand{\lcm}{\operatorname{lcm}}
@@ -323,19 +323,19 @@ MathJax.Hub.Config({
 gag^{-1} \cdot y = ga \cdot g^{-1}y = ga \cdot x = g \cdot x = y\text{,}
 \end{equation*}
 </div>
-<p data-braille="continuation">we can define a map \(\phi: G_x \rightarrow G_y\) by \(\phi(a) = gag^{-1}\text{.}\) The map \(\phi\) is a homomorphism since</p>
+<p class="continuation">we can define a map \(\phi: G_x \rightarrow G_y\) by \(\phi(a) = gag^{-1}\text{.}\) The map \(\phi\) is a homomorphism since</p>
 <div class="displaymath">
 \begin{equation*}
 \phi(ab) = gabg^{-1} = gag^{-1} gbg^{-1} = \phi(a) \phi(b)\text{.}
 \end{equation*}
 </div>
-<p data-braille="continuation">Suppose that \(\phi(a) = \phi(b)\text{.}\) Then \(gag^{-1}= gbg^{-1}\) or \(a=b\text{;}\) hence, the map is injective. To show that \(\phi\) is onto, let \(b\) be in \(G_y\text{;}\) then \(g^{-1}bg\) is in \(G_x\) since</p>
+<p class="continuation">Suppose that \(\phi(a) = \phi(b)\text{.}\) Then \(gag^{-1}= gbg^{-1}\) or \(a=b\text{;}\) hence, the map is injective. To show that \(\phi\) is onto, let \(b\) be in \(G_y\text{;}\) then \(g^{-1}bg\) is in \(G_x\) since</p>
 <div class="displaymath">
 \begin{equation*}
 g^{-1}bg \cdot x = g^{-1}b \cdot gx = g^{-1}b \cdot y = g^{-1} \cdot y = x;
 \end{equation*}
 </div>
-<p data-braille="continuation">and \(\phi(g^{-1}bg ) = b\text{.}\)</p></article><article class="theorem theorem-like" id="FnA"><h6 class="heading">
+<p class="continuation">and \(\phi(g^{-1}bg ) = b\text{.}\)</p></article><article class="theorem theorem-like" id="FnA"><h6 class="heading">
 <span class="type">Theorem</span><span class="space"> </span><span class="codenumber">13.19</span><span class="period">.</span><span class="space"> </span><span class="title">Burnside.</span>
 </h6>
 <p id="GAk">Let \(G\) be a  finite group acting on a set \(X\) and let \(k\) denote the number of orbits of \(X\text{.}\) Then</p>
@@ -350,19 +350,19 @@ k = \frac{1}{|G|} \sum_{g \in G} |X_g|\text{.}
 \sum_{g \in G} |X_g|\text{.}
 \end{equation*}
 </div>
-<p data-braille="continuation">However, if viewed in terms of the stabilizer subgroups, this number is</p>
+<p class="continuation">However, if viewed in terms of the stabilizer subgroups, this number is</p>
 <div class="displaymath">
 \begin{equation*}
 \sum_{x \in X} |G_x|;
 \end{equation*}
 </div>
-<p data-braille="continuation">hence, \(\sum_{g \in G} |X_g| = \sum_{x \in X} |G_x|\text{.}\) By <a class="xref" data-knowl="./knowl/lemma-gset.html" title="Lemma 13.18">Lemma 13.18</a>,</p>
+<p class="continuation">hence, \(\sum_{g \in G} |X_g| = \sum_{x \in X} |G_x|\text{.}\) By <a class="xref" data-knowl="./knowl/lemma-gset.html" title="Lemma 13.18">Lemma 13.18</a>,</p>
 <div class="displaymath">
 \begin{equation*}
 \sum_{y \in {\mathcal O}_x} |G_y|  =  | {\mathcal O}_x| \cdot |G_x|\text{.}
 \end{equation*}
 </div>
-<p data-braille="continuation">By <a class="xref" data-knowl="./knowl/theorem-orbit.html" title="Theorem 13.11">Theorem 13.11</a> and Lagrange's Theorem, this expression is equal  to \(|G|\text{.}\) Summing over all of the \(k\) distinct orbits, we conclude that</p>
+<p class="continuation">By <a class="xref" data-knowl="./knowl/theorem-orbit.html" title="Theorem 13.11">Theorem 13.11</a> and Lagrange's Theorem, this expression is equal  to \(|G|\text{.}\) Summing over all of the \(k\) distinct orbits, we conclude that</p>
 <div class="displaymath">
 \begin{equation*}
 \sum_{g \in G} |X_g| = \sum_{x \in X} |G_x| = k \cdot |G|\text{.}
@@ -379,7 +379,7 @@ X_{(1 3)(2 5)} &amp; =  \{4\}\\
 X_{(2 5)} &amp; =  \{1, 3, 4 \}\text{.}
 \end{align*}
 </div>
-<p data-braille="continuation">Burnside's Theorem says that</p>
+<p class="continuation">Burnside's Theorem says that</p>
 <div class="displaymath">
 \begin{equation*}
 k = \frac{1}{|G|} \sum_{g \in G} |X_g| = \frac{1}{4}(5 + 3 + 1 + 3) = 3\text{.}
@@ -395,7 +395,7 @@ k = \frac{1}{|G|} \sum_{g \in G} |X_g| = \frac{1}{4}(5 + 3 + 1 + 3) = 3\text{.}
 &amp;(1234) &amp; &amp;(12)(34) &amp; &amp; (14)(23) &amp; &amp; (13)(24)
 \end{align*}
 </div>
-<p data-braille="continuation">The group \(G\) acts on the set of vertices \(\{ 1, 2, 3, 4\}\) in the usual manner. We can describe the different colorings by mappings from \(X\) into \(Y = \{ B, W \}\) where \(B\) and \(W\) represent the colors black and white, respectively. Each map \(f : X \rightarrow Y\) describes a way to color the corners of the square. Every \(\sigma \in D_4\) induces a permutation \(\widetilde{ \sigma }\) of the possible colorings given by \(\widetilde{\sigma}(f) = f \circ \sigma\) for \(f : X \rightarrow Y\text{.}\) For example, suppose that \(f\) is defined by</p>
+<p class="continuation">The group \(G\) acts on the set of vertices \(\{ 1, 2, 3, 4\}\) in the usual manner. We can describe the different colorings by mappings from \(X\) into \(Y = \{ B, W \}\) where \(B\) and \(W\) represent the colors black and white, respectively. Each map \(f : X \rightarrow Y\) describes a way to color the corners of the square. Every \(\sigma \in D_4\) induces a permutation \(\widetilde{ \sigma }\) of the possible colorings given by \(\widetilde{\sigma}(f) = f \circ \sigma\) for \(f : X \rightarrow Y\text{.}\) For example, suppose that \(f\) is defined by</p>
 <div class="displaymath">
 \begin{align*}
 f(1) &amp; =  B\\
@@ -404,7 +404,7 @@ f(3) &amp; =  W\\
 f(4) &amp; =  W
 \end{align*}
 </div>
-<p data-braille="continuation">and \(\sigma = (1 2)(3 4)\text{.}\) Then \(\widetilde{\sigma}(f) = f \circ \sigma\) sends vertex \(2\) to \(B\) and the remaining vertices to \(W\text{.}\) The set of all such \(\widetilde{\sigma}\) is a permutation group \(\widetilde{G}\) on the set of possible colorings. Let \(\widetilde{X}\) denote the set of all possible colorings; that is, \(\widetilde{X}\) is the set of all possible maps from \(X\) to \(Y\text{.}\) Now we must compute the number of \(\widetilde{G}\)-equivalence classes.</p>
+<p class="continuation">and \(\sigma = (1 2)(3 4)\text{.}\) Then \(\widetilde{\sigma}(f) = f \circ \sigma\) sends vertex \(2\) to \(B\) and the remaining vertices to \(W\text{.}\) The set of all such \(\widetilde{\sigma}\) is a permutation group \(\widetilde{G}\) on the set of possible colorings. Let \(\widetilde{X}\) denote the set of all possible colorings; that is, \(\widetilde{X}\) is the set of all possible maps from \(X\) to \(Y\text{.}\) Now we must compute the number of \(\widetilde{G}\)-equivalence classes.</p>
 <ol class="decimal">
 <li id="UKT"><p id="GlP">\(\widetilde{X}_{(1)} = \widetilde{X}\) since the identity fixes every possible coloring. \(|\widetilde{X}| = 2^4 =~16\text{.}\)</p></li>
 <li id="ASc"><p id="msY">\(\widetilde{X}_{(1 2 3 4)}\) consists of all \(f \in \widetilde{X}\) such that \(f\) is unchanged by the permutation \((1 23 4)\text{.}\) In this case \(f(1) = f(2) = f(3) = f(4)\text{,}\) so that all values of \(f\) must be the same; that is, either \(f(x)= B\) or \(f(x)= W\) for every vertex \(x\) of the square. So \(|\widetilde{X}_{(1 2 3 4)}| = 2\text{.}\)</p></li>
@@ -415,13 +415,13 @@ f(4) &amp; =  W
 <li id="FBV"><p id="rcR">For \(\widetilde{X}_{(1 3 )}\text{,}\) \(f(1) = f(3)\) and the other corners can be of any color; hence, \(|\widetilde{X}_{(1 3)}| = 2^3 = 8\text{.}\)</p></li>
 <li id="lJe"><p id="Xka">\(|\widetilde{X}_{(2 4)}| = 8\text{.}\)</p></li>
 </ol>
-<p data-braille="continuation">By Burnside's Theorem, we can conclude that there are exactly</p>
+<p class="continuation">By Burnside's Theorem, we can conclude that there are exactly</p>
 <div class="displaymath">
 \begin{equation*}
 \frac{1}{8} ( 2^4 + 2^1 + 2^2 + 2^1  + 2^2 + 2^2 +2^3 + 2^3) = 6
 \end{equation*}
 </div>
-<p data-braille="continuation">ways to color the vertices of the square.</p>
+<p class="continuation">ways to color the vertices of the square.</p>
 <article class="proposition theorem-like" id="Mif"><h6 class="heading">
 <span class="type">Proposition</span><span class="space"> </span><span class="codenumber">13.21</span><span class="period">.</span>
 </h6>
@@ -432,7 +432,7 @@ f(4) &amp; =  W
 f( \sigma(x )) = \widetilde{\sigma}(f)(x) = \widetilde{\sigma}(g)(x) = g( \sigma(x ))\text{.}
 \end{equation*}
 </div>
-<p data-braille="continuation">Since \(\sigma\) is a permutation of \(X\text{,}\) every element \(x'\) in \(X\) is the image of some \(x\) in \(X\) under \(\sigma\text{;}\) hence, \(f\) and \(g\) agree on all elements of \(X\text{.}\) Therefore, \(f=g\) and \(\widetilde{\sigma}\) is injective. The map \(\sigma \mapsto \widetilde{\sigma}\) is onto, since the two sets are the same size.</p>
+<p class="continuation">Since \(\sigma\) is a permutation of \(X\text{,}\) every element \(x'\) in \(X\) is the image of some \(x\) in \(X\) under \(\sigma\text{;}\) hence, \(f\) and \(g\) agree on all elements of \(X\text{.}\) Therefore, \(f=g\) and \(\widetilde{\sigma}\) is injective. The map \(\sigma \mapsto \widetilde{\sigma}\) is onto, since the two sets are the same size.</p>
 <p id="OeJ">Suppose that \(\sigma\) is a permutation of \(X\) with cycle decomposition \(\sigma = \sigma_1 \sigma_2 \cdots \sigma_n\text{.}\) Any \(f\) in \({\widetilde{X}}_{\sigma}\) must have the same value on each cycle of \(\sigma\text{.}\) Since there are \(n\) cycles and \(|Y|\) possible values for each cycle, \(|{\widetilde{X}}_{\sigma}| = |Y|^n\text{.}\)</p></article><article class="example example-like" id="spo"><h6 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">13.22</span><span class="period">.</span>
 </h6>
@@ -445,7 +445,7 @@ f( \sigma(x )) = \widetilde{\sigma}(f)(x) = \widetilde{\sigma}(g)(x) = g( \sigma
 \frac{1}{8} (4^4 + 4^1 + 4^2 + 4^1 + 4^2 + 4^ 2 + 4^3 + 4^3) = 55
 \end{equation*}
 </div>
-<p data-braille="continuation">possible ways.</p></article></section><section class="subsection" id="WHk"><h3 class="heading hide-type">
+<p class="continuation">possible ways.</p></article></section><section class="subsection" id="WHk"><h3 class="heading hide-type">
 <span class="type">Subsection</span> <span class="codenumber">13.3.2</span> <span class="title">Historical Note</span>
 </h3>
 <p id="sLa">William Burnside  was born in London in 1852. He attended Cambridge University from 1871 to 1875 and won the Smith's Prize in his last year. After his graduation he lectured at Cambridge. He was made a member of the Royal Society in 1893. Burnside wrote approximately 150 papers on topics in applied mathematics, differential geometry, and probability, but his most famous contributions were in group theory. Several of Burnside's conjectures have stimulated research to this day. One such conjecture was that every group of odd order is solvable; that is, for a group \(G\) of odd order, there exists a sequence of subgroups</p>
@@ -454,7 +454,7 @@ f( \sigma(x )) = \widetilde{\sigma}(f)(x) = \widetilde{\sigma}(g)(x) = g( \sigma
 G = H_n \supset H_{n-1} \supset \cdots \supset H_1 \supset H_0 = \{ e \}
 \end{equation*}
 </div>
-<p data-braille="continuation">such that \(H_i\) is normal in \(H_{i+1}\) and \(H_{i+1} / H_i\) is abelian. This conjecture was finally proven by W. Feit  and J. Thompson  in 1963. Burnside's <span class="booktitle">The Theory of Groups of Finite Order</span>, published in 1897, was one of the first books to treat groups in a modern context as opposed to permutation groups. The second edition, published in 1911, is still a classic.</p></section><section class="exercises" id="raO"><h3 class="heading hide-type">
+<p class="continuation">such that \(H_i\) is normal in \(H_{i+1}\) and \(H_{i+1} / H_i\) is abelian. This conjecture was finally proven by W. Feit  and J. Thompson  in 1963. Burnside's <span class="booktitle">The Theory of Groups of Finite Order</span>, published in 1897, was one of the first books to treat groups in a modern context as opposed to permutation groups. The second edition, published in 1911, is still a classic.</p></section><section class="exercises" id="raO"><h3 class="heading hide-type">
 <span class="type">Exercises</span> <span class="codenumber">13.3.3</span> <span class="title">Collected Homework</span>
 </h3>
 <article class="exercise exercise-like" id="plB"><h6 class="heading"><span class="codenumber">1<span class="period">.</span></span></h6>

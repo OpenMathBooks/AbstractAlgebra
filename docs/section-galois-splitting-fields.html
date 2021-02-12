@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2021-02-08T11:03:11-07:00       *-->
+<!--*       on 2021-02-12T14:42:40-07:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -59,7 +59,7 @@ MathJax.Hub.Config({
 <!-- 2019-10-12: Temporary - CSS file for experiments with styling --><link xmlns:svg="http://www.w3.org/2000/svg" href="developer.css" rel="stylesheet" type="text/css">
 </head>
 <body id="judson-AATA" class="mathbook-book has-toc has-sidebar-left">
-<a class="assistive" href="#content">Skip to main content</a><div xmlns:svg="http://www.w3.org/2000/svg" class="hidden-content" style="display:none">\(\newcommand{\identity}{\mathrm{id}}
+<a class="assistive" href="#content">Skip to main content</a><div xmlns:svg="http://www.w3.org/2000/svg" id="latex-macros" class="hidden-content" style="display:none">\(\newcommand{\identity}{\mathrm{id}}
 \newcommand{\notdivide}{\nmid}
 \newcommand{\notsubset}{\not\subset}
 \newcommand{\lcm}{\operatorname{lcm}}
@@ -317,7 +317,7 @@ MathJax.Hub.Config({
 p(x) = ( x - \alpha_1 )(x - \alpha_2) \cdots (x - \alpha_n)\text{.}
 \end{equation*}
 </div>
-<p data-braille="continuation">A polynomial \(p(x) \in F[x]\) <dfn class="terminology">splits</dfn> in \(E\) if it is the product of linear factors in \(E[x]\text{.}\)</p>
+<p class="continuation">A polynomial \(p(x) \in F[x]\) <dfn class="terminology">splits</dfn> in \(E\) if it is the product of linear factors in \(E[x]\text{.}\)</p>
 <article class="example example-like" id="ixd"><h6 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">9.1</span><span class="period">.</span>
 </h6>
@@ -330,7 +330,7 @@ p(x) = ( x - \alpha_1 )(x - \alpha_2) \cdots (x - \alpha_n)\text{.}
 \frac{ -\sqrt[3]{3} \pm (\sqrt[6]{3}\, )^5 i }{2}\text{,}
 \end{equation*}
 </div>
-<p data-braille="continuation">are not in \({\mathbb Q}( \sqrt[3]{3}\, )\text{.}\)</p></article><article class="theorem theorem-like" id="RyS"><h6 class="heading">
+<p class="continuation">are not in \({\mathbb Q}( \sqrt[3]{3}\, )\text{.}\)</p></article><article class="theorem theorem-like" id="RyS"><h6 class="heading">
 <span class="type">Theorem</span><span class="space"> </span><span class="codenumber">9.3</span><span class="period">.</span>
 </h6>
 <p id="aEw">Let \(p(x) \in F[x]\) be a nonconstant polynomial. Then there exists a splitting field \(E\) for \(p(x)\text{.}\)</p></article><article class="proof" id="IPa"><h6 class="heading"><span class="type">Proof<span class="period">.</span></span></h6>
@@ -340,7 +340,7 @@ p(x) = ( x - \alpha_1 )(x - \alpha_2) \cdots (x - \alpha_n)\text{.}
 E = K(\alpha_2, \ldots, \alpha_n) = F(\alpha_1, \ldots, \alpha_n)
 \end{equation*}
 </div>
-<p data-braille="continuation">is a splitting field of \(p(x)\text{.}\)</p></article><p id="Jzh">The question of uniqueness now arises for splitting fields. This question is answered in the affirmative. Given two splitting fields \(K\) and \(L\) of a polynomial \(p(x) \in F[x]\text{,}\) there exists a field isomorphism \(\phi : K \rightarrow L\) that preserves \(F\text{.}\) In order to prove this result, we must first prove a lemma.</p>
+<p class="continuation">is a splitting field of \(p(x)\text{.}\)</p></article><p id="Jzh">The question of uniqueness now arises for splitting fields. This question is answered in the affirmative. Given two splitting fields \(K\) and \(L\) of a polynomial \(p(x) \in F[x]\text{,}\) there exists a field isomorphism \(\phi : K \rightarrow L\) that preserves \(F\text{.}\) In order to prove this result, we must first prove a lemma.</p>
 <article class="lemma theorem-like" id="dNk"><h6 class="heading">
 <span class="type">Lemma</span><span class="space"> </span><span class="codenumber">9.4</span><span class="period">.</span>
 </h6>
@@ -351,20 +351,20 @@ E = K(\alpha_2, \ldots, \alpha_n) = F(\alpha_1, \ldots, \alpha_n)
 \overline{\phi}( a_0 + a_1 \alpha + \cdots + a_{n - 1} \alpha^{n - 1}) = \phi(a_0) + \phi(a_1) \beta + \cdots + \phi(a_{n - 1}) \beta^{n - 1}\text{,}
 \end{equation*}
 </div>
-<p data-braille="continuation">where</p>
+<p class="continuation">where</p>
 <div class="displaymath">
 \begin{equation*}
 a_0 + a_1 \alpha + \cdots + a_{n - 1} \alpha^{n - 1}
 \end{equation*}
 </div>
-<p data-braille="continuation">is an element in \(E(\alpha)\text{.}\) The fact that \(\overline{\phi}\) is an isomorphism could be checked by direct computation; however, it is easier to observe that \(\overline{\phi}\) is a composition of maps that we already know to be isomorphisms.</p>
+<p class="continuation">is an element in \(E(\alpha)\text{.}\) The fact that \(\overline{\phi}\) is an isomorphism could be checked by direct computation; however, it is easier to observe that \(\overline{\phi}\) is a composition of maps that we already know to be isomorphisms.</p>
 <p id="bJP">We can extend \(\phi\) to be an isomorphism from \(E[x]\) to \(F[x]\text{,}\) which we will also denote by \(\phi\text{,}\) by letting</p>
 <div class="displaymath">
 \begin{equation*}
 \phi( a_0 + a_1 x + \cdots + a_n x^n ) =  \phi( a_0 ) + \phi(a_1) x + \cdots + \phi(a_n) x^n\text{.}
 \end{equation*}
 </div>
-<p data-braille="continuation">This extension agrees with the original isomorphism \(\phi : E \rightarrow F\text{,}\) since constant polynomials get mapped to constant polynomials. By assumption, \(\phi(p(x)) = q(x)\text{;}\) hence, \(\phi\) maps \(\langle p(x) \rangle\) onto \(\langle q(x) \rangle\text{.}\) Consequently, we have an isomorphism \(\psi : E[x] / \langle p(x) \rangle \rightarrow F[x]/\langle q(x) \rangle\text{.}\) By <a class="xref" data-knowl="./knowl/proposition-minimal-poly.html" title="Proposition 8.17">Proposition 8.17</a>, we have isomorphisms \(\sigma: E[x]/\langle p(x) \rangle \rightarrow E(\alpha)\) and \(\tau : F[x]/\langle q(x) \rangle \rightarrow F( \beta )\text{,}\) defined by evaluation at \(\alpha\) and \(\beta\text{,}\) respectively. Therefore, \(\overline{\phi} = \tau \psi \sigma^{-1}\) is the required isomorphism.</p>
+<p class="continuation">This extension agrees with the original isomorphism \(\phi : E \rightarrow F\text{,}\) since constant polynomials get mapped to constant polynomials. By assumption, \(\phi(p(x)) = q(x)\text{;}\) hence, \(\phi\) maps \(\langle p(x) \rangle\) onto \(\langle q(x) \rangle\text{.}\) Consequently, we have an isomorphism \(\psi : E[x] / \langle p(x) \rangle \rightarrow F[x]/\langle q(x) \rangle\text{.}\) By <a class="xref" data-knowl="./knowl/proposition-minimal-poly.html" title="Proposition 8.17">Proposition 8.17</a>, we have isomorphisms \(\sigma: E[x]/\langle p(x) \rangle \rightarrow E(\alpha)\) and \(\tau : F[x]/\langle q(x) \rangle \rightarrow F( \beta )\text{,}\) defined by evaluation at \(\alpha\) and \(\beta\text{,}\) respectively. Therefore, \(\overline{\phi} = \tau \psi \sigma^{-1}\) is the required isomorphism.</p>
 <div class="sidebyside"><div class="sbsrow" style="margin-left:20%;margin-right:20%;"><div class="sbspanel" style="width:100%;justify-content:flex-start;"><img src="images/fields-extension-isomorph.svg" role="img" style="width: 100%; height: auto;" alt=""></div></div></div>
 <p id="HQY">We leave the proof of uniqueness as a exercise.</p></article><article class="theorem theorem-like" id="xGb"><h6 class="heading">
 <span class="type">Theorem</span><span class="space"> </span><span class="codenumber">9.5</span><span class="period">.</span>
@@ -385,7 +385,7 @@ a_0 + a_1 \alpha + \cdots + a_{n - 1} \alpha^{n - 1}
 f(x) = (x - \alpha_1)^{n_1} (x - \alpha_2)^{n_2} \cdots (x - \alpha_r)^{n_r} = \prod_{i = 1}^{r} (x - \alpha_i)^{n_i}\text{.}
 \end{equation*}
 </div>
-<p data-braille="continuation">We define the <dfn class="terminology">multiplicity</dfn>  of a root \(\alpha_i\) of \(f(x)\) to be \(n_i\text{.}\) A root with multiplicity 1 is called a <dfn class="terminology">simple root</dfn>.  Recall that a polynomial \(f(x) \in F[x]\) of degree \(n\) is <dfn class="terminology">separable</dfn>  if it has \(n\) distinct roots in its splitting field \(E\text{.}\) Equivalently, \(f(x)\) is separable if it factors into distinct linear factors over \(E[x]\text{.}\) An extension \(E\) of \(F\) is a <dfn class="terminology">separable extension</dfn>  of \(F\) if every element in \(E\) is the root of a separable polynomial in \(F[x]\text{.}\) </p>
+<p class="continuation">We define the <dfn class="terminology">multiplicity</dfn>  of a root \(\alpha_i\) of \(f(x)\) to be \(n_i\text{.}\) A root with multiplicity 1 is called a <dfn class="terminology">simple root</dfn>.  Recall that a polynomial \(f(x) \in F[x]\) of degree \(n\) is <dfn class="terminology">separable</dfn>  if it has \(n\) distinct roots in its splitting field \(E\text{.}\) Equivalently, \(f(x)\) is separable if it factors into distinct linear factors over \(E[x]\text{.}\) An extension \(E\) of \(F\) is a <dfn class="terminology">separable extension</dfn>  of \(F\) if every element in \(E\) is the root of a separable polynomial in \(F[x]\text{.}\) </p>
 <article class="proposition theorem-like" id="nFV"><h6 class="heading">
 <span class="type">Proposition</span><span class="space"> </span><span class="codenumber">9.7</span><span class="period">.</span>
 </h6>
@@ -397,13 +397,13 @@ f'(x)) \neq 1\) is if \(f'(x)\) is the zero polynomial; however, this is impossi
 {\mathbb Q}( \sqrt{3}, \sqrt{5}\, ) = {\mathbb Q}( \sqrt{3} + \sqrt{5}\, )
 \end{equation*}
 </div>
-<p data-braille="continuation">and</p>
+<p class="continuation">and</p>
 <div class="displaymath">
 \begin{equation*}
 {\mathbb Q}( \sqrt[3]{5}, \sqrt{5}\, i ) = {\mathbb Q}( \sqrt[6]{5}\, i )\text{.}
 \end{equation*}
 </div>
-<p data-braille="continuation">The next theorem tells us that we can often find a primitive element.</p>
+<p class="continuation">The next theorem tells us that we can often find a primitive element.</p>
 <article class="theorem theorem-like" id="HyM"><h6 class="heading">
 <span class="type">Theorem</span><span class="space"> </span><span class="codenumber">9.8</span><span class="period">.</span><span class="space"> </span><span class="title">Primitive Element Theorem.</span>
 </h6>
@@ -414,13 +414,13 @@ f'(x)) \neq 1\) is if \(f'(x)\) is the zero polynomial; however, this is impossi
 a \neq \frac{\alpha_i - \alpha}{\beta - \beta_j}
 \end{equation*}
 </div>
-<p data-braille="continuation">for all \(i\) and \(j\) with \(j \neq 1\text{.}\) Therefore, \(a( \beta - \beta_j ) \neq \alpha_i - \alpha\text{.}\) Let \(\gamma = \alpha + a \beta\text{.}\) Then</p>
+<p class="continuation">for all \(i\) and \(j\) with \(j \neq 1\text{.}\) Therefore, \(a( \beta - \beta_j ) \neq \alpha_i - \alpha\text{.}\) Let \(\gamma = \alpha + a \beta\text{.}\) Then</p>
 <div class="displaymath">
 \begin{equation*}
 \gamma = \alpha + a \beta \neq \alpha_i + a \beta_j;
 \end{equation*}
 </div>
-<p data-braille="continuation">hence, \(\gamma - a \beta_j \neq \alpha_i\) for all \(i,
+<p class="continuation">hence, \(\gamma - a \beta_j \neq \alpha_i\) for all \(i,
 j\) with \(j \neq 1\text{.}\) Define \(h(x) \in F( \gamma )[x]\) by \(h(x) = f( \gamma - ax)\text{.}\) Then \(h( \beta ) = f( \alpha ) = 0\text{.}\) However, \(h( \beta_j ) \neq 0\) for \(j \neq 1\text{.}\) Hence, \(h(x)\) and \(g(x)\) have a single common factor in \(F( \gamma )[x]\text{;}\) that is, the minimal polynomial of \(\beta\) over \(F( \gamma )\) must be linear, since \(\beta\) is the only zero common to both \(g(x)\) and \(h(x)\text{.}\) So \(\beta \in F( \gamma )\) and \(\alpha = \gamma - a \beta\) is in \(F( \gamma )\text{.}\) Hence, \(F( \alpha, \beta ) = F( \gamma )\text{.}\)</p></article></section><section class="exercises" id="UBM"><h3 class="heading hide-type">
 <span class="type">Exercises</span> <span class="codenumber">9.1.2</span> <span class="title">Collected Homework</span>
 </h3>

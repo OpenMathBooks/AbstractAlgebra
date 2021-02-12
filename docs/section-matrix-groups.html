@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2021-02-08T11:04:23-07:00       *-->
+<!--*       on 2021-02-12T14:43:19-07:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -59,7 +59,7 @@ MathJax.Hub.Config({
 <!-- 2019-10-12: Temporary - CSS file for experiments with styling --><link xmlns:svg="http://www.w3.org/2000/svg" href="developer.css" rel="stylesheet" type="text/css">
 </head>
 <body id="judson-AATA" class="mathbook-book has-toc has-sidebar-left">
-<a class="assistive" href="#content">Skip to main content</a><div xmlns:svg="http://www.w3.org/2000/svg" class="hidden-content" style="display:none">\(\newcommand{\identity}{\mathrm{id}}
+<a class="assistive" href="#content">Skip to main content</a><div xmlns:svg="http://www.w3.org/2000/svg" id="latex-macros" class="hidden-content" style="display:none">\(\newcommand{\identity}{\mathrm{id}}
 \newcommand{\notdivide}{\nmid}
 \newcommand{\notsubset}{\not\subset}
 \newcommand{\lcm}{\operatorname{lcm}}
@@ -320,7 +320,7 @@ T({\mathbf x}+{\mathbf y}) &amp; = T({\mathbf x}) + T({\mathbf y})\\
 T(\alpha {\mathbf y}) &amp; = \alpha T({\mathbf y})\text{.}
 \end{align*}
 </div>
-<p data-braille="continuation">An \(m \times n\) matrix with entries in \({\mathbb R}\) represents a linear transformation from \({\mathbb R}^n\) to \({\mathbb R}^m\text{.}\) If we write vectors \({\mathbf x} = (x_1, \ldots,
+<p class="continuation">An \(m \times n\) matrix with entries in \({\mathbb R}\) represents a linear transformation from \({\mathbb R}^n\) to \({\mathbb R}^m\text{.}\) If we write vectors \({\mathbf x} = (x_1, \ldots,
 x_n)^\transpose\) and \({\mathbf y} = (y_1, \ldots,
 y_n)^\transpose\) in \({\mathbb R}^n\) as column matrices, then an \(m \times n\) matrix</p>
 <div class="displaymath">
@@ -335,7 +335,7 @@ a_{m1} &amp; a_{m2} &amp; \cdots &amp; a_{mn}
 \end{pmatrix}
 \end{equation*}
 </div>
-<p data-braille="continuation">maps the vectors to \({\mathbb R}^m\) linearly by matrix multiplication. Observe that if \(\alpha\) is a real number,</p>
+<p class="continuation">maps the vectors to \({\mathbb R}^m\) linearly by matrix multiplication. Observe that if \(\alpha\) is a real number,</p>
 <div class="displaymath">
 \begin{equation*}
 A({\mathbf x} + {\mathbf y} ) 
@@ -347,7 +347,7 @@ A {\mathbf x }+ A {\mathbf y}
 A ( \alpha {\mathbf x})\text{,}
 \end{equation*}
 </div>
-<p data-braille="continuation">where</p>
+<p class="continuation">where</p>
 <div class="displaymath">
 \begin{equation*}
 {\mathbf x}
@@ -360,7 +360,7 @@ x_n
 \end{pmatrix}\text{.}
 \end{equation*}
 </div>
-<p data-braille="continuation">We will often abbreviate the matrix \(A\) by writing \((a_{ij})\text{.}\) </p>
+<p class="continuation">We will often abbreviate the matrix \(A\) by writing \((a_{ij})\text{.}\) </p>
 <p id="sAw">Conversely, if \(T : {\mathbb R}^n \rightarrow {\mathbb R}^m\) is a linear map, we can associate a matrix \(A\) with \(T\) by considering what \(T\) does to the vectors</p>
 <div class="displaymath">
 \begin{align*}
@@ -370,14 +370,14 @@ x_n
 {\mathbf e}_n &amp; = (0, 0, \ldots, 1)^\transpose\text{.}
 \end{align*}
 </div>
-<p data-braille="continuation">We can write any vector \({\mathbf x} = (x_1, \ldots,
+<p class="continuation">We can write any vector \({\mathbf x} = (x_1, \ldots,
 x_n)^\transpose\) as</p>
 <div class="displaymath">
 \begin{equation*}
 x_1 {\mathbf e}_1 + x_2 {\mathbf e}_2 + \cdots + x_n {\mathbf e}_n\text{.}
 \end{equation*}
 </div>
-<p data-braille="continuation">Consequently, if</p>
+<p class="continuation">Consequently, if</p>
 <div class="displaymath">
 \begin{align*}
 T({\mathbf e}_1) &amp; = (a_{11}, a_{21}, \ldots, a_{m1})^\transpose,\\
@@ -386,7 +386,7 @@ T({\mathbf e}_2) &amp; = (a_{12}, a_{22}, \ldots, a_{m2})^\transpose,\\
 T({\mathbf e}_n) &amp; = (a_{1n}, a_{2n}, \ldots, a_{mn})^\transpose\text{,}
 \end{align*}
 </div>
-<p data-braille="continuation">then</p>
+<p class="continuation">then</p>
 <div class="displaymath">
 \begin{align*}
 T({\mathbf x} ) &amp; = T(x_1 {\mathbf e}_1 + x_2 {\mathbf e}_2 + \cdots + x_n {\mathbf e}_n)\\
@@ -404,7 +404,7 @@ T({\mathbf x} ) &amp; = T(x_1 {\mathbf e}_1 + x_2 {\mathbf e}_2 + \cdots + x_n {
 T(x_1, x_2) = (2 x_1 + 5 x_2, - 4 x_1 + 3 x_2)\text{,}
 \end{equation*}
 </div>
-<p data-braille="continuation">the axioms that \(T\) must satisfy to be a linear transformation are easily verified. The column vectors \(T {\mathbf e}_1 = (2, -4)^\transpose\) and \(T {\mathbf e}_2 = (5,3)^\transpose\) tell us that \(T\) is given by the matrix</p>
+<p class="continuation">the axioms that \(T\) must satisfy to be a linear transformation are easily verified. The column vectors \(T {\mathbf e}_1 = (2, -4)^\transpose\) and \(T {\mathbf e}_2 = (5,3)^\transpose\) tell us that \(T\) is given by the matrix</p>
 <div class="displaymath">
 \begin{equation*}
 A =
@@ -425,7 +425,7 @@ I =
 \end{pmatrix}
 \end{equation*}
 </div>
-<p data-braille="continuation">is the \(n \times n\) identity matrix. From linear algebra we know that \(A\) is invertible if and only if the determinant of \(A\) is nonzero. Sometimes an invertible matrix is said to be <dfn class="terminology">nonsingular</dfn>. </p>
+<p class="continuation">is the \(n \times n\) identity matrix. From linear algebra we know that \(A\) is invertible if and only if the determinant of \(A\) is nonzero. Sometimes an invertible matrix is said to be <dfn class="terminology">nonsingular</dfn>. </p>
 <article class="example example-like" id="EHx"><h6 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">15.2</span><span class="period">.</span>
 </h6>
@@ -438,7 +438,7 @@ I =
 \end{pmatrix}\text{,}
 \end{equation*}
 </div>
-<p data-braille="continuation">then the inverse of \(A\) is</p>
+<p class="continuation">then the inverse of \(A\) is</p>
 <div class="displaymath">
 \begin{equation*}
 A^{-1} =
@@ -448,7 +448,7 @@ A^{-1} =
 \end{pmatrix}\text{.}
 \end{equation*}
 </div>
-<p data-braille="continuation">We are guaranteed  that \(A^{-1}\) exists, since \(\det(A) = 2 \cdot 3 - 5 \cdot 1 = 1\) is nonzero.</p></article><p id="EOO">Some other facts about determinants will also prove useful in the course of this chapter. Let \(A\) and \(B\) be \(n \times n\) matrices. From linear algebra we have the following properties of determinants.</p>
+<p class="continuation">We are guaranteed  that \(A^{-1}\) exists, since \(\det(A) = 2 \cdot 3 - 5 \cdot 1 = 1\) is nonzero.</p></article><p id="EOO">Some other facts about determinants will also prove useful in the course of this chapter. Let \(A\) and \(B\) be \(n \times n\) matrices. From linear algebra we have the following properties of determinants.</p>
 <ul class="disc">
 <li id="KLe"><p id="wma">The determinant is a homomorphism into the multiplicative group of real numbers; that is, \(\det( A B) = (\det A )(\det B)\text{.}\)</p></li>
 <li id="qSn"><p id="ctj">If \(A\) is an invertible matrix, then \(\det(A^{-1}) = 1 / \det A\text{.}\)</p></li>
@@ -472,7 +472,7 @@ c &amp; d
 \end{pmatrix}\text{,}
 \end{equation*}
 </div>
-<p data-braille="continuation">the determinant of \(A\) is \(ad-bc\text{.}\) The group \(GL_2({\mathbb R})\) consists of those matrices in which \(ad-bc \neq 0\text{.}\) The inverse of \(A\) is</p>
+<p class="continuation">the determinant of \(A\) is \(ad-bc\text{.}\) The group \(GL_2({\mathbb R})\) consists of those matrices in which \(ad-bc \neq 0\text{.}\) The inverse of \(A\) is</p>
 <div class="displaymath">
 \begin{equation*}
 A^{-1} =
@@ -483,7 +483,7 @@ d &amp; -b \\
 \end{pmatrix}\text{.}
 \end{equation*}
 </div>
-<p data-braille="continuation">If \(A\) is in \(SL_2({\mathbb R})\text{,}\) then</p>
+<p class="continuation">If \(A\) is in \(SL_2({\mathbb R})\text{,}\) then</p>
 <div class="displaymath">
 \begin{equation*}
 A^{-1} =
@@ -493,7 +493,7 @@ d &amp; -b \\
 \end{pmatrix}\text{.}
 \end{equation*}
 </div>
-<p data-braille="continuation">Geometrically, \(SL_2({\mathbb R})\) is the group that preserves the areas of parallelograms. Let</p>
+<p class="continuation">Geometrically, \(SL_2({\mathbb R})\) is the group that preserves the areas of parallelograms. Let</p>
 <div class="displaymath">
 \begin{equation*}
 A =
@@ -503,7 +503,7 @@ A =
 \end{pmatrix}
 \end{equation*}
 </div>
-<p data-braille="continuation">be in \(SL_2({\mathbb R})\text{.}\) In <a class="xref" data-knowl="./knowl/figure-sl2.html" title="Figure 15.4">Figure 15.4</a>, the unit square corresponding to the vectors \({\mathbf x} = (1,0)^\transpose\) and \({\mathbf y} = (0,1)^\transpose\) is taken  by \(A\) to the parallelogram with sides \((1,0)^\transpose\) and \((1, 1)^\transpose\text{;}\) that is, \(A {\mathbf x} = (1,0)^\transpose\) and \(A {\mathbf y} = (1, 1)^\transpose\text{.}\) Notice that these two parallelograms have the same area.</p></article><figure class="figure figure-like" id="xkp"><div class="image-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><img src="images/matrix-sl2r.svg" role="img" style="width: 100%; height: auto;" alt="Two side-by figures. The figure on the left is a square on set of axes with the left edge a vector from the origin to (0,1) and bottom edge a vector from the origin to (1,0). The figure on the right is a parallelogram on set of axes with the left edge a vector from the origin to (1,1) and bottom edge a vector from the origin to (1,0)."></div>
+<p class="continuation">be in \(SL_2({\mathbb R})\text{.}\) In <a class="xref" data-knowl="./knowl/figure-sl2.html" title="Figure 15.4">Figure 15.4</a>, the unit square corresponding to the vectors \({\mathbf x} = (1,0)^\transpose\) and \({\mathbf y} = (0,1)^\transpose\) is taken  by \(A\) to the parallelogram with sides \((1,0)^\transpose\) and \((1, 1)^\transpose\text{;}\) that is, \(A {\mathbf x} = (1,0)^\transpose\) and \(A {\mathbf y} = (1, 1)^\transpose\text{.}\) Notice that these two parallelograms have the same area.</p></article><figure class="figure figure-like" id="xkp"><div class="image-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><img src="images/matrix-sl2r.svg" role="img" style="width: 100%; height: auto;" alt="Two side-by figures. The figure on the left is a square on set of axes with the left edge a vector from the origin to (0,1) and bottom edge a vector from the origin to (1,0). The figure on the right is a parallelogram on set of axes with the left edge a vector from the origin to (1,1) and bottom edge a vector from the origin to (1,0)."></div>
 <figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">15.4<span class="period">.</span></span><span class="space"> </span>\(SL_2(\mathbb R)\) acting on the unit square</figcaption></figure></section><section class="subsection" id="vnL"><h3 class="heading hide-type">
 <span class="type">Subsection</span> <span class="codenumber">15.1.3</span> <span class="title">The Orthogonal Group \(O(n)\)</span>
 </h3>
@@ -546,14 +546,14 @@ y_1 \\ y_2 \\ \vdots \\ y_n
 x_1 y_1 + \cdots + x_n y_n\text{.}
 \end{equation*}
 </div>
-<p data-braille="continuation">We define the length of a vector \({\mathbf x}=(x_1, \ldots,
+<p class="continuation">We define the length of a vector \({\mathbf x}=(x_1, \ldots,
 x_n)^\transpose\) to be </p>
 <div class="displaymath">
 \begin{equation*}
 \| {\mathbf x} \| = \sqrt{\langle  {\mathbf x}, {\mathbf x} \rangle}  = \sqrt{x_1^2 + \cdots + x_n^2}\text{.}
 \end{equation*}
 </div>
-<p data-braille="continuation">Associated with the notion of the length of a vector is the idea of the distance between two vectors. We define the <dfn class="terminology">distance</dfn> between two vectors \({\mathbf x}\) and \({\mathbf y}\) to be \(\| {\mathbf x}-{\mathbf y} \|\text{.}\) We leave as an exercise the proof of the following proposition about the properties of Euclidean inner products.</p>
+<p class="continuation">Associated with the notion of the length of a vector is the idea of the distance between two vectors. We define the <dfn class="terminology">distance</dfn> between two vectors \({\mathbf x}\) and \({\mathbf y}\) to be \(\| {\mathbf x}-{\mathbf y} \|\text{.}\) We leave as an exercise the proof of the following proposition about the properties of Euclidean inner products.</p>
 <article class="proposition theorem-like" id="xcY"><h6 class="heading">
 <span class="type">Proposition</span><span class="space"> </span><span class="codenumber">15.6</span><span class="period">.</span>
 </h6>
@@ -577,7 +577,7 @@ A=
 \end{pmatrix}
 \end{equation*}
 </div>
-<p data-braille="continuation">preserves the length of this vector. The vector \(A{\mathbf x} = (-7/5,24/5)^\transpose\) also has length 5.</p></article><p id="pFQ">Since \(\det(A A^\transpose) = \det(I) = 1\) and \(\det(A) = \det( A^\transpose )\text{,}\) the determinant of any orthogonal matrix is either \(1\) or \(-1\text{.}\) Consider the column vectors</p>
+<p class="continuation">preserves the length of this vector. The vector \(A{\mathbf x} = (-7/5,24/5)^\transpose\) also has length 5.</p></article><p id="pFQ">Since \(\det(A A^\transpose) = \det(I) = 1\) and \(\det(A) = \det( A^\transpose )\text{,}\) the determinant of any orthogonal matrix is either \(1\) or \(-1\text{.}\) Consider the column vectors</p>
 <div class="displaymath">
 \begin{equation*}
 {\mathbf a}_j =
@@ -586,7 +586,7 @@ a_{1j} \\ a_{2j} \\ \vdots \\ a_{nj}
 \end{pmatrix}
 \end{equation*}
 </div>
-<p data-braille="continuation">of the orthogonal matrix \(A= (a_{ij})\text{.}\) Since \(AA^\transpose = I\text{,}\) \(\langle {\mathbf a}_r, {\mathbf a}_s \rangle = \delta_{rs}\text{,}\) where</p>
+<p class="continuation">of the orthogonal matrix \(A= (a_{ij})\text{.}\) Since \(AA^\transpose = I\text{,}\) \(\langle {\mathbf a}_r, {\mathbf a}_s \rangle = \delta_{rs}\text{,}\) where</p>
 <div class="displaymath">
 \begin{equation*}
 \delta_{rs}
@@ -597,7 +597,7 @@ a_{1j} \\ a_{2j} \\ \vdots \\ a_{nj}
 \end{cases}
 \end{equation*}
 </div>
-<p data-braille="continuation">is the Kronecker delta.  Accordingly, column vectors of an orthogonal matrix all have length 1; and the Euclidean inner product of distinct column vectors is zero. Any set of vectors satisfying these properties is called an <dfn class="terminology">orthonormal set</dfn>.  Conversely, given an \(n \times n\) matrix \(A\) whose columns form an orthonormal set, it follows that \(A^{-1} = A^\transpose\text{.}\)</p>
+<p class="continuation">is the Kronecker delta.  Accordingly, column vectors of an orthogonal matrix all have length 1; and the Euclidean inner product of distinct column vectors is zero. Any set of vectors satisfying these properties is called an <dfn class="terminology">orthonormal set</dfn>.  Conversely, given an \(n \times n\) matrix \(A\) whose columns form an orthonormal set, it follows that \(A^{-1} = A^\transpose\text{.}\)</p>
 <p id="VMZ">We say that a matrix \(A\) is <dfn class="terminology">distance-preserving</dfn>,  <dfn class="terminology">length-preserving</dfn>,  or <dfn class="terminology">inner product-preserving</dfn> when \(\| A{\mathbf x}- A{\mathbf y} \| =\| {\mathbf x}- {\mathbf y} \|\text{,}\) \(\| A{\mathbf x} \| =\| {\mathbf x} \|\text{,}\) or \(\langle A{\mathbf x}, A{\mathbf y} \rangle = \langle {\mathbf x},{\mathbf y} \rangle\text{,}\) respectively. The following theorem, which characterizes the orthogonal group, says that these notions are the same.</p>
 <article class="theorem theorem-like" id="QVP"><h6 class="heading">
 <span class="type">Theorem</span><span class="space"> </span><span class="codenumber">15.8</span><span class="period">.</span>
@@ -628,7 +628,7 @@ a_{1j} \\ a_{2j} \\ \vdots \\ a_{nj}
 &amp; = \langle {\mathbf x}, A^\transpose A{\mathbf x} \rangle\text{,}
 \end{align*}
 </div>
-<p data-braille="continuation">we know that \(\langle {\mathbf x}, (A^\transpose A - I){\mathbf x} \rangle = 0\) for all \({\mathbf x}\text{.}\) Therefore, \(A^\transpose A -I = 0\) or \(A^{-1} = A^\transpose\text{.}\)</p>
+<p class="continuation">we know that \(\langle {\mathbf x}, (A^\transpose A - I){\mathbf x} \rangle = 0\) for all \({\mathbf x}\text{.}\) Therefore, \(A^\transpose A -I = 0\) or \(A^{-1} = A^\transpose\text{.}\)</p>
 <p id="xFO">\((3) \Rightarrow (4)\text{.}\) If \(A\) is inner product-preserving, then \(A\) is distance-preserving, since</p>
 <div class="displaymath">
 \begin{align*}
@@ -650,7 +650,7 @@ a_{1j} \\ a_{2j} \\ \vdots \\ a_{nj}
 \langle {\mathbf x}, {\mathbf y} \rangle = \frac{1}{2} \left[ \|{\mathbf x} +{\mathbf y}\|^2 - \|{\mathbf x}\|^2 - \|{\mathbf y}\|^2 \right]\text{.}
 \end{equation*}
 </div>
-<p data-braille="continuation">Observe that</p>
+<p class="continuation">Observe that</p>
 <div class="displaymath">
 \begin{align*}
 \langle A {\mathbf x}, A {\mathbf y} \rangle &amp; = \frac{1}{2} \left[ \|A {\mathbf x} + A {\mathbf y} \|^2 - \|A {\mathbf x} \|^2 -  \|A {\mathbf y} \|^2 \right]\\
@@ -678,7 +678,7 @@ b &amp; a
 \end{pmatrix},
 \end{equation*}
 </div>
-<p data-braille="continuation">where \(0 \leq \theta \lt 2 \pi\text{.}\) The matrix \(A\) rotates a vector in \(\mathbb R^2\) counterclockwise about the origin by an angle of \(\theta\) (<a class="xref" data-knowl="./knowl/figure-o2.html" title="Figure 15.9">Figure 15.9</a>).</p>
+<p class="continuation">where \(0 \leq \theta \lt 2 \pi\text{.}\) The matrix \(A\) rotates a vector in \(\mathbb R^2\) counterclockwise about the origin by an angle of \(\theta\) (<a class="xref" data-knowl="./knowl/figure-o2.html" title="Figure 15.9">Figure 15.9</a>).</p>
 <p id="IPo">If we choose \(A{\mathbf e}_2 = (b, -a)^\transpose\text{,}\) then we obtain the matrix</p>
 <div class="displaymath">
 \begin{equation*}
@@ -695,7 +695,7 @@ b &amp; -a
 \end{pmatrix}.
 \end{equation*}
 </div>
-<p data-braille="continuation">Here, \(\det B = -1\) and</p>
+<p class="continuation">Here, \(\det B = -1\) and</p>
 <div class="displaymath">
 \begin{equation*}
 B^2
@@ -706,7 +706,7 @@ B^2
 \end{pmatrix}.
 \end{equation*}
 </div>
-<p data-braille="continuation">A reflection about the horizontal axis is given by the matrix</p>
+<p class="continuation">A reflection about the horizontal axis is given by the matrix</p>
 <div class="displaymath">
 \begin{equation*}
 C
@@ -717,13 +717,13 @@ C
 \end{pmatrix},
 \end{equation*}
 </div>
-<p data-braille="continuation">and \(B = AC\) (see <a class="xref" data-knowl="./knowl/figure-o2.html" title="Figure 15.9">Figure 15.9</a>). Thus, a reflection about a line \(\ell\) is simply a reflection about the horizontal axis followed by a rotation.</p></article><p id="BUi">Two of the other matrix or matrix-related groups that we will consider are the special orthogonal group  and the group of Euclidean motions. The <dfn class="terminology">special orthogonal group</dfn>,  \(SO(n)\text{,}\) is just the intersection of \(O(n)\) and \(SL_n({\mathbb R})\text{;}\) that is, those elements in \(O(n)\) with determinant one.  The <dfn class="terminology">Euclidean group</dfn>,  \(E(n)\text{,}\) can be written as ordered pairs \((A, {\mathbf x})\text{,}\) where \(A\) is in \(O(n)\) and \({\mathbf x}\) is in \({\mathbb R}^n\text{.}\) We define multiplication by </p>
+<p class="continuation">and \(B = AC\) (see <a class="xref" data-knowl="./knowl/figure-o2.html" title="Figure 15.9">Figure 15.9</a>). Thus, a reflection about a line \(\ell\) is simply a reflection about the horizontal axis followed by a rotation.</p></article><p id="BUi">Two of the other matrix or matrix-related groups that we will consider are the special orthogonal group  and the group of Euclidean motions. The <dfn class="terminology">special orthogonal group</dfn>,  \(SO(n)\text{,}\) is just the intersection of \(O(n)\) and \(SL_n({\mathbb R})\text{;}\) that is, those elements in \(O(n)\) with determinant one.  The <dfn class="terminology">Euclidean group</dfn>,  \(E(n)\text{,}\) can be written as ordered pairs \((A, {\mathbf x})\text{,}\) where \(A\) is in \(O(n)\) and \({\mathbf x}\) is in \({\mathbb R}^n\text{.}\) We define multiplication by </p>
 <div class="displaymath">
 \begin{equation*}
 (A, {\mathbf x}) (B, {\mathbf y}) = (AB, A {\mathbf y} +{\mathbf x})\text{.}
 \end{equation*}
 </div>
-<p data-braille="continuation">The identity of the group is \((I,{\mathbf 0})\text{;}\) the inverse of \((A, {\mathbf x})\) is \((A^{-1}, -A^{-1} {\mathbf x})\text{.}\) In <a class="xref" data-knowl="./knowl/matrix-exercise-en-group.html" title="Exercise 15.4.6">Exercise 15.4.6</a>, you are asked to check that \(E(n)\) is indeed a group under this operation.</p>
+<p class="continuation">The identity of the group is \((I,{\mathbf 0})\text{;}\) the inverse of \((A, {\mathbf x})\) is \((A^{-1}, -A^{-1} {\mathbf x})\text{.}\) In <a class="xref" data-knowl="./knowl/matrix-exercise-en-group.html" title="Exercise 15.4.6">Exercise 15.4.6</a>, you are asked to check that \(E(n)\) is indeed a group under this operation.</p>
 <figure class="figure figure-like" id="OiA"><div class="image-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><img src="images/matrix-r2-translations.svg" role="img" style="width: 100%; height: auto;" alt="Two side-by figures. The figure on the left is a set of axes with an arrow pointing up and right from the origin to a point x. The figure on the right is a set of axes with an arrow of the same length and same direction from a point to the right and above the origin to a point x + y."></div>
 <figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">15.11<span class="period">.</span></span><span class="space"> </span>Translations in \(\mathbb R^2\)</figcaption></figure></section></section></div></main>
 </div>

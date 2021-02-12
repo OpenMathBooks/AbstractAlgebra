@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2021-02-08T11:02:25-07:00       *-->
+<!--*       on 2021-02-12T14:42:09-07:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -59,7 +59,7 @@ MathJax.Hub.Config({
 <!-- 2019-10-12: Temporary - CSS file for experiments with styling --><link xmlns:svg="http://www.w3.org/2000/svg" href="developer.css" rel="stylesheet" type="text/css">
 </head>
 <body id="judson-AATA" class="mathbook-book has-toc has-sidebar-left">
-<a class="assistive" href="#content">Skip to main content</a><div xmlns:svg="http://www.w3.org/2000/svg" class="hidden-content" style="display:none">\(\newcommand{\identity}{\mathrm{id}}
+<a class="assistive" href="#content">Skip to main content</a><div xmlns:svg="http://www.w3.org/2000/svg" id="latex-macros" class="hidden-content" style="display:none">\(\newcommand{\identity}{\mathrm{id}}
 \newcommand{\notdivide}{\nmid}
 \newcommand{\notsubset}{\not\subset}
 \newcommand{\lcm}{\operatorname{lcm}}
@@ -321,68 +321,68 @@ r(x) \in F[x]\) such that</p>
 f(x) = g(x) q(x) + r(x)\text{,}
 \end{equation*}
 </div>
-<p data-braille="continuation">where either  \(\deg r(x) \lt \deg g(x)\) or \(r(x)\) is the zero polynomial.</p></article><article class="proof" id="akX"><h6 class="heading"><span class="type">Proof<span class="period">.</span></span></h6>
+<p class="continuation">where either  \(\deg r(x) \lt \deg g(x)\) or \(r(x)\) is the zero polynomial.</p></article><article class="proof" id="akX"><h6 class="heading"><span class="type">Proof<span class="period">.</span></span></h6>
 <p id="tfM">We will first consider the existence of \(q(x)\) and \(r(x)\text{.}\) If \(f(x)\) is the zero polynomial, then</p>
 <div class="displaymath">
 \begin{equation*}
 0 = 0 \cdot g(x) + 0;
 \end{equation*}
 </div>
-<p data-braille="continuation">hence, both \(q\) and \(r\) must also be the zero polynomial. Now suppose that \(f(x)\) is not the zero polynomial and that \(\deg f(x) = n\) and \(\deg g(x) = m\text{.}\) If \(m \gt n\text{,}\) then we can let \(q(x) = 0\) and \(r(x) = f(x)\text{.}\) Hence, we may assume that \(m  \leq n\) and proceed by induction on \(n\text{.}\) If</p>
+<p class="continuation">hence, both \(q\) and \(r\) must also be the zero polynomial. Now suppose that \(f(x)\) is not the zero polynomial and that \(\deg f(x) = n\) and \(\deg g(x) = m\text{.}\) If \(m \gt n\text{,}\) then we can let \(q(x) = 0\) and \(r(x) = f(x)\text{.}\) Hence, we may assume that \(m  \leq n\) and proceed by induction on \(n\text{.}\) If</p>
 <div class="displaymath">
 \begin{align*}
 f(x) &amp; = a_n x^n + a_{n-1} x^{n - 1} + \cdots + a_1 x + a_0\\
 g(x) &amp; = b_m x^m + b_{m-1} x^{m - 1} + \cdots + b_1 x + b_0
 \end{align*}
 </div>
-<p data-braille="continuation">the polynomial</p>
+<p class="continuation">the polynomial</p>
 <div class="displaymath">
 \begin{equation*}
 f'(x) = f(x) - \frac{a_n}{b_m} x^{n - m} g(x)
 \end{equation*}
 </div>
-<p data-braille="continuation">has degree less than \(n\) or is the zero polynomial. By induction, there exist polynomials \(q'(x)\) and \(r(x)\) such that</p>
+<p class="continuation">has degree less than \(n\) or is the zero polynomial. By induction, there exist polynomials \(q'(x)\) and \(r(x)\) such that</p>
 <div class="displaymath">
 \begin{equation*}
 f'(x) = q'(x) g(x) + r(x)\text{,}
 \end{equation*}
 </div>
-<p data-braille="continuation">where \(r(x) = 0\) or the degree of \(r(x)\) is less than the degree of \(g(x)\text{.}\) Now let</p>
+<p class="continuation">where \(r(x) = 0\) or the degree of \(r(x)\) is less than the degree of \(g(x)\text{.}\) Now let</p>
 <div class="displaymath">
 \begin{equation*}
 q(x) = q'(x) + \frac{a_n}{b_m} x^{n - m}\text{.}
 \end{equation*}
 </div>
-<p data-braille="continuation">Then</p>
+<p class="continuation">Then</p>
 <div class="displaymath">
 \begin{equation*}
 f(x) = g(x) q(x) + r(x)\text{,}
 \end{equation*}
 </div>
-<p data-braille="continuation">with \(r(x)\) the zero polynomial or \(\deg r(x) \lt \deg g(x)\text{.}\)</p>
+<p class="continuation">with \(r(x)\) the zero polynomial or \(\deg r(x) \lt \deg g(x)\text{.}\)</p>
 <p id="ZmV">To show that  \(q(x)\) and \(r(x)\) are unique, suppose that there exist two other polynomials \(q_1(x)\) and \(r_1(x)\) such that \(f(x) = g(x) q_1(x) + r_1(x)\) with \(\deg r_1(x) \lt \deg g(x)\) or \(r_1(x) = 0\text{,}\) so that</p>
 <div class="displaymath">
 \begin{equation*}
 f(x) = g(x) q(x) + r(x) = g(x) q_1(x) + r_1(x)\text{,}
 \end{equation*}
 </div>
-<p data-braille="continuation">and</p>
+<p class="continuation">and</p>
 <div class="displaymath">
 \begin{equation*}
 g(x) [q(x) - q_1(x) ] = r_1(x) - r(x)\text{.}
 \end{equation*}
 </div>
-<p data-braille="continuation">If \(q(x) - q_1(x)\) is not the zero polynomial, then</p>
+<p class="continuation">If \(q(x) - q_1(x)\) is not the zero polynomial, then</p>
 <div class="displaymath">
 \begin{equation*}
 \deg( g(x) [q(x) - q_1(x) ] )= \deg( r_1(x) - r(x) ) \geq \deg g(x)\text{.}
 \end{equation*}
 </div>
-<p data-braille="continuation">However, the degrees of both \(r(x)\) and \(r_1(x)\) are strictly less than the degree of \(g(x)\text{;}\) therefore, \(r(x) = r_1(x)\) and \(q(x) = q_1(x)\text{.}\)</p></article><article class="example example-like" id="kKc"><h6 class="heading">
+<p class="continuation">However, the degrees of both \(r(x)\) and \(r_1(x)\) are strictly less than the degree of \(g(x)\text{;}\) therefore, \(r(x) = r_1(x)\) and \(q(x) = q_1(x)\text{.}\)</p></article><article class="example example-like" id="kKc"><h6 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">6.14</span><span class="period">.</span>
 </h6>
 <p id="tPG">The division algorithm merely formalizes long division of polynomials, a task we have been familiar with since high school. For example, suppose that we divide \(x^3 - x^2 + 2 x - 3\) by \(x - 2\text{.}\)</p>
-<div class="sidebyside"><div class="sbsrow" style="margin-left:30%;margin-right:30%;"><div class="sbspanel fixed-width" style="width:100%;justify-content:flex-start;"><table class="tabular">
+<div class="sidebyside"><div class="sbsrow" style="margin-left:30%;margin-right:30%;"><div class="sbspanel fixed-width" style="width:100%;justify-content:flex-start;"><table class="tabular" id="rxQ">
 <tr>
 <td class="r m b0 r0 l0 t0 lines"></td>
 <td class="r m b0 r0 l0 t0 lines"></td>
@@ -393,7 +393,7 @@ g(x) [q(x) - q_1(x) ] = r_1(x) - r(x)\text{.}
 <td class="r m b2 r0 l0 t0 lines">\(+\)</td>
 <td class="r m b2 r0 l0 t0 lines">\(4\)</td>
 <td class="r m b2 r0 l0 t0 lines"></td>
-<td class="r m b2 r0 l0 t0 lines" data-braille="last-cell"></td>
+<td class="r m b2 r0 l0 t0 lines"></td>
 </tr>
 <tr>
 <td class="r m b0 r0 l0 t0 lines">\(x\)</td>
@@ -405,7 +405,7 @@ g(x) [q(x) - q_1(x) ] = r_1(x) - r(x)\text{.}
 <td class="r m b0 r0 l0 t0 lines">\(+\)</td>
 <td class="r m b0 r0 l0 t0 lines">\(2x\)</td>
 <td class="r m b0 r0 l0 t0 lines">\(-\)</td>
-<td class="r m b0 r0 l0 t0 lines" data-braille="last-cell">\(3\)</td>
+<td class="r m b0 r0 l0 t0 lines">\(3\)</td>
 </tr>
 <tr>
 <td class="r m b0 r0 l0 t0 lines"></td>
@@ -417,7 +417,7 @@ g(x) [q(x) - q_1(x) ] = r_1(x) - r(x)\text{.}
 <td class="r m b1 r0 l0 t0 lines"></td>
 <td class="r m b1 r0 l0 t0 lines"></td>
 <td class="r m b1 r0 l0 t0 lines"></td>
-<td class="r m b1 r0 l0 t0 lines" data-braille="last-cell"></td>
+<td class="r m b1 r0 l0 t0 lines"></td>
 </tr>
 <tr>
 <td class="r m b0 r0 l0 t0 lines"></td>
@@ -429,7 +429,7 @@ g(x) [q(x) - q_1(x) ] = r_1(x) - r(x)\text{.}
 <td class="r m b0 r0 l0 t0 lines">\(+\)</td>
 <td class="r m b0 r0 l0 t0 lines">\(2x\)</td>
 <td class="r m b0 r0 l0 t0 lines">\(-\)</td>
-<td class="r m b0 r0 l0 t0 lines" data-braille="last-cell">\(3\)</td>
+<td class="r m b0 r0 l0 t0 lines">\(3\)</td>
 </tr>
 <tr>
 <td class="r m b0 r0 l0 t0 lines"></td>
@@ -441,7 +441,7 @@ g(x) [q(x) - q_1(x) ] = r_1(x) - r(x)\text{.}
 <td class="r m b1 r0 l0 t0 lines">\(-\)</td>
 <td class="r m b1 r0 l0 t0 lines">\(2x\)</td>
 <td class="r m b1 r0 l0 t0 lines"></td>
-<td class="r m b1 r0 l0 t0 lines" data-braille="last-cell"></td>
+<td class="r m b1 r0 l0 t0 lines"></td>
 </tr>
 <tr>
 <td class="r m b0 r0 l0 t0 lines"></td>
@@ -453,7 +453,7 @@ g(x) [q(x) - q_1(x) ] = r_1(x) - r(x)\text{.}
 <td class="r m b0 r0 l0 t0 lines"></td>
 <td class="r m b0 r0 l0 t0 lines">\(4x\)</td>
 <td class="r m b0 r0 l0 t0 lines">\(-\)</td>
-<td class="r m b0 r0 l0 t0 lines" data-braille="last-cell">\(3\)</td>
+<td class="r m b0 r0 l0 t0 lines">\(3\)</td>
 </tr>
 <tr>
 <td class="r m b0 r0 l0 t0 lines"></td>
@@ -465,7 +465,7 @@ g(x) [q(x) - q_1(x) ] = r_1(x) - r(x)\text{.}
 <td class="r m b0 r0 l0 t0 lines"></td>
 <td class="r m b1 r0 l0 t0 lines">\(4x\)</td>
 <td class="r m b1 r0 l0 t0 lines">\(-\)</td>
-<td class="r m b1 r0 l0 t0 lines" data-braille="last-cell">\(8\)</td>
+<td class="r m b1 r0 l0 t0 lines">\(8\)</td>
 </tr>
 <tr>
 <td class="r m b0 r0 l0 t0 lines"></td>
@@ -477,7 +477,7 @@ g(x) [q(x) - q_1(x) ] = r_1(x) - r(x)\text{.}
 <td class="r m b0 r0 l0 t0 lines"></td>
 <td class="r m b0 r0 l0 t0 lines"></td>
 <td class="r m b0 r0 l0 t0 lines"></td>
-<td class="r m b0 r0 l0 t0 lines" data-braille="last-cell">\(5\)</td>
+<td class="r m b0 r0 l0 t0 lines">\(5\)</td>
 </tr>
 </table></div></div></div>
 <p id="ZWP">Hence, \(x^3 - x^2 + 2 x - 3 = (x - 2) (x^2 + x + 4 ) + 5\text{.}\)</p></article><p id="SGL">Let \(p(x)\) be a polynomial in \(F[x]\) and \(\alpha \in F\text{.}\) We say that \(\alpha\) is a <dfn class="terminology">zero</dfn> or <dfn class="terminology">root</dfn> of \(p(x)\) if \(p(x)\) is in the kernel of the evaluation homomorphism \(\phi_{\alpha}\text{.}\) All we are really saying here is that \(\alpha\) is a zero of \(p(x)\) if \(p(\alpha) = 0\text{.}\)</p>
@@ -491,19 +491,19 @@ g(x) [q(x) - q_1(x) ] = r_1(x) - r(x)\text{.}
 p(x) = (x -\alpha) q(x) + r(x)
 \end{equation*}
 </div>
-<p data-braille="continuation">and the degree of \(r(x)\) must be less than the degree of \(x -\alpha\text{.}\) Since the degree of \(r(x)\) is less than 1, \(r(x) = a\) for \(a \in F\text{;}\) therefore,</p>
+<p class="continuation">and the degree of \(r(x)\) must be less than the degree of \(x -\alpha\text{.}\) Since the degree of \(r(x)\) is less than 1, \(r(x) = a\) for \(a \in F\text{;}\) therefore,</p>
 <div class="displaymath">
 \begin{equation*}
 p(x) = (x -\alpha) q(x) + a\text{.}
 \end{equation*}
 </div>
-<p data-braille="continuation">But</p>
+<p class="continuation">But</p>
 <div class="displaymath">
 \begin{equation*}
 0 = p(\alpha) = 0 \cdot q(\alpha) + a = a;
 \end{equation*}
 </div>
-<p data-braille="continuation">consequently, \(p(x) = (x - \alpha) q(x)\text{,}\) and \(x - \alpha\) is a factor of \(p(x)\text{.}\)</p>
+<p class="continuation">consequently, \(p(x) = (x - \alpha) q(x)\text{,}\) and \(x - \alpha\) is a factor of \(p(x)\text{.}\)</p>
 <p id="lBn">Conversely, suppose that \(x - \alpha\) is a factor of \(p(x)\text{;}\) say \(p(x) = (x - \alpha) q(x)\text{.}\) Then \(p( \alpha ) = 0 \cdot q(\alpha) = 0\text{.}\)</p></article><article class="corollary theorem-like" id="gaj"><h6 class="heading">
 <span class="type">Corollary</span><span class="space"> </span><span class="codenumber">6.16</span><span class="period">.</span>
 </h6>
@@ -520,14 +520,14 @@ q(x) \in F[x]\) if \(d(x)\) evenly divides both \(p(x)\) and \(q(x)\text{;}\) an
 d(x) = r(x) p(x) + s(x) q(x)\text{.}
 \end{equation*}
 </div>
-<p data-braille="continuation">Furthermore, the greatest common divisor of two polynomials is unique.</p></article><article class="proof" id="LbZ"><h6 class="heading"><span class="type">Proof<span class="period">.</span></span></h6>
+<p class="continuation">Furthermore, the greatest common divisor of two polynomials is unique.</p></article><article class="proof" id="LbZ"><h6 class="heading"><span class="type">Proof<span class="period">.</span></span></h6>
 <p id="dWO">Let \(d(x)\) be the monic polynomial of smallest degree in the set</p>
 <div class="displaymath">
 \begin{equation*}
 S = \{ f(x) p(x) + g(x) q(x) : f(x), g(x) \in F[x]  \}\text{.}
 \end{equation*}
 </div>
-<p data-braille="continuation">We can write \(d(x) = r(x) p(x) + s(x) q(x)\) for two polynomials  \(r(x)\) and \(s(x)\) in \(F[x]\text{.}\) We need to show that \(d(x)\) divides both \(p(x)\) and \(q(x)\text{.}\) We shall first show that \(d(x)\) divides \(p(x)\text{.}\) By the division algorithm, there exist polynomials \(a(x)\) and \(b(x)\) such that \(p(x) = a(x) d(x) + b(x)\text{,}\) where \(b(x)\) is either the zero polynomial or \(\deg b(x) \lt \deg d(x)\text{.}\) Therefore,</p>
+<p class="continuation">We can write \(d(x) = r(x) p(x) + s(x) q(x)\) for two polynomials  \(r(x)\) and \(s(x)\) in \(F[x]\text{.}\) We need to show that \(d(x)\) divides both \(p(x)\) and \(q(x)\text{.}\) We shall first show that \(d(x)\) divides \(p(x)\text{.}\) By the division algorithm, there exist polynomials \(a(x)\) and \(b(x)\) such that \(p(x) = a(x) d(x) + b(x)\text{,}\) where \(b(x)\) is either the zero polynomial or \(\deg b(x) \lt \deg d(x)\text{.}\) Therefore,</p>
 <div class="displaymath">
 \begin{align*}
 b(x) &amp; = p(x) - a(x) d(x)\\
@@ -536,7 +536,7 @@ b(x) &amp; = p(x) - a(x) d(x)\\
 &amp; = p(x)( 1  - a(x) r(x) ) + q(x) ( - a(x) s(x) )
 \end{align*}
 </div>
-<p data-braille="continuation">is a linear combination of \(p(x)\) and \(q(x)\) and therefore must be in \(S\text{.}\) However, \(b(x)\) must be the zero polynomial since \(d(x)\) was chosen to be of smallest degree; consequently, \(d(x)\) divides \(p(x)\text{.}\) A symmetric argument shows that \(d(x)\) must also divide \(q(x)\text{;}\) hence, \(d(x)\) is a common divisor of \(p(x)\) and \(q(x)\text{.}\)</p>
+<p class="continuation">is a linear combination of \(p(x)\) and \(q(x)\) and therefore must be in \(S\text{.}\) However, \(b(x)\) must be the zero polynomial since \(d(x)\) was chosen to be of smallest degree; consequently, \(d(x)\) divides \(p(x)\text{.}\) A symmetric argument shows that \(d(x)\) must also divide \(q(x)\text{;}\) hence, \(d(x)\) is a common divisor of \(p(x)\) and \(q(x)\text{.}\)</p>
 <p id="KdX">To show that \(d(x)\) is a greatest common divisor of \(p(x)\) and \(q(x)\text{,}\) suppose that \(d'(x)\) is another common divisor of \(p(x)\) and \(q(x)\text{.}\) We will show that \(d'(x) \mid d(x)\text{.}\) Since \(d'(x)\) is a common divisor of \(p(x)\) and \(q(x)\text{,}\) there exist polynomials \(u(x)\) and \(v(x)\) such that \(p(x) = u(x) d'(x)\) and \(q(x) = v(x) d'(x)\text{.}\) Therefore,</p>
 <div class="displaymath">
 \begin{align*}
@@ -545,14 +545,14 @@ d(x) &amp; = r(x) p(x) + s(x) q(x)\\
 &amp; = d'(x) [r(x) u(x) + s(x) v(x)]\text{.}
 \end{align*}
 </div>
-<p data-braille="continuation">Since \(d'(x) \mid d(x)\text{,}\) \(d(x)\) is a greatest common divisor of \(p(x)\) and \(q(x)\text{.}\)</p>
+<p class="continuation">Since \(d'(x) \mid d(x)\text{,}\) \(d(x)\) is a greatest common divisor of \(p(x)\) and \(q(x)\text{.}\)</p>
 <p id="qlg">Finally, we must show that the greatest common divisor of \(p(x)\) and \(q(x)\) is unique. Suppose that \(d'(x)\) is another greatest common divisor of \(p(x)\) and \(q(x)\text{.}\) We have just shown that there exist polynomials \(u(x)\) and \(v(x)\) in \(F[x]\) such that \(d(x) = d'(x)[r(x) u(x) + s(x) v(x)]\text{.}\) Since</p>
 <div class="displaymath">
 \begin{equation*}
 \deg d(x) =  \deg d'(x) + \deg[r(x) u(x) + s(x) v(x)]
 \end{equation*}
 </div>
-<p data-braille="continuation">and \(d(x)\) and \(d'(x)\) are both greatest common divisors, \(\deg d(x) = \deg d'(x)\text{.}\) Since \(d(x)\) and \(d'(x)\) are both monic polynomials of the same degree, it must be the case that \(d(x) = d'(x)\text{.}\)</p></article><p id="eVd">Notice the similarity between the proof of <a class="xref" data-knowl="./knowl/proposition-poly-gcd.html" title="Proposition 6.17">Proposition 6.17</a> and the proof of <a class="xref" data-knowl="./knowl/theorem-integers-gcd.html" title="Theorem 6.2">Theorem 6.2</a>.</p>
+<p class="continuation">and \(d(x)\) and \(d'(x)\) are both greatest common divisors, \(\deg d(x) = \deg d'(x)\text{.}\) Since \(d(x)\) and \(d'(x)\) are both monic polynomials of the same degree, it must be the case that \(d(x) = d'(x)\text{.}\)</p></article><p id="eVd">Notice the similarity between the proof of <a class="xref" data-knowl="./knowl/proposition-poly-gcd.html" title="Proposition 6.17">Proposition 6.17</a> and the proof of <a class="xref" data-knowl="./knowl/theorem-integers-gcd.html" title="Theorem 6.2">Theorem 6.2</a>.</p>
 <section class="reading-questions" id="Afw"><h3 class="heading hide-type">
 <span class="type">Reading Questions</span> <span class="codenumber"></span> <span class="title">Reading Questions</span>
 </h3>

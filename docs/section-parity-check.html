@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2021-02-08T11:04:36-07:00       *-->
+<!--*       on 2021-02-12T14:43:27-07:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -59,7 +59,7 @@ MathJax.Hub.Config({
 <!-- 2019-10-12: Temporary - CSS file for experiments with styling --><link xmlns:svg="http://www.w3.org/2000/svg" href="developer.css" rel="stylesheet" type="text/css">
 </head>
 <body id="judson-AATA" class="mathbook-book has-toc has-sidebar-left">
-<a class="assistive" href="#content">Skip to main content</a><div xmlns:svg="http://www.w3.org/2000/svg" class="hidden-content" style="display:none">\(\newcommand{\identity}{\mathrm{id}}
+<a class="assistive" href="#content">Skip to main content</a><div xmlns:svg="http://www.w3.org/2000/svg" id="latex-macros" class="hidden-content" style="display:none">\(\newcommand{\identity}{\mathrm{id}}
 \newcommand{\notdivide}{\nmid}
 \newcommand{\notsubset}{\not\subset}
 \newcommand{\lcm}{\operatorname{lcm}}
@@ -322,7 +322,7 @@ a_{m1} &amp; a_{m2} &amp; \cdots &amp; a_{m,n-m}
 \end{pmatrix}
 \end{equation*}
 </div>
-<p data-braille="continuation">and \(I_m\) is the \(m \times m\) identity matrix</p>
+<p class="continuation">and \(I_m\) is the \(m \times m\) identity matrix</p>
 <div class="displaymath">
 \begin{equation*}
 \begin{pmatrix}
@@ -333,13 +333,13 @@ a_{m1} &amp; a_{m2} &amp; \cdots &amp; a_{m,n-m}
 \end{pmatrix}\text{.}
 \end{equation*}
 </div>
-<p data-braille="continuation">With each canonical parity-check matrix we can associate an \(n \times (n-m)\) <dfn class="terminology">standard generator matrix</dfn> </p>
+<p class="continuation">With each canonical parity-check matrix we can associate an \(n \times (n-m)\) <dfn class="terminology">standard generator matrix</dfn> </p>
 <div class="displaymath">
 \begin{equation*}
 G = \left( \frac{I_{n-m}}{A} \right)\text{.}
 \end{equation*}
 </div>
-<p data-braille="continuation">Our goal will be to show that an \(\mathbf x\) satisfying \(G {\mathbf x} = {\mathbf y}\) exists if and only if \(H{\mathbf y} = {\mathbf 0}\text{.}\) Given a message block \({\mathbf x}\) to be encoded, the matrix \(G\) will allow us to quickly encode it into a linear codeword \({\mathbf y}\text{.}\)</p>
+<p class="continuation">Our goal will be to show that an \(\mathbf x\) satisfying \(G {\mathbf x} = {\mathbf y}\) exists if and only if \(H{\mathbf y} = {\mathbf 0}\text{.}\) Given a message block \({\mathbf x}\) to be encoded, the matrix \(G\) will allow us to quickly encode it into a linear codeword \({\mathbf y}\text{.}\)</p>
 <article class="example example-like" id="GVj"><h6 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">16.23</span><span class="period">.</span>
 </h6>
@@ -349,7 +349,7 @@ G = \left( \frac{I_{n-m}}{A} \right)\text{.}
 (000), (001), (010), \ldots, (111)\text{.}
 \end{equation*}
 </div>
-<p data-braille="continuation">For</p>
+<p class="continuation">For</p>
 <div class="displaymath">
 \begin{equation*}
 A =
@@ -360,7 +360,7 @@ A =
 \end{pmatrix}\text{,}
 \end{equation*}
 </div>
-<p data-braille="continuation">the associated standard generator and canonical parity-check matrices are</p>
+<p class="continuation">the associated standard generator and canonical parity-check matrices are</p>
 <div class="displaymath">
 \begin{equation*}
 G=
@@ -374,7 +374,7 @@ G=
 \end{pmatrix}
 \end{equation*}
 </div>
-<p data-braille="continuation">and</p>
+<p class="continuation">and</p>
 <div class="displaymath">
 \begin{equation*}
 H =
@@ -385,7 +385,7 @@ H =
 \end{pmatrix}\text{,}
 \end{equation*}
 </div>
-<p data-braille="continuation">respectively.</p>
+<p class="continuation">respectively.</p>
 <p id="zMw">Observe that the rows in \(H\)  represent the parity checks on certain bit positions in a \(6\)-tuple. The \(1\)s in the identity matrix serve as parity checks for the \(1\)s in the same row. If \({\mathbf x} = (x_1, x_2, x_3, x_4, x_5, x_6)\text{,}\) then</p>
 <div class="displaymath">
 \begin{equation*}
@@ -400,7 +400,7 @@ x_1 + x_3 + x_6
 \end{pmatrix}\text{,}
 \end{equation*}
 </div>
-<p data-braille="continuation">which yields a system of equations:</p>
+<p class="continuation">which yields a system of equations:</p>
 <div class="displaymath">
 \begin{align*}
 x_2 + x_3 + x_4 &amp; = 0\\
@@ -408,7 +408,7 @@ x_1 + x_2 + x_5 &amp; = 0\\
 x_1 + x_3 + x_6 &amp; = 0\text{.}
 \end{align*}
 </div>
-<p data-braille="continuation">Here \(x_4\) serves as a check bit for \(x_2\) and \(x_3\text{;}\) \(x_5\) is a check bit for \(x_1\) and \(x_2\text{;}\) and \(x_6\) is a check bit for \(x_1\) and \(x_3\text{.}\) The identity matrix keeps \(x_4\text{,}\) \(x_5\text{,}\) and \(x_6\) from having to check on each other. Hence, \(x_1\text{,}\) \(x_2\text{,}\) and \(x_3\) can be arbitrary but \(x_4\text{,}\) \(x_5\text{,}\) and \(x_6\) must be chosen to ensure parity. The null space of \(H\) is easily computed to be</p>
+<p class="continuation">Here \(x_4\) serves as a check bit for \(x_2\) and \(x_3\text{;}\) \(x_5\) is a check bit for \(x_1\) and \(x_2\text{;}\) and \(x_6\) is a check bit for \(x_1\) and \(x_3\text{.}\) The identity matrix keeps \(x_4\text{,}\) \(x_5\text{,}\) and \(x_6\) from having to check on each other. Hence, \(x_1\text{,}\) \(x_2\text{,}\) and \(x_3\) can be arbitrary but \(x_4\text{,}\) \(x_5\text{,}\) and \(x_6\) must be chosen to ensure parity. The null space of \(H\) is easily computed to be</p>
 <div class="displaymath">
 \begin{equation*}
 \begin{array}{cccc}
@@ -417,42 +417,42 @@ x_1 + x_3 + x_6 &amp; = 0\text{.}
 \end{array}
 \end{equation*}
 </div>
-<p data-braille="continuation">An even easier way to compute the null space is with the generator matrix \(G\) (<a class="xref" data-knowl="./knowl/table-matrix-gen-code.html" title="Table 16.24: A matrix-generated code">Table 16.24</a>).</p></article><figure class="table table-like" id="RXr"><figcaption><span class="type">Table</span><span class="space"> </span><span class="codenumber">16.24<span class="period">.</span></span><span class="space"> </span>A matrix-generated code</figcaption><div class="tabular-box natural-width"><table class="tabular">
+<p class="continuation">An even easier way to compute the null space is with the generator matrix \(G\) (<a class="xref" data-knowl="./knowl/table-matrix-gen-code.html" title="Table 16.24: A matrix-generated code">Table 16.24</a>).</p></article><figure class="table table-like" id="RXr"><figcaption><span class="type">Table</span><span class="space"> </span><span class="codenumber">16.24<span class="period">.</span></span><span class="space"> </span>A matrix-generated code</figcaption><div class="tabular-box natural-width"><table class="tabular" id="yeA">
 <tr>
 <td class="c m b2 r0 l0 t2 lines">Message Word \(\mathbf x\)</td>
-<td class="c m b2 r0 l0 t2 lines" data-braille="last-cell">Codeword \(G \mathbf x\)</td>
+<td class="c m b2 r0 l0 t2 lines">Codeword \(G \mathbf x\)</td>
 </tr>
 <tr>
 <td class="c m b0 r0 l0 t0 lines">\(000\)</td>
-<td class="c m b0 r0 l0 t0 lines" data-braille="last-cell">\(000000\)</td>
+<td class="c m b0 r0 l0 t0 lines">\(000000\)</td>
 </tr>
 <tr>
 <td class="c m b0 r0 l0 t0 lines">\(001\)</td>
-<td class="c m b0 r0 l0 t0 lines" data-braille="last-cell">\(001101\)</td>
+<td class="c m b0 r0 l0 t0 lines">\(001101\)</td>
 </tr>
 <tr>
 <td class="c m b0 r0 l0 t0 lines">\(010\)</td>
-<td class="c m b0 r0 l0 t0 lines" data-braille="last-cell">\(010110\)</td>
+<td class="c m b0 r0 l0 t0 lines">\(010110\)</td>
 </tr>
 <tr>
 <td class="c m b0 r0 l0 t0 lines">\(011\)</td>
-<td class="c m b0 r0 l0 t0 lines" data-braille="last-cell">\(011011\)</td>
+<td class="c m b0 r0 l0 t0 lines">\(011011\)</td>
 </tr>
 <tr>
 <td class="c m b0 r0 l0 t0 lines">\(100\)</td>
-<td class="c m b0 r0 l0 t0 lines" data-braille="last-cell">\(100011\)</td>
+<td class="c m b0 r0 l0 t0 lines">\(100011\)</td>
 </tr>
 <tr>
 <td class="c m b0 r0 l0 t0 lines">\(101\)</td>
-<td class="c m b0 r0 l0 t0 lines" data-braille="last-cell">\(101110\)</td>
+<td class="c m b0 r0 l0 t0 lines">\(101110\)</td>
 </tr>
 <tr>
 <td class="c m b0 r0 l0 t0 lines">\(110\)</td>
-<td class="c m b0 r0 l0 t0 lines" data-braille="last-cell">\(110101\)</td>
+<td class="c m b0 r0 l0 t0 lines">\(110101\)</td>
 </tr>
 <tr>
 <td class="c m b2 r0 l0 t0 lines">\(111\)</td>
-<td class="c m b2 r0 l0 t0 lines" data-braille="last-cell">\(111000\)</td>
+<td class="c m b2 r0 l0 t0 lines">\(111000\)</td>
 </tr>
 </table></div></figure><article class="theorem theorem-like" id="YYN"><h6 class="heading">
 <span class="type">Theorem</span><span class="space"> </span><span class="codenumber">16.25</span><span class="period">.</span>
@@ -468,13 +468,13 @@ x_1 + x_3 + x_6 &amp; = 0\text{.}
 G( {\mathbf x}_1 + {\mathbf x}_2) = G {\mathbf x}_1 + G {\mathbf x}_2 = {\mathbf y}_1 + {\mathbf y}_2\text{.}
 \end{equation*}
 </div>
-<p data-braille="continuation">We must also show that two message blocks cannot be encoded into the same codeword. That is, we must show that if \(G {\mathbf x} = G {\mathbf y}\text{,}\) then \({\mathbf x} = {\mathbf y}\text{.}\) Suppose that \(G {\mathbf x} = G {\mathbf y}\text{.}\) Then</p>
+<p class="continuation">We must also show that two message blocks cannot be encoded into the same codeword. That is, we must show that if \(G {\mathbf x} = G {\mathbf y}\text{,}\) then \({\mathbf x} = {\mathbf y}\text{.}\) Suppose that \(G {\mathbf x} = G {\mathbf y}\text{.}\) Then</p>
 <div class="displaymath">
 \begin{equation*}
 G {\mathbf x} - G {\mathbf y} = G( {\mathbf x} - {\mathbf y}) = {\mathbf 0}\text{.}
 \end{equation*}
 </div>
-<p data-braille="continuation">However, the first \(k\) coordinates in \(G( {\mathbf x} - {\mathbf y})\) are exactly \(x_1 -y_1, \ldots,
+<p class="continuation">However, the first \(k\) coordinates in \(G( {\mathbf x} - {\mathbf y})\) are exactly \(x_1 -y_1, \ldots,
 x_k - y_k\text{,}\) since they are determined by the identity matrix, \(I_k\text{,}\) part of \(G\text{.}\) Hence, \(G( {\mathbf x} - {\mathbf y}) = {\mathbf 0}\) exactly when \({\mathbf x} = {\mathbf y}\text{.}\)</p></article><p id="EKK">Before we can prove the relationship between canonical parity-check matrices and standard generating matrices, we need to prove a lemma.</p>
 <article class="lemma theorem-like" id="Clq"><h6 class="heading">
 <span class="type">Lemma</span><span class="space"> </span><span class="codenumber">16.27</span><span class="period">.</span>
@@ -490,7 +490,7 @@ c_{ij} &amp; = \sum_{k=1}^n h_{ik} g_{kj}\\
 &amp; = 0\text{,}
 \end{align*}
 </div>
-<p data-braille="continuation">where</p>
+<p class="continuation">where</p>
 <div class="displaymath">
 \begin{equation*}
 \delta_{ij} =
@@ -500,7 +500,7 @@ c_{ij} &amp; = \sum_{k=1}^n h_{ik} g_{kj}\\
 \end{cases}
 \end{equation*}
 </div>
-<p data-braille="continuation">is the Kronecker delta. </p></article><article class="theorem theorem-like" id="lnf"><h6 class="heading">
+<p class="continuation">is the Kronecker delta. </p></article><article class="theorem theorem-like" id="lnf"><h6 class="heading">
 <span class="type">Theorem</span><span class="space"> </span><span class="codenumber">16.28</span><span class="period">.</span>
 </h6>
 <p id="whW">Let \(H = (A \mid I_m )\) be an \(m \times n\) canonical parity-check matrix and let \(G = \left( \frac{I_{n-m} }{A} \right) \) be the \(n \times (n-m)\) standard generator matrix associated with \(H\text{.}\) Let \(C\) be the code generated by \(G\text{.}\) Then \({\mathbf y}\) is in \(C\) if and only if \(H {\mathbf y} = {\mathbf 0}\text{.}\) In particular, \(C\) is a linear code with canonical parity-check matrix \(H\text{.}\)</p></article><article class="proof" id="BfX"><h6 class="heading"><span class="type">Proof<span class="period">.</span></span></h6>
@@ -515,7 +515,7 @@ a_{21} y_1 + a_{22} y_2 + \cdots + a_{2, n-m} y_{n-m} + y_{n-m+1} &amp; = 0\\
 a_{m1} y_1 + a_{m2} y_2 + \cdots + a_{m, n-m} y_{n-m} + y_{n-m+1} &amp; = 0\text{.}
 \end{align*}
 </div>
-<p data-braille="continuation">Equivalently, \(y_{n-m+1}, \ldots,
+<p class="continuation">Equivalently, \(y_{n-m+1}, \ldots,
 y_n\) are determined by \(y_1, \ldots, y_{n-m}\text{:}\)</p>
 <div class="displaymath">
 \begin{align*}
@@ -525,7 +525,7 @@ y_{n-m+1} &amp; = a_{21} y_1 + a_{22} y_2 + \cdots + a_{2, n-m} y_{n-m}\\
 y_{n-m+1} &amp; = a_{m1} y_1 + a_{m2} y_2 + \cdots + a_{m, n-m} y_{n-m}\text{.}
 \end{align*}
 </div>
-<p data-braille="continuation">Consequently, we can let \(x_i = y_i\) for \(i= 1, \ldots, n - m\text{.}\)</p></article><p id="kRT">It would be helpful if we could compute the minimum distance of a linear code directly from its matrix \(H\) in order to determine the error-detecting and error-correcting capabilities of the code. Suppose that</p>
+<p class="continuation">Consequently, we can let \(x_i = y_i\) for \(i= 1, \ldots, n - m\text{.}\)</p></article><p id="kRT">It would be helpful if we could compute the minimum distance of a linear code directly from its matrix \(H\) in order to determine the error-detecting and error-correcting capabilities of the code. Suppose that</p>
 <div class="displaymath">
 \begin{align*}
 {\mathbf e}_1 &amp; = (100 \cdots 00)^\transpose\\
@@ -534,7 +534,7 @@ y_{n-m+1} &amp; = a_{m1} y_1 + a_{m2} y_2 + \cdots + a_{m, n-m} y_{n-m}\text{.}
 {\mathbf e}_n &amp; = (000 \cdots 01)^\transpose
 \end{align*}
 </div>
-<p data-braille="continuation">are the \(n\)-tuples in \({\mathbb Z}_2^n\) of weight \(1\text{.}\) For an \(m \times n\) binary matrix \(H\text{,}\) \(H{\mathbf e}_i\) is exactly the \(i\)th column of the matrix \(H\text{.}\)</p>
+<p class="continuation">are the \(n\)-tuples in \({\mathbb Z}_2^n\) of weight \(1\text{.}\) For an \(m \times n\) binary matrix \(H\text{,}\) \(H{\mathbf e}_i\) is exactly the \(i\)th column of the matrix \(H\text{.}\)</p>
 <article class="example example-like" id="ncs"><h6 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">16.29</span><span class="period">.</span>
 </h6>
@@ -577,7 +577,7 @@ H_1 =
 \end{pmatrix}
 \end{equation*}
 </div>
-<p data-braille="continuation">and</p>
+<p class="continuation">and</p>
 <div class="displaymath">
 \begin{equation*}
 H_2 =
@@ -588,7 +588,7 @@ H_2 =
 \end{pmatrix}\text{,}
 \end{equation*}
 </div>
-<p data-braille="continuation">then the null space of \(H_1\) is a single error-detecting code and the null space of \(H_2\) is not.</p></article><p id="xgl">We can even do better than <a class="xref" data-knowl="./knowl/theorem-single-error.html" title="Theorem 16.31">Theorem 16.31</a>. This theorem gives us conditions on a matrix \(H\) that tell us when the minimum weight of the code formed by the null space of \(H\) is \(2\text{.}\) We can also determine when the minimum distance of a linear code is \(3\) by examining the corresponding matrix.</p>
+<p class="continuation">then the null space of \(H_1\) is a single error-detecting code and the null space of \(H_2\) is not.</p></article><p id="xgl">We can even do better than <a class="xref" data-knowl="./knowl/theorem-single-error.html" title="Theorem 16.31">Theorem 16.31</a>. This theorem gives us conditions on a matrix \(H\) that tell us when the minimum weight of the code formed by the null space of \(H\) is \(2\text{.}\) We can also determine when the minimum distance of a linear code is \(3\) by examining the corresponding matrix.</p>
 <article class="example example-like" id="zqK"><h6 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">16.33</span><span class="period">.</span>
 </h6>
@@ -603,7 +603,7 @@ H =
 \end{pmatrix}
 \end{equation*}
 </div>
-<p data-braille="continuation">and want to determine whether or not \(H\) is the canonical parity-check matrix for an error-correcting code, it is necessary to make certain that \(\Null(H)\) does not contain any \(4\)-tuples of weight \(2\text{.}\) That is, \((1100)\text{,}\) \((1010)\text{,}\) \((1001)\text{,}\) \((0110)\text{,}\) \((0101)\text{,}\) and \((0011)\) must not be in \(\Null(H)\text{.}\) The next theorem states that we can indeed determine that the code generated by \(H\) is error-correcting by examining the columns of \(H\text{.}\) Notice in this example that not only does \(H\) have no zero columns, but also that no two columns are the same.</p></article><article class="theorem theorem-like" id="xBx"><h6 class="heading">
+<p class="continuation">and want to determine whether or not \(H\) is the canonical parity-check matrix for an error-correcting code, it is necessary to make certain that \(\Null(H)\) does not contain any \(4\)-tuples of weight \(2\text{.}\) That is, \((1100)\text{,}\) \((1010)\text{,}\) \((1001)\text{,}\) \((0110)\text{,}\) \((0101)\text{,}\) and \((0011)\) must not be in \(\Null(H)\text{.}\) The next theorem states that we can indeed determine that the code generated by \(H\) is error-correcting by examining the columns of \(H\text{.}\) Notice in this example that not only does \(H\) have no zero columns, but also that no two columns are the same.</p></article><article class="theorem theorem-like" id="xBx"><h6 class="heading">
 <span class="type">Theorem</span><span class="space"> </span><span class="codenumber">16.34</span><span class="period">.</span>
 </h6>
 <p id="Iwo">Let \(H\) be a binary matrix. The null space of \(H\) is a single error-correcting code if and only if \(H\) does not contain any zero columns and no two columns of \(H\) are identical.</p></article><article class="proof" id="Nup"><h6 class="heading"><span class="type">Proof<span class="period">.</span></span></h6>
@@ -613,7 +613,7 @@ H =
 {\mathbf 0} = H({\mathbf e}_{i} +{\mathbf e}_{j}) = H{\mathbf e}_{i} + H{\mathbf e}_{j}
 \end{equation*}
 </div>
-<p data-braille="continuation">can only occur if the \(i\)th and \(j\)th columns are identical, the null space of \(H\) is a single error-correcting code.</p></article><p id="dnu">Suppose now that we have a canonical parity-check matrix \(H\) with three rows. Then we might ask how many more columns we can add to the matrix and still have a null space that is a single error-detecting and single error-correcting code. Since each column has three entries, there are \(2^3 = 8\) possible distinct columns. We cannot add the columns</p>
+<p class="continuation">can only occur if the \(i\)th and \(j\)th columns are identical, the null space of \(H\) is a single error-correcting code.</p></article><p id="dnu">Suppose now that we have a canonical parity-check matrix \(H\) with three rows. Then we might ask how many more columns we can add to the matrix and still have a null space that is a single error-detecting and single error-correcting code. Since each column has three entries, there are \(2^3 = 8\) possible distinct columns. We cannot add the columns</p>
 <div class="displaymath">
 \begin{equation*}
 \begin{pmatrix}
@@ -630,7 +630,7 @@ H =
 \end{pmatrix}\text{.}
 \end{equation*}
 </div>
-<p data-braille="continuation">So we can add as many as four columns and still maintain a minimum distance of \(3\text{.}\)</p>
+<p class="continuation">So we can add as many as four columns and still maintain a minimum distance of \(3\text{.}\)</p>
 <p id="JuD">In general, if \(H\) is an \(m \times n\) canonical parity-check matrix, then there are \(n-m\) information positions in each codeword. Each column has \(m\) bits, so there are \(2^m\) possible distinct columns. It is necessary that the columns \({\mathbf 0}, {\mathbf e}_1, \ldots, {\mathbf e}_m\) be excluded, leaving \(2^m - (1 + m)\) remaining columns for information if we are still to maintain the ability not only to detect but also to correct single errors.</p></section></div></main>
 </div>
 <script src="https://unpkg.com/prismjs@v1.22.0/components/prism-core.min.js"></script><script src="https://unpkg.com/prismjs@v1.22.0/plugins/autoloader/prism-autoloader.min.js"></script>

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2021-02-08T11:04:43-07:00       *-->
+<!--*       on 2021-02-12T14:43:31-07:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -59,7 +59,7 @@ MathJax.Hub.Config({
 <!-- 2019-10-12: Temporary - CSS file for experiments with styling --><link xmlns:svg="http://www.w3.org/2000/svg" href="developer.css" rel="stylesheet" type="text/css">
 </head>
 <body id="judson-AATA" class="mathbook-book has-toc has-sidebar-left">
-<a class="assistive" href="#content">Skip to main content</a><div xmlns:svg="http://www.w3.org/2000/svg" class="hidden-content" style="display:none">\(\newcommand{\identity}{\mathrm{id}}
+<a class="assistive" href="#content">Skip to main content</a><div xmlns:svg="http://www.w3.org/2000/svg" id="latex-macros" class="hidden-content" style="display:none">\(\newcommand{\identity}{\mathrm{id}}
 \newcommand{\notdivide}{\nmid}
 \newcommand{\notsubset}{\not\subset}
 \newcommand{\lcm}{\operatorname{lcm}}
@@ -312,7 +312,7 @@ MathJax.Hub.Config({
 </h2>
 <article class="exercise exercise-like" id="kDl"><h6 class="heading"><span class="codenumber">1<span class="period">.</span></span></h6>
 <p id="SzU">Why is the following encoding scheme not acceptable?</p>
-<div class="sidebyside"><div class="sbsrow" style="margin-left:0%;margin-right:0%;"><div class="sbspanel fixed-width" style="width:100%;justify-content:flex-start;"><table class="tabular">
+<div class="sidebyside"><div class="sbsrow" style="margin-left:0%;margin-right:0%;"><div class="sbspanel fixed-width" style="width:100%;justify-content:flex-start;"><table class="tabular" id="AZg">
 <tr>
 <td class="c m b2 r0 l0 t2 lines">Information</td>
 <td class="c m b2 r0 l0 t2 lines">\(0\)</td>
@@ -323,7 +323,7 @@ MathJax.Hub.Config({
 <td class="c m b2 r0 l0 t2 lines">\(5\)</td>
 <td class="c m b2 r0 l0 t2 lines">\(6\)</td>
 <td class="c m b2 r0 l0 t2 lines">\(7\)</td>
-<td class="c m b2 r0 l0 t2 lines" data-braille="last-cell">\(8\)</td>
+<td class="c m b2 r0 l0 t2 lines">\(8\)</td>
 </tr>
 <tr>
 <td class="c m b2 r0 l0 t0 lines">Codeword</td>
@@ -335,7 +335,7 @@ MathJax.Hub.Config({
 <td class="c m b2 r0 l0 t0 lines">\(110\)</td>
 <td class="c m b2 r0 l0 t0 lines">\(111\)</td>
 <td class="c m b2 r0 l0 t0 lines">\(000\)</td>
-<td class="c m b2 r0 l0 t0 lines" data-braille="last-cell">\(001\)</td>
+<td class="c m b2 r0 l0 t0 lines">\(001\)</td>
 </tr>
 </table></div></div></div></article><article class="exercise exercise-like" id="QKu"><h6 class="heading"><span class="codenumber">2<span class="period">.</span></span></h6>
 <p id="yHd">Without doing any addition, explain why the following set of \(4\)-tuples in \({\mathbb Z}_2^4\) cannot be a group code.</p>
@@ -465,13 +465,13 @@ H =
 \end{pmatrix}\text{.}
 \end{equation*}
 </div>
-<p data-braille="continuation">Decode the message</p>
+<p class="continuation">Decode the message</p>
 <div class="displaymath">
 \begin{equation*}
 01111 \quad 10101 \quad 01110 \quad 00011
 \end{equation*}
 </div>
-<p data-braille="continuation">if possible.</p>
+<p class="continuation">if possible.</p>
 <div class="solutions">
 <a data-knowl="" class="id-ref hint-knowl original" data-refid="hk-AaE" id="AaE"><span class="type">Hint</span></a><div class="hidden-content tex2jax_ignore" id="hk-AaE"><div class="hint solution-like"><p id="Mwn">Multiple errors occur in one of the received words.</p></div></div>
 </div></article><article class="exercise exercise-like" id="NPO"><h6 class="heading"><span class="codenumber">10<span class="period">.</span></span></h6>
@@ -557,7 +557,7 @@ H =
 \end{pmatrix}\text{.}
 \end{equation*}
 </div>
-<p data-braille="continuation">Compute the syndrome caused by each of the following transmission errors.</p>
+<p class="continuation">Compute the syndrome caused by each of the following transmission errors.</p>
 <ol class="lower-alpha">
 <li id="jqO"><p id="BIN">An error in the first bit.</p></li>
 <li id="PxX"><p id="hPW">An error in the third bit.</p></li>
@@ -621,7 +621,7 @@ H =
 <li id="JIL"><p id="IhT">\(d( {\mathbf x}, {\mathbf y})= d( {\mathbf y}, {\mathbf x})\text{;}\)</p></li>
 <li id="pPU"><p id="opc">\(d( {\mathbf x}, {\mathbf y}) \leq d( {\mathbf x}, {\mathbf z}) + d( {\mathbf z}, {\mathbf y})\text{.}\)</p></li>
 </ol>
-<p data-braille="continuation">In other words, a metric is simply a generalization of the notion of distance. Prove that Hamming distance is a metric on \({\mathbb Z}_2^n\text{.}\) Decoding a message actually reduces to deciding which is the closest codeword in terms of distance.</p></article><article class="exercise exercise-like" id="KVi"><h6 class="heading"><span class="codenumber">18<span class="period">.</span></span></h6>
+<p class="continuation">In other words, a metric is simply a generalization of the notion of distance. Prove that Hamming distance is a metric on \({\mathbb Z}_2^n\text{.}\) Decoding a message actually reduces to deciding which is the closest codeword in terms of distance.</p></article><article class="exercise exercise-like" id="KVi"><h6 class="heading"><span class="codenumber">18<span class="period">.</span></span></h6>
 <p id="sRR">Let \(C\) be a linear code. Show that either the \(i\)th coordinates in the codewords of \(C\) are all zeros or exactly half of them are zeros.</p></article><article class="exercise exercise-like" id="rcr"><h6 class="heading"><span class="codenumber">19<span class="period">.</span></span></h6>
 <p id="YZa">Let \(C\) be a linear code. Show that either every codeword has even weight or exactly half of the codewords have even weight.</p>
 <div class="solutions">
@@ -671,7 +671,7 @@ H =
 \end{pmatrix}
 \end{equation*}
 </div>
-<p data-braille="continuation">generates a Hamming code. What are the error-correcting properties of a Hamming code?</p>
+<p class="continuation">generates a Hamming code. What are the error-correcting properties of a Hamming code?</p>
 </li>
 <li id="mVo"><p id="luw">The column corresponding to the syndrome also marks the bit that was in error; that is, the \(i\)th column of the matrix is \(i\) written as a binary number, and the syndrome immediately tells us which bit is in error. If the received word is \((101011)\text{,}\) compute the syndrome. In which bit did the error occur in this case, and what codeword was originally transmitted?</p></li>
 <li id="Tcx"><p id="RBF">Give a binary matrix \(H\) for the Hamming code with six information positions and four check positions. What are the check positions and what are the information positions? Encode the messages \((101101)\) and \((001001)\text{.}\) Decode the received words \((0010000101)\) and \((0000101100)\text{.}\) What are the possible syndromes for this code?</p></li>

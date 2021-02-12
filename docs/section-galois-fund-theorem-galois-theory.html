@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2021-02-08T11:03:17-07:00       *-->
+<!--*       on 2021-02-12T14:42:43-07:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -59,7 +59,7 @@ MathJax.Hub.Config({
 <!-- 2019-10-12: Temporary - CSS file for experiments with styling --><link xmlns:svg="http://www.w3.org/2000/svg" href="developer.css" rel="stylesheet" type="text/css">
 </head>
 <body id="judson-AATA" class="mathbook-book has-toc has-sidebar-left">
-<a class="assistive" href="#content">Skip to main content</a><div xmlns:svg="http://www.w3.org/2000/svg" class="hidden-content" style="display:none">\(\newcommand{\identity}{\mathrm{id}}
+<a class="assistive" href="#content">Skip to main content</a><div xmlns:svg="http://www.w3.org/2000/svg" id="latex-macros" class="hidden-content" style="display:none">\(\newcommand{\identity}{\mathrm{id}}
 \newcommand{\notdivide}{\nmid}
 \newcommand{\notsubset}{\not\subset}
 \newcommand{\lcm}{\operatorname{lcm}}
@@ -310,7 +310,8 @@ MathJax.Hub.Config({
 <main class="main"><div id="content" class="pretext-content"><section xmlns:svg="http://www.w3.org/2000/svg" class="section" id="Pdl"><h2 class="heading hide-type">
 <span class="type">Section</span> <span class="codenumber">9.3</span> <span class="title">The Fundamental Theorem</span>
 </h2>
-<section class="introduction" id="LNg"><p id="QSL">The goal of this section is to prove the Fundamental Theorem of Galois Theory. This theorem explains the connection between the subgroups of \(G(E/F)\) and the intermediate fields between \(E\) and \(F\text{.}\)</p>
+<section class="introduction" id="LNg"><p id="QSL">The goal of this section is to prove the Fundamental Theorem of Galois Theory.  The statement of this theorem is complicated and technical, but the idea is simple.  The theorem explains the connection between the subgroups of the Galois group \(G(E/F)\) and the intermediate fields between \(E\) and \(F\text{.}\)</p>
+<p id="p-2551">The Galois group \(G(E/F)\) is the group of all automorphisms of the field \(E\) that <em class="emphasis">fix</em> the elements of the field \(F\text{.}\)  But some of those automorphisms might also fix some of the elements in \(E\) that are not in \(F\text{.}\)  For example, in the field \(E = \Q(\sqrt{3},\sqrt{5})\text{,}\) we had an automorphism \(\sigma\) that sent \(\sqrt{3} \mapsto -\sqrt{3}\) and \(\sqrt{5}\mapsto \sqrt{5}\text{.}\)  So this \(\sigma\) fixes all of \(\Q\text{,}\) but also fixes every element of \(\Q(\sqrt{5})\) (since every element there is of the form \(a+b\sqrt{5}\)).  It is no coincidence that the set of numbers fixed by \(\sigma\) forms a field, as the next proposition says.</p>
 <article class="proposition theorem-like" id="xJB"><h6 class="heading">
 <span class="type">Proposition</span><span class="space"> </span><span class="codenumber">9.19</span><span class="period">.</span>
 </h6>
@@ -320,20 +321,21 @@ MathJax.Hub.Config({
 F_{\{\sigma_i \}} = \{ a \in F : \sigma_i(a) = a \text{ for all } \sigma_i \}
 \end{equation*}
 </div>
-<p data-braille="continuation">is a subfield of \(F\text{.}\)</p></article><article class="proof" id="hvk"><h6 class="heading"><span class="type">Proof<span class="period">.</span></span></h6>
+<p class="continuation">is a subfield of \(F\text{.}\)</p></article><article class="proof" id="hvk"><h6 class="heading"><span class="type">Proof<span class="period">.</span></span></h6>
 <p id="sLA">Let \(\sigma_i(a) = a\) and \(\sigma_i(b)=b\text{.}\) Then</p>
 <div class="displaymath">
 \begin{equation*}
 \sigma_i(a \pm b) = \sigma_i(a) \pm \sigma_i(b) = a \pm b
 \end{equation*}
 </div>
-<p data-braille="continuation">and</p>
+<p class="continuation">and</p>
 <div class="displaymath">
 \begin{equation*}
 \sigma_i(a b) = \sigma_i(a) \sigma_i(b) = a  b\text{.}
 \end{equation*}
 </div>
-<p data-braille="continuation">If \(a \neq 0\text{,}\) then  \(\sigma_i(a^{-1}) = [\sigma_i(a)]^{-1} = a^{-1}\text{.}\) Finally, \(\sigma_i(0) = 0\) and \(\sigma_i(1)=1\) since \(\sigma_i\) is an automorphism.</p></article><article class="corollary theorem-like" id="Wml"><h6 class="heading">
+<p class="continuation">If \(a \neq 0\text{,}\) then  \(\sigma_i(a^{-1}) = [\sigma_i(a)]^{-1} = a^{-1}\text{.}\) Finally, \(\sigma_i(0) = 0\) and \(\sigma_i(1)=1\) since \(\sigma_i\) is an automorphism.</p></article><p id="wZU">The subfield \(F_{ \{\sigma_i \} }\) of \(F\) is called the <dfn class="terminology">fixed field</dfn>  of \(\{ \sigma_i \}\text{.}\)  While any subset of automorphism will have a fixed field, we will be especially interested in subsets of automorphisms that are themselves subgroups (of all automorphism of of the Galois group). The field fixed by a subgroup \(G\) of \(\aut(F)\) will be denoted by \(F_G\text{.}\)</p>
+<article class="corollary theorem-like" id="Wml"><h6 class="heading">
 <span class="type">Corollary</span><span class="space"> </span><span class="codenumber">9.20</span><span class="period">.</span>
 </h6>
 <p id="emw">Let \(F\) be a field and let \(G\) be a subgroup of \(\aut(F)\text{.}\) Then </p>
@@ -342,12 +344,9 @@ F_{\{\sigma_i \}} = \{ a \in F : \sigma_i(a) = a \text{ for all } \sigma_i \}
 F_G = \{ \alpha \in F : \sigma( \alpha ) = \alpha \text{ for all } \sigma \in G \}
 \end{equation*}
 </div>
-<p data-braille="continuation">is a subfield of \(F\text{.}\)</p></article><p id="wZU">The subfield \(F_{ \{\sigma_i \} }\) of \(F\) is called the <dfn class="terminology">fixed field</dfn>  of \(\{ \sigma_i \}\text{.}\) The field fixed by a subgroup \(G\) of \(\aut(F)\) will be denoted by \(F_G\text{.}\)</p>
-<article class="example example-like" id="Hdn"><h6 class="heading">
-<span class="type">Example</span><span class="space"> </span><span class="codenumber">9.21</span><span class="period">.</span>
-</h6>
-<p id="Pdy">Let \(\sigma : {\mathbb Q}(\sqrt{3}, \sqrt{5}\, ) \rightarrow {\mathbb Q}(\sqrt{3}, \sqrt{5}\, )\) be the automorphism that maps \(\sqrt{3}\) to \(-\sqrt{3}\text{.}\) Then \({\mathbb Q}( \sqrt{5}\, )\) is the subfield of \({\mathbb Q}(\sqrt{3}, \sqrt{5}\, )\) left fixed by \(\sigma\text{.}\)</p></article><article class="proposition theorem-like" id="dQK"><h6 class="heading">
-<span class="type">Proposition</span><span class="space"> </span><span class="codenumber">9.22</span><span class="period">.</span>
+<p class="continuation">is a subfield of \(F\text{.}\)</p></article><p id="p-2556">We haven't yet said anything about <em class="emphasis">which</em> field the fixed field might be.  To get started, let's consider which field is the fixed field for the full Galois group \(G(E/F)\text{.}\)  This is the group of all automorphisms of \(E\) that fix \(F\text{,}\) so it shouldn't be too surprising that the field fixed by \(G(E/F)\) is actually \(F\text{.}\)  (At least, as long as \(E\) is a splitting field of a separable polynomial.)</p>
+<article class="proposition theorem-like" id="dQK"><h6 class="heading">
+<span class="type">Proposition</span><span class="space"> </span><span class="codenumber">9.21</span><span class="period">.</span>
 </h6>
 <p id="tvu">Let \(E\) be a splitting field over \(F\) of a separable polynomial. Then \(E_{G(E/F)} = F\text{.}\)</p></article><article class="proof" id="NCt"><h6 class="heading"><span class="type">Proof<span class="period">.</span></span></h6>
 <p id="YSJ">Let \(G = G(E/F)\text{.}\) Clearly, \(F \subset E_G \subset E\text{.}\) Also, \(E\) must be a splitting field of \(E_G\) and \(G(E/F) = G(E/E_G)\text{.}\) By <a class="xref" data-knowl="./knowl/theorem-extension-order.html" title="Theorem 9.15">Theorem 9.15</a>,</p>
@@ -356,7 +355,13 @@ F_G = \{ \alpha \in F : \sigma( \alpha ) = \alpha \text{ for all } \sigma \in G 
 |G| = [E: E_G] =[ E:F]\text{.}
 \end{equation*}
 </div>
-<p data-braille="continuation">Therefore, \([E_G : F ] =1\text{.}\) Consequently,  \(E_G = F\text{.}\)</p></article><p id="dhd">A large number of mathematicians first learned Galois theory from Emil Artin's monograph on the subject [1]. The very clever proof of the following lemma is due to Artin.</p>
+<p class="continuation">Therefore, \([E_G : F ] =1\text{.}\) Consequently,  \(E_G = F\text{.}\)</p></article><p id="p-2559">On one hand, the previous proposition seems a little obvious: the field fixed by the automorphisms that fix the field is the field.  Where the proposition is more interesting is if \(F\) is already an intermediate field, and we think of the proposition as telling us which set of automorphisms give \(F\) as the fixed field.  Let's illustrate this with a familiar example.</p>
+<article class="example example-like" id="Hdn"><h6 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">9.22</span><span class="period">.</span>
+</h6>
+<p id="Pdy">Let \(\sigma : {\mathbb Q}(\sqrt{3}, \sqrt{5}\, ) \rightarrow {\mathbb Q}(\sqrt{3}, \sqrt{5}\, )\) be the automorphism that maps \(\sqrt{3}\) to \(-\sqrt{3}\) (and \(\sqrt{5}\) to itself).  Above we claimed that \({\mathbb Q}( \sqrt{5}\, )\) is the subfield of \({\mathbb Q}(\sqrt{3}, \sqrt{5}\, )\) left fixed by \(\sigma\text{.}\)  This field is also fixed by the identity automorphism \(\varepsilon\text{,}\) and \(\{\varepsilon, \sigma\}\) form a subgroup of \(G(\Q(\sqrt{3},\sqrt{5})/\Q)\text{.}\)  No other automorphism of \(\Q(\sqrt{3},\sqrt{5})\) fix \(\Q(\sqrt{5})\text{.}\)  In fact, this subgroup is \(G(\Q(\sqrt{3},\sqrt{5})/\Q(\sqrt{5}))\text{.}\)  And the fixed field of that subgroup is precisely \(\Q(\sqrt{5})\text{,}\) as the proposition above says.</p></article><p id="p-2561">This example shows how given any splitting field \(E\) over \(F\text{,}\) if we take any intermediate field \(K\) (that is, \(F \subset K \subset E\)), we can consider the <dfn class="terminology">fixer</dfn> of \(K\) to be the Galois group \(G(E/K)\) (a subgroup of \(G(E/F)\)).  So the proposition says that the fixed field of the fixer of a field is the field.</p>
+<p id="p-2562">We could also start with a subgroup \(G\) of the full Galois group \(G(E/F)\) and consider its fixed field (call it \(K\)).  Then we could consider the fixer of \(K\text{,}\) that is, the group \(G(E/K)\text{.}\)  We will see that the fixer of the fixed field of a subgroup will be the subgroup: \(G = G(E/K)\text{.}\)  Before we can prove this, we need to establish a lemma and a theorem.</p>
+<p id="dhd">A large number of mathematicians first learned Galois theory from Emil Artin's monograph on the subject. The very clever proof of the following lemma is due to Artin.</p>
 <article class="lemma theorem-like" id="JXT"><h6 class="heading">
 <span class="type">Lemma</span><span class="space"> </span><span class="codenumber">9.23</span><span class="period">.</span>
 </h6>
@@ -367,7 +372,7 @@ F_G = \{ \alpha \in F : \sigma( \alpha ) = \alpha \text{ for all } \sigma \in G 
 a_1 \alpha_1 + a_2 \alpha_2 + \cdots + a_{n + 1} \alpha_{n + 1} = 0\text{.}
 \end{equation*}
 </div>
-<p data-braille="continuation">Suppose that \(\sigma_1 = \identity, \sigma_2, \ldots, \sigma_n\) are the automorphisms in \(G\text{.}\) The homogeneous system of linear equations</p>
+<p class="continuation">Suppose that \(\sigma_1 = \identity, \sigma_2, \ldots, \sigma_n\) are the automorphisms in \(G\text{.}\) The homogeneous system of linear equations</p>
 <div class="displaymath">
 \begin{align*}
 \sigma_1( \alpha_1 ) x_1 + \sigma_1(\alpha_2) x_2 + \cdots + \sigma_1(\alpha_{n + 1} ) x_{n + 1} &amp; = 0\\
@@ -376,13 +381,13 @@ a_1 \alpha_1 + a_2 \alpha_2 + \cdots + a_{n + 1} \alpha_{n + 1} = 0\text{.}
 \sigma_n( \alpha_1 ) x_1 + \sigma_n(\alpha_2) x_2 + \cdots + \sigma_n(\alpha_{n + 1} ) x_{n + 1} &amp; = 0
 \end{align*}
 </div>
-<p data-braille="continuation">has more unknowns than equations. From linear algebra we know that this system has a nontrivial solution, say \(x_i = a_i\) for \(i = 1, 2, \ldots, n + 1\text{.}\) Since \(\sigma_1\) is the identity, the first equation translates to</p>
+<p class="continuation">has more unknowns than equations. From linear algebra we know that this system has a nontrivial solution, say \(x_i = a_i\) for \(i = 1, 2, \ldots, n + 1\text{.}\) Since \(\sigma_1\) is the identity, the first equation translates to</p>
 <div class="displaymath">
 \begin{equation*}
 a_1 \alpha_1 +  a_2 \alpha_2 + \cdots + a_{n + 1} \alpha_{n + 1} = 0\text{.}
 \end{equation*}
 </div>
-<p data-braille="continuation">The problem is that some of the \(a_i\)'s may be in \(E\) but not in \(F\text{.}\) We must show that this is impossible.</p>
+<p class="continuation">The problem is that some of the \(a_i\)'s may be in \(E\) but not in \(F\text{.}\) We must show that this is impossible.</p>
 <p id="lhb">Suppose that at least one of the \(a_i\)'s is in \(E\) but not in \(F\text{.}\) By rearranging the \(\alpha_i\)'s we may assume that \(a_1\) is nonzero. Since any nonzero multiple of a solution is also a solution, we can also assume that \(a_1 = 1\text{.}\) Of all possible solutions fitting this description, we choose the one with the smallest number of nonzero terms. Again, by rearranging \(\alpha_2, \ldots, \alpha_{n + 1}\) if necessary, we can assume that \(a_2\) is in \(E\) but not in \(F\text{.}\) Since \(F\) is the subfield of \(E\) that is fixed elementwise by \(G\text{,}\) there exists a \(\sigma_i\) in \(G\) such that \(\sigma_i( a_2 ) \neq a_2\text{.}\) Applying \(\sigma_i\) to each equation in the system, we end up with the same homogeneous system, since \(G\) is a group. Therefore, \(x_1 = \sigma_i(a_1) = 1\text{,}\) \(x_2 = \sigma_i(a_2)\text{,}\) \(\ldots\text{,}\) \(x_{n + 1} = \sigma_i(a_{n+1} )\) is also a solution of the original system. We know that a linear combination of two solutions of a homogeneous system is also a solution; consequently,</p>
 <div class="displaymath">
 \begin{align*}
@@ -392,7 +397,7 @@ x_2 &amp; = a_2 - \sigma_i(a_2)\\
 x_{n + 1} &amp; = a_{n + 1} - \sigma_i(a_{n + 1})
 \end{align*}
 </div>
-<p data-braille="continuation">must be another solution of the system. This is a nontrivial solution because \(\sigma_i( a_2 ) \neq a_2\text{,}\) and has fewer nonzero entries than our original solution. This is a contradiction, since the number of nonzero solutions to our original solution was assumed to be minimal. We can therefore conclude that \(a_1, \ldots, a_{n + 1} \in F\text{.}\)</p></article><p id="Jom">Let \(E\) be an algebraic extension of \(F\text{.}\) If every irreducible polynomial in \(F[x]\) with a root in \(E\) has all of its roots in \(E\text{,}\) then \(E\) is called a <dfn class="terminology">normal extension</dfn>  of \(F\text{;}\) that is, every irreducible polynomial in \(F[x]\) containing a root in \(E\) is the product of linear factors in \(E[x]\text{.}\)</p>
+<p class="continuation">must be another solution of the system. This is a nontrivial solution because \(\sigma_i( a_2 ) \neq a_2\text{,}\) and has fewer nonzero entries than our original solution. This is a contradiction, since the number of nonzero solutions to our original solution was assumed to be minimal. We can therefore conclude that \(a_1, \ldots, a_{n + 1} \in F\text{.}\)</p></article><p id="Jom">Let \(E\) be an algebraic extension of \(F\text{.}\) If every irreducible polynomial in \(F[x]\) with a root in \(E\) has all of its roots in \(E\text{,}\) then \(E\) is called a <dfn class="terminology">normal extension</dfn>  of \(F\text{;}\) that is, every irreducible polynomial in \(F[x]\) containing a root in \(E\) is the product of linear factors in \(E[x]\text{.}\)</p>
 <article class="theorem theorem-like" id="MSz"><h6 class="heading">
 <span class="type">Theorem</span><span class="space"> </span><span class="codenumber">9.24</span><span class="period">.</span>
 </h6>
@@ -403,8 +408,9 @@ x_{n + 1} &amp; = a_{n + 1} - \sigma_i(a_{n + 1})
 <li id="tod"><p id="wxe">\(F = E_G\) for some finite group \(G\) of automorphisms of \(E\text{.}\)</p></li>
 </ol></article><article class="proof" id="kpQ"><h6 class="heading"><span class="type">Proof<span class="period">.</span></span></h6>
 <p id="Rok">(1) \(\Rightarrow\) (2). Let \(E\) be a finite, normal, separable extension of \(F\text{.}\) By the Primitive Element Theorem, we can find an \(\alpha\) in \(E\) such that \(E = F(\alpha)\text{.}\) Let \(f(x)\) be the minimal polynomial of \(\alpha\) over \(F\text{.}\) The field \(E\) must contain all of the roots of \(f(x)\) since it is a normal extension \(F\text{;}\) hence, \(E\) is a splitting field for \(f(x)\text{.}\)</p>
-<p id="xvt">(2) \(\Rightarrow\) (3). Let \(E\) be the splitting field over \(F\) of a separable polynomial. By <a class="xref" data-knowl="./knowl/proposition-fixed-field.html" title="Proposition 9.22">Proposition 9.22</a>, \(E_{G(E/F)} = F\text{.}\) Since \(| G(E/F)| = [E:F]\text{,}\) this is a finite group.</p>
-<p id="dCC">(3) \(\Rightarrow\) (1). Let \(F = E_G\) for some finite group of automorphisms \(G\) of \(E\text{.}\) Since \([E:F] \leq |G|\text{,}\) \(E\) is a finite extension of \(F\text{.}\) To show that \(E\) is a finite, normal extension of \(F\text{,}\) let \(f(x) \in F[x]\) be an irreducible monic polynomial that has a root \(\alpha\) in \(E\text{.}\) We must show that \(f(x)\) is the product of distinct linear factors in \(E[x]\text{.}\) By <a class="xref" data-knowl="./knowl/proposition-roots-permute.html" title="Proposition 9.13">Proposition 9.13</a>, automorphisms in \(G\) permute the roots of \(f(x)\) lying in \(E\text{.}\) Hence, if we let \(G\) act on \(\alpha\text{,}\) we can obtain distinct roots \(\alpha_1 = \alpha, \alpha_2, \ldots, \alpha_n\) in \(E\text{.}\) Let \(g(x) = \prod_{i = 1}^{n} (x -\alpha_i)\text{.}\) Then \(g(x)\) is separable over \(F\) and \(g( \alpha ) = 0\text{.}\) Any automorphism \(\sigma\) in \(G\) permutes the factors of \(g(x)\) since it permutes these roots; hence, when \(\sigma\) acts on \(g(x)\text{,}\) it must fix the coefficients of \(g(x)\text{.}\) Therefore, the coefficients of \(g(x)\) must be in \(F\text{.}\) Since \(\deg g(x) \leq \deg f(x)\) and \(f(x)\) is the minimal polynomial of \(\alpha\text{,}\) \(f(x) = g(x)\text{.}\)</p></article><article class="corollary theorem-like" id="Ctu"><h6 class="heading">
+<p id="xvt">(2) \(\Rightarrow\) (3). Let \(E\) be the splitting field over \(F\) of a separable polynomial. By <a class="xref" data-knowl="./knowl/proposition-fixed-field.html" title="Proposition 9.21">Proposition 9.21</a>, \(E_{G(E/F)} = F\text{.}\) Since \(| G(E/F)| = [E:F]\text{,}\) this is a finite group.</p>
+<p id="dCC">(3) \(\Rightarrow\) (1). Let \(F = E_G\) for some finite group of automorphisms \(G\) of \(E\text{.}\) Since \([E:F] \leq |G|\text{,}\) \(E\) is a finite extension of \(F\text{.}\) To show that \(E\) is a finite, normal extension of \(F\text{,}\) let \(f(x) \in F[x]\) be an irreducible monic polynomial that has a root \(\alpha\) in \(E\text{.}\) We must show that \(f(x)\) is the product of distinct linear factors in \(E[x]\text{.}\) By <a class="xref" data-knowl="./knowl/proposition-roots-permute.html" title="Proposition 9.13">Proposition 9.13</a>, automorphisms in \(G\) permute the roots of \(f(x)\) lying in \(E\text{.}\) Hence, if we let \(G\) act on \(\alpha\text{,}\) we can obtain distinct roots \(\alpha_1 = \alpha, \alpha_2, \ldots, \alpha_n\) in \(E\text{.}\) Let \(g(x) = \prod_{i = 1}^{n} (x -\alpha_i)\text{.}\) Then \(g(x)\) is separable over \(F\) and \(g( \alpha ) = 0\text{.}\) Any automorphism \(\sigma\) in \(G\) permutes the factors of \(g(x)\) since it permutes these roots; hence, when \(\sigma\) acts on \(g(x)\text{,}\) it must fix the coefficients of \(g(x)\text{.}\) Therefore, the coefficients of \(g(x)\) must be in \(F\text{.}\) Since \(\deg g(x) \leq \deg f(x)\) and \(f(x)\) is the minimal polynomial of \(\alpha\text{,}\) \(f(x) = g(x)\text{.}\)</p></article><p id="p-2575">We can now prove that the fixer of a fixed field of a subgroup is that subgroup.</p>
+<article class="corollary theorem-like" id="Ctu"><h6 class="heading">
 <span class="type">Corollary</span><span class="space"> </span><span class="codenumber">9.25</span><span class="period">.</span>
 </h6>
 <p id="KtF">Let \(K\) be a field extension of \(F\) such that \(F = K_G\) for some finite group of automorphisms \(G\) of \(K\text{.}\) Then \(G = G(K/F)\text{.}\)</p></article><article class="proof" id="ytv"><h6 class="heading"><span class="type">Proof<span class="period">.</span></span></h6>
@@ -414,7 +420,7 @@ x_{n + 1} &amp; = a_{n + 1} - \sigma_i(a_{n + 1})
 [K : F ] \leq |G| \leq |G(K/F)| = [K:F]\text{.}
 \end{equation*}
 </div>
-<p data-braille="continuation">It follows that \(G = G(K/F)\text{,}\) since they must have the same order.</p></article><p id="pvv">Before we determine the exact correspondence between field extensions and automorphisms of fields, let us return to a familiar example.</p>
+<p class="continuation">It follows that \(G = G(K/F)\text{,}\) since they must have the same order.</p></article><p id="pvv">Before we determine the exact correspondence between field extensions and automorphisms of fields, let us return to a familiar example.</p>
 <article class="example example-like" id="nkw"><h6 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">9.26</span><span class="period">.</span>
 </h6>
@@ -451,7 +457,7 @@ G(K/F) \cong G(E/F) / G( E/K )\text{.}
 |G(E/F)| = [G(E/F):G(E/K)] \cdot |G(E/K)| = [E:F] = [E:K][K:F]\text{.}
 \end{equation*}
 </div>
-<p data-braille="continuation">Thus, \([K:F] = [G(E/F):G(E/K)]\text{.}\)</p>
+<p class="continuation">Thus, \([K:F] = [G(E/F):G(E/K)]\text{.}\)</p>
 <p id="Cfm">Statement (3) is illustrated in <a class="xref" data-knowl="./knowl/figure-galois-2.html" title="Figure 9.29">Figure 9.29</a>. We leave the proof of this property as an exercise.</p>
 <p id="imv">(4) This part takes a little more work. Let \(K\) be a normal extension of \(F\text{.}\) If \(\sigma\) is in \(G(E/F)\) and \(\tau\) is in \(G(E/K)\text{,}\) we need to show that \(\sigma^{-1} \tau \sigma\) is in \(G(E/K)\text{;}\) that is, we need to show that \(\sigma^{-1} \tau \sigma( \alpha) = \alpha\) for all \(\alpha \in K\text{.}\) Suppose that \(f(x)\) is the minimal polynomial of \(\alpha\) over \(F\text{.}\) Then \(\sigma( \alpha )\) is also a root of \(f(x)\) lying in \(K\text{,}\) since \(K\) is a normal extension of \(F\text{.}\) Hence, \(\tau( \sigma( \alpha )) = \sigma( \alpha )\) or \(\sigma^{-1} \tau \sigma( \alpha) = \alpha\text{.}\)</p>
 <p id="OtE">Conversely, let \(G(E/K)\) be a normal subgroup of \(G(E/F)\text{.}\) We need to show that \(F = K_{G(K/F)}\text{.}\) Let \(\tau \in G(E/K)\text{.}\) For all \(\sigma \in G(E/F)\) there exists a \(\overline{\tau} \in G(E/K)\) such that \(\tau \sigma = \sigma \overline{\tau}\text{.}\) Consequently, for all \(\alpha \in K\)</p>
@@ -460,26 +466,26 @@ G(K/F) \cong G(E/F) / G( E/K )\text{.}
 \tau( \sigma( \alpha ) ) = \sigma( \overline{\tau}( \alpha ) ) = \sigma( \alpha );
 \end{equation*}
 </div>
-<p data-braille="continuation">hence, \(\sigma( \alpha )\) must be in the fixed field of \(G(E/K)\text{.}\) Let \(\overline{\sigma}\) be the restriction of \(\sigma\) to \(K\text{.}\) Then \(\overline{\sigma}\) is an automorphism of \(K\) fixing \(F\text{,}\) since \(\sigma( \alpha ) \in K\) for all \(\alpha \in K\text{;}\) hence, \(\overline{\sigma} \in G(K/F)\text{.}\) Next, we will show that the fixed field of \(G(K/F)\) is \(F\text{.}\) Let \(\beta\) be an element in \(K\) that is fixed by all automorphisms in \(G(K/F)\text{.}\) In particular, \(\overline{\sigma}(\beta) = \beta\) for all \(\sigma \in G(E/F)\text{.}\) Therefore, \(\beta\) belongs to the fixed field \(F\) of \(G(E/F)\text{.}\)</p>
+<p class="continuation">hence, \(\sigma( \alpha )\) must be in the fixed field of \(G(E/K)\text{.}\) Let \(\overline{\sigma}\) be the restriction of \(\sigma\) to \(K\text{.}\) Then \(\overline{\sigma}\) is an automorphism of \(K\) fixing \(F\text{,}\) since \(\sigma( \alpha ) \in K\) for all \(\alpha \in K\text{;}\) hence, \(\overline{\sigma} \in G(K/F)\text{.}\) Next, we will show that the fixed field of \(G(K/F)\) is \(F\text{.}\) Let \(\beta\) be an element in \(K\) that is fixed by all automorphisms in \(G(K/F)\text{.}\) In particular, \(\overline{\sigma}(\beta) = \beta\) for all \(\sigma \in G(E/F)\text{.}\) Therefore, \(\beta\) belongs to the fixed field \(F\) of \(G(E/F)\text{.}\)</p>
 <p id="uAN">Finally, we must show that when \(K\) is a normal extension of \(F\text{,}\)</p>
 <div class="displaymath">
 \begin{equation*}
 G(K/F) \cong G(E/F) / G(E/K)\text{.}
 \end{equation*}
 </div>
-<p data-braille="continuation">For \(\sigma \in G(E/F)\text{,}\) let \(\sigma_K\) be the automorphism of \(K\) obtained by restricting \(\sigma\) to \(K\text{.}\) Since \(K\) is a normal extension, the argument in the preceding paragraph shows that \(\sigma_K \in G( K/F)\text{.}\) Consequently, we have a map \(\phi:G(E/F) \rightarrow G(K/F)\) defined by \(\sigma \mapsto \sigma_K\text{.}\) This map is a group homomorphism since</p>
+<p class="continuation">For \(\sigma \in G(E/F)\text{,}\) let \(\sigma_K\) be the automorphism of \(K\) obtained by restricting \(\sigma\) to \(K\text{.}\) Since \(K\) is a normal extension, the argument in the preceding paragraph shows that \(\sigma_K \in G( K/F)\text{.}\) Consequently, we have a map \(\phi:G(E/F) \rightarrow G(K/F)\) defined by \(\sigma \mapsto \sigma_K\text{.}\) This map is a group homomorphism since</p>
 <div class="displaymath">
 \begin{equation*}
 \phi( \sigma \tau ) = (\sigma \tau)_K = \sigma_K \tau_K  = \phi( \sigma) \phi( \tau )\text{.}
 \end{equation*}
 </div>
-<p data-braille="continuation">The kernel of \(\phi\) is \(G(E/K)\text{.}\) By (2),</p>
+<p class="continuation">The kernel of \(\phi\) is \(G(E/K)\text{.}\) By (2),</p>
 <div class="displaymath">
 \begin{equation*}
 |G(E/F)| / |G(E/K)| = [K:F] = |G(K/F)|\text{.}
 \end{equation*}
 </div>
-<p data-braille="continuation">Hence, the image of \(\phi\) is \(G(K/F)\) and \(\phi\) is onto. Applying the First Isomorphism Theorem, we have</p>
+<p class="continuation">Hence, the image of \(\phi\) is \(G(K/F)\) and \(\phi\) is onto. Applying the First Isomorphism Theorem, we have</p>
 <div class="displaymath">
 \begin{equation*}
 G(K/F) \cong G(E/F) / G( E/K )\text{.}
@@ -495,7 +501,7 @@ G(K/F) \cong G(E/F) / G( E/K )\text{.}
 \{ 1, \sqrt[4]{2}, (\sqrt[4]{2}\, )^2, (\sqrt[4]{2}\, )^3, i, i \sqrt[4]{2}, i (\sqrt[4]{2}\, )^2, i(\sqrt[4]{2}\, )^3 \}
 \end{equation*}
 </div>
-<p data-braille="continuation">is a basis of \({\mathbb Q}( \sqrt[4]{2}, i )\) over \({\mathbb Q}\text{.}\) The lattice of field extensions of \({\mathbb Q}\) contained in \({\mathbb Q}( \sqrt[4]{2}, i)\) is illustrated in <a class="xref" data-knowl="./knowl/figure-galois-3.html" title="Figure 9.31">Figure 9.31</a>(a).</p>
+<p class="continuation">is a basis of \({\mathbb Q}( \sqrt[4]{2}, i )\) over \({\mathbb Q}\text{.}\) The lattice of field extensions of \({\mathbb Q}\) contained in \({\mathbb Q}( \sqrt[4]{2}, i)\) is illustrated in <a class="xref" data-knowl="./knowl/figure-galois-3.html" title="Figure 9.31">Figure 9.31</a>(a).</p>
 <p id="nGi">The Galois group \(G\) of \(f(x)\) must be of order \(8\text{.}\) Let \(\sigma\) be the automorphism defined by \(\sigma( \sqrt[4]{2}\, ) = i \sqrt[4]{2}\) and \(\sigma( i ) = i\text{,}\) and \(\tau\) be the automorphism defined by complex conjugation; that is, \(\tau(i ) = -i\text{.}\) Then \(G\) has an element of order \(4\) and an element of order \(2\text{.}\) It is easy to verify by direct computation that the elements of \(G\) are \(\{ \identity, \sigma, \sigma^2, \sigma^3, \tau, \sigma \tau, \sigma^2 \tau, \sigma^3 \tau \}\) and that the relations \(\tau^2 = \identity\text{,}\) \(\sigma^4 = \identity\text{,}\) and \(\tau \sigma \tau = \sigma^{-1}\) are satisfied; hence, \(G\) must be isomorphic to \(D_4\text{.}\) The lattice of subgroups of \(G\) is illustrated in <a class="xref" data-knowl="./knowl/figure-galois-3.html" title="Figure 9.31">Figure 9.31</a>(b).</p></article><figure class="figure figure-like" id="NYf"><div class="image-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><img src="images/galois-fourth-root2.svg" role="img" style="width: 100%; height: auto;" alt=""></div>
 <figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">9.31<span class="period">.</span></span><span class="space"> </span>Galois group of \(x^4-2\)</figcaption></figure></section><section class="subsection" id="tvh"><h3 class="heading hide-type">
 <span class="type">Subsection</span> <span class="codenumber">9.3.1</span> <span class="title">Historical Note</span>
@@ -511,7 +517,7 @@ G(K/F) \cong G(E/F) / G( E/K )\text{.}
 <ol class="lower-alpha">
 <li id="VHf"><p id="ujP">Describe the 8 automorphisms in \(G(E/\Q)\text{.}\)  The Galois group is isomorphic to \(D_4\text{,}\) so you should describe both what each element does to elements in the field and which element of \(D_4\) they correspond to.</p></li>
 <li id="BOo"><p id="aqY">One of the subfields of \(E\) is \(\Q(\sqrt{3})\text{.}\)  Find the <em class="emphasis">fixer</em> of this subfield.  That is, find the subgroup of \(G(E/\Q)\) that corresponds to this subfield.  How many elements does it have, and how does this relate to the degrees around \(\Q(\sqrt{3})\text{?}\)</p></li>
-<li id="hVx"><p id="Gyh">Pick your favorite non-trivial subgroup of \(D_4\) that you did not just describe in the previous part, and find the <em class="emphasis">fixfield</em> of it.  That is, find the subfield of \(E\) that corresponds to your subgroup.  Again, compare sizes, indexes, and degrees.</p></li>
+<li id="hVx"><p id="Gyh">Pick your favorite non-trivial subgroup of \(D_4\) that you did not just describe in the previous part, and find the <em class="emphasis">fixed field</em> of it.  That is, find the subfield of \(E\) that corresponds to your subgroup.  Again, compare sizes, indexes, and degrees.</p></li>
 <li id="OcG"><p id="mFq">Bonus: Complete the lattice of subgroups of \(D_4\) and lattice of subfields of \(E\text{.}\)</p></li>
 </ol></article></section></section></div></main>
 </div>

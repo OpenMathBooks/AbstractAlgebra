@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2021-02-08T11:02:27-07:00       *-->
+<!--*       on 2021-02-12T14:42:11-07:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -59,7 +59,7 @@ MathJax.Hub.Config({
 <!-- 2019-10-12: Temporary - CSS file for experiments with styling --><link xmlns:svg="http://www.w3.org/2000/svg" href="developer.css" rel="stylesheet" type="text/css">
 </head>
 <body id="judson-AATA" class="mathbook-book has-toc has-sidebar-left">
-<a class="assistive" href="#content">Skip to main content</a><div xmlns:svg="http://www.w3.org/2000/svg" class="hidden-content" style="display:none">\(\newcommand{\identity}{\mathrm{id}}
+<a class="assistive" href="#content">Skip to main content</a><div xmlns:svg="http://www.w3.org/2000/svg" id="latex-macros" class="hidden-content" style="display:none">\(\newcommand{\identity}{\mathrm{id}}
 \newcommand{\notdivide}{\nmid}
 \newcommand{\notsubset}{\not\subset}
 \newcommand{\lcm}{\operatorname{lcm}}
@@ -325,7 +325,7 @@ p(1) &amp; = 1\\
 p(2) &amp; = 2\text{.}
 \end{align*}
 </div>
-<p data-braille="continuation">Therefore, \(p(x)\) has no zeros in \({\mathbb Z}_3\) and must be irreducible.</p></article><article class="lemma theorem-like" id="TLR"><h6 class="heading">
+<p class="continuation">Therefore, \(p(x)\) has no zeros in \({\mathbb Z}_3\) and must be irreducible.</p></article><article class="lemma theorem-like" id="TLR"><h6 class="heading">
 <span class="type">Lemma</span><span class="space"> </span><span class="codenumber">6.20</span><span class="period">.</span>
 </h6>
 <p id="IYE">Let \(p(x) \in {\mathbb Q}[x]\text{.}\) Then</p>
@@ -334,32 +334,32 @@ p(2) &amp; = 2\text{.}
 p(x) = \frac{r}{s}(a_0 + a_1 x + \cdots + a_n x^n)\text{,}
 \end{equation*}
 </div>
-<p data-braille="continuation">where \(r, s, a_0, \ldots, a_n\) are integers, the \(a_i\)'s are relatively prime, and \(r\) and \(s\) are relatively prime.</p></article><article class="proof" id="rji"><h6 class="heading"><span class="type">Proof<span class="period">.</span></span></h6>
+<p class="continuation">where \(r, s, a_0, \ldots, a_n\) are integers, the \(a_i\)'s are relatively prime, and \(r\) and \(s\) are relatively prime.</p></article><article class="proof" id="rji"><h6 class="heading"><span class="type">Proof<span class="period">.</span></span></h6>
 <p id="Wsp">Suppose that</p>
 <div class="displaymath">
 \begin{equation*}
 p(x) = \frac{b_0}{c_0} + \frac{b_1}{c_1} x + \cdots + \frac{b_n}{c_n} x^n\text{,}
 \end{equation*}
 </div>
-<p data-braille="continuation">where the \(b_i\)'s and the \(c_i\)'s are integers. We can rewrite \(p(x)\) as</p>
+<p class="continuation">where the \(b_i\)'s and the \(c_i\)'s are integers. We can rewrite \(p(x)\) as</p>
 <div class="displaymath">
 \begin{equation*}
 p(x) = \frac{1}{c_0 \cdots c_n} (d_0 + d_1 x + \cdots + d_n x^n)\text{,}
 \end{equation*}
 </div>
-<p data-braille="continuation">where \(d_0, \ldots, d_n\) are integers. Let \(d\) be the greatest common divisor of \(d_0, \ldots, d_n\text{.}\) Then</p>
+<p class="continuation">where \(d_0, \ldots, d_n\) are integers. Let \(d\) be the greatest common divisor of \(d_0, \ldots, d_n\text{.}\) Then</p>
 <div class="displaymath">
 \begin{equation*}
 p(x) = \frac{d}{c_0 \cdots c_n} (a_0 + a_1 x + \cdots + a_n x^n)\text{,}
 \end{equation*}
 </div>
-<p data-braille="continuation">where \(d_i = d a_i\) and the \(a_i\)'s are relatively prime. Reducing \(d /(c_0 \cdots c_n)\) to its lowest terms, we can write</p>
+<p class="continuation">where \(d_i = d a_i\) and the \(a_i\)'s are relatively prime. Reducing \(d /(c_0 \cdots c_n)\) to its lowest terms, we can write</p>
 <div class="displaymath">
 \begin{equation*}
 p(x) = \frac{r}{s}(a_0 + a_1 x + \cdots + a_n x^n)\text{,}
 \end{equation*}
 </div>
-<p data-braille="continuation">where \(\gcd(r,s) = 1\text{.}\)</p></article><article class="theorem theorem-like" id="vjh"><h6 class="heading">
+<p class="continuation">where \(\gcd(r,s) = 1\text{.}\)</p></article><article class="theorem theorem-like" id="vjh"><h6 class="heading">
 <span class="type">Theorem</span><span class="space"> </span><span class="codenumber">6.21</span><span class="period">.</span><span class="space"> </span><span class="title">Gauss's Lemma.</span>
 </h6>
 <p id="YhC">Let \(p(x) \in {\mathbb Z}[x]\) be a monic polynomial such that \(p(x)\) factors into a product of two polynomials \(\alpha(x)\) and \(\beta(x)\) in \({\mathbb Q}[x]\text{,}\) where the degrees of both \(\alpha(x)\) and \(\beta(x)\) are less than the degree of \(p(x)\text{.}\) Then \(p(x) = a(x) b(x)\text{,}\) where \(a(x)\) and \(b(x)\) are monic polynomials in \({\mathbb Z}[x]\) with \(\deg \alpha(x) = \deg a(x)\) and \(\deg \beta(x) = \deg b(x)\text{.}\)</p></article><article class="proof" id="Gsg"><h6 class="heading"><span class="type">Proof<span class="period">.</span></span></h6>
@@ -370,13 +370,13 @@ p(x) = \frac{r}{s}(a_0 + a_1 x + \cdots + a_n x^n)\text{,}
 \beta(x)  &amp; = \frac{c_2}{d_2} (b_0 + b_1 x + \cdots + b_n x^n) = \frac{c_2}{d_2} \beta_1(x)\text{,}
 \end{align*}
 </div>
-<p data-braille="continuation">where the \(a_i\)'s are relatively prime and the \(b_i\)'s are relatively prime. Consequently,</p>
+<p class="continuation">where the \(a_i\)'s are relatively prime and the \(b_i\)'s are relatively prime. Consequently,</p>
 <div class="displaymath">
 \begin{equation*}
 p(x) = \alpha(x) \beta(x) = \frac{c_1 c_2}{d_1 d_2} \alpha_1(x) \beta_1(x) = \frac{c}{d} \alpha_1(x) \beta_1(x)\text{,}
 \end{equation*}
 </div>
-<p data-braille="continuation">where \(c/d\) is the product of \(c_1/d_1\) and \(c_2/d_2\) expressed in lowest terms. Hence, \(d p(x) = c \alpha_1(x) \beta_1(x)\text{.}\)</p>
+<p class="continuation">where \(c/d\) is the product of \(c_1/d_1\) and \(c_2/d_2\) expressed in lowest terms. Hence, \(d p(x) = c \alpha_1(x) \beta_1(x)\text{.}\)</p>
 <p id="iGH">If \(d = 1\text{,}\) then \(c a_m b_n = 1\) since \(p(x)\) is a monic polynomial. Hence, either \(c=1\) or \(c = -1\text{.}\) If \(c = 1\text{,}\) then either \(a_m = b_n = 1\) or \(a_m = b_n = -1\text{.}\) In the first case \(p(x) = \alpha_1(x) \beta_1(x)\text{,}\) where \(\alpha_1(x)\) and \(\beta_1(x)\) are monic polynomials with \(\deg \alpha(x) = \deg \alpha_1(x)\) and \(\deg \beta(x) = \deg \beta_1(x)\text{.}\) In the second case \(a(x) = -\alpha_1(x)\) and \(b(x) = -\beta_1(x)\) are the correct monic polynomials since \(p(x) = (-\alpha_1(x))(- \beta_1(x)) = a(x) b(x)\text{.}\) The case in which \(c = -1\) can be handled similarly.</p>
 <p id="ONQ">Now suppose that \(d \neq 1\text{.}\) Since \(\gcd(c, d) = 1\text{,}\) there exists a prime \(p\) such that \(p \mid d\) and \(p \notdivide c\text{.}\) Also, since the coefficients of \(\alpha_1(x)\) are relatively prime, there exists a coefficient \(a_i\) such that \(p \notdivide a_i\text{.}\) Similarly, there exists a coefficient \(b_j\) of \(\beta_1(x)\) such that \(p \notdivide b_j\text{.}\) Let \(\alpha_1'(x)\) and \(\beta_1'(x)\) be the polynomials in \({\mathbb Z}_p[x]\) obtained by reducing the coefficients of \(\alpha_1(x)\) and \(\beta_1(x)\) modulo \(p\text{.}\) Since \(p \mid d\text{,}\) \(\alpha_1'(x) \beta_1'(x) = 0\) in \({\mathbb Z}_p[x]\text{.}\) However, this is impossible since neither \(\alpha_1'(x)\) nor \(\beta_1'(x)\) is the zero polynomial and \({\mathbb Z}_p[x]\) is an integral domain. Therefore, \(d=1\) and the theorem is proven.</p></article><article class="corollary theorem-like" id="Mhs"><h6 class="heading">
 <span class="type">Corollary</span><span class="space"> </span><span class="codenumber">6.22</span><span class="period">.</span>
@@ -388,7 +388,7 @@ p(x) = \alpha(x) \beta(x) = \frac{c_1 c_2}{d_1 d_2} \alpha_1(x) \beta_1(x) = \fr
 p(x) = (x - \alpha)( x^{n - 1} + \cdots - a_0 / \alpha )\text{.}
 \end{equation*}
 </div>
-<p data-braille="continuation">Thus \(a_0 /\alpha \in {\mathbb Z}\) and so \(\alpha \mid a_0\text{.}\)</p></article><article class="example example-like" id="dfD"><h6 class="heading">
+<p class="continuation">Thus \(a_0 /\alpha \in {\mathbb Z}\) and so \(\alpha \mid a_0\text{.}\)</p></article><article class="example example-like" id="dfD"><h6 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">6.23</span><span class="period">.</span>
 </h6>
 <p id="Ssq">Let \(p(x) = x^4 - 2 x^3 + x + 1\text{.}\) We shall show that \(p(x)\) is irreducible over \({\mathbb Q}[x]\text{.}\) Assume that \(p(x)\) is reducible. Then either \(p(x)\) has a linear factor, say \(p(x) = (x - \alpha) q(x)\text{,}\) where \(q(x)\) is a polynomial of degree three, or \(p(x)\) has two quadratic factors.</p>
@@ -400,7 +400,7 @@ p(x) &amp; = (x^2 + ax + b )( x^2 + cx + d )\\
 &amp; = x^4 + (a + c)x^3 + (ac + b + d)x^2 + (ad + bc)x + bd\text{,}
 \end{align*}
 </div>
-<p data-braille="continuation">where each factor is in \({\mathbb Z}[x]\) by Gauss's Lemma. Hence,</p>
+<p class="continuation">where each factor is in \({\mathbb Z}[x]\) by Gauss's Lemma. Hence,</p>
 <div class="displaymath">
 \begin{align*}
 a + c &amp; = - 2\\
@@ -409,13 +409,13 @@ ad + bc &amp; = 1\\
 bd &amp; = 1\text{.}
 \end{align*}
 </div>
-<p data-braille="continuation">Since \(bd = 1\text{,}\) either \(b = d = 1\) or \(b = d = -1\text{.}\) In either case \(b = d\) and so</p>
+<p class="continuation">Since \(bd = 1\text{,}\) either \(b = d = 1\) or \(b = d = -1\text{.}\) In either case \(b = d\) and so</p>
 <div class="displaymath">
 \begin{equation*}
 ad + bc  = b( a + c ) = 1\text{.}
 \end{equation*}
 </div>
-<p data-braille="continuation">Since \(a + c = -2\text{,}\) we know that \(-2b = 1\text{.}\) This is impossible since \(b\) is an integer. Therefore, \(p(x)\) must be irreducible over \({\mathbb Q}\text{.}\)</p></article><article class="theorem theorem-like" id="bqq"><h6 class="heading">
+<p class="continuation">Since \(a + c = -2\text{,}\) we know that \(-2b = 1\text{.}\) This is impossible since \(b\) is an integer. Therefore, \(p(x)\) must be irreducible over \({\mathbb Q}\text{.}\)</p></article><article class="theorem theorem-like" id="bqq"><h6 class="heading">
 <span class="type">Theorem</span><span class="space"> </span><span class="codenumber">6.24</span><span class="period">.</span><span class="space"> </span><span class="title">Eisenstein's Criterion.</span>
 </h6>
 <p id="EoL">Let \(p\) be a prime and suppose that</p>
@@ -424,7 +424,7 @@ ad + bc  = b( a + c ) = 1\text{.}
 f(x) = a_n x^n + \cdots + a_0 \in {\mathbb Z}[x]\text{.}
 \end{equation*}
 </div>
-<p data-braille="continuation">If \(p \mid a_i\) for \(i = 0, 1, \ldots,
+<p class="continuation">If \(p \mid a_i\) for \(i = 0, 1, \ldots,
 n-1\text{,}\) but \(p \notdivide a_n\) and \(p^2 \notdivide a_0\text{,}\) then \(f(x)\) is irreducible over \({\mathbb Q}\text{.}\)</p></article><article class="proof" id="mzp"><h6 class="heading"><span class="type">Proof<span class="period">.</span></span></h6>
 <p id="bci">By Gauss's Lemma, we need only show that \(f(x)\) does not factor into polynomials of lower degree in \({\mathbb Z}[x]\text{.}\) Let</p>
 <div class="displaymath">
@@ -432,14 +432,14 @@ n-1\text{,}\) but \(p \notdivide a_n\) and \(p^2 \notdivide a_0\text{,}\) then \
 f(x) = (b_rx^r + \cdots + b_0)(c_s x^s + \cdots + c_0 )
 \end{equation*}
 </div>
-<p data-braille="continuation">be a factorization in \({\mathbb Z}[x]\text{,}\) with \(b_r\) and \(c_s\) not equal to zero and \(r,
+<p class="continuation">be a factorization in \({\mathbb Z}[x]\text{,}\) with \(b_r\) and \(c_s\) not equal to zero and \(r,
 s \lt n\text{.}\) Since \(p^2\) does not divide \(a_0 = b_0 c_0\text{,}\) either \(b_0\) or \(c_0\) is not divisible by \(p\text{.}\) Suppose that \(p \notdivide b_0\) and \(p \mid c_0\text{.}\) Since \(p \notdivide a_n\) and \(a_n = b_r c_s\text{,}\) neither \(b_r\) nor \(c_s\) is divisible by \(p\text{.}\) Let \(m\) be the smallest value of \(k\) such that \(p \notdivide c_k\text{.}\) Then</p>
 <div class="displaymath">
 \begin{equation*}
 a_m = b_0 c_m + b_1 c_{m - 1} + \cdots + b_m c_0
 \end{equation*}
 </div>
-<p data-braille="continuation">is not divisible by \(p\text{,}\) since each term on the right-hand side of the equation is divisible by \(p\) except for \(b_0 c_m\text{.}\) Therefore, \(m = n\) since \(a_i\) is divisible by \(p\) for \(m \lt n\text{.}\) Hence, \(f(x)\) cannot be factored into polynomials of lower degree and therefore must be irreducible.</p></article><article class="example example-like" id="JmM"><h6 class="heading">
+<p class="continuation">is not divisible by \(p\text{,}\) since each term on the right-hand side of the equation is divisible by \(p\) except for \(b_0 c_m\text{.}\) Therefore, \(m = n\) since \(a_i\) is divisible by \(p\) for \(m \lt n\text{.}\) Hence, \(f(x)\) cannot be factored into polynomials of lower degree and therefore must be irreducible.</p></article><article class="example example-like" id="JmM"><h6 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">6.25</span><span class="period">.</span>
 </h6>
 <p id="KNR">The polynomial</p>
@@ -448,7 +448,7 @@ a_m = b_0 c_m + b_1 c_{m - 1} + \cdots + b_m c_0
 f(x) = 16 x^5 - 9 x^4 + 3x^2 + 6 x - 21
 \end{equation*}
 </div>
-<p data-braille="continuation">is easily seen to be irreducible over \({\mathbb Q}\) by Eisenstein's Criterion if we let \(p = 3\text{.}\)</p></article><p id="PxK">Eisenstein's Criterion is more useful in constructing irreducible polynomials of a certain degree over \({\mathbb Q}\) than in determining the irreducibility of an arbitrary polynomial in \({\mathbb Q}[x]\text{:}\) given an arbitrary polynomial, it is not very likely that we can apply Eisenstein's Criterion. The real value of <a class="xref" data-knowl="./knowl/theorem-eisenstein.html" title="Theorem 6.24: Eisenstein's Criterion">Theorem 6.24</a> is that we now have an easy method of generating irreducible polynomials of any degree.</p></section><section class="subsection" id="ZWC"><h3 class="heading hide-type">
+<p class="continuation">is easily seen to be irreducible over \({\mathbb Q}\) by Eisenstein's Criterion if we let \(p = 3\text{.}\)</p></article><p id="PxK">Eisenstein's Criterion is more useful in constructing irreducible polynomials of a certain degree over \({\mathbb Q}\) than in determining the irreducibility of an arbitrary polynomial in \({\mathbb Q}[x]\text{:}\) given an arbitrary polynomial, it is not very likely that we can apply Eisenstein's Criterion. The real value of <a class="xref" data-knowl="./knowl/theorem-eisenstein.html" title="Theorem 6.24: Eisenstein's Criterion">Theorem 6.24</a> is that we now have an easy method of generating irreducible polynomials of any degree.</p></section><section class="subsection" id="ZWC"><h3 class="heading hide-type">
 <span class="type">Subsection</span> <span class="codenumber">6.4.1</span> <span class="title">Ideals in \(F\lbrack x \rbrack\)</span>
 </h3>
 <p id="iVc">Let \(F\) be a field. Recall that a principal ideal in \(F[x]\) is an ideal \(\langle p(x) \rangle\) generated by some polynomial \(p(x)\text{;}\) that is,</p>
@@ -483,7 +483,7 @@ f(x) = 16 x^5 - 9 x^4 + 3x^2 + 6 x - 21
 ax^3 + cx + d = 0\text{.}
 \end{equation*}
 </div>
-<p data-braille="continuation">He kept his solution an absolute secret. This may seem surprising today, when mathematicians are usually very eager to publish their results, but in the days of the Italian Renaissance secrecy was customary. Academic appointments were not easy to secure and depended on the ability to prevail in public contests. Such challenges could be issued at any time. Consequently, any major new discovery was a valuable weapon in such a contest. If an opponent presented a list of problems to be solved, del Ferro could in turn present a list of depressed cubics. He kept the secret of his discovery throughout his life, passing it on only on his deathbed to his student Antonio Fior  (ca. 1506–?).</p>
+<p class="continuation">He kept his solution an absolute secret. This may seem surprising today, when mathematicians are usually very eager to publish their results, but in the days of the Italian Renaissance secrecy was customary. Academic appointments were not easy to secure and depended on the ability to prevail in public contests. Such challenges could be issued at any time. Consequently, any major new discovery was a valuable weapon in such a contest. If an opponent presented a list of problems to be solved, del Ferro could in turn present a list of depressed cubics. He kept the secret of his discovery throughout his life, passing it on only on his deathbed to his student Antonio Fior  (ca. 1506–?).</p>
 <p id="HxM">Although Fior was not the equal of his teacher, he immediately issued a challenge to Niccolo Fontana (1499–1557). Fontana was known as Tartaglia  (the Stammerer). As a youth he had suffered a blow from the sword of a French soldier during an attack on his village. He survived the savage wound, but his speech was permanently impaired. Tartaglia sent Fior a list of 30 various mathematical problems; Fior countered by sending Tartaglia a list of 30 depressed cubics. Tartaglia would either solve all 30 of the problems or absolutely fail. After much effort Tartaglia finally succeeded in solving the depressed cubic and defeated Fior, who faded into obscurity.</p>
 <p id="nEV">At this point another mathematician, Gerolamo Cardano  (1501–1576), entered the story. Cardano wrote to Tartaglia, begging him for the solution to the depressed cubic. Tartaglia refused several of his requests, then finally revealed the solution to Cardano after the latter swore an oath not to publish the secret or to pass it on to anyone else. Using the knowledge that he had obtained from Tartaglia, Cardano eventually solved the general cubic</p>
 <div class="displaymath">
@@ -491,13 +491,13 @@ ax^3 + cx + d = 0\text{.}
 a x^3 + bx^2 + cx + d = 0\text{.}
 \end{equation*}
 </div>
-<p data-braille="continuation">Cardano shared the secret with his student, Ludovico Ferrari  (1522–1565), who solved the general quartic equation,</p>
+<p class="continuation">Cardano shared the secret with his student, Ludovico Ferrari  (1522–1565), who solved the general quartic equation,</p>
 <div class="displaymath">
 \begin{equation*}
 a x^4 + b x^3 + cx^2 + d x + e = 0\text{.}
 \end{equation*}
 </div>
-<p data-braille="continuation">In 1543, Cardano and Ferrari examined del Ferro's papers and discovered that he had also solved the depressed cubic. Cardano felt that this relieved him of his obligation to Tartaglia, so he proceeded to publish the solutions in <span class="booktitle">Ars Magna</span> (1545), in which he gave credit to del Ferro for solving the special case of the cubic. This resulted in a bitter dispute between Cardano and Tartaglia, who published the story of the oath a year later.</p></section><section class="reading-questions" id="gmF"><h3 class="heading hide-type">
+<p class="continuation">In 1543, Cardano and Ferrari examined del Ferro's papers and discovered that he had also solved the depressed cubic. Cardano felt that this relieved him of his obligation to Tartaglia, so he proceeded to publish the solutions in <span class="booktitle">Ars Magna</span> (1545), in which he gave credit to del Ferro for solving the special case of the cubic. This resulted in a bitter dispute between Cardano and Tartaglia, who published the story of the oath a year later.</p></section><section class="reading-questions" id="gmF"><h3 class="heading hide-type">
 <span class="type">Reading Questions</span> <span class="codenumber">6.4.3</span> <span class="title">Reading Questions</span>
 </h3>
 <article class="exercise exercise-like" id="Jzi"><h6 class="heading"><span class="codenumber">1<span class="period">.</span></span></h6>

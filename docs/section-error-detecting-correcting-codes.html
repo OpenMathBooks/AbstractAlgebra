@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2021-02-08T11:04:33-07:00       *-->
+<!--*       on 2021-02-12T14:43:25-07:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -59,7 +59,7 @@ MathJax.Hub.Config({
 <!-- 2019-10-12: Temporary - CSS file for experiments with styling --><link xmlns:svg="http://www.w3.org/2000/svg" href="developer.css" rel="stylesheet" type="text/css">
 </head>
 <body id="judson-AATA" class="mathbook-book has-toc has-sidebar-left">
-<a class="assistive" href="#content">Skip to main content</a><div xmlns:svg="http://www.w3.org/2000/svg" class="hidden-content" style="display:none">\(\newcommand{\identity}{\mathrm{id}}
+<a class="assistive" href="#content">Skip to main content</a><div xmlns:svg="http://www.w3.org/2000/svg" id="latex-macros" class="hidden-content" style="display:none">\(\newcommand{\identity}{\mathrm{id}}
 \newcommand{\notdivide}{\nmid}
 \newcommand{\notsubset}{\not\subset}
 \newcommand{\lcm}{\operatorname{lcm}}
@@ -323,7 +323,7 @@ x_{n})\text{.}\) The message is encoded into a binary \(3n\)-tuple by simply rep
 (x_{1}, x_{2}, \ldots, x_{n}) \mapsto (x_{1}, x_{2}, \ldots, x_{n}, x_{1}, x_{2}, \ldots, x_{n}, x_{1}, x_{2}, \ldots, x_{n})\text{.}
 \end{equation*}
 </div>
-<p data-braille="continuation">To decode the message, we choose as the \(i\)th digit the one that appears in the \(i\)th place in at least two of the three transmissions. For example, if the original message is \((0110)\text{,}\) then the transmitted message will be \((0110\;  0110\;  0110)\text{.}\) If there is a transmission error in the fifth digit, then the received codeword will be \((0110\;  1110\;  0110)\text{,}\) which will be correctly decoded as \((0110)\text{.}\)<a data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-5" id="fn-5"><sup> 1 </sup></a> This triple-repetition method will automatically detect and correct all single errors, but it is slow and inefficient: to send a message consisting of \(n\) bits, \(2n\) extra bits are required, and we can only detect and correct single errors. We will see that it is possible to find an encoding scheme that will encode a message of \(n\) bits into \(m\) bits with \(m\) much smaller than \(3n\text{.}\)</p>
+<p class="continuation">To decode the message, we choose as the \(i\)th digit the one that appears in the \(i\)th place in at least two of the three transmissions. For example, if the original message is \((0110)\text{,}\) then the transmitted message will be \((0110\;  0110\;  0110)\text{.}\) If there is a transmission error in the fifth digit, then the received codeword will be \((0110\;  1110\;  0110)\text{,}\) which will be correctly decoded as \((0110)\text{.}\)<a data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-5" id="fn-5"><sup> 1 </sup></a> This triple-repetition method will automatically detect and correct all single errors, but it is slow and inefficient: to send a message consisting of \(n\) bits, \(2n\) extra bits are required, and we can only detect and correct single errors. We will see that it is possible to find an encoding scheme that will encode a message of \(n\) bits into \(m\) bits with \(m\) much smaller than \(3n\text{.}\)</p>
 <div class="hidden-content tex2jax_ignore" id="hk-fn-5"><div class="fn">We will adopt the convention that bits are numbered left to right in binary \(n\)-tuples.</div></div></article><article class="example example-like" id="OzI"><h6 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">16.3</span><span class="period">.</span>
 </h6>
@@ -335,7 +335,7 @@ x_{n})\text{.}\) The message is encoded into a binary \(3n\)-tuple by simply rep
 \text{C} &amp; = 67_{10} = 01000011_{2}\text{.}
 \end{align*}
 </div>
-<p data-braille="continuation">Notice that the leftmost bit is always set to 0; that is, the \(128\) <abbr class="acronym">ASCII</abbr> characters have codes</p>
+<p class="continuation">Notice that the leftmost bit is always set to 0; that is, the \(128\) <abbr class="acronym">ASCII</abbr> characters have codes</p>
 <div class="displaymath">
 \begin{align*}
 00000000_{2} &amp; = 0_{10},\\
@@ -343,7 +343,7 @@ x_{n})\text{.}\) The message is encoded into a binary \(3n\)-tuple by simply rep
 01111111_{2} &amp; = 127_{10}\text{.}
 \end{align*}
 </div>
-<p data-braille="continuation">The bit can be used for error checking on the other seven bits. It is set to either \(0\) or \(1\) so that the total number of \(1\) bits in the representation of a character is even. Using even parity, the codes for A, B, and C now become</p>
+<p class="continuation">The bit can be used for error checking on the other seven bits. It is set to either \(0\) or \(1\) so that the total number of \(1\) bits in the representation of a character is even. Using even parity, the codes for A, B, and C now become</p>
 <div class="displaymath">
 \begin{align*}
 \text{A} &amp; = 01000001_{2},\\
@@ -351,17 +351,17 @@ x_{n})\text{.}\) The message is encoded into a binary \(3n\)-tuple by simply rep
 \text{C} &amp; = 11000011_{2}\text{.}
 \end{align*}
 </div>
-<p data-braille="continuation">Suppose an A is sent and a transmission error in the sixth bit is caused by noise over the communication channel so that  \((0100\; 0101)\) is received. We know an error has occurred since the received word has an odd number of \(1\)s, and we can now request that the codeword be transmitted again. When used for error checking, the leftmost bit is called a <dfn class="terminology">parity check bit</dfn>.</p>
+<p class="continuation">Suppose an A is sent and a transmission error in the sixth bit is caused by noise over the communication channel so that  \((0100\; 0101)\) is received. We know an error has occurred since the received word has an odd number of \(1\)s, and we can now request that the codeword be transmitted again. When used for error checking, the leftmost bit is called a <dfn class="terminology">parity check bit</dfn>.</p>
 <p id="xXj">By far the most common error-detecting codes used in computers are based on the addition of a parity bit. Typically, a computer stores information in \(m\)-tuples called <dfn class="terminology">words</dfn>. Common word lengths are \(8\text{,}\) \(16\text{,}\) and \(32\) bits. One bit in the word is set aside as the parity check bit, and is not used to store information. This bit is set to either \(0\) or \(1\text{,}\) depending on the number of \(1\)s in the word.</p>
 <p id="ees">Adding a parity check bit allows the detection of all single errors because changing a single bit either increases or decreases the number of \(1\)s by one, and in either case the parity has been changed from even to odd, so the new word is not a codeword. (We could also construct an error detection scheme based on <dfn class="terminology">odd parity</dfn>; that is, we could set the parity check bit so that a codeword always has an odd number of \(1\)s.)</p></article><p id="VuA">The even parity system is easy to implement, but has two drawbacks. First, multiple errors are not detectable. Suppose an A is sent and the first and seventh bits are changed from \(0\) to \(1\text{.}\) The received word is a codeword, but will be decoded into a C instead of an A. Second, we do not have the ability to correct errors. If the 8-tuple \((1001\; 1000)\) is received, we know that an error has occurred, but we have no idea which bit has been changed. We will now investigate a coding scheme that will not only allow us to detect transmission errors but will actually correct the errors.</p>
 <article class="example example-like" id="uGR"><h6 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">16.4</span><span class="period">.</span>
 </h6>
 <p id="KlB">Suppose that our original message is either a \(0\) or a \(1\text{,}\) and that \(0\) encodes to \((000)\) and \(1\) encodes to \((111)\text{.}\) If only a single error occurs during transmission, we can detect and correct the error. For example, if a \((101)\) is received, then the second bit must have been changed from a \(1\) to a \(0\text{.}\) The originally transmitted codeword must have been \((111)\text{.}\) This method will detect and correct all single errors.</p>
-<figure class="table table-like" id="cww"><figcaption><span class="type">Table</span><span class="space"> </span><span class="codenumber">16.5<span class="period">.</span></span><span class="space"> </span>A repetition code</figcaption><div class="tabular-box natural-width"><table class="tabular">
+<figure class="table table-like" id="cww"><figcaption><span class="type">Table</span><span class="space"> </span><span class="codenumber">16.5<span class="period">.</span></span><span class="space"> </span>A repetition code</figcaption><div class="tabular-box natural-width"><table class="tabular" id="IDF">
 <tr>
 <td class="c m b0 r0 l0 t2 lines">Transmitted</td>
-<td class="c m b0 r0 l0 t2 lines" data-braille="last-cell" colspan="8">Received Word</td>
+<td class="c m b0 r0 l0 t2 lines" colspan="8">Received Word</td>
 </tr>
 <tr>
 <td class="c m b2 r0 l0 t0 lines">Codeword</td>
@@ -372,7 +372,7 @@ x_{n})\text{.}\) The message is encoded into a binary \(3n\)-tuple by simply rep
 <td class="c m b2 r0 l0 t0 lines">\(100\)</td>
 <td class="c m b2 r0 l0 t0 lines">\(101\)</td>
 <td class="c m b2 r0 l0 t0 lines">\(110\)</td>
-<td class="c m b2 r0 l0 t0 lines" data-braille="last-cell">\(111\)</td>
+<td class="c m b2 r0 l0 t0 lines">\(111\)</td>
 </tr>
 <tr>
 <td class="c m b0 r0 l0 t0 lines">\(000\)</td>
@@ -383,7 +383,7 @@ x_{n})\text{.}\) The message is encoded into a binary \(3n\)-tuple by simply rep
 <td class="c m b0 r0 l0 t0 lines">\(1\)</td>
 <td class="c m b0 r0 l0 t0 lines">\(2\)</td>
 <td class="c m b0 r0 l0 t0 lines">\(2\)</td>
-<td class="c m b0 r0 l0 t0 lines" data-braille="last-cell">\(3\)</td>
+<td class="c m b0 r0 l0 t0 lines">\(3\)</td>
 </tr>
 <tr>
 <td class="c m b2 r0 l0 t0 lines">\(111\)</td>
@@ -394,7 +394,7 @@ x_{n})\text{.}\) The message is encoded into a binary \(3n\)-tuple by simply rep
 <td class="c m b2 r0 l0 t0 lines">\(2\)</td>
 <td class="c m b2 r0 l0 t0 lines">\(1\)</td>
 <td class="c m b2 r0 l0 t0 lines">\(1\)</td>
-<td class="c m b2 r0 l0 t0 lines" data-braille="last-cell">\(0\)</td>
+<td class="c m b2 r0 l0 t0 lines">\(0\)</td>
 </tr>
 </table></div></figure><p id="qsK">In <a class="xref" data-knowl="./knowl/table-repetition-code.html" title="Table 16.5: A repetition code">Table 16.5</a>, we present all possible words that might be received for the transmitted codewords \((000)\) and \((111)\text{.}\) <a class="xref" data-knowl="./knowl/table-repetition-code.html" title="Table 16.5: A repetition code">Table 16.5</a> also shows the number of bits by which each received \(3\)-tuple differs from each original codeword.</p></article></section><section class="subsection" id="QaA"><h3 class="heading hide-type">
 <span class="type">Subsection</span> <span class="codenumber">16.1.1</span> <span class="title">Maximum-Likelihood Decoding</span>
@@ -424,7 +424,7 @@ x_{n})\) is transmitted across a binary symmetric channel with probability \(p\)
 \binom{n}{k}  = \frac{n!}{k!(n - k)!}\text{,}
 \end{equation*}
 </div>
-<p data-braille="continuation">the number of combinations of \(n\) things taken \(k\) at a time. Each of these error patterns has probability \(q^{k}p^{n-k}\) of occurring; hence, the probability of all of these error patterns is</p>
+<p class="continuation">the number of combinations of \(n\) things taken \(k\) at a time. Each of these error patterns has probability \(q^{k}p^{n-k}\) of occurring; hence, the probability of all of these error patterns is</p>
 <div class="displaymath">
 \begin{equation*}
 \binom{n}{k}  q^{k}p^{n - k}\text{.}
@@ -438,19 +438,19 @@ x_{n})\) is transmitted across a binary symmetric channel with probability \(p\)
 p^{n} = (0.995)^{500} \approx 0.082\text{.}
 \end{equation*}
 </div>
-<p data-braille="continuation">The probability of exactly one error occurring is</p>
+<p class="continuation">The probability of exactly one error occurring is</p>
 <div class="displaymath">
 \begin{equation*}
 \binom{n}{1}  qp^{n - 1}= 500(0.005)(0.995)^{499} \approx 0.204\text{.}
 \end{equation*}
 </div>
-<p data-braille="continuation">The probability of exactly two errors is</p>
+<p class="continuation">The probability of exactly two errors is</p>
 <div class="displaymath">
 \begin{equation*}
 \binom{n}{2} q^{2}p^{n - 2}= \frac{500 \cdot 499}{2}(0.005)^{2}(0.995)^{498} \approx 0.257\text{.}
 \end{equation*}
 </div>
-<p data-braille="continuation">The probability of more than two errors is approximately</p>
+<p class="continuation">The probability of more than two errors is approximately</p>
 <div class="displaymath">
 \begin{equation*}
 1 - 0.082 - 0.204 - 0.257 = 0.457\text{.}
@@ -464,13 +464,13 @@ p^{n} = (0.995)^{500} \approx 0.082\text{.}
 E:{\mathbb Z}^{m}_{2} \rightarrow {\mathbb Z}^{n}_{2}
 \end{equation*}
 </div>
-<p data-braille="continuation">and a <dfn class="terminology">decoding function</dfn></p>
+<p class="continuation">and a <dfn class="terminology">decoding function</dfn></p>
 <div class="displaymath">
 \begin{equation*}
 D:{\mathbb Z}^{n}_{2} \rightarrow {\mathbb Z}^{m}_{2}\text{.}
 \end{equation*}
 </div>
-<p data-braille="continuation">A <dfn class="terminology">codeword</dfn> is any element in the image of \(E\text{.}\) We also require that \(E\) be one-to-one so that two information blocks will not be encoded into the same codeword. If our code is to be error-correcting, then \(D\) must be onto.</p>
+<p class="continuation">A <dfn class="terminology">codeword</dfn> is any element in the image of \(E\text{.}\) We also require that \(E\) be one-to-one so that two information blocks will not be encoded into the same codeword. If our code is to be error-correcting, then \(D\) must be onto.</p>
 <article class="example example-like" id="OVh"><h6 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">16.9</span><span class="period">.</span>
 </h6>
@@ -480,7 +480,7 @@ D:{\mathbb Z}^{n}_{2} \rightarrow {\mathbb Z}^{m}_{2}\text{.}
 E(x_7, x_6, \ldots, x_1) = (x_8, x_7,  \ldots, x_1)\text{,}
 \end{equation*}
 </div>
-<p data-braille="continuation">where \(x_8 = x_7 + x_6 + \cdots + x_1\) with addition in \({\mathbb Z}_2\text{.}\)</p></article><p id="EaQ">Let \({\mathbf x} = (x_1, \ldots,
+<p class="continuation">where \(x_8 = x_7 + x_6 + \cdots + x_1\) with addition in \({\mathbb Z}_2\text{.}\)</p></article><p id="EaQ">Let \({\mathbf x} = (x_1, \ldots,
 x_n)\) and \({\mathbf y} = (y_1, \ldots,
 y_n)\) be binary \(n\)-tuples. The <dfn class="terminology">Hamming distance</dfn>  or <dfn class="terminology">distance</dfn>, \(d({\mathbf x}, {\mathbf y})\text{,}\) between \({\mathbf x}\) and \({\mathbf y}\) is the number of bits in which \({\mathbf x}\) and \({\mathbf y}\) differ. The distance between two codewords is the minimum number of transmission errors required to change one codeword into the other. The <dfn class="terminology">minimum distance</dfn> for a code, \(d_{\min}\text{,}\) is the minimum of all distances \(d({\mathbf x}, {\mathbf y})\text{,}\) where \({\mathbf x}\) and \({\mathbf y}\) are distinct codewords. The <dfn class="terminology">weight</dfn>,  \(w({\mathbf x})\text{,}\) of a binary codeword \({\mathbf x}\) is the number of \(1\)s in \({\mathbf x}\text{.}\) Clearly, \(w({\mathbf x}) = d({\mathbf x}, {\mathbf 0})\text{,}\) where \({\mathbf 0} = (00 \cdots 0)\text{.}\) </p>
 <article class="example example-like" id="vcq"><h6 class="heading">
@@ -492,7 +492,7 @@ y_n)\) be binary \(n\)-tuples. The <dfn class="terminology">Hamming distance</df
 d({\mathbf x},{\mathbf y}) = 4, \qquad d({\mathbf x},{\mathbf z}) = 3, \qquad d({\mathbf y},{\mathbf z}) = 3\text{.}
 \end{equation*}
 </div>
-<p data-braille="continuation">The minimum distance  for this code is 3. We also have the following weights:</p>
+<p class="continuation">The minimum distance  for this code is 3. We also have the following weights:</p>
 <div class="displaymath">
 \begin{equation*}
 w({\mathbf x}) = 3, \qquad w({\mathbf y}) = 3, \qquad w({\mathbf z}) = 2\text{.}
@@ -510,7 +510,7 @@ w({\mathbf x}) = 3, \qquad w({\mathbf y}) = 3, \qquad w({\mathbf z}) = 2\text{.}
 <li id="bcv"><p id="tuu">\(d( {\mathbf x}, {\mathbf y}) \leq d( {\mathbf x}, {\mathbf z}) + d( {\mathbf z}, {\mathbf y})\text{.}\)</p></li>
 </ol></article><p id="Qpi">The weights in a particular code are usually much easier to compute than the Hamming distances between all codewords in the code. If a code is set up carefully, we can use this fact to our advantage.</p>
 <p id="wwr">Suppose that \({\mathbf x} = (1101)\) and \({\mathbf y} = (1100)\) are codewords in some code. If we transmit \((1101)\) and an error occurs in the rightmost bit, then (1100) will be received. Since \((1100)\) is a codeword, the decoder will decode \((1100)\) as the transmitted message. This code is clearly not very appropriate for error detection. The problem is that \(d({\mathbf x}, {\mathbf y}) = 1\text{.}\) If \({\mathbf x} = (1100)\) and \({\mathbf y} = (1010)\) are codewords, then \(d({\mathbf x}, {\mathbf y}) = 2\text{.}\) If \({\mathbf x}\) is transmitted and a single error occurs, then \({\mathbf y}\) can never be received. <a class="xref" data-knowl="./knowl/table-4-bit-words.html" title="Table 16.12: Distances between 4-bit codewords">Table 16.12</a> gives the distances between all 4-bit codewords in which the first three bits carry information and the fourth is an even parity check bit. We can see that the minimum distance here is \(2\text{;}\) hence, the code is suitable as a single error-detecting code.</p>
-<figure class="table table-like" id="hgp"><figcaption><span class="type">Table</span><span class="space"> </span><span class="codenumber">16.12<span class="period">.</span></span><span class="space"> </span>Distances between 4-bit codewords</figcaption><div class="tabular-box natural-width"><table class="tabular">
+<figure class="table table-like" id="hgp"><figcaption><span class="type">Table</span><span class="space"> </span><span class="codenumber">16.12<span class="period">.</span></span><span class="space"> </span>Distances between 4-bit codewords</figcaption><div class="tabular-box natural-width"><table class="tabular" id="Nny">
 <tr>
 <td class="c m b2 r2 l2 t2 lines"></td>
 <td class="c m b2 r2 l0 t2 lines">\(0000\)</td>
@@ -520,7 +520,7 @@ w({\mathbf x}) = 3, \qquad w({\mathbf y}) = 3, \qquad w({\mathbf z}) = 2\text{.}
 <td class="c m b2 r2 l0 t2 lines">\(1001\)</td>
 <td class="c m b2 r2 l0 t2 lines">\(1010\)</td>
 <td class="c m b2 r2 l0 t2 lines">\(1100\)</td>
-<td class="c m b2 r2 l0 t2 lines" data-braille="last-cell">\(1111\)</td>
+<td class="c m b2 r2 l0 t2 lines">\(1111\)</td>
 </tr>
 <tr>
 <td class="c m b0 r2 l2 t0 lines">\(0000\)</td>
@@ -531,7 +531,7 @@ w({\mathbf x}) = 3, \qquad w({\mathbf y}) = 3, \qquad w({\mathbf z}) = 2\text{.}
 <td class="c m b0 r2 l0 t0 lines">\(2\)</td>
 <td class="c m b0 r2 l0 t0 lines">\(2\)</td>
 <td class="c m b0 r2 l0 t0 lines">\(2\)</td>
-<td class="c m b0 r2 l0 t0 lines" data-braille="last-cell">\(4\)</td>
+<td class="c m b0 r2 l0 t0 lines">\(4\)</td>
 </tr>
 <tr>
 <td class="c m b0 r2 l2 t0 lines">\(0011\)</td>
@@ -542,7 +542,7 @@ w({\mathbf x}) = 3, \qquad w({\mathbf y}) = 3, \qquad w({\mathbf z}) = 2\text{.}
 <td class="c m b0 r2 l0 t0 lines">\(2\)</td>
 <td class="c m b0 r2 l0 t0 lines">\(2\)</td>
 <td class="c m b0 r2 l0 t0 lines">\(4 \)</td>
-<td class="c m b0 r2 l0 t0 lines" data-braille="last-cell">\(2\)</td>
+<td class="c m b0 r2 l0 t0 lines">\(2\)</td>
 </tr>
 <tr>
 <td class="c m b0 r2 l2 t0 lines">\(0101\)</td>
@@ -553,7 +553,7 @@ w({\mathbf x}) = 3, \qquad w({\mathbf y}) = 3, \qquad w({\mathbf z}) = 2\text{.}
 <td class="c m b0 r2 l0 t0 lines">\(2\)</td>
 <td class="c m b0 r2 l0 t0 lines">\(4\)</td>
 <td class="c m b0 r2 l0 t0 lines">\(2\)</td>
-<td class="c m b0 r2 l0 t0 lines" data-braille="last-cell">\(2\)</td>
+<td class="c m b0 r2 l0 t0 lines">\(2\)</td>
 </tr>
 <tr>
 <td class="c m b0 r2 l2 t0 lines">\(0110\)</td>
@@ -564,7 +564,7 @@ w({\mathbf x}) = 3, \qquad w({\mathbf y}) = 3, \qquad w({\mathbf z}) = 2\text{.}
 <td class="c m b0 r2 l0 t0 lines">\(4\)</td>
 <td class="c m b0 r2 l0 t0 lines">\(2\)</td>
 <td class="c m b0 r2 l0 t0 lines">\(2\)</td>
-<td class="c m b0 r2 l0 t0 lines" data-braille="last-cell">\(2\)</td>
+<td class="c m b0 r2 l0 t0 lines">\(2\)</td>
 </tr>
 <tr>
 <td class="c m b0 r2 l2 t0 lines">\(1001\)</td>
@@ -575,7 +575,7 @@ w({\mathbf x}) = 3, \qquad w({\mathbf y}) = 3, \qquad w({\mathbf z}) = 2\text{.}
 <td class="c m b0 r2 l0 t0 lines">\(0\)</td>
 <td class="c m b0 r2 l0 t0 lines">\(2\)</td>
 <td class="c m b0 r2 l0 t0 lines">\(2\)</td>
-<td class="c m b0 r2 l0 t0 lines" data-braille="last-cell">\(2\)</td>
+<td class="c m b0 r2 l0 t0 lines">\(2\)</td>
 </tr>
 <tr>
 <td class="c m b0 r2 l2 t0 lines">\(1010\)</td>
@@ -586,7 +586,7 @@ w({\mathbf x}) = 3, \qquad w({\mathbf y}) = 3, \qquad w({\mathbf z}) = 2\text{.}
 <td class="c m b0 r2 l0 t0 lines">\(2\)</td>
 <td class="c m b0 r2 l0 t0 lines">\(0\)</td>
 <td class="c m b0 r2 l0 t0 lines">\(2\)</td>
-<td class="c m b0 r2 l0 t0 lines" data-braille="last-cell">\(2\)</td>
+<td class="c m b0 r2 l0 t0 lines">\(2\)</td>
 </tr>
 <tr>
 <td class="c m b0 r2 l2 t0 lines">\(1100\)</td>
@@ -597,7 +597,7 @@ w({\mathbf x}) = 3, \qquad w({\mathbf y}) = 3, \qquad w({\mathbf z}) = 2\text{.}
 <td class="c m b0 r2 l0 t0 lines">\(2\)</td>
 <td class="c m b0 r2 l0 t0 lines">\(2\)</td>
 <td class="c m b0 r2 l0 t0 lines">\(0\)</td>
-<td class="c m b0 r2 l0 t0 lines" data-braille="last-cell">\(2\)</td>
+<td class="c m b0 r2 l0 t0 lines">\(2\)</td>
 </tr>
 <tr>
 <td class="c m b2 r2 l2 t0 lines">\(1111\)</td>
@@ -608,7 +608,7 @@ w({\mathbf x}) = 3, \qquad w({\mathbf y}) = 3, \qquad w({\mathbf z}) = 2\text{.}
 <td class="c m b2 r2 l0 t0 lines">\(2\)</td>
 <td class="c m b2 r2 l0 t0 lines">\(2\)</td>
 <td class="c m b2 r2 l0 t0 lines">\(2\)</td>
-<td class="c m b2 r2 l0 t0 lines" data-braille="last-cell">\(0\)</td>
+<td class="c m b2 r2 l0 t0 lines">\(0\)</td>
 </tr>
 </table></div></figure><p id="cDA">To determine exactly what the error-detecting and error-correcting capabilities for a code are, we need to analyze the minimum distance for the code. Let \({\mathbf x}\) and \({\mathbf y}\) be codewords. If \(d({\mathbf x}, {\mathbf y}) = 1\) and an error occurs where \({\mathbf x}\) and \({\mathbf y}\) differ, then \({\mathbf x}\) is changed to \({\mathbf y}\text{.}\) The received codeword is \({\mathbf y}\) and no error message is given. Now suppose \(d({\mathbf x}, {\mathbf y}) = 2\text{.}\) Then a single error cannot change \({\mathbf x}\) to \({\mathbf y}\text{.}\) Therefore, if \(d_{\min} = 2\text{,}\) we have the ability to detect single errors. However, suppose that \(d({\mathbf x}, {\mathbf y}) = 2\text{,}\) \({\mathbf y}\) is sent, and a noncodeword \({\mathbf z}\) is received such that</p>
 <div class="displaymath">
@@ -616,7 +616,7 @@ w({\mathbf x}) = 3, \qquad w({\mathbf y}) = 3, \qquad w({\mathbf z}) = 2\text{.}
 d({\mathbf x}, {\mathbf z}) = d({\mathbf y}, {\mathbf z}) = 1\text{.}
 \end{equation*}
 </div>
-<p data-braille="continuation">Then the decoder cannot decide between \({\mathbf x}\) and \({\mathbf y}\text{.}\) Even though we are aware that an error has occurred, we do not know what the error is.</p>
+<p class="continuation">Then the decoder cannot decide between \({\mathbf x}\) and \({\mathbf y}\text{.}\) Even though we are aware that an error has occurred, we do not know what the error is.</p>
 <p id="IKJ">Suppose \(d_{\min} \geq 3\text{.}\) Then the maximum-likelihood decoding scheme corrects all single errors. Starting with a codeword \({\mathbf x}\text{,}\) an error in the transmission of a single bit gives \({\mathbf y}\) with \(d({\mathbf x}, {\mathbf y}) = 1\text{,}\) but \(d({\mathbf z}, {\mathbf y}) \geq 2\) for any other codeword \({\mathbf z} \neq {\mathbf x}\text{.}\) If we do not require the correction of errors, then we can detect multiple errors when a code has a minimum distance that is greater than or equal to \(3\text{.}\)</p>
 <article class="theorem theorem-like" id="CGP"><h6 class="heading">
 <span class="type">Theorem</span><span class="space"> </span><span class="codenumber">16.13</span><span class="period">.</span>
@@ -628,45 +628,45 @@ d({\mathbf x}, {\mathbf z}) = d({\mathbf y}, {\mathbf z}) = 1\text{.}
 2n+1 \leq d( {\mathbf x}, {\mathbf z}) \leq d( {\mathbf x}, {\mathbf y}) + d( {\mathbf y}, {\mathbf z}) \leq n + d( {\mathbf y}, {\mathbf z})\text{.}
 \end{equation*}
 </div>
-<p data-braille="continuation">Hence, \(d({\mathbf y}, {\mathbf z} ) \geq n+1\) and \({\mathbf y}\) will be correctly decoded as \({\mathbf x}\text{.}\) Now suppose that \({\mathbf x}\) is transmitted and \({\mathbf y}\) is received and that at least one error  has occurred, but not more than \(2n\) errors. Then \(1 \leq d( {\mathbf x}, {\mathbf y} ) \leq 2n\text{.}\) Since the minimum distance between codewords is \(2n +1\text{,}\) \({\mathbf y}\) cannot be a codeword. Consequently, the code can detect between \(1\) and \(2n\) errors.</p></article><article class="example example-like" id="bjz"><h6 class="heading">
+<p class="continuation">Hence, \(d({\mathbf y}, {\mathbf z} ) \geq n+1\) and \({\mathbf y}\) will be correctly decoded as \({\mathbf x}\text{.}\) Now suppose that \({\mathbf x}\) is transmitted and \({\mathbf y}\) is received and that at least one error  has occurred, but not more than \(2n\) errors. Then \(1 \leq d( {\mathbf x}, {\mathbf y} ) \leq 2n\text{.}\) Since the minimum distance between codewords is \(2n +1\text{,}\) \({\mathbf y}\) cannot be a codeword. Consequently, the code can detect between \(1\) and \(2n\) errors.</p></article><article class="example example-like" id="bjz"><h6 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">16.14</span><span class="period">.</span>
 </h6>
 <p id="OVu">In <a class="xref" data-knowl="./knowl/table-hamming-distance.html" title="Table 16.15: Hamming distances for an error-correcting code">Table 16.15</a>, the codewords \({\mathbf c}_1 = (00000)\text{,}\) \({\mathbf c}_2 = (00111)\text{,}\) \({\mathbf c}_3 = (11100)\text{,}\) and \({\mathbf c}_4 = (11011)\) determine a single error-correcting code.</p>
-<figure class="table table-like" id="oKO"><figcaption><span class="type">Table</span><span class="space"> </span><span class="codenumber">16.15<span class="period">.</span></span><span class="space"> </span>Hamming distances for an error-correcting code</figcaption><div class="tabular-box natural-width"><table class="tabular">
+<figure class="table table-like" id="oKO"><figcaption><span class="type">Table</span><span class="space"> </span><span class="codenumber">16.15<span class="period">.</span></span><span class="space"> </span>Hamming distances for an error-correcting code</figcaption><div class="tabular-box natural-width"><table class="tabular" id="URX">
 <tr>
 <td class="c m b2 r2 l2 t2 lines"></td>
 <td class="c m b2 r2 l0 t2 lines">\(00000\)</td>
 <td class="c m b2 r2 l0 t2 lines">\(00111\)</td>
 <td class="c m b2 r2 l0 t2 lines">\(11100\)</td>
-<td class="c m b2 r2 l0 t2 lines" data-braille="last-cell">\(11011\)</td>
+<td class="c m b2 r2 l0 t2 lines">\(11011\)</td>
 </tr>
 <tr>
 <td class="c m b0 r2 l2 t0 lines">\(00000 \)</td>
 <td class="c m b0 r2 l0 t0 lines">\(0\)</td>
 <td class="c m b0 r2 l0 t0 lines">\(3\)</td>
 <td class="c m b0 r2 l0 t0 lines">\(3\)</td>
-<td class="c m b0 r2 l0 t0 lines" data-braille="last-cell">\(4\)</td>
+<td class="c m b0 r2 l0 t0 lines">\(4\)</td>
 </tr>
 <tr>
 <td class="c m b0 r2 l2 t0 lines">\(00111 \)</td>
 <td class="c m b0 r2 l0 t0 lines">\(3\)</td>
 <td class="c m b0 r2 l0 t0 lines">\(0\)</td>
 <td class="c m b0 r2 l0 t0 lines">\(4\)</td>
-<td class="c m b0 r2 l0 t0 lines" data-braille="last-cell">\(3\)</td>
+<td class="c m b0 r2 l0 t0 lines">\(3\)</td>
 </tr>
 <tr>
 <td class="c m b0 r2 l2 t0 lines">\(11100 \)</td>
 <td class="c m b0 r2 l0 t0 lines">\(3\)</td>
 <td class="c m b0 r2 l0 t0 lines">\(4\)</td>
 <td class="c m b0 r2 l0 t0 lines">\(0\)</td>
-<td class="c m b0 r2 l0 t0 lines" data-braille="last-cell">\(3\)</td>
+<td class="c m b0 r2 l0 t0 lines">\(3\)</td>
 </tr>
 <tr>
 <td class="c m b2 r2 l2 t0 lines">\(11011 \)</td>
 <td class="c m b2 r2 l0 t0 lines">\(4\)</td>
 <td class="c m b2 r2 l0 t0 lines">\(3\)</td>
 <td class="c m b2 r2 l0 t0 lines">\(3\)</td>
-<td class="c m b2 r2 l0 t0 lines" data-braille="last-cell">\(0\)</td>
+<td class="c m b2 r2 l0 t0 lines">\(0\)</td>
 </tr>
 </table></div></figure></article></section><section class="subsection" id="coS"><h3 class="heading hide-type">
 <span class="type">Subsection</span> <span class="codenumber">16.1.3</span> <span class="title">Historical Note</span>

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2021-02-08T11:02:13-07:00       *-->
+<!--*       on 2021-02-12T14:41:58-07:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -59,7 +59,7 @@ MathJax.Hub.Config({
 <!-- 2019-10-12: Temporary - CSS file for experiments with styling --><link xmlns:svg="http://www.w3.org/2000/svg" href="developer.css" rel="stylesheet" type="text/css">
 </head>
 <body id="judson-AATA" class="mathbook-book has-toc has-sidebar-left">
-<a class="assistive" href="#content">Skip to main content</a><div xmlns:svg="http://www.w3.org/2000/svg" class="hidden-content" style="display:none">\(\newcommand{\identity}{\mathrm{id}}
+<a class="assistive" href="#content">Skip to main content</a><div xmlns:svg="http://www.w3.org/2000/svg" id="latex-macros" class="hidden-content" style="display:none">\(\newcommand{\identity}{\mathrm{id}}
 \newcommand{\notdivide}{\nmid}
 \newcommand{\notsubset}{\not\subset}
 \newcommand{\lcm}{\operatorname{lcm}}
@@ -317,7 +317,7 @@ MathJax.Hub.Config({
 \phi( a b ) &amp; = \phi( a ) \phi(b)
 \end{align*}
 </div>
-<p data-braille="continuation">for all \(a, b \in R\text{.}\) If \(\phi : R \rightarrow S\) is a one-to-one and onto homomorphism, then \(\phi\) is called an <dfn class="terminology">isomorphism</dfn>  of rings.</p>
+<p class="continuation">for all \(a, b \in R\text{.}\) If \(\phi : R \rightarrow S\) is a one-to-one and onto homomorphism, then \(\phi\) is called an <dfn class="terminology">isomorphism</dfn>  of rings.</p>
 <p id="GqT">The set of elements that a ring homomorphism maps to \(0\) plays a fundamental role in the theory of rings. For any ring homomorphism \(\phi : R \rightarrow S\text{,}\) we define the <dfn class="terminology">kernel</dfn> of a ring homomorphism to be the set</p>
 <div class="displaymath">
 \begin{equation*}
@@ -335,7 +335,7 @@ MathJax.Hub.Config({
 &amp; = \phi( a ) + \phi(b)
 \end{align*}
 </div>
-<p data-braille="continuation">and</p>
+<p class="continuation">and</p>
 <div class="displaymath">
 \begin{align*}
 \phi( a b ) &amp; = ab \pmod{n}\\
@@ -343,7 +343,7 @@ MathJax.Hub.Config({
 &amp; = \phi( a ) \phi(b)\text{.}
 \end{align*}
 </div>
-<p data-braille="continuation">The kernel of the homomorphism \(\phi\) is \(n {\mathbb Z}\text{.}\)</p></article><article class="example example-like" id="gfN"><h6 class="heading">
+<p class="continuation">The kernel of the homomorphism \(\phi\) is \(n {\mathbb Z}\text{.}\)</p></article><article class="example example-like" id="gfN"><h6 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">5.21</span><span class="period">.</span>
 </h6>
 <p id="fKB">Let \(C[a, b]\) be the ring of continuous real-valued functions on an interval \([a,b]\) as in <a class="xref" data-knowl="./knowl/example-rings-functions.html" title="Example 5.5">Example 5.5</a>. For a fixed  \(\alpha \in [a, b]\text{,}\) we can define a ring homomorphism \(\phi_{\alpha} : C[a, b] \rightarrow {\mathbb R}\) by \(\phi_{\alpha} (f ) = f( \alpha)\text{.}\) This  is a ring homomorphism since</p>
@@ -353,7 +353,7 @@ MathJax.Hub.Config({
 \phi_{\alpha}( f g ) = (f  g)( \alpha) = f(\alpha) g(\alpha) = \phi_{\alpha}( f ) \phi_{\alpha}(g )\text{.}
 \end{gather*}
 </div>
-<p data-braille="continuation">Ring homomorphisms of the type \(\phi_{\alpha}\) are called <dfn class="terminology">evaluation homomorphisms</dfn>. </p></article><p id="myc">In the next proposition we will examine some fundamental properties of ring homomorphisms. The proof of the proposition is left as an exercise.</p>
+<p class="continuation">Ring homomorphisms of the type \(\phi_{\alpha}\) are called <dfn class="terminology">evaluation homomorphisms</dfn>. </p></article><p id="myc">In the next proposition we will examine some fundamental properties of ring homomorphisms. The proof of the proposition is left as an exercise.</p>
 <article class="proposition theorem-like" id="tzy"><h6 class="heading">
 <span class="type">Proposition</span><span class="space"> </span><span class="codenumber">5.22</span><span class="period">.</span>
 </h6>
@@ -377,7 +377,7 @@ MathJax.Hub.Config({
 \langle a \rangle = \{ ar : r \in R \}
 \end{equation*}
 </div>
-<p data-braille="continuation">is an ideal in \(R\text{.}\) Certainly, \(\langle a \rangle\) is nonempty since both \(0 = a0\) and \(a = a1\) are in \(\langle a \rangle\text{.}\) The sum of two elements in \(\langle a \rangle\) is again in \(\langle a \rangle\) since \(ar + ar' = a(r + r')\text{.}\) The inverse of \(ar\) is \(-ar = a (-r) \in \langle a \rangle\text{.}\) Finally, if we multiply an element \(ar \in \langle a \rangle\) by an arbitrary element \(s \in R\text{,}\) we have \(s(ar) = a(sr)\text{.}\) Therefore, \(\langle a \rangle\) satisfies the definition of an ideal.</p></article><p id="eTD">If \(R\) is a commutative ring with identity, then an ideal of the form \(\langle a \rangle = \{ ar : r \in R \}\) is called a <dfn class="terminology">principal ideal</dfn>. </p>
+<p class="continuation">is an ideal in \(R\text{.}\) Certainly, \(\langle a \rangle\) is nonempty since both \(0 = a0\) and \(a = a1\) are in \(\langle a \rangle\text{.}\) The sum of two elements in \(\langle a \rangle\) is again in \(\langle a \rangle\) since \(ar + ar' = a(r + r')\text{.}\) The inverse of \(ar\) is \(-ar = a (-r) \in \langle a \rangle\text{.}\) Finally, if we multiply an element \(ar \in \langle a \rangle\) by an arbitrary element \(s \in R\text{,}\) we have \(s(ar) = a(sr)\text{.}\) Therefore, \(\langle a \rangle\) satisfies the definition of an ideal.</p></article><p id="eTD">If \(R\) is a commutative ring with identity, then an ideal of the form \(\langle a \rangle = \{ ar : r \in R \}\) is called a <dfn class="terminology">principal ideal</dfn>. </p>
 <article class="theorem theorem-like" id="XRu"><h6 class="heading">
 <span class="type">Theorem</span><span class="space"> </span><span class="codenumber">5.25</span><span class="period">.</span>
 </h6>
@@ -388,7 +388,7 @@ MathJax.Hub.Config({
 a = nq + r
 \end{equation*}
 </div>
-<p data-braille="continuation">where \(0 \leq r \lt n\text{.}\) This equation tells us that \(r = a - nq \in I\text{,}\) but \(r\) must be \(0\) since \(n\) is the least positive element in \(I\text{.}\) Therefore, \(a = nq\) and \(I = \langle n \rangle\text{.}\)</p></article><article class="example example-like" id="YBo"><h6 class="heading">
+<p class="continuation">where \(0 \leq r \lt n\text{.}\) This equation tells us that \(r = a - nq \in I\text{,}\) but \(r\) must be \(0\) since \(n\) is the least positive element in \(I\text{.}\) Therefore, \(a = nq\) and \(I = \langle n \rangle\text{.}\)</p></article><article class="example example-like" id="YBo"><h6 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">5.26</span><span class="period">.</span>
 </h6>
 <p id="Ygc">The set \(n {\mathbb Z}\) is ideal in the ring of integers. If \(na\) is in \(n{\mathbb Z}\) and \(b\) is in \({\mathbb Z}\text{,}\) then \(nab\) is in \(n {\mathbb Z}\) as required. In fact, by <a class="xref" data-knowl="./knowl/theorem-z-ideals.html" title="Theorem 5.25">Theorem 5.25</a>, these are the only ideals of \({\mathbb Z}\text{.}\)</p></article><article class="proposition theorem-like" id="ZGH"><h6 class="heading">
@@ -401,7 +401,7 @@ a = nq + r
 \phi(ar) = \phi(a) \phi(r) = 0 \phi(r) = 0
 \end{equation*}
 </div>
-<p data-braille="continuation">and</p>
+<p class="continuation">and</p>
 <div class="displaymath">
 \begin{equation*}
 \phi(ra) = \phi(r) \phi(a) =  \phi(r)0 = 0\text{.}
@@ -424,7 +424,7 @@ a = nq + r
 r' s' = (r+a)(s+b) = rs + as + rb + ab
 \end{equation*}
 </div>
-<p data-braille="continuation">and \(as + rb + ab \in I\) since \(I\) is an ideal; consequently, \(r' s' \in rs + I\text{.}\) We will leave as an exercise the verification of the  associative law for multiplication and the distributive laws.</p></article><p id="LaM">The ring \(R/I\) in <a class="xref" data-knowl="./knowl/theorem-factor-ring.html" title="Theorem 5.29">Theorem 5.29</a> is called the <dfn class="terminology">factor</dfn>  or <dfn class="terminology">quotient ring</dfn>.  Just as with group homomorphisms and normal subgroups, there is a relationship between ring homomorphisms and ideals.</p>
+<p class="continuation">and \(as + rb + ab \in I\) since \(I\) is an ideal; consequently, \(r' s' \in rs + I\text{.}\) We will leave as an exercise the verification of the  associative law for multiplication and the distributive laws.</p></article><p id="LaM">The ring \(R/I\) in <a class="xref" data-knowl="./knowl/theorem-factor-ring.html" title="Theorem 5.29">Theorem 5.29</a> is called the <dfn class="terminology">factor</dfn>  or <dfn class="terminology">quotient ring</dfn>.  Just as with group homomorphisms and normal subgroups, there is a relationship between ring homomorphisms and ideals.</p>
 <article class="theorem theorem-like" id="kfM"><h6 class="heading">
 <span class="type">Theorem</span><span class="space"> </span><span class="codenumber">5.30</span><span class="period">.</span>
 </h6>
@@ -435,7 +435,7 @@ r' s' = (r+a)(s+b) = rs + as + rb + ab
 \phi(r) \phi(s) = (r + I)(s+I) = rs + I = \phi(rs)\text{,}
 \end{equation*}
 </div>
-<p data-braille="continuation">which completes the proof of the theorem.</p></article><p id="rhV">The map \(\phi : R \rightarrow R/I\) is often called the <dfn class="terminology">natural</dfn> or <dfn class="terminology">canonical homomorphism</dfn>.  In ring theory we have isomorphism theorems relating ideals and ring homomorphisms similar to the isomorphism theorems for groups that relate normal subgroups and homomorphisms in <a href="isomorph.html" class="internal" title="Chapter 4: Isomorphisms and Homomorphisms">Chapter 4</a>. We will prove only the First Isomorphism Theorem for rings in this chapter and leave the proofs of the other two theorems as exercises. All of the proofs are similar to the proofs of the isomorphism theorems for groups.</p>
+<p class="continuation">which completes the proof of the theorem.</p></article><p id="rhV">The map \(\phi : R \rightarrow R/I\) is often called the <dfn class="terminology">natural</dfn> or <dfn class="terminology">canonical homomorphism</dfn>.  In ring theory we have isomorphism theorems relating ideals and ring homomorphisms similar to the isomorphism theorems for groups that relate normal subgroups and homomorphisms in <a href="isomorph.html" class="internal" title="Chapter 4: Isomorphisms and Homomorphisms">Chapter 4</a>. We will prove only the First Isomorphism Theorem for rings in this chapter and leave the proofs of the other two theorems as exercises. All of the proofs are similar to the proofs of the isomorphism theorems for groups.</p>
 <article class="theorem theorem-like" id="QmV"><h6 class="heading">
 <span class="type">Theorem</span><span class="space"> </span><span class="codenumber">5.31</span><span class="period">.</span><span class="space"> </span><span class="title">First Isomorphism Theorem.</span>
 </h6>

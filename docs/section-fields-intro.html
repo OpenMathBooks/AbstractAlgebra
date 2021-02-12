@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2021-02-08T11:02:53-07:00       *-->
+<!--*       on 2021-02-12T14:42:28-07:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -59,7 +59,7 @@ MathJax.Hub.Config({
 <!-- 2019-10-12: Temporary - CSS file for experiments with styling --><link xmlns:svg="http://www.w3.org/2000/svg" href="developer.css" rel="stylesheet" type="text/css">
 </head>
 <body id="judson-AATA" class="mathbook-book has-toc has-sidebar-left">
-<a class="assistive" href="#content">Skip to main content</a><div xmlns:svg="http://www.w3.org/2000/svg" class="hidden-content" style="display:none">\(\newcommand{\identity}{\mathrm{id}}
+<a class="assistive" href="#content">Skip to main content</a><div xmlns:svg="http://www.w3.org/2000/svg" id="latex-macros" class="hidden-content" style="display:none">\(\newcommand{\identity}{\mathrm{id}}
 \newcommand{\notdivide}{\nmid}
 \newcommand{\notsubset}{\not\subset}
 \newcommand{\lcm}{\operatorname{lcm}}
@@ -350,7 +350,7 @@ MathJax.Hub.Config({
 420 &amp; = 105 \cdot 4 + 0\text{.}
 \end{align*}
 </div>
-<p data-braille="continuation">Check: \(105\) divides all the quotients and remainders, and any other divisor of \(945\) and \(2415\) would also divide \(105\text{.}\) Therefore, \(\gcd( 945, 2415 ) = 105\text{.}\)</p>
+<p class="continuation">Check: \(105\) divides all the quotients and remainders, and any other divisor of \(945\) and \(2415\) would also divide \(105\text{.}\) Therefore, \(\gcd( 945, 2415 ) = 105\text{.}\)</p>
 <p id="vZC">Now work backwards to obtain numbers \(r\) and \(s\) such that \(945 r + 2415 s = 105\text{.}\)</p>
 <div class="displaymath">
 \begin{align*}
@@ -361,7 +361,7 @@ MathJax.Hub.Config({
 &amp; = 2 \cdot 2415 + (-5) \cdot 945\text{.}
 \end{align*}
 </div>
-<p data-braille="continuation">So \(r = -5\) and \(s= 2\text{.}\)</p></article></section><article class="exercise exercise-like" id="QXM"><h6 class="heading"><span class="codenumber">1<span class="period">.</span></span></h6>
+<p class="continuation">So \(r = -5\) and \(s= 2\text{.}\)</p></article></section><article class="exercise exercise-like" id="QXM"><h6 class="heading"><span class="codenumber">1<span class="period">.</span></span></h6>
 <p id="InU">Find the greatest common divisor of 471 and 564 using the Euclidean Algorithm and then find integers \(r\) and \(s\) such that \(\gcd(471,564) = 471r+564s\text{.}\)</p>
 <div class="solutions"></div></article><article class="exercise exercise-like" id="xeV"><h6 class="heading"><span class="codenumber">2<span class="period">.</span></span></h6>
 <p id="ovd">In the quotient ring \(\Z/\langle 564 \rangle\text{,}\) find an element \(a + \langle 564\rangle\) such that \((a+\langle 564\rangle)(471 + \langle 564\rangle) = 3 + \langle 564 \rangle\text{.}\)  Explain why the previous question is helpful here.</p>
@@ -390,33 +390,33 @@ MathJax.Hub.Config({
 p(x) = x^4 -5 x^2 + 6
 \end{equation*}
 </div>
-<p data-braille="continuation">in \(\Q[x]\text{,}\) then \(p(x)\) factors as \((x^2 - 2)(x^2 - 3)\text{.}\) However, both of these factors are irreducible in \(\Q[x]\text{.}\) If we wish to find a zero of \(p(x)\text{,}\) we must (and can) go to a larger field. Certainly the field of real numbers will work, since</p>
+<p class="continuation">in \(\Q[x]\text{,}\) then \(p(x)\) factors as \((x^2 - 2)(x^2 - 3)\text{.}\) However, both of these factors are irreducible in \(\Q[x]\text{.}\) If we wish to find a zero of \(p(x)\text{,}\) we must (and can) go to a larger field. Certainly the field of real numbers will work, since</p>
 <div class="displaymath">
 \begin{equation*}
 p(x) = (x - \sqrt{2} ) (x + \sqrt{2} )( x - \sqrt{3})(x + \sqrt{3})\text{.}
 \end{equation*}
 </div>
-<p data-braille="continuation">It is possible to find a smaller field in which \(p(x)\) has a zero, namely</p>
+<p class="continuation">It is possible to find a smaller field in which \(p(x)\) has a zero, namely</p>
 <div class="displaymath">
 \begin{equation*}
 {\mathbb Q }( \sqrt{2} ) = \{ a + b \sqrt{2} : a, b \in {\mathbb Q} \}\text{.}
 \end{equation*}
 </div>
-<p data-braille="continuation">Our goal is to compute and study such fields for arbitrary polynomials over a field \(F\text{.}\)</p>
+<p class="continuation">Our goal is to compute and study such fields for arbitrary polynomials over a field \(F\text{.}\)</p>
 <p id="kfW">Before proceeding though, we should probably convince ourselves that \(E = \Q(\sqrt{2})\) really is a field.   First, why is this a ring?  Well, \(E\) is a subset of \(\R\text{,}\) so all we need to check is that it is a subring of \(\R\text{.}\)  If we take two elements \(a+b\sqrt{2}\) and \(c + d \sqrt{2}\text{,}\) is their sum, difference, and product still in \(E\text{?}\)  The only one of these that is not obvious is the product.  But,</p>
 <div class="displaymath">
 \begin{equation*}
 (a+b\sqrt{2})(c+d\sqrt{2}) = ac+2bd + (ad + bc)\sqrt{2}\text{,}
 \end{equation*}
 </div>
-<p data-braille="continuation">which has the correct form to be in \(E\text{.}\)</p>
+<p class="continuation">which has the correct form to be in \(E\text{.}\)</p>
 <p id="Qnf">What about multiplicative inverses though?  Does every \(a+b\sqrt{2}\text{,}\) with \(a\) and \(b\) not both zero, have an inverse?  In this example, it is not too difficult to see the answer is yes.  In fact, we can take</p>
 <div class="displaymath">
 \begin{equation*}
 (a+b\sqrt 2)\inv = \frac{a}{a^2 - 2b^2} - \frac{b}{a^2 - 2b^2}\sqrt{2}\text{.}
 \end{equation*}
 </div>
-<p data-braille="continuation">This was found by rationalizing the denominator of \(\frac{1}{a+b\sqrt{2}}\) by multiplying by \(a-b\sqrt{2}\) in both the numerator and denominator.  That works fine for this simple example, but we will need to think about other methods for more complicated extensions.</p>
+<p class="continuation">This was found by rationalizing the denominator of \(\frac{1}{a+b\sqrt{2}}\) by multiplying by \(a-b\sqrt{2}\) in both the numerator and denominator.  That works fine for this simple example, but we will need to think about other methods for more complicated extensions.</p>
 <p id="wuo">Here is another example:</p>
 <article class="example example-like" id="qbC"><h6 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">8.9</span><span class="period">.</span>
@@ -427,7 +427,7 @@ p(x) = (x - \sqrt{2} ) (x + \sqrt{2} )( x - \sqrt{3})(x + \sqrt{3})\text{.}
 F = {\mathbb Q}( \sqrt{2}\,) = \{ a + b \sqrt{2} : a, b \in {\mathbb Q} \}
 \end{equation*}
 </div>
-<p data-braille="continuation">and let \(E =  {\mathbb Q }( \sqrt{2} + \sqrt{3}\,)\) be the smallest field containing both \({\mathbb Q}\) and the real number \(\sqrt{2} + \sqrt{3}\text{.}\) For now, assume both \(E\) and \(F\) are fields, so they are both extension fields of the rational numbers. We claim that \(E\) is an extension field of \(F\text{.}\) To see this, we need only show that \(\sqrt{2}\) is in \(E\text{.}\) Since \(\sqrt{2} + \sqrt{3}\) is in \(E\text{,}\) \(1 / (\sqrt{2} + \sqrt{3}\,) = \sqrt{3} - \sqrt{2}\) must also be in \(E\text{.}\) Taking linear combinations of \(\sqrt{2} + \sqrt{3}\) and \(\sqrt{3} - \sqrt{2}\text{,}\) we find that \(\sqrt{2}\) and \(\sqrt{3}\) must both be in \(E\text{.}\)</p>
+<p class="continuation">and let \(E =  {\mathbb Q }( \sqrt{2} + \sqrt{3}\,)\) be the smallest field containing both \({\mathbb Q}\) and the real number \(\sqrt{2} + \sqrt{3}\text{.}\) For now, assume both \(E\) and \(F\) are fields, so they are both extension fields of the rational numbers. We claim that \(E\) is an extension field of \(F\text{.}\) To see this, we need only show that \(\sqrt{2}\) is in \(E\text{.}\) Since \(\sqrt{2} + \sqrt{3}\) is in \(E\text{,}\) \(1 / (\sqrt{2} + \sqrt{3}\,) = \sqrt{3} - \sqrt{2}\) must also be in \(E\text{.}\) Taking linear combinations of \(\sqrt{2} + \sqrt{3}\) and \(\sqrt{3} - \sqrt{2}\text{,}\) we find that \(\sqrt{2}\) and \(\sqrt{3}\) must both be in \(E\text{.}\)</p>
 <p id="naC">Note that this also shows that \(E\) is an extension field of \(\Q(\sqrt{3})\text{.}\)  Later we will consider how \(E\) relates to the fields \(\Q(\sqrt{2}, \sqrt{3})\text{,}\) the smallest field that contains both \(\sqrt{2}\) and \(\sqrt{3}\text{.}\)</p></article><p id="cBx">The example above make sense using real numbers we already know about.  Our next goal will be to simply add a arbitrary root of a polynomial, perhaps without even knowing which real (or complex) number that root is.  Surprisingly, this will work!  To get a feel for this, attempt the problems on the following activity.</p></section><section class="worksheet" id="TwG"><h3 class="heading hide-type">
 <span class="type">Worksheet</span> <span class="codenumber">8.2.4</span> <span class="title">Activity: Extending Fields to Factor</span>
 </h3>
@@ -458,7 +458,7 @@ F = {\mathbb Q}( \sqrt{2}\,) = \{ a + b \sqrt{2} : a, b \in {\mathbb Q} \}
 (a+b\s+c \s^2)(a' + b'\s + c'\s^2) = 1\text{.}
 \end{equation*}
 </div>
-<p data-braille="continuation">You could do this algebraically, although it is not an easy computation, and requires you to know that the polynomial \(p(x)\) is irreducible.  We will see why later.</p>
+<p class="continuation">You could do this algebraically, although it is not an easy computation, and requires you to know that the polynomial \(p(x)\) is irreducible.  We will see why later.</p>
 </div></div>
 </div></article><hr class="pagebreak">
 <article class="exercise exercise-like" id="mFD"><h6 class="heading"><span class="codenumber">6<span class="period">.</span></span></h6>

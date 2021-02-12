@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2021-02-08T11:04:47-07:00       *-->
+<!--*       on 2021-02-12T14:43:33-07:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -59,7 +59,7 @@ MathJax.Hub.Config({
 <!-- 2019-10-12: Temporary - CSS file for experiments with styling --><link xmlns:svg="http://www.w3.org/2000/svg" href="developer.css" rel="stylesheet" type="text/css">
 </head>
 <body id="judson-AATA" class="mathbook-book has-toc has-sidebar-left">
-<a class="assistive" href="#content">Skip to main content</a><div xmlns:svg="http://www.w3.org/2000/svg" class="hidden-content" style="display:none">\(\newcommand{\identity}{\mathrm{id}}
+<a class="assistive" href="#content">Skip to main content</a><div xmlns:svg="http://www.w3.org/2000/svg" id="latex-macros" class="hidden-content" style="display:none">\(\newcommand{\identity}{\mathrm{id}}
 \newcommand{\notdivide}{\nmid}
 \newcommand{\notsubset}{\not\subset}
 \newcommand{\lcm}{\operatorname{lcm}}
@@ -325,7 +325,7 @@ MathJax.Hub.Config({
 \alpha = a_1 \alpha_1 + \cdots + a_n \alpha_n\text{,}
 \end{equation*}
 </div>
-<p data-braille="continuation">where the \(a_i\)'s are in \(K\text{.}\) Since there are \(p\) elements in \(K\text{,}\) there are \(p^n\) possible linear combinations of the \(\alpha_i\)'s. Therefore, the order of \(F\) must be \(p^n\text{.}\)</p></article><article class="lemma theorem-like" id="bzH"><h6 class="heading">
+<p class="continuation">where the \(a_i\)'s are in \(K\text{.}\) Since there are \(p\) elements in \(K\text{,}\) there are \(p^n\) possible linear combinations of the \(\alpha_i\)'s. Therefore, the order of \(F\) must be \(p^n\text{.}\)</p></article><article class="lemma theorem-like" id="bzH"><h6 class="heading">
 <span class="type">Lemma</span><span class="space"> </span><span class="codenumber">17.3</span><span class="period">.</span><span class="space"> </span><span class="title">Freshman's Dream.</span>
 </h6>
 <p id="PsG">Let \(p\) be prime and \(D\) be an integral domain of characteristic \(p\text{.}\) Then</p>
@@ -334,27 +334,27 @@ MathJax.Hub.Config({
 a^{p^n} + b^{p^n} = (a + b)^{p^n}
 \end{equation*}
 </div>
-<p data-braille="continuation">for all positive integers \(n\text{.}\)</p></article><article class="proof" id="hYN"><h6 class="heading"><span class="type">Proof<span class="period">.</span></span></h6>
+<p class="continuation">for all positive integers \(n\text{.}\)</p></article><article class="proof" id="hYN"><h6 class="heading"><span class="type">Proof<span class="period">.</span></span></h6>
 <p id="LOg">We will prove this lemma using mathematical induction on \(n\text{.}\) We can use the binomial formula (see <a class="xref" data-knowl="./knowl/example-integers-binomial-theorem.html" title="Example 1.34">Example 1.34</a>) to verify the case for \(n = 1\text{;}\) that is,</p>
 <div class="displaymath">
 \begin{equation*}
 (a + b)^p = \sum_{k = 0}^{p} \binom{p}{k} a^k b^{p - k}\text{.}
 \end{equation*}
 </div>
-<p data-braille="continuation">If \(0 \lt k \lt p\text{,}\) then</p>
+<p class="continuation">If \(0 \lt k \lt p\text{,}\) then</p>
 <div class="displaymath">
 \begin{equation*}
 \binom{p}{k} = \frac{p!}{k!(p - k)!}
 \end{equation*}
 </div>
-<p data-braille="continuation">must be divisible by \(p\text{,}\) since \(p\) cannot divide \(k!(p - k)!\text{.}\) Note that \(D\) is an integral domain of characteristic \(p\text{,}\) so all but the first and last terms in the sum must be zero. Therefore, \((a + b)^p = a^p + b^p\text{.}\)</p>
+<p class="continuation">must be divisible by \(p\text{,}\) since \(p\) cannot divide \(k!(p - k)!\text{.}\) Note that \(D\) is an integral domain of characteristic \(p\text{,}\) so all but the first and last terms in the sum must be zero. Therefore, \((a + b)^p = a^p + b^p\text{.}\)</p>
 <p id="rVp">Now suppose that the result holds for all \(k\text{,}\) where \(1 \leq k \leq n\text{.}\) By the induction hypothesis,</p>
 <div class="displaymath">
 \begin{equation*}
 (a + b)^{p^{n + 1}} = ((a + b)^p)^{p^{n}} = (a^p + b^p)^{p^{n}} = (a^p)^{p^{n}} + (b^p)^{p^{n}} = a^{p^{n + 1}} + b^{p^{n + 1}}\text{.}
 \end{equation*}
 </div>
-<p data-braille="continuation">Therefore, the lemma is true for \(n + 1\) and the proof is complete.</p></article><p id="SBH">Let \(F\) be a field. A polynomial \(f(x) \in F[x]\) of degree \(n\) is <dfn class="terminology">separable</dfn>  if it has \(n\) distinct roots in the splitting field of \(f(x)\text{;}\) that is, \(f(x)\) is separable when it factors into distinct linear factors over the splitting field of \(f\text{.}\) An extension \(E\) of \(F\) is a <dfn class="terminology">separable extension</dfn> of \(F\) if every element in \(E\) is the root of a separable polynomial in \(F[x]\text{.}\)</p>
+<p class="continuation">Therefore, the lemma is true for \(n + 1\) and the proof is complete.</p></article><p id="SBH">Let \(F\) be a field. A polynomial \(f(x) \in F[x]\) of degree \(n\) is <dfn class="terminology">separable</dfn>  if it has \(n\) distinct roots in the splitting field of \(f(x)\text{;}\) that is, \(f(x)\) is separable when it factors into distinct linear factors over the splitting field of \(f\text{.}\) An extension \(E\) of \(F\) is a <dfn class="terminology">separable extension</dfn> of \(F\) if every element in \(E\) is the root of a separable polynomial in \(F[x]\text{.}\)</p>
 <article class="example example-like" id="Acr"><h6 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">17.4</span><span class="period">.</span>
 </h6>
@@ -369,7 +369,7 @@ x^2 - 2 a x + a^2 - 2 b^2 = (x - (a + b \sqrt{2}\, ))(x - (a - b \sqrt{2}\, ))\t
 f(x) = a_0 + a_1 x + \cdots + a_n x^n
 \end{equation*}
 </div>
-<p data-braille="continuation">be any polynomial in \(F[x]\text{.}\) Define the <dfn class="terminology">derivative</dfn>  of \(f(x)\) to be</p>
+<p class="continuation">be any polynomial in \(F[x]\text{.}\) Define the <dfn class="terminology">derivative</dfn>  of \(f(x)\) to be</p>
 <div class="displaymath">
 \begin{equation*}
 f'(x) = a_1 + 2 a_2 x + \cdots + n a_n x^{n - 1}\text{.}
@@ -387,14 +387,14 @@ f'(x) &amp; = (x - \alpha_2) \cdots (x - \alpha_n)\\
 &amp; + \cdots + (x - \alpha_1) \cdots (x - \alpha_{n - 1})\text{.}
 \end{align*}
 </div>
-<p data-braille="continuation">Hence, \(f(x)\) and \(f'(x)\) can have no common factors.</p>
+<p class="continuation">Hence, \(f(x)\) and \(f'(x)\) can have no common factors.</p>
 <p id="EjH">To prove the converse, we will show that the contrapositive of the statement is true. Suppose that \(f(x) = (x - \alpha)^k g(x)\text{,}\) where \(k \gt 1\text{.}\) Differentiating, we have</p>
 <div class="displaymath">
 \begin{equation*}
 f'(x) = k ( x - \alpha)^{k-1} g(x) + (x- \alpha)^k g'(x)\text{.}
 \end{equation*}
 </div>
-<p data-braille="continuation">Therefore, \(f(x)\) and \(f'(x)\) have a common factor.</p></article><article class="theorem theorem-like" id="WPO"><h6 class="heading">
+<p class="continuation">Therefore, \(f(x)\) and \(f'(x)\) have a common factor.</p></article><article class="theorem theorem-like" id="WPO"><h6 class="heading">
 <span class="type">Theorem</span><span class="space"> </span><span class="codenumber">17.6</span><span class="period">.</span>
 </h6>
 <p id="mgd">For every prime \(p\) and every positive integer \(n\text{,}\) there exists a finite field \(F\) with \(p^n\) elements. Furthermore, any field of order \(p^n\) is isomorphic to the splitting field of \(x^{p^n} -x\) over \({\mathbb Z}_p\text{.}\)</p></article><article class="proof" id="RaC"><h6 class="heading"><span class="type">Proof<span class="period">.</span></span></h6>
@@ -404,13 +404,13 @@ f'(x) = k ( x - \alpha)^{k-1} g(x) + (x- \alpha)^k g'(x)\text{.}
 f(-\alpha) = (-\alpha)^{p^n} - (-\alpha) = -\alpha^{p^n} + \alpha = -(\alpha^{p^n} - \alpha) = 0\text{,}
 \end{equation*}
 </div>
-<p data-braille="continuation">provided \(p\) is odd. If \(p = 2\text{,}\) then</p>
+<p class="continuation">provided \(p\) is odd. If \(p = 2\text{,}\) then</p>
 <div class="displaymath">
 \begin{equation*}
 f(-\alpha) =  (-\alpha)^{2^n} - (-\alpha) = \alpha + \alpha = 0\text{.}
 \end{equation*}
 </div>
-<p data-braille="continuation">If \(\alpha \neq 0\text{,}\) then \((\alpha^{-1})^{p^n} = (\alpha^{p^n})^{-1} = \alpha^{-1}\text{.}\) Since the zeros of \(f(x)\) form a subfield of \(F\) and \(f(x)\) splits in this subfield, the subfield must be all of \(F\text{.}\)</p>
+<p class="continuation">If \(\alpha \neq 0\text{,}\) then \((\alpha^{-1})^{p^n} = (\alpha^{p^n})^{-1} = \alpha^{-1}\text{.}\) Since the zeros of \(f(x)\) form a subfield of \(F\) and \(f(x)\) splits in this subfield, the subfield must be all of \(F\text{.}\)</p>
 <p id="QxZ">Let \(E\) be any other field of order \(p^n\text{.}\) To show that \(E\) is isomorphic to \(F\text{,}\) we must show that every element in \(E\) is a root of \(f(x)\text{.}\) Certainly 0 is a root of \(f(x)\text{.}\) Let \(\alpha\) be a nonzero element of \(E\text{.}\) The order of the multiplicative group of nonzero elements of \(E\) is \(p^n-1\text{;}\) hence, \(\alpha^{p^n-1} =1\) or \(\alpha^{p^n} -\alpha = 0\text{.}\) Since \(E\) contains \(p^n\) elements, \(E\) must be a splitting field of \(f(x)\text{;}\) however, by <a class="xref" data-knowl="./knowl/corollary-poly-splitting-field.html" title="Corollary 9.6">Corollary 9.6</a>, the splitting field of any polynomial is unique up to isomorphism.</p></article><p id="ePZ">The unique finite field with \(p^n\) elements is called the <dfn class="terminology">Galois field</dfn>  of order \(p^n\text{.}\) We will denote this field by \(\gf(p^n)\text{.}\) </p>
 <article class="theorem theorem-like" id="CWX"><h6 class="heading">
 <span class="type">Theorem</span><span class="space"> </span><span class="codenumber">17.7</span><span class="period">.</span>
@@ -432,7 +432,7 @@ f(-\alpha) =  (-\alpha)^{2^n} - (-\alpha) = \alpha + \alpha = 0\text{.}
 G \cong {\mathbb Z}_{p_1^{e_1}} \times \cdots \times {\mathbb Z}_{p_k^{e_k}}\text{,}
 \end{equation*}
 </div>
-<p data-braille="continuation">where \(n = p_1^{e_1} \cdots p_k^{e_k}\) and the  \(p_1, \ldots,
+<p class="continuation">where \(n = p_1^{e_1} \cdots p_k^{e_k}\) and the  \(p_1, \ldots,
 p_k\) are (not necessarily distinct) primes. Let \(m\) be the least common multiple of \(p_1^{e_1}, \ldots,
 p_k^{e_k}\text{.}\) Then \(G\) contains an element of order \(m\text{.}\) Since every \(\alpha\) in \(G\) satisfies \(x^r - 1\) for some \(r\) dividing \(m\text{,}\) \(\alpha\) must also be a root of \(x^m - 1\text{.}\) Since \(x^m -1\) has at most \(m\) roots in \(F\text{,}\) \(n \leq m\text{.}\) On the other hand, we know that \(m \leq |G|\text{;}\) therefore, \(m = n\text{.}\) Thus, \(G\) contains an element of order \(n\) and must be cyclic.</p></article><article class="corollary theorem-like" id="nNZ"><h6 class="heading">
 <span class="type">Corollary</span><span class="space"> </span><span class="codenumber">17.11</span><span class="period">.</span>
@@ -450,7 +450,7 @@ p_k^{e_k}\text{.}\) Then \(G\) contains an element of order \(m\text{.}\) Since 
 \{ a_0 + a_1 \alpha + a_2 \alpha^2 + a_3 \alpha^3 : a_i \in {\mathbb Z}_2 \text{ and } 1 + \alpha + \alpha^4 = 0 \}\text{.}
 \end{equation*}
 </div>
-<p data-braille="continuation">Remembering that \(1 + \alpha +\alpha^4 = 0\text{,}\) we add and multiply elements of \(\gf(2^4)\) exactly as we add and multiply polynomials. The multiplicative group of \(\gf(2^4)\) is isomorphic to \({\mathbb  Z}_{15}\) with generator \(\alpha\text{:}\)</p>
+<p class="continuation">Remembering that \(1 + \alpha +\alpha^4 = 0\text{,}\) we add and multiply elements of \(\gf(2^4)\) exactly as we add and multiply polynomials. The multiplicative group of \(\gf(2^4)\) is isomorphic to \({\mathbb  Z}_{15}\) with generator \(\alpha\text{:}\)</p>
 <div class="displaymath">
 \begin{align*}
 &amp; \alpha^1 = \alpha &amp; &amp; \alpha^6 = \alpha^2 + \alpha^3 &amp; &amp; \alpha^{11} = \alpha + \alpha^2 + \alpha^3 &amp;\\

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2021-02-08T11:02:09-07:00       *-->
+<!--*       on 2021-02-12T14:41:54-07:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -59,7 +59,7 @@ MathJax.Hub.Config({
 <!-- 2019-10-12: Temporary - CSS file for experiments with styling --><link xmlns:svg="http://www.w3.org/2000/svg" href="developer.css" rel="stylesheet" type="text/css">
 </head>
 <body id="judson-AATA" class="mathbook-book has-toc has-sidebar-left">
-<a class="assistive" href="#content">Skip to main content</a><div xmlns:svg="http://www.w3.org/2000/svg" class="hidden-content" style="display:none">\(\newcommand{\identity}{\mathrm{id}}
+<a class="assistive" href="#content">Skip to main content</a><div xmlns:svg="http://www.w3.org/2000/svg" id="latex-macros" class="hidden-content" style="display:none">\(\newcommand{\identity}{\mathrm{id}}
 \newcommand{\notdivide}{\nmid}
 \newcommand{\notsubset}{\not\subset}
 \newcommand{\lcm}{\operatorname{lcm}}
@@ -327,7 +327,7 @@ a( b + c)&amp;= ab +ac\\
 </div>
 </li>
 </ol>
-<p data-braille="continuation">This last condition, the distributive axiom, relates the binary operations of addition and multiplication. Notice that the first four axioms simply require that a ring be an abelian group under addition, so we could also have defined a ring to be an abelian group \((R, +)\) together with a second binary operation satisfying the fifth and sixth conditions given above.</p>
+<p class="continuation">This last condition, the distributive axiom, relates the binary operations of addition and multiplication. Notice that the first four axioms simply require that a ring be an abelian group under addition, so we could also have defined a ring to be an abelian group \((R, +)\) together with a second binary operation satisfying the fifth and sixth conditions given above.</p>
 <p id="deq">If there is an element \(1 \in R\) such that \(1 \neq 0\) and \(1a = a1 = a\) for each element \(a \in R\text{,}\) we say that \(R\) is a ring with <dfn class="terminology">unity</dfn>  or <dfn class="terminology">identity</dfn>.  A ring \(R\) for which \(ab = ba\) for all \(a,
 b\) in \(R\) is called a <dfn class="terminology">commutative ring</dfn>.  A commutative ring \(R\) with identity is called an <dfn class="terminology">integral domain</dfn>  if, for every \(a, b \in R\) such that \(ab = 0\text{,}\) either \(a = 0\) or \(b = 0\text{.}\) A <dfn class="terminology">division ring</dfn>  is a ring \(R\text{,}\) with an identity, in which every nonzero element in \(R\) is a <dfn class="terminology">unit</dfn>;  that is, for each \(a \in R\) with \(a \neq 0\text{,}\) there exists a unique element \(a^{-1}\) such that \(a^{-1} a = a a^{-1} = 1\text{.}\) A commutative division ring is called a <dfn class="terminology">field</dfn>.  The relationship among rings, integral domains, division rings, and fields is shown in <a class="xref" data-knowl="./knowl/figure-ring-types.html" title="Figure 5.1">Figure 5.1</a>.</p>
 <figure class="figure figure-like" id="vRO"><div class="image-box" style="width: 50%; margin-left: 25%; margin-right: 25%;"><img src="images/rings-types.svg" role="img" style="width: 100%; height: auto;" alt="A graph with rings at the top level connected to commutative rings and rings with identity at the second level. Commutative rings is connected to integral domains on the third level while rings with identity is connected to both integral domains and division rings on the third level.  Integral domains and division rings are connected to fields on the bottom level."></div>
@@ -379,7 +379,7 @@ i &amp; 0 \\
 \end{pmatrix}\text{,}
 \end{equation*}
 </div>
-<p data-braille="continuation">where \(i^2 = -1\text{.}\) These elements satisfy the following relations:</p>
+<p class="continuation">where \(i^2 = -1\text{.}\) These elements satisfy the following relations:</p>
 <div class="displaymath">
 \begin{align*}
 {\mathbf i}^2 = {\mathbf j}^2 &amp; =  {\mathbf k}^2 = -1\\
@@ -391,7 +391,7 @@ i &amp; 0 \\
 {\mathbf i}  {\mathbf k} &amp; =  - {\mathbf j}\text{.}
 \end{align*}
 </div>
-<p data-braille="continuation">Let \({\mathbb H}\) consist of elements of the form \(a + b {\mathbf i} + c {\mathbf j} +d {\mathbf k}\text{,}\) where \(a, b , c, d\) are real numbers. Equivalently, \({\mathbb H}\) can be considered to be the set of all \(2 \times 2\) matrices of the form </p>
+<p class="continuation">Let \({\mathbb H}\) consist of elements of the form \(a + b {\mathbf i} + c {\mathbf j} +d {\mathbf k}\text{,}\) where \(a, b , c, d\) are real numbers. Equivalently, \({\mathbb H}\) can be considered to be the set of all \(2 \times 2\) matrices of the form </p>
 <div class="displaymath">
 \begin{equation*}
 \begin{pmatrix}
@@ -400,20 +400,20 @@ i &amp; 0 \\
 \end{pmatrix}\text{,}
 \end{equation*}
 </div>
-<p data-braille="continuation">where \(\alpha = a + di\) and \(\beta = b + ci\) are complex numbers. We can define addition and multiplication on \({\mathbb H}\) either by the usual matrix operations or in terms of the generators \(1\text{,}\) \({\mathbf i}\text{,}\) \({\mathbf j}\text{,}\) and \({\mathbf k}\text{:}\)</p>
+<p class="continuation">where \(\alpha = a + di\) and \(\beta = b + ci\) are complex numbers. We can define addition and multiplication on \({\mathbb H}\) either by the usual matrix operations or in terms of the generators \(1\text{,}\) \({\mathbf i}\text{,}\) \({\mathbf j}\text{,}\) and \({\mathbf k}\text{:}\)</p>
 <div class="displaymath">
 \begin{gather*}
 (a_1 + b_1 {\mathbf i} + c_1 {\mathbf j} +d_1 {\mathbf k} ) + ( a_2 + b_2 {\mathbf i} + c_2 {\mathbf j} +d_2 {\mathbf k} )\\
 = (a_1 + a_2) + ( b_1 + b_2) {\mathbf i}  + ( c_1 + c_2) \mathbf j + (d_1 + d_2) \mathbf k
 \end{gather*}
 </div>
-<p data-braille="continuation">and</p>
+<p class="continuation">and</p>
 <div class="displaymath">
 \begin{equation*}
 (a_1 + b_1 {\mathbf i}  + c_1 {\mathbf j} +d_1 {\mathbf k} ) ( a_2 + b_2 {\mathbf i}  + c_2 {\mathbf j} +d_2 {\mathbf k} ) = \alpha + \beta {\mathbf i}  + \gamma {\mathbf j} + \delta {\mathbf k}\text{,}
 \end{equation*}
 </div>
-<p data-braille="continuation">where</p>
+<p class="continuation">where</p>
 <div class="displaymath">
 \begin{align*}
 \alpha &amp; =  a_1 a_2 - b_1 b_2 - c_1 c_2 -d_1 d_2\\
@@ -422,14 +422,14 @@ i &amp; 0 \\
 \delta &amp; =  a_1 d_2 + b_1 c_2 - c_1 b_2 + d_1 a_2\text{.}
 \end{align*}
 </div>
-<p data-braille="continuation">Though multiplication looks complicated, it is actually a straightforward computation if we remember that we just add and multiply elements in \({\mathbb H}\) like polynomials and keep in mind the relationships between the generators \({\mathbf i}\text{,}\) \({\mathbf j}\text{,}\) and \({\mathbf k}\text{.}\) The ring \({\mathbb H}\) is called the ring of <dfn class="terminology">quaternions</dfn>. </p>
+<p class="continuation">Though multiplication looks complicated, it is actually a straightforward computation if we remember that we just add and multiply elements in \({\mathbb H}\) like polynomials and keep in mind the relationships between the generators \({\mathbf i}\text{,}\) \({\mathbf j}\text{,}\) and \({\mathbf k}\text{.}\) The ring \({\mathbb H}\) is called the ring of <dfn class="terminology">quaternions</dfn>. </p>
 <p id="iFh">To show that the quaternions are a division ring, we must be able to find an inverse for each nonzero element. Notice that</p>
 <div class="displaymath">
 \begin{equation*}
 ( a + b {\mathbf i} + c {\mathbf j} + d {\mathbf k} )( a - b {\mathbf i} - c {\mathbf j} - d {\mathbf k} ) = a^2 + b^2 + c^2 + d^2\text{.}
 \end{equation*}
 </div>
-<p data-braille="continuation">This element can be zero only if \(a\text{,}\) \(b\text{,}\) \(c\text{,}\) and \(d\) are all zero. So if \(a + b {\mathbf i} + c {\mathbf j} +d {\mathbf k} \neq 0\text{,}\)</p>
+<p class="continuation">This element can be zero only if \(a\text{,}\) \(b\text{,}\) \(c\text{,}\) and \(d\) are all zero. So if \(a + b {\mathbf i} + c {\mathbf j} +d {\mathbf k} \neq 0\text{,}\)</p>
 <div class="displaymath">
 \begin{equation*}
 (a + b {\mathbf i} + c {\mathbf j} + d {\mathbf k})\left( \frac{a - b {\mathbf i} - c {\mathbf j} - d {\mathbf k} }{a^2 + b^2 + c^2 + d^2} \right) = 1\text{.}
@@ -449,7 +449,7 @@ i &amp; 0 \\
 a0 = a(0+0)= a0+ a0;
 \end{equation*}
 </div>
-<p data-braille="continuation">hence, \(a0=0\text{.}\) Similarly, \(0a = 0\text{.}\) For (2), we have \(ab + a(-b) = a(b-b) = a0 = 0\text{;}\) consequently, \(-ab = a(-b)\text{.}\) Similarly, \(-ab = (-a)b\text{.}\) Part (3) follows directly from (2) since \((-a)(-b) = -(a(- b)) = -(-ab) = ab\text{.}\)</p></article><p id="psI">Just as we have subgroups of groups, we have an analogous class of substructures for rings. A <dfn class="terminology">subring</dfn>  \(S\) of a ring \(R\) is a subset \(S\) of \(R\) such that \(S\) is also a ring under the inherited operations from \(R\text{.}\)</p>
+<p class="continuation">hence, \(a0=0\text{.}\) Similarly, \(0a = 0\text{.}\) For (2), we have \(ab + a(-b) = a(b-b) = a0 = 0\text{;}\) consequently, \(-ab = a(-b)\text{.}\) Similarly, \(-ab = (-a)b\text{.}\) Part (3) follows directly from (2) since \((-a)(-b) = -(a(- b)) = -(-ab) = ab\text{.}\)</p></article><p id="psI">Just as we have subgroups of groups, we have an analogous class of substructures for rings. A <dfn class="terminology">subring</dfn>  \(S\) of a ring \(R\) is a subset \(S\) of \(R\) such that \(S\) is also a ring under the inherited operations from \(R\text{.}\)</p>
 <article class="example example-like" id="PhC"><h6 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">5.9</span><span class="period">.</span>
 </h6>
@@ -483,7 +483,7 @@ a &amp; b \\
 \right\}\text{,}
 \end{equation*}
 </div>
-<p data-braille="continuation">then \(T\) is a subring of \(R\text{.}\) If</p>
+<p class="continuation">then \(T\) is a subring of \(R\text{.}\) If</p>
 <div class="displaymath">
 \begin{equation*}
 A =
@@ -499,7 +499,7 @@ a' &amp; b' \\
 \end{pmatrix}
 \end{equation*}
 </div>
-<p data-braille="continuation">are in \(T\text{,}\) then clearly \(A-B\) is also in \(T\text{.}\) Also,</p>
+<p class="continuation">are in \(T\text{,}\) then clearly \(A-B\) is also in \(T\text{.}\) Also,</p>
 <div class="displaymath">
 \begin{equation*}
 AB =
@@ -509,7 +509,7 @@ a a' &amp; ab' + bc' \\
 \end{pmatrix}
 \end{equation*}
 </div>
-<p data-braille="continuation">is in \(T\text{.}\)</p></article><section class="reading-questions" id="UIh"><h3 class="heading hide-type">
+<p class="continuation">is in \(T\text{.}\)</p></article><section class="reading-questions" id="UIh"><h3 class="heading hide-type">
 <span class="type">Reading Questions</span> <span class="codenumber"></span> <span class="title">Reading Questions</span>
 </h3>
 <article class="exercise exercise-like" id="NdI"><h6 class="heading"><span class="codenumber">1<span class="period">.</span></span></h6>

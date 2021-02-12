@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2021-02-08T11:04:03-07:00       *-->
+<!--*       on 2021-02-12T14:43:08-07:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -59,7 +59,7 @@ MathJax.Hub.Config({
 <!-- 2019-10-12: Temporary - CSS file for experiments with styling --><link xmlns:svg="http://www.w3.org/2000/svg" href="developer.css" rel="stylesheet" type="text/css">
 </head>
 <body id="judson-AATA" class="mathbook-book has-toc has-sidebar-left">
-<a class="assistive" href="#content">Skip to main content</a><div xmlns:svg="http://www.w3.org/2000/svg" class="hidden-content" style="display:none">\(\newcommand{\identity}{\mathrm{id}}
+<a class="assistive" href="#content">Skip to main content</a><div xmlns:svg="http://www.w3.org/2000/svg" id="latex-macros" class="hidden-content" style="display:none">\(\newcommand{\identity}{\mathrm{id}}
 \newcommand{\notdivide}{\nmid}
 \newcommand{\notsubset}{\not\subset}
 \newcommand{\lcm}{\operatorname{lcm}}
@@ -316,13 +316,13 @@ MathJax.Hub.Config({
 X_G = \{ x \in X : gx = x \text{ for all } g \in G \}\text{.}
 \end{equation*}
 </div>
-<p data-braille="continuation">Since the orbits of the action partition \(X\text{,}\)</p>
+<p class="continuation">Since the orbits of the action partition \(X\text{,}\)</p>
 <div class="displaymath">
 \begin{equation*}
 |X| = |X_G| + \sum_{i = k}^n |{\mathcal O}_{x_i}|\text{,}
 \end{equation*}
 </div>
-<p data-braille="continuation">where \(x_k, \ldots,
+<p class="continuation">where \(x_k, \ldots,
 x_n\) are representatives from the distinct nontrivial orbits of \(X\text{.}\)</p>
 <p id="cwJ">Now consider the special case in which \(G\) acts on itself by conjugation, \((g,x) \mapsto gxg^{-1}\text{.}\) The <dfn class="terminology">center</dfn>  of \(G\text{,}\)</p>
 <div class="displaymath">
@@ -330,20 +330,20 @@ x_n\) are representatives from the distinct nontrivial orbits of \(X\text{.}\)</
 Z(G) = \{x : xg = gx \text{ for all } g \in G \}\text{,}
 \end{equation*}
 </div>
-<p data-braille="continuation">is the set of points that are fixed by conjugation. The nontrivial orbits of the action are called the <dfn class="terminology">conjugacy classes</dfn>  of \(G\text{.}\) If \(x_1, \ldots,
+<p class="continuation">is the set of points that are fixed by conjugation. The nontrivial orbits of the action are called the <dfn class="terminology">conjugacy classes</dfn>  of \(G\text{.}\) If \(x_1, \ldots,
 x_k\) are representatives from each of the nontrivial conjugacy classes of \(G\) and \(|{\mathcal O}_{x_1}| = n_1, \ldots, |{\mathcal O}_{x_k}| = n_k\text{,}\) then</p>
 <div class="displaymath">
 \begin{equation*}
 |G| = |Z(G)| + n_1 + \cdots + n_k\text{.}
 \end{equation*}
 </div>
-<p data-braille="continuation">The stabilizer subgroups of each of the \(x_i\)'s, \(C(x_i) = \{ g \in G: g x_i = x_i g \}\text{,}\) are called the <dfn class="terminology">centralizer subgroups</dfn> of the \(x_i\)'s. From <a class="xref" data-knowl="./knowl/theorem-orbit.html" title="Theorem 13.11">Theorem 13.11</a>, we obtain the <dfn class="terminology">class equation</dfn>: </p>
+<p class="continuation">The stabilizer subgroups of each of the \(x_i\)'s, \(C(x_i) = \{ g \in G: g x_i = x_i g \}\text{,}\) are called the <dfn class="terminology">centralizer subgroups</dfn> of the \(x_i\)'s. From <a class="xref" data-knowl="./knowl/theorem-orbit.html" title="Theorem 13.11">Theorem 13.11</a>, we obtain the <dfn class="terminology">class equation</dfn>: </p>
 <div class="displaymath">
 \begin{equation*}
 |G| = |Z(G)| + [G: C(x_1) ] + \cdots + [ G: C(x_k)]\text{.}
 \end{equation*}
 </div>
-<p data-braille="continuation">One of the consequences of the class equation is that the order of each conjugacy class must divide the order of \(G\text{.}\)</p>
+<p class="continuation">One of the consequences of the class equation is that the order of each conjugacy class must divide the order of \(G\text{.}\)</p>
 <article class="example example-like" id="aVE"><h6 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">13.12</span><span class="period">.</span>
 </h6>
@@ -353,7 +353,7 @@ x_k\) are representatives from each of the nontrivial conjugacy classes of \(G\)
 \{ (1) \},  \quad \{ (123), (132) \}, \quad \{(12), (13), (23) \}\text{.}
 \end{equation*}
 </div>
-<p data-braille="continuation">The class equation is \(6 = 1+2+3\text{.}\)</p></article><article class="example example-like" id="HcN"><h6 class="heading">
+<p class="continuation">The class equation is \(6 = 1+2+3\text{.}\)</p></article><article class="example example-like" id="HcN"><h6 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">13.13</span><span class="period">.</span>
 </h6>
 <p id="owG">The center of \(D_4\) is \(\{ (1), (13)(24) \}\text{,}\) and the conjugacy classes are</p>
@@ -362,7 +362,7 @@ x_k\) are representatives from each of the nontrivial conjugacy classes of \(G\)
 \{ (13), (24) \}, \quad \{ (1432), (1234) \}, \quad \{ (12)(34), (14)(23) \}\text{.}
 \end{equation*}
 </div>
-<p data-braille="continuation">Thus, the class equation for \(D_4\) is \(8 = 2 + 2 + 2 + 2\text{.}\)</p></article><article class="example example-like" id="njW"><h6 class="heading">
+<p class="continuation">Thus, the class equation for \(D_4\) is \(8 = 2 + 2 + 2 + 2\text{.}\)</p></article><article class="example example-like" id="njW"><h6 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">13.14</span><span class="period">.</span>
 </h6>
 <p id="UDP">For \(S_n\) it takes a bit of work to find the conjugacy classes. We begin with cycles. Suppose that \(\sigma = ( a_1, \ldots,
@@ -372,7 +372,7 @@ a_k)\) is a cycle and let \(\tau \in S_n\text{.}\) By <a class="xref" data-knowl
 \tau \sigma \tau^{-1} = ( \tau( a_1), \ldots, \tau(a_k))\text{.}
 \end{equation*}
 </div>
-<p data-braille="continuation">Consequently, any two cycles of the same length are conjugate. Now let \(\sigma = \sigma_1 \sigma_2 \cdots \sigma_r\) be a cycle decomposition, where the length of each cycle \(\sigma_i\) is \(r_i\text{.}\) Then \(\sigma\) is conjugate to every other \(\tau \in S_n\) whose cycle decomposition has the same lengths.</p>
+<p class="continuation">Consequently, any two cycles of the same length are conjugate. Now let \(\sigma = \sigma_1 \sigma_2 \cdots \sigma_r\) be a cycle decomposition, where the length of each cycle \(\sigma_i\) is \(r_i\text{.}\) Then \(\sigma\) is conjugate to every other \(\tau \in S_n\) whose cycle decomposition has the same lengths.</p>
 <p id="AKY">The number of conjugate classes in \(S_n\) is the number of ways in which \(n\) can be partitioned into sums of positive integers. In the case of \(S_3\) for example, we can partition the integer \(3\) into the following three sums:</p>
 <div class="displaymath">
 \begin{align*}
@@ -381,7 +381,7 @@ a_k)\) is a cycle and let \(\tau \in S_n\text{.}\) By <a class="xref" data-knowl
 3 &amp; =  3;
 \end{align*}
 </div>
-<p data-braille="continuation">therefore, there are three conjugacy classes. The problem of finding the number of such partitions for any positive integer \(n\) is what computer scientists call <dfn class="terminology">NP-complete</dfn>. This effectively means that the problem cannot be solved for a large \(n\) because the computations would be too time-consuming for even the largest computer.</p></article><article class="theorem theorem-like" id="Zgr"><h6 class="heading">
+<p class="continuation">therefore, there are three conjugacy classes. The problem of finding the number of such partitions for any positive integer \(n\) is what computer scientists call <dfn class="terminology">NP-complete</dfn>. This effectively means that the problem cannot be solved for a large \(n\) because the computations would be too time-consuming for even the largest computer.</p></article><article class="theorem theorem-like" id="Zgr"><h6 class="heading">
 <span class="type">Theorem</span><span class="space"> </span><span class="codenumber">13.15</span><span class="period">.</span>
 </h6>
 <p id="atb">Let \(G\) be a group of order \(p^n\) where \(p\) is prime. Then \(G\) has a nontrivial center.</p></article><article class="proof" id="Eih"><h6 class="heading"><span class="type">Proof<span class="period">.</span></span></h6>
@@ -391,7 +391,7 @@ a_k)\) is a cycle and let \(\tau \in S_n\text{.}\) By <a class="xref" data-knowl
 |G| = |Z(G)| + n_1 + \cdots + n_k\text{.}
 \end{equation*}
 </div>
-<p data-braille="continuation">Since each \(n_i \gt 1\) and \(n_i \mid |G|\text{,}\) it follows that \(p\)  must divide each \(n_i\text{.}\) Also, \(p \mid |G|\text{;}\) hence, \(p\) must divide \(|Z(G)|\text{.}\) Since the identity is always in the center of \(G\text{,}\) \(|Z(G)| \geq 1\text{.}\) Therefore, \(|Z(G)|  \geq p\text{,}\) and there exists some \(g \in Z(G)\) such that \(g \neq 1\text{.}\)</p></article><article class="corollary theorem-like" id="dQk"><h6 class="heading">
+<p class="continuation">Since each \(n_i \gt 1\) and \(n_i \mid |G|\text{,}\) it follows that \(p\)  must divide each \(n_i\text{.}\) Also, \(p \mid |G|\text{;}\) hence, \(p\) must divide \(|Z(G)|\text{.}\) Since the identity is always in the center of \(G\text{,}\) \(|Z(G)| \geq 1\text{.}\) Therefore, \(|Z(G)|  \geq p\text{,}\) and there exists some \(g \in Z(G)\) such that \(g \neq 1\text{.}\)</p></article><article class="corollary theorem-like" id="dQk"><h6 class="heading">
 <span class="type">Corollary</span><span class="space"> </span><span class="codenumber">13.16</span><span class="period">.</span>
 </h6>
 <p id="Lkd">Let \(G\) be a group of order \(p^2\) where \(p\) is prime. Then \(G\) is abelian.</p></article><article class="proof" id="oZj"><h6 class="heading"><span class="type">Proof<span class="period">.</span></span></h6>
@@ -401,7 +401,7 @@ a_k)\) is a cycle and let \(\tau \in S_n\text{.}\) By <a class="xref" data-knowl
 gh = a^m x a^n y =  a^{m+n} x y = a^n y a^m x = hg\text{,}
 \end{equation*}
 </div>
-<p data-braille="continuation">and \(G\) must be abelian.</p></article></section></div></main>
+<p class="continuation">and \(G\) must be abelian.</p></article></section></div></main>
 </div>
 <script src="https://unpkg.com/prismjs@v1.22.0/components/prism-core.min.js"></script><script src="https://unpkg.com/prismjs@v1.22.0/plugins/autoloader/prism-autoloader.min.js"></script>
 </body>

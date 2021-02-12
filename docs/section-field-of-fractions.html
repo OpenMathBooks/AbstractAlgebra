@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2021-02-08T11:02:35-07:00       *-->
+<!--*       on 2021-02-12T14:42:19-07:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -59,7 +59,7 @@ MathJax.Hub.Config({
 <!-- 2019-10-12: Temporary - CSS file for experiments with styling --><link xmlns:svg="http://www.w3.org/2000/svg" href="developer.css" rel="stylesheet" type="text/css">
 </head>
 <body id="judson-AATA" class="mathbook-book has-toc has-sidebar-left">
-<a class="assistive" href="#content">Skip to main content</a><div xmlns:svg="http://www.w3.org/2000/svg" class="hidden-content" style="display:none">\(\newcommand{\identity}{\mathrm{id}}
+<a class="assistive" href="#content">Skip to main content</a><div xmlns:svg="http://www.w3.org/2000/svg" id="latex-macros" class="hidden-content" style="display:none">\(\newcommand{\identity}{\mathrm{id}}
 \newcommand{\notdivide}{\nmid}
 \newcommand{\notsubset}{\not\subset}
 \newcommand{\lcm}{\operatorname{lcm}}
@@ -317,14 +317,14 @@ MathJax.Hub.Config({
 \frac{a}{b} = \frac{c}{d}
 \end{equation*}
 </div>
-<p data-braille="continuation">if and only if \(ad = bc\text{.}\) A more formal way of considering this problem is to examine fractions in terms of equivalence relations. We can think of elements in \({\mathbb Q}\) as ordered pairs in \({\mathbb Z} \times {\mathbb Z}\text{.}\) A quotient \(p/q\) can be written as \((p, q)\text{.}\) For instance, \((3, 7)\) would represent the fraction \(3/7\text{.}\) However, there are problems if we consider all possible pairs in \({\mathbb Z} \times {\mathbb Z}\text{.}\) There is no fraction \(5/0\) corresponding to the pair \((5,0)\text{.}\) Also, the pairs \((3,6)\) and \((2,4)\) both represent the fraction \(1/2\text{.}\) The first problem is easily solved if we require the second coordinate to be nonzero. The second problem is solved by considering two pairs \((a, b)\) and \((c, d)\) to be equivalent if \(ad = bc\text{.}\)</p>
+<p class="continuation">if and only if \(ad = bc\text{.}\) A more formal way of considering this problem is to examine fractions in terms of equivalence relations. We can think of elements in \({\mathbb Q}\) as ordered pairs in \({\mathbb Z} \times {\mathbb Z}\text{.}\) A quotient \(p/q\) can be written as \((p, q)\text{.}\) For instance, \((3, 7)\) would represent the fraction \(3/7\text{.}\) However, there are problems if we consider all possible pairs in \({\mathbb Z} \times {\mathbb Z}\text{.}\) There is no fraction \(5/0\) corresponding to the pair \((5,0)\text{.}\) Also, the pairs \((3,6)\) and \((2,4)\) both represent the fraction \(1/2\text{.}\) The first problem is easily solved if we require the second coordinate to be nonzero. The second problem is solved by considering two pairs \((a, b)\) and \((c, d)\) to be equivalent if \(ad = bc\text{.}\)</p>
 <p id="uXM">If we use the approach of ordered pairs instead of fractions, then we can study integral domains in general. Let \(D\) be any integral domain and let</p>
 <div class="displaymath">
 \begin{equation*}
 S = \{ (a, b) : a, b \in D \text{ and } b \neq 0 \}\text{.}
 \end{equation*}
 </div>
-<p data-braille="continuation">Define a relation on \(S\) by \((a, b) \sim (c, d)\) if \(ad = bc\text{.}\)</p>
+<p class="continuation">Define a relation on \(S\) by \((a, b) \sim (c, d)\) if \(ad = bc\text{.}\)</p>
 <article class="lemma theorem-like" id="LAl"><h6 class="heading">
 <span class="type">Lemma</span><span class="space"> </span><span class="codenumber">7.1</span><span class="period">.</span>
 </h6>
@@ -335,26 +335,26 @@ S = \{ (a, b) : a, b \in D \text{ and } b \neq 0 \}\text{.}
 a f d = a d f = b c f = b d e = bed\text{.}
 \end{equation*}
 </div>
-<p data-braille="continuation">Since \(D\) is an integral domain, we can deduce that \(af = be\) or \((a,b ) \sim (e, f)\text{.}\)</p></article><p id="beV">We will denote the set of equivalence classes on \(S\) by \(F_D\text{.}\) We now need to define the operations of addition and multiplication on \(F_D\text{.}\) Recall how fractions are added and multiplied in \({\mathbb Q}\text{:}\)</p>
+<p class="continuation">Since \(D\) is an integral domain, we can deduce that \(af = be\) or \((a,b ) \sim (e, f)\text{.}\)</p></article><p id="beV">We will denote the set of equivalence classes on \(S\) by \(F_D\text{.}\) We now need to define the operations of addition and multiplication on \(F_D\text{.}\) Recall how fractions are added and multiplied in \({\mathbb Q}\text{:}\)</p>
 <div class="displaymath">
 \begin{align*}
 \frac{a}{b} + \frac{c}{d} &amp; = \frac{ad + b c}{b d};\\
 \frac{a}{b} \cdot \frac{c}{d} &amp; = \frac{ac}{b d}\text{.}
 \end{align*}
 </div>
-<p data-braille="continuation">It seems reasonable to define the operations of addition and multiplication on \(F_D\) in a similar manner. If we denote the equivalence class of \((a, b) \in S\) by \([a, b]\text{,}\) then we are led to define the operations of addition and multiplication on \(F_D\) by</p>
+<p class="continuation">It seems reasonable to define the operations of addition and multiplication on \(F_D\) in a similar manner. If we denote the equivalence class of \((a, b) \in S\) by \([a, b]\text{,}\) then we are led to define the operations of addition and multiplication on \(F_D\) by</p>
 <div class="displaymath">
 \begin{equation*}
 [a, b] + [c, d] = [ad + b c,b d]
 \end{equation*}
 </div>
-<p data-braille="continuation">and</p>
+<p class="continuation">and</p>
 <div class="displaymath">
 \begin{equation*}
 [a, b] \cdot [c, d] = [ac, b d]\text{,}
 \end{equation*}
 </div>
-<p data-braille="continuation">respectively. The next lemma demonstrates that these operations are independent of the choice of representatives from each equivalence class.</p>
+<p class="continuation">respectively. The next lemma demonstrates that these operations are independent of the choice of representatives from each equivalence class.</p>
 <article class="lemma theorem-like" id="rHu"><h6 class="heading">
 <span class="type">Lemma</span><span class="space"> </span><span class="codenumber">7.2</span><span class="period">.</span>
 </h6>
@@ -365,13 +365,13 @@ a f d = a d f = b c f = b d e = bed\text{.}
 [a_1 d_1 + b_1 c_1,b_1 d_1] = [a_2 d_2 + b_2 c_2,b_2 d_2]
 \end{equation*}
 </div>
-<p data-braille="continuation">or, equivalently, that</p>
+<p class="continuation">or, equivalently, that</p>
 <div class="displaymath">
 \begin{equation*}
 (a_1 d_1 + b_1 c_1)( b_2 d_2) = (b_1 d_1) (a_2 d_2 + b_2 c_2)\text{.}
 \end{equation*}
 </div>
-<p data-braille="continuation">Since  \([a_1, b_1] = [a_2, b_2]\) and \([c_1, d_1] =[ c_2, d_2]\text{,}\) we know that \(a_1 b_2 = b_1 a_2\) and \(c_1 d_2 = d_1 c_2\text{.}\) Therefore,</p>
+<p class="continuation">Since  \([a_1, b_1] = [a_2, b_2]\) and \([c_1, d_1] =[ c_2, d_2]\text{,}\) we know that \(a_1 b_2 = b_1 a_2\) and \(c_1 d_2 = d_1 c_2\text{.}\) Therefore,</p>
 <div class="displaymath">
 \begin{align*}
 (a_1 d_1 + b_1 c_1)( b_2 d_2)  &amp; =  a_1 d_1 b_2 d_2 + b_1 c_1 b_2 d_2\\
@@ -389,14 +389,14 @@ a f d = a d f = b c f = b d e = bed\text{.}
 [ a, b] \cdot [c, d] &amp; = [ac, b d]\text{,}
 \end{align*}
 </div>
-<p data-braille="continuation">is a field.</p></article><article class="proof" id="enJ"><h6 class="heading"><span class="type">Proof<span class="period">.</span></span></h6>
+<p class="continuation">is a field.</p></article><article class="proof" id="enJ"><h6 class="heading"><span class="type">Proof<span class="period">.</span></span></h6>
 <p id="vOK">The additive and multiplicative identities are \([0,1]\) and \([1,1]\text{,}\) respectively. To show that \([0,1]\) is the additive identity, observe that</p>
 <div class="displaymath">
 \begin{equation*}
 [a, b] + [0, 1] =  [ a 1 + b 0, b 1] = [a,b]\text{.}
 \end{equation*}
 </div>
-<p data-braille="continuation">It is easy to show that \([1, 1]\) is the multiplicative identity. Let \([a, b] \in F_D\) such that \(a \neq 0\text{.}\) Then \([b, a]\) is also in \(F_D\) and \([a,b] \cdot [b, a] = [1,1]\text{;}\) hence, \([b, a]\) is the multiplicative inverse for \([a, b]\text{.}\) Similarly, \([-a,b]\) is the additive inverse of \([a, b]\text{.}\) We leave as exercises the verification of the associative and  commutative properties of multiplication in \(F_D\text{.}\) We also leave it to the reader to show that \(F_D\) is an abelian group under addition.</p>
+<p class="continuation">It is easy to show that \([1, 1]\) is the multiplicative identity. Let \([a, b] \in F_D\) such that \(a \neq 0\text{.}\) Then \([b, a]\) is also in \(F_D\) and \([a,b] \cdot [b, a] = [1,1]\text{;}\) hence, \([b, a]\) is the multiplicative inverse for \([a, b]\text{.}\) Similarly, \([-a,b]\) is the additive inverse of \([a, b]\text{.}\) We leave as exercises the verification of the associative and  commutative properties of multiplication in \(F_D\text{.}\) We also leave it to the reader to show that \(F_D\) is an abelian group under addition.</p>
 <p id="bVT">It remains to show that the distributive property holds in \(F_D\text{;}\) however,</p>
 <div class="displaymath">
 \begin{align*}
@@ -407,7 +407,7 @@ a f d = a d f = b c f = b d e = bed\text{.}
 &amp; = ( [a, b]  + [c, d] ) [ e, f ]
 \end{align*}
 </div>
-<p data-braille="continuation">and the lemma is proved.</p></article><p id="Hme">The field \(F_D\) in <a class="xref" data-knowl="./knowl/lemma-field-of-fractions.html" title="Lemma 7.3">Lemma 7.3</a> is called the <dfn class="terminology">field of fractions</dfn> or <dfn class="terminology">field of quotients</dfn> of the integral domain \(D\text{.}\)</p>
+<p class="continuation">and the lemma is proved.</p></article><p id="Hme">The field \(F_D\) in <a class="xref" data-knowl="./knowl/lemma-field-of-fractions.html" title="Lemma 7.3">Lemma 7.3</a> is called the <dfn class="terminology">field of fractions</dfn> or <dfn class="terminology">field of quotients</dfn> of the integral domain \(D\text{.}\)</p>
 <article class="theorem theorem-like" id="ftc"><h6 class="heading">
 <span class="type">Theorem</span><span class="space"> </span><span class="codenumber">7.4</span><span class="period">.</span>
 </h6>
@@ -418,13 +418,13 @@ a f d = a d f = b c f = b d e = bed\text{.}
 \phi( a + b ) = [a+b, 1] = [a, 1] + [b, 1] = \phi(a ) + \phi(b)
 \end{equation*}
 </div>
-<p data-braille="continuation">and</p>
+<p class="continuation">and</p>
 <div class="displaymath">
 \begin{equation*}
 \phi( a b ) = [a b, 1] = [a, 1]  [b, 1] = \phi(a ) \phi(b);
 \end{equation*}
 </div>
-<p data-braille="continuation">hence, \(\phi\) is a homomorphism. To show that \(\phi\) is one-to-one, suppose that \(\phi(a) = \phi( b)\text{.}\) Then \([a, 1] = [b, 1]\text{,}\) or \(a = a1 = 1b = b\text{.}\) Finally, any element of \(F_D\) can be expressed as the quotient of two elements in \(D\text{,}\) since</p>
+<p class="continuation">hence, \(\phi\) is a homomorphism. To show that \(\phi\) is one-to-one, suppose that \(\phi(a) = \phi( b)\text{.}\) Then \([a, 1] = [b, 1]\text{,}\) or \(a = a1 = 1b = b\text{.}\) Finally, any element of \(F_D\) can be expressed as the quotient of two elements in \(D\text{,}\) since</p>
 <div class="displaymath">
 \begin{equation*}
 \phi(a) [\phi(b)]^{-1} = [a, 1] [b, 1]^{-1} = [a, 1] \cdot [1, b] = [a, b]\text{.}
@@ -440,7 +440,7 @@ a f d = a d f = b c f = b d e = bed\text{.}
 &amp; = \psi( [a, b] ) + \psi( [c, d] )
 \end{align*}
 </div>
-<p data-braille="continuation">and</p>
+<p class="continuation">and</p>
 <div class="displaymath">
 \begin{align*}
 \psi( [a, b] \cdot [c, d] ) &amp; = \psi( [ac, b d ] )\\
@@ -449,7 +449,7 @@ a f d = a d f = b c f = b d e = bed\text{.}
 &amp; = \psi( [a, b] )  \psi( [c, d] )\text{.}
 \end{align*}
 </div>
-<p data-braille="continuation">Therefore, \(\psi\) is a homomorphism.</p>
+<p class="continuation">Therefore, \(\psi\) is a homomorphism.</p>
 <p id="AyD">To complete the proof of the theorem, we need to show that \(\psi\) is one-to-one. Suppose that \(\psi( [a, b] ) = ab^{-1} = 0\text{.}\) Then \(a = 0b = 0\) and \([a, b] = [0, b]\text{.}\) Therefore, the kernel of \(\psi\) is the zero element \([ 0, b]\) in \(F_D\text{,}\) and \(\psi\) is injective.</p></article><article class="example example-like" id="Qke"><h6 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">7.5</span><span class="period">.</span>
 </h6>

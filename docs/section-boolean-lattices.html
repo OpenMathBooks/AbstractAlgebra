@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2021-02-08T11:04:58-07:00       *-->
+<!--*       on 2021-02-12T14:43:39-07:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -59,7 +59,7 @@ MathJax.Hub.Config({
 <!-- 2019-10-12: Temporary - CSS file for experiments with styling --><link xmlns:svg="http://www.w3.org/2000/svg" href="developer.css" rel="stylesheet" type="text/css">
 </head>
 <body id="judson-AATA" class="mathbook-book has-toc has-sidebar-left">
-<a class="assistive" href="#content">Skip to main content</a><div xmlns:svg="http://www.w3.org/2000/svg" class="hidden-content" style="display:none">\(\newcommand{\identity}{\mathrm{id}}
+<a class="assistive" href="#content">Skip to main content</a><div xmlns:svg="http://www.w3.org/2000/svg" id="latex-macros" class="hidden-content" style="display:none">\(\newcommand{\identity}{\mathrm{id}}
 \newcommand{\notdivide}{\nmid}
 \newcommand{\notsubset}{\not\subset}
 \newcommand{\lcm}{\operatorname{lcm}}
@@ -319,7 +319,7 @@ MathJax.Hub.Config({
 <li id="EQB"><p id="HpI">The relation is <dfn class="terminology">antisymmetric</dfn>: if \((a,b) \in P\) and \((b,a) \in P\text{,}\) then \(a = b\text{.}\)</p></li>
 <li id="kXK"><p id="nwR">The relation is <dfn class="terminology">transitive</dfn>: if \((a, b) \in P\) and \((b, c) \in P\text{,}\) then \((a, c) \in P\text{.}\)</p></li>
 </ol>
-<p data-braille="continuation">We will usually write \(a \preceq b\) to mean \((a, b) \in P\) unless some symbol is naturally associated with a particular partial order, such as \(a \leq b\) with integers \(a\) and \(b\text{,}\) or \(A \subset B\) with sets \(A\) and \(B\text{.}\) A set \(X\) together with a partial order \(\preceq\) is called a <dfn class="terminology">partially ordered set</dfn>,  or <dfn class="terminology">poset</dfn>. </p>
+<p class="continuation">We will usually write \(a \preceq b\) to mean \((a, b) \in P\) unless some symbol is naturally associated with a particular partial order, such as \(a \leq b\) with integers \(a\) and \(b\text{,}\) or \(A \subset B\) with sets \(A\) and \(B\text{.}\) A set \(X\) together with a partial order \(\preceq\) is called a <dfn class="terminology">partially ordered set</dfn>,  or <dfn class="terminology">poset</dfn>. </p>
 <article class="example example-like" id="QgE"><h6 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">18.1</span><span class="period">.</span>
 </h6>
@@ -333,7 +333,7 @@ MathJax.Hub.Config({
 &amp; \{ a, b \} &amp; &amp; \{ a, c\} &amp; &amp;\{ b, c\} &amp; &amp; \{ a, b, c \}. &amp;
 \end{align*}
 </div>
-<p data-braille="continuation">On any power set of a set \(X\text{,}\) set inclusion, \(\subset\text{,}\) is a partial order. We can represent the order on \(\{ a, b, c \}\) schematically by a diagram such as the one in  <a class="xref" data-knowl="./knowl/figure-partial-order.html" title="Figure 18.3">Figure 18.3</a>.</p></article><figure class="figure figure-like" id="JHL"><div class="image-box" style="width: 40%; margin-left: 30%; margin-right: 30%;"><img src="images/boolean-order-abc.svg" role="img" style="width: 100%; height: auto;" alt="A graph with the set consisting of a, b, c at the top level;  The sets (a, b), (a, c), and (b, c) at the second level; the threee sets consisting of a, b, and c at the third level; and the empty set at the fourth level."></div>
+<p class="continuation">On any power set of a set \(X\text{,}\) set inclusion, \(\subset\text{,}\) is a partial order. We can represent the order on \(\{ a, b, c \}\) schematically by a diagram such as the one in  <a class="xref" data-knowl="./knowl/figure-partial-order.html" title="Figure 18.3">Figure 18.3</a>.</p></article><figure class="figure figure-like" id="JHL"><div class="image-box" style="width: 40%; margin-left: 30%; margin-right: 30%;"><img src="images/boolean-order-abc.svg" role="img" style="width: 100%; height: auto;" alt="A graph with the set consisting of a, b, c at the top level;  The sets (a, b), (a, c), and (b, c) at the second level; the threee sets consisting of a, b, and c at the third level; and the empty set at the fourth level."></div>
 <figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">18.3<span class="period">.</span></span><span class="space"> </span>Partial order on \(\mathcal P( \{ a, b, c \})\)</figcaption></figure><article class="example example-like" id="cuW"><h6 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">18.4</span><span class="period">.</span>
 </h6>
@@ -386,7 +386,7 @@ b, c \in L\text{.}\)</p>
 a \preceq a \vee b =d \preceq d \vee c = (a \vee b) \vee c\text{.}
 \end{equation*}
 </div>
-<p data-braille="continuation">A similar argument demonstrates that \(b \preceq (a \vee b) \vee c\text{.}\) Therefore, \((a \vee b) \vee c\) is an upper bound of \(\{ a, b, c \}\text{.}\) We now need to show that \((a \vee b) \vee c\) is the least upper bound of \(\{ a, b, c\}\text{.}\) Let \(u\) be some other upper bound of \(\{ a, b, c \}\text{.}\) Then \(a \preceq u\) and \(b \preceq u\text{;}\) hence, \(d = a \vee b \preceq u\text{.}\) Since \(c \preceq u\text{,}\) it follows that \((a \vee b) \vee c = d \vee c \preceq u\text{.}\) Therefore, \((a \vee b) \vee c\) must be the least upper  bound of \(\{ a, b, c\}\text{.}\) The argument that shows  \(a \vee ( b \vee c)\) is the least upper bound of \(\{ a, b, c \}\) is the same. Consequently, \(a \vee ( b \vee c) = (a \vee b) \vee c\text{.}\)</p>
+<p class="continuation">A similar argument demonstrates that \(b \preceq (a \vee b) \vee c\text{.}\) Therefore, \((a \vee b) \vee c\) is an upper bound of \(\{ a, b, c \}\text{.}\) We now need to show that \((a \vee b) \vee c\) is the least upper bound of \(\{ a, b, c\}\text{.}\) Let \(u\) be some other upper bound of \(\{ a, b, c \}\text{.}\) Then \(a \preceq u\) and \(b \preceq u\text{;}\) hence, \(d = a \vee b \preceq u\text{.}\) Since \(c \preceq u\text{,}\) it follows that \((a \vee b) \vee c = d \vee c \preceq u\text{.}\) Therefore, \((a \vee b) \vee c\) must be the least upper  bound of \(\{ a, b, c\}\text{.}\) The argument that shows  \(a \vee ( b \vee c)\) is the least upper bound of \(\{ a, b, c \}\) is the same. Consequently, \(a \vee ( b \vee c) = (a \vee b) \vee c\text{.}\)</p>
 <p id="nLm">(3) The join of \(a\) and \(a\) is the least upper bound of \(\{ a \}\text{;}\) hence, \(a \vee a = a\text{.}\)</p>
 <p id="TSv">(4) Let \(d = a \wedge b\text{.}\) Then \(a \preceq a \vee d\text{.}\) On the other hand, \(d = a \wedge b \preceq a\text{,}\) and so \(a \vee d \preceq a\text{.}\) Therefore, \(a \vee ( a \wedge b) = a\text{.}\)</p></article><p id="dAC">Given any arbitrary set \(L\) with operations \(\vee\) and \(\wedge\text{,}\) satisfying the conditions of the previous theorem, it is natural to ask whether or not this set comes from some lattice. The following theorem says that this is always the case.</p>
 <article class="theorem theorem-like" id="DSm"><h6 class="heading">
@@ -400,14 +400,14 @@ b \in L\text{,}\) we define the least upper bound and greatest lower bound of \(
 a \vee c = a \vee (b \vee c ) = ( a \vee b) \vee c = b \vee c = c\text{,}
 \end{equation*}
 </div>
-<p data-braille="continuation">or \(a \preceq c\text{.}\)</p>
+<p class="continuation">or \(a \preceq c\text{.}\)</p>
 <p id="ggN">To show that \(L\) is a lattice, we must prove that \(a \vee b\) and \(a \wedge b\) are, respectively, the least upper and greatest lower bounds of \(a\) and \(b\text{.}\) Since \(a=(a \vee b) \wedge a = a \wedge (a \vee b)\text{,}\) it follows that \(a \preceq a \vee b\text{.}\) Similarly, \(b \preceq a \vee b\text{.}\) Therefore, \(a \vee b\) is an upper bound for \(a\) and \(b\text{.}\) Let \(u\) be any other upper bound of both \(a\) and \(b\text{.}\) Then \(a \preceq u\) and \(b \preceq u\text{.}\) But \(a \vee b \preceq u\) since</p>
 <div class="displaymath">
 \begin{equation*}
 (a \vee b) \vee u = a \vee (b \vee u) = a \vee u = u\text{.}
 \end{equation*}
 </div>
-<p data-braille="continuation">The proof that \(a \wedge b\) is the greatest lower bound of \(a\) and \(b\) is left as an exercise.</p></article></section></section></div></main>
+<p class="continuation">The proof that \(a \wedge b\) is the greatest lower bound of \(a\) and \(b\) is left as an exercise.</p></article></section></section></div></main>
 </div>
 <script src="https://unpkg.com/prismjs@v1.22.0/components/prism-core.min.js"></script><script src="https://unpkg.com/prismjs@v1.22.0/plugins/autoloader/prism-autoloader.min.js"></script>
 </body>

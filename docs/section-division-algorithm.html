@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2021-02-08T11:02:22-07:00       *-->
+<!--*       on 2021-02-12T14:42:06-07:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -59,7 +59,7 @@ MathJax.Hub.Config({
 <!-- 2019-10-12: Temporary - CSS file for experiments with styling --><link xmlns:svg="http://www.w3.org/2000/svg" href="developer.css" rel="stylesheet" type="text/css">
 </head>
 <body id="judson-AATA" class="mathbook-book has-toc has-sidebar-left">
-<a class="assistive" href="#content">Skip to main content</a><div xmlns:svg="http://www.w3.org/2000/svg" class="hidden-content" style="display:none">\(\newcommand{\identity}{\mathrm{id}}
+<a class="assistive" href="#content">Skip to main content</a><div xmlns:svg="http://www.w3.org/2000/svg" id="latex-macros" class="hidden-content" style="display:none">\(\newcommand{\identity}{\mathrm{id}}
 \newcommand{\notdivide}{\nmid}
 \newcommand{\notsubset}{\not\subset}
 \newcommand{\lcm}{\operatorname{lcm}}
@@ -321,7 +321,7 @@ MathJax.Hub.Config({
 a = bq + r
 \end{equation*}
 </div>
-<p data-braille="continuation">where \(0 \leq r \lt b\text{.}\)</p></article><article class="proof" id="YEO"><h6 class="heading"><span class="type">Proof<span class="period">.</span></span></h6>
+<p class="continuation">where \(0 \leq r \lt b\text{.}\)</p></article><article class="proof" id="YEO"><h6 class="heading"><span class="type">Proof<span class="period">.</span></span></h6>
 <p id="YxK">This is a perfect example of the existence-and-uniqueness type of proof. We must first prove that the numbers \(q\) and \(r\) actually exist. Then we must show that if \(q'\) and \(r'\) are two other such numbers, then \(q = q'\) and \(r = r'\text{.}\)</p>
 <p id="EET"><em class="emphasis">Existence of \(q\) and \(r\text{.}\)</em> Let</p>
 <div class="displaymath">
@@ -329,20 +329,20 @@ a = bq + r
 S = \{ a - bk : k \in {\mathbb Z} \text{ and } a - bk \geq 0 \}\text{.}
 \end{equation*}
 </div>
-<p data-braille="continuation">If \(0 \in S\text{,}\) then \(b\) divides \(a\text{,}\) and  we can let \(q = a/b\) and \(r = 0\text{.}\) If \(0 \notin S\text{,}\) we can use the Well-Ordering Principle. We must first show that \(S\) is nonempty. If \(a \gt 0\text{,}\) then \(a - b \cdot 0 \in S\text{.}\) If \(a \lt 0\text{,}\) then \(a - b(2a) = a(1 - 2b) \in S\text{.}\) In either case \(S \neq \emptyset\text{.}\) By the Well-Ordering Principle, \(S\) must have a smallest member, say \(r = a - bq\text{.}\) Therefore, \(a = bq + r\text{,}\)          \(r \geq 0\text{.}\) We now show that \(r \lt b\text{.}\) Suppose that \(r \gt b\text{.}\) Then</p>
+<p class="continuation">If \(0 \in S\text{,}\) then \(b\) divides \(a\text{,}\) and  we can let \(q = a/b\) and \(r = 0\text{.}\) If \(0 \notin S\text{,}\) we can use the Well-Ordering Principle. We must first show that \(S\) is nonempty. If \(a \gt 0\text{,}\) then \(a - b \cdot 0 \in S\text{.}\) If \(a \lt 0\text{,}\) then \(a - b(2a) = a(1 - 2b) \in S\text{.}\) In either case \(S \neq \emptyset\text{.}\) By the Well-Ordering Principle, \(S\) must have a smallest member, say \(r = a - bq\text{.}\) Therefore, \(a = bq + r\text{,}\)          \(r \geq 0\text{.}\) We now show that \(r \lt b\text{.}\) Suppose that \(r \gt b\text{.}\) Then</p>
 <div class="displaymath">
 \begin{equation*}
 a - b(q + 1)= a - bq - b = r - b \gt 0\text{.}
 \end{equation*}
 </div>
-<p data-braille="continuation">In this case we would have \(a - b(q + 1)\) in the set \(S\text{.}\) But then \(a - b(q + 1) \lt a - bq\text{,}\) which would contradict the fact that \(r = a - bq\) is the smallest member  of \(S\text{.}\) So \(r \leq b\text{.}\) Since \(0 \notin S\text{,}\)          \(r \neq b\) and so \(r \lt b\text{.}\)</p>
+<p class="continuation">In this case we would have \(a - b(q + 1)\) in the set \(S\text{.}\) But then \(a - b(q + 1) \lt a - bq\text{,}\) which would contradict the fact that \(r = a - bq\) is the smallest member  of \(S\text{.}\) So \(r \leq b\text{.}\) Since \(0 \notin S\text{,}\)          \(r \neq b\) and so \(r \lt b\text{.}\)</p>
 <p id="kMc"><em class="emphasis">Uniqueness of \(q\) and \(r\text{.}\)</em> Suppose there exist integers \(r\text{,}\)          \(r'\text{,}\) \(q\text{,}\) and \(q'\) such that</p>
 <div class="displaymath">
 \begin{equation*}
 a = bq + r, 0 \leq r \lt b \quad \text{and}\quad a = bq' + r', 0 \leq r' \lt b\text{.}
 \end{equation*}
 </div>
-<p data-braille="continuation">Then \(bq + r =  bq' + r'\text{.}\) Assume that \(r' \geq r\text{.}\) From the last equation we have \(b(q - q') = r' - r\text{;}\) therefore, \(b\) must divide \(r' - r\) and \(0 \leq r'- r \leq r' \lt b\text{.}\) This is possible only if \(r' - r = 0\text{.}\) Hence, \(r = r'\) and  \(q = q'\text{.}\)</p></article><p id="Ijt">Let \(a\) and \(b\) be integers. If \(b = ak\) for some integer \(k\text{,}\) we write \(a \mid b\text{.}\) An integer \(d\) is called a <dfn class="terminology">common divisor</dfn> of \(a\) and \(b\) if \(d \mid a\) and \(d \mid b\text{.}\) The <dfn class="terminology">greatest common divisor</dfn>  of integers \(a\) and \(b\) is a positive integer \(d\) such that \(d\) is a common divisor of \(a\) and \(b\) and if \(d'\) is any other common divisor of \(a\) and \(b\text{,}\) then \(d' \mid d\text{.}\)  We write \(d = \gcd(a, b)\text{;}\) for example, \(\gcd( 24, 36) = 12\) and \(\gcd(120, 102) = 6\text{.}\) We say that two integers \(a\) and \(b\) are <dfn class="terminology">relatively prime</dfn> if \(\gcd( a, b ) = 1\text{.}\)</p>
+<p class="continuation">Then \(bq + r =  bq' + r'\text{.}\) Assume that \(r' \geq r\text{.}\) From the last equation we have \(b(q - q') = r' - r\text{;}\) therefore, \(b\) must divide \(r' - r\) and \(0 \leq r'- r \leq r' \lt b\text{.}\) This is possible only if \(r' - r = 0\text{.}\) Hence, \(r = r'\) and  \(q = q'\text{.}\)</p></article><p id="Ijt">Let \(a\) and \(b\) be integers. If \(b = ak\) for some integer \(k\text{,}\) we write \(a \mid b\text{.}\) An integer \(d\) is called a <dfn class="terminology">common divisor</dfn> of \(a\) and \(b\) if \(d \mid a\) and \(d \mid b\text{.}\) The <dfn class="terminology">greatest common divisor</dfn>  of integers \(a\) and \(b\) is a positive integer \(d\) such that \(d\) is a common divisor of \(a\) and \(b\) and if \(d'\) is any other common divisor of \(a\) and \(b\text{,}\) then \(d' \mid d\text{.}\)  We write \(d = \gcd(a, b)\text{;}\) for example, \(\gcd( 24, 36) = 12\) and \(\gcd(120, 102) = 6\text{.}\) We say that two integers \(a\) and \(b\) are <dfn class="terminology">relatively prime</dfn> if \(\gcd( a, b ) = 1\text{.}\)</p>
 <article class="theorem theorem-like" id="WPB"><h6 class="heading">
 <span class="type">Theorem</span><span class="space"> </span><span class="codenumber">6.2</span><span class="period">.</span>
 </h6>
@@ -352,14 +352,14 @@ a = bq + r, 0 \leq r \lt b \quad \text{and}\quad a = bq' + r', 0 \leq r' \lt b\t
 \gcd( a, b) = ar + bs\text{.}
 \end{equation*}
 </div>
-<p data-braille="continuation">Furthermore, the greatest common divisor of \(a\) and \(b\) is unique.</p></article><article class="proof" id="ELX"><h6 class="heading"><span class="type">Proof<span class="period">.</span></span></h6>
+<p class="continuation">Furthermore, the greatest common divisor of \(a\) and \(b\) is unique.</p></article><article class="proof" id="ELX"><h6 class="heading"><span class="type">Proof<span class="period">.</span></span></h6>
 <p id="QTl">Let</p>
 <div class="displaymath">
 \begin{equation*}
 S = \{ am + bn : m, n \in {\mathbb Z} \text{ and } am + bn \gt 0 \}\text{.}
 \end{equation*}
 </div>
-<p data-braille="continuation">Clearly, the set \(S\) is nonempty; hence, by the Well-Ordering Principle \(S\) must have a smallest member, say \(d = ar + bs\text{.}\) We claim that \(d = \gcd( a, b)\text{.}\) Write \(a = dq + r'\) where \(0 \leq r' \lt d\text{.}\) If \(r' \gt 0\text{,}\) then           </p>
+<p class="continuation">Clearly, the set \(S\) is nonempty; hence, by the Well-Ordering Principle \(S\) must have a smallest member, say \(d = ar + bs\text{.}\) We claim that \(d = \gcd( a, b)\text{.}\) Write \(a = dq + r'\) where \(0 \leq r' \lt d\text{.}\) If \(r' \gt 0\text{,}\) then           </p>
 <div class="displaymath">
 \begin{align*}
 r'&amp; = a - dq\\
@@ -368,14 +368,14 @@ r'&amp; = a - dq\\
 &amp; = a( 1 - rq ) + b( -sq )\text{,}
 \end{align*}
 </div>
-<p data-braille="continuation">which is in \(S\text{.}\) But this would contradict the fact that \(d\) is the smallest member of \(S\text{.}\) Hence, \(r' = 0\) and \(d\) divides \(a\text{.}\) A similar argument shows that \(d\) divides \(b\text{.}\) Therefore, \(d\) is a common divisor of \(a\) and \(b\text{.}\)</p>
+<p class="continuation">which is in \(S\text{.}\) But this would contradict the fact that \(d\) is the smallest member of \(S\text{.}\) Hence, \(r' = 0\) and \(d\) divides \(a\text{.}\) A similar argument shows that \(d\) divides \(b\text{.}\) Therefore, \(d\) is a common divisor of \(a\) and \(b\text{.}\)</p>
 <p id="xau">Suppose that \(d'\) is another common divisor of \(a\) and \(b\text{,}\) and we want to show that \(d' \mid d\text{.}\) If we let \(a = d'h\) and \(b = d'k\text{,}\) then</p>
 <div class="displaymath">
 \begin{equation*}
 d = ar + bs = d'hr + d'ks = d'(hr + ks)\text{.}
 \end{equation*}
 </div>
-<p data-braille="continuation">So \(d'\) must divide \(d\text{.}\) Hence, \(d\) must be the unique greatest common divisor of \(a\) and \(b\text{.}\)</p></article><article class="corollary theorem-like" id="jdT"><h6 class="heading">
+<p class="continuation">So \(d'\) must divide \(d\text{.}\) Hence, \(d\) must be the unique greatest common divisor of \(a\) and \(b\text{.}\)</p></article><article class="corollary theorem-like" id="jdT"><h6 class="heading">
 <span class="type">Corollary</span><span class="space"> </span><span class="codenumber">6.3</span><span class="period">.</span>
 </h6>
 <p id="SIy">Let \(a\) and \(b\) be two integers that are relatively prime. Then there exist integers \(r\) and \(s\) such that \(ar + bs = 1\text{.}\)</p></article></section><section class="subsection" id="SBh"><h3 class="heading hide-type">
@@ -394,7 +394,7 @@ d = ar + bs = d'hr + d'ks = d'(hr + ks)\text{.}
 420 &amp; = 105 \cdot 4 + 0\text{.}
 \end{align*}
 </div>
-<p data-braille="continuation">Reversing our steps, \(105\) divides \(420\text{,}\) \(105\) divides \(525\text{,}\) \(105\) divides \(945\text{,}\) and \(105\) divides \(2415\text{.}\) Hence, \(105\) divides both \(945\) and \(2415\text{.}\) If \(d\) were another common divisor of \(945\) and \(2415\text{,}\) then \(d\) would also have to divide \(105\text{.}\) Therefore, \(\gcd( 945, 2415 ) = 105\text{.}\)</p>
+<p class="continuation">Reversing our steps, \(105\) divides \(420\text{,}\) \(105\) divides \(525\text{,}\) \(105\) divides \(945\text{,}\) and \(105\) divides \(2415\text{.}\) Hence, \(105\) divides both \(945\) and \(2415\text{.}\) If \(d\) were another common divisor of \(945\) and \(2415\text{,}\) then \(d\) would also have to divide \(105\text{.}\) Therefore, \(\gcd( 945, 2415 ) = 105\text{.}\)</p>
 <p id="PNS">If we work backward through the above sequence of equations, we can also obtain numbers \(r\) and \(s\) such that \(945 r + 2415 s = 105\text{.}\) Observe that</p>
 <div class="displaymath">
 \begin{align*}
@@ -405,7 +405,7 @@ d = ar + bs = d'hr + d'ks = d'(hr + ks)\text{.}
 &amp; = 2 \cdot 2415 + (-5) \cdot 945\text{.}
 \end{align*}
 </div>
-<p data-braille="continuation">So \(r = -5\) and \(s= 2\text{.}\) Notice that \(r\) and \(s\) are not unique, since \(r = 41\) and \(s = -16\) would also work.</p></article><p id="SmZ">To compute \(\gcd(a,b) = d\text{,}\) we are using repeated divisions to obtain a decreasing sequence of positive integers \(r_1 \gt r_2 \gt \cdots \gt r_n = d\text{;}\) that is,</p>
+<p class="continuation">So \(r = -5\) and \(s= 2\text{.}\) Notice that \(r\) and \(s\) are not unique, since \(r = 41\) and \(s = -16\) would also work.</p></article><p id="SmZ">To compute \(\gcd(a,b) = d\text{,}\) we are using repeated divisions to obtain a decreasing sequence of positive integers \(r_1 \gt r_2 \gt \cdots \gt r_n = d\text{;}\) that is,</p>
 <div class="displaymath">
 \begin{align*}
 b &amp; = a q_1 + r_1\\
@@ -416,7 +416,7 @@ r_{n - 2} &amp; = r_{n - 1} q_{n} + r_{n}\\
 r_{n - 1} &amp; = r_n q_{n + 1}\text{.}
 \end{align*}
 </div>
-<p data-braille="continuation">To find \(r\) and \(s\) such that \(ar + bs = d\text{,}\) we begin with this last equation and substitute results obtained from the previous equations:</p>
+<p class="continuation">To find \(r\) and \(s\) such that \(ar + bs = d\text{,}\) we begin with this last equation and substitute results obtained from the previous equations:</p>
 <div class="displaymath">
 \begin{align*}
 d &amp; = r_n\\
@@ -427,7 +427,7 @@ d &amp; = r_n\\
 &amp; = ra + sb\text{.}
 \end{align*}
 </div>
-<p data-braille="continuation">The algorithm that we have just used to find the greatest common divisor \(d\) of two integers \(a\) and \(b\) and to write \(d\) as the linear combination of \(a\) and \(b\) is known as the <dfn class="terminology">Euclidean algorithm</dfn>. </p></section><section class="subsection" id="yIq"><h3 class="heading hide-type">
+<p class="continuation">The algorithm that we have just used to find the greatest common divisor \(d\) of two integers \(a\) and \(b\) and to write \(d\) as the linear combination of \(a\) and \(b\) is known as the <dfn class="terminology">Euclidean algorithm</dfn>. </p></section><section class="subsection" id="yIq"><h3 class="heading hide-type">
 <span class="type">Subsection</span> <span class="codenumber">6.1.2</span> <span class="title">Prime Numbers</span>
 </h3>
 <p id="yui">Let \(p\) be an integer such that \(p \gt 1\text{.}\) We say that \(p\) is a <dfn class="terminology">prime number</dfn>,  or simply \(p\) is <dfn class="terminology">prime</dfn>, if the only positive numbers that divide \(p\) are \(1\) and \(p\) itself. An integer \(n \gt 1\) that is not prime is said to be <dfn class="terminology">composite</dfn>. </p>
@@ -441,7 +441,7 @@ d &amp; = r_n\\
 b = b(ar + ps) = (ab)r + p(bs)\text{.}
 \end{equation*}
 </div>
-<p data-braille="continuation">Since \(p\) divides both \(ab\) and itself, \(p\) must divide \(b = (ab)r + p(bs)\text{.}\)</p></article><article class="theorem theorem-like" id="AxD"><h6 class="heading">
+<p class="continuation">Since \(p\) divides both \(ab\) and itself, \(p\) must divide \(b = (ab)r + p(bs)\text{.}\)</p></article><article class="theorem theorem-like" id="AxD"><h6 class="heading">
 <span class="type">Theorem</span><span class="space"> </span><span class="codenumber">6.6</span><span class="period">.</span><span class="space"> </span><span class="title">Euclid.</span>
 </h6>
 <p id="ufO">There exist an infinite number of primes.</p></article><article class="proof" id="kTg"><h6 class="heading"><span class="type">Proof<span class="period">.</span></span></h6>
@@ -454,27 +454,27 @@ b = b(ar + ps) = (ab)r + p(bs)\text{.}
 n = p_1 p_2 \cdots p_k\text{,}
 \end{equation*}
 </div>
-<p data-braille="continuation">where \(p_1, \ldots, p_k\) are  primes (not necessarily distinct). Furthermore, this factorization is unique; that is, if</p>
+<p class="continuation">where \(p_1, \ldots, p_k\) are  primes (not necessarily distinct). Furthermore, this factorization is unique; that is, if</p>
 <div class="displaymath">
 \begin{equation*}
 n = q_1 q_2 \cdots q_l\text{,}
 \end{equation*}
 </div>
-<p data-braille="continuation">then \(k = l\) and the \(q_i\)'s are just the \(p_i\)'s rearranged.</p></article><article class="proof" id="Rap"><h6 class="heading"><span class="type">Proof<span class="period">.</span></span></h6>
+<p class="continuation">then \(k = l\) and the \(q_i\)'s are just the \(p_i\)'s rearranged.</p></article><article class="proof" id="Rap"><h6 class="heading"><span class="type">Proof<span class="period">.</span></span></h6>
 <p id="pvV"><em class="emphasis">Uniqueness.</em>  To show uniqueness we will use induction on \(n\text{.}\) The theorem is certainly true for \(n = 2\) since in this case \(n\) is prime. Now assume that the result holds for all integers \(m\) such that \(1 \leq m \lt n\text{,}\) and</p>
 <div class="displaymath">
 \begin{equation*}
 n = p_1 p_2 \cdots p_k = q_1 q_2 \cdots q_l\text{,}
 \end{equation*}
 </div>
-<p data-braille="continuation">where \(p_1 \leq p_2 \leq \cdots \leq p_k\) and \(q_1 \leq q_2 \leq \cdots \leq q_l\text{.}\) By <a class="xref" data-knowl="./knowl/theorem-integers-prime-divisor.html" title="Lemma 6.5: Euclid">Lemma 6.5</a> ,        \(p_1  \mid  q_i\) for some \(i = 1, \ldots,
+<p class="continuation">where \(p_1 \leq p_2 \leq \cdots \leq p_k\) and \(q_1 \leq q_2 \leq \cdots \leq q_l\text{.}\) By <a class="xref" data-knowl="./knowl/theorem-integers-prime-divisor.html" title="Lemma 6.5: Euclid">Lemma 6.5</a> ,        \(p_1  \mid  q_i\) for some \(i = 1, \ldots,
 l\) and \(q_1  \mid  p_j\) for some \(j = 1, \ldots, k\text{.}\) Since all of the \(p_i\)'s and \(q_i\)'s are prime, \(p_1 = q_i\) and  \(q_1 = p_j\text{.}\) Hence, \(p_1 = q_1\) since \(p_1 \leq p_j = q_1 \leq q_i = p_1\text{.}\) By the induction hypothesis,</p>
 <div class="displaymath">
 \begin{equation*}
 n' = p_2 \cdots p_k = q_2 \cdots q_l
 \end{equation*}
 </div>
-<p data-braille="continuation">has a unique factorization. Hence, \(k = l\) and \(q_i = p_i\) for \(i = 1, \ldots, k\text{.}\)</p>
+<p class="continuation">has a unique factorization. Hence, \(k = l\) and \(q_i = p_i\) for \(i = 1, \ldots, k\text{.}\)</p>
 <p id="VDe"><em class="emphasis">Existence.</em> To show existence, suppose that there is some integer that cannot be written as the product of primes. Let \(S\) be the set of all such numbers. By the Principle of Well-Ordering, \(S\) has a smallest number, say \(a\text{.}\) If the only positive factors of \(a\) are \(a\) and \(1\text{,}\) then \(a\) is prime, which is a contradiction. Hence, \(a = a_1 a_2\) where \(1 \lt a_1 \lt a\) and \(1 \lt a_2 \lt a\text{.}\) Neither \(a_1\in S\) nor \(a_2 \in S\text{,}\) since \(a\) is the smallest element in \(S\text{.}\) So</p>
 <div class="displaymath">
 \begin{align*}
@@ -482,13 +482,13 @@ a_1 &amp; = p_1 \cdots p_r\\
 a_2 &amp; = q_1 \cdots q_s\text{.}
 \end{align*}
 </div>
-<p data-braille="continuation">Therefore,</p>
+<p class="continuation">Therefore,</p>
 <div class="displaymath">
 \begin{equation*}
 a = a_1 a_2 = p_1 \cdots p_r q_1 \cdots q_s\text{.}
 \end{equation*}
 </div>
-<p data-braille="continuation">So \(a \notin S\text{,}\) which is a contradiction.</p></article></section><section class="subsection" id="ePz"><h3 class="heading hide-type">
+<p class="continuation">So \(a \notin S\text{,}\) which is a contradiction.</p></article></section><section class="subsection" id="ePz"><h3 class="heading hide-type">
 <span class="type">Subsection</span> <span class="codenumber">6.1.3</span> <span class="title">Historical Note</span>
 </h3>
 <p id="eBr">Prime numbers were first studied by the ancient Greeks. Two important results from antiquity are Euclid's proof that an infinite number of primes exist and the Sieve of Eratosthenes, a method of computing all of the prime numbers less than a fixed positive integer \(n\text{.}\) One problem in number theory is to find a function \(f\) such that \(f(n)\) is prime for each integer \(n\text{.}\) Pierre Fermat (1601?– 1665) conjectured that \(2^{2^n} + 1\) was prime for all \(n\text{,}\) but later it was shown by Leonhard Euler (1707– 1783) that</p>
@@ -497,7 +497,7 @@ a = a_1 a_2 = p_1 \cdots p_r q_1 \cdots q_s\text{.}
 2^{2^5} + 1 = 4{,}294{,}967{,}297
 \end{equation*}
 </div>
-<p data-braille="continuation">is a composite number. One of the many unproven conjectures about prime numbers is Goldbach's Conjecture. In a letter to Euler in 1742, Christian Goldbach stated the conjecture that every even integer with the exception of \(2\) seemed to be the sum of two primes: \(4 = 2 + 2\text{,}\)\(6 = 3 + 3\text{,}\) \(8 =3 + 5\text{,}\)\(\ldots\text{.}\) Although the conjecture has been verified for the numbers up through \(4 \times 10^{18}\text{,}\) it has yet to be proven in general. Since prime numbers play an important role in public key cryptography, there is currently a great deal of interest in determining whether or not a large number is prime.</p></section><section class="reading-questions" id="WiZ"><h3 class="heading hide-type">
+<p class="continuation">is a composite number. One of the many unproven conjectures about prime numbers is Goldbach's Conjecture. In a letter to Euler in 1742, Christian Goldbach stated the conjecture that every even integer with the exception of \(2\) seemed to be the sum of two primes: \(4 = 2 + 2\text{,}\)\(6 = 3 + 3\text{,}\) \(8 =3 + 5\text{,}\)\(\ldots\text{.}\) Although the conjecture has been verified for the numbers up through \(4 \times 10^{18}\text{,}\) it has yet to be proven in general. Since prime numbers play an important role in public key cryptography, there is currently a great deal of interest in determining whether or not a large number is prime.</p></section><section class="reading-questions" id="WiZ"><h3 class="heading hide-type">
 <span class="type">Reading Questions</span> <span class="codenumber">6.1.4</span> <span class="title">Reading Questions</span>
 </h3>
 <article class="exercise exercise-like" id="Cqi"><h6 class="heading"><span class="codenumber">1<span class="period">.</span></span></h6>
@@ -536,7 +536,7 @@ a^2 + b^2 &amp; = r^2\\
 a^2 - b^2 &amp; = s^2\text{.}
 \end{align*}
 </div>
-<p data-braille="continuation">Prove that \(a\text{,}\)        \(r\text{,}\) and \(s\) are odd and \(b\) is even.</p></article><article class="exercise exercise-like" id="rNL"><h6 class="heading"><span class="codenumber">7<span class="period">.</span></span></h6>
+<p class="continuation">Prove that \(a\text{,}\)        \(r\text{,}\) and \(s\) are odd and \(b\) is even.</p></article><article class="exercise exercise-like" id="rNL"><h6 class="heading"><span class="codenumber">7<span class="period">.</span></span></h6>
 <p id="zzB">Let \(n \in {\mathbb N}\text{.}\) Use the division algorithm to prove that every integer is congruent mod \(n\) to precisely one of the integers \(0, 1, \ldots, n-1\text{.}\) Conclude that if \(r\) is an integer, then there is exactly one \(s\) in \({\mathbb Z}\) such that \(0 \leq s \lt n\) and \([r] = [s]\text{.}\) Hence, the integers are indeed partitioned by congruence mod \(n\text{.}\)</p></article><article class="exercise exercise-like" id="XUU"><h6 class="heading"><span class="codenumber">8<span class="period">.</span></span></h6>
 <p id="fGK">Define the <dfn class="terminology">least common multiple</dfn> of two nonzero integers \(a\) and \(b\text{,}\) denoted by \(\lcm(a,b)\text{,}\) to be the nonnegative integer \(m\) such that both \(a\) and \(b\) divide \(m\text{,}\) and if \(a\) and \(b\) divide any other integer \(n\text{,}\) then \(m\) also divides \(n\text{.}\)  Prove there exists a unique least common multiple for any two integers \(a\) and \(b\text{.}\)</p>
 <div class="solutions">

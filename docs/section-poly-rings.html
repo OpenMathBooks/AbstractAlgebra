@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2021-02-08T11:02:23-07:00       *-->
+<!--*       on 2021-02-12T14:42:08-07:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -59,7 +59,7 @@ MathJax.Hub.Config({
 <!-- 2019-10-12: Temporary - CSS file for experiments with styling --><link xmlns:svg="http://www.w3.org/2000/svg" href="developer.css" rel="stylesheet" type="text/css">
 </head>
 <body id="judson-AATA" class="mathbook-book has-toc has-sidebar-left">
-<a class="assistive" href="#content">Skip to main content</a><div xmlns:svg="http://www.w3.org/2000/svg" class="hidden-content" style="display:none">\(\newcommand{\identity}{\mathrm{id}}
+<a class="assistive" href="#content">Skip to main content</a><div xmlns:svg="http://www.w3.org/2000/svg" id="latex-macros" class="hidden-content" style="display:none">\(\newcommand{\identity}{\mathrm{id}}
 \newcommand{\notdivide}{\nmid}
 \newcommand{\notsubset}{\not\subset}
 \newcommand{\lcm}{\operatorname{lcm}}
@@ -316,7 +316,7 @@ MathJax.Hub.Config({
 f(x) = \sum^{n}_{i=0} a_i x^i = a_0 + a_1 x +a_2 x^2 + \cdots + a_n x^n\text{,}
 \end{equation*}
 </div>
-<p data-braille="continuation">where \(a_i \in R\) and \(a_n \neq 0\text{,}\) is called a <dfn class="terminology">polynomial over \(R\)</dfn> with <dfn class="terminology">indeterminate</dfn>  \(x\text{.}\) The elements \(a_0, a_1, \ldots,
+<p class="continuation">where \(a_i \in R\) and \(a_n \neq 0\text{,}\) is called a <dfn class="terminology">polynomial over \(R\)</dfn> with <dfn class="terminology">indeterminate</dfn>  \(x\text{.}\) The elements \(a_0, a_1, \ldots,
 a_n\) are called the <dfn class="terminology">coefficients</dfn> of \(f\text{.}\) The coefficient \(a_n\) is called the <dfn class="terminology">leading coefficient</dfn>.  A polynomial is called <dfn class="terminology">monic</dfn>  if the leading coefficient is 1. If \(n\) is the largest nonnegative number for which \(a_n \neq 0\text{,}\) we say that the <dfn class="terminology">degree</dfn> of \(f\) is \(n\) and write \(\deg f(x) = n\text{.}\)  If no such \(n\) exists—that is, if \(f=0\) is the zero polynomial—then the degree of \(f\) is defined to be \(-\infty\text{.}\) We will denote the set of all polynomials with coefficients in a ring \(R\) by \(R[x]\text{.}\)  Two polynomials are equal exactly when their corresponding coefficients are equal; that is, if we let</p>
 <div class="displaymath">
 \begin{align*}
@@ -324,7 +324,7 @@ p(x) &amp; = a_0 + a_1 x + \cdots + a_n x^n\\
 q(x) &amp; = b_0 + b_1 x + \cdots + b_m x^m\text{,}
 \end{align*}
 </div>
-<p data-braille="continuation">then \(p(x) = q(x)\) if and only if \(a_i = b_i\) for all \(i \geq 0\text{.}\)</p>
+<p class="continuation">then \(p(x) = q(x)\) if and only if \(a_i = b_i\) for all \(i \geq 0\text{.}\)</p>
 <p id="ueb">To show that the set of all polynomials forms a ring, we must first define addition and multiplication. We define the sum of two polynomials as follows. Let</p>
 <div class="displaymath">
 \begin{align*}
@@ -332,25 +332,25 @@ p(x) &amp; = a_0 + a_1 x + \cdots + a_n x^n\\
 q(x) &amp; = b_0 + b_1 x + \cdots + b_m x^m\text{.}
 \end{align*}
 </div>
-<p data-braille="continuation">Then the sum of \(p(x)\) and \(q(x)\) is</p>
+<p class="continuation">Then the sum of \(p(x)\) and \(q(x)\) is</p>
 <div class="displaymath">
 \begin{equation*}
 p(x) + q(x) = c_0 + c_1 x + \cdots + c_k x^k\text{,}
 \end{equation*}
 </div>
-<p data-braille="continuation">where \(c_i = a_i + b_i\) for each \(i\text{.}\) We define the product of \(p(x)\) and \(q(x)\) to be</p>
+<p class="continuation">where \(c_i = a_i + b_i\) for each \(i\text{.}\) We define the product of \(p(x)\) and \(q(x)\) to be</p>
 <div class="displaymath">
 \begin{equation*}
 p(x) q(x) = c_0 + c_1 x + \cdots + c_{m + n} x^{m + n}\text{,}
 \end{equation*}
 </div>
-<p data-braille="continuation">where</p>
+<p class="continuation">where</p>
 <div class="displaymath">
 \begin{equation*}
 c_i = \sum_{k = 0}^i a_k b_{i - k} = a_0  b_i + a_1 b_{i -1} + \cdots + a_{i -1} b _1 + a_i b_0
 \end{equation*}
 </div>
-<p data-braille="continuation">for each \(i\text{.}\) Notice that in each case some of the coefficients may be zero.</p>
+<p class="continuation">for each \(i\text{.}\) Notice that in each case some of the coefficients may be zero.</p>
 <article class="example example-like" id="YvK"><h6 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">6.8</span><span class="period">.</span>
 </h6>
@@ -360,25 +360,25 @@ c_i = \sum_{k = 0}^i a_k b_{i - k} = a_0  b_i + a_1 b_{i -1} + \cdots + a_{i -1}
 p(x) = 3 + 0 x + 0 x^2 + 2 x^3 + 0 x^4
 \end{equation*}
 </div>
-<p data-braille="continuation">and</p>
+<p class="continuation">and</p>
 <div class="displaymath">
 \begin{equation*}
 q(x) = 2 + 0 x - x^2 + 0 x^3 + 4 x^4
 \end{equation*}
 </div>
-<p data-braille="continuation">are polynomials in \({\mathbb Z}[x]\text{.}\) If the coefficient of some term in a polynomial is zero, then we usually just omit that term. In this case we  would write \(p(x) =  3 + 2 x^3\) and \(q(x) = 2 - x^2 + 4 x^4\text{.}\) The sum of these two polynomials is</p>
+<p class="continuation">are polynomials in \({\mathbb Z}[x]\text{.}\) If the coefficient of some term in a polynomial is zero, then we usually just omit that term. In this case we  would write \(p(x) =  3 + 2 x^3\) and \(q(x) = 2 - x^2 + 4 x^4\text{.}\) The sum of these two polynomials is</p>
 <div class="displaymath">
 \begin{equation*}
 p(x) + q(x)= 5 - x^2 + 2 x^3 + 4 x^4\text{.}
 \end{equation*}
 </div>
-<p data-braille="continuation">The product,</p>
+<p class="continuation">The product,</p>
 <div class="displaymath">
 \begin{equation*}
 p(x) q(x) = (3 + 2 x^3)( 2 - x^2 + 4 x^4 ) =  6 - 3x^2 + 4 x^3 + 12 x^4  - 2 x^5 + 8 x^7\text{,}
 \end{equation*}
 </div>
-<p data-braille="continuation">can be calculated either by determining the \(c_i\)s in the definition or by simply multiplying polynomials in the same way as we have always done.</p></article><article class="example example-like" id="ECT"><h6 class="heading">
+<p class="continuation">can be calculated either by determining the \(c_i\)s in the definition or by simply multiplying polynomials in the same way as we have always done.</p></article><article class="example example-like" id="ECT"><h6 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">6.9</span><span class="period">.</span>
 </h6>
 <p id="NIx">Let</p>
@@ -387,7 +387,7 @@ p(x) q(x) = (3 + 2 x^3)( 2 - x^2 + 4 x^4 ) =  6 - 3x^2 + 4 x^3 + 12 x^4  - 2 x^5
 p(x) = 3 + 3 x^3 \qquad \text{and} \qquad q(x) = 4 + 4 x^2 + 4 x^4
 \end{equation*}
 </div>
-<p data-braille="continuation">be polynomials in \({\mathbb Z}_{12}[x]\text{.}\) The sum of \(p(x)\) and \(q(x)\) is \(7 + 4 x^2 + 3 x^3 + 4 x^4\text{.}\) The product of the two polynomials is  the zero polynomial. This example tells us that we can not expect \(R[x]\) to be an integral domain if \(R\) is not an integral domain.</p></article><article class="theorem theorem-like" id="CNG"><h6 class="heading">
+<p class="continuation">be polynomials in \({\mathbb Z}_{12}[x]\text{.}\) The sum of \(p(x)\) and \(q(x)\) is \(7 + 4 x^2 + 3 x^3 + 4 x^4\text{.}\) The product of the two polynomials is  the zero polynomial. This example tells us that we can not expect \(R[x]\) to be an integral domain if \(R\) is not an integral domain.</p></article><article class="theorem theorem-like" id="CNG"><h6 class="heading">
 <span class="type">Theorem</span><span class="space"> </span><span class="codenumber">6.10</span><span class="period">.</span>
 </h6>
 <p id="fMb">Let \(R\) be a commutative ring with identity. Then \(R[x]\) is a commutative ring with identity.</p></article><article class="proof" id="NWF"><h6 class="heading"><span class="type">Proof<span class="period">.</span></span></h6>
@@ -400,7 +400,7 @@ q(x) &amp; = \sum_{i = 0}^{n} b_i x^i,\\
 r(x) &amp; = \sum_{i = 0}^{p} c_i x^i\text{.}
 \end{align*}
 </div>
-<p data-braille="continuation">Then</p>
+<p class="continuation">Then</p>
 <div class="displaymath">
 \begin{align*}
 [p(x) q(x)] r(x) &amp; = \left[ \left( \sum_{i=0}^{m} a_i x^i  \right) \left(  \sum_{i=0}^{n} b_i x^i \right) \right] \left( \sum_{i = 0}^{p} c_i x^i \right)\\
@@ -413,7 +413,7 @@ r(x) &amp; = \sum_{i = 0}^{p} c_i x^i\text{.}
 &amp; = p(x) [ q(x) r(x) ]
 \end{align*}
 </div>
-<p data-braille="continuation">The commutativity and distribution properties of polynomial multiplication are proved in a similar manner. We shall leave the proofs of these properties as an exercise.</p></article><article class="proposition theorem-like" id="Hxz"><h6 class="heading">
+<p class="continuation">The commutativity and distribution properties of polynomial multiplication are proved in a similar manner. We shall leave the proofs of these properties as an exercise.</p></article><article class="proposition theorem-like" id="Hxz"><h6 class="heading">
 <span class="type">Proposition</span><span class="space"> </span><span class="codenumber">6.11</span><span class="period">.</span>
 </h6>
 <p id="wKm">Let \(p(x)\) and \(q(x)\) be polynomials in \(R[x]\text{,}\) where \(R\) is an integral domain. Then \(\deg p(x) + \deg q(x) = \deg( p(x) q(x) )\text{.}\) Furthermore, \(R[x]\) is an integral domain.</p></article><article class="proof" id="eUQ"><h6 class="heading"><span class="type">Proof<span class="period">.</span></span></h6>
@@ -423,13 +423,13 @@ r(x) &amp; = \sum_{i = 0}^{p} c_i x^i\text{.}
 p(x) = a_m x^m + \cdots + a_1 x + a_0
 \end{equation*}
 </div>
-<p data-braille="continuation">and</p>
+<p class="continuation">and</p>
 <div class="displaymath">
 \begin{equation*}
 q(x) = b_n x^n + \cdots + b_1 x + b_0
 \end{equation*}
 </div>
-<p data-braille="continuation">with \(a_m \neq 0\) and \(b_n \neq 0\text{.}\) The degrees of \(p(x)\) and \(q(x)\) are \(m\) and \(n\text{,}\) respectively. The leading term of \(p(x) q(x)\) is \(a_m b_n x^{m + n}\text{,}\) which cannot be zero since \(R\) is an integral domain; hence, the degree of \(p(x) q(x)\) is \(m + n\text{,}\) and \(p(x)q(x) \neq 0\text{.}\) Since \(p(x) \neq 0\) and \(q(x) \neq 0\) imply that \(p(x)q(x) \neq 0\text{,}\) we know that \(R[x]\) must also be an integral domain.</p></article><p id="alk">We also want to consider polynomials in two or more variables, such as \(x^2 - 3 x y + 2 y^3\text{.}\) Let \(R\) be a ring and suppose that we are given two indeterminates \(x\) and \(y\text{.}\) Certainly we can form the ring \((R[x])[y]\text{.}\) It is straightforward but perhaps tedious to show that \((R[x])[y] \cong R([y])[x]\text{.}\) We shall identify these two rings by this isomorphism and simply write \(R[x,y]\text{.}\) The ring \(R[x, y]\) is called the <dfn class="terminology">ring of polynomials in two indeterminates \(x\) and \(y\) with coefficients in</dfn> \(R\text{.}\) We can define the <dfn class="terminology">ring of polynomials in</dfn> \(n\) <dfn class="terminology">indeterminates with coefficients in</dfn> \(R\) similarly. We shall denote this ring by \(R[x_1, x_2, \ldots, x_n]\text{.}\) </p>
+<p class="continuation">with \(a_m \neq 0\) and \(b_n \neq 0\text{.}\) The degrees of \(p(x)\) and \(q(x)\) are \(m\) and \(n\text{,}\) respectively. The leading term of \(p(x) q(x)\) is \(a_m b_n x^{m + n}\text{,}\) which cannot be zero since \(R\) is an integral domain; hence, the degree of \(p(x) q(x)\) is \(m + n\text{,}\) and \(p(x)q(x) \neq 0\text{.}\) Since \(p(x) \neq 0\) and \(q(x) \neq 0\) imply that \(p(x)q(x) \neq 0\text{,}\) we know that \(R[x]\) must also be an integral domain.</p></article><p id="alk">We also want to consider polynomials in two or more variables, such as \(x^2 - 3 x y + 2 y^3\text{.}\) Let \(R\) be a ring and suppose that we are given two indeterminates \(x\) and \(y\text{.}\) Certainly we can form the ring \((R[x])[y]\text{.}\) It is straightforward but perhaps tedious to show that \((R[x])[y] \cong R([y])[x]\text{.}\) We shall identify these two rings by this isomorphism and simply write \(R[x,y]\text{.}\) The ring \(R[x, y]\) is called the <dfn class="terminology">ring of polynomials in two indeterminates \(x\) and \(y\) with coefficients in</dfn> \(R\text{.}\) We can define the <dfn class="terminology">ring of polynomials in</dfn> \(n\) <dfn class="terminology">indeterminates with coefficients in</dfn> \(R\) similarly. We shall denote this ring by \(R[x_1, x_2, \ldots, x_n]\text{.}\) </p>
 <article class="theorem theorem-like" id="iUP"><h6 class="heading">
 <span class="type">Theorem</span><span class="space"> </span><span class="codenumber">6.12</span><span class="period">.</span>
 </h6>
@@ -439,7 +439,7 @@ q(x) = b_n x^n + \cdots + b_1 x + b_0
 \phi_{\alpha} (p(x) ) = p( \alpha ) = a_n \alpha^n + \cdots + a_1 \alpha + a_0\text{,}
 \end{equation*}
 </div>
-<p data-braille="continuation">where \(p( x ) = a_n x^n + \cdots + a_1 x + a_0\text{.}\)</p></article><article class="proof" id="udO"><h6 class="heading"><span class="type">Proof<span class="period">.</span></span></h6>
+<p class="continuation">where \(p( x ) = a_n x^n + \cdots + a_1 x + a_0\text{.}\)</p></article><article class="proof" id="udO"><h6 class="heading"><span class="type">Proof<span class="period">.</span></span></h6>
 <p id="MYD">Let \(p(x) = \sum_{i = 0}^n a_i x^i\) and \(q(x) = \sum_{i = 0}^m b_i x^i\text{.}\) It is easy to show that \(\phi_{\alpha}(p(x) + q(x)) = \phi_{\alpha}(p(x)) + \phi_{\alpha}(q(x))\text{.}\) To show that multiplication is preserved under the map \(\phi_{\alpha}\text{,}\) observe that</p>
 <div class="displaymath">
 \begin{align*}

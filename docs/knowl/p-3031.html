@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2021-02-08T11:09:35-07:00       *-->
+<!--*       on 2021-02-12T14:47:06-07:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -15,12 +15,7 @@
 </head>
 <body>
 <h6 xmlns:svg="http://www.w3.org/2000/svg" class="heading"><span class="type">Paragraph</span></h6>
-<p>Let us consider the affine cryptosystem \(f(p) = ap + b \bmod 26\text{.}\) For this cryptosystem to work we must choose an \(a \in {\mathbb Z}_{26}\) that is invertible. This is only possible if \(\gcd(a, 26) = 1\text{.}\) Recognizing this fact, we will let \(a = 5\) since \(\gcd(5, 26) = 1\text{.}\) It is easy to see that \(a^{-1} = 21\text{.}\) Therefore, we can take our encryption function to be \(f(p) = 5p + 3 \bmod 26\text{.}\) Thus, ALGEBRA is encoded as \(3, 6, 7, 23, 8, 10, 3\text{,}\) or DGHXIKD. The decryption function will be</p>
-<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
-\begin{equation*}
-f^{-1}(p) = 21 p - 21 \cdot 3 \bmod 26 = 21 p + 15 \bmod 26\text{.}
-\end{equation*}
-</div>
-<span class="incontext"><a href="section-private-key-crypt.html#egS">in-context</a></span>
+<p xmlns:svg="http://www.w3.org/2000/svg">In <dfn class="terminology">single</dfn>  or <dfn class="terminology">private key cryptosystems</dfn>  the same key is used for both encrypting and decrypting messages. To encrypt a plaintext message, we apply to the message some function which is kept secret, say \(f\text{.}\) This function will yield an encrypted message. Given the encrypted form of the message, we can recover the original message by applying the inverse transformation \(f^{-1}\text{.}\) The transformation \(f\) must be relatively easy to compute, as must \(f^{-1}\text{;}\) however, \(f\) must be extremely difficult to guess from available examples of coded messages.</p>
+<span class="incontext"><a href="section-private-key-crypt.html#ztx">in-context</a></span>
 </body>
 </html>

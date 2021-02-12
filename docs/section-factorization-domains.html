@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2021-02-08T11:02:41-07:00       *-->
+<!--*       on 2021-02-12T14:42:22-07:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -59,7 +59,7 @@ MathJax.Hub.Config({
 <!-- 2019-10-12: Temporary - CSS file for experiments with styling --><link xmlns:svg="http://www.w3.org/2000/svg" href="developer.css" rel="stylesheet" type="text/css">
 </head>
 <body id="judson-AATA" class="mathbook-book has-toc has-sidebar-left">
-<a class="assistive" href="#content">Skip to main content</a><div xmlns:svg="http://www.w3.org/2000/svg" class="hidden-content" style="display:none">\(\newcommand{\identity}{\mathrm{id}}
+<a class="assistive" href="#content">Skip to main content</a><div xmlns:svg="http://www.w3.org/2000/svg" id="latex-macros" class="hidden-content" style="display:none">\(\newcommand{\identity}{\mathrm{id}}
 \newcommand{\notdivide}{\nmid}
 \newcommand{\notsubset}{\not\subset}
 \newcommand{\lcm}{\operatorname{lcm}}
@@ -334,7 +334,7 @@ MathJax.Hub.Config({
 4 = 2 \cdot 2 = (1 - \sqrt{3}\, i) (1 + \sqrt{3}\, i)\text{.}
 \end{equation*}
 </div>
-<p data-braille="continuation">We must show that each of these factors is an irreducible element in \({\mathbb Z}[ \sqrt{3}\, i ]\text{.}\) If \(2\) is not irreducible, then \(2 = z w\) for elements \(z,
+<p class="continuation">We must show that each of these factors is an irreducible element in \({\mathbb Z}[ \sqrt{3}\, i ]\text{.}\) If \(2\) is not irreducible, then \(2 = z w\) for elements \(z,
 w\) in \({\mathbb Z}[ \sqrt{3}\, i ]\) where \(\nu( z) = \nu(w) = 2\text{.}\) However, there does not exist an element in \(z\) in \({\mathbb Z}[\sqrt{3}\, i ]\) such that \(\nu(z) = 2\) because the equation \(a^2 + 3 b^2 = 2\) has no integer solutions. Therefore, \(2\) must be irreducible. A similar argument shows that both \(1 - \sqrt{3}\, i\) and \(1 + \sqrt{3}\, i\) are irreducible. Since \(2\) is not a unit multiple of either \(1 - \sqrt{3}\, i\) or \(1 + \sqrt{3}\, i\text{,}\) \(4\) has at least two distinct factorizations into irreducible elements.</p></article></section><section class="subsection" id="nta"><h3 class="heading hide-type">
 <span class="type">Subsection</span> <span class="codenumber">7.2.1</span> <span class="title">Principal Ideal Domains</span>
 </h3>
@@ -375,46 +375,46 @@ w\) in \({\mathbb Z}[ \sqrt{3}\, i ]\) where \(\nu( z) = \nu(w) = 2\text{.}\) Ho
 \langle a \rangle \subset \langle a_1 \rangle \subset \langle a_2 \rangle \subset \cdots\text{.}
 \end{equation*}
 </div>
-<p data-braille="continuation">By <a class="xref" data-knowl="./knowl/lemma-acc.html" title="Lemma 7.14">Lemma 7.14</a>, there exists a positive integer \(N\) such that \(\langle a_n \rangle = \langle a_N \rangle\) for all \(n \geq N\text{.}\) Consequently, \(a_N\) must be irreducible. We have now shown that \(a\) is the product of two elements, one of which must be irreducible.</p>
+<p class="continuation">By <a class="xref" data-knowl="./knowl/lemma-acc.html" title="Lemma 7.14">Lemma 7.14</a>, there exists a positive integer \(N\) such that \(\langle a_n \rangle = \langle a_N \rangle\) for all \(n \geq N\text{.}\) Consequently, \(a_N\) must be irreducible. We have now shown that \(a\) is the product of two elements, one of which must be irreducible.</p>
 <p id="JSp">Now suppose that \(a = c_1 p_1\text{,}\) where \(p_1\) is irreducible. If \(c_1\) is not a unit, we can repeat the preceding argument to conclude that \(\langle a \rangle \subset \langle c_1 \rangle\text{.}\) Either \(c_1\) is irreducible or \(c_1 = c_2 p_2\text{,}\) where \(p_2\) is irreducible and \(c_2\) is not a unit. Continuing in this manner, we obtain another chain of ideals</p>
 <div class="displaymath">
 \begin{equation*}
 \langle a \rangle \subset \langle c_1 \rangle \subset \langle c_2 \rangle \subset \cdots\text{.}
 \end{equation*}
 </div>
-<p data-braille="continuation">This chain must satisfy the ascending chain condition; therefore,</p>
+<p class="continuation">This chain must satisfy the ascending chain condition; therefore,</p>
 <div class="displaymath">
 \begin{equation*}
 a = p_1 p_2 \cdots p_r
 \end{equation*}
 </div>
-<p data-braille="continuation">for irreducible elements \(p_1, \ldots, p_r\text{.}\)</p>
+<p class="continuation">for irreducible elements \(p_1, \ldots, p_r\text{.}\)</p>
 <p id="pZy"><em class="emphasis">Uniqueness of the factorization.</em> To show uniqueness, let</p>
 <div class="displaymath">
 \begin{equation*}
 a = p_1 p_2 \cdots p_r = q_1 q_2 \cdots q_s\text{,}
 \end{equation*}
 </div>
-<p data-braille="continuation">where each \(p_i\) and each \(q_i\) is irreducible. Without loss of generality, we can assume that \(r \lt s\text{.}\) Since \(p_1\) divides \(q_1 q_2 \cdots q_s\text{,}\) by <a class="xref" data-knowl="./knowl/corollary-irreducible-pid.html" title="Corollary 7.13">Corollary 7.13</a> it must divide some \(q_i\text{.}\) By rearranging the \(q_i\)'s, we can assume that \(p_1 \mid q_1\text{;}\) hence, \(q_1 = u_1 p_1\) for some unit \(u_1\) in \(D\text{.}\) Therefore,</p>
+<p class="continuation">where each \(p_i\) and each \(q_i\) is irreducible. Without loss of generality, we can assume that \(r \lt s\text{.}\) Since \(p_1\) divides \(q_1 q_2 \cdots q_s\text{,}\) by <a class="xref" data-knowl="./knowl/corollary-irreducible-pid.html" title="Corollary 7.13">Corollary 7.13</a> it must divide some \(q_i\text{.}\) By rearranging the \(q_i\)'s, we can assume that \(p_1 \mid q_1\text{;}\) hence, \(q_1 = u_1 p_1\) for some unit \(u_1\) in \(D\text{.}\) Therefore,</p>
 <div class="displaymath">
 \begin{equation*}
 a = p_1 p_2 \cdots p_r = u_1 p_1 q_2 \cdots q_s
 \end{equation*}
 </div>
-<p data-braille="continuation">or</p>
+<p class="continuation">or</p>
 <div class="displaymath">
 \begin{equation*}
 p_2 \cdots p_r = u_1 q_2 \cdots q_s\text{.}
 \end{equation*}
 </div>
-<p data-braille="continuation">Continuing in this manner, we can arrange the \(q_i\)'s such that \(p_2 = q_2, p_3 = q_3, \ldots,
+<p class="continuation">Continuing in this manner, we can arrange the \(q_i\)'s such that \(p_2 = q_2, p_3 = q_3, \ldots,
 p_r = q_r\text{,}\) to obtain</p>
 <div class="displaymath">
 \begin{equation*}
 u_1 u_2 \cdots u_r q_{r + 1} \cdots q_s = 1\text{.}
 \end{equation*}
 </div>
-<p data-braille="continuation">In this case \(q_{r + 1} \cdots q_s\) is a unit, which contradicts the fact that \(q_{r + 1}, \ldots, q_s\) are irreducibles. Therefore, \(r = s\) and the factorization of \(a\) is unique.</p></article><article class="corollary theorem-like" id="ZZp"><h6 class="heading">
+<p class="continuation">In this case \(q_{r + 1} \cdots q_s\) is a unit, which contradicts the fact that \(q_{r + 1}, \ldots, q_s\) are irreducibles. Therefore, \(r = s\) and the factorization of \(a\) is unique.</p></article><article class="corollary theorem-like" id="ZZp"><h6 class="heading">
 <span class="type">Corollary</span><span class="space"> </span><span class="codenumber">7.16</span><span class="period">.</span>
 </h6>
 <p id="Bix">Let \(F\) be a field. Then \(F[x]\) is a <abbr class="acronym">UFD</abbr>.</p></article><article class="example example-like" id="Ggy"><h6 class="heading">
@@ -431,7 +431,7 @@ g(x) \in {\mathbb Z}[x] \}\text{.}\) We can easily show that \(I\) is an ideal o
 <li id="qgC"><p id="Rit">Let \(a, b \in D\) and suppose that \(b \neq 0\text{.}\) Then there exist elements \(q,
 r \in D\) such that \(a = bq + r\) and either \(r = 0\) or \(\nu(r) \lt \nu(b)\text{.}\)</p></li>
 </ol>
-<p data-braille="continuation">Then \(D\) is called a <dfn class="terminology">Euclidean domain</dfn>  and \(\nu\) is called a <dfn class="terminology">Euclidean valuation</dfn>. </p>
+<p class="continuation">Then \(D\) is called a <dfn class="terminology">Euclidean domain</dfn>  and \(\nu\) is called a <dfn class="terminology">Euclidean valuation</dfn>. </p>
 <article class="example example-like" id="yBZ"><h6 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">7.18</span><span class="period">.</span>
 </h6>
@@ -447,7 +447,7 @@ r \in D\) such that \(a = bq + r\) and either \(r = 0\) or \(\nu(r) \lt \nu(b)\t
 {\mathbb Z}[i] = \{  a + b i : a, b \in {\mathbb Z} \}\text{.}
 \end{equation*}
 </div>
-<p data-braille="continuation">We usually measure the size of a complex number \(a + bi\) by its absolute value, \(|a + bi| = \sqrt{ a^2 + b^2}\text{;}\) however, \(\sqrt{a^2 + b^2}\) may not be an integer. For our valuation we will let \(\nu(a + bi) = a^2 + b^2\) to ensure that we have an integer.</p>
+<p class="continuation">We usually measure the size of a complex number \(a + bi\) by its absolute value, \(|a + bi| = \sqrt{ a^2 + b^2}\text{;}\) however, \(\sqrt{a^2 + b^2}\) may not be an integer. For our valuation we will let \(\nu(a + bi) = a^2 + b^2\) to ensure that we have an integer.</p>
 <p id="vtl">We claim that \(\nu( a+ bi) = a^2 + b^2\) is a Euclidean valuation on \({\mathbb Z}[i]\text{.}\) Let \(z, w \in {\mathbb Z}[i]\text{.}\) Then \(\nu( zw) = |zw|^2 = |z|^2 |w|^2 = \nu(z) \nu(w)\text{.}\) Since \(\nu(z) \geq 1\) for every nonzero \(z \in {\mathbb Z}[i]\text{,}\) \(\nu( z) \leq \nu(z) \nu(w)\text{.}\)</p>
 <p id="bAu">Next, we must show that for any \(z= a+bi\) and \(w = c+di\) in \({\mathbb Z}[i]\) with \(w \neq 0\text{,}\) there exist elements \(q\) and \(r\) in  \({\mathbb Z}[i]\) such that \(z = qw + r\) with either \(r=0\) or  \(\nu(r) \lt \nu(w)\text{.}\) We can view \(z\) and \(w\) as elements in \({\mathbb Q}(i) = \{ p + qi : p, q \in {\mathbb Q} \}\text{,}\) the field of fractions of \({\mathbb Z}[i]\text{.}\) Observe that</p>
 <div class="displaymath">
@@ -459,20 +459,20 @@ z w^{-1} &amp; = (a +b i) \frac{c -d i}{c^2 + d^2}\\
 &amp; = (m_1 + m_2 i) + (s + ti)
 \end{align*}
 </div>
-<p data-braille="continuation">in \({\mathbb Q}(i)\text{.}\) In the last steps we are writing the real and imaginary parts as an integer plus a proper fraction. That is, we take the closest integer \(m_i\) such that the fractional part satisfies \(|n_i / (a^2 + b^2)| \leq 1/2\text{.}\) For example, we write</p>
+<p class="continuation">in \({\mathbb Q}(i)\text{.}\) In the last steps we are writing the real and imaginary parts as an integer plus a proper fraction. That is, we take the closest integer \(m_i\) such that the fractional part satisfies \(|n_i / (a^2 + b^2)| \leq 1/2\text{.}\) For example, we write</p>
 <div class="displaymath">
 \begin{align*}
 \frac{9}{8} &amp; = 1 + \frac{1}{8}\\
 \frac{15}{8} &amp; = 2 - \frac{1}{8}\text{.}
 \end{align*}
 </div>
-<p data-braille="continuation">Thus, \(s\) and \(t\) are the “fractional parts” of \(z w^{-1} = (m_1 + m_2 i) + (s + ti)\text{.}\) We also know that \(s^2 + t^2 \leq 1/4 + 1/4 = 1/2\text{.}\) Multiplying by \(w\text{,}\) we have</p>
+<p class="continuation">Thus, \(s\) and \(t\) are the “fractional parts” of \(z w^{-1} = (m_1 + m_2 i) + (s + ti)\text{.}\) We also know that \(s^2 + t^2 \leq 1/4 + 1/4 = 1/2\text{.}\) Multiplying by \(w\text{,}\) we have</p>
 <div class="displaymath">
 \begin{equation*}
 z = z w^{-1} w = w (m_1 + m_2 i) + w (s + ti)  = q w + r\text{,}
 \end{equation*}
 </div>
-<p data-braille="continuation">where \(q = m_1 + m_2 i\) and \(r =  w (s + ti)\text{.}\) Since \(z\) and \(qw\) are in \({\mathbb Z}[i]\text{,}\) \(r\) must be in \({\mathbb Z}[i]\text{.}\) Finally, we need to show that either \(r = 0\) or \(\nu(r) \lt \nu(w)\text{.}\) However,</p>
+<p class="continuation">where \(q = m_1 + m_2 i\) and \(r =  w (s + ti)\text{.}\) Since \(z\) and \(qw\) are in \({\mathbb Z}[i]\text{,}\) \(r\) must be in \({\mathbb Z}[i]\text{.}\) Finally, we need to show that either \(r = 0\) or \(\nu(r) \lt \nu(w)\text{.}\) However,</p>
 <div class="displaymath">
 \begin{equation*}
 \nu(r) = \nu(w) \nu(s + ti) \leq \frac{1}{2} \nu(w) \lt \nu(w)\text{.}
@@ -494,7 +494,7 @@ z = z w^{-1} w = w (m_1 + m_2 i) + w (s + ti)  = q w + r\text{,}
 p(x) = a_n x^n + \cdots + a_1 x + a_0
 \end{equation*}
 </div>
-<p data-braille="continuation">in \(D[x]\text{.}\) Then the <dfn class="terminology">content</dfn> of \(p(x)\) is the greatest common divisor of \(a_0, \ldots, a_n\text{.}\) We say that \(p(x)\) is <dfn class="terminology">primitive</dfn>  if \(\gcd(a_0, \ldots, a_n ) = 1\text{.}\)</p>
+<p class="continuation">in \(D[x]\text{.}\) Then the <dfn class="terminology">content</dfn> of \(p(x)\) is the greatest common divisor of \(a_0, \ldots, a_n\text{.}\) We say that \(p(x)\) is <dfn class="terminology">primitive</dfn>  if \(\gcd(a_0, \ldots, a_n ) = 1\text{.}\)</p>
 <article class="example example-like" id="Ukd"><h6 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">7.23</span><span class="period">.</span>
 </h6>
@@ -508,7 +508,7 @@ p(x) = a_n x^n + \cdots + a_1 x + a_0
 c_{r + s} = a_0 b_{r + s} + a_1 b_{r + s - 1} + \cdots + a_{r + s - 1} b_1 + a_{r + s} b_0\text{.}
 \end{equation*}
 </div>
-<p data-braille="continuation">Since \(p\) divides \(a_0, \ldots,
+<p class="continuation">Since \(p\) divides \(a_0, \ldots,
 a_{r-1}\) and \(b_0, \ldots, b_{s-1}\text{,}\) \(p\) divides every term of \(c_{r+s}\) except for the term \(a_r b_s\text{.}\) However, since \(p \mid c_{r+s}\text{,}\) either \(p\) divides \(a_r\) or \(p\) divides \(b_s\text{.}\) But this is impossible.</p></article><article class="lemma theorem-like" id="DlS"><h6 class="heading">
 <span class="type">Lemma</span><span class="space"> </span><span class="codenumber">7.25</span><span class="period">.</span>
 </h6>
@@ -536,14 +536,14 @@ b_n \in D\) such that \(a_i f_i(x) = b_i g_i(x)\text{,}\) where \(g_i(x)\) is a 
 a_1 \cdots a_n p(x) = b_1 \cdots b_n g_1(x) \cdots g_n(x)\text{.}
 \end{equation*}
 </div>
-<p data-braille="continuation">Let \(b = b_1 \cdots b_n\text{.}\) Since \(g_1(x) \cdots g_n(x)\) is primitive, \(a_1 \cdots a_n\) divides \(b\text{.}\) Therefore, \(p(x) = a g_1(x) \cdots g_n(x)\text{,}\) where \(a \in D\text{.}\) Since \(D\) is a <abbr class="acronym">UFD</abbr>, we can factor \(a\) as \(u c_1 \cdots c_k\text{,}\) where \(u\) is a unit and each of the \(c_i\)'s is irreducible in \(D\text{.}\)</p>
+<p class="continuation">Let \(b = b_1 \cdots b_n\text{.}\) Since \(g_1(x) \cdots g_n(x)\) is primitive, \(a_1 \cdots a_n\) divides \(b\text{.}\) Therefore, \(p(x) = a g_1(x) \cdots g_n(x)\text{,}\) where \(a \in D\text{.}\) Since \(D\) is a <abbr class="acronym">UFD</abbr>, we can factor \(a\) as \(u c_1 \cdots c_k\text{,}\) where \(u\) is a unit and each of the \(c_i\)'s is irreducible in \(D\text{.}\)</p>
 <p id="aQA">We will now show the uniqueness of this factorization. Let</p>
 <div class="displaymath">
 \begin{equation*}
 p(x) = a_1 \cdots a_m f_1(x) \cdots f_n(x) = b_1 \cdots b_r g_1(x) \cdots g_s(x)
 \end{equation*}
 </div>
-<p data-braille="continuation">be two factorizations of \(p(x)\text{,}\) where all of the factors are irreducible in \(D[x]\text{.}\) By <a class="xref" data-knowl="./knowl/corollary-irreducible-poly.html" title="Corollary 7.27">Corollary 7.27</a>, each of the \(f_i\)'s and \(g_i\)'s is irreducible in \(F[x]\text{.}\) The \(a_i\)'s and the \(b_i\)'s are units in \(F\text{.}\) Since \(F[x]\) is a <abbr class="acronym">PID</abbr>, it is a <abbr class="acronym">UFD</abbr>; therefore, \(n=s\text{.}\) Now rearrange the \(g_i(x)\)'s so that \(f_i(x)\) and \(g_i(x)\) are associates for \(i = 1, \ldots, n\text{.}\) Then there exist \(c_1, \ldots,
+<p class="continuation">be two factorizations of \(p(x)\text{,}\) where all of the factors are irreducible in \(D[x]\text{.}\) By <a class="xref" data-knowl="./knowl/corollary-irreducible-poly.html" title="Corollary 7.27">Corollary 7.27</a>, each of the \(f_i\)'s and \(g_i\)'s is irreducible in \(F[x]\text{.}\) The \(a_i\)'s and the \(b_i\)'s are units in \(F\text{.}\) Since \(F[x]\) is a <abbr class="acronym">PID</abbr>, it is a <abbr class="acronym">UFD</abbr>; therefore, \(n=s\text{.}\) Now rearrange the \(g_i(x)\)'s so that \(f_i(x)\) and \(g_i(x)\) are associates for \(i = 1, \ldots, n\text{.}\) Then there exist \(c_1, \ldots,
 c_n\) and \(d_1, \ldots,
 d_n\) in \(D\) such that \((c_i / d_i) f_i(x) = g_i(x)\) or \(c_i f_i(x) = d_i g_i(x)\text{.}\) The polynomials \(f_i(x)\) and \(g_i(x)\) are primitive; hence, \(c_i\) and \(d_i\) are associates in \(D\text{.}\) Thus, \(a_1 \cdots a_m = u b_1 \cdots b_r\) in \(D\text{,}\) where \(u\) is a unit in \(D\text{.}\) Since \(D\) is a unique factorization domain, \(m = s\text{.}\) Finally, we can reorder the \(b_i\)'s so that \(a_i\) and \(b_i\) are associates for each \(i\text{.}\) This completes the uniqueness part of the proof.</p></article><p id="UFP">The theorem that we have just proven has several obvious but important corollaries.</p>
 <article class="corollary theorem-like" id="bOC"><h6 class="heading">

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2021-02-08T11:03:02-07:00       *-->
+<!--*       on 2021-02-12T14:42:33-07:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -59,7 +59,7 @@ MathJax.Hub.Config({
 <!-- 2019-10-12: Temporary - CSS file for experiments with styling --><link xmlns:svg="http://www.w3.org/2000/svg" href="developer.css" rel="stylesheet" type="text/css">
 </head>
 <body id="judson-AATA" class="mathbook-book has-toc has-sidebar-left">
-<a class="assistive" href="#content">Skip to main content</a><div xmlns:svg="http://www.w3.org/2000/svg" class="hidden-content" style="display:none">\(\newcommand{\identity}{\mathrm{id}}
+<a class="assistive" href="#content">Skip to main content</a><div xmlns:svg="http://www.w3.org/2000/svg" id="latex-macros" class="hidden-content" style="display:none">\(\newcommand{\identity}{\mathrm{id}}
 \newcommand{\notdivide}{\nmid}
 \newcommand{\notsubset}{\not\subset}
 \newcommand{\lcm}{\operatorname{lcm}}
@@ -324,7 +324,7 @@ MathJax.Hub.Config({
 <li id="zlG"><p id="ccK">\(\alpha(u + v) = \alpha u + \alpha v\text{;}\)</p></li>
 <li id="fsP"><p id="IjT">\(1v=v\text{;}\)</p></li>
 </ul>
-<p data-braille="continuation">where \(\alpha, \beta \in F\) and \(u, v \in V\text{.}\)</p>
+<p class="continuation">where \(\alpha, \beta \in F\) and \(u, v \in V\text{.}\)</p>
 <p id="Bik">The elements of \(V\) are called <dfn class="terminology">vectors</dfn>; the elements of \(F\) are called <dfn class="terminology">scalars</dfn>. It is important to notice that in most cases two vectors cannot be multiplied. In general, it is only possible to multiply a vector with a scalar. To differentiate between the scalar zero and the vector zero, we will write them as 0 and \({\mathbf 0}\text{,}\) respectively.</p>
 <p id="hpt">Let us examine several examples of vector spaces. Some of them will be quite familiar; others will seem less so.</p>
 <article class="example example-like" id="OQd"><h6 class="heading">
@@ -338,7 +338,7 @@ v_n)\) in \({\mathbb R}^n\) and \(\alpha\) in \({\mathbb R}\text{,}\) we can def
 u + v = (u_1, \ldots, u_n) + (v_1, \ldots, v_n) = (u_1 + v_1, \ldots, u_n + v_n)
 \end{equation*}
 </div>
-<p data-braille="continuation">and scalar multiplication by</p>
+<p class="continuation">and scalar multiplication by</p>
 <div class="displaymath">
 \begin{equation*}
 \alpha u = \alpha(u_1, \ldots, u_n)= (\alpha u_1, \ldots, \alpha u_n)\text{.}
@@ -370,7 +370,7 @@ u + v = (u_1, \ldots, u_n) + (v_1, \ldots, v_n) = (u_1 + v_1, \ldots, u_n + v_n)
 0 v = (0 + 0)v = 0v + 0v;
 \end{equation*}
 </div>
-<p data-braille="continuation">consequently, \({\mathbf 0} + 0 v = 0v + 0v\text{.}\) Since \(V\) is an abelian group, \({\mathbf 0} = 0v\text{.}\)</p>
+<p class="continuation">consequently, \({\mathbf 0} + 0 v = 0v + 0v\text{.}\) Since \(V\) is an abelian group, \({\mathbf 0} = 0v\text{.}\)</p>
 <p id="KnB">The proof of (2) is almost identical to the proof of (1). For (3), we are done if \(\alpha = 0\text{.}\) Suppose that \(\alpha \neq 0\text{.}\) Multiplying both sides of \(\alpha v = {\mathbf 0}\) by \(1/ \alpha\text{,}\) we have \(v = {\mathbf 0}\text{.}\)</p>
 <p id="quK">To show (4), observe that</p>
 <div class="displaymath">
@@ -378,7 +378,7 @@ u + v = (u_1, \ldots, u_n) + (v_1, \ldots, v_n) = (u_1 + v_1, \ldots, u_n + v_n)
 v + (-1)v = 1v + (-1)v = (1-1)v = 0v = {\mathbf 0}\text{,}
 \end{equation*}
 </div>
-<p data-braille="continuation">and so \(-v = (-1)v\text{.}\) We will leave the proof of (5) as an exercise.</p></article></section><section class="subsection" id="uns"><h3 class="heading hide-type">
+<p class="continuation">and so \(-v = (-1)v\text{.}\) We will leave the proof of (5) as an exercise.</p></article></section><section class="subsection" id="uns"><h3 class="heading hide-type">
 <span class="type">Subsection</span> <span class="codenumber">8.5.2</span> <span class="title">Subspaces</span>
 </h3>
 <p id="NwC">Just as groups have subgroups and rings have subrings, vector spaces also have substructures. Let \(V\) be a vector space over a field \(F\text{,}\) and \(W\) a subset of \(V\text{.}\) Then \(W\) is a <dfn class="terminology">subspace</dfn> of \(V\) if it is closed under vector addition and scalar multiplication; that is, if \(u, v \in W\) and \(\alpha \in F\text{,}\) it will always be the case that \(u + v\) and \(\alpha v\) are also in \(W\text{.}\)</p>
@@ -392,7 +392,7 @@ v + (-1)v = 1v + (-1)v = (1-1)v = 0v = {\mathbf 0}\text{,}
 &amp; =  (\alpha x_1, 2(\alpha x_1) + \alpha x_2, \alpha x_1 -\alpha x_2)\text{,}
 \end{align*}
 </div>
-<p data-braille="continuation">\(W\) is closed under scalar multiplication. To show that \(W\) is closed under vector addition, let \(u = (x_1, 2 x_1 + x_2, x_1 - x_2)\) and \(v = (y_1, 2 y_1 + y_2, y_1 - y_2)\) be vectors in \(W\text{.}\) Then</p>
+<p class="continuation">\(W\) is closed under scalar multiplication. To show that \(W\) is closed under vector addition, let \(u = (x_1, 2 x_1 + x_2, x_1 - x_2)\) and \(v = (y_1, 2 y_1 + y_2, y_1 - y_2)\) be vectors in \(W\text{.}\) Then</p>
 <div class="displaymath">
 \begin{equation*}
 u + v = (x_1 + y_1, 2( x_1 + y_1) +( x_2 + y_2), (x_1 + y_1) - (x_2+ y_2))\text{.}
@@ -408,7 +408,7 @@ v_n\) are vectors in \(V\) and \(\alpha_1, \alpha_2, \ldots, \alpha_n\) are scal
 w = \sum_{i=1}^n \alpha_i v_i = \alpha_1 v_1 + \alpha_2 v_2 + \cdots + \alpha_n v_n
 \end{equation*}
 </div>
-<p data-braille="continuation">is called a <dfn class="terminology">linear combination</dfn>  of the vectors \(v_1, v_2, \ldots, v_n\text{.}\) The <dfn class="terminology">spanning set</dfn>  of vectors \(v_1, v_2, \ldots,
+<p class="continuation">is called a <dfn class="terminology">linear combination</dfn>  of the vectors \(v_1, v_2, \ldots, v_n\text{.}\) The <dfn class="terminology">spanning set</dfn>  of vectors \(v_1, v_2, \ldots,
 v_n\) is the set of vectors obtained from all possible linear combinations of \(v_1, v_2, \ldots, v_n\text{.}\) If \(W\) is the spanning set of \(v_1, v_2, \ldots, v_n\text{,}\) then we say that \(W\) is <dfn class="terminology">spanned</dfn> by \(v_1, v_2, \ldots, v_n\text{.}\)</p>
 <article class="proposition theorem-like" id="Kgk"><h6 class="heading">
 <span class="type">Proposition</span><span class="space"> </span><span class="codenumber">8.27</span><span class="period">.</span>
@@ -422,19 +422,19 @@ u &amp; =  \alpha_1 v_1 + \alpha_2 v_2 + \cdots + \alpha_n v_n\\
 v &amp; =  \beta_1 v_1 + \beta_2 v_2 + \cdots + \beta_n v_n\text{.}
 \end{align*}
 </div>
-<p data-braille="continuation">Then</p>
+<p class="continuation">Then</p>
 <div class="displaymath">
 \begin{equation*}
 u + v =( \alpha_1 + \beta_1) v_1 + (\alpha_2+ \beta_2) v_2 + \cdots + (\alpha_n + \beta_n) v_n
 \end{equation*}
 </div>
-<p data-braille="continuation">is a linear combination of the \(v_i\)'s. For \(\alpha \in F\text{,}\)</p>
+<p class="continuation">is a linear combination of the \(v_i\)'s. For \(\alpha \in F\text{,}\)</p>
 <div class="displaymath">
 \begin{equation*}
 \alpha u = (\alpha \alpha_1) v_1 + ( \alpha \alpha_2) v_2 + \cdots + (\alpha \alpha_n ) v_n
 \end{equation*}
 </div>
-<p data-braille="continuation">is in the span of \(S\text{.}\)</p></article></section><section class="subsection" id="auB"><h3 class="heading hide-type">
+<p class="continuation">is in the span of \(S\text{.}\)</p></article></section><section class="subsection" id="auB"><h3 class="heading hide-type">
 <span class="type">Subsection</span> <span class="codenumber">8.5.3</span> <span class="title">Linear Independence</span>
 </h3>
 <p id="ZKU">Let \(S = \{v_1, v_2, \ldots,
@@ -444,19 +444,19 @@ v_n\}\) be a set of vectors in a vector space \(V\text{.}\) If there exist scala
 \alpha_1 v_1 + \alpha_2 v_2 + \cdots + \alpha_n v_n = {\mathbf 0 }\text{,}
 \end{equation*}
 </div>
-<p data-braille="continuation">then \(S\) is said to be <dfn class="terminology">linearly dependent</dfn>.  If the set \(S\) is not linearly dependent, then it is said to be <dfn class="terminology">linearly independent</dfn>.  More specifically, \(S\) is a linearly independent set if</p>
+<p class="continuation">then \(S\) is said to be <dfn class="terminology">linearly dependent</dfn>.  If the set \(S\) is not linearly dependent, then it is said to be <dfn class="terminology">linearly independent</dfn>.  More specifically, \(S\) is a linearly independent set if</p>
 <div class="displaymath">
 \begin{equation*}
 \alpha_1 v_1 + \alpha_2 v_2 + \cdots + \alpha_n v_n = {\mathbf 0 }
 \end{equation*}
 </div>
-<p data-braille="continuation">implies that</p>
+<p class="continuation">implies that</p>
 <div class="displaymath">
 \begin{equation*}
 \alpha_1 = \alpha_2 = \cdots = \alpha_n = 0
 \end{equation*}
 </div>
-<p data-braille="continuation">for any set of scalars \(\{ \alpha_1, \alpha_2 \ldots \alpha_n \}\text{.}\)</p>
+<p class="continuation">for any set of scalars \(\{ \alpha_1, \alpha_2 \ldots \alpha_n \}\text{.}\)</p>
 <article class="proposition theorem-like" id="qnt"><h6 class="heading">
 <span class="type">Proposition</span><span class="space"> </span><span class="codenumber">8.28</span><span class="period">.</span>
 </h6>
@@ -467,20 +467,20 @@ v_n \}\) be a set of linearly independent vectors in a vector space. Suppose tha
 v = \alpha_1 v_1 + \alpha_2 v_2 + \cdots + \alpha_n v_n = \beta_1 v_1 + \beta_2 v_2 + \cdots + \beta_n v_n\text{.}
 \end{equation*}
 </div>
-<p data-braille="continuation">Then \(\alpha_1 = \beta_1, \alpha_2 = \beta_2, \ldots, \alpha_n = \beta_n\text{.}\)</p></article><article class="proof" id="kyh"><h6 class="heading"><span class="type">Proof<span class="period">.</span></span></h6>
+<p class="continuation">Then \(\alpha_1 = \beta_1, \alpha_2 = \beta_2, \ldots, \alpha_n = \beta_n\text{.}\)</p></article><article class="proof" id="kyh"><h6 class="heading"><span class="type">Proof<span class="period">.</span></span></h6>
 <p id="CJc">If</p>
 <div class="displaymath">
 \begin{equation*}
 v = \alpha_1 v_1 + \alpha_2 v_2 + \cdots + \alpha_n v_n = \beta_1 v_1 + \beta_2 v_2 + \cdots + \beta_n v_n\text{,}
 \end{equation*}
 </div>
-<p data-braille="continuation">then</p>
+<p class="continuation">then</p>
 <div class="displaymath">
 \begin{equation*}
 (\alpha_1 - \beta_1) v_1 + (\alpha_2 - \beta_2) v_2 + \cdots + (\alpha_n - \beta_n) v_n = {\mathbf 0}\text{.}
 \end{equation*}
 </div>
-<p data-braille="continuation">Since \(v_1, \ldots, v_n\) are linearly independent, \(\alpha_i - \beta_i = 0\) for \(i = 1, \ldots, n\text{.}\)</p></article><p id="FSd">The definition of linear dependence makes more sense if we consider the following proposition.</p>
+<p class="continuation">Since \(v_1, \ldots, v_n\) are linearly independent, \(\alpha_i - \beta_i = 0\) for \(i = 1, \ldots, n\text{.}\)</p></article><p id="FSd">The definition of linear dependence makes more sense if we consider the following proposition.</p>
 <article class="proposition theorem-like" id="WuC"><h6 class="heading">
 <span class="type">Proposition</span><span class="space"> </span><span class="codenumber">8.29</span><span class="period">.</span>
 </h6>
@@ -493,7 +493,7 @@ v_n \}\) is a set of linearly dependent vectors. Then there exist scalars \(\alp
 \alpha_1 v_1 + \alpha_2 v_2 + \cdots + \alpha_n v_n = {\mathbf 0 }\text{,}
 \end{equation*}
 </div>
-<p data-braille="continuation">with at least one of the \(\alpha_i\)'s not equal to zero. Suppose that \(\alpha_k \neq 0\text{.}\) Then</p>
+<p class="continuation">with at least one of the \(\alpha_i\)'s not equal to zero. Suppose that \(\alpha_k \neq 0\text{.}\) Then</p>
 <div class="displaymath">
 \begin{equation*}
 v_k = - \frac{\alpha_1}{\alpha_k} v_1 - \cdots - \frac{\alpha_{k - 1}}{\alpha_k} v_{k-1} - \frac{\alpha_{k + 1}}{\alpha_k} v_{k + 1} - \cdots - \frac{\alpha_n}{\alpha_k} v_n\text{.}
@@ -505,7 +505,7 @@ v_k = - \frac{\alpha_1}{\alpha_k} v_1 - \cdots - \frac{\alpha_{k - 1}}{\alpha_k}
 v_k = \beta_1 v_1 + \cdots + \beta_{k - 1} v_{k - 1} + \beta_{k + 1} v_{k + 1} + \cdots + \beta_n v_n\text{.}
 \end{equation*}
 </div>
-<p data-braille="continuation">Then</p>
+<p class="continuation">Then</p>
 <div class="displaymath">
 \begin{equation*}
 \beta_1 v_1 + \cdots + \beta_{k - 1} v_{k - 1} - v_k + \beta_{k + 1} v_{k + 1} + \cdots + \beta_n v_n = {\mathbf 0}\text{.}
@@ -549,7 +549,7 @@ v_k \}\) is a set of linearly independent vectors for \(V\) with \(k \lt n\text{
 \{v_1, \ldots, v_k, v_{k + 1}, \ldots, v_n \}
 \end{equation*}
 </div>
-<p data-braille="continuation">is a basis for \(V\text{.}\)</p>
+<p class="continuation">is a basis for \(V\text{.}\)</p>
 </li>
 </ol></article></section></section></div></main>
 </div>

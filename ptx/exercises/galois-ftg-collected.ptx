@@ -21,7 +21,7 @@
         </li>
         <li permid="hVx">
           <p permid="Gyh">
-            Pick your favorite non-trivial subgroup of <m>D_4</m> that you did not just describe in the previous part, and find the <em>fixfield</em> of it.  That is, find the subfield of <m>E</m> that corresponds to your subgroup.  Again, compare sizes, indexes, and degrees.
+            Pick your favorite non-trivial subgroup of <m>D_4</m> that you did not just describe in the previous part, and find the <em>fixed field</em> of it.  That is, find the subfield of <m>E</m> that corresponds to your subgroup.  Again, compare sizes, indexes, and degrees.
           </p>
         </li>
         <li permid="OcG">

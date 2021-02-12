@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2021-02-08T11:10:05-07:00       *-->
+<!--*       on 2021-02-12T14:47:35-07:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -15,28 +15,16 @@
 </head>
 <body>
 <h6 xmlns:svg="http://www.w3.org/2000/svg" class="heading"><span class="type">Paragraph</span></h6>
-<p>Define the <dfn xmlns:svg="http://www.w3.org/2000/svg" class="terminology">inner product</dfn>  of two binary \(n\)-tuples to be</p>
-<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
-\begin{equation*}
-{\mathbf x} \cdot {\mathbf y} = x_1 y_1 + \cdots + x_n y_n\text{,}
-\end{equation*}
-</div>
-<p data-braille="continuation">where \({\mathbf x} = (x_1, x_2, \ldots,
-x_n)^\transpose\) and \({\mathbf y} = (y_1, y_2, \ldots,
-y_n)^\transpose\) are column vectors.<a class="fn-knowl original" data-knowl="./knowl/fn-7-hidden.html" title="Footnote 3"><sup> 3 </sup></a> For example, if \({\mathbf x} = (011001)^\transpose\) and \({\mathbf y} = (110101)^\transpose\text{,}\) then \({\mathbf x} \cdot {\mathbf y} = 0\text{.}\) We can also look at an inner product as the product of a row matrix with a column matrix; that is,</p>
+<p>Suppose that we have a code that consists of the following 7-tuples:</p>
 <div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
 \begin{align*}
-{\mathbf x} \cdot {\mathbf y} &amp; = {\mathbf x}^\transpose  {\mathbf y}\\
-&amp; =
-\begin{pmatrix}
-x_1 &amp; x_2 &amp; \cdots &amp; x_n
-\end{pmatrix}
-\begin{pmatrix}
-y_1 \\ y_2 \\ \vdots \\ y_n
-\end{pmatrix}\\
-&amp; = x_{1}y_{1} + x_{2}y_{2} + \cdots + x_{n}y_{n}\text{.}
+&amp;(0000000) &amp; &amp; (0001111) &amp;  &amp; (0010101) &amp; &amp; (0011010)\\
+&amp;(0100110) &amp; &amp; (0101001) &amp; &amp; (0110011) &amp; &amp; (0111100)\\
+&amp;(1000011) &amp; &amp; (1001100) &amp; &amp; (1010110) &amp; &amp; (1011001)\\
+&amp;(1100101) &amp; &amp; (1101010) &amp; &amp; (1110000) &amp; &amp; (1111111)\text{.}
 \end{align*}
 </div>
-<span class="incontext"><a href="section-linear-codes.html#Bgk">in-context</a></span>
+<p class="continuation">It is a straightforward though tedious task to verify that this code is also a subgroup of \({\mathbb Z}_2^7\) and, therefore, a group code. This code is a single error-detecting and single error-correcting  code, but it is a long and tedious process to compute all of the distances between  pairs of codewords to determine that \(d_{\min} = 3\text{.}\) It is much easier to see that the minimum weight of all the nonzero codewords is \(3\text{.}\) As we will soon see, this is no coincidence. However, the relationship between weights and distances in a particular code is heavily dependent on the fact that the code is a group.</p>
+<span class="incontext"><a href="section-linear-codes.html#vcD">in-context</a></span>
 </body>
 </html>

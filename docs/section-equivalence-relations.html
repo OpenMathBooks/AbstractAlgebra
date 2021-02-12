@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2021-02-08T11:01:19-07:00       *-->
+<!--*       on 2021-02-12T14:41:08-07:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -59,7 +59,7 @@ MathJax.Hub.Config({
 <!-- 2019-10-12: Temporary - CSS file for experiments with styling --><link xmlns:svg="http://www.w3.org/2000/svg" href="developer.css" rel="stylesheet" type="text/css">
 </head>
 <body id="judson-AATA" class="mathbook-book has-toc has-sidebar-left">
-<a class="assistive" href="#content">Skip to main content</a><div xmlns:svg="http://www.w3.org/2000/svg" class="hidden-content" style="display:none">\(\newcommand{\identity}{\mathrm{id}}
+<a class="assistive" href="#content">Skip to main content</a><div xmlns:svg="http://www.w3.org/2000/svg" id="latex-macros" class="hidden-content" style="display:none">\(\newcommand{\identity}{\mathrm{id}}
 \newcommand{\notdivide}{\nmid}
 \newcommand{\notsubset}{\not\subset}
 \newcommand{\lcm}{\operatorname{lcm}}
@@ -316,7 +316,7 @@ MathJax.Hub.Config({
 <li id="eRM"><p id="DIR">\((x, y) \in R\) implies \((y, x) \in R\) (<dfn class="terminology">symmetric property</dfn>);</p></li>
 <li id="KYV"><p id="jQa">\((x, y)\) and \((y, z) \in R\) imply \((x, z) \in R\) (<dfn class="terminology">transitive property</dfn>).</p></li>
 </ul>
-<p data-braille="continuation">Given an equivalence relation \(R\) on a set \(X\text{,}\) we usually write \(x \sim y\) instead of \((x, y) \in R\text{.}\) If the equivalence relation already has an associated notation such as \(=\text{,}\) \(\equiv\text{,}\) or \(\cong\text{,}\) we will use that notation.</p>
+<p class="continuation">Given an equivalence relation \(R\) on a set \(X\text{,}\) we usually write \(x \sim y\) instead of \((x, y) \in R\text{.}\) If the equivalence relation already has an associated notation such as \(=\text{,}\) \(\equiv\text{,}\) or \(\cong\text{,}\) we will use that notation.</p>
 <article class="example example-like" id="qhP"><h6 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">1.21</span><span class="period">.</span>
 </h6>
@@ -326,7 +326,7 @@ MathJax.Hub.Config({
 psu = qru = qst\text{.}
 \end{equation*}
 </div>
-<p data-braille="continuation">Since \(s \neq 0\text{,}\) \(pu = qt\text{.}\) Consequently, \(p/q \sim t/u\text{.}\)</p></article><article class="example example-like" id="WoY"><h6 class="heading">
+<p class="continuation">Since \(s \neq 0\text{,}\) \(pu = qt\text{.}\) Consequently, \(p/q \sim t/u\text{.}\)</p></article><article class="example example-like" id="WoY"><h6 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">1.22</span><span class="period">.</span>
 </h6>
 <p id="apk">Suppose that \(f\) and \(g\) are differentiable functions on \({\mathbb R}\text{.}\) We can define an equivalence relation on such functions by letting \(f(x) \sim g(x)\) if \(f'(x) = g'(x)\text{.}\) It is clear that \(\sim\) is both reflexive and symmetric. To demonstrate transitivity, suppose that \(f(x) \sim g(x)\) and \(g(x) \sim h(x)\text{.}\) From calculus we know that \(f(x) - g(x) = c_1\) and \(g(x)- h(x) = c_2\text{,}\) where \(c_1\) and \(c_2\) are both constants. Hence,</p>
@@ -335,7 +335,7 @@ psu = qru = qst\text{.}
 f(x) - h(x) = ( f(x) - g(x)) + ( g(x)- h(x)) = c_1 + c_2
 \end{equation*}
 </div>
-<p data-braille="continuation">and \(f'(x) - h'(x) = 0\text{.}\) Therefore, \(f(x) \sim h(x)\text{.}\)</p></article><article class="example example-like" id="Cwh"><h6 class="heading">
+<p class="continuation">and \(f'(x) - h'(x) = 0\text{.}\) Therefore, \(f(x) \sim h(x)\text{.}\)</p></article><article class="example example-like" id="Cwh"><h6 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">1.23</span><span class="period">.</span>
 </h6>
 <p id="Gwt">For \((x_1, y_1 )\) and \((x_2, y_2)\) in \({\mathbb R}^2\text{,}\) define \((x_1, y_1 ) \sim (x_2, y_2)\) if \(x_1^2 + y_1^2 = x_2^2 + y_2^2\text{.}\) Then \(\sim\) is an equivalence relation on \({\mathbb R}^2\text{.}\)</p></article><article class="example example-like" id="iDq"><h6 class="heading">
@@ -357,7 +357,7 @@ B =
 \end{pmatrix}\text{,}
 \end{equation*}
 </div>
-<p data-braille="continuation">then \(A \sim B\) since \(PAP^{-1} = B\) for</p>
+<p class="continuation">then \(A \sim B\) since \(PAP^{-1} = B\) for</p>
 <div class="displaymath">
 \begin{equation*}
 P =
@@ -367,7 +367,7 @@ P =
 \end{pmatrix}\text{.}
 \end{equation*}
 </div>
-<p data-braille="continuation">Let \(I\) be the \(2 \times 2\) identity matrix; that is,</p>
+<p class="continuation">Let \(I\) be the \(2 \times 2\) identity matrix; that is,</p>
 <div class="displaymath">
 \begin{equation*}
 I =
@@ -377,19 +377,19 @@ I =
 \end{pmatrix}\text{.}
 \end{equation*}
 </div>
-<p data-braille="continuation">Then \(IAI^{-1} = IAI = A\text{;}\) therefore, the relation is reflexive. To show symmetry, suppose that \(A \sim B\text{.}\) Then there exists an invertible matrix \(P\) such that \(PAP^{-1} = B\text{.}\) So</p>
+<p class="continuation">Then \(IAI^{-1} = IAI = A\text{;}\) therefore, the relation is reflexive. To show symmetry, suppose that \(A \sim B\text{.}\) Then there exists an invertible matrix \(P\) such that \(PAP^{-1} = B\text{.}\) So</p>
 <div class="displaymath">
 \begin{equation*}
 A = P^{-1} B P = P^{-1} B (P^{-1})^{-1}\text{.}
 \end{equation*}
 </div>
-<p data-braille="continuation">Finally, suppose that \(A \sim B\) and \(B \sim C\text{.}\) Then there exist invertible matrices \(P\) and \(Q\) such that \(PAP^{-1} = B\) and  \(QBQ^{-1} = C\text{.}\) Since</p>
+<p class="continuation">Finally, suppose that \(A \sim B\) and \(B \sim C\text{.}\) Then there exist invertible matrices \(P\) and \(Q\) such that \(PAP^{-1} = B\) and  \(QBQ^{-1} = C\text{.}\) Since</p>
 <div class="displaymath">
 \begin{equation*}
 C = QBQ^{-1} = QPAP^{-1} Q^{-1} = (QP)A(QP)^{-1}\text{,}
 \end{equation*}
 </div>
-<p data-braille="continuation">the relation is transitive. Two matrices that are equivalent in this manner are said to be <dfn class="terminology">similar</dfn>. </p></article><p id="bIY">A <dfn class="terminology">partition</dfn>  \({\mathcal P}\) of a set \(X\) is a collection of nonempty sets \(X_1, X_2, \ldots\) such that \(X_i \cap X_j = \emptyset\) for \(i \neq j\) and \(\bigcup_k X_k = X\text{.}\) Let \(\sim\) be an equivalence relation on a set \(X\) and let \(x \in X\text{.}\) Then \([x] = \{ y \in X : y \sim x \}\) is called the <dfn class="terminology">equivalence class</dfn>  of \(x\text{.}\) We will see that an equivalence relation gives rise to a partition via equivalence classes. Also, whenever a partition of a set exists, there is some natural underlying equivalence relation, as the following theorem demonstrates.</p>
+<p class="continuation">the relation is transitive. Two matrices that are equivalent in this manner are said to be <dfn class="terminology">similar</dfn>. </p></article><p id="bIY">A <dfn class="terminology">partition</dfn>  \({\mathcal P}\) of a set \(X\) is a collection of nonempty sets \(X_1, X_2, \ldots\) such that \(X_i \cap X_j = \emptyset\) for \(i \neq j\) and \(\bigcup_k X_k = X\text{.}\) Let \(\sim\) be an equivalence relation on a set \(X\) and let \(x \in X\text{.}\) Then \([x] = \{ y \in X : y \sim x \}\) is called the <dfn class="terminology">equivalence class</dfn>  of \(x\text{.}\) We will see that an equivalence relation gives rise to a partition via equivalence classes. Also, whenever a partition of a set exists, there is some natural underlying equivalence relation, as the following theorem demonstrates.</p>
 <article class="theorem theorem-like" id="dTx"><h6 class="heading">
 <span class="type">Theorem</span><span class="space"> </span><span class="codenumber">1.25</span><span class="period">.</span>
 </h6>
@@ -417,7 +417,7 @@ C = QBQ^{-1} = QPAP^{-1} Q^{-1} = (QP)A(QP)^{-1}\text{,}
 r - t = r - s + s - t = kn + ln = (k + l)n\text{,}
 \end{equation*}
 </div>
-<p data-braille="continuation">and so \(r - t\) is divisible by \(n\text{.}\)</p>
+<p class="continuation">and so \(r - t\) is divisible by \(n\text{.}\)</p>
 <p id="rnv">If we consider the equivalence relation established by the integers modulo \(3\text{,}\) then</p>
 <div class="displaymath">
 \begin{align*}
@@ -426,7 +426,7 @@ r - t = r - s + s - t = kn + ln = (k + l)n\text{,}
 {[2]} &amp; = \{ \ldots, -1, 2, 5, 8, \ldots \}\text{.}
 \end{align*}
 </div>
-<p data-braille="continuation">Notice that \([0] \cup [1] \cup [2] = {\mathbb Z}\) and also that the sets are disjoint. The sets \([0]\text{,}\) \([1]\text{,}\) and \([2]\) form a partition of the integers.</p>
+<p class="continuation">Notice that \([0] \cup [1] \cup [2] = {\mathbb Z}\) and also that the sets are disjoint. The sets \([0]\text{,}\) \([1]\text{,}\) and \([2]\) form a partition of the integers.</p>
 <p id="XuE">The integers modulo \(n\) are a very important example in the study of abstract algebra and will become quite useful in our investigation of various algebraic structures such as groups and rings. In our discussion of the integers modulo \(n\) we have actually assumed a result known as the division algorithm, which will be stated and proved in <a href="section-division-algorithm.html" class="internal" title="Section 6.1: The Integers">Section 6.1</a>.</p></article><section class="reading-questions" id="NNC"><h3 class="heading hide-type">
 <span class="type">Reading Questions</span> <span class="codenumber"></span> <span class="title">Reading Questions</span>
 </h3>

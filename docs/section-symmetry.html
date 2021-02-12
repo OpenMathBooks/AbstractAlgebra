@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2021-02-08T11:04:26-07:00       *-->
+<!--*       on 2021-02-12T14:43:21-07:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -59,7 +59,7 @@ MathJax.Hub.Config({
 <!-- 2019-10-12: Temporary - CSS file for experiments with styling --><link xmlns:svg="http://www.w3.org/2000/svg" href="developer.css" rel="stylesheet" type="text/css">
 </head>
 <body id="judson-AATA" class="mathbook-book has-toc has-sidebar-left">
-<a class="assistive" href="#content">Skip to main content</a><div xmlns:svg="http://www.w3.org/2000/svg" class="hidden-content" style="display:none">\(\newcommand{\identity}{\mathrm{id}}
+<a class="assistive" href="#content">Skip to main content</a><div xmlns:svg="http://www.w3.org/2000/svg" id="latex-macros" class="hidden-content" style="display:none">\(\newcommand{\identity}{\mathrm{id}}
 \newcommand{\notdivide}{\nmid}
 \newcommand{\notsubset}{\not\subset}
 \newcommand{\lcm}{\operatorname{lcm}}
@@ -316,7 +316,7 @@ MathJax.Hub.Config({
 \| f({\mathbf x}) - f({\mathbf y}) \| =\|{\mathbf x} - {\mathbf y} \|
 \end{equation*}
 </div>
-<p data-braille="continuation">for all \({\mathbf x}, {\mathbf y} \in {\mathbb R}^n\text{.}\) It is not difficult to show that \(f\) must be a one-to-one map. By <a class="xref" data-knowl="./knowl/theorem-orthnormal-matrix.html" title="Theorem 15.8">Theorem 15.8</a>, any element in \(O(n)\) is an isometry on \({\mathbb R}^n\text{;}\) however, \(O(n)\) does not include all possible isometries on \({\mathbb R}^n\text{.}\) Translation by a vector \({\mathbf x}\text{,}\) \(T_{\mathbf y}({\mathbf x}) = {\mathbf x} + {\mathbf y}\) is also an isometry (<a class="xref" data-knowl="./knowl/figure-isometries.html" title="Figure 15.11">Figure 15.11</a>); however, \(T\) cannot be in \(O(n)\) since it is not a linear map.</p>
+<p class="continuation">for all \({\mathbf x}, {\mathbf y} \in {\mathbb R}^n\text{.}\) It is not difficult to show that \(f\) must be a one-to-one map. By <a class="xref" data-knowl="./knowl/theorem-orthnormal-matrix.html" title="Theorem 15.8">Theorem 15.8</a>, any element in \(O(n)\) is an isometry on \({\mathbb R}^n\text{;}\) however, \(O(n)\) does not include all possible isometries on \({\mathbb R}^n\text{.}\) Translation by a vector \({\mathbf x}\text{,}\) \(T_{\mathbf y}({\mathbf x}) = {\mathbf x} + {\mathbf y}\) is also an isometry (<a class="xref" data-knowl="./knowl/figure-isometries.html" title="Figure 15.11">Figure 15.11</a>); however, \(T\) cannot be in \(O(n)\) since it is not a linear map.</p>
 <p id="oVW">We are mostly interested in isometries in \({\mathbb R}^2\text{.}\) In fact, the only isometries in \({\mathbb R}^2\) are rotations and reflections about the origin, translations, and combinations of the two. For example, a <dfn class="terminology">glide reflection</dfn>  is a translation followed by a reflection (<a class="xref" data-knowl="./knowl/figure-glide.html" title="Figure 15.12">Figure 15.12</a>). In \({\mathbb R}^n\) all isometries are given in the same manner. The proof is very easy to generalize.</p>
 <figure class="figure figure-like" id="hrx"><div class="image-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><img src="images/matrix-glide-reflections.svg" role="img" style="width: 100%; height: auto;" alt="Two side-by figures. The figure on the left is a set of axes with an arrow pointing up and right from the origin to a point x. The figure on the right is a set of axes with an arrow of the same length but pointing down and right from a point on the horizontal axis to a point T(x)."></div>
 <figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">15.12<span class="period">.</span></span><span class="space"> </span>Glide reflections</figcaption></figure><article class="lemma theorem-like" id="tcZ"><h6 class="heading">
@@ -334,38 +334,38 @@ MathJax.Hub.Config({
 &amp; = \| {\mathbf x} \|^2 - 2 \langle {\mathbf x}, {\mathbf y} \rangle + \| {\mathbf y} \|^2\text{.}
 \end{align*}
 </div>
-<p data-braille="continuation">Consequently,</p>
+<p class="continuation">Consequently,</p>
 <div class="displaymath">
 \begin{equation*}
 \langle f({\mathbf x}), f({\mathbf y}) \rangle = \langle {\mathbf x}, {\mathbf y} \rangle\text{.}
 \end{equation*}
 </div>
-<p data-braille="continuation">Now let \({\mathbf e}_1\) and \({\mathbf e_2}\) be \((1, 0)^\transpose\) and \((0, 1)^\transpose\text{,}\) respectively. If</p>
+<p class="continuation">Now let \({\mathbf e}_1\) and \({\mathbf e_2}\) be \((1, 0)^\transpose\) and \((0, 1)^\transpose\text{,}\) respectively. If</p>
 <div class="displaymath">
 \begin{equation*}
 {\mathbf x} = (x_1, x_2) = x_1 {\mathbf e}_1 + x_2 {\mathbf e}_2\text{,}
 \end{equation*}
 </div>
-<p data-braille="continuation">then</p>
+<p class="continuation">then</p>
 <div class="displaymath">
 \begin{equation*}
 f({\mathbf x}) = \langle f({\mathbf x}), f({\mathbf e}_1) \rangle f({\mathbf e}_1) + \langle f({\mathbf x}), f({\mathbf e}_2) \rangle f({\mathbf e}_2) = x_1 f({\mathbf e}_1)+x_2 f({\mathbf e}_2)\text{.}
 \end{equation*}
 </div>
-<p data-braille="continuation">The linearity of \(f\) easily follows.</p></article><p id="Vdf">For any arbitrary isometry, \(f\text{,}\) \(T_{\mathbf x} f\) will fix the origin for some vector \({\mathbf x}\) in \({\mathbb R}^2\text{;}\) hence, \(T_{\mathbf x} f({\mathbf y}) = A {\mathbf y}\) for some matrix \(A \in O(2)\text{.}\) Consequently, \(f({\mathbf y}) = A {\mathbf y} + {\mathbf x}\text{.}\) Given the isometries</p>
+<p class="continuation">The linearity of \(f\) easily follows.</p></article><p id="Vdf">For any arbitrary isometry, \(f\text{,}\) \(T_{\mathbf x} f\) will fix the origin for some vector \({\mathbf x}\) in \({\mathbb R}^2\text{;}\) hence, \(T_{\mathbf x} f({\mathbf y}) = A {\mathbf y}\) for some matrix \(A \in O(2)\text{.}\) Consequently, \(f({\mathbf y}) = A {\mathbf y} + {\mathbf x}\text{.}\) Given the isometries</p>
 <div class="displaymath">
 \begin{align*}
 f({\mathbf y}) &amp; = A {\mathbf y} + {\mathbf x}_1\\
 g({\mathbf y}) &amp; = B {\mathbf y} + {\mathbf x}_2\text{,}
 \end{align*}
 </div>
-<p data-braille="continuation">their composition is</p>
+<p class="continuation">their composition is</p>
 <div class="displaymath">
 \begin{equation*}
 f(g({\mathbf y})) = f(B {\mathbf y} + {\mathbf x}_2) = AB {\mathbf y} + A{\mathbf x}_2 + {\mathbf x}_1\text{.}
 \end{equation*}
 </div>
-<p data-braille="continuation">This last computation allows us to identify the group of isometries on \({\mathbb R}^2\) with \(E(2)\text{.}\)</p>
+<p class="continuation">This last computation allows us to identify the group of isometries on \({\mathbb R}^2\) with \(E(2)\text{.}\)</p>
 <article class="theorem theorem-like" id="gOH"><h6 class="heading">
 <span class="type">Theorem</span><span class="space"> </span><span class="codenumber">15.14</span><span class="period">.</span>
 </h6>
@@ -385,7 +385,7 @@ R_{\theta}
 \end{pmatrix}
 \end{equation*}
 </div>
-<p data-braille="continuation">or reflections of the form</p>
+<p class="continuation">or reflections of the form</p>
 <div class="displaymath">
 \begin{equation*}
 T_{\phi}
@@ -405,7 +405,7 @@ T_{\phi}
 \end{pmatrix}\text{.}
 \end{equation*}
 </div>
-<p data-braille="continuation">Notice that \(\det(R_{\theta})=1\text{,}\) \(\det(T_{\phi})=-1\text{,}\) and \(T_{\phi}^2=I\text{.}\) We can divide the proof up into two cases. In the first case, all of the elements in \(G\) have determinant one. In the second case, there exists at least one element in \(G\) with determinant \(-1\text{.}\)</p>
+<p class="continuation">Notice that \(\det(R_{\theta})=1\text{,}\) \(\det(T_{\phi})=-1\text{,}\) and \(T_{\phi}^2=I\text{.}\) We can divide the proof up into two cases. In the first case, all of the elements in \(G\) have determinant one. In the second case, there exists at least one element in \(G\) with determinant \(-1\text{.}\)</p>
 <article class="case" id="case-3"><h6 class="heading">Case 1.</h6>
 <p id="iwQ">The determinant of every element in \(G\) is one. In this case every element in \(G\) must be a rotation. Since \(G\) is finite, there is a smallest angle, say \(\theta_0\text{,}\) such that the corresponding element \(R_{\theta_0}\) is the smallest rotation in the positive direction. We claim that \(R_{\theta_0}\) generates \(G\text{.}\) If not, then for some positive integer \(n\) there is an angle \(\theta_1\) between \(n \theta_0\) and \((n+1) \theta_0\text{.}\) If so, then \((n+1) \theta_0 - \theta_1\) corresponds to a rotation smaller than \(\theta_0\text{,}\) which contradicts the minimality of \(\theta_0\text{.}\)</p></article><article class="case" id="case-4"><h6 class="heading">Case 2.</h6>
 <p id="ODZ">The group \(G\) contains a reflection \(T\text{.}\) The kernel of the homomorphism \(\phi : G \rightarrow \{-1, 1\}\) given by \(A \mapsto \det(A)\) consists of elements whose determinant is 1. Therefore, \(|G/ \ker \phi|=2\text{.}\) We know that the kernel is cyclic by the first case and is a subgroup of \(G\) of, say, order \(n\text{.}\) Hence, \(|G| = 2n\text{.}\) The elements of \(G\) are</p>
@@ -414,13 +414,13 @@ T_{\phi}
 R_{\theta}, \ldots, R_{\theta}^{n-1},  TR_{\theta}, \ldots, TR_{\theta}^{n-1}\text{.}
 \end{equation*}
 </div>
-<p data-braille="continuation">These elements satisfy the relation</p>
+<p class="continuation">These elements satisfy the relation</p>
 <div class="displaymath">
 \begin{equation*}
 TR_{\theta}T = R_{\theta}^{-1}\text{.}
 \end{equation*}
 </div>
-<p data-braille="continuation">Consequently, \(G\) must be isomorphic to \(D_n\) in this case.</p></article></article></section><section class="subsection" id="buU"><h3 class="heading hide-type">
+<p class="continuation">Consequently, \(G\) must be isomorphic to \(D_n\) in this case.</p></article></article></section><section class="subsection" id="buU"><h3 class="heading hide-type">
 <span class="type">Subsection</span> <span class="codenumber">15.2.1</span> <span class="title">The Wallpaper Groups</span>
 </h3>
 <p id="upJ">Suppose that we wish to study wallpaper patterns in the plane or crystals in three dimensions. Wallpaper patterns are simply repeating patterns in the plane (<a class="xref" data-knowl="./knowl/figure-wallpaper.html" title="Figure 15.16">Figure 15.16</a>). The analogs of wallpaper patterns in \({\mathbb R}^3\) are crystals, which we can think of as repeating patterns of molecules in three dimensions (<a class="xref" data-knowl="./knowl/figure-crystals.html" title="Figure 15.17">Figure 15.17</a>). The mathematical equivalent of a wallpaper or crystal pattern is called a lattice.</p>
@@ -434,7 +434,7 @@ TR_{\theta}T = R_{\theta}^{-1}\text{.}
 {\mathbf y}_2 &amp; = \beta_1  {\mathbf x}_1 + \beta_2 {\mathbf x}_2\text{,}
 \end{align*}
 </div>
-<p data-braille="continuation">where \(\alpha_1\text{,}\) \(\alpha_2\text{,}\) \(\beta_1\text{,}\) and \(\beta_2\) are integers. The matrix corresponding to this transformation is</p>
+<p class="continuation">where \(\alpha_1\text{,}\) \(\alpha_2\text{,}\) \(\beta_1\text{,}\) and \(\beta_2\) are integers. The matrix corresponding to this transformation is</p>
 <div class="displaymath">
 \begin{equation*}
 U
@@ -445,7 +445,7 @@ U
 \end{pmatrix}\text{.}
 \end{equation*}
 </div>
-<p data-braille="continuation">If we wish to give \({\mathbf x}_1\) and \({\mathbf x}_2\) in terms of \({\mathbf y}_1\) and \({\mathbf y}_2\text{,}\) we need only calculate \(U^{-1}\text{;}\) that is,</p>
+<p class="continuation">If we wish to give \({\mathbf x}_1\) and \({\mathbf x}_2\) in terms of \({\mathbf y}_1\) and \({\mathbf y}_2\text{,}\) we need only calculate \(U^{-1}\text{;}\) that is,</p>
 <div class="displaymath">
 \begin{equation*}
 U^{-1}
@@ -458,13 +458,13 @@ U^{-1}
 \end{pmatrix}\text{.}
 \end{equation*}
 </div>
-<p data-braille="continuation">Since \(U\) has integer entries, \(U^{-1}\) must also have integer entries; hence the determinants of both \(U\) and \(U^{-1}\) must be integers. Because \(U U^{-1} = I\text{,}\)</p>
+<p class="continuation">Since \(U\) has integer entries, \(U^{-1}\) must also have integer entries; hence the determinants of both \(U\) and \(U^{-1}\) must be integers. Because \(U U^{-1} = I\text{,}\)</p>
 <div class="displaymath">
 \begin{equation*}
 \det(U U^{-1}) =\det(U) \det( U^{-1}) = 1;
 \end{equation*}
 </div>
-<p data-braille="continuation">consequently, \(\det(U) = \pm 1\text{.}\) A matrix with determinant \(\pm 1\) and integer entries is called <dfn class="terminology">unimodular</dfn>.  For example, the matrix</p>
+<p class="continuation">consequently, \(\det(U) = \pm 1\text{.}\) A matrix with determinant \(\pm 1\) and integer entries is called <dfn class="terminology">unimodular</dfn>.  For example, the matrix</p>
 <div class="displaymath">
 \begin{equation*}
 \begin{pmatrix}
@@ -473,7 +473,7 @@ U^{-1}
 \end{pmatrix}
 \end{equation*}
 </div>
-<p data-braille="continuation">is unimodular. It should be clear that there is a minimum length for vectors in a lattice.</p>
+<p class="continuation">is unimodular. It should be clear that there is a minimum length for vectors in a lattice.</p>
 <figure class="figure figure-like" id="jQE"><div class="image-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><img src="images/matrix-lattice-r2.svg" role="img" style="width: 100%; height: auto;" alt="A lattice of parallelograms slanted to the right.  There are four arrows, each beginning in the center at the origin and pointing to the right to (2,0), pointing up and right to (1,1), pointing up and left to ( minus one, one), and pointing down and left to (minus one, minus one)."></div>
 <figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">15.18<span class="period">.</span></span><span class="space"> </span>A lattice in  \(\mathbb R^2\)</figcaption></figure><p id="mLk">We can classify lattices by studying their symmetry groups. The symmetry group of a lattice is the subgroup of \(E(2)\) that maps the lattice to itself. We consider two lattices in \({\mathbb R}^2\) to be equivalent if they have the same symmetry group. Similarly, classification of crystals in \({\mathbb R}^3\) is accomplished by associating a symmetry group, called a <dfn class="terminology">space group</dfn>, with each type of crystal.  Two lattices are considered different if their space groups are not the same. The natural question that now arises is how many space groups exist.</p>
 <p id="SSt">A space group is composed of two parts: a <dfn class="terminology">translation subgroup</dfn> and a <dfn class="terminology">point</dfn>.  The translation subgroup is an infinite abelian subgroup of the space group made up of the translational symmetries of the crystal; the point group is a finite group consisting of rotations and reflections of the crystal about a point. More specifically, a space group is a subgroup of \(G \subset E(2)\) whose translations are a set of the form \(\{ (I, t) : t \in L \}\text{,}\) where \(L\) is a lattice. Space groups are, of course, infinite. Using geometric arguments, we can prove the following theorem (see [5] or [6]).</p>
@@ -488,114 +488,114 @@ U^{-1}
 &amp; = (I, A {\mathbf x});
 \end{align*}
 </div>
-<p data-braille="continuation">hence, \((I, A {\mathbf x})\) is in the translation group of \(G\text{.}\) More specifically, \(A {\mathbf x}\) must be in the lattice \(L\text{.}\) It is important to note that \(G_0\) is not usually a subgroup of the space group \(G\text{;}\) however, if \(T\) is the translation subgroup of \(G\text{,}\) then \(G/T \cong G_0\text{.}\) The proof of the following theorem can be found in [2], [5], or [6].</p>
+<p class="continuation">hence, \((I, A {\mathbf x})\) is in the translation group of \(G\text{.}\) More specifically, \(A {\mathbf x}\) must be in the lattice \(L\text{.}\) It is important to note that \(G_0\) is not usually a subgroup of the space group \(G\text{;}\) however, if \(T\) is the translation subgroup of \(G\text{,}\) then \(G/T \cong G_0\text{.}\) The proof of the following theorem can be found in [2], [5], or [6].</p>
 <article class="theorem theorem-like" id="BMR"><h6 class="heading">
 <span class="type">Theorem</span><span class="space"> </span><span class="codenumber">15.20</span><span class="period">.</span>
 </h6>
 <p id="TnS">The point group in the wallpaper groups is isomorphic to \({\mathbb Z}_n\) or \(D_n\text{,}\) where \(n = 1, 2, 3, 4, 6\text{.}\)</p></article><p id="fgL">To answer the question of how the point groups and the translation groups can be combined, we must look at the different types of lattices. Lattices can be classified by the structure of a single lattice cell. The possible cell shapes are parallelogram, rectangular, square, rhombic, and hexagonal (<a class="xref" data-knowl="./knowl/figure-lattice-types.html" title="Figure 15.21">Figure 15.21</a>). The wallpaper groups can now be classified according to the types of reflections that occur in each group: these are ordinarily reflections, glide reflections, both, or none.</p>
 <figure class="figure figure-like" id="PXN"><div class="image-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><img src="images/matrix-lattices-r2.svg" role="img" style="width: 100%; height: auto;" alt="There are two rows of figures.  The left top figure is a lattice of squares, the middle top figure is a lattice of rectangles that are not squares, the right top figure is  a lattice of rhombuses slanted to the left. The bottom left figure is a lattice of parallelograms that are not rhombuses slanted to the left.  The bottom right figure is a lattice of equilateral triangles, six of which make up a regular hexagon."></div>
-<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">15.21<span class="period">.</span></span><span class="space"> </span>Types of lattices in  \(\mathbb R^2\)</figcaption></figure><figure class="table table-like" id="TgO"><figcaption><span class="type">Table</span><span class="space"> </span><span class="codenumber">15.22<span class="period">.</span></span><span class="space"> </span>The 17 wallpaper groups</figcaption><div class="tabular-box natural-width"><table class="tabular">
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">15.21<span class="period">.</span></span><span class="space"> </span>Types of lattices in  \(\mathbb R^2\)</figcaption></figure><figure class="table table-like" id="TgO"><figcaption><span class="type">Table</span><span class="space"> </span><span class="codenumber">15.22<span class="period">.</span></span><span class="space"> </span>The 17 wallpaper groups</figcaption><div class="tabular-box natural-width"><table class="tabular" id="znX">
 <tr>
 <td class="c m b0 r0 l0 t2 lines">Notation and</td>
 <td class="c m b0 r0 l0 t2 lines"></td>
 <td class="c m b0 r0 l0 t2 lines"></td>
-<td class="c m b0 r0 l0 t2 lines" data-braille="last-cell">Reflections or</td>
+<td class="c m b0 r0 l0 t2 lines">Reflections or</td>
 </tr>
 <tr>
 <td class="c m b2 r0 l0 t0 lines">Space Groups</td>
 <td class="c m b2 r0 l0 t0 lines">Point Group</td>
 <td class="c m b2 r0 l0 t0 lines">Lattice Type</td>
-<td class="c m b2 r0 l0 t0 lines" data-braille="last-cell">Glide Reflections?</td>
+<td class="c m b2 r0 l0 t0 lines">Glide Reflections?</td>
 </tr>
 <tr>
 <td class="c m b0 r0 l0 t0 lines">p1</td>
 <td class="c m b0 r0 l0 t0 lines">\({\mathbb Z}_1\)</td>
 <td class="c m b0 r0 l0 t0 lines">parallelogram</td>
-<td class="c m b0 r0 l0 t0 lines" data-braille="last-cell">none</td>
+<td class="c m b0 r0 l0 t0 lines">none</td>
 </tr>
 <tr>
 <td class="c m b0 r0 l0 t0 lines">p2</td>
 <td class="c m b0 r0 l0 t0 lines">\({\mathbb Z}_2\)</td>
 <td class="c m b0 r0 l0 t0 lines">parallelogram</td>
-<td class="c m b0 r0 l0 t0 lines" data-braille="last-cell">none</td>
+<td class="c m b0 r0 l0 t0 lines">none</td>
 </tr>
 <tr>
 <td class="c m b0 r0 l0 t0 lines">p3</td>
 <td class="c m b0 r0 l0 t0 lines">\({\mathbb Z}_3\)</td>
 <td class="c m b0 r0 l0 t0 lines">hexagonal</td>
-<td class="c m b0 r0 l0 t0 lines" data-braille="last-cell">none</td>
+<td class="c m b0 r0 l0 t0 lines">none</td>
 </tr>
 <tr>
 <td class="c m b0 r0 l0 t0 lines">p4</td>
 <td class="c m b0 r0 l0 t0 lines">\({\mathbb Z}_4\)</td>
 <td class="c m b0 r0 l0 t0 lines">square</td>
-<td class="c m b0 r0 l0 t0 lines" data-braille="last-cell">none</td>
+<td class="c m b0 r0 l0 t0 lines">none</td>
 </tr>
 <tr>
 <td class="c m b0 r0 l0 t0 lines">p6</td>
 <td class="c m b0 r0 l0 t0 lines">\({\mathbb Z}_6\)</td>
 <td class="c m b0 r0 l0 t0 lines">hexagonal</td>
-<td class="c m b0 r0 l0 t0 lines" data-braille="last-cell">none</td>
+<td class="c m b0 r0 l0 t0 lines">none</td>
 </tr>
 <tr>
 <td class="c m b0 r0 l0 t0 lines">pm</td>
 <td class="c m b0 r0 l0 t0 lines">\(D_1\)</td>
 <td class="c m b0 r0 l0 t0 lines">rectangular</td>
-<td class="c m b0 r0 l0 t0 lines" data-braille="last-cell">reflections</td>
+<td class="c m b0 r0 l0 t0 lines">reflections</td>
 </tr>
 <tr>
 <td class="c m b0 r0 l0 t0 lines">pg</td>
 <td class="c m b0 r0 l0 t0 lines">\(D_1\)</td>
 <td class="c m b0 r0 l0 t0 lines">rectangular</td>
-<td class="c m b0 r0 l0 t0 lines" data-braille="last-cell">glide reflections</td>
+<td class="c m b0 r0 l0 t0 lines">glide reflections</td>
 </tr>
 <tr>
 <td class="c m b0 r0 l0 t0 lines">cm</td>
 <td class="c m b0 r0 l0 t0 lines">\(D_1\)</td>
 <td class="c m b0 r0 l0 t0 lines">rhombic</td>
-<td class="c m b0 r0 l0 t0 lines" data-braille="last-cell">both</td>
+<td class="c m b0 r0 l0 t0 lines">both</td>
 </tr>
 <tr>
 <td class="c m b0 r0 l0 t0 lines">pmm</td>
 <td class="c m b0 r0 l0 t0 lines">\(D_2\)</td>
 <td class="c m b0 r0 l0 t0 lines">rectangular</td>
-<td class="c m b0 r0 l0 t0 lines" data-braille="last-cell">reflections</td>
+<td class="c m b0 r0 l0 t0 lines">reflections</td>
 </tr>
 <tr>
 <td class="c m b0 r0 l0 t0 lines">pmg</td>
 <td class="c m b0 r0 l0 t0 lines">\(D_2\)</td>
 <td class="c m b0 r0 l0 t0 lines">rectangular</td>
-<td class="c m b0 r0 l0 t0 lines" data-braille="last-cell">glide reflections</td>
+<td class="c m b0 r0 l0 t0 lines">glide reflections</td>
 </tr>
 <tr>
 <td class="c m b0 r0 l0 t0 lines">pgg</td>
 <td class="c m b0 r0 l0 t0 lines">\(D_2\)</td>
 <td class="c m b0 r0 l0 t0 lines">rectangular</td>
-<td class="c m b0 r0 l0 t0 lines" data-braille="last-cell">both</td>
+<td class="c m b0 r0 l0 t0 lines">both</td>
 </tr>
 <tr>
 <td class="c m b0 r0 l0 t0 lines">c2mm</td>
 <td class="c m b0 r0 l0 t0 lines">\(D_2\)</td>
 <td class="c m b0 r0 l0 t0 lines">rhombic</td>
-<td class="c m b0 r0 l0 t0 lines" data-braille="last-cell">both</td>
+<td class="c m b0 r0 l0 t0 lines">both</td>
 </tr>
 <tr>
 <td class="c m b0 r0 l0 t0 lines">p3m1, p31m</td>
 <td class="c m b0 r0 l0 t0 lines">\(D_3\)</td>
 <td class="c m b0 r0 l0 t0 lines">hexagonal</td>
-<td class="c m b0 r0 l0 t0 lines" data-braille="last-cell">both</td>
+<td class="c m b0 r0 l0 t0 lines">both</td>
 </tr>
 <tr>
 <td class="c m b0 r0 l0 t0 lines">p4m, p4g</td>
 <td class="c m b0 r0 l0 t0 lines">\(D_4\)</td>
 <td class="c m b0 r0 l0 t0 lines">square</td>
-<td class="c m b0 r0 l0 t0 lines" data-braille="last-cell">both</td>
+<td class="c m b0 r0 l0 t0 lines">both</td>
 </tr>
 <tr>
 <td class="c m b2 r0 l0 t0 lines">p6m</td>
 <td class="c m b2 r0 l0 t0 lines">\(D_6\)</td>
 <td class="c m b2 r0 l0 t0 lines">hexagonal</td>
-<td class="c m b2 r0 l0 t0 lines" data-braille="last-cell">both</td>
+<td class="c m b2 r0 l0 t0 lines">both</td>
 </tr>
 </table></div></figure><article class="theorem theorem-like" id="hUa"><h6 class="heading">
 <span class="type">Theorem</span><span class="space"> </span><span class="codenumber">15.23</span><span class="period">.</span>

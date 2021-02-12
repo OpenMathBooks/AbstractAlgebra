@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2021-02-08T11:04:02-07:00       *-->
+<!--*       on 2021-02-12T14:43:08-07:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -59,7 +59,7 @@ MathJax.Hub.Config({
 <!-- 2019-10-12: Temporary - CSS file for experiments with styling --><link xmlns:svg="http://www.w3.org/2000/svg" href="developer.css" rel="stylesheet" type="text/css">
 </head>
 <body id="judson-AATA" class="mathbook-book has-toc has-sidebar-left">
-<a class="assistive" href="#content">Skip to main content</a><div xmlns:svg="http://www.w3.org/2000/svg" class="hidden-content" style="display:none">\(\newcommand{\identity}{\mathrm{id}}
+<a class="assistive" href="#content">Skip to main content</a><div xmlns:svg="http://www.w3.org/2000/svg" id="latex-macros" class="hidden-content" style="display:none">\(\newcommand{\identity}{\mathrm{id}}
 \newcommand{\notdivide}{\nmid}
 \newcommand{\notsubset}{\not\subset}
 \newcommand{\lcm}{\operatorname{lcm}}
@@ -315,7 +315,7 @@ MathJax.Hub.Config({
 <li id="IwB"><p id="tXx">\(ex = x\) for all \(x \in X\text{;}\)</p></li>
 <li id="oDK"><p id="aeG">\((g_1 g_2)x = g_1(g_2 x)\) for all \(x \in X\) and all \(g_1, g_2 \in G\text{.}\)</p></li>
 </ol>
-<p data-braille="continuation">Under these considerations \(X\) is called a <dfn class="terminology">\(G\)-set</dfn>.  Notice that we are not requiring \(X\) to be related to \(G\) in any way. It is true that every group \(G\) acts on every set \(X\) by the trivial action \((g,x) \mapsto x\text{;}\) however, group actions are more interesting if the set \(X\) is somehow related to the group \(G\text{.}\)</p>
+<p class="continuation">Under these considerations \(X\) is called a <dfn class="terminology">\(G\)-set</dfn>.  Notice that we are not requiring \(X\) to be related to \(G\) in any way. It is true that every group \(G\) acts on every set \(X\) by the trivial action \((g,x) \mapsto x\text{;}\) however, group actions are more interesting if the set \(X\) is somehow related to the group \(G\text{.}\)</p>
 <article class="example example-like" id="JXt"><h6 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">13.1</span><span class="period">.</span>
 </h6>
@@ -328,13 +328,13 @@ MathJax.Hub.Config({
 \{ (1), (13), (24), (1432), (1234), (12)(34), (14)(23), (13)(24) \}\text{.}
 \end{equation*}
 </div>
-<p data-braille="continuation">The elements of \(D_4\) act on \(X\) as functions. The permutation \((13)(24)\) acts on vertex \(1\) by sending it to vertex \(3\text{,}\) on vertex \(2\) by sending it to vertex \(4\text{,}\) and so on. It is easy to see that the  axioms of a group action are satisfied.</p></article><p id="rFH">In general, if \(X\) is any set and \(G\) is a subgroup of \(S_X\text{,}\) the group of all permutations acting on \(X\text{,}\) then \(X\) is a \(G\)-set under the group action</p>
+<p class="continuation">The elements of \(D_4\) act on \(X\) as functions. The permutation \((13)(24)\) acts on vertex \(1\) by sending it to vertex \(3\text{,}\) on vertex \(2\) by sending it to vertex \(4\text{,}\) and so on. It is easy to see that the  axioms of a group action are satisfied.</p></article><p id="rFH">In general, if \(X\) is any set and \(G\) is a subgroup of \(S_X\text{,}\) the group of all permutations acting on \(X\text{,}\) then \(X\) is a \(G\)-set under the group action</p>
 <div class="displaymath">
 \begin{equation*}
 (\sigma, x) \mapsto \sigma(x)
 \end{equation*}
 </div>
-<p data-braille="continuation">for \(\sigma \in G\) and \(x \in X\text{.}\)</p>
+<p class="continuation">for \(\sigma \in G\) and \(x \in X\text{.}\)</p>
 <article class="example example-like" id="WlL"><h6 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">13.3</span><span class="period">.</span>
 </h6>
@@ -345,7 +345,7 @@ e \cdot x = \lambda_e x = ex = x\\
 (gh) \cdot x = \lambda_{gh}x = \lambda_g \lambda_h x = \lambda_g(hx) = g \cdot ( h \cdot x)\text{.}
 \end{gather*}
 </div>
-<p data-braille="continuation">If \(H\) is a subgroup of \(G\text{,}\) then \(G\) is an \(H\)-set under left multiplication by elements of \(H\text{.}\)</p></article><article class="example example-like" id="CsU"><h6 class="heading">
+<p class="continuation">If \(H\) is a subgroup of \(G\text{,}\) then \(G\) is an \(H\)-set under left multiplication by elements of \(H\text{.}\)</p></article><article class="example example-like" id="CsU"><h6 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">13.4</span><span class="period">.</span>
 </h6>
 <p id="jMN">Let \(G\) be a group and suppose that \(X=G\text{.}\) If \(H\) is a subgroup of \(G\text{,}\) then \(G\) is an \(H\)-set under <dfn class="terminology">conjugation</dfn>;  that is, we can define an action of \(H\) on \(G\text{,}\)</p>
@@ -354,13 +354,13 @@ e \cdot x = \lambda_e x = ex = x\\
 H \times G \rightarrow G\text{,}
 \end{equation*}
 </div>
-<p data-braille="continuation">via</p>
+<p class="continuation">via</p>
 <div class="displaymath">
 \begin{equation*}
 (h,g) \mapsto hgh^{-1}
 \end{equation*}
 </div>
-<p data-braille="continuation">for \(h \in H\) and \(g \in G\text{.}\) Clearly, the first axiom for a group action holds. Observing that</p>
+<p class="continuation">for \(h \in H\) and \(g \in G\text{.}\) Clearly, the first axiom for a group action holds. Observing that</p>
 <div class="displaymath">
 \begin{align*}
 (h_1 h_2, g) &amp; = h_1 h_2 g (h_1 h_2 )^{-1}\\
@@ -368,7 +368,7 @@ H \times G \rightarrow G\text{,}
 &amp; =  (h_1, (h_2, g) )\text{,}
 \end{align*}
 </div>
-<p data-braille="continuation">we see that the second condition is also satisfied.</p></article><article class="example example-like" id="iAd"><h6 class="heading">
+<p class="continuation">we see that the second condition is also satisfied.</p></article><article class="example example-like" id="iAd"><h6 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">13.5</span><span class="period">.</span>
 </h6>
 <p id="PTW">Let \(H\) be a subgroup of \(G\) and \({\mathcal L}_H\) the set of left cosets of \(H\text{.}\) The set \({\mathcal L}_H\) is a \(G\)-set under the action</p>
@@ -377,7 +377,7 @@ H \times G \rightarrow G\text{,}
 (g, xH) \mapsto gxH\text{.}
 \end{equation*}
 </div>
-<p data-braille="continuation">Again, it is easy to see that the first axiom is true. Since \((g g')xH = g( g'x H)\text{,}\) the second axiom is  also true.</p></article><p id="XMQ">If \(G\) acts on a set \(X\) and \(x, y \in X\text{,}\) then \(x\) is said to be <dfn class="terminology">\(G\)-equivalent</dfn>  to \(y\) if there exists a \(g \in G\) such that \(gx =y\text{.}\) We write \(x \sim_G y\) or \(x \sim y\) if two elements are \(G\)-equivalent.</p>
+<p class="continuation">Again, it is easy to see that the first axiom is true. Since \((g g')xH = g( g'x H)\text{,}\) the second axiom is  also true.</p></article><p id="XMQ">If \(G\) acts on a set \(X\) and \(x, y \in X\text{,}\) then \(x\) is said to be <dfn class="terminology">\(G\)-equivalent</dfn>  to \(y\) if there exists a \(g \in G\) such that \(gx =y\text{.}\) We write \(x \sim_G y\) or \(x \sim y\) if two elements are \(G\)-equivalent.</p>
 <article class="proposition theorem-like" id="luJ"><h6 class="heading">
 <span class="type">Proposition</span><span class="space"> </span><span class="codenumber">13.6</span><span class="period">.</span>
 </h6>
@@ -392,7 +392,7 @@ H \times G \rightarrow G\text{,}
 G =\{(1), (1 2 3), (1 3 2), (4 5), (1 2 3)(4 5), (1 3 2)(4 5) \}
 \end{equation*}
 </div>
-<p data-braille="continuation">and \(X = \{ 1, 2, 3, 4, 5\}\text{.}\) Then \(X\) is a \(G\)-set. The orbits are \({\mathcal O}_1 = {\mathcal O}_2 = {\mathcal O}_3 =\{1, 2, 3\}\) and \({\mathcal O}_4 = {\mathcal O}_5 = \{4, 5\}\text{.}\)</p></article><p id="kbi">Now suppose that \(G\) is a group acting on a set \(X\) and let \(g\) be an element of \(G\text{.}\) The <dfn class="terminology">fixed point set</dfn>  of \(g\) in \(X\text{,}\) denoted by \(X_g\text{,}\) is the set of all \(x \in X\) such that \(gx = x\text{.}\)  We can also study the group elements \(g\) that fix a given \(x \in X\text{.}\) This set is more than a subset of \(G\text{,}\) it is a subgroup. This subgroup is called the <dfn class="terminology">stabilizer subgroup</dfn> or <dfn class="terminology">isotropy subgroup</dfn>  of \(x\text{.}\) We will denote the stabilizer subgroup of \(x\) by \(G_x\text{.}\) </p>
+<p class="continuation">and \(X = \{ 1, 2, 3, 4, 5\}\text{.}\) Then \(X\) is a \(G\)-set. The orbits are \({\mathcal O}_1 = {\mathcal O}_2 = {\mathcal O}_3 =\{1, 2, 3\}\) and \({\mathcal O}_4 = {\mathcal O}_5 = \{4, 5\}\text{.}\)</p></article><p id="kbi">Now suppose that \(G\) is a group acting on a set \(X\) and let \(g\) be an element of \(G\text{.}\) The <dfn class="terminology">fixed point set</dfn>  of \(g\) in \(X\text{,}\) denoted by \(X_g\text{,}\) is the set of all \(x \in X\) such that \(gx = x\text{.}\)  We can also study the group elements \(g\) that fix a given \(x \in X\text{.}\) This set is more than a subset of \(G\text{,}\) it is a subgroup. This subgroup is called the <dfn class="terminology">stabilizer subgroup</dfn> or <dfn class="terminology">isotropy subgroup</dfn>  of \(x\text{.}\) We will denote the stabilizer subgroup of \(x\) by \(G_x\text{.}\) </p>
 <article class="remark remark-like" id="zyo"><h6 class="heading">
 <span class="type">Remark</span><span class="space"> </span><span class="codenumber">13.8</span><span class="period">.</span>
 </h6>
@@ -405,7 +405,7 @@ G =\{(1), (1 2 3), (1 3 2), (4 5), (1 2 3)(4 5), (1 3 2)(4 5) \}
 \{ (1), (1 2)(3 4 5 6), (3 5)(4 6), (1 2)( 3 6 5 4) \}\text{.}
 \end{equation*}
 </div>
-<p data-braille="continuation">Then the fixed point sets  of \(X\) under the action of \(G\) are</p>
+<p class="continuation">Then the fixed point sets  of \(X\) under the action of \(G\) are</p>
 <div class="displaymath">
 \begin{gather*}
 X_{(1)}  =  X,\\
@@ -413,14 +413,14 @@ X_{(3 5)(4 6)}  =  \{1,2\},\\
 X_{(1 2)(3 4 5 6)}  = X_{(1 2)(3 6 5 4)}  =  \emptyset\text{,}
 \end{gather*}
 </div>
-<p data-braille="continuation">and the stabilizer subgroups are</p>
+<p class="continuation">and the stabilizer subgroups are</p>
 <div class="displaymath">
 \begin{gather*}
 G_1 =  G_2  =  \{(1), (3 5)(4 6) \},\\
 G_3  = G_4  = G_5  = G_6 =  \{(1)\}\text{.}
 \end{gather*}
 </div>
-<p data-braille="continuation">It is easily seen that \(G_x\) is a subgroup of \(G\) for each \(x \in X\text{.}\)</p></article><article class="proposition theorem-like" id="RBS"><h6 class="heading">
+<p class="continuation">It is easily seen that \(G_x\) is a subgroup of \(G\) for each \(x \in X\text{.}\)</p></article><article class="proposition theorem-like" id="RBS"><h6 class="heading">
 <span class="type">Proposition</span><span class="space"> </span><span class="codenumber">13.10</span><span class="period">.</span>
 </h6>
 <p id="SOC">Let \(G\) be a group acting on a set \(X\) and \(x \in X\text{.}\) The stabilizer group of \(x\text{,}\) \(G_x\text{,}\) is a subgroup of \(G\text{.}\)</p></article><article class="proof" id="wDI"><h6 class="heading"><span class="type">Proof<span class="period">.</span></span></h6>
@@ -435,13 +435,13 @@ G_3  = G_4  = G_5  = G_6 =  \{(1)\}\text{.}
 \phi(y_1) = g_1 G_x = g_2 G_x = \phi(y_2)\text{,}
 \end{equation*}
 </div>
-<p data-braille="continuation">where \(g_1 x = y_1\) and \(g_2 x = y_2\text{.}\) Since \(g_1 G_x = g_2 G_x\text{,}\) there exists a \(g \in G_x\) such that \(g_2 = g_1 g\text{,}\)</p>
+<p class="continuation">where \(g_1 x = y_1\) and \(g_2 x = y_2\text{.}\) Since \(g_1 G_x = g_2 G_x\text{,}\) there exists a \(g \in G_x\) such that \(g_2 = g_1 g\text{,}\)</p>
 <div class="displaymath">
 \begin{equation*}
 y_2 = g_2 x = g_1 g x = g_1 x = y_1;
 \end{equation*}
 </div>
-<p data-braille="continuation">consequently, the map \(\phi\) is  one-to-one. Finally, we must show that the map \(\phi\) is onto. Let \(g G_x\) be a left coset. If \(g x = y\text{,}\) then \(\phi(y) = g G_x\text{.}\)</p></article></section><section class="exercises" id="cXj"><h3 class="heading hide-type">
+<p class="continuation">consequently, the map \(\phi\) is  one-to-one. Finally, we must show that the map \(\phi\) is onto. Let \(g G_x\) be a left coset. If \(g x = y\text{,}\) then \(\phi(y) = g G_x\text{.}\)</p></article></section><section class="exercises" id="cXj"><h3 class="heading hide-type">
 <span class="type">Exercises</span> <span class="codenumber"></span> <span class="title">Collected Homework</span>
 </h3>
 <article class="exercise exercise-like" id="nwo"><h6 class="heading"><span class="codenumber">1<span class="period">.</span></span></h6>

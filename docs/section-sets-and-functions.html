@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2021-02-08T11:01:17-07:00       *-->
+<!--*       on 2021-02-12T14:41:06-07:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -59,7 +59,7 @@ MathJax.Hub.Config({
 <!-- 2019-10-12: Temporary - CSS file for experiments with styling --><link xmlns:svg="http://www.w3.org/2000/svg" href="developer.css" rel="stylesheet" type="text/css">
 </head>
 <body id="judson-AATA" class="mathbook-book has-toc has-sidebar-left">
-<a class="assistive" href="#content">Skip to main content</a><div xmlns:svg="http://www.w3.org/2000/svg" class="hidden-content" style="display:none">\(\newcommand{\identity}{\mathrm{id}}
+<a class="assistive" href="#content">Skip to main content</a><div xmlns:svg="http://www.w3.org/2000/svg" id="latex-macros" class="hidden-content" style="display:none">\(\newcommand{\identity}{\mathrm{id}}
 \newcommand{\notdivide}{\nmid}
 \newcommand{\notsubset}{\not\subset}
 \newcommand{\lcm}{\operatorname{lcm}}
@@ -320,19 +320,19 @@ MathJax.Hub.Config({
 X = \{ x_1, x_2, \ldots, x_n \}
 \end{equation*}
 </div>
-<p data-braille="continuation">for a set containing elements \(x_1, x_2, \ldots, x_n\) or</p>
+<p class="continuation">for a set containing elements \(x_1, x_2, \ldots, x_n\) or</p>
 <div class="displaymath">
 \begin{equation*}
 X = \{ x :x \text{ satisfies }{\mathcal P}\}
 \end{equation*}
 </div>
-<p data-braille="continuation">if each \(x\) in \(X\) satisfies a certain property \({\mathcal P}\text{.}\) For example, if \(E\) is the set of even positive integers, we can describe \(E\) by writing either</p>
+<p class="continuation">if each \(x\) in \(X\) satisfies a certain property \({\mathcal P}\text{.}\) For example, if \(E\) is the set of even positive integers, we can describe \(E\) by writing either</p>
 <div class="displaymath">
 \begin{equation*}
 E = \{2, 4, 6, \ldots \} \quad \text{or} \quad E = \{ x : x \text{ is an even integer and } x \gt 0 \}\text{.}
 \end{equation*}
 </div>
-<p data-braille="continuation">We write \(2 \in E\) when we want to say that 2 is in the set \(E\text{,}\) and \(-3 \notin E\) to say that \(-3\) is not in the set \(E\text{.}\)</p>
+<p class="continuation">We write \(2 \in E\) when we want to say that 2 is in the set \(E\text{,}\) and \(-3 \notin E\) to say that \(-3\) is not in the set \(E\text{.}\)</p>
 <p id="Brb">Some of the more important sets that we will consider are the following:</p>
 <div class="displaymath">
 \begin{gather*}
@@ -349,13 +349,13 @@ E = \{2, 4, 6, \ldots \} \quad \text{or} \quad E = \{ x : x \text{ is an even in
 \{4,5,8\} \subset \{2, 3, 4, 5, 6, 7, 8, 9 \}
 \end{equation*}
 </div>
-<p data-braille="continuation">and</p>
+<p class="continuation">and</p>
 <div class="displaymath">
 \begin{equation*}
 {\mathbb N} \subset {\mathbb Z} \subset {\mathbb Q} \subset {\mathbb R} \subset {\mathbb C}\text{.}
 \end{equation*}
 </div>
-<p data-braille="continuation">Trivially, every set is a subset of itself. A set \(B\) is a <dfn class="terminology">proper subset</dfn> of a set \(A\) if \(B \subset A\) but \(B \neq A\text{.}\) If \(A\) is not a subset of \(B\text{,}\) we write \(A \notsubset B\text{;}\) for example, \(\{4, 7, 9\} \notsubset \{2, 4, 5,  8, 9 \}\text{.}\) Two sets are <dfn class="terminology">equal</dfn>, written \(A = B\text{,}\) if we can show that \(A \subset B\) and \(B \subset A\text{.}\)</p>
+<p class="continuation">Trivially, every set is a subset of itself. A set \(B\) is a <dfn class="terminology">proper subset</dfn> of a set \(A\) if \(B \subset A\) but \(B \neq A\text{.}\) If \(A\) is not a subset of \(B\text{,}\) we write \(A \notsubset B\text{;}\) for example, \(\{4, 7, 9\} \notsubset \{2, 4, 5,  8, 9 \}\text{.}\) Two sets are <dfn class="terminology">equal</dfn>, written \(A = B\text{,}\) if we can show that \(A \subset B\) and \(B \subset A\text{.}\)</p>
 <p id="NFt">It is convenient to have a set with no elements in it. This set is called the <dfn class="terminology">empty set</dfn> and is denoted by \(\emptyset\text{.}\) Note that the empty set is a subset of every set. </p>
 <p id="tMC">To construct new sets out of old sets, we can perform certain operations: the <dfn class="terminology">union</dfn> \(A \cup B\) of two sets \(A\) and \(B\) is defined as</p>
 <div class="displaymath">
@@ -363,31 +363,31 @@ E = \{2, 4, 6, \ldots \} \quad \text{or} \quad E = \{ x : x \text{ is an even in
 A \cup B = \{x : x \in A \text{ or } x \in B \};
 \end{equation*}
 </div>
-<p data-braille="continuation">the <dfn class="terminology">intersection</dfn> of \(A\) and \(B\)  is defined by</p>
+<p class="continuation">the <dfn class="terminology">intersection</dfn> of \(A\) and \(B\)  is defined by</p>
 <div class="displaymath">
 \begin{equation*}
 A \cap B = \{x :  x \in A \text{ and } x \in B \}\text{.}
 \end{equation*}
 </div>
-<p data-braille="continuation"> If \(A = \{1, 3, 5\}\) and \(B = \{ 1, 2, 3, 9 \}\text{,}\) then</p>
+<p class="continuation"> If \(A = \{1, 3, 5\}\) and \(B = \{ 1, 2, 3, 9 \}\text{,}\) then</p>
 <div class="displaymath">
 \begin{equation*}
 A \cup B = \{1, 2, 3, 5, 9 \} \quad \text{and} \quad A \cap B = \{ 1, 3 \}\text{.}
 \end{equation*}
 </div>
-<p data-braille="continuation">We can consider the union and the intersection of more than two sets. In this case we write</p>
+<p class="continuation">We can consider the union and the intersection of more than two sets. In this case we write</p>
 <div class="displaymath">
 \begin{equation*}
 \bigcup_{i = 1}^{n} A_{i} = A_{1} \cup \ldots \cup A_n
 \end{equation*}
 </div>
-<p data-braille="continuation">and</p>
+<p class="continuation">and</p>
 <div class="displaymath">
 \begin{equation*}
 \bigcap_{i = 1}^{n} A_{i} = A_{1} \cap \ldots \cap A_n
 \end{equation*}
 </div>
-<p data-braille="continuation">for the union and intersection, respectively, of the sets \(A_1, \ldots, A_n\text{.}\)</p>
+<p class="continuation">for the union and intersection, respectively, of the sets \(A_1, \ldots, A_n\text{.}\)</p>
 <p id="ZTL">When two sets have no elements in common, they are said to be <dfn class="terminology">disjoint</dfn>; for example, if \(E\) is the set of even integers and \(O\) is the set of odd integers, then \(E\) and \(O\) are disjoint. Two sets \(A\) and \(B\) are disjoint exactly when \(A \cap B = \emptyset\text{.}\)</p>
 <p id="GaU">Sometimes we will work within one fixed set \(U\text{,}\) called the <dfn class="terminology">universal set</dfn>. For any set \(A \subset U\text{,}\) we define the <dfn class="terminology">complement</dfn> of \(A\text{,}\) denoted by \(A'\text{,}\) to be the set </p>
 <div class="displaymath">
@@ -410,7 +410,7 @@ A \setminus B = A \cap B'  = \{ x : x \in A \text{ and } x \notin B \}\text{.}
 A = \{ x \in {\mathbb R} : 0 \lt x \leq 3 \} \quad \text{and} \quad B = \{ x \in {\mathbb R} : 2 \leq x \lt 4 \}\text{.}
 \end{equation*}
 </div>
-<p data-braille="continuation">Then</p>
+<p class="continuation">Then</p>
 <div class="displaymath">
 \begin{align*}
 A \cap B &amp; =  \{ x \in {\mathbb R} : 2 \leq x \leq 3 \}\\
@@ -439,7 +439,7 @@ A \cup A &amp; =  \{ x :  x \in A \text{ or } x \in A \}\\
 &amp; =  A
 \end{align*}
 </div>
-<p data-braille="continuation">and</p>
+<p class="continuation">and</p>
 <div class="displaymath">
 \begin{align*}
 A \cap A &amp; =  \{ x : x \in A \text{ and } x \in A \}\\
@@ -447,7 +447,7 @@ A \cap A &amp; =  \{ x : x \in A \text{ and } x \in A \}\\
 &amp; =  A\text{.}
 \end{align*}
 </div>
-<p data-braille="continuation">Also, \(A \setminus A = A \cap A' = \emptyset\text{.}\)</p>
+<p class="continuation">Also, \(A \setminus A = A \cap A' = \emptyset\text{.}\)</p>
 <p id="FMz">(3) For sets \(A\text{,}\) \(B\text{,}\) and \(C\text{,}\)</p>
 <div class="displaymath">
 \begin{align*}
@@ -457,7 +457,7 @@ A \cup (B \cup C) &amp; = A \cup \{ x : x \in B \text{ or } x \in C \}\\
 &amp; = (A \cup B) \cup C\text{.}
 \end{align*}
 </div>
-<p data-braille="continuation">A similar argument proves that  \(A \cap (B \cap C) = (A \cap B) \cap C\text{.}\)</p></article><article class="theorem theorem-like" id="rni"><h6 class="heading">
+<p class="continuation">A similar argument proves that  \(A \cap (B \cap C) = (A \cap B) \cap C\text{.}\)</p></article><article class="theorem theorem-like" id="rni"><h6 class="heading">
 <span class="type">Theorem</span><span class="space"> </span><span class="codenumber">1.3</span><span class="period">.</span><span class="space"> </span><span class="title">De Morgan's Laws.</span>
 </h6>
 <p id="vnu">Let \(A\) and \(B\) be sets. Then</p>
@@ -476,7 +476,7 @@ A \cup (B \cup C) &amp; = A \cup \{ x : x \in B \text{ or } x \in C \}\\
 ( A \setminus B) \cap (B \setminus A) = \emptyset\text{.}
 \end{equation*}
 </div>
-<p data-braille="continuation">To see that this is true, observe that</p>
+<p class="continuation">To see that this is true, observe that</p>
 <div class="displaymath">
 \begin{align*}
 ( A \setminus B) \cap (B \setminus A) &amp; = ( A \cap B') \cap (B \cap A')\\
@@ -501,7 +501,7 @@ A \times B = \{ (a,b) : a \in A \text{ and } b \in B \}\text{.}
 \{ (x, 1), (x, 2), (x, 3), (y, 1), (y, 2), (y, 3) \}
 \end{equation*}
 </div>
-<p data-braille="continuation">and</p>
+<p class="continuation">and</p>
 <div class="displaymath">
 \begin{equation*}
 A \times C = \emptyset\text{.}
@@ -512,14 +512,14 @@ A \times C = \emptyset\text{.}
 A_1 \times \cdots \times A_n = \{ (a_1, \ldots, a_n): a_i \in A_i \text{ for } i = 1, \ldots, n \}\text{.}
 \end{equation*}
 </div>
-<p data-braille="continuation">If \(A = A_1 = A_2 = \cdots = A_n\text{,}\) we often write \(A^n\) for \(A \times \cdots \times A\) (where \(A\) would be written \(n\) times).  For example, the set \({\mathbb R}^3\) consists of all of 3-tuples of real numbers.</p>
+<p class="continuation">If \(A = A_1 = A_2 = \cdots = A_n\text{,}\) we often write \(A^n\) for \(A \times \cdots \times A\) (where \(A\) would be written \(n\) times).  For example, the set \({\mathbb R}^3\) consists of all of 3-tuples of real numbers.</p>
 <p id="eDE">Subsets of \(A \times B\) are called <dfn class="terminology">relations</dfn>. We will define a  <dfn class="terminology">mapping</dfn> or <dfn class="terminology">function</dfn> \(f \subset A \times B\) from a set \(A\) to a set \(B\) to be the special type of relation where each element \(a \in A\) has a unique element \(b \in B\) such that \((a, b) \in f\text{.}\) Another way of saying this is that for every element in \(A\text{,}\) \(f\) assigns a unique element in \(B\text{.}\) We usually write \(f:A \rightarrow B\) or \(A \stackrel{f}{\rightarrow} B\text{.}\) Instead of writing down ordered pairs  \((a,b) \in A \times B\text{,}\) we write \(f(a) = b\) or \(f : a \mapsto b\text{.}\) The set  \(A\) is called the <dfn class="terminology">domain</dfn> of \(f\) and</p>
 <div class="displaymath">
 \begin{equation*}
 f(A) = \{ f(a) : a \in A \} \subset B
 \end{equation*}
 </div>
-<p data-braille="continuation">is called the <dfn class="terminology">range</dfn>  or <dfn class="terminology">image</dfn> of \(f\text{.}\) We can think of the elements in the function's domain as input values and the elements in the function's range as output values.</p>
+<p class="continuation">is called the <dfn class="terminology">range</dfn>  or <dfn class="terminology">image</dfn> of \(f\text{.}\) We can think of the elements in the function's domain as input values and the elements in the function's range as output values.</p>
 <article class="example example-like" id="Ilt"><h6 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">1.6</span><span class="period">.</span>
 </h6>
@@ -545,13 +545,13 @@ f(A) = \{ f(a) : a \in A \} \subset B
 (f \circ g)(x) = f(g(x)) = (2x + 5)^2 = 4x^2 + 20x + 25
 \end{equation*}
 </div>
-<p data-braille="continuation">and</p>
+<p class="continuation">and</p>
 <div class="displaymath">
 \begin{equation*}
 (g \circ f)(x) = g(f(x)) = 2x^2 + 5\text{.}
 \end{equation*}
 </div>
-<p data-braille="continuation">In general, order makes a difference; that is, in most cases \(f \circ g \neq g \circ f\text{.}\)</p></article><article class="example example-like" id="MVm"><h6 class="heading">
+<p class="continuation">In general, order makes a difference; that is, in most cases \(f \circ g \neq g \circ f\text{.}\)</p></article><article class="example example-like" id="MVm"><h6 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">1.12</span><span class="period">.</span>
 </h6>
 <p id="djQ">Sometimes it is the case that \(f \circ g= g \circ f\text{.}\) Let \(f(x) = x^3\) and \(g(x) = \sqrt[3]{x}\text{.}\) Then</p>
@@ -560,7 +560,7 @@ f(A) = \{ f(a) : a \in A \} \subset B
 (f \circ g )(x) = f(g(x)) = f( \sqrt[3]{x}\, ) = (\sqrt[3]{x}\, )^3 = x
 \end{equation*}
 </div>
-<p data-braille="continuation">and</p>
+<p class="continuation">and</p>
 <div class="displaymath">
 \begin{equation*}
 (g \circ f )(x) = g(f(x)) = g( x^3) = \sqrt[3]{ x^3} = x\text{.}
@@ -578,13 +578,13 @@ c &amp; d
 \end{pmatrix}\text{,}
 \end{equation*}
 </div>
-<p data-braille="continuation">we can define a map \(T_A : {\mathbb R}^2 \rightarrow {\mathbb R}^2\) by</p>
+<p class="continuation">we can define a map \(T_A : {\mathbb R}^2 \rightarrow {\mathbb R}^2\) by</p>
 <div class="displaymath">
 \begin{equation*}
 T_A (x,y) = (ax + by, cx +dy)
 \end{equation*}
 </div>
-<p data-braille="continuation">for \((x,y)\) in \({\mathbb R}^2\text{.}\) This is actually matrix multiplication; that is,</p>
+<p class="continuation">for \((x,y)\) in \({\mathbb R}^2\text{.}\) This is actually matrix multiplication; that is,</p>
 <div class="displaymath">
 \begin{equation*}
 \begin{pmatrix}
@@ -601,7 +601,7 @@ cx +dy
 \end{pmatrix}\text{.}
 \end{equation*}
 </div>
-<p data-braille="continuation">Maps from \({\mathbb R}^n\) to \({\mathbb R}^m\) given by matrices are called <dfn class="terminology">linear maps</dfn> or <dfn class="terminology">linear transformations</dfn>. </p></article><article class="example example-like" id="ZjE"><h6 class="heading">
+<p class="continuation">Maps from \({\mathbb R}^n\) to \({\mathbb R}^m\) given by matrices are called <dfn class="terminology">linear maps</dfn> or <dfn class="terminology">linear transformations</dfn>. </p></article><article class="example example-like" id="ZjE"><h6 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">1.14</span><span class="period">.</span>
 </h6>
 <p id="pyi">Suppose that \(S = \{ 1,2,3  \}\text{.}\) Define a map \(\pi :S\rightarrow S\) by</p>
@@ -610,7 +610,7 @@ cx +dy
 \pi( 1 )  = 2, \qquad \pi( 2 )  = 1, \qquad \pi( 3 )  = 3\text{.}
 \end{equation*}
 </div>
-<p data-braille="continuation">This is a bijective map. An alternative way to  write \(\pi\) is</p>
+<p class="continuation">This is a bijective map. An alternative way to  write \(\pi\) is</p>
 <div class="displaymath">
 \begin{equation*}
 \begin{pmatrix}
@@ -624,7 +624,7 @@ cx +dy
 \end{pmatrix}\text{.}
 \end{equation*}
 </div>
-<p data-braille="continuation">For any set \(S\text{,}\) a one-to-one and onto mapping \(\pi : S \rightarrow S\) is called a <dfn class="terminology">permutation</dfn> of \(S\text{.}\)</p></article><article class="theorem theorem-like" id="PPS"><h6 class="heading">
+<p class="continuation">For any set \(S\text{,}\) a one-to-one and onto mapping \(\pi : S \rightarrow S\) is called a <dfn class="terminology">permutation</dfn> of \(S\text{.}\)</p></article><article class="theorem theorem-like" id="PPS"><h6 class="heading">
 <span class="type">Theorem</span><span class="space"> </span><span class="codenumber">1.15</span><span class="period">.</span>
 </h6>
 <p id="buD">Let \(f : A \rightarrow B\text{,}\) \(g : B \rightarrow C\text{,}\) and \(h : C \rightarrow D\text{.}\) Then</p>
@@ -641,7 +641,7 @@ cx +dy
 h \circ (g \circ f) = (h \circ g) \circ f\text{.}
 \end{equation*}
 </div>
-<p data-braille="continuation">For \(a \in A\) we have</p>
+<p class="continuation">For \(a \in A\) we have</p>
 <div class="displaymath">
 \begin{align*}
 (h \circ (g \circ f))(a) &amp; = h((g \circ f)(a))\\
@@ -668,13 +668,13 @@ h \circ (g \circ f) = (h \circ g) \circ f\text{.}
 f(f^{-1}(x)) = f(e^x) = \ln e^x = x
 \end{equation*}
 </div>
-<p data-braille="continuation">and</p>
+<p class="continuation">and</p>
 <div class="displaymath">
 \begin{equation*}
 f^{-1}(f(x)) = f^{-1}(\ln x) = e^{\ln x} = x
 \end{equation*}
 </div>
-<p data-braille="continuation">whenever composition makes sense.</p></article><article class="example example-like" id="RFf"><h6 class="heading">
+<p class="continuation">whenever composition makes sense.</p></article><article class="example example-like" id="RFf"><h6 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">1.18</span><span class="period">.</span>
 </h6>
 <p id="hTJ">Suppose that</p>
@@ -687,13 +687,13 @@ A =
 \end{pmatrix}\text{.}
 \end{equation*}
 </div>
-<p data-braille="continuation">Then \(A\) defines a map from \({\mathbb R}^2\) to \({\mathbb R}^2\) by</p>
+<p class="continuation">Then \(A\) defines a map from \({\mathbb R}^2\) to \({\mathbb R}^2\) by</p>
 <div class="displaymath">
 \begin{equation*}
 T_A (x,y) = (3x +  y, 5x + 2y)\text{.}
 \end{equation*}
 </div>
-<p data-braille="continuation">We can find an inverse map of \(T_A\) by simply inverting the matrix \(A\text{;}\) that is, \(T_A^{-1} = T_{A^{-1}}\text{.}\) In this example,</p>
+<p class="continuation">We can find an inverse map of \(T_A\) by simply inverting the matrix \(A\text{;}\) that is, \(T_A^{-1} = T_{A^{-1}}\text{.}\) In this example,</p>
 <div class="displaymath">
 \begin{equation*}
 A^{-1} =
@@ -703,25 +703,25 @@ A^{-1} =
 \end{pmatrix};
 \end{equation*}
 </div>
-<p data-braille="continuation">hence, the inverse map is given by</p>
+<p class="continuation">hence, the inverse map is given by</p>
 <div class="displaymath">
 \begin{equation*}
 T_A^{-1} (x,y) = (2x -  y, -5x + 3y)\text{.}
 \end{equation*}
 </div>
-<p data-braille="continuation">It is easy to check that</p>
+<p class="continuation">It is easy to check that</p>
 <div class="displaymath">
 \begin{equation*}
 T^{-1}_A \circ T_A (x,y) = T_A \circ T_A^{-1} (x,y) = (x,y)\text{.}
 \end{equation*}
 </div>
-<p data-braille="continuation">Not every map has an inverse. If we consider the map</p>
+<p class="continuation">Not every map has an inverse. If we consider the map</p>
 <div class="displaymath">
 \begin{equation*}
 T_B (x,y) = (3x , 0 )
 \end{equation*}
 </div>
-<p data-braille="continuation">given by the matrix</p>
+<p class="continuation">given by the matrix</p>
 <div class="displaymath">
 \begin{equation*}
 B =
@@ -731,19 +731,19 @@ B =
 \end{pmatrix}\text{,}
 \end{equation*}
 </div>
-<p data-braille="continuation">then an inverse map would have to be of the form</p>
+<p class="continuation">then an inverse map would have to be of the form</p>
 <div class="displaymath">
 \begin{equation*}
 T_B^{-1} (x,y) = (ax + by, cx +dy)
 \end{equation*}
 </div>
-<p data-braille="continuation">and</p>
+<p class="continuation">and</p>
 <div class="displaymath">
 \begin{equation*}
 (x,y) = T_B \circ T_B^{-1} (x,y) = (3ax + 3by, 0)
 \end{equation*}
 </div>
-<p data-braille="continuation">for all \(x\) and \(y\text{.}\) Clearly this is  impossible because \(y\) might not be \(0\text{.}\)</p></article><article class="example example-like" id="xMo"><h6 class="heading">
+<p class="continuation">for all \(x\) and \(y\text{.}\) Clearly this is  impossible because \(y\) might not be \(0\text{.}\)</p></article><article class="example example-like" id="xMo"><h6 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">1.19</span><span class="period">.</span>
 </h6>
 <p id="OaS">Given the permutation</p>
@@ -756,7 +756,7 @@ T_B^{-1} (x,y) = (ax + by, cx +dy)
 \end{pmatrix}
 \end{equation*}
 </div>
-<p data-braille="continuation">on \(S = \{ 1,2,3 \}\text{,}\) it is easy to see that the permutation defined by</p>
+<p class="continuation">on \(S = \{ 1,2,3 \}\text{,}\) it is easy to see that the permutation defined by</p>
 <div class="displaymath">
 \begin{equation*}
 \pi^{-1} =
@@ -766,7 +766,7 @@ T_B^{-1} (x,y) = (ax + by, cx +dy)
 \end{pmatrix}
 \end{equation*}
 </div>
-<p data-braille="continuation">is the inverse of \(\pi\text{.}\) In fact, any bijective mapping possesses an inverse, as we will see in the next theorem.</p></article><article class="theorem theorem-like" id="vXb"><h6 class="heading">
+<p class="continuation">is the inverse of \(\pi\text{.}\) In fact, any bijective mapping possesses an inverse, as we will see in the next theorem.</p></article><article class="theorem theorem-like" id="vXb"><h6 class="heading">
 <span class="type">Theorem</span><span class="space"> </span><span class="codenumber">1.20</span><span class="period">.</span>
 </h6>
 <p id="HBM">A mapping is invertible if and only if it is both one-to-one and onto.</p></article><article class="proof" id="Uem"><h6 class="heading"><span class="type">Proof<span class="period">.</span></span></h6>
@@ -799,7 +799,7 @@ B &amp; = \{x : x \in \mathbb N \text{ and } x \text{ is prime}\},\\
 C &amp; = \{ x : x \in \mathbb N \text{ and } x \text{ is a multiple of } 5\}\text{.}
 \end{align*}
 </div>
-<p data-braille="continuation">Describe each of the following sets.</p>
+<p class="continuation">Describe each of the following sets.</p>
 <ol class="lower-alpha cols2">
 <li id="MOi"><p id="PXj">\(\displaystyle A \cap B\)</p></li>
 <li id="sVr"><p id="wes">\(\displaystyle B \cap C\)</p></li>

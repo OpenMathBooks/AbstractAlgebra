@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2021-02-08T11:03:14-07:00       *-->
+<!--*       on 2021-02-12T14:42:41-07:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -59,7 +59,7 @@ MathJax.Hub.Config({
 <!-- 2019-10-12: Temporary - CSS file for experiments with styling --><link xmlns:svg="http://www.w3.org/2000/svg" href="developer.css" rel="stylesheet" type="text/css">
 </head>
 <body id="judson-AATA" class="mathbook-book has-toc has-sidebar-left">
-<a class="assistive" href="#content">Skip to main content</a><div xmlns:svg="http://www.w3.org/2000/svg" class="hidden-content" style="display:none">\(\newcommand{\identity}{\mathrm{id}}
+<a class="assistive" href="#content">Skip to main content</a><div xmlns:svg="http://www.w3.org/2000/svg" id="latex-macros" class="hidden-content" style="display:none">\(\newcommand{\identity}{\mathrm{id}}
 \newcommand{\notdivide}{\nmid}
 \newcommand{\notsubset}{\not\subset}
 \newcommand{\lcm}{\operatorname{lcm}}
@@ -328,7 +328,7 @@ MathJax.Hub.Config({
 G(E/F) = \{ \sigma \in \aut(E) : \sigma(\alpha) = \alpha \text{ for all } \alpha \in F \}\text{.}
 \end{equation*}
 </div>
-<p data-braille="continuation">We will often want to consider the Galois group relative to a particular polynomial.  If \(f(x)\) is a polynomial in \(F[x]\) and \(E\) is the splitting field of \(f(x)\) over \(F\text{,}\) then we define the Galois group of \(f(x)\) to be \(G(E/F)\text{.}\) </p>
+<p class="continuation">We will often want to consider the Galois group relative to a particular polynomial.  If \(f(x)\) is a polynomial in \(F[x]\) and \(E\) is the splitting field of \(f(x)\) over \(F\text{,}\) then we define the Galois group of \(f(x)\) to be \(G(E/F)\text{.}\) </p>
 <article class="example example-like" id="iAD"><h6 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">9.11</span><span class="period">.</span>
 </h6>
@@ -338,7 +338,7 @@ G(E/F) = \{ \sigma \in \aut(E) : \sigma(\alpha) = \alpha \text{ for all } \alpha
 \sigma(a) = \sigma(a + 0i) = a - 0i = a\text{,}
 \end{equation*}
 </div>
-<p data-braille="continuation">the automorphism defined by complex conjugation must be in \(G( {\mathbb C} / {\mathbb R} )\text{.}\)</p></article><article class="example example-like" id="OHM"><h6 class="heading">
+<p class="continuation">the automorphism defined by complex conjugation must be in \(G( {\mathbb C} / {\mathbb R} )\text{.}\)</p></article><article class="example example-like" id="OHM"><h6 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">9.12</span><span class="period">.</span>
 </h6>
 <p id="WHX">Consider the fields \({\mathbb Q} \subset {\mathbb Q}(\sqrt{5}\, ) \subset {\mathbb Q}( \sqrt{3}, \sqrt{5}\, )\text{.}\) Then for \(a, b \in {\mathbb Q}( \sqrt{5}\, )\text{,}\)</p>
@@ -347,13 +347,13 @@ G(E/F) = \{ \sigma \in \aut(E) : \sigma(\alpha) = \alpha \text{ for all } \alpha
 \sigma( a + b \sqrt{3}\, ) = a - b \sqrt{3}
 \end{equation*}
 </div>
-<p data-braille="continuation">is an automorphism of \({\mathbb Q}(\sqrt{3}, \sqrt{5}\, )\) leaving \({\mathbb Q}( \sqrt{5}\, )\) fixed. Similarly,</p>
+<p class="continuation">is an automorphism of \({\mathbb Q}(\sqrt{3}, \sqrt{5}\, )\) leaving \({\mathbb Q}( \sqrt{5}\, )\) fixed. Similarly,</p>
 <div class="displaymath">
 \begin{equation*}
 \tau( a + b \sqrt{5}\, ) = a - b \sqrt{5}
 \end{equation*}
 </div>
-<p data-braille="continuation">is an automorphism of \({\mathbb Q}(\sqrt{3}, \sqrt{5}\, )\) leaving \({\mathbb Q}( \sqrt{3}\, )\) fixed. The automorphism \(\mu = \sigma \tau\) moves both \(\sqrt{3}\) and \(\sqrt{5}\text{.}\) It will soon be clear that \(\{ \identity, \sigma, \tau, \mu \}\) is the Galois group of \({\mathbb Q}(\sqrt{3}, \sqrt{5}\, )\) over \({\mathbb Q}\text{.}\) The following table shows that this group is isomorphic to \({\mathbb Z}_2 \times {\mathbb Z}_2\text{.}\)</p>
+<p class="continuation">is an automorphism of \({\mathbb Q}(\sqrt{3}, \sqrt{5}\, )\) leaving \({\mathbb Q}( \sqrt{3}\, )\) fixed. The automorphism \(\mu = \sigma \tau\) moves both \(\sqrt{3}\) and \(\sqrt{5}\text{.}\) It will soon be clear that \(\{ \identity, \sigma, \tau, \mu \}\) is the Galois group of \({\mathbb Q}(\sqrt{3}, \sqrt{5}\, )\) over \({\mathbb Q}\text{.}\) The following table shows that this group is isomorphic to \({\mathbb Z}_2 \times {\mathbb Z}_2\text{.}\)</p>
 <div class="displaymath">
 \begin{equation*}
 \begin{array}{c|cccc}
@@ -366,7 +366,7 @@ G(E/F) = \{ \sigma \in \aut(E) : \sigma(\alpha) = \alpha \text{ for all } \alpha
 \end{array}
 \end{equation*}
 </div>
-<p data-braille="continuation">We may also regard the field \({\mathbb Q}( \sqrt{3}, \sqrt{5}\, )\) as a vector space over \({\mathbb Q}\) that has basis \(\{ 1, \sqrt{3}, \sqrt{5}, \sqrt{15}\, \}\text{.}\) It is no coincidence that \(|G( {\mathbb Q}( \sqrt{3}, \sqrt{5}\, ) /{\mathbb Q})| = [{\mathbb Q}(\sqrt{3}, \sqrt{5}\, ):{\mathbb Q})] = 4\text{.}\)</p></article><p id="p-2528">As illustrated in the example above, automorphisms in the Galois group send roots of polynomials somewhere.  But what sorts of elements can be the image of such roots?  The next proposition proves that roots can <em class="emphasis">only</em> be sent to other roots of the same polynomial!</p>
+<p class="continuation">We may also regard the field \({\mathbb Q}( \sqrt{3}, \sqrt{5}\, )\) as a vector space over \({\mathbb Q}\) that has basis \(\{ 1, \sqrt{3}, \sqrt{5}, \sqrt{15}\, \}\text{.}\) It is no coincidence that \(|G( {\mathbb Q}( \sqrt{3}, \sqrt{5}\, ) /{\mathbb Q})| = [{\mathbb Q}(\sqrt{3}, \sqrt{5}\, ):{\mathbb Q})] = 4\text{.}\)</p></article><p id="p-2528">As illustrated in the example above, automorphisms in the Galois group send roots of polynomials somewhere.  But what sorts of elements can be the image of such roots?  The next proposition proves that roots can <em class="emphasis">only</em> be sent to other roots of the same polynomial!</p>
 <article class="proposition theorem-like" id="lvj"><h6 class="heading">
 <span class="type">Proposition</span><span class="space"> </span><span class="codenumber">9.13</span><span class="period">.</span>
 </h6>
@@ -377,7 +377,7 @@ G(E/F) = \{ \sigma \in \aut(E) : \sigma(\alpha) = \alpha \text{ for all } \alpha
 f(x) = a_0 + a_1 x + a_2 x^2 + \cdots + a_n x^n
 \end{equation*}
 </div>
-<p data-braille="continuation">and suppose that \(\alpha \in E\) is a zero of \(f(x)\text{.}\) Then for \(\sigma \in G(E/F)\text{,}\)</p>
+<p class="continuation">and suppose that \(\alpha \in E\) is a zero of \(f(x)\text{.}\) Then for \(\sigma \in G(E/F)\text{,}\)</p>
 <div class="displaymath">
 \begin{align*}
 0 &amp; = \sigma( 0 )\\
@@ -386,7 +386,7 @@ f(x) = a_0 + a_1 x + a_2 x^2 + \cdots + a_n x^n
 &amp; = a_0 + a_1 \sigma(\alpha) + a_2 [\sigma(\alpha)]^2 + \cdots + a_n [\sigma(\alpha)]^n;
 \end{align*}
 </div>
-<p data-braille="continuation">therefore, \(\sigma( \alpha )\) is also a zero of \(f(x)\text{.}\)</p></article><p id="EEt">Let \(E\) be an algebraic extension of a field \(F\text{.}\) We say that two elements \(\alpha, \beta \in E\) are <dfn class="terminology">conjugate</dfn>  over \(F\) if they have the same minimal polynomial. For example, in the field \({\mathbb Q}( \sqrt{2}\, )\) the elements \(\sqrt{2}\) and \(-\sqrt{2}\) are conjugate over \({\mathbb Q}\) since they are both roots of the irreducible polynomial \(x^2 - 2\text{.}\)</p>
+<p class="continuation">therefore, \(\sigma( \alpha )\) is also a zero of \(f(x)\text{.}\)</p></article><p id="EEt">Let \(E\) be an algebraic extension of a field \(F\text{.}\) We say that two elements \(\alpha, \beta \in E\) are <dfn class="terminology">conjugate</dfn>  over \(F\) if they have the same minimal polynomial. For example, in the field \({\mathbb Q}( \sqrt{2}\, )\) the elements \(\sqrt{2}\) and \(-\sqrt{2}\) are conjugate over \({\mathbb Q}\) since they are both roots of the irreducible polynomial \(x^2 - 2\text{.}\)</p>
 <p id="kLC">The previous proposition says that automorphisms in \(G(E/F)\) must send elements to their conjugates.  (But note that an element is always conjugate with itself, and can be sent to itself by an automorphism; after all, the identity automorphism is an element of \(G(E/F)\text{.}\))  A sort of converse of this would say that if two elements of conjugate, then there exists an automorphism that sends one to the other.  This is true, and the proof follows directly from <a class="xref" data-knowl="./knowl/lemma-field-isomorphism.html" title="Lemma 9.4">Lemma 9.4</a>.</p>
 <article class="proposition theorem-like" id="RCs"><h6 class="heading">
 <span class="type">Proposition</span><span class="space"> </span><span class="codenumber">9.14</span><span class="period">.</span>
@@ -407,19 +407,19 @@ f(x) = a_0 + a_1 x + a_2 x^2 + \cdots + a_n x^n
 [E: F(\alpha)] = n/r \quad \text{and} \quad [F(\alpha): F] = r\text{.}
 \end{equation*}
 </div>
-<p data-braille="continuation">If \(\beta\) is any other root of \(p(x)\text{,}\) then \(F \subset F( \beta ) \subset E\text{.}\) By <a class="xref" data-knowl="./knowl/lemma-field-isomorphism.html" title="Lemma 9.4">Lemma 9.4</a>, there exists a unique isomorphism \(\sigma: F( \alpha ) \rightarrow F( \beta )\) for each such \(\beta\) that fixes \(F\) elementwise. Since \(E\) is a splitting field of \(p(x)\text{,}\) there are exactly \(r\) such isomorphisms. For each of these automorphisms, we can use our induction hypothesis on \([E: F(\alpha)] = n/r \lt n\) to conclude that</p>
+<p class="continuation">If \(\beta\) is any other root of \(p(x)\text{,}\) then \(F \subset F( \beta ) \subset E\text{.}\) By <a class="xref" data-knowl="./knowl/lemma-field-isomorphism.html" title="Lemma 9.4">Lemma 9.4</a>, there exists a unique isomorphism \(\sigma: F( \alpha ) \rightarrow F( \beta )\) for each such \(\beta\) that fixes \(F\) elementwise. Since \(E\) is a splitting field of \(p(x)\text{,}\) there are exactly \(r\) such isomorphisms. For each of these automorphisms, we can use our induction hypothesis on \([E: F(\alpha)] = n/r \lt n\) to conclude that</p>
 <div class="displaymath">
 \begin{equation*}
 |G(E/F(\alpha))| = [E:F(\alpha)]\text{.}
 \end{equation*}
 </div>
-<p data-braille="continuation">Consequently, there are</p>
+<p class="continuation">Consequently, there are</p>
 <div class="displaymath">
 \begin{equation*}
 [E:F] = [E:F(\alpha)] [F( \alpha):F] = n
 \end{equation*}
 </div>
-<p data-braille="continuation">possible automorphisms of \(E\) that fix \(F\text{,}\) or \(|G(E/F)| = [E:F]\text{.}\)</p></article><article class="corollary theorem-like" id="qfc"><h6 class="heading">
+<p class="continuation">possible automorphisms of \(E\) that fix \(F\text{,}\) or \(|G(E/F)| = [E:F]\text{.}\)</p></article><article class="corollary theorem-like" id="qfc"><h6 class="heading">
 <span class="type">Corollary</span><span class="space"> </span><span class="codenumber">9.16</span><span class="period">.</span>
 </h6>
 <p id="yfn">Let \(F\) be a finite field with a finite extension \(E\) such that \([E:F]=k\text{.}\) Then \(G(E/F)\) is cyclic of order \(k\text{.}\)</p></article><article class="proof" id="Smm"><h6 class="heading"><span class="type">Proof<span class="period">.</span></span></h6>
@@ -430,13 +430,13 @@ f(x) = a_0 + a_1 x + a_2 x^2 + \cdots + a_n x^n
 \sigma(\alpha + \beta) = (\alpha + \beta)^{p^n} = \alpha^{p^n} + \beta^{p^n} = \sigma(\alpha) + \sigma(\beta)
 \end{equation*}
 </div>
-<p data-braille="continuation">by <a class="xref" data-knowl="./knowl/lemma-freshmans-dream.html" title="Lemma 17.3: Freshman's Dream">Lemma 17.3</a>. Also, it is easy to show that \(\sigma(\alpha \beta) = \sigma( \alpha ) \sigma( \beta )\text{.}\) Since \(\sigma\) is a nonzero homomorphism of fields, it must be injective. It must also be onto, since \(E\) is a finite field. We know that \(\sigma\) must be in \(G(E/F)\text{,}\) since \(F\) is the splitting field of \(x^{p^n} - x\) over the base field of order \(p\text{.}\) This means that \(\sigma\) leaves every element in \(F\) fixed. Finally, we must show that the order of \(\sigma\) is \(k\text{.}\) By <a class="xref" data-knowl="./knowl/theorem-extension-order.html" title="Theorem 9.15">Theorem 9.15</a>, we know that</p>
+<p class="continuation">by <a class="xref" data-knowl="./knowl/lemma-freshmans-dream.html" title="Lemma 17.3: Freshman's Dream">Lemma 17.3</a>. Also, it is easy to show that \(\sigma(\alpha \beta) = \sigma( \alpha ) \sigma( \beta )\text{.}\) Since \(\sigma\) is a nonzero homomorphism of fields, it must be injective. It must also be onto, since \(E\) is a finite field. We know that \(\sigma\) must be in \(G(E/F)\text{,}\) since \(F\) is the splitting field of \(x^{p^n} - x\) over the base field of order \(p\text{.}\) This means that \(\sigma\) leaves every element in \(F\) fixed. Finally, we must show that the order of \(\sigma\) is \(k\text{.}\) By <a class="xref" data-knowl="./knowl/theorem-extension-order.html" title="Theorem 9.15">Theorem 9.15</a>, we know that</p>
 <div class="displaymath">
 \begin{equation*}
 \sigma^k( \alpha ) = \alpha^{p^{nk}} = \alpha^{p^m} = \alpha
 \end{equation*}
 </div>
-<p data-braille="continuation">is the identity of \(G( E/F)\text{.}\) However, \(\sigma^r\) cannot be the identity for \(1 \leq r \lt k\text{;}\) otherwise, \(x^{p^{nr}} - x\) would have \(p^m\) roots, which is impossible.</p></article><article class="example example-like" id="uOV"><h6 class="heading">
+<p class="continuation">is the identity of \(G( E/F)\text{.}\) However, \(\sigma^r\) cannot be the identity for \(1 \leq r \lt k\text{;}\) otherwise, \(x^{p^{nr}} - x\) would have \(p^m\) roots, which is impossible.</p></article><article class="example example-like" id="uOV"><h6 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">9.17</span><span class="period">.</span>
 </h6>
 <p id="CPg">We can now confirm that the Galois group of \({\mathbb Q}( \sqrt{3}, \sqrt{5}\, )\) over \({\mathbb Q}\) in <a class="xref" data-knowl="./knowl/example-galois-q-sqrt5.html" title="Example 9.12">Example 9.12</a> is indeed isomorphic to \({\mathbb Z}_2 \times {\mathbb Z}_2\text{.}\) Certainly the group \(H = \{ \identity, \sigma, \tau, \mu \}\) is a subgroup of \(G({\mathbb Q}( \sqrt{3}, \sqrt{5}\, )/{\mathbb Q})\text{;}\) however, \(H\) must be all of \(G({\mathbb Q}( \sqrt{3}, \sqrt{5}\, )/{\mathbb Q})\text{,}\) since</p>
@@ -453,26 +453,26 @@ f(x) = a_0 + a_1 x + a_2 x^2 + \cdots + a_n x^n
 f(x) = x^4 + x^3 + x^2 + x + 1
 \end{equation*}
 </div>
-<p data-braille="continuation">over \({\mathbb Q}\text{.}\) First let's check that \(f(x)\) is irreducible over \(\Q\text{.}\)  To do this, consider a new polynomial \(g(x) = f(x+1)\) (essentially doing a change of variables).  We have</p>
+<p class="continuation">over \({\mathbb Q}\text{.}\) First let's check that \(f(x)\) is irreducible over \(\Q\text{.}\)  To do this, consider a new polynomial \(g(x) = f(x+1)\) (essentially doing a change of variables).  We have</p>
 <div class="displaymath">
 \begin{equation*}
 g(x) = x^4 + 5x^3 + 10x^2 + 10x + 5.
 \end{equation*}
 </div>
-<p data-braille="continuation">This is irreducible by Eisenstein's criterion.  But if \(f(x)\) factored, then so would \(g(x)\text{,}\) so we see that \(f(x)\) is irreducible.</p>
+<p class="continuation">This is irreducible by Eisenstein's criterion.  But if \(f(x)\) factored, then so would \(g(x)\text{,}\) so we see that \(f(x)\) is irreducible.</p>
 <p id="KxT">Furthermore, since \((x -1)f(x) = x^5 - 1\text{,}\) we can use DeMoivre's Theorem to determine that the roots of \(f(x)\) are \(\omega^i\text{,}\) where  \(i = 1, \ldots, 4\) and</p>
 <div class="displaymath">
 \begin{equation*}
 \omega = \cos(2 \pi / 5 ) + i \sin(2 \pi / 5 )\text{.}
 \end{equation*}
 </div>
-<p data-braille="continuation">Hence, the splitting field of \(f(x)\) must be \({\mathbb Q}(\omega)\text{.}\) We can define automorphisms \(\sigma_i\) of \({\mathbb Q}(\omega )\) by \(\sigma_i( \omega ) = \omega^i\) for \(i = 1, \ldots, 4\text{.}\) It is easy to check that these are indeed distinct automorphisms in \(G( {\mathbb Q}( \omega) / {\mathbb Q} )\text{.}\) Since</p>
+<p class="continuation">Hence, the splitting field of \(f(x)\) must be \({\mathbb Q}(\omega)\text{.}\) We can define automorphisms \(\sigma_i\) of \({\mathbb Q}(\omega )\) by \(\sigma_i( \omega ) = \omega^i\) for \(i = 1, \ldots, 4\text{.}\) It is easy to check that these are indeed distinct automorphisms in \(G( {\mathbb Q}( \omega) / {\mathbb Q} )\text{.}\) Since</p>
 <div class="displaymath">
 \begin{equation*}
 [{\mathbb Q}( \omega) : {\mathbb Q}] = | G( {\mathbb Q}( \omega) / {\mathbb Q})| = 4\text{,}
 \end{equation*}
 </div>
-<p data-braille="continuation">the \(\sigma_i\)'s must be all of \(G( {\mathbb Q}( \omega) / {\mathbb Q} )\text{.}\) Therefore, \(G({\mathbb Q}( \omega) / {\mathbb Q})\cong {\mathbb Z}_4\) since \(\omega\) is a generator for the Galois group.</p></article><section class="exercises" id="dlE"><h3 class="heading hide-type">
+<p class="continuation">the \(\sigma_i\)'s must be all of \(G( {\mathbb Q}( \omega) / {\mathbb Q} )\text{.}\) Therefore, \(G({\mathbb Q}( \omega) / {\mathbb Q})\cong {\mathbb Z}_4\) since \(\omega\) is a generator for the Galois group.</p></article><section class="exercises" id="dlE"><h3 class="heading hide-type">
 <span class="type">Exercises</span> <span class="codenumber"></span> <span class="title">Collected Homework</span>
 </h3>
 <article class="exercise exercise-like" id="bwr"><h6 class="heading"><span class="codenumber">1<span class="period">.</span></span></h6>

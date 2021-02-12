@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2021-02-08T11:10:29-07:00       *-->
+<!--*       on 2021-02-12T14:47:56-07:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -15,7 +15,13 @@
 </head>
 <body>
 <h6 xmlns:svg="http://www.w3.org/2000/svg" class="heading"><span class="type">Paragraph</span></h6>
-<p xmlns:svg="http://www.w3.org/2000/svg">A <dfn class="terminology">Boolean algebra</dfn> is a lattice \(B\) with a greatest element \(I\) and a smallest element \(O\) such that \(B\) is both distributive and complemented. The power set of \(X\text{,}\) \({\mathcal P}(X)\text{,}\) is our prototype for a Boolean algebra. As it turns out, it is also one of the most important Boolean algebras. The following theorem allows us to characterize Boolean algebras in terms of the binary relations \(\vee\) and \(\wedge\) without mention of the fact that a Boolean algebra is a poset.</p>
-<span class="incontext"><a href="section-boolean-algebras.html#CyL">in-context</a></span>
+<p>To show that \(L\) is a lattice, we must prove that \(a \vee b\) and \(a \wedge b\) are, respectively, the least upper and greatest lower bounds of \(a\) and \(b\text{.}\) Since \(a=(a \vee b) \wedge a = a \wedge (a \vee b)\text{,}\) it follows that \(a \preceq a \vee b\text{.}\) Similarly, \(b \preceq a \vee b\text{.}\) Therefore, \(a \vee b\) is an upper bound for \(a\) and \(b\text{.}\) Let \(u\) be any other upper bound of both \(a\) and \(b\text{.}\) Then \(a \preceq u\) and \(b \preceq u\text{.}\) But \(a \vee b \preceq u\) since</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{equation*}
+(a \vee b) \vee u = a \vee (b \vee u) = a \vee u = u\text{.}
+\end{equation*}
+</div>
+<p class="continuation">The proof that \(a \wedge b\) is the greatest lower bound of \(a\) and \(b\) is left as an exercise.</p>
+<span class="incontext"><a href="section-boolean-lattices.html#ggN">in-context</a></span>
 </body>
 </html>

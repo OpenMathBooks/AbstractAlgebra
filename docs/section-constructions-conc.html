@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2021-02-08T11:03:08-07:00       *-->
+<!--*       on 2021-02-12T14:42:37-07:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -59,7 +59,7 @@ MathJax.Hub.Config({
 <!-- 2019-10-12: Temporary - CSS file for experiments with styling --><link xmlns:svg="http://www.w3.org/2000/svg" href="developer.css" rel="stylesheet" type="text/css">
 </head>
 <body id="judson-AATA" class="mathbook-book has-toc has-sidebar-left">
-<a class="assistive" href="#content">Skip to main content</a><div xmlns:svg="http://www.w3.org/2000/svg" class="hidden-content" style="display:none">\(\newcommand{\identity}{\mathrm{id}}
+<a class="assistive" href="#content">Skip to main content</a><div xmlns:svg="http://www.w3.org/2000/svg" id="latex-macros" class="hidden-content" style="display:none">\(\newcommand{\identity}{\mathrm{id}}
 \newcommand{\notdivide}{\nmid}
 \newcommand{\notsubset}{\not\subset}
 \newcommand{\lcm}{\operatorname{lcm}}
@@ -318,7 +318,7 @@ MathJax.Hub.Config({
 {\mathbb Q} = F_0 \subset F_1 \subset \cdots \subset F_k
 \end{equation*}
 </div>
-<p data-braille="continuation">such that \(F_i = F_{i-1}( \sqrt{ \alpha_i}\, )\) with \(\alpha_i \in F_i\text{.}\)  In other words, the <em class="emphasis">only</em> way to get a constructible number is to find it inside a field extension you get by repeatedly adjoining square roots of elements in the previous field.</p>
+<p class="continuation">such that \(F_i = F_{i-1}( \sqrt{ \alpha_i}\, )\) with \(\alpha_i \in F_i\text{.}\)  In other words, the <em class="emphasis">only</em> way to get a constructible number is to find it inside a field extension you get by repeatedly adjoining square roots of elements in the previous field.</p>
 <p id="HYM">In particular, now that we know something about the degree of a field extension, we know that \([F_i:F_{i-1}] = 2\) in each of the iterated extensions, and by the <em class="emphasis">tower rule</em> ( <a class="xref" data-knowl="./knowl/theorem-tower-indices.html" title="Theorem 8.37">Theorem 8.37</a>) we know that if \(\alpha\) is constructible, then there exists an integer \(k \gt 0\) such that \([{\mathbb Q}(\alpha) : {\mathbb Q} ] = 2^k\text{.}\)</p>
 <p id="ofV">So how does this help prove that you cannot construct particular geometric figures?  We will argue that if it were possible to construct such a figure, then a particular number would be constructible.  To show that is impossible, we will argue about the degree of the field extension that contains that number.</p></section><section class="subsection" id="OpR"><h3 class="heading hide-type">
 <span class="type">Subsection</span> <span class="codenumber">8.7.1</span> <span class="title">Doubling the Cube and Squaring the Circle</span>
@@ -331,7 +331,7 @@ MathJax.Hub.Config({
 [{\mathbb Q}(\sqrt[3]{2}\, ) : {\mathbb Q}] = 3
 \end{equation*}
 </div>
-<p data-braille="continuation">This is impossible, since \(3\) is not a power of \(2\text{.}\)</p></article><article class="paragraphs" id="DQM"><h5 class="heading"><span class="title">Squaring the circle.</span></h5>
+<p class="continuation">This is impossible, since \(3\) is not a power of \(2\text{.}\)</p></article><article class="paragraphs" id="DQM"><h5 class="heading"><span class="title">Squaring the circle.</span></h5>
 <p id="QtM">Suppose that we have a circle of radius \(1\text{.}\) The area of the circle is \(\pi\text{;}\) therefore, we must be able to construct a square with side \(\sqrt{\pi}\text{.}\) This is impossible since \(\pi\) and consequently \(\sqrt{\pi}\) are both transcendental. Therefore, using a straightedge and compass, it is not possible to construct a square with the same area as the circle.</p></article></section><section class="subsection" id="uxa"><h3 class="heading hide-type">
 <span class="type">Subsection</span> <span class="codenumber">8.7.2</span> <span class="title">Trisecting an Angle</span>
 </h3>
@@ -346,13 +346,13 @@ MathJax.Hub.Config({
 &amp; = 4 \cos^3 \theta - 3 \cos \theta\text{.}
 \end{align*}
 </div>
-<p data-braille="continuation">The angle \(\theta\) can be constructed if and only if \(\alpha = \cos \theta\) is constructible. Let \(\theta = 20^{\circ}\text{.}\) Then \(\cos 3 \theta = \cos 60^\circ = 1/2\text{.}\) By the triple-angle formula for the cosine,</p>
+<p class="continuation">The angle \(\theta\) can be constructed if and only if \(\alpha = \cos \theta\) is constructible. Let \(\theta = 20^{\circ}\text{.}\) Then \(\cos 3 \theta = \cos 60^\circ = 1/2\text{.}\) By the triple-angle formula for the cosine,</p>
 <div class="displaymath">
 \begin{equation*}
 4 \alpha^3 - 3 \alpha = \frac{1}{2}\text{.}
 \end{equation*}
 </div>
-<p data-braille="continuation">Therefore, \(\alpha\) is a zero of \(8 x^3 - 6 x -1\text{.}\) This polynomial has no factors in \({\mathbb Z}[x]\text{,}\) and hence is irreducible over \({\mathbb Q}[x]\text{.}\) Thus, \([{\mathbb Q}( \alpha ) : {\mathbb Q }] = 3\text{.}\) Consequently, \(\alpha\) cannot be a constructible number.</p></article></section><section class="subsection" id="aEj"><h3 class="heading hide-type">
+<p class="continuation">Therefore, \(\alpha\) is a zero of \(8 x^3 - 6 x -1\text{.}\) This polynomial has no factors in \({\mathbb Z}[x]\text{,}\) and hence is irreducible over \({\mathbb Q}[x]\text{.}\) Thus, \([{\mathbb Q}( \alpha ) : {\mathbb Q }] = 3\text{.}\) Consequently, \(\alpha\) cannot be a constructible number.</p></article></section><section class="subsection" id="aEj"><h3 class="heading hide-type">
 <span class="type">Subsection</span> <span class="codenumber">8.7.3</span> <span class="title">Historical Note</span>
 </h3>
 <p id="IPn">Algebraic number theory uses the tools of algebra to solve problems in number theory. Modern algebraic number theory began with Pierre de Fermat  (1601–1665). Certainly we can find many positive integers that satisfy the equation \(x^2 + y^2 = z^2\text{;}\) Fermat conjectured that the equation \(x^n + y^n = z^n\) has no positive integer solutions for \(n \geq 3\text{.}\) He stated in the margin of his copy of the Latin translation of Diophantus' <span class="booktitle">Arithmetica</span> that he had found a marvelous proof of this theorem, but that the margin of the book was too narrow to contain it. Building on work of other mathematicians, it was Andrew Wiles who finally succeeded in proving Fermat's Last Theorem in the 1990s. Wiles's achievement was reported on the front page of the <span class="booktitle">New York Times</span>.</p>

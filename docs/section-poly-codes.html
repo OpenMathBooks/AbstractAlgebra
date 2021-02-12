@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2021-02-08T11:04:50-07:00       *-->
+<!--*       on 2021-02-12T14:43:35-07:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -59,7 +59,7 @@ MathJax.Hub.Config({
 <!-- 2019-10-12: Temporary - CSS file for experiments with styling --><link xmlns:svg="http://www.w3.org/2000/svg" href="developer.css" rel="stylesheet" type="text/css">
 </head>
 <body id="judson-AATA" class="mathbook-book has-toc has-sidebar-left">
-<a class="assistive" href="#content">Skip to main content</a><div xmlns:svg="http://www.w3.org/2000/svg" class="hidden-content" style="display:none">\(\newcommand{\identity}{\mathrm{id}}
+<a class="assistive" href="#content">Skip to main content</a><div xmlns:svg="http://www.w3.org/2000/svg" id="latex-macros" class="hidden-content" style="display:none">\(\newcommand{\identity}{\mathrm{id}}
 \newcommand{\notdivide}{\nmid}
 \newcommand{\notsubset}{\not\subset}
 \newcommand{\lcm}{\operatorname{lcm}}
@@ -343,7 +343,7 @@ G_2 =
 \end{pmatrix}\text{.}
 \end{equation*}
 </div>
-<p data-braille="continuation">Messages in the first code are encoded as follows:</p>
+<p class="continuation">Messages in the first code are encoded as follows:</p>
 <div class="displaymath">
 \begin{equation*}
 \begin{array}{rclccrcl}
@@ -354,7 +354,7 @@ G_2 =
 \end{array}
 \end{equation*}
 </div>
-<p data-braille="continuation">It is easy to see that the codewords form a cyclic code. In the second code, 3-tuples are encoded in the following manner:</p>
+<p class="continuation">It is easy to see that the codewords form a cyclic code. In the second code, 3-tuples are encoded in the following manner:</p>
 <div class="displaymath">
 \begin{equation*}
 \begin{array}{rclccrcl}
@@ -365,7 +365,7 @@ G_2 =
 \end{array}
 \end{equation*}
 </div>
-<p data-braille="continuation">This code cannot be cyclic, since \((101101)\) is a codeword but \((011011)\) is not a codeword.</p></article></section><section class="subsection" id="mul"><h3 class="heading hide-type">
+<p class="continuation">This code cannot be cyclic, since \((101101)\) is a codeword but \((011011)\) is not a codeword.</p></article></section><section class="subsection" id="mul"><h3 class="heading hide-type">
 <span class="type">Subsection</span> <span class="codenumber">17.2.1</span> <span class="title">Polynomial Codes</span>
 </h3>
 <p id="fVs">We would like to find an easy method of obtaining cyclic linear codes. To accomplish this, we can use our knowledge of finite fields and  polynomial rings over \({\mathbb Z}_2\text{.}\) Any binary \(n\)-tuple can be interpreted as a polynomial in \({\mathbb Z}_2[x]\text{.}\) Stated another way, the \(n\)-tuple \((a_0, a_1, \ldots,
@@ -375,13 +375,13 @@ a_{n - 1} )\) corresponds to the polynomial</p>
 f(x) = a_0 + a_1 x + \cdots + a_{n-1} x^{n - 1}\text{,}
 \end{equation*}
 </div>
-<p data-braille="continuation">where the degree of \(f(x)\) is at most \(n - 1\text{.}\) For example, the polynomial corresponding to the \(5\)-tuple \((10011)\) is</p>
+<p class="continuation">where the degree of \(f(x)\) is at most \(n - 1\text{.}\) For example, the polynomial corresponding to the \(5\)-tuple \((10011)\) is</p>
 <div class="displaymath">
 \begin{equation*}
 1 + 0 x + 0 x^2 + 1 x^3 + 1 x^4 = 1 + x^3 + x^4\text{.}
 \end{equation*}
 </div>
-<p data-braille="continuation">Conversely, with any polynomial \(f(x) \in {\mathbb Z}_2[x]\) with \(\deg f(x) \lt n\) we can associate a binary \(n\)-tuple. The polynomial \(x + x^2 + x^4\) corresponds to the \(5\)-tuple \((01101)\text{.}\)</p>
+<p class="continuation">Conversely, with any polynomial \(f(x) \in {\mathbb Z}_2[x]\) with \(\deg f(x) \lt n\) we can associate a binary \(n\)-tuple. The polynomial \(x + x^2 + x^4\) corresponds to the \(5\)-tuple \((01101)\text{.}\)</p>
 <p id="McB">Let us fix a nonconstant polynomial \(g(x)\) in \({\mathbb Z}_2[x]\) of degree \(n - k\text{.}\) We can define an \((n,k)\)-code \(C\) in the following manner. If \((a_0, \ldots, a_{k - 1})\) is a \(k\)-tuple to be encoded, then \(f(x) = a_0 + a_1 x + \cdots + a_{k - 1} x^{k - 1}\) is the corresponding polynomial in \({\mathbb Z}_2[x]\text{.}\) To encode \(f(x)\text{,}\) we multiply by \(g(x)\text{.}\) The codewords in \(C\) are all those polynomials in \({\mathbb Z}_2[x]\) of degree less than \(n\) that are divisible by \(g(x)\text{.}\) Codes obtained in this manner are called <dfn class="terminology">polynomial codes</dfn>. </p>
 <article class="example example-like" id="AxQ"><h6 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">17.15</span><span class="period">.</span>
@@ -393,7 +393,7 @@ f(x) = a_0 + a_1 x + \cdots + a_{n-1} x^{n - 1}\text{,}
 &amp; = a_0 + a_1 x + a_2 x^2 + a_0 x^3 + a_1 x^4 + a_2 x^5\text{.}
 \end{align*}
 </div>
-<p data-braille="continuation">Since the polynomials over a field form an integral domain, \(a_0 + a_1 x + a_2 x^2\) must be the zero polynomial. Therefore, \(\ker \phi = \{ (000) \}\) and \(\phi\) is one-to-one.</p>
+<p class="continuation">Since the polynomials over a field form an integral domain, \(a_0 + a_1 x + a_2 x^2\) must be the zero polynomial. Therefore, \(\ker \phi = \{ (000) \}\) and \(\phi\) is one-to-one.</p>
 <p id="YMs">To calculate a generator matrix for \(C\text{,}\) we merely need to examine the way the polynomials \(1\text{,}\) \(x\text{,}\) and \(x^2\) are encoded:</p>
 <div class="displaymath">
 \begin{align*}
@@ -402,7 +402,7 @@ f(x) = a_0 + a_1 x + \cdots + a_{n-1} x^{n - 1}\text{,}
 (1 + x^3)x^2 &amp; = x^2 + x^5\text{.}
 \end{align*}
 </div>
-<p data-braille="continuation">We obtain the code corresponding to the generator matrix \(G_1\) in <a class="xref" data-knowl="./knowl/example-finite-6-3-linear-code.html" title="Example 17.14">Example 17.14</a>. The parity-check matrix for this code is</p>
+<p class="continuation">We obtain the code corresponding to the generator matrix \(G_1\) in <a class="xref" data-knowl="./knowl/example-finite-6-3-linear-code.html" title="Example 17.14">Example 17.14</a>. The parity-check matrix for this code is</p>
 <div class="displaymath">
 \begin{equation*}
 H
@@ -414,26 +414,26 @@ H
 \end{pmatrix}\text{.}
 \end{equation*}
 </div>
-<p data-braille="continuation">Since the smallest weight of any nonzero codeword is \(2\text{,}\) this code has the ability to detect all single errors.</p></article><p id="sjK">Rings of polynomials have a great deal of structure; therefore, our immediate goal is to establish a link between polynomial codes and ring theory. Recall that \(x^n - 1 = (x - 1)( x^{n - 1} + \cdots + x + 1)\text{.}\) The factor ring</p>
+<p class="continuation">Since the smallest weight of any nonzero codeword is \(2\text{,}\) this code has the ability to detect all single errors.</p></article><p id="sjK">Rings of polynomials have a great deal of structure; therefore, our immediate goal is to establish a link between polynomial codes and ring theory. Recall that \(x^n - 1 = (x - 1)( x^{n - 1} + \cdots + x + 1)\text{.}\) The factor ring</p>
 <div class="displaymath">
 \begin{equation*}
 R_n = {\mathbb Z}_2[x]/ \langle x^n - 1 \rangle
 \end{equation*}
 </div>
-<p data-braille="continuation">can be considered to be the ring of polynomials of the form</p>
+<p class="continuation">can be considered to be the ring of polynomials of the form</p>
 <div class="displaymath">
 \begin{equation*}
 f(t) = a_0 + a_1 t + \cdots + a_{n - 1} t^{n - 1}
 \end{equation*}
 </div>
-<p data-braille="continuation">that satisfy the condition \(t^n = 1\text{.}\) It is an easy exercise to show that \({\mathbb Z}_2^n\) and \(R_n\) are isomorphic as vector spaces. We will often identify elements in \({\mathbb Z}_2^n\) with elements in \({\mathbb Z}[x] / \langle x^n - 1 \rangle\text{.}\) In this manner we can interpret a linear code as a subset of \({\mathbb Z}[x] / \langle x^n - 1 \rangle\text{.}\)</p>
+<p class="continuation">that satisfy the condition \(t^n = 1\text{.}\) It is an easy exercise to show that \({\mathbb Z}_2^n\) and \(R_n\) are isomorphic as vector spaces. We will often identify elements in \({\mathbb Z}_2^n\) with elements in \({\mathbb Z}[x] / \langle x^n - 1 \rangle\text{.}\) In this manner we can interpret a linear code as a subset of \({\mathbb Z}[x] / \langle x^n - 1 \rangle\text{.}\)</p>
 <p id="YqT">The additional ring structure on polynomial codes is very powerful in describing cyclic codes. A cyclic shift of an \(n\)-tuple can be described by polynomial multiplication. If \(f(t) = a_0 + a_1 t + \cdots + a_{n - 1} t^{n - 1}\) is a code polynomial in \(R_n\text{,}\) then</p>
 <div class="displaymath">
 \begin{equation*}
 tf(t) = a_{n - 1} + a_0 t + \cdots + a_{n - 2} t^{n - 1}
 \end{equation*}
 </div>
-<p data-braille="continuation">is the cyclically shifted word obtained from multiplying \(f(t)\) by \(t\text{.}\) The following theorem gives a beautiful classification of cyclic codes in terms of the ideals of \(R_n\text{.}\)</p>
+<p class="continuation">is the cyclically shifted word obtained from multiplying \(f(t)\) by \(t\text{.}\) The following theorem gives a beautiful classification of cyclic codes in terms of the ideals of \(R_n\text{.}\)</p>
 <article class="theorem theorem-like" id="bVg"><h6 class="heading">
 <span class="type">Theorem</span><span class="space"> </span><span class="codenumber">17.16</span><span class="period">.</span>
 </h6>
@@ -446,7 +446,7 @@ t^2f(t), \ldots, t^{n-1}f(t)\) is also a codeword; therefore, for every polynomi
 C = \langle g(t) \rangle = \{ f(t)g(t) : f(t) \in R_n \text{ and } g(x) \mid (x^n - 1) \text{ in } {\mathbb Z}_2[x] \}\text{.}
 \end{equation*}
 </div>
-<p data-braille="continuation">The unique monic polynomial of the smallest degree that generates \(C\) is called the <dfn class="terminology">minimal generator polynomial</dfn> of \(C\text{.}\)</p>
+<p class="continuation">The unique monic polynomial of the smallest degree that generates \(C\) is called the <dfn class="terminology">minimal generator polynomial</dfn> of \(C\text{.}\)</p>
 <article class="example example-like" id="gEZ"><h6 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">17.17</span><span class="period">.</span>
 </h6>
@@ -456,7 +456,7 @@ C = \langle g(t) \rangle = \{ f(t)g(t) : f(t) \in R_n \text{ and } g(x) \mid (x^
 x^7 - 1 = (1 + x)(1 + x + x^3)(1+ x^2 + x^3)\text{.}
 \end{equation*}
 </div>
-<p data-braille="continuation">We see that \(g(t) = (1 + t + t^3)\) generates an ideal \(C\) in \(R_7\text{.}\) This code is a \((7, 4)\)-block code. As in <a class="xref" data-knowl="./knowl/example-finite-generator-63-code.html" title="Example 17.15">Example 17.15</a>, it is easy to calculate a generator matrix by examining what \(g(t)\) does to the polynomials 1, \(t\text{,}\) \(t^2\text{,}\) and \(t^3\text{.}\) A generator matrix for \(C\) is</p>
+<p class="continuation">We see that \(g(t) = (1 + t + t^3)\) generates an ideal \(C\) in \(R_7\text{.}\) This code is a \((7, 4)\)-block code. As in <a class="xref" data-knowl="./knowl/example-finite-generator-63-code.html" title="Example 17.15">Example 17.15</a>, it is easy to calculate a generator matrix by examining what \(g(t)\) does to the polynomials 1, \(t\text{,}\) \(t^2\text{,}\) and \(t^3\text{.}\) A generator matrix for \(C\) is</p>
 <div class="displaymath">
 \begin{equation*}
 G =
@@ -485,7 +485,7 @@ g_{n-k}   &amp; g_{n-k-1} &amp; \cdots &amp; g_0 \\
 \end{pmatrix}
 \end{equation*}
 </div>
-<p data-braille="continuation">is a generator matrix for the code \(C\) with generator polynomial \(g(t)\text{.}\) The parity-check matrix for \(C\) is the \((n - k) \times n\) matrix</p>
+<p class="continuation">is a generator matrix for the code \(C\) with generator polynomial \(g(t)\text{.}\) The parity-check matrix for \(C\) is the \((n - k) \times n\) matrix</p>
 <div class="displaymath">
 \begin{equation*}
 H =
@@ -497,7 +497,7 @@ h_k &amp; \cdots &amp; h_0 &amp; 0      &amp; 0      &amp; \cdots &amp; 0
 \end{pmatrix}\text{.}
 \end{equation*}
 </div>
-<p data-braille="continuation">We will leave the details of the proof of the following proposition as an exercise.</p>
+<p class="continuation">We will leave the details of the proof of the following proposition as an exercise.</p>
 <article class="proposition theorem-like" id="ojy"><h6 class="heading">
 <span class="type">Proposition</span><span class="space"> </span><span class="codenumber">17.18</span><span class="period">.</span>
 </h6>
@@ -510,7 +510,7 @@ h_k &amp; \cdots &amp; h_0 &amp; 0      &amp; 0      &amp; \cdots &amp; 0
 x^7 - 1 = g(x) h(x) = (1 + x + x^3)(1 + x + x^2 + x^4)\text{.}
 \end{equation*}
 </div>
-<p data-braille="continuation">Therefore, a parity-check matrix for this code is</p>
+<p class="continuation">Therefore, a parity-check matrix for this code is</p>
 <div class="displaymath">
 \begin{equation*}
 H =
@@ -532,7 +532,7 @@ H =
 \end{pmatrix}
 \end{equation*}
 </div>
-<p data-braille="continuation">is called the <dfn class="terminology">Vandermonde matrix</dfn>.  The determinant of this matrix is called the <dfn class="terminology">Vandermonde determinant</dfn>.  We will need the following lemma in our investigation of cyclic codes.</p>
+<p class="continuation">is called the <dfn class="terminology">Vandermonde matrix</dfn>.  The determinant of this matrix is called the <dfn class="terminology">Vandermonde determinant</dfn>.  We will need the following lemma in our investigation of cyclic codes.</p>
 <article class="lemma theorem-like" id="UqH"><h6 class="heading">
 <span class="type">Lemma</span><span class="space"> </span><span class="codenumber">17.20</span><span class="period">.</span>
 </h6>
@@ -550,7 +550,7 @@ H =
 = \prod_{1 \leq j \lt i \leq n} (\alpha_i - \alpha_j)\text{.}
 \end{equation*}
 </div>
-<p data-braille="continuation">In particular, if the \(\alpha_i\)'s are distinct, then the determinant is nonzero.</p></article><article class="proof" id="unf"><h6 class="heading"><span class="type">Proof<span class="period">.</span></span></h6>
+<p class="continuation">In particular, if the \(\alpha_i\)'s are distinct, then the determinant is nonzero.</p></article><article class="proof" id="unf"><h6 class="heading"><span class="type">Proof<span class="period">.</span></span></h6>
 <p id="hwk">We will induct on \(n\text{.}\) If \(n = 2\text{,}\) then the determinant is \(\alpha_2 - \alpha_1\text{.}\) Let us assume the result for \(n - 1\) and consider the polynomial \(p(x)\) defined by</p>
 <div class="displaymath">
 \begin{equation*}
@@ -564,13 +564,13 @@ p(x) = \det
 \end{pmatrix}\text{.}
 \end{equation*}
 </div>
-<p data-braille="continuation">Expanding this determinant by cofactors on the last column, we see that \(p(x)\) is a polynomial of at most degree \(n-1\text{.}\) Moreover, the roots of \(p(x)\) are \(\alpha_1, \ldots, \alpha_{n-1}\text{,}\) since the substitution of any one of these elements in the last column will produce a column identical to the last column in the matrix. Remember that the determinant of a matrix is zero if it has two identical columns. Therefore,</p>
+<p class="continuation">Expanding this determinant by cofactors on the last column, we see that \(p(x)\) is a polynomial of at most degree \(n-1\text{.}\) Moreover, the roots of \(p(x)\) are \(\alpha_1, \ldots, \alpha_{n-1}\text{,}\) since the substitution of any one of these elements in the last column will produce a column identical to the last column in the matrix. Remember that the determinant of a matrix is zero if it has two identical columns. Therefore,</p>
 <div class="displaymath">
 \begin{equation*}
 p(x) = (x - \alpha_1)(x - \alpha_2) \cdots (x - \alpha_{n-1}) \beta\text{,}
 \end{equation*}
 </div>
-<p data-braille="continuation">where</p>
+<p class="continuation">where</p>
 <div class="displaymath">
 \begin{equation*}
 \beta = (-1)^{n + n} \det
@@ -583,13 +583,13 @@ p(x) = (x - \alpha_1)(x - \alpha_2) \cdots (x - \alpha_{n-1}) \beta\text{,}
 \end{pmatrix}\text{.}
 \end{equation*}
 </div>
-<p data-braille="continuation">By our induction hypothesis,</p>
+<p class="continuation">By our induction hypothesis,</p>
 <div class="displaymath">
 \begin{equation*}
 \beta = (-1)^{n+n} \prod_{1 \leq j \lt i \leq n - 1} (\alpha_i - \alpha_j)\text{.}
 \end{equation*}
 </div>
-<p data-braille="continuation">If we let \(x = \alpha_n\text{,}\) the result now follows immediately.</p></article><p id="wTD">The following theorem gives us an estimate on the error detection and correction capabilities for a particular generator polynomial.</p>
+<p class="continuation">If we let \(x = \alpha_n\text{,}\) the result now follows immediately.</p></article><p id="wTD">The following theorem gives us an estimate on the error detection and correction capabilities for a particular generator polynomial.</p>
 <article class="theorem theorem-like" id="Icp"><h6 class="heading">
 <span class="type">Theorem</span><span class="space"> </span><span class="codenumber">17.21</span><span class="period">.</span>
 </h6>
@@ -600,25 +600,25 @@ p(x) = (x - \alpha_1)(x - \alpha_2) \cdots (x - \alpha_{n-1}) \beta\text{,}
 g( \omega^r) = g(\omega^{r + 1}) = \cdots = g( \omega^{r + s - 1}) = 0\text{.}
 \end{equation*}
 </div>
-<p data-braille="continuation">Let \(f(x)\) be some polynomial in \(C\) with \(s\) or fewer nonzero coefficients. We can assume that</p>
+<p class="continuation">Let \(f(x)\) be some polynomial in \(C\) with \(s\) or fewer nonzero coefficients. We can assume that</p>
 <div class="displaymath">
 \begin{equation*}
 f(x) = a_{i_0} x^{i_0} + a_{i_1} x^{i_1} + \cdots + a_{i_{s - 1}} x^{i_{s - 1}}
 \end{equation*}
 </div>
-<p data-braille="continuation">be some polynomial in \(C\text{.}\) It will suffice to show that all of the \(a_i\)'s must be 0. Since</p>
+<p class="continuation">be some polynomial in \(C\text{.}\) It will suffice to show that all of the \(a_i\)'s must be 0. Since</p>
 <div class="displaymath">
 \begin{equation*}
 g( \omega^r) = g(\omega^{r + 1}) = \cdots = g( \omega^{r + s - 1}) = 0
 \end{equation*}
 </div>
-<p data-braille="continuation">and \(g(x)\) divides \(f(x)\text{,}\)</p>
+<p class="continuation">and \(g(x)\) divides \(f(x)\text{,}\)</p>
 <div class="displaymath">
 \begin{equation*}
 f( \omega^r) = f(\omega^{r + 1}) = \cdots = f( \omega^{r + s - 1}) = 0\text{.}
 \end{equation*}
 </div>
-<p data-braille="continuation">Equivalently, we have the following system of equations:</p>
+<p class="continuation">Equivalently, we have the following system of equations:</p>
 <div class="displaymath">
 \begin{align*}
 a_{i_0} (\omega^r)^{i_0} + a_{i_1} (\omega^r)^{i_1} + \cdots + a_{i_{s - 1}} (\omega^r)^{i_{s - 1}} &amp; = 0\\
@@ -627,7 +627,7 @@ a_{i_0} (\omega^{r + 1})^{i_0} + a_{i_1} (\omega^{r + 1})^{i_2} + \cdots + a_{i_
 a_{i_0} (\omega^{r + s - 1})^{i_0} + a_{i_1} (\omega^{r + s - 1})^{i_1} + \cdots + a_{i_{s - 1}} (\omega^{r + s - 1})^{i_{s - 1}} &amp; = 0\text{.}
 \end{align*}
 </div>
-<p data-braille="continuation">Therefore, \((a_{i_0}, a_{i_1}, \ldots,
+<p class="continuation">Therefore, \((a_{i_0}, a_{i_1}, \ldots,
 a_{i_{s - 1}})\) is a solution to the homogeneous system of linear equations</p>
 <div class="displaymath">
 \begin{align*}
@@ -637,7 +637,7 @@ a_{i_{s - 1}})\) is a solution to the homogeneous system of linear equations</p>
 (\omega^{i_0})^{r + s - 1} x_0 + (\omega^{i_1})^{r + s - 1} x_1 + \cdots + (\omega^{i_{s - 1}})^{r + s - 1} x_{n - 1} &amp; = 0\text{.}
 \end{align*}
 </div>
-<p data-braille="continuation">However, this system has a unique solution, since the determinant of the matrix</p>
+<p class="continuation">However, this system has a unique solution, since the determinant of the matrix</p>
 <div class="displaymath">
 \begin{equation*}
 \begin{pmatrix}
@@ -650,7 +650,7 @@ a_{i_{s - 1}})\) is a solution to the homogeneous system of linear equations</p>
 \end{pmatrix}
 \end{equation*}
 </div>
-<p data-braille="continuation">can be shown to be nonzero using <a class="xref" data-knowl="./knowl/lemma-vandermode-det.html" title="Lemma 17.20">Lemma 17.20</a> and the basic properties of determinants (Exercise). Therefore, this solution must be \(a_{i_0} = a_{i_1} = \cdots = a_{i_{s - 1}} = 0\text{.}\)</p></article></section><section class="subsection" id="SBu"><h3 class="heading hide-type">
+<p class="continuation">can be shown to be nonzero using <a class="xref" data-knowl="./knowl/lemma-vandermode-det.html" title="Lemma 17.20">Lemma 17.20</a> and the basic properties of determinants (Exercise). Therefore, this solution must be \(a_{i_0} = a_{i_1} = \cdots = a_{i_{s - 1}} = 0\text{.}\)</p></article></section><section class="subsection" id="SBu"><h3 class="heading hide-type">
 <span class="type">Subsection</span> <span class="codenumber">17.2.2</span> <span class="title"><abbr class="acronym">BCH</abbr> Codes</span>
 </h3>
 <p id="daM">Some of the most important codes, discovered independently by A. Hocquenghem in 1959 and by R. C. Bose and D. V. Ray-Chaudhuri in 1960, are <abbr class="acronym">BCH</abbr> codes. The European and transatlantic communication systems both use <abbr class="acronym">BCH</abbr> codes. Information words to be encoded are of length \(231\text{,}\) and a polynomial of degree \(24\) is used to generate the code. Since \(231 + 24 = 255 = 2^8-1\text{,}\) we are dealing with a \((255, 231)\)-block code. This <abbr class="acronym">BCH</abbr> code will detect six errors and has a failure rate of \(1\) in \(16\) million. One advantage of <abbr class="acronym">BCH</abbr> codes is that efficient error correction algorithms exist for them.</p>
@@ -660,7 +660,7 @@ a_{i_{s - 1}})\) is a solution to the homogeneous system of linear equations</p>
 g(x) = \lcm[ m_1(x), m_{2}(x), \ldots, m_{2r}(x)]\text{,}
 \end{equation*}
 </div>
-<p data-braille="continuation">then the cyclic code \(\langle g(t) \rangle\) in \(R_n\) is called the <dfn class="terminology"><abbr class="acronym">BCH</abbr> code of length</dfn> \(n\) <dfn class="terminology">and distance</dfn> \(d\text{.}\) By <a class="xref" data-knowl="./knowl/theorem-min-dist-cyclic-code.html" title="Theorem 17.21">Theorem 17.21</a>, the minimum distance of \(C\) is at least \(d\text{.}\)</p>
+<p class="continuation">then the cyclic code \(\langle g(t) \rangle\) in \(R_n\) is called the <dfn class="terminology"><abbr class="acronym">BCH</abbr> code of length</dfn> \(n\) <dfn class="terminology">and distance</dfn> \(d\text{.}\) By <a class="xref" data-knowl="./knowl/theorem-min-dist-cyclic-code.html" title="Theorem 17.21">Theorem 17.21</a>, the minimum distance of \(C\) is at least \(d\text{.}\)</p>
 <article class="theorem theorem-like" id="sTr"><h6 class="heading">
 <span class="type">Theorem</span><span class="space"> </span><span class="codenumber">17.22</span><span class="period">.</span>
 </h6>
@@ -682,7 +682,7 @@ H =
 \end{pmatrix}
 \end{equation*}
 </div>
-<p data-braille="continuation">is a parity-check matrix for \(C\text{.}\)</p>
+<p class="continuation">is a parity-check matrix for \(C\text{.}\)</p>
 </li>
 </ol></article><article class="proof" id="VKv"><h6 class="heading"><span class="type">Proof<span class="period">.</span></span></h6>
 <p id="tKC">(1) \(\Rightarrow\) (2). If \(f(t)\) is in \(C\text{,}\) then \(g(x) \mid f(x)\) in \({\mathbb Z}_2[x]\text{.}\) Hence, for \(i = 1, \ldots, 2r\text{,}\) \(f( \omega^i) = 0\) since \(g( \omega^i ) = 0\text{.}\) Conversely, suppose that \(f( \omega^i) = 0\) for \(1 \leq i \leq d\text{.}\) Then \(f(x)\) is divisible by each \(m_i(x)\text{,}\) since \(m_i(x)\) is the minimal polynomial of \(\omega^i\text{.}\) Therefore, \(g(x) \mid f(x)\) by the definition of \(g(x)\text{.}\) Consequently, \(f(x)\) is a codeword.</p>
@@ -706,7 +706,7 @@ f(\omega^{2r})
 = 0
 \end{equation*}
 </div>
-<p data-braille="continuation">exactly when \(f(t)\) is in \(C\text{.}\) Thus, \(H\) is a parity-check matrix for \(C\text{.}\)</p>
+<p class="continuation">exactly when \(f(t)\) is in \(C\text{.}\) Thus, \(H\) is a parity-check matrix for \(C\text{.}\)</p>
 <p id="FYU">(3) \(\Rightarrow\) (1). By (3), a code polynomial \(f(t) = a_0 + a_1 t + \cdots + a_{n - 1} t^{n - 1}\) is in \(C\) exactly when \(f(\omega^i) = 0\) for \(i = 1, \ldots, 2r\text{.}\) The smallest such polynomial is \(g(t) = \lcm[ m_1(t),\ldots,
 m_{2r}(t)]\text{.}\) Therefore, \(C = \langle g(t) \rangle\text{.}\)</p></article><article class="example example-like" id="ZaA"><h6 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">17.23</span><span class="period">.</span>
@@ -717,19 +717,19 @@ m_{2r}(t)]\text{.}\) Therefore, \(C = \langle g(t) \rangle\text{.}\)</p></articl
 x^{15} - 1 = (x + 1)(x^2 + x + 1)(x^4 + x + 1)(x^4 + x^3 + 1)(x^4 + x^3 + x^2 + x + 1)\text{,}
 \end{equation*}
 </div>
-<p data-braille="continuation">where each of the factors is an irreducible polynomial. Let \(\omega\) be a root of \(1 + x + x^4\text{.}\) The Galois field \(\gf(2^4)\) is</p>
+<p class="continuation">where each of the factors is an irreducible polynomial. Let \(\omega\) be a root of \(1 + x + x^4\text{.}\) The Galois field \(\gf(2^4)\) is</p>
 <div class="displaymath">
 \begin{equation*}
 \{ a_0 + a_1 \omega + a_2 \omega^2 + a_3 \omega^3 : a_i \in {\mathbb Z}_2 \text{ and } 1 + \omega + \omega^4 = 0 \}\text{.}
 \end{equation*}
 </div>
-<p data-braille="continuation">By <a class="xref" data-knowl="./knowl/example-finite-gf-p24.html" title="Example 17.8">Example 17.8</a>, \(\omega\) is a primitive \(15\)th root of unity. The minimal polynomial of \(\omega\) is \(m_1(x) = 1 + x + x^4\text{.}\) It is easy to see that \(\omega^2\) and \(\omega^4\) are also roots of \(m_1(x)\text{.}\) The minimal polynomial of \(\omega^3\) is \(m_2(x) = 1 + x + x^2 + x^3 + x^4\text{.}\) Therefore,</p>
+<p class="continuation">By <a class="xref" data-knowl="./knowl/example-finite-gf-p24.html" title="Example 17.8">Example 17.8</a>, \(\omega\) is a primitive \(15\)th root of unity. The minimal polynomial of \(\omega\) is \(m_1(x) = 1 + x + x^4\text{.}\) It is easy to see that \(\omega^2\) and \(\omega^4\) are also roots of \(m_1(x)\text{.}\) The minimal polynomial of \(\omega^3\) is \(m_2(x) = 1 + x + x^2 + x^3 + x^4\text{.}\) Therefore,</p>
 <div class="displaymath">
 \begin{equation*}
 g(x) = m_1(x) m_2(x) = 1 + x^4 + x^6 + x^7 + x^8
 \end{equation*}
 </div>
-<p data-braille="continuation">has roots \(\omega\text{,}\) \(\omega^2\text{,}\) \(\omega^3\text{,}\) \(\omega^4\text{.}\) Since both \(m_1(x)\) and \(m_2(x)\) divide \(x^{15} - 1\text{,}\) the <abbr class="acronym">BCH</abbr> code is a \((15, 7)\)-code. If \(x^{15} -1 = g(x)h(x)\text{,}\) then \(h(x) = 1 + x^4 + x^6 + x^7\text{;}\) therefore, a parity-check matrix for this code is</p>
+<p class="continuation">has roots \(\omega\text{,}\) \(\omega^2\text{,}\) \(\omega^3\text{,}\) \(\omega^4\text{.}\) Since both \(m_1(x)\) and \(m_2(x)\) divide \(x^{15} - 1\text{,}\) the <abbr class="acronym">BCH</abbr> code is a \((15, 7)\)-code. If \(x^{15} -1 = g(x)h(x)\text{,}\) then \(h(x) = 1 + x^4 + x^6 + x^7\text{;}\) therefore, a parity-check matrix for this code is</p>
 <div class="displaymath">
 \begin{equation*}
 \left(

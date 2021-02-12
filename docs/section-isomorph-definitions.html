@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2021-02-08T11:01:57-07:00       *-->
+<!--*       on 2021-02-12T14:41:43-07:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -59,7 +59,7 @@ MathJax.Hub.Config({
 <!-- 2019-10-12: Temporary - CSS file for experiments with styling --><link xmlns:svg="http://www.w3.org/2000/svg" href="developer.css" rel="stylesheet" type="text/css">
 </head>
 <body id="judson-AATA" class="mathbook-book has-toc has-sidebar-left">
-<a class="assistive" href="#content">Skip to main content</a><div xmlns:svg="http://www.w3.org/2000/svg" class="hidden-content" style="display:none">\(\newcommand{\identity}{\mathrm{id}}
+<a class="assistive" href="#content">Skip to main content</a><div xmlns:svg="http://www.w3.org/2000/svg" id="latex-macros" class="hidden-content" style="display:none">\(\newcommand{\identity}{\mathrm{id}}
 \newcommand{\notdivide}{\nmid}
 \newcommand{\notsubset}{\not\subset}
 \newcommand{\lcm}{\operatorname{lcm}}
@@ -316,7 +316,7 @@ MathJax.Hub.Config({
 \phi( a \cdot b) = \phi( a) \circ \phi( b)
 \end{equation*}
 </div>
-<p data-braille="continuation">for all \(a\) and \(b\) in \(G\text{.}\) If \(G\) is isomorphic to \(H\text{,}\) we write \(G \cong H\text{.}\)  The map \(\phi\) is called an <dfn class="terminology">isomorphism</dfn>. </p>
+<p class="continuation">for all \(a\) and \(b\) in \(G\text{.}\) If \(G\) is isomorphic to \(H\text{,}\) we write \(G \cong H\text{.}\)  The map \(\phi\) is called an <dfn class="terminology">isomorphism</dfn>. </p>
 <article class="example example-like" id="gha"><h6 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">4.1</span><span class="period">.</span>
 </h6>
@@ -329,13 +329,13 @@ MathJax.Hub.Config({
 \phi(3) &amp; = -i\text{.}
 \end{align*}
 </div>
-<p data-braille="continuation">Since</p>
+<p class="continuation">Since</p>
 <div class="displaymath">
 \begin{equation*}
 \phi(m + n) = i^{m+n} = i^m i^n = \phi(m) \phi( n)\text{,}
 \end{equation*}
 </div>
-<p data-braille="continuation">the group operation is preserved.</p></article><article class="example example-like" id="Moj"><h6 class="heading">
+<p class="continuation">the group operation is preserved.</p></article><article class="example example-like" id="Moj"><h6 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">4.2</span><span class="period">.</span>
 </h6>
 <p id="whj">We can define an isomorphism \(\phi\) from the additive group of real numbers \(( {\mathbb R}, + )\) to the multiplicative group of positive real numbers \(( {\mathbb R^+}, \cdot )\) with the exponential map; that is,</p>
@@ -344,7 +344,7 @@ MathJax.Hub.Config({
 \phi( x + y) = e^{x + y} = e^x e^y = \phi( x ) \phi( y)\text{.}
 \end{equation*}
 </div>
-<p data-braille="continuation">Of course, we must still show that \(\phi\) is one-to-one and onto, but this can be determined using calculus.</p></article><article class="example example-like" id="svs"><h6 class="heading">
+<p class="continuation">Of course, we must still show that \(\phi\) is one-to-one and onto, but this can be determined using calculus.</p></article><article class="example example-like" id="svs"><h6 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">4.3</span><span class="period">.</span>
 </h6>
 <p id="cos">The integers are isomorphic to the subgroup of \({\mathbb Q}^\ast\) consisting of elements of the form \(2^n\text{.}\) Define a map \(\phi: {\mathbb Z} \rightarrow {\mathbb Q}^\ast\) by \(\phi( n ) = 2^n\text{.}\) Then</p>
@@ -353,7 +353,7 @@ MathJax.Hub.Config({
 \phi( m + n ) = 2^{m + n} = 2^m 2^n = \phi( m ) \phi( n )\text{.}
 \end{equation*}
 </div>
-<p data-braille="continuation">By definition the map \(\phi\) is onto the subset \(\{2^n :n \in {\mathbb Z} \}\) of  \({\mathbb Q}^\ast\text{.}\) To show that the map is injective, assume that \(m \neq n\text{.}\) If we can show that \(\phi(m) \neq \phi(n)\text{,}\) then we are done. Suppose that \(m \gt n\) and assume that \(\phi(m) = \phi(n)\text{.}\) Then \(2^m = 2^n\) or \(2^{m - n} = 1\text{,}\) which is impossible since \(m - n \gt 0\text{.}\)</p></article><article class="example example-like" id="YCB"><h6 class="heading">
+<p class="continuation">By definition the map \(\phi\) is onto the subset \(\{2^n :n \in {\mathbb Z} \}\) of  \({\mathbb Q}^\ast\text{.}\) To show that the map is injective, assume that \(m \neq n\text{.}\) If we can show that \(\phi(m) \neq \phi(n)\text{,}\) then we are done. Suppose that \(m \gt n\) and assume that \(\phi(m) = \phi(n)\text{.}\) Then \(2^m = 2^n\) or \(2^{m - n} = 1\text{,}\) which is impossible since \(m - n \gt 0\text{.}\)</p></article><article class="example example-like" id="YCB"><h6 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">4.4</span><span class="period">.</span>
 </h6>
 <p id="IvB">The groups \({\mathbb Z}_8\) and \({\mathbb Z}_{12}\) cannot be isomorphic since they have different orders; however, it is true that \(U(8) \cong U(12)\text{.}\) We know that</p>
@@ -363,7 +363,7 @@ U(8) &amp; = \{1, 3, 5, 7 \}\\
 U(12) &amp; = \{1, 5, 7, 11 \}\text{.}
 \end{align*}
 </div>
-<p data-braille="continuation">An isomorphism \(\phi : U(8) \rightarrow U(12)\) is then given by</p>
+<p class="continuation">An isomorphism \(\phi : U(8) \rightarrow U(12)\) is then given by</p>
 <div class="displaymath">
 \begin{align*}
 1 &amp; \mapsto  1\\
@@ -372,7 +372,7 @@ U(12) &amp; = \{1, 5, 7, 11 \}\text{.}
 7 &amp; \mapsto  11\text{.}
 \end{align*}
 </div>
-<p data-braille="continuation">The map \(\phi\) is not the only possible isomorphism between these two groups. We could define another isomorphism \(\psi\) by \(\psi(1) = 1\text{,}\) \(\psi(3) = 11\text{,}\) \(\psi(5) = 5\text{,}\) \(\psi(7) = 7\text{.}\) In fact, both of these groups are isomorphic to \({\mathbb Z}_2 \times {\mathbb Z}_2\) (see <a class="xref" data-knowl="./knowl/example-groups-z2xz2.html" title="Example 2.28">Example 2.28</a> in <a href="groups.html" class="internal" title="Chapter 2: Groups">Chapter 2</a>).</p></article><article class="example example-like" id="EJK"><h6 class="heading">
+<p class="continuation">The map \(\phi\) is not the only possible isomorphism between these two groups. We could define another isomorphism \(\psi\) by \(\psi(1) = 1\text{,}\) \(\psi(3) = 11\text{,}\) \(\psi(5) = 5\text{,}\) \(\psi(7) = 7\text{.}\) In fact, both of these groups are isomorphic to \({\mathbb Z}_2 \times {\mathbb Z}_2\) (see <a class="xref" data-knowl="./knowl/example-groups-z2xz2.html" title="Example 2.28">Example 2.28</a> in <a href="groups.html" class="internal" title="Chapter 2: Groups">Chapter 2</a>).</p></article><article class="example example-like" id="EJK"><h6 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">4.5</span><span class="period">.</span>
 </h6>
 <p id="oCK">Even though \(S_3\) and \({\mathbb Z}_6\) possess the same number of elements, we would suspect that they are not isomorphic, because \({\mathbb Z}_6\) is abelian and \(S_3\) is nonabelian. To demonstrate that this is indeed the case, suppose that \(\phi : {\mathbb Z}_6 \rightarrow  S_3\) is an isomorphism. Let \(a , b \in S_3\) be two elements such that \(ab \neq ba\text{.}\) Since \(\phi\) is an isomorphism, there exist elements \(m\) and \(n\) in \({\mathbb Z}_6\) such that</p>
@@ -381,13 +381,13 @@ U(12) &amp; = \{1, 5, 7, 11 \}\text{.}
 \phi( m ) = a \quad \text{and} \quad \phi( n ) = b\text{.}
 \end{equation*}
 </div>
-<p data-braille="continuation">However,</p>
+<p class="continuation">However,</p>
 <div class="displaymath">
 \begin{equation*}
 ab = \phi(m ) \phi(n) = \phi(m + n) = \phi(n + m) = \phi(n ) \phi(m) = ba\text{,}
 \end{equation*}
 </div>
-<p data-braille="continuation">which contradicts the fact that \(a\) and \(b\) do not commute.</p></article><article class="theorem theorem-like" id="bxh"><h6 class="heading">
+<p class="continuation">which contradicts the fact that \(a\) and \(b\) do not commute.</p></article><article class="theorem theorem-like" id="bxh"><h6 class="heading">
 <span class="type">Theorem</span><span class="space"> </span><span class="codenumber">4.6</span><span class="period">.</span>
 </h6>
 <p id="idE">Let \(\phi : G \rightarrow H\) be an isomorphism of two groups. Then the following statements are true.</p>
@@ -415,7 +415,7 @@ h_1 h_2 = \phi(g_1) \phi(g_2) =  \phi(g_1 g_2) = \phi(g_2 g_1) = \phi(g_2) \phi(
 \phi( m+n ) = a^{m+n} = a^m a^n = \phi( m ) \phi( n )\text{.}
 \end{equation*}
 </div>
-<p data-braille="continuation">To show that \(\phi\) is injective, suppose that \(m\) and \(n\) are two elements in \({\mathbb Z}\text{,}\) where \(m \neq n\text{.}\) We can assume that \(m \gt n\text{.}\) We must show that \(a^m \neq a^n\text{.}\) Let us suppose the contrary; that is, \(a^m = a^n\text{.}\) In this case \(a^{m - n} = e\text{,}\) where \(m - n \gt 0\text{,}\) which contradicts the fact that \(a\) has infinite order. Our map is onto since any element in \(G\) can be written as \(a^n\) for some integer \(n\) and \(\phi(n) = a^n\text{.}\)</p></article><article class="theorem theorem-like" id="nLz"><h6 class="heading">
+<p class="continuation">To show that \(\phi\) is injective, suppose that \(m\) and \(n\) are two elements in \({\mathbb Z}\text{,}\) where \(m \neq n\text{.}\) We can assume that \(m \gt n\text{.}\) We must show that \(a^m \neq a^n\text{.}\) Let us suppose the contrary; that is, \(a^m = a^n\text{.}\) In this case \(a^{m - n} = e\text{,}\) where \(m - n \gt 0\text{,}\) which contradicts the fact that \(a\) has infinite order. Our map is onto since any element in \(G\) can be written as \(a^n\) for some integer \(n\) and \(\phi(n) = a^n\text{.}\)</p></article><article class="theorem theorem-like" id="nLz"><h6 class="heading">
 <span class="type">Theorem</span><span class="space"> </span><span class="codenumber">4.8</span><span class="period">.</span>
 </h6>
 <p id="urW">If \(G\) is a cyclic group of order \(n\text{,}\) then \(G\) is isomorphic to \({\mathbb Z}_n\text{.}\)</p></article><article class="proof" id="VHV"><h6 class="heading"><span class="type">Proof<span class="period">.</span></span></h6>
@@ -474,26 +474,26 @@ h_1 h_2 = \phi(g_1) \phi(g_2) =  \phi(g_1 g_2) = \phi(g_2 g_1) = \phi(g_2) \phi(
 ga =\lambda_g(a) = \lambda_g(b) = gb\text{.}
 \end{equation*}
 </div>
-<p data-braille="continuation">Hence, \(a = b\text{.}\) To show that \(\lambda_g\) is onto, we must prove that for each \(a \in G\text{,}\) there is a \(b\) such that \(\lambda_g (b) = a\text{.}\) Let \(b = g^{-1} a\text{.}\)</p>
+<p class="continuation">Hence, \(a = b\text{.}\) To show that \(\lambda_g\) is onto, we must prove that for each \(a \in G\text{,}\) there is a \(b\) such that \(\lambda_g (b) = a\text{.}\) Let \(b = g^{-1} a\text{.}\)</p>
 <p id="YJS">Now we are ready to define our group \(\overline{G}\text{.}\) Let</p>
 <div class="displaymath">
 \begin{equation*}
 \overline{G} = \{ \lambda_g : g \in G \}\text{.}
 \end{equation*}
 </div>
-<p data-braille="continuation">We must show that \(\overline{G}\) is a group under composition of functions and find an isomorphism between \(G\) and \(\overline{G}\text{.}\) We have closure under composition of functions since</p>
+<p class="continuation">We must show that \(\overline{G}\) is a group under composition of functions and find an isomorphism between \(G\) and \(\overline{G}\text{.}\) We have closure under composition of functions since</p>
 <div class="displaymath">
 \begin{equation*}
 (\lambda_g \circ \lambda_h )(a) = \lambda_g(ha) = gha = \lambda_{gh} (a)\text{.}
 \end{equation*}
 </div>
-<p data-braille="continuation">Also,</p>
+<p class="continuation">Also,</p>
 <div class="displaymath">
 \begin{equation*}
 \lambda_e (a) = ea = a
 \end{equation*}
 </div>
-<p data-braille="continuation">and</p>
+<p class="continuation">and</p>
 <div class="displaymath">
 \begin{equation*}
 (\lambda_{g^{-1}} \circ \lambda_g) (a) = \lambda_{g^{-1}} (ga) = g^{-1} g a = a = \lambda_e (a)\text{.}
@@ -505,13 +505,13 @@ ga =\lambda_g(a) = \lambda_g(b) = gb\text{.}
 \phi(gh) = \lambda_{gh} = \lambda_g \lambda_h = \phi(g) \phi(h)\text{.}
 \end{equation*}
 </div>
-<p data-braille="continuation">It is also one-to-one, because if \(\phi(g)(a) = \phi(h)(a)\text{,}\) then</p>
+<p class="continuation">It is also one-to-one, because if \(\phi(g)(a) = \phi(h)(a)\text{,}\) then</p>
 <div class="displaymath">
 \begin{equation*}
 ga = \lambda_g a = \lambda_h a=  ha\text{.}
 \end{equation*}
 </div>
-<p data-braille="continuation">Hence, \(g = h\text{.}\) That \(\phi\) is onto follows from the fact that \(\phi( g ) = \lambda_g\) for any \(\lambda_g \in \overline{G}\text{.}\)</p></article><p id="XSU">The isomorphism \(g \mapsto \lambda_g\) is known as the <dfn class="terminology">left regular representation</dfn> of \(G\text{.}\)</p></section><section class="subsection" id="biM"><h3 class="heading hide-type">
+<p class="continuation">Hence, \(g = h\text{.}\) That \(\phi\) is onto follows from the fact that \(\phi( g ) = \lambda_g\) for any \(\lambda_g \in \overline{G}\text{.}\)</p></article><p id="XSU">The isomorphism \(g \mapsto \lambda_g\) is known as the <dfn class="terminology">left regular representation</dfn> of \(G\text{.}\)</p></section><section class="subsection" id="biM"><h3 class="heading hide-type">
 <span class="type">Subsection</span> <span class="codenumber">4.1.2</span> <span class="title">Historical Note</span>
 </h3>
 <p id="Ead">Arthur Cayley  was born in England in 1821, though he spent much of the first part of his life in Russia, where his father was a merchant. Cayley was educated at Cambridge, where he took the first Smith's Prize in mathematics. A lawyer for much of his adult life, he wrote several papers in his early twenties before entering the legal profession at the age of 25. While practicing law he continued his mathematical research, writing more than 300 papers during this period of his life. These included some of his best work. In 1863 he left law to become a professor at Cambridge. Cayley wrote more than 900 papers in fields such as group theory, geometry, and linear algebra. His legal knowledge was very valuable to Cambridge; he participated in the writing of many of the university's statutes. Cayley was also one of the people responsible for the admission of women to Cambridge.</p></section><section class="reading-questions" id="fCL"><h3 class="heading hide-type">
@@ -545,7 +545,7 @@ ga = \lambda_g a = \lambda_h a=  ha\text{.}
 a \ast b = a+b+ab.
 \end{equation*}
 </div>
-<p data-braille="continuation">We previously saw that \(G\) with this operation is a group.  Show that \((G, \ast)\) is isomprhic to the multiplicative group of nonzero real numbers \(\R^*\text{.}\)</p>
+<p class="continuation">We previously saw that \(G\) with this operation is a group.  Show that \((G, \ast)\) is isomprhic to the multiplicative group of nonzero real numbers \(\R^*\text{.}\)</p>
 <div class="solutions">
 <a data-knowl="" class="id-ref hint-knowl original" data-refid="hk-JkW" id="JkW"><span class="type">Hint</span></a><div class="hidden-content tex2jax_ignore" id="hk-JkW"><div class="hint solution-like"><p id="oWG">You need to define the isomorphism \(f:G \to \R^*\text{.}\)  A good place to start would be to decide what the identity is in each group.  Guess a reasonable function that sends the identity in \(G\) to the identity in \(\R^*\text{.}\)</p></div></div>
 </div></article><article class="exercise exercise-like" id="iSZ"><h6 class="heading"><span class="codenumber">6<span class="period">.</span></span></h6>

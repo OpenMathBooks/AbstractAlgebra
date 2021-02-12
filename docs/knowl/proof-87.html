@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2021-02-08T11:08:30-07:00       *-->
+<!--*       on 2021-02-12T14:46:08-07:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -21,45 +21,45 @@
 \langle a \rangle \subset \langle a_1 \rangle \subset \langle a_2 \rangle \subset \cdots\text{.}
 \end{equation*}
 </div>
-<p data-braille="continuation">By <a class="xref" data-knowl="./knowl/lemma-acc.html" title="Lemma 7.14">Lemma 7.14</a>, there exists a positive integer \(N\) such that \(\langle a_n \rangle = \langle a_N \rangle\) for all \(n \geq N\text{.}\) Consequently, \(a_N\) must be irreducible. We have now shown that \(a\) is the product of two elements, one of which must be irreducible.</p>
+<p class="continuation">By <a class="xref" data-knowl="./knowl/lemma-acc.html" title="Lemma 7.14">Lemma 7.14</a>, there exists a positive integer \(N\) such that \(\langle a_n \rangle = \langle a_N \rangle\) for all \(n \geq N\text{.}\) Consequently, \(a_N\) must be irreducible. We have now shown that \(a\) is the product of two elements, one of which must be irreducible.</p>
 <p>Now suppose that \(a = c_1 p_1\text{,}\) where \(p_1\) is irreducible. If \(c_1\) is not a unit, we can repeat the preceding argument to conclude that \(\langle a \rangle \subset \langle c_1 \rangle\text{.}\) Either \(c_1\) is irreducible or \(c_1 = c_2 p_2\text{,}\) where \(p_2\) is irreducible and \(c_2\) is not a unit. Continuing in this manner, we obtain another chain of ideals</p>
 <div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
 \begin{equation*}
 \langle a \rangle \subset \langle c_1 \rangle \subset \langle c_2 \rangle \subset \cdots\text{.}
 \end{equation*}
 </div>
-<p data-braille="continuation">This chain must satisfy the ascending chain condition; therefore,</p>
+<p class="continuation">This chain must satisfy the ascending chain condition; therefore,</p>
 <div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
 \begin{equation*}
 a = p_1 p_2 \cdots p_r
 \end{equation*}
 </div>
-<p data-braille="continuation">for irreducible elements \(p_1, \ldots, p_r\text{.}\)</p>
+<p class="continuation">for irreducible elements \(p_1, \ldots, p_r\text{.}\)</p>
 <p><em xmlns:svg="http://www.w3.org/2000/svg" class="emphasis">Uniqueness of the factorization.</em> To show uniqueness, let</p>
 <div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
 \begin{equation*}
 a = p_1 p_2 \cdots p_r = q_1 q_2 \cdots q_s\text{,}
 \end{equation*}
 </div>
-<p data-braille="continuation">where each \(p_i\) and each \(q_i\) is irreducible. Without loss of generality, we can assume that \(r \lt s\text{.}\) Since \(p_1\) divides \(q_1 q_2 \cdots q_s\text{,}\) by <a class="xref" data-knowl="./knowl/corollary-irreducible-pid.html" title="Corollary 7.13">Corollary 7.13</a> it must divide some \(q_i\text{.}\) By rearranging the \(q_i\)'s, we can assume that \(p_1 \mid q_1\text{;}\) hence, \(q_1 = u_1 p_1\) for some unit \(u_1\) in \(D\text{.}\) Therefore,</p>
+<p class="continuation">where each \(p_i\) and each \(q_i\) is irreducible. Without loss of generality, we can assume that \(r \lt s\text{.}\) Since \(p_1\) divides \(q_1 q_2 \cdots q_s\text{,}\) by <a class="xref" data-knowl="./knowl/corollary-irreducible-pid.html" title="Corollary 7.13">Corollary 7.13</a> it must divide some \(q_i\text{.}\) By rearranging the \(q_i\)'s, we can assume that \(p_1 \mid q_1\text{;}\) hence, \(q_1 = u_1 p_1\) for some unit \(u_1\) in \(D\text{.}\) Therefore,</p>
 <div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
 \begin{equation*}
 a = p_1 p_2 \cdots p_r = u_1 p_1 q_2 \cdots q_s
 \end{equation*}
 </div>
-<p data-braille="continuation">or</p>
+<p class="continuation">or</p>
 <div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
 \begin{equation*}
 p_2 \cdots p_r = u_1 q_2 \cdots q_s\text{.}
 \end{equation*}
 </div>
-<p data-braille="continuation">Continuing in this manner, we can arrange the \(q_i\)'s such that \(p_2 = q_2, p_3 = q_3, \ldots,
+<p class="continuation">Continuing in this manner, we can arrange the \(q_i\)'s such that \(p_2 = q_2, p_3 = q_3, \ldots,
 p_r = q_r\text{,}\) to obtain</p>
 <div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
 \begin{equation*}
 u_1 u_2 \cdots u_r q_{r + 1} \cdots q_s = 1\text{.}
 \end{equation*}
 </div>
-<p data-braille="continuation">In this case \(q_{r + 1} \cdots q_s\) is a unit, which contradicts the fact that \(q_{r + 1}, \ldots, q_s\) are irreducibles. Therefore, \(r = s\) and the factorization of \(a\) is unique.</p></article><span class="incontext"><a href="section-factorization-domains.html#twH">in-context</a></span>
+<p class="continuation">In this case \(q_{r + 1} \cdots q_s\) is a unit, which contradicts the fact that \(q_{r + 1}, \ldots, q_s\) are irreducibles. Therefore, \(r = s\) and the factorization of \(a\) is unique.</p></article><span class="incontext"><a href="section-factorization-domains.html#twH">in-context</a></span>
 </body>
 </html>

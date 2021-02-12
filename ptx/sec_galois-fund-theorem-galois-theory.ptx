@@ -4,8 +4,11 @@
       <title>The Fundamental Theorem</title>
       <introduction permid="LNg">
         <p permid="QSL">
-          The goal of this section is to prove the Fundamental Theorem of Galois Theory.
-          This theorem explains the connection between the subgroups of <m>G(E/F)</m> and the intermediate fields between <m>E</m> and <m>F</m>.
+          The goal of this section is to prove the Fundamental Theorem of Galois Theory.  The statement of this theorem is complicated and technical, but the idea is simple.  The theorem explains the connection between the subgroups of the Galois group <m>G(E/F)</m> and the intermediate fields between <m>E</m> and <m>F</m>.
+        </p>
+
+        <p>
+          The Galois group <m>G(E/F)</m> is the group of all automorphisms of the field <m>E</m> that <em>fix</em> the elements of the field <m>F</m>.  But some of those automorphisms might also fix some of the elements in <m>E</m> that are not in <m>F</m>.  For example, in the field <m>E = \Q(\sqrt{3},\sqrt{5})</m>, we had an automorphism <m>\sigma</m> that sent <m>\sqrt{3} \mapsto -\sqrt{3}</m> and <m>\sqrt{5}\mapsto \sqrt{5}</m>.  So this <m>\sigma</m> fixes all of <m>\Q</m>, but also fixes every element of <m>\Q(\sqrt{5})</m> (since every element there is of the form <m>a+b\sqrt{5}</m>).  It is no coincidence that the set of numbers fixed by <m>\sigma</m> forms a field, as the next proposition says.
         </p>
 
         <proposition permid="xJB">
@@ -45,6 +48,14 @@
           </proof>
         </proposition>
 
+
+        <p permid="wZU">
+          The subfield <m>F_{ \{\sigma_i \} }</m> of <m>F</m> is called the <term>fixed field</term>
+              <idx><h>Field</h><h>fixed</h></idx>
+          of <m>\{ \sigma_i \}</m>.  While any subset of automorphism will have a fixed field, we will be especially interested in subsets of automorphisms that are themselves subgroups (of all automorphism of of the Galois group).  
+          The field fixed by a subgroup <m>G</m> of <m>\aut(F)</m> will be denoted by <m>F_G</m>.
+        </p>
+
         <corollary permid="Wml">
           <statement>
             <p permid="emw">
@@ -64,20 +75,9 @@
           </statement>
         </corollary>
 
-        <p permid="wZU">
-          The subfield <m>F_{ \{\sigma_i \} }</m> of <m>F</m> is called the <term>fixed field</term>
-              <idx><h>Field</h><h>fixed</h></idx>
-          of <m>\{ \sigma_i \}</m>.
-          The field fixed by a subgroup <m>G</m> of <m>\aut(F)</m> will be denoted by <m>F_G</m>.
+        <p>
+          We haven't yet said anything about <em>which</em> field the fixed field might be.  To get started, let's consider which field is the fixed field for the full Galois group <m>G(E/F)</m>.  This is the group of all automorphisms of <m>E</m> that fix <m>F</m>, so it shouldn't be too surprising that the field fixed by <m>G(E/F)</m> is actually <m>F</m>.  (At least, as long as <m>E</m> is a splitting field of a separable polynomial.)
         </p>
-
-        <example permid="Hdn">
-          <p permid="Pdy">
-            Let <m>\sigma : {\mathbb Q}(\sqrt{3}, \sqrt{5}\, ) \rightarrow {\mathbb Q}(\sqrt{3}, \sqrt{5}\, )</m> be the automorphism that maps <m>\sqrt{3}</m> to <m>-\sqrt{3}</m>.
-            Then <m>{\mathbb Q}( \sqrt{5}\, )</m> is the subfield of
-            <m>{\mathbb Q}(\sqrt{3}, \sqrt{5}\, )</m> left fixed by <m>\sigma</m>.
-          </p>
-        </example>
 
         <proposition xml:id="proposition-fixed-field" permid="dQK">
           <statement>
@@ -102,8 +102,27 @@
           </proof>
         </proposition>
 
+        <p>
+          On one hand, the previous proposition seems a little obvious: the field fixed by the automorphisms that fix the field is the field.  Where the proposition is more interesting is if <m>F</m> is already an intermediate field, and we think of the proposition as telling us which set of automorphisms give <m>F</m> as the fixed field.  Let's illustrate this with a familiar example.
+        </p>
+
+        <example permid="Hdn">
+          <p permid="Pdy">
+              Let <m>\sigma : {\mathbb Q}(\sqrt{3}, \sqrt{5}\, ) \rightarrow {\mathbb Q}(\sqrt{3}, \sqrt{5}\, )</m> be the automorphism that maps <m>\sqrt{3}</m> to <m>-\sqrt{3}</m> (and <m>\sqrt{5}</m> to itself).  Above we claimed that <m>{\mathbb Q}( \sqrt{5}\, )</m> is the subfield of
+            <m>{\mathbb Q}(\sqrt{3}, \sqrt{5}\, )</m> left fixed by <m>\sigma</m>.  This field is also fixed by the identity automorphism <m>\varepsilon</m>, and <m>\{\varepsilon, \sigma\}</m> form a subgroup of <m>G(\Q(\sqrt{3},\sqrt{5})/\Q)</m>.  No other automorphism of <m>\Q(\sqrt{3},\sqrt{5})</m> fix <m>\Q(\sqrt{5})</m>.  In fact, this subgroup is <m>G(\Q(\sqrt{3},\sqrt{5})/\Q(\sqrt{5}))</m>.  And the fixed field of that subgroup is precisely <m>\Q(\sqrt{5})</m>, as the proposition above says.
+          </p>
+        </example>
+
+        <p>
+          This example shows how given any splitting field <m>E</m> over <m>F</m>, if we take any intermediate field <m>K</m> (that is, <m>F \subset K \subset E</m>), we can consider the <term>fixer</term> of <m>K</m> to be the Galois group <m>G(E/K)</m> (a subgroup of <m>G(E/F)</m>).  So the proposition says that the fixed field of the fixer of a field is the field.
+        </p>
+
+        <p>
+          We could also start with a subgroup <m>G</m> of the full Galois group <m>G(E/F)</m> and consider its fixed field (call it <m>K</m>).  Then we could consider the fixer of <m>K</m>, that is, the group <m>G(E/K)</m>.  We will see that the fixer of the fixed field of a subgroup will be the subgroup: <m>G = G(E/K)</m>.  Before we can prove this, we need to establish a lemma and a theorem.
+        </p>
+
         <p permid="dhd">
-          A large number of mathematicians first learned Galois theory from Emil Artin's monograph on the subject [1]. The very clever proof of the following lemma is due to Artin.
+          A large number of mathematicians first learned Galois theory from Emil Artin's monograph on the subject. The very clever proof of the following lemma is due to Artin.
         </p>
 
         <lemma permid="JXT">
@@ -260,6 +279,10 @@
             </p>
           </proof>
         </theorem>
+
+        <p>
+          We can now prove that the fixer of a fixed field of a subgroup is that subgroup.
+        </p>
 
         <corollary permid="Ctu">
           <statement>

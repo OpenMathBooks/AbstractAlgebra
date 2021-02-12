@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2021-02-08T11:01:26-07:00       *-->
+<!--*       on 2021-02-12T14:41:14-07:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -59,7 +59,7 @@ MathJax.Hub.Config({
 <!-- 2019-10-12: Temporary - CSS file for experiments with styling --><link xmlns:svg="http://www.w3.org/2000/svg" href="developer.css" rel="stylesheet" type="text/css">
 </head>
 <body id="judson-AATA" class="mathbook-book has-toc has-sidebar-left">
-<a class="assistive" href="#content">Skip to main content</a><div xmlns:svg="http://www.w3.org/2000/svg" class="hidden-content" style="display:none">\(\newcommand{\identity}{\mathrm{id}}
+<a class="assistive" href="#content">Skip to main content</a><div xmlns:svg="http://www.w3.org/2000/svg" id="latex-macros" class="hidden-content" style="display:none">\(\newcommand{\identity}{\mathrm{id}}
 \newcommand{\notdivide}{\nmid}
 \newcommand{\notsubset}{\not\subset}
 \newcommand{\lcm}{\operatorname{lcm}}
@@ -323,7 +323,7 @@ MathJax.Hub.Config({
 {[11]} &amp; = \{ \ldots, -1, 11, 23, 35, \ldots \}\text{.}
 \end{align*}
 </div>
-<p data-braille="continuation">When no confusion can arise, we will use \(0, 1, \ldots, 11\) to indicate the equivalence classes  \({[0]}, {[1]}, \ldots, {[11]}\) respectively. We can do arithmetic on \({\mathbb Z}_n\text{.}\) For two integers \(a\) and \(b\text{,}\) define addition modulo \(n\) to be \((a + b) \pmod{n}\text{;}\) that is, the remainder when \(a + b\) is divided by \(n\text{.}\) Similarly, multiplication modulo \(n\) is defined as \((a  b) \pmod{ n}\text{,}\) the remainder when \(a  b\) is divided by \(n\text{.}\)</p>
+<p class="continuation">When no confusion can arise, we will use \(0, 1, \ldots, 11\) to indicate the equivalence classes  \({[0]}, {[1]}, \ldots, {[11]}\) respectively. We can do arithmetic on \({\mathbb Z}_n\text{.}\) For two integers \(a\) and \(b\text{,}\) define addition modulo \(n\) to be \((a + b) \pmod{n}\text{;}\) that is, the remainder when \(a + b\) is divided by \(n\text{.}\) Similarly, multiplication modulo \(n\) is defined as \((a  b) \pmod{ n}\text{,}\) the remainder when \(a  b\) is divided by \(n\text{.}\)</p>
 <article class="example example-like" id="rPl"><h6 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">2.1</span><span class="period">.</span>
 </h6>
@@ -335,7 +335,7 @@ MathJax.Hub.Config({
 3 + 4 &amp; \equiv 7 \pmod{ 12} &amp; 3 \cdot 4 &amp; \equiv 0 \pmod{ 12}\text{.}
 \end{align*}
 </div>
-<p data-braille="continuation">In particular, notice that it is possible that the product of two nonzero numbers modulo \(n\) can be equivalent to \(0\) modulo \(n\text{.}\)</p></article><article class="example example-like" id="XWu"><h6 class="heading">
+<p class="continuation">In particular, notice that it is possible that the product of two nonzero numbers modulo \(n\) can be equivalent to \(0\) modulo \(n\text{.}\)</p></article><article class="example example-like" id="XWu"><h6 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">2.2</span><span class="period">.</span>
 </h6>
 <p id="MNI">Most, but not all, of the usual laws of arithmetic hold for addition and multiplication in \({\mathbb Z}_n\text{.}\) For instance, it is not necessarily true that there is a multiplicative inverse. Consider the multiplication table for \({\mathbb Z}_8\) in <a class="xref" data-knowl="./knowl/table-z8-mult.html" title="Figure 2.3">Figure 2.3</a>. Notice that \(2\text{,}\) \(4\text{,}\) and \(6\) do not have multiplicative inverses; that is, for \(n = 2\text{,}\) \(4\text{,}\) or \(6\text{,}\) there is no integer \(k\) such that \(k n \equiv 1 \pmod{ 8}\text{.}\)</p>
@@ -431,7 +431,7 @@ B &amp; C &amp; A
 \end{pmatrix}\text{.}
 \end{equation*}
 </div>
-<p data-braille="continuation">Notice that this particular permutation corresponds to the rigid motion of rotating the triangle by \(120^{\circ}\) in a clockwise direction. In fact, every permutation gives rise to a symmetry of the triangle. All of these symmetries are shown in <a class="xref" data-knowl="./knowl/figure-s3-symmetry.html" title="Figure 2.6">Figure 2.6</a>.</p>
+<p class="continuation">Notice that this particular permutation corresponds to the rigid motion of rotating the triangle by \(120^{\circ}\) in a clockwise direction. In fact, every permutation gives rise to a symmetry of the triangle. All of these symmetries are shown in <a class="xref" data-knowl="./knowl/figure-s3-symmetry.html" title="Figure 2.6">Figure 2.6</a>.</p>
 <p id="qoG">A natural question to ask is what happens if one motion of the triangle \(\bigtriangleup ABC\) is followed by another. Which symmetry is \(\mu_1 \rho_1\text{;}\) that is, what happens when we do the permutation \(\rho_1\) and then the permutation \(\mu_1\text{?}\) <em class="emphasis">Remember that we are composing functions here. Although we usually multiply left to right, we compose functions right to left.</em> We have</p>
 <div class="displaymath">
 \begin{align*}
@@ -440,7 +440,7 @@ B &amp; C &amp; A
 (\mu_1 \rho_1)(C) &amp; = \mu_1( \rho_1( C ) ) = \mu_1( A ) = A\text{.}
 \end{align*}
 </div>
-<p data-braille="continuation">This is the same symmetry as \(\mu_2\text{.}\) Suppose we do these motions in the opposite order, \(\rho_1\) then \(\mu_1\text{.}\) It is easy to determine that this is the same as the symmetry \(\mu_3\text{;}\) hence, \(\rho_1 \mu_1 \neq \mu_1 \rho_1\text{.}\) A multiplication table for the symmetries of an equilateral triangle \(\bigtriangleup ABC\) is given in <a class="xref" data-knowl="./knowl/table-s3.html" title="Figure 2.7">Figure 2.7</a>.</p>
+<p class="continuation">This is the same symmetry as \(\mu_2\text{.}\) Suppose we do these motions in the opposite order, \(\rho_1\) then \(\mu_1\text{.}\) It is easy to determine that this is the same as the symmetry \(\mu_3\text{;}\) hence, \(\rho_1 \mu_1 \neq \mu_1 \rho_1\text{.}\) A multiplication table for the symmetries of an equilateral triangle \(\bigtriangleup ABC\) is given in <a class="xref" data-knowl="./knowl/table-s3.html" title="Figure 2.7">Figure 2.7</a>.</p>
 <p id="WvP">Notice that in the multiplication table for the symmetries of an equilateral triangle, for every motion of the triangle \(\alpha\) there is another motion \(\beta\) such that \(\alpha \beta = \identity\text{;}\) that is, for every motion there is another motion that takes the triangle back to its original orientation.</p>
 <figure class="figure figure-like" id="osp"><div class="displaymath" id="CCY">
 \begin{equation*}
