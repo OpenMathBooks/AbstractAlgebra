@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2021-02-12T14:47:48-07:00       *-->
+<!--*       on 2021-02-22T13:38:00-07:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -15,34 +15,27 @@
 </head>
 <body>
 <h6 xmlns:svg="http://www.w3.org/2000/svg" class="heading"><span class="type">Paragraph</span></h6>
-<p>In general, we can determine a generator matrix for an \((n, k)\)-code \(C\) by the manner in which the elements \(t^k\) are encoded. Let \(x^n - 1 = g(x) h(x)\) in \({\mathbb Z}_2[x]\text{.}\) If \(g(x) = g_0 + g_1 x + \cdots + g_{n-k} x^{n-k}\) and \(h(x) = h_0 + h_1 x + \cdots + h_k x^k\text{,}\) then the \(n \times k\) matrix</p>
+<p>If we factor \(x^7 - 1\) into irreducible components, we have</p>
 <div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
 \begin{equation*}
-G = 
-\begin{pmatrix}
-g_0 &amp; 0   &amp; \cdots &amp; 0 \\
-g_1 &amp; g_0 &amp; \cdots &amp; 0 \\
-\vdots &amp; \vdots &amp;\ddots &amp; \vdots \\
-g_{n-k}   &amp; g_{n-k-1} &amp; \cdots &amp; g_0 \\
-0   &amp; g_{n-k} &amp; \cdots &amp; g_{1} \\
-\vdots &amp; \vdots &amp; \ddots &amp; \vdots \\
-0   &amp; 0 &amp; \cdots &amp; g_{n-k}
-\end{pmatrix}
+x^7 - 1 = (1 + x)(1 + x + x^3)(1+ x^2 + x^3)\text{.}
 \end{equation*}
 </div>
-<p class="continuation">is a generator matrix for the code \(C\) with generator polynomial \(g(t)\text{.}\) The parity-check matrix for \(C\) is the \((n - k) \times n\) matrix</p>
+<p class="continuation">We see that \(g(t) = (1 + t + t^3)\) generates an ideal \(C\) in \(R_7\text{.}\) This code is a \((7, 4)\)-block code. As in <a class="xref" data-knowl="./knowl/example-finite-generator-63-code.html" title="Example 17.15">Example 17.15</a>, it is easy to calculate a generator matrix by examining what \(g(t)\) does to the polynomials 1, \(t\text{,}\) \(t^2\text{,}\) and \(t^3\text{.}\) A generator matrix for \(C\) is</p>
 <div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
 \begin{equation*}
-H =
+G =
 \begin{pmatrix}
-0   &amp; \cdots &amp; 0   &amp; 0      &amp; h_k    &amp; \cdots &amp; h_0 \\
-0   &amp; \cdots &amp; 0 &amp; h_k &amp; \cdots &amp; h_0    &amp; 0 \\
-\cdots  &amp; \cdots &amp; \cdots  &amp; \cdots &amp;  \cdots &amp;  \cdots &amp; \cdots \\
-h_k &amp; \cdots &amp; h_0 &amp; 0      &amp; 0      &amp; \cdots &amp; 0 
+1 &amp; 0 &amp; 0 &amp; 0 \\
+1 &amp; 1 &amp; 0 &amp; 0 \\
+0 &amp; 1 &amp; 1 &amp; 0 \\
+1 &amp; 0 &amp; 1 &amp; 1 \\
+0 &amp; 1 &amp; 0 &amp; 1 \\
+0 &amp; 0 &amp; 1 &amp; 0 \\
+0 &amp; 0 &amp; 0 &amp; 1
 \end{pmatrix}\text{.}
 \end{equation*}
 </div>
-<p class="continuation">We will leave the details of the proof of the following proposition as an exercise.</p>
-<span class="incontext"><a href="section-poly-codes.html#kFl">in-context</a></span>
+<span class="incontext"><a href="section-poly-codes.html#ETB">in-context</a></span>
 </body>
 </html>

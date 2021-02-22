@@ -11,7 +11,7 @@
       </p>
       <proof permid="ZlF">
         <p permid="LRU">
-          Let <m>G</m> be a graph.  We will define a group of permuations <m>\overline{G}</m> that is isomorphic to <m>G</m>.
+          Let <m>G</m> be a group.  We will define a group of permuations <m>\overline{G}</m> that is isomorphic to <m>G</m>.
           For any <m>g \in G</m>, define a  function
            <m>\lambda_g : G \rightarrow G</m> by <m>\lambda_g(a) = ga</m>.
            [Show <m>\lambda_g</m> is a permutation of <m>G</m>, i.e., a bijection.]

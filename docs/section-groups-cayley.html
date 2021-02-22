@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2021-02-12T14:42:45-07:00       *-->
+<!--*       on 2021-02-22T13:32:57-07:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -324,14 +324,89 @@ MathJax.Hub.Config({
 </h3>
 <section class="introduction" id="oJl"><p id="iTZ">We have studied <em class="emphasis">permutation groups</em>, as well as groups that do not appear to be groups of permutations (such as \(\Z_n\text{,}\) \(\Z_n\times \Z_m\text{,}\) groups of functions or matrices, \(D_4\text{,}\) etc.).  How distinct are these non-permutation groups from permutation groups?</p></section><article class="exercise exercise-like" id="UQu"><h6 class="heading"><span class="codenumber">1<span class="period">.</span></span></h6>
 <p id="Pbi">Write the \(4\times 4\) group tables for \(\Z_4\) and  \(U(8)\text{,}\) the group of <em class="emphasis">units</em>  of \(\Z_8\) (numbers relatively prime to 8) under multiplication.</p>
-<div class="solutions"></div></article><article class="exercise exercise-like" id="AXD"><h6 class="heading"><span class="codenumber">2<span class="period">.</span></span></h6>
+<div class="solutions">
+<a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-tte" id="tte"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-tte"><div class="solution solution-like"><div class="displaymath" id="RVO">
+\begin{equation*}
+\begin{array}{c|cccc}
++ &amp; 0 &amp; 1 &amp; 2 &amp; 3 \\
+\hline
+0       &amp; 0 &amp; 1 &amp; 2 &amp; 3 \\
+1       &amp; 1 &amp; 2 &amp; 3 &amp; 0 \\
+2       &amp; 2 &amp; 3 &amp; 0 &amp; 1 \\
+3       &amp; 3 &amp; 0 &amp; 1 &amp; 2
+\end{array}
+\qquad
+\end{equation*}
+</div></div></div>
+</div></article><article class="exercise exercise-like" id="AXD"><h6 class="heading"><span class="codenumber">2<span class="period">.</span></span></h6>
 <p id="vir">For each element in the groups above, we can see what adding or multiplying it by the other elements does to the other elements.  For example, \(5 \in U(8)\) corresponds to this function: \(\lambda_5 = \begin{pmatrix}1 \amp 3 \amp 5 \amp 7\\ 5 \amp 7 \amp 1 \amp 3\end{pmatrix}\text{,}\) since \(5 \cdot 1 = 5 \text{,}\) \(5 \cdot 3 = 7\text{,}\) and so on.</p>
 <p id="bpA">For each element \(g\) in each group above, write down the corresponding function \(\lambda_g\text{.}\)</p>
-<div class="solutions"></div></article><article class="exercise exercise-like" id="heM"><h6 class="heading"><span class="codenumber">3<span class="period">.</span></span></h6>
+<div class="solutions">
+<a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-ZAn" id="ZAn"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-ZAn"><div class="solution solution-like">
+<p id="ycX">For \(Z_4\) we have</p>
+<div class="displaymath">
+\begin{equation*}
+\lambda_0 = \begin{pmatrix}0 \amp 1 \amp 2 \amp 3 \\ 0 \amp 1 \amp 2 \amp 3\end{pmatrix}
+\end{equation*}
+</div>
+<div class="displaymath">
+\begin{equation*}
+\lambda_1 = \begin{pmatrix}0 \amp 1 \amp 2 \amp 3 \\ 1 \amp 2 \amp 3 \amp 0\end{pmatrix}
+\end{equation*}
+</div>
+<div class="displaymath">
+\begin{equation*}
+\lambda_2 = \begin{pmatrix}0 \amp 1 \amp 2 \amp 3 \\ 2 \amp 3 \amp 0 \amp 1\end{pmatrix}
+\end{equation*}
+</div>
+<div class="displaymath">
+\begin{equation*}
+\lambda_3 = \begin{pmatrix}0 \amp 1 \amp 2 \amp 3 \\ 3 \amp 0 \amp 1 \amp 2\end{pmatrix}
+\end{equation*}
+</div>
+<p id="ekg">For \(U(8)\) we get</p>
+<div class="displaymath">
+\begin{equation*}
+\lambda_1 = \begin{pmatrix}1 \amp 3 \amp 5 \amp 7\\ 1 \amp 3 \amp 5 \amp 7\end{pmatrix}
+\end{equation*}
+</div>
+<div class="displaymath">
+\begin{equation*}
+\lambda_3 = \begin{pmatrix}1 \amp 3 \amp 5 \amp 7\\ 3 \amp 1 \amp 7 \amp 5\end{pmatrix}
+\end{equation*}
+</div>
+<div class="displaymath">
+\begin{equation*}
+\lambda_5 = \begin{pmatrix}1 \amp 3 \amp 5 \amp 7\\ 5 \amp 7 \amp 1 \amp 3\end{pmatrix}
+\end{equation*}
+</div>
+<div class="displaymath">
+\begin{equation*}
+\lambda_7 = \begin{pmatrix}1 \amp 3 \amp 5 \amp 7\\ 7 \amp 5 \amp 3 \amp 1\end{pmatrix}
+\end{equation*}
+</div>
+<p id="Krp">Notice that we are getting the rows in the group table as the outputs of the function.  This makes sense, right?</p>
+</div></div>
+</div></article><article class="exercise exercise-like" id="heM"><h6 class="heading"><span class="codenumber">3<span class="period">.</span></span></h6>
 <p id="HwJ">What happens when you compose two functions \(\lambda_g\) and \(\lambda_h\) for \(g\) and \(h\) in a group?  Try this with a few examples you have above.  What do you notice about the function you get?</p>
-<div class="solutions"></div></article><article class="exercise exercise-like" id="NlV"><h6 class="heading"><span class="codenumber">4<span class="period">.</span></span></h6>
+<div class="solutions">
+<a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-FHw" id="FHw"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-FHw"><div class="solution solution-like">
+<p id="qyy">For example, in the case of \(\Z_4\text{,}\) we have</p>
+<div class="displaymath">
+\begin{equation*}
+\lambda_2\lambda_1 = \begin{pmatrix}0 \amp 1 \amp 2 \amp 3\\ 2 \amp 3 \amp 0 \amp 1 \end{pmatrix}\begin{pmatrix}0 \amp 1 \amp 2 \amp 3\\ 1 \amp 2 \amp 3 \amp 0 \end{pmatrix} = \begin{pmatrix}0 \amp 1 \amp 2 \amp 3\\ 3 \amp 0 \amp 1 \amp 2 \end{pmatrix} = \lambda_3 \text{.}
+\end{equation*}
+</div>
+<p class="continuation">In \(U(8)\text{,}\) we have \(\lambda_3\lambda_7 = \lambda_5\text{.}\)  But notice that \(5 = 3 \cdot 7\) in \(U(8)\text{.}\)  In other words, the \(\lambda_g\) are acting just like \(g\text{.}\)</p>
+</div></div>
+</div></article><article class="exercise exercise-like" id="NlV"><h6 class="heading"><span class="codenumber">4<span class="period">.</span></span></h6>
 <p id="nDS">Consider the set \(\overline{G} = \{\lambda_g \st g \in G\}\text{.}\)  Since each \(\lambda_g\) is a permutation of the elements of \(G\text{,}\) each of these will be a subset of \(S_n\) where \(n = |G|\) (in our case, \(n=4\)).  Is \(\overline{G}\) a subgroup of \(S_4\) in both our cases?  Will it be a subgroup in general?</p>
-<div class="solutions"></div></article></section><section class="subsection" id="jaD"><h3 class="heading hide-type">
+<div class="solutions">
+<a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-lOF" id="lOF"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-lOF"><div class="solution solution-like">
+<p id="WFH">Instead of using the elements of \(G\) themselves, if we put them in some order (a first one, second one, etc), then we can associate numbers \(1,2,3,\ldots,n\) to the \(n\) elements of \(G\text{.}\)  The permutations \(\lambda_g\) are then exactly elements of \(S_n\text{.}\)</p>
+<p id="CMQ">What we found in the previous question is that the \(\lambda_g\) act just like the elements \(g\) they come from.  In fact, we can prove that \(G \cong \overline{G}\text{:}\) the set of permutations \(\overline{G}\) is a subgroup of \(S_n\text{,}\) in fact, a subgroup isomorphic to \(G\text{.}\)</p>
+</div></div>
+</div></article></section><section class="subsection" id="jaD"><h3 class="heading hide-type">
 <span class="type">Subsection</span> <span class="codenumber">10.1.2</span> <span class="title">Cayley's Theorem</span>
 </h3>
 <p id="QWZ">Cayley proved that if \(G\) is a group, it is isomorphic to a group of permutations on some set; hence, every group is a permutation group. Cayley's Theorem is what we call a representation theorem. The aim of representation theory is to find an isomorphism of some group \(G\) that we wish to study into a group that we know a great deal about, such as a group of permutations or matrices.</p>
@@ -371,7 +446,8 @@ MathJax.Hub.Config({
 </div></article><article class="theorem theorem-like" id="voV"><h6 class="heading">
 <span class="type">Theorem</span><span class="space"> </span><span class="codenumber">10.2</span><span class="period">.</span><span class="space"> </span><span class="title">Cayley.</span>
 </h6>
-<p id="TRF">Every group is isomorphic to a group of permutations.</p></article><p id="xei">The isomorphism \(g \mapsto \lambda_g\) is known as the <dfn class="terminology">left regular representation</dfn> of \(G\text{.}\)</p></section><section class="subsection" id="PhM"><h3 class="heading hide-type">
+<p id="TRF">Every group is isomorphic to a group of permutations.</p></article><p id="p-2628">You will be guided through a proof of this theorem in the homework.</p>
+<p id="xei">The isomorphism \(g \mapsto \lambda_g\) is known as the <dfn class="terminology">left regular representation</dfn> of \(G\) (“left” because we get the permutation by multiplying each element in the group on the left; there are also right regular representations, but we will not consider these).</p></section><section class="subsection" id="PhM"><h3 class="heading hide-type">
 <span class="type">Subsection</span> <span class="codenumber">10.1.3</span> <span class="title">Historical Note</span>
 </h3>
 <p id="dlr">Arthur Cayley  was born in England in 1821, though he spent much of the first part of his life in Russia, where his father was a merchant. Cayley was educated at Cambridge, where he took the first Smith's Prize in mathematics. A lawyer for much of his adult life, he wrote several papers in his early twenties before entering the legal profession at the age of 25. While practicing law he continued his mathematical research, writing more than 300 papers during this period of his life. These included some of his best work. In 1863 he left law to become a professor at Cambridge. Cayley wrote more than 900 papers in fields such as group theory, geometry, and linear algebra. His legal knowledge was very valuable to Cambridge; he participated in the writing of many of the university's statutes. Cayley was also one of the people responsible for the admission of women to Cambridge.</p></section><section class="exercises" id="wIW"><h3 class="heading hide-type">
@@ -380,7 +456,7 @@ MathJax.Hub.Config({
 <article class="exercise exercise-like" id="MXn"><h6 class="heading"><span class="codenumber">1<span class="period">.</span></span></h6>
 <p id="Env">Let's prove Cayley's theorem.  Here is the overall structure, including the “big idea”.  After this, you are asked to provide the details.</p>
 <article class="proof" id="ZlF"><h6 class="heading"><span class="type">Proof<span class="period">.</span></span></h6>
-<p id="LRU">Let \(G\) be a graph.  We will define a group of permuations \(\overline{G}\) that is isomorphic to \(G\text{.}\) For any \(g \in G\text{,}\) define a  function \(\lambda_g : G \rightarrow G\) by \(\lambda_g(a) = ga\text{.}\) [Show \(\lambda_g\) is a permutation of \(G\text{,}\) i.e., a bijection.]</p>
+<p id="LRU">Let \(G\) be a group.  We will define a group of permuations \(\overline{G}\) that is isomorphic to \(G\text{.}\) For any \(g \in G\text{,}\) define a  function \(\lambda_g : G \rightarrow G\) by \(\lambda_g(a) = ga\text{.}\) [Show \(\lambda_g\) is a permutation of \(G\text{,}\) i.e., a bijection.]</p>
 <p id="rZd">Now we are ready to define our group \(\overline{G}\text{.}\) Let</p>
 <div class="displaymath">
 \begin{equation*}

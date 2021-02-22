@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2021-02-12T14:47:56-07:00       *-->
+<!--*       on 2021-02-22T13:38:08-07:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -15,7 +15,13 @@
 </head>
 <body>
 <h6 xmlns:svg="http://www.w3.org/2000/svg" class="heading"><span class="type">Paragraph</span></h6>
-<p xmlns:svg="http://www.w3.org/2000/svg">Let us investigate the example of the power set, \({\mathcal P}(X)\text{,}\) of a set \(X\) more closely. The power set is a lattice that is ordered by inclusion. By the definition of the power set, the largest element in \({\mathcal P}(X)\) is \(X\) itself and the smallest element is \(\emptyset\text{,}\) the empty set. For any set \(A\) in \({\mathcal P}(X)\text{,}\) we know that \(A \cap X = A\) and \(A \cup \emptyset = A\text{.}\) This suggests the following definition for lattices. An element \(I\) in a poset \(X\) is a <dfn class="terminology">largest element</dfn> if \(a \preceq I\) for all \(a \in X\text{.}\)  An element \(O\) is a <dfn class="terminology">smallest element</dfn> of \(X\) if \(O \preceq a\) for all \(a \in X\text{.}\) </p>
-<span class="incontext"><a href="section-boolean-algebras.html#Kdk">in-context</a></span>
+<p>To show that \(L\) is a lattice, we must prove that \(a \vee b\) and \(a \wedge b\) are, respectively, the least upper and greatest lower bounds of \(a\) and \(b\text{.}\) Since \(a=(a \vee b) \wedge a = a \wedge (a \vee b)\text{,}\) it follows that \(a \preceq a \vee b\text{.}\) Similarly, \(b \preceq a \vee b\text{.}\) Therefore, \(a \vee b\) is an upper bound for \(a\) and \(b\text{.}\) Let \(u\) be any other upper bound of both \(a\) and \(b\text{.}\) Then \(a \preceq u\) and \(b \preceq u\text{.}\) But \(a \vee b \preceq u\) since</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{equation*}
+(a \vee b) \vee u = a \vee (b \vee u) = a \vee u = u\text{.}
+\end{equation*}
+</div>
+<p class="continuation">The proof that \(a \wedge b\) is the greatest lower bound of \(a\) and \(b\) is left as an exercise.</p>
+<span class="incontext"><a href="section-boolean-lattices.html#ggN">in-context</a></span>
 </body>
 </html>

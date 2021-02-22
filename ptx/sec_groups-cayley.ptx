@@ -112,9 +112,13 @@
          
         </theorem>
 
+        <p>
+          You will be guided through a proof of this theorem in the homework.
+        </p>
+
         <p permid="xei">
           The isomorphism <m>g \mapsto \lambda_g</m> is known as the
-          <term>left regular representation</term><idx><h>Left regular representation</h></idx> of <m>G</m>.
+          <term>left regular representation</term><idx><h>Left regular representation</h></idx> of <m>G</m> (<q>left</q> because we get the permutation by multiplying each element in the group on the left; there are also right regular representations, but we will not consider these).
         </p>
       </subsection>
 

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<worksheet xmlns:xi="http://www.w3.org/2001/XInclude" margin="1in" bottom="1.25cm" xml:id="ws_groups-cayley-permutations" permid="deN">
+<worksheet xmlns:xi="http://www.w3.org/2001/XInclude" margin="1in" bottom="1.25cm" solutions="yes" xml:id="ws_groups-cayley-permutations" permid="deN">
     <title>Activity: Cayley Permutations</title>
 
     <introduction permid="oJl">
@@ -102,7 +102,8 @@
           </statement>
           <solution permid="FHw">
             <p permid="qyy">
-              For example, in the case of <m>\Z_4</m>, we have <me permid="wXE">\lambda_2\lambda_1 = \begin{pmatrix}0 \amp 1 \amp 2 \amp 3\\ 2 \amp 3 \amp 0 \amp 1 \end{pmatrix}\begin{pmatrix}0 \amp 1 \amp 2 \amp 3\\ 1 \amp 2 \amp 3 \amp 0 \end{pmatrix} = \begin{pmatrix}0 \amp 1 \amp 2 \amp 3\\ 3 \amp 0 \amp 1 \amp 2 \end{pmatrix} = \lambda_3 </me>.
+              For example, in the case of <m>\Z_4</m>, 
+              we have <me permid="wXE">\lambda_2\lambda_1 = \begin{pmatrix}0 \amp 1 \amp 2 \amp 3\\ 2 \amp 3 \amp 0 \amp 1 \end{pmatrix}\begin{pmatrix}0 \amp 1 \amp 2 \amp 3\\ 1 \amp 2 \amp 3 \amp 0 \end{pmatrix} = \begin{pmatrix}0 \amp 1 \amp 2 \amp 3\\ 3 \amp 0 \amp 1 \amp 2 \end{pmatrix} = \lambda_3 </me>.
               In <m>U(8)</m>, we have <m>\lambda_3\lambda_7 = \lambda_5</m>.  But notice that <m>5 = 3 \cdot 7</m> in <m>U(8)</m>.  In other words, the <m>\lambda_g</m> are acting just like <m>g</m>.
             </p>
           </solution>
