@@ -2,10 +2,10 @@
 
 
  <section xmlns:xi="http://www.w3.org/2001/XInclude" xml:id="section-simplicity-of-an" permid="GCx">
-     <title>The Simplicity of the Alternating Group</title>
-    <xi:include href="worksheets/groups-a5-simple.ptx" />
+     <title>The group <m>S_5</m></title>
+    <xi:include href="worksheets/grp-struc-s5.ptx" />
      <subsection xml:id="subsec-the-proof" permid="Zeo">
-       <title>The Proof</title>
+       <title>The Simplicity of the Alternating Group</title>
        
        <p permid="nWq">
          Of special interest are groups with no nontrivial normal subgroups.

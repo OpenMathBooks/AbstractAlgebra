@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2021-02-22T13:37:37-07:00       *-->
+<!--*       on 2021-03-04T23:17:05-07:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -15,7 +15,15 @@
 </head>
 <body>
 <h6 xmlns:svg="http://www.w3.org/2000/svg" class="heading"><span class="type">Paragraph</span></h6>
-<p xmlns:svg="http://www.w3.org/2000/svg">The determinant of every element in \(G\) is one. In this case every element in \(G\) must be a rotation. Since \(G\) is finite, there is a smallest angle, say \(\theta_0\text{,}\) such that the corresponding element \(R_{\theta_0}\) is the smallest rotation in the positive direction. We claim that \(R_{\theta_0}\) generates \(G\text{.}\) If not, then for some positive integer \(n\) there is an angle \(\theta_1\) between \(n \theta_0\) and \((n+1) \theta_0\text{.}\) If so, then \((n+1) \theta_0 - \theta_1\) corresponds to a rotation smaller than \(\theta_0\text{,}\) which contradicts the minimality of \(\theta_0\text{.}\)</p>
-<span class="incontext"><a href="section-symmetry.html#iwQ">in-context</a></span>
+<p>The point group of \(G\) is \(G_0 = \{A : (A,b) \in G \text{ for some } b \}\text{.}\) In particular, \(G_0\) must be a subgroup of \(O(2)\text{.}\) Suppose that \({\mathbf x}\) is a vector in a lattice \(L\) with space group \(G\text{,}\) translation group \(H\text{,}\) and point group \(G_0\text{.}\) For any element \((A, {\mathbf y})\) in \(G\text{,}\)</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{align*}
+(A, {\mathbf y}) (I, {\mathbf x}) (A, {\mathbf y})^{-1} &amp; = (A,A {\mathbf x} + {\mathbf y}) (A^{-1},-A^{-1} {\mathbf y})\\
+&amp; = (A A^{-1},-A A^{-1} {\mathbf y} + A {\mathbf x} + {\mathbf y})\\
+&amp; = (I, A {\mathbf x});
+\end{align*}
+</div>
+<p class="continuation">hence, \((I, A {\mathbf x})\) is in the translation group of \(G\text{.}\) More specifically, \(A {\mathbf x}\) must be in the lattice \(L\text{.}\) It is important to note that \(G_0\) is not usually a subgroup of the space group \(G\text{;}\) however, if \(T\) is the translation subgroup of \(G\text{,}\) then \(G/T \cong G_0\text{.}\) The proof of the following theorem can be found in [2], [5], or [6].</p>
+<span class="incontext"><a href="section-symmetry.html#yZC">in-context</a></span>
 </body>
 </html>

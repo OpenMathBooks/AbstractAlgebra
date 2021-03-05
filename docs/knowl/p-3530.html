@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2021-02-22T13:37:47-07:00       *-->
+<!--*       on 2021-03-04T23:17:14-07:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -15,24 +15,7 @@
 </head>
 <body>
 <h6 xmlns:svg="http://www.w3.org/2000/svg" class="heading"><span class="type">Paragraph</span></h6>
-<p>Suppose now that we have a canonical parity-check matrix \(H\) with three rows. Then we might ask how many more columns we can add to the matrix and still have a null space that is a single error-detecting and single error-correcting code. Since each column has three entries, there are \(2^3 = 8\) possible distinct columns. We cannot add the columns</p>
-<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
-\begin{equation*}
-\begin{pmatrix}
-0 \\ 0 \\ 0 
-\end{pmatrix},
-\begin{pmatrix}
-1 \\ 0 \\ 0 
-\end{pmatrix},
-\begin{pmatrix}
-0 \\ 1 \\ 0 
-\end{pmatrix},
-\begin{pmatrix}
-0 \\ 0 \\ 1 
-\end{pmatrix}\text{.}
-\end{equation*}
-</div>
-<p class="continuation">So we can add as many as four columns and still maintain a minimum distance of \(3\text{.}\)</p>
-<span class="incontext"><a href="section-parity-check.html#dnu">in-context</a></span>
+<p xmlns:svg="http://www.w3.org/2000/svg">Let \(H \in {\mathbb M}_{ m \times n} ( {\mathbb Z}_2)\) and suppose that the linear code corresponding to \(H\) is single error-correcting. Let \({\mathbf r}\) be a received \(n\)-tuple that was transmitted with at most one error. If the syndrome of \({\mathbf r}\) is \({\mathbf 0}\text{,}\) then no error has occurred; otherwise, if the syndrome of \({\mathbf r}\) is equal to some column of \(H\text{,}\) say the \(i\)th column, then the error has occurred in the \(i\)th bit.</p>
+<span class="incontext"><a href="section-efficient-decoding.html#oDx">in-context</a></span>
 </body>
 </html>

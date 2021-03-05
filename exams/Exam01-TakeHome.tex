@@ -90,13 +90,22 @@
 	\question[15] Give an example of each of the following.  For each, explain how you know your example is correct (that is, say why your example really is an example of what was requested). 
 	\begin{parts}
 		\part An algebraic number that is not constructible using a straight-edge and compass.
+		\begin{solution}
+			For example, $\sqrt[3]{2}$ is algebraic (since it is the root of the polynomial $x^3 - 2$) but not constructible: it's minimal polynomial has degree 3, so there is no way that $\sqrt[3]{2}$ can be in a field extension of degree $2^k$ for some $k$.
+		\end{solution}
 		\vfill
 
 		\part An extension field $E$ of $\Q$ such that every element of $E$ is the root of a degree 4 polynomial.
+		\begin{solution}
+			We could take $E = \Q(\sqrt[4]{2})$.  This is a degree 4 extension, meaning every element is the root of a polynomial of degree at least 4.  For any elements that are roots of degree 1 or 2 polynomials, we could simply multiply by $x^3$ or $x^2$ to get a polynomial of degree 4 that still has the number as a root.
+		\end{solution}
 
 		\vfill
 
 		\part Two extension fields $E$ and $F$ of $\Q$ such that $[E:\Q] = [F:\Q]$ but $E$ is not isomorphic to $F$.  (Make sure to explain why your example satisfies both properties.)
+		\begin{solution}
+			For example, $E = \Q(\sqrt{2})$ and $F = \Q(\sqrt{3})$.  These both have degree 2 (looking at the minimal polynomials for $\sqrt{2}$ and $\sqrt{3}$), but since those numbers are not roots of the same irreducible polynomial, there is no isomorphism between the fields.
+		\end{solution}
 		\vfill
 	\end{parts}
 
@@ -128,7 +137,7 @@
 	
 	\question[6] Use the previous problem to prove that there do not exists any rational numbers $a$, $b$, and $c$ such that $\sqrt{5} = a + b\sqrt[3]{5} + c \sqrt[3]{5}^2$.  Make sure to say what this has to do with fields.
 	\begin{solution}
-
+		This is saying that $\sqrt{5}$ is not an element of $\Q(\sqrt[3]{5})$, and we can verify that is true using the parts above.  If it was in that field, the the top field would be degree 3, not 6.
 	\end{solution}
 	\vfill
 	\vfill
@@ -175,10 +184,10 @@ What does this have to do with divisions and remainders?  Well $x^5 - 7x^3 + 1 \
 
 \begin{solution}
 We will find the inverse of the coset $\langle p(x)\rangle + x^3 - 4x^2 + 6x + 1$ in $\Q[x]/\langle p(x)\rangle$.  Using long division, we get $p(x) = (x+4)(x^3 - 4x^2 + 6x + 1) - 9$.  Thus
-\[1 = \frac{1}{9} p(x) + \left(\frac{-1}{9}x - \frac{4}{9}\right)(x^3 - 4x^2 + 6x + 1).\]
-In other words, $1 \in \langle p(x) \rangle + \left(\frac{-1}{9}x - \frac{4}{9}\right)(x^3 - 4x^2 + 6x + 1)$ so $(\langle p(x)\rangle + \left(\frac{-1}{9}x - \frac{4}{9}\right))(\langle p(x)\rangle + (x^3 - 4x^2 + 6x + 1) = \langle p(x) \rangle + 1$.  
+\[1 = \frac{-1}{9} p(x) + \left(\frac{1}{9}x + \frac{4}{9}\right)(x^3 - 4x^2 + 6x + 1).\]
+In other words, $1 \in \langle p(x) \rangle + \left(\frac{1}{9}x + \frac{4}{9}\right)(x^3 - 4x^2 + 6x + 1)$ so $(\langle p(x)\rangle + \left(\frac{1}{9}x +\frac{4}{9}\right))(\langle p(x)\rangle + (x^3 - 4x^2 + 6x + 1) = \langle p(x) \rangle + 1$.  
 
-Transferring back to $E$, we find that the inverse of $\varrho^3 - 4\varrho^2 + 6\varrho + 1$ is $\frac{-1}{9}\varrho - \frac{4}{9}$.
+Transferring back to $E$, we find that the inverse of $\varrho^3 - 4\varrho^2 + 6\varrho + 1$ is $\frac{1}{9}\varrho + \frac{4}{9}$.
 
 \end{solution}
 \vfill

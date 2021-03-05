@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2021-02-22T13:37:10-07:00       *-->
+<!--*       on 2021-03-04T23:16:44-07:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -24,15 +24,13 @@
 </head>
 <body>
 <article class="exercise exercise-like"><h6 xmlns:svg="http://www.w3.org/2000/svg" class="heading">
-<span class="type">Worksheet Exercise</span><span class="space"> </span><span class="codenumber">2<span class="period">.</span></span>
+<span class="type">Worksheet Exercise</span><span class="space"> </span><span class="codenumber">5<span class="period">.</span></span>
 </h6>
-<p xmlns:svg="http://www.w3.org/2000/svg">Now you can compute \(n = pq\) and \(m = (p-1)(q-1)\text{.}\)</p>
-<div class="sagecell-sage" id="Lpr"><script type="text/x-sage">n = p*q
-m = (p-1)*(q-1)
-n, m
-</script></div>
-<p xmlns:svg="http://www.w3.org/2000/svg">Notice that you <em class="emphasis">could</em> ask SAGE to find \(m = \varphi(n)\) using <code class="code-inline tex2jax_ignore">euler_phi(n)</code>, but you should think about why this is a really really really bad idea.  If you want, you can try it below, but maybe first with only small values of \(p\) and \(q\text{.}\)</p>
-<div class="sagecell-sage" id="rwA"><script type="text/x-sage">euler_phi(n)
-</script></div></article><span class="incontext"><a href="ws_groups-RSA-lab.html#vwz">in-context</a></span>
+<p xmlns:svg="http://www.w3.org/2000/svg">The last piece of the puzzle is what to do with the number you get out of the decryption.  You will find some \(x\text{,}\) but need that to be translated into text you can read.</p>
+<p xmlns:svg="http://www.w3.org/2000/svg">This depends on the agreed upon method for translating a string of symbols into numbers.  For this lab, you can use the following code do decrypt the message:</p>
+<div class="sagecell-sage" id="cnC"><script type="text/x-sage">digits = decrypted.digits(base=128)
+letters = [chr(ascii) for ascii in digits]
+''.join(letters)
+</script></div></article><span class="incontext"><a href="ws_groups-RSA-lab.html#nSa">in-context</a></span>
 </body>
 </html>
