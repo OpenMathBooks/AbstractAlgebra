@@ -1,0 +1,47 @@
+\documentclass[11pt]{book}
+
+\input{worksheets-preamble.tex}
+\begin{document}
+%
+%
+\typeout{************************************************}
+\typeout{Worksheet  Activity: Working with \(S_5\)}
+\typeout{************************************************}
+%
+\newgeometry{left=1in, right=1in, top=1in, bottom=1.25cm}
+\begin{worksheet-subsection}{Activity: Working with \(S_5\)}{}{Activity: Working with \(S_5\)}{}{}{x:worksheet:ws_grp-struct-s5}
+\begin{introduction}{}%
+We are close to our goal of finding a degree 5 polynomial whose roots cannot be expressed in a nice way (using radicals and field operations).  It turns out that a key step in this goal is understanding the group \(S_5\).  In this activity, we will get a better feel for this group by examining the ``cycle structure'' of its elements.%
+\end{introduction}%
+\begin{divisionexercise}{1}{}{0.1}{g:exercise:idm21103}%
+Every element in \(S_5\) can be written as a single cycle or a product of different cycles.  Write down all the different possibilities for how these cycles or products of cycles might look (focusing on their ``shape'' rather than the specific numbers in the cycles).%
+\end{divisionexercise}%
+\begin{divisionexercise}{2}{}{0.1}{p:exercise:biw}%
+Does \(S_5\) contain a non-trivial subgroup that contains all the transpositions (2-cycles)?  What is it, or why not?%
+\end{divisionexercise}%
+\begin{divisionexercise}{3}{}{0.1}{p:exercise:HpF}%
+Does \(S_5\) contain a non-trivial subgroup that includes the elements \((12)\), \((13)\), \((14)\), and \((15)\)?  What else would it contain?  Hint: what is \((12)(14)(12)\)\textgreater{}%
+\end{divisionexercise}%
+\begin{divisionexercise}{4}{}{0.1}{p:exercise:nwO}%
+Does \(S_5\) contain a non-trivial subgroup that contains \((24) \) and \((12345)\)?  Think about what else such a subgroup would contain.%
+\end{divisionexercise}%
+\begin{divisionexercise}{5}{}{0.01}{p:exercise:TDX}%
+What if you started with a different 2-cycle and a different 5-cycle?Would any pair of 5-cycle and 2-cycle work?%
+\end{divisionexercise}%
+\clearpage
+Now let's consider the alternating group \(A_5\).  Recall this is the group of all permutations in \(S_5\) that can be written as the product of an even number of 2-cycles.%
+\begin{divisionexercise}{6}{}{0.15}{g:exercise:idm21155}%
+If you write elements of \(A_5\) as the product of disjoint cycles, what sorts of cycle structures do you get?%
+\end{divisionexercise}%
+\begin{divisionexercise}{7}{}{0.15}{p:exercise:zLg}%
+Does \(A_5\) contain a non-trivial subgroup that contains all the 3-cycles? Hint: show that every pair of transpositions can be written as a product of 3-cycles.%
+\end{divisionexercise}%
+\begin{divisionexercise}{8}{}{0.15}{p:exercise:fSp}%
+Now consider \emph{normal} subgroups \(N\) of \(A_5\).  Remember, a normal subgroup is closed under conjugates (here the conjugate would be  \(aba\inv\) where \(a \in A_5\) and \(b \in N\)). Does \(A_5\) contain a non-trivial normal subgroup that contains \((123)\)?%
+\end{divisionexercise}%
+\begin{divisionexercise}{9}{}{0.01}{p:exercise:LZy}%
+Look at the different cycle structures of elements in \(A_n\) and start taking conjugates.  Will you be able to get \((123)\) starting from any non-identity element?%
+\end{divisionexercise}%
+\end{worksheet-subsection}
+\restoregeometry
+\end{document}

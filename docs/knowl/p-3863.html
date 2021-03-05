@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2021-03-04T23:17:38-07:00       *-->
+<!--*       on 2021-03-05T08:11:16-07:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -15,13 +15,17 @@
 </head>
 <body>
 <h6 xmlns:svg="http://www.w3.org/2000/svg" class="heading"><span class="type">Paragraph</span></h6>
-<p>Draw the switching circuit for each of the following Boolean expressions.</p>
-<ol class="lower-alpha cols2">
-<li><p xmlns:svg="http://www.w3.org/2000/svg">\(\displaystyle (a \vee b \vee a') \wedge a\)</p></li>
-<li><p xmlns:svg="http://www.w3.org/2000/svg">\(\displaystyle (a \vee b)' \wedge (a \vee b)\)</p></li>
-<li><p xmlns:svg="http://www.w3.org/2000/svg">\(\displaystyle a \vee (a \wedge b)\)</p></li>
-<li><p xmlns:svg="http://www.w3.org/2000/svg">\(\displaystyle (c \vee a \vee b) \wedge c' \wedge (a \vee b)'\)</p></li>
-</ol>
-<span class="incontext"><a href="exercises-boolean.html#Vmj">in-context</a></span>
+<p>Given a complex circuit, we can now apply the techniques of Boolean algebra to reduce it to a simpler one. Consider the circuit in  <a class="xref" data-knowl="./knowl/figure-circuit-2.html" title="Figure 18.32">Figure 18.32</a>. Since</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{align*}
+(a \vee b) \wedge (a \vee b') \wedge (a \vee b) &amp; = (a \vee b) \wedge (a \vee b) \wedge (a \vee b')\\
+&amp; = (a \vee b) \wedge (a \vee b')\\
+&amp; = a \vee ( b \wedge b')\\
+&amp; = a \vee O\\
+&amp; = a\text{,}
+\end{align*}
+</div>
+<p class="continuation">we can replace the more complicated circuit with a circuit containing the single switch \(a\) and achieve the same function.</p>
+<span class="incontext"><a href="section-algebra-of-circuits.html#xOS">in-context</a></span>
 </body>
 </html>

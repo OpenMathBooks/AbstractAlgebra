@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2021-03-04T23:17:25-07:00       *-->
+<!--*       on 2021-03-05T08:11:01-07:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -15,63 +15,14 @@
 </head>
 <body>
 <h6 xmlns:svg="http://www.w3.org/2000/svg" class="heading"><span class="type">Paragraph</span></h6>
-<p>Suppose that</p>
-<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
-\begin{equation*}
-g( \omega^r) = g(\omega^{r + 1}) = \cdots = g( \omega^{r + s - 1}) = 0\text{.}
-\end{equation*}
-</div>
-<p class="continuation">Let \(f(x)\) be some polynomial in \(C\) with \(s\) or fewer nonzero coefficients. We can assume that</p>
-<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
-\begin{equation*}
-f(x) = a_{i_0} x^{i_0} + a_{i_1} x^{i_1} + \cdots + a_{i_{s - 1}} x^{i_{s - 1}}
-\end{equation*}
-</div>
-<p class="continuation">be some polynomial in \(C\text{.}\) It will suffice to show that all of the \(a_i\)'s must be 0. Since</p>
-<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
-\begin{equation*}
-g( \omega^r) = g(\omega^{r + 1}) = \cdots = g( \omega^{r + s - 1}) = 0
-\end{equation*}
-</div>
-<p class="continuation">and \(g(x)\) divides \(f(x)\text{,}\)</p>
-<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
-\begin{equation*}
-f( \omega^r) = f(\omega^{r + 1}) = \cdots = f( \omega^{r + s - 1}) = 0\text{.}
-\end{equation*}
-</div>
-<p class="continuation">Equivalently, we have the following system of equations:</p>
+<p>If we let \(g(x)= 1 + x^3\text{,}\) we can define a \((6,3)\)-code \(C\) as follows. To encode a \(3\)-tuple \(( a_0, a_1, a_2 )\text{,}\) we multiply the corresponding polynomial \(f(x) = a_0 + a_1 x + a_2 x^2\) by \(1 + x^3\text{.}\) We are defining a map \(\phi : {\mathbb Z}_2^3 \rightarrow {\mathbb Z}_2^6\) by \(\phi  : f(x) \mapsto g(x) f(x)\text{.}\) It is easy to check that this map is a group homomorphism. In fact, if we regard \({\mathbb Z}_2^n\) as a vector space over \({\mathbb Z}_2\text{,}\) \(\phi\) is a linear transformation of vector spaces. Let us compute the kernel of \(\phi\text{.}\) Observe that \(\phi ( a_0, a_1, a_2 ) = (000000)\) exactly when</p>
 <div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
 \begin{align*}
-a_{i_0} (\omega^r)^{i_0} + a_{i_1} (\omega^r)^{i_1} + \cdots + a_{i_{s - 1}} (\omega^r)^{i_{s - 1}} &amp; = 0\\
-a_{i_0} (\omega^{r + 1})^{i_0} + a_{i_1} (\omega^{r + 1})^{i_2} + \cdots + a_{i_{s-1}} (\omega^{r+1})^{i_{s-1}} &amp; = 0\\
-&amp; \vdots\\
-a_{i_0} (\omega^{r + s - 1})^{i_0} + a_{i_1} (\omega^{r + s - 1})^{i_1} + \cdots + a_{i_{s - 1}} (\omega^{r + s - 1})^{i_{s - 1}} &amp; = 0\text{.}
+0 + 0x + 0x^2 + 0x^3 + 0x^4 + 0 x^5 &amp; = (1 + x^3) ( a_0 + a_1 x + a_2 x^2 )\\
+&amp; = a_0 + a_1 x + a_2 x^2 + a_0 x^3 + a_1 x^4 + a_2 x^5\text{.}
 \end{align*}
 </div>
-<p class="continuation">Therefore, \((a_{i_0}, a_{i_1}, \ldots,
-a_{i_{s - 1}})\) is a solution to the homogeneous system of linear equations</p>
-<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
-\begin{align*}
-(\omega^{i_0})^r x_0 + (\omega^{i_1})^r x_1 + \cdots + (\omega^{i_{s - 1}})^r x_{n - 1} &amp; = 0\\
-(\omega^{i_0})^{r + 1} x_0 + (\omega^{i_1})^{r + 1} x_1 + \cdots + (\omega^{i_{s - 1}})^{r + 1} x_{n - 1} &amp; = 0\\
-&amp; \vdots\\
-(\omega^{i_0})^{r + s - 1} x_0 + (\omega^{i_1})^{r + s - 1} x_1 + \cdots + (\omega^{i_{s - 1}})^{r + s - 1} x_{n - 1} &amp; = 0\text{.}
-\end{align*}
-</div>
-<p class="continuation">However, this system has a unique solution, since the determinant of the matrix</p>
-<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
-\begin{equation*}
-\begin{pmatrix}
-(\omega^{i_0})^r &amp; (\omega^{i_1})^r &amp; \cdots &amp; (\omega^{i_{s-1}})^r \\
-(\omega^{i_0})^{r+1} &amp; (\omega^{i_1})^{r+1} &amp; \cdots &amp;
-(\omega^{i_{s-1}})^{r+1} \\
-\vdots &amp; \vdots         &amp; \ddots &amp; \vdots \\
-(\omega^{i_0})^{r+s-1} &amp; (\omega^{i_1})^{r+s-1} &amp; \cdots &amp;
-(\omega^{i_{s-1}})^{r+s-1} 
-\end{pmatrix}
-\end{equation*}
-</div>
-<p class="continuation">can be shown to be nonzero using <a class="xref" data-knowl="./knowl/lemma-vandermode-det.html" title="Lemma 17.20">Lemma 17.20</a> and the basic properties of determinants (Exercise). Therefore, this solution must be \(a_{i_0} = a_{i_1} = \cdots = a_{i_{s - 1}} = 0\text{.}\)</p>
-<span class="incontext"><a href="section-poly-codes.html#NDt">in-context</a></span>
+<p class="continuation">Since the polynomials over a field form an integral domain, \(a_0 + a_1 x + a_2 x^2\) must be the zero polynomial. Therefore, \(\ker \phi = \{ (000) \}\) and \(\phi\) is one-to-one.</p>
+<span class="incontext"><a href="section-poly-codes.html#sFj">in-context</a></span>
 </body>
 </html>

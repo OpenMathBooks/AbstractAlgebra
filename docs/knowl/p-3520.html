@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2021-03-04T23:17:14-07:00       *-->
+<!--*       on 2021-03-05T08:10:45-07:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -15,7 +15,20 @@
 </head>
 <body>
 <h6 xmlns:svg="http://www.w3.org/2000/svg" class="heading"><span class="type">Paragraph</span></h6>
-<p xmlns:svg="http://www.w3.org/2000/svg">Let \(H\) be a binary matrix. The null space of \(H\) is a single error-correcting code if and only if \(H\) does not contain any zero columns and no two columns of \(H\) are identical.</p>
-<span class="incontext"><a href="section-parity-check.html#Iwo">in-context</a></span>
+<p>Let \(G {\mathbf x}_1 = {\mathbf y}_1\) and \(G {\mathbf x}_2 ={\mathbf y}_2\) be two codewords. Then \({\mathbf y}_1 + {\mathbf y}_2\) is in \(C\) since</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{equation*}
+G( {\mathbf x}_1 + {\mathbf x}_2) = G {\mathbf x}_1 + G {\mathbf x}_2 = {\mathbf y}_1 + {\mathbf y}_2\text{.}
+\end{equation*}
+</div>
+<p class="continuation">We must also show that two message blocks cannot be encoded into the same codeword. That is, we must show that if \(G {\mathbf x} = G {\mathbf y}\text{,}\) then \({\mathbf x} = {\mathbf y}\text{.}\) Suppose that \(G {\mathbf x} = G {\mathbf y}\text{.}\) Then</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{equation*}
+G {\mathbf x} - G {\mathbf y} = G( {\mathbf x} - {\mathbf y}) = {\mathbf 0}\text{.}
+\end{equation*}
+</div>
+<p class="continuation">However, the first \(k\) coordinates in \(G( {\mathbf x} - {\mathbf y})\) are exactly \(x_1 -y_1, \ldots,
+x_k - y_k\text{,}\) since they are determined by the identity matrix, \(I_k\text{,}\) part of \(G\text{.}\) Hence, \(G( {\mathbf x} - {\mathbf y}) = {\mathbf 0}\) exactly when \({\mathbf x} = {\mathbf y}\text{.}\)</p>
+<span class="incontext"><a href="section-parity-check.html#ier">in-context</a></span>
 </body>
 </html>

@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2021-03-04T23:16:32-07:00       *-->
+<!--*       on 2021-03-05T08:09:51-07:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -15,19 +15,40 @@
 </head>
 <body>
 <h6 xmlns:svg="http://www.w3.org/2000/svg" class="heading"><span class="type">Paragraph</span></h6>
-<p>Since \(f(x)\) is solvable by radicals there exists an extension \(E\) of \(F\) by radicals \(F = F_0 \subset F_1 \subset \cdots \subset F_n = E\text{.}\) By  <a class="xref" data-knowl="./knowl/lemma-radical-extension.html" title="Lemma 10.36">Lemma 10.36</a>, we can assume that \(E\) is a splitting field \(f(x)\) and \(F_i\) is normal over \(F_{i - 1}\text{.}\) By the Fundamental Theorem of Galois Theory, \(G(E/F_i)\) is a normal subgroup of \(G(E/F_{i - 1})\text{.}\) Therefore, we have a subnormal series of subgroups of \(G(E/F)\text{:}\)</p>
+<p>The only remaining possible case is a disjoint product of the form</p>
 <div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
 \begin{equation*}
-\{ \identity \} \subset G(E/F_{n - 1}) \subset \cdots \subset G(E/F_1) \subset G(E/F)\text{.}
+\sigma = \tau (a_1 a_2) (a_3 a_4)\text{,}
 \end{equation*}
 </div>
-<p class="continuation">Again by the Fundamental Theorem of Galois Theory, we know that</p>
+<p class="continuation">where \(\tau\) is the product of an even number of disjoint \(2\)-cycles. But</p>
 <div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
 \begin{equation*}
-G(E/F_{i - 1})/G(E/F_i) \cong G(F_i/F_{i - 1})\text{.}
+\sigma^{-1}(a_1 a_2 a_3)\sigma(a_1 a_2 a_3)^{-1}
 \end{equation*}
 </div>
-<p class="continuation">By <a class="xref" data-knowl="./knowl/lemma-xn-a-solvable.html" title="Lemma 10.35">Lemma 10.35</a>, \(G(F_i/F_{i - 1})\) is solvable; hence, \(G(E/F)\) is also solvable.</p>
-<span class="incontext"><a href="section-galois-applications.html#Tdx">in-context</a></span>
+<p class="continuation">is in \(N\) since \((a_1 a_2 a_3)\sigma(a_1 a_2 a_3)^{-1}\) is in \(N\text{;}\) and so</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{align*}
+\sigma^{-1}(a_1 a_2 a_3)\sigma(a_1 a_2 a_3)^{-1} &amp; = \tau^{-1} (a_1 a_2) (a_3 a_4) (a_1 a_2 a_3) \tau (a_1 a_2)(a_3 a_4)(a_1 a_2 a_3)^{-1}\\
+&amp; = (a_1 a_3)(a_2 a_4)\text{.}
+\end{align*}
+</div>
+<p class="continuation">Since \(n \geq 5\text{,}\) we can find \(b \in \{1, 2, \ldots,
+n \}\) such that \(b \neq a_1, a_2, a_3, a_4\text{.}\) Let \(\mu = (a_1 a_3 b)\text{.}\) Then</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{equation*}
+\mu^{-1} (a_1 a_3)(a_2 a_4) \mu (a_1 a_3)(a_2 a_4) \in N
+\end{equation*}
+</div>
+<p class="continuation">and</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{align*}
+\mu^{-1} (a_1 a_3)(a_2 a_4) \mu (a_1 a_3)(a_2 a_4) &amp; = (a_1 b a_3)(a_1 a_3)(a_2 a_4) (a_1 a_3 b)(a_1 a_3)(a_2 a_4)\\
+&amp; = (a_1 a_3 b )\text{.}
+\end{align*}
+</div>
+<p class="continuation">Therefore, \(N\) contains a \(3\)-cycle. This completes the proof of the lemma.</p>
+<span class="incontext"><a href="section-simplicity-of-an.html#hxk">in-context</a></span>
 </body>
 </html>

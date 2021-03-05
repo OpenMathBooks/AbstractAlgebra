@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2021-03-04T23:16:57-07:00       *-->
+<!--*       on 2021-03-05T08:10:24-07:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -15,7 +15,13 @@
 </head>
 <body>
 <h6 xmlns:svg="http://www.w3.org/2000/svg" class="heading"><span class="type">Paragraph</span></h6>
-<p xmlns:svg="http://www.w3.org/2000/svg">If \(p\) and \(q\) are distinct primes with \(p \lt q \text{,}\) then every group \(G\) of order \(pq\) has a single subgroup of order \(q\) and this subgroup is normal in \(G\text{.}\) Hence, \(G\) cannot be simple. Furthermore, if \(q \not\equiv 1 \pmod{p}\text{,}\) then \(G\) is cyclic.</p>
-<span class="incontext"><a href="section-sylow-applications.html#xKb">in-context</a></span>
+<p>We induct on the order of \(G\) once again. If \(|G| = p\text{,}\) then we are done. Now suppose that the order of \(G\) is \(n\) with \(n \gt p\) and that the theorem is true for all groups of order less than \(n\text{,}\) where \(p\) divides \(n\text{.}\) We shall apply the class equation once again:</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{equation*}
+|G| = |Z(G)| + [G: C(x_1) ] + \cdots + [ G: C(x_k)]\text{.}
+\end{equation*}
+</div>
+<p class="continuation">First suppose that \(p\) does not divide \([G:C(x_i)]\) for some \(i\text{.}\) Then \(p^r \mid |C(x_i)|\text{,}\) since \(p^r\) divides \(|G| = |C(x_i)| \cdot [G:C(x_i)]\text{.}\) Now we can apply the induction hypothesis to \(C(x_i)\text{.}\)</p>
+<span class="incontext"><a href="section-sylow-theorems.html#Dzn">in-context</a></span>
 </body>
 </html>

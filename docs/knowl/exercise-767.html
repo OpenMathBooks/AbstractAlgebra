@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2021-03-04T23:16:45-07:00       *-->
+<!--*       on 2021-03-05T08:10:09-07:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -12,18 +12,25 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta name="robots" content="noindex, nofollow">
+<script>$(function () {
+    // Make *any* div with class 'sagecell-sage' an executable Sage cell
+    // Their results will be linked, only within language type
+    sagecell.makeSagecell({inputLocation: 'div.sagecell-sage',
+                           linked: true,
+                           languages: ['sage'],
+                           evalButtonText: 'Evaluate (Sage)'});
+});
+</script>
 </head>
 <body>
 <article class="exercise exercise-like"><h6 xmlns:svg="http://www.w3.org/2000/svg" class="heading">
-<span class="type">Exercise</span><span class="space"> </span><span class="codenumber">9<span class="period">.</span></span>
+<span class="type">Worksheet Exercise</span><span class="space"> </span><span class="codenumber">5<span class="period">.</span></span>
 </h6>
-<p>Decrypt each of the following <abbr xmlns:svg="http://www.w3.org/2000/svg" class="acronym">RSA</abbr> messages \(y\text{.}\)</p>
-<ol class="lower-alpha">
-<li><p xmlns:svg="http://www.w3.org/2000/svg">\(\displaystyle n = 3551, D = 1997, y = 2791\)</p></li>
-<li><p xmlns:svg="http://www.w3.org/2000/svg">\(\displaystyle n = 5893, D = 81, y = 34\)</p></li>
-<li><p xmlns:svg="http://www.w3.org/2000/svg">\(\displaystyle n = 120979, D = 27331, y = 112135\)</p></li>
-<li><p xmlns:svg="http://www.w3.org/2000/svg">\(\displaystyle n = 79403, D = 671, y = 129381\)</p></li>
-</ol>
-<div class="solutions"><a class="hint-knowl original" data-knowl="./knowl/hint-165-hidden.html" title="Hint 12.5.9.1"><span xmlns:svg="http://www.w3.org/2000/svg" class="type">Hint</span></a></div></article><span class="incontext"><a href="exercises-crypt.html#lSv">in-context</a></span>
+<p xmlns:svg="http://www.w3.org/2000/svg">The last piece of the puzzle is what to do with the number you get out of the decryption.  You will find some \(x\text{,}\) but need that to be translated into text you can read.</p>
+<p xmlns:svg="http://www.w3.org/2000/svg">This depends on the agreed upon method for translating a string of symbols into numbers.  For this lab, you can use the following code do decrypt the message:</p>
+<div class="sagecell-sage" id="cnC"><script type="text/x-sage">digits = decrypted.digits(base=128)
+letters = [chr(ascii) for ascii in digits]
+''.join(letters)
+</script></div></article><span class="incontext"><a href="ws_groups-RSA-lab.html#nSa">in-context</a></span>
 </body>
 </html>

@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2021-03-04T23:17:12-07:00       *-->
+<!--*       on 2021-03-05T08:10:44-07:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -15,27 +15,20 @@
 </head>
 <body>
 <h6 xmlns:svg="http://www.w3.org/2000/svg" class="heading"><span class="type">Paragraph</span></h6>
-<p>Let \(C = HG\text{.}\) The \(ij\)th entry in \(C\) is</p>
-<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
-\begin{align*}
-c_{ij} &amp; = \sum_{k=1}^n h_{ik} g_{kj}\\
-&amp; =  \sum_{k=1}^{n-m} h_{ik} g_{kj} + \sum_{k=n-m+1}^n h_{ik} g_{kj}\\
-&amp; = \sum_{k=1}^{n-m} a_{ik} \delta_{kj} + \sum_{k=n-m+1}^n \delta_{i-(m-n),k} a_{kj}\\
-&amp; =  a_{ij} + a_{ij}\\
-&amp; = 0\text{,}
-\end{align*}
-</div>
-<p class="continuation">where</p>
+<p>Suppose that the words to be encoded consist of all binary \(3\)-tuples and that our encoding scheme is even-parity. To encode an arbitrary \(3\)-tuple, we add a fourth bit to obtain an even number of \(1\)s. Notice that an arbitrary \(n\)-tuple \({\mathbf x} = (x_1, x_2, \ldots,
+x_n)^\transpose\) has an even number of \(1\)s exactly when \(x_1 + x_2 + \cdots + x_n = 0\text{;}\) hence, a \(4\)-tuple \({\mathbf x} = (x_1, x_2, x_3, x_4)^\transpose\) has an even number of \(1\)s if \(x_1+ x_2+ x_3+ x_4 = 0\text{,}\) or</p>
 <div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
 \begin{equation*}
-\delta_{ij} =
-\begin{cases}
-1 &amp; i = j \\
-0 &amp; i \neq j
-\end{cases}
+{\mathbf x} \cdot {\mathbf 1} =  {\mathbf x}^\transpose {\mathbf 1} =
+\begin{pmatrix}
+x_1 &amp; x_2 &amp; x_3 &amp; x_4
+\end{pmatrix}
+\begin{pmatrix}
+1 \\ 1 \\ 1 \\ 1
+\end{pmatrix} = 0\text{.}
 \end{equation*}
 </div>
-<p class="continuation">is the Kronecker delta. </p>
-<span class="incontext"><a href="section-parity-check.html#OlA">in-context</a></span>
+<p class="continuation">This example leads us to hope that there is a connection between matrices and coding theory.</p>
+<span class="incontext"><a href="section-linear-codes.html#bjM">in-context</a></span>
 </body>
 </html>

@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2021-03-04T23:17:11-07:00       *-->
+<!--*       on 2021-03-05T08:10:42-07:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -15,13 +15,12 @@
 </head>
 <body>
 <h6 xmlns:svg="http://www.w3.org/2000/svg" class="heading"><span class="type">Paragraph</span></h6>
-<p>To determine exactly what the error-detecting and error-correcting capabilities for a code are, we need to analyze the minimum distance for the code. Let \({\mathbf x}\) and \({\mathbf y}\) be codewords. If \(d({\mathbf x}, {\mathbf y}) = 1\) and an error occurs where \({\mathbf x}\) and \({\mathbf y}\) differ, then \({\mathbf x}\) is changed to \({\mathbf y}\text{.}\) The received codeword is \({\mathbf y}\) and no error message is given. Now suppose \(d({\mathbf x}, {\mathbf y}) = 2\text{.}\) Then a single error cannot change \({\mathbf x}\) to \({\mathbf y}\text{.}\) Therefore, if \(d_{\min} = 2\text{,}\) we have the ability to detect single errors. However, suppose that \(d({\mathbf x}, {\mathbf y}) = 2\text{,}\) \({\mathbf y}\) is sent, and a noncodeword \({\mathbf z}\) is received such that</p>
+<p>A <dfn xmlns:svg="http://www.w3.org/2000/svg" class="terminology">binary symmetric channel</dfn> is a model that consists of a transmitter capable of sending a binary signal, either a \(0\) or a \(1\text{,}\) together with a receiver. Let \(p\) be the probability that the signal is correctly received. Then \(q = 1 - p\) is the probability of an incorrect reception. If a \(1\) is sent, then the probability that a \(1\) is received is \(p\) and the probability that a \(0\) is received is \(q\) (<a class="xref" data-knowl="./knowl/figure-channel.html" title="Figure 16.6">Figure 16.6</a>). The probability that no errors occur during the transmission of a binary codeword of length \(n\) is \(p^{n}\text{.}\) For example, if \(p=0.999\) and a message consisting of 10,000 bits is sent, then the probability of a perfect transmission is</p>
 <div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
 \begin{equation*}
-d({\mathbf x}, {\mathbf z}) = d({\mathbf y}, {\mathbf z}) = 1\text{.}
+(0.999)^{10,000} \approx 0.00005\text{.}
 \end{equation*}
 </div>
-<p class="continuation">Then the decoder cannot decide between \({\mathbf x}\) and \({\mathbf y}\text{.}\) Even though we are aware that an error has occurred, we do not know what the error is.</p>
-<span class="incontext"><a href="section-error-detecting-correcting-codes.html#cDA">in-context</a></span>
+<span class="incontext"><a href="section-error-detecting-correcting-codes.html#LFp">in-context</a></span>
 </body>
 </html>
