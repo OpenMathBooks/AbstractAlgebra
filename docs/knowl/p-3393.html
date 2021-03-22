@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2021-03-05T08:10:35-07:00       *-->
+<!--*       on 2021-03-22T10:27:40-06:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -15,45 +15,15 @@
 </head>
 <body>
 <h6 xmlns:svg="http://www.w3.org/2000/svg" class="heading"><span class="type">Paragraph</span></h6>
-<p>If we choose \(A{\mathbf e}_2 = (b, -a)^\transpose\text{,}\) then we obtain the matrix</p>
+<p>\((3) \Rightarrow (2)\text{.}\) Since</p>
 <div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
-\begin{equation*}
-B
-=
-\begin{pmatrix}
-a &amp; b \\
-b &amp; -a
-\end{pmatrix}
-=
-\begin{pmatrix}
-\cos \theta &amp; \sin \theta \\
-\sin \theta &amp; -\cos \theta
-\end{pmatrix}.
-\end{equation*}
+\begin{align*}
+\langle {\mathbf x}, {\mathbf x} \rangle &amp; = \langle A{\mathbf x}, A{\mathbf x} \rangle\\
+&amp; = {\mathbf x}^\transpose A^\transpose A {\mathbf x}\\
+&amp; = \langle {\mathbf x}, A^\transpose A{\mathbf x} \rangle\text{,}
+\end{align*}
 </div>
-<p class="continuation">Here, \(\det B = -1\) and</p>
-<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
-\begin{equation*}
-B^2
-=
-\begin{pmatrix}
-1 &amp; 0 \\
-0 &amp; 1
-\end{pmatrix}.
-\end{equation*}
-</div>
-<p class="continuation">A reflection about the horizontal axis is given by the matrix</p>
-<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
-\begin{equation*}
-C
-=
-\begin{pmatrix}
-1 &amp; 0 \\
-0 &amp; -1
-\end{pmatrix},
-\end{equation*}
-</div>
-<p class="continuation">and \(B = AC\) (see <a class="xref" data-knowl="./knowl/figure-o2.html" title="Figure 15.9">Figure 15.9</a>). Thus, a reflection about a line \(\ell\) is simply a reflection about the horizontal axis followed by a rotation.</p>
-<span class="incontext"><a href="section-matrix-groups.html#IPo">in-context</a></span>
+<p class="continuation">we know that \(\langle {\mathbf x}, (A^\transpose A - I){\mathbf x} \rangle = 0\) for all \({\mathbf x}\text{.}\) Therefore, \(A^\transpose A -I = 0\) or \(A^{-1} = A^\transpose\text{.}\)</p>
+<span class="incontext"><a href="section-matrix-groups.html#RyF">in-context</a></span>
 </body>
 </html>

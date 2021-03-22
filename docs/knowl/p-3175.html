@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2021-03-05T08:10:16-07:00       *-->
+<!--*       on 2021-03-22T10:27:25-06:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -15,13 +15,14 @@
 </head>
 <body>
 <h6 xmlns:svg="http://www.w3.org/2000/svg" class="heading"><span class="type">Paragraph</span></h6>
-<p>By <a class="xref" data-knowl="./knowl/theorem-pn.html" title="Theorem 13.15">Theorem 13.15</a>, \(|Z(G)| = p\) or \(p^2\text{.}\) If \(|Z(G)| = p^2\text{,}\) then we are done. Suppose that \(|Z(G)| = p\text{.}\) Then \(Z(G)\) and \(G / Z(G)\) both have order \(p\) and must both be cyclic groups. Choosing a generator \(aZ(G)\) for \(G / Z(G)\text{,}\) we can write any element \(gZ(G)\) in the quotient group as \(a^m Z(G)\) for some integer \(m\text{;}\) hence, \(g = a^m x\) for some \(x\) in the center of \(G\text{.}\) Similarly, if \(hZ(G) \in G / Z(G)\text{,}\) there exists a \(y\) in \(Z(G)\) such that \(h = a^n y\) for some integer \(n\text{.}\) Since \(x\) and \(y\) are in the center of \(G\text{,}\) they commute with all other elements of \(G\text{;}\) therefore,</p>
+<p>For \(S_n\) it takes a bit of work to find the conjugacy classes. We begin with cycles. Suppose that \(\sigma = ( a_1, \ldots,
+a_k)\) is a cycle and let \(\tau \in S_n\text{.}\) By <a class="xref" data-knowl="./knowl/theorem-cycle-length-theorem.html" title="Theorem 11.23">Theorem 11.23</a>,</p>
 <div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
 \begin{equation*}
-gh = a^m x a^n y =  a^{m+n} x y = a^n y a^m x = hg\text{,}
+\tau \sigma \tau^{-1} = ( \tau( a_1), \ldots, \tau(a_k))\text{.}
 \end{equation*}
 </div>
-<p class="continuation">and \(G\) must be abelian.</p>
-<span class="incontext"><a href="section-class-equation.html#pBZ">in-context</a></span>
+<p class="continuation">Consequently, any two cycles of the same length are conjugate. Now let \(\sigma = \sigma_1 \sigma_2 \cdots \sigma_r\) be a cycle decomposition, where the length of each cycle \(\sigma_i\) is \(r_i\text{.}\) Then \(\sigma\) is conjugate to every other \(\tau \in S_n\) whose cycle decomposition has the same lengths.</p>
+<span class="incontext"><a href="section-class-equation.html#UDP">in-context</a></span>
 </body>
 </html>

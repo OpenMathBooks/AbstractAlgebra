@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2021-03-05T08:04:48-07:00       *-->
+<!--*       on 2021-03-22T10:22:58-06:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -314,12 +314,12 @@ MathJax.Hub.Config({
 <span class="type">Worksheet</span> <span class="codenumber">11.1.1</span> <span class="title">Powers mod Powers</span>
 </h3>
 <section class="introduction" id="BlY"><p id="mda">Main Question: What is the remainder when you divide \(a^p\) by \(p\text{?}\)</p></section><article class="exercise exercise-like" id="hth"><h6 class="heading"><span class="codenumber">1<span class="period">.</span></span></h6>
-<p id="Skj">Compute \(a^p\) for various values of \(a\) and \(p\text{.}\)  What is your conjecture?</p></article><p id="WUc">Find the remainders when you perform the following divisions.  Try different values of \(a\text{.}\)</p>
+<p id="Skj">Compute \(a^p\) and its remainder when divided by \(p\text{,}\) for various values of \(a\) and \(p\text{.}\)  Everyone should do at least 5, and then share with the group.  As a group, discuss any patterns you see and form a conjecture.</p></article><p id="WUc">Find the remainders when you perform the following divisions.  Try different values of \(a\text{.}\)  You should first guess what the value is based on your conjecture and then verify (or refute) your guess.</p>
 <article class="exercise exercise-like" id="NAq"><h6 class="heading"><span class="codenumber">2<span class="period">.</span></span></h6>
 <p id="yrs">\(a^6\) divided by 10?</p></article><article class="exercise exercise-like" id="tHz"><h6 class="heading"><span class="codenumber">3<span class="period">.</span></span></h6>
 <p id="eyB">\(a^9\) divided by 15?</p></article><article class="exercise exercise-like" id="ZOI"><h6 class="heading"><span class="codenumber">4<span class="period">.</span></span></h6>
 <p id="KFK">\(a^{13}\) divided by 21?</p></article><article class="exercise exercise-like" id="FVR"><h6 class="heading"><span class="codenumber">5<span class="period">.</span></span></h6>
-<p id="qMT">\(a^{2321}\) divided by \(2419\text{?}\)</p></article></section><section class="worksheet" id="ACe"><h3 class="heading hide-type">
+<p id="qMT">\(a^{2321}\) divided by \(2419\text{?}\)</p></article><p id="p-2865">Discuss in your groups: how might we think about the main question here in terms of group theory?  What would we need to prove (about groups)?</p></section><section class="worksheet" id="ACe"><h3 class="heading hide-type">
 <span class="type">Worksheet</span> <span class="codenumber">11.1.2</span> <span class="title">Activity: Orders of Permutations</span>
 </h3>
 <section class="introduction" id="ptf"><p id="jDT">The <em class="emphasis">order</em> of an element \(g\) in a group \(G\) is the least natural number \(n\) such that \(g^n = e\text{,}\) if such a number exists (otherwise we say the order of \(g\) is infinite).</p></section><article class="exercise exercise-like" id="VAo"><h6 class="heading"><span class="codenumber">1<span class="period">.</span></span></h6>
@@ -329,15 +329,25 @@ MathJax.Hub.Config({
 \alpha = (12) \hspace{1in}\alpha = (123) \hspace{1in} \alpha = (1234) \hspace{1in} \alpha = (12345)
 \end{equation*}
 </div>
-<div class="solutions"></div></article><article class="exercise exercise-like" id="BHx"><h6 class="heading"><span class="codenumber">2<span class="period">.</span></span></h6>
+<div class="solutions">
+<a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-akh" id="akh"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-akh"><div class="solution solution-like"><p id="eUa">The orders are 2, 3, 4, and 5, respectively.</p></div></div>
+</div></article><article class="exercise exercise-like" id="BHx"><h6 class="heading"><span class="codenumber">2<span class="period">.</span></span></h6>
 <p id="vSl">Find an element of \(S_5\) that has an order different from those found above.</p>
-<div class="solutions"></div></article><article class="exercise exercise-like" id="hOG"><h6 class="heading"><span class="codenumber">3<span class="period">.</span></span></h6>
+<div class="solutions">
+<a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-Grq" id="Grq"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-Grq"><div class="solution solution-like"><p id="Lbj">We will need an element that is not just a cycle, since the longest cycle is of length 5.  So how about \((12)(345)\text{.}\)  This will have order 6.</p></div></div>
+</div></article><article class="exercise exercise-like" id="hOG"><h6 class="heading"><span class="codenumber">3<span class="period">.</span></span></h6>
 <p id="bZu">Let \(\alpha\) be an element of \(S_5\text{.}\)  What is \(\alpha^{120}\text{?}\)</p>
-<div class="solutions"></div></article><article class="exercise exercise-like" id="NVP"><h6 class="heading"><span class="codenumber">4<span class="period">.</span></span></h6>
+<div class="solutions">
+<a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-myz" id="myz"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-myz"><div class="solution solution-like"><p id="ris">No matter what element we pick, \(\alpha^{120}\) will always be \((1)\text{.}\)  This will work in general, but you can also see this by considering the orders of elements, which must all divide the size of the group.</p></div></div>
+</div></article><article class="exercise exercise-like" id="NVP"><h6 class="heading"><span class="codenumber">4<span class="period">.</span></span></h6>
 <p id="IgD">Is there an element in \(S_5\) that has order \(120\text{?}\)</p>
-<div class="solutions"></div></article><article class="exercise exercise-like" id="ucY"><h6 class="heading"><span class="codenumber">5<span class="period">.</span></span></h6>
+<div class="solutions">
+<a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-SFI" id="SFI"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-SFI"><div class="solution solution-like"><p id="XpB">No there is not.  If there were, this would say that \(S_5\) was cyclic, and would thus be abelian, which we know is not the case.  Alternatively, just look at how to write elements as disjoint cycles.</p></div></div>
+</div></article><article class="exercise exercise-like" id="ucY"><h6 class="heading"><span class="codenumber">5<span class="period">.</span></span></h6>
 <p id="onM">What is the largest order of any element in \(S_5\text{?}\)</p>
-<div class="solutions"></div></article></section><section class="subsection" id="Oct"><h3 class="heading hide-type">
+<div class="solutions">
+<a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-yMR" id="yMR"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-yMR"><div class="solution solution-like"><p id="DwK">The largest order will be 6, for elements that are the disjoint product of a 2-cycle and 3-cycle.</p></div></div>
+</div></article></section><section class="subsection" id="Oct"><h3 class="heading hide-type">
 <span class="type">Subsection</span> <span class="codenumber">11.1.3</span> <span class="title">Cyclic Subgroups</span>
 </h3>
 <p id="Eni">Often a subgroup will depend entirely on a single element of the group; that is, knowing that particular element will allow us to compute any other element in the subgroup.</p>

@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2021-03-05T08:11:02-07:00       *-->
+<!--*       on 2021-03-22T10:28:03-06:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -15,21 +15,27 @@
 </head>
 <body>
 <h6 xmlns:svg="http://www.w3.org/2000/svg" class="heading"><span class="type">Paragraph</span></h6>
-<p>Let \(\alpha_1, \ldots, \alpha_n\) be elements in a field \(F\) with \(n \geq 2\text{.}\) Then</p>
+<p>If we factor \(x^7 - 1\) into irreducible components, we have</p>
 <div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
 \begin{equation*}
-\det
-\begin{pmatrix}
-1              &amp; 1              &amp; \cdots &amp; 1 \\
-\alpha_1       &amp; \alpha_2       &amp; \cdots &amp; \alpha_n \\
-\alpha_1^2     &amp; \alpha_2^2     &amp; \cdots &amp; \alpha_n^2 \\
-\vdots         &amp; \vdots         &amp; \ddots &amp; \vdots \\
-\alpha_1^{n-1} &amp; \alpha_2^{n-1} &amp; \cdots &amp; \alpha_n^{n-1} 
-\end{pmatrix}
-= \prod_{1 \leq j \lt i \leq n} (\alpha_i - \alpha_j)\text{.}
+x^7 - 1 = (1 + x)(1 + x + x^3)(1+ x^2 + x^3)\text{.}
 \end{equation*}
 </div>
-<p class="continuation">In particular, if the \(\alpha_i\)'s are distinct, then the determinant is nonzero.</p>
-<span class="incontext"><a href="section-poly-codes.html#bGY">in-context</a></span>
+<p class="continuation">We see that \(g(t) = (1 + t + t^3)\) generates an ideal \(C\) in \(R_7\text{.}\) This code is a \((7, 4)\)-block code. As in <a class="xref" data-knowl="./knowl/example-finite-generator-63-code.html" title="Example 17.15">Example 17.15</a>, it is easy to calculate a generator matrix by examining what \(g(t)\) does to the polynomials 1, \(t\text{,}\) \(t^2\text{,}\) and \(t^3\text{.}\) A generator matrix for \(C\) is</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{equation*}
+G =
+\begin{pmatrix}
+1 &amp; 0 &amp; 0 &amp; 0 \\
+1 &amp; 1 &amp; 0 &amp; 0 \\
+0 &amp; 1 &amp; 1 &amp; 0 \\
+1 &amp; 0 &amp; 1 &amp; 1 \\
+0 &amp; 1 &amp; 0 &amp; 1 \\
+0 &amp; 0 &amp; 1 &amp; 0 \\
+0 &amp; 0 &amp; 0 &amp; 1
+\end{pmatrix}\text{.}
+\end{equation*}
+</div>
+<span class="incontext"><a href="section-poly-codes.html#ETB">in-context</a></span>
 </body>
 </html>

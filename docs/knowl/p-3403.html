@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2021-03-05T08:10:36-07:00       *-->
+<!--*       on 2021-03-22T10:27:41-06:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -15,38 +15,36 @@
 </head>
 <body>
 <h6 xmlns:svg="http://www.w3.org/2000/svg" class="heading"><span class="type">Paragraph</span></h6>
-<p>We simply need to find all of the finite subgroups \(G\) of \(E(2)\text{.}\) Any finite symmetry group \(G\) in \({\mathbb R}^2\) must fix the origin  and must be a finite subgroup of \(O(2)\text{,}\) since translations and glide reflections have infinite order. By <a class="xref" data-knowl="./knowl/example-o2.html" title="Example 15.10">Example 15.10</a>, elements in \(O(2)\) are either rotations of the form</p>
+<p>Let \(f\) be an isometry in \({\mathbb R}^2\) fixing the origin. We will first show that \(f\) preserves inner products. Since \(f(0) = 0\text{,}\) \(\| f({\mathbf x})\| = \| {\mathbf x} \|\text{;}\) therefore,</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{align*}
+\| {\mathbf x} \|^2 - 2 \langle f({\mathbf x}), f({\mathbf y}) \rangle + \| {\mathbf y} \|^2  &amp; = \| f({\mathbf x}) \|^2 - 2 \langle f({\mathbf x}), f({\mathbf y}) \rangle + \| f({\mathbf y}) \|^2\\
+&amp; = \langle f({\mathbf x}) -  f({\mathbf y}), f({\mathbf x}) - f({\mathbf y}) \rangle\\
+&amp; = \| f({\mathbf x}) - f({\mathbf y}) \|^2\\
+&amp; = \| {\mathbf x} - {\mathbf y} \|^2\\
+&amp; = \langle {\mathbf x} - {\mathbf y}, {\mathbf x} - {\mathbf y} \rangle\\
+&amp; = \| {\mathbf x} \|^2 - 2 \langle {\mathbf x}, {\mathbf y} \rangle + \| {\mathbf y} \|^2\text{.}
+\end{align*}
+</div>
+<p class="continuation">Consequently,</p>
 <div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
 \begin{equation*}
-R_{\theta}
-=
-\begin{pmatrix}
-\cos \theta &amp; - \sin \theta \\
-\sin \theta &amp; \cos \theta
-\end{pmatrix}
+\langle f({\mathbf x}), f({\mathbf y}) \rangle = \langle {\mathbf x}, {\mathbf y} \rangle\text{.}
 \end{equation*}
 </div>
-<p class="continuation">or reflections of the form</p>
+<p class="continuation">Now let \({\mathbf e}_1\) and \({\mathbf e_2}\) be \((1, 0)^\transpose\) and \((0, 1)^\transpose\text{,}\) respectively. If</p>
 <div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
 \begin{equation*}
-T_{\phi}
-=
-\begin{pmatrix}
-\cos \phi &amp;  - \sin \phi \\
-\sin \phi &amp; \cos \phi
-\end{pmatrix}
-\begin{pmatrix}
-1 &amp; 0 \\
-0 &amp; -1
-\end{pmatrix}
-=
-\begin{pmatrix}
-\cos \phi &amp;  \sin \phi \\
-\sin \phi &amp; - \cos \phi
-\end{pmatrix}\text{.}
+{\mathbf x} = (x_1, x_2) = x_1 {\mathbf e}_1 + x_2 {\mathbf e}_2\text{,}
 \end{equation*}
 </div>
-<p class="continuation">Notice that \(\det(R_{\theta})=1\text{,}\) \(\det(T_{\phi})=-1\text{,}\) and \(T_{\phi}^2=I\text{.}\) We can divide the proof up into two cases. In the first case, all of the elements in \(G\) have determinant one. In the second case, there exists at least one element in \(G\) with determinant \(-1\text{.}\)</p>
-<span class="incontext"><a href="section-symmetry.html#CpH">in-context</a></span>
+<p class="continuation">then</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{equation*}
+f({\mathbf x}) = \langle f({\mathbf x}), f({\mathbf e}_1) \rangle f({\mathbf e}_1) + \langle f({\mathbf x}), f({\mathbf e}_2) \rangle f({\mathbf e}_2) = x_1 f({\mathbf e}_1)+x_2 f({\mathbf e}_2)\text{.}
+\end{equation*}
+</div>
+<p class="continuation">The linearity of \(f\) easily follows.</p>
+<span class="incontext"><a href="section-symmetry.html#qbp">in-context</a></span>
 </body>
 </html>

@@ -11,16 +11,16 @@
 
 
 
-<exercise workspace="50%" permid="hth">
+<exercise workspace="35%" permid="hth">
   <statement>
     <p permid="Skj">
-      Compute <m>a^p</m> for various values of <m>a</m> and <m>p</m>.  What is your conjecture?
+      Compute <m>a^p</m> and its remainder when divided by <m>p</m>, for various values of <m>a</m> and <m>p</m>.  Everyone should do at least 5, and then share with the group.  As a group, discuss any patterns you see and form a conjecture.
     </p>
   </statement>
 </exercise>
 
 <p permid="WUc">
-  Find the remainders when you perform the following divisions.  Try different values of <m>a</m>.  
+  Find the remainders when you perform the following divisions.  Try different values of <m>a</m>.  You should first guess what the value is based on your conjecture and then verify (or refute) your guess.
 </p>
 <exercise workspace="5%" permid="NAq">
           <p permid="yrs">
@@ -37,10 +37,13 @@
             <m>a^{13}</m> divided by 21?
           </p>
 </exercise>
-<exercise workspace="1%" permid="FVR">
+<exercise workspace="4%" permid="FVR">
           <p permid="qMT">
             <m>a^{2321}</m> divided by <m>2419</m>?
           </p>
 </exercise>
 
+<p>
+  Discuss in your groups: how might we think about the main question here in terms of group theory?  What would we need to prove (about groups)?
+</p>
 </worksheet>
