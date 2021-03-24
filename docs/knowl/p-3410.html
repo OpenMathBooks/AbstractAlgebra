@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2021-03-22T10:27:42-06:00       *-->
+<!--*       on 2021-03-24T14:34:08-06:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -15,19 +15,38 @@
 </head>
 <body>
 <h6 xmlns:svg="http://www.w3.org/2000/svg" class="heading"><span class="type">Paragraph</span></h6>
-<p>The group \(G\) contains a reflection \(T\text{.}\) The kernel of the homomorphism \(\phi : G \rightarrow \{-1, 1\}\) given by \(A \mapsto \det(A)\) consists of elements whose determinant is 1. Therefore, \(|G/ \ker \phi|=2\text{.}\) We know that the kernel is cyclic by the first case and is a subgroup of \(G\) of, say, order \(n\text{.}\) Hence, \(|G| = 2n\text{.}\) The elements of \(G\) are</p>
+<p>We simply need to find all of the finite subgroups \(G\) of \(E(2)\text{.}\) Any finite symmetry group \(G\) in \({\mathbb R}^2\) must fix the origin  and must be a finite subgroup of \(O(2)\text{,}\) since translations and glide reflections have infinite order. By <a class="xref" data-knowl="./knowl/example-o2.html" title="Example 15.10">Example 15.10</a>, elements in \(O(2)\) are either rotations of the form</p>
 <div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
 \begin{equation*}
-R_{\theta}, \ldots, R_{\theta}^{n-1},  TR_{\theta}, \ldots, TR_{\theta}^{n-1}\text{.}
+R_{\theta}
+=
+\begin{pmatrix}
+\cos \theta &amp; - \sin \theta \\
+\sin \theta &amp; \cos \theta
+\end{pmatrix}
 \end{equation*}
 </div>
-<p class="continuation">These elements satisfy the relation</p>
+<p class="continuation">or reflections of the form</p>
 <div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
 \begin{equation*}
-TR_{\theta}T = R_{\theta}^{-1}\text{.}
+T_{\phi}
+=
+\begin{pmatrix}
+\cos \phi &amp;  - \sin \phi \\
+\sin \phi &amp; \cos \phi
+\end{pmatrix}
+\begin{pmatrix}
+1 &amp; 0 \\
+0 &amp; -1
+\end{pmatrix}
+=
+\begin{pmatrix}
+\cos \phi &amp;  \sin \phi \\
+\sin \phi &amp; - \cos \phi
+\end{pmatrix}\text{.}
 \end{equation*}
 </div>
-<p class="continuation">Consequently, \(G\) must be isomorphic to \(D_n\) in this case.</p>
-<span class="incontext"><a href="section-symmetry.html#ODZ">in-context</a></span>
+<p class="continuation">Notice that \(\det(R_{\theta})=1\text{,}\) \(\det(T_{\phi})=-1\text{,}\) and \(T_{\phi}^2=I\text{.}\) We can divide the proof up into two cases. In the first case, all of the elements in \(G\) have determinant one. In the second case, there exists at least one element in \(G\) with determinant \(-1\text{.}\)</p>
+<span class="incontext"><a href="section-symmetry.html#CpH">in-context</a></span>
 </body>
 </html>

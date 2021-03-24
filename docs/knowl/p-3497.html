@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2021-03-22T10:27:48-06:00       *-->
+<!--*       on 2021-03-24T14:34:14-06:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -15,7 +15,7 @@
 </head>
 <body>
 <h6 xmlns:svg="http://www.w3.org/2000/svg" class="heading"><span class="type">Paragraph</span></h6>
-<p xmlns:svg="http://www.w3.org/2000/svg">Suppose \(d_{\min} \geq 3\text{.}\) Then the maximum-likelihood decoding scheme corrects all single errors. Starting with a codeword \({\mathbf x}\text{,}\) an error in the transmission of a single bit gives \({\mathbf y}\) with \(d({\mathbf x}, {\mathbf y}) = 1\text{,}\) but \(d({\mathbf z}, {\mathbf y}) \geq 2\) for any other codeword \({\mathbf z} \neq {\mathbf x}\text{.}\) If we do not require the correction of errors, then we can detect multiple errors when a code has a minimum distance that is greater than or equal to \(3\text{.}\)</p>
-<span class="incontext"><a href="section-error-detecting-correcting-codes.html#IKJ">in-context</a></span>
+<p xmlns:svg="http://www.w3.org/2000/svg">Suppose that \({\mathbf x} = (1101)\) and \({\mathbf y} = (1100)\) are codewords in some code. If we transmit \((1101)\) and an error occurs in the rightmost bit, then (1100) will be received. Since \((1100)\) is a codeword, the decoder will decode \((1100)\) as the transmitted message. This code is clearly not very appropriate for error detection. The problem is that \(d({\mathbf x}, {\mathbf y}) = 1\text{.}\) If \({\mathbf x} = (1100)\) and \({\mathbf y} = (1010)\) are codewords, then \(d({\mathbf x}, {\mathbf y}) = 2\text{.}\) If \({\mathbf x}\) is transmitted and a single error occurs, then \({\mathbf y}\) can never be received. <a class="xref" data-knowl="./knowl/table-4-bit-words.html" title="Table 16.12: Distances between 4-bit codewords">Table 16.12</a> gives the distances between all 4-bit codewords in which the first three bits carry information and the fourth is an even parity check bit. We can see that the minimum distance here is \(2\text{;}\) hence, the code is suitable as a single error-detecting code.</p>
+<span class="incontext"><a href="section-error-detecting-correcting-codes.html#wwr">in-context</a></span>
 </body>
 </html>

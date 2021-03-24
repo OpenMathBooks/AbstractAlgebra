@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2021-03-22T10:27:17-06:00       *-->
+<!--*       on 2021-03-24T14:33:46-06:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -15,7 +15,27 @@
 </head>
 <body>
 <h6 xmlns:svg="http://www.w3.org/2000/svg" class="heading"><span class="type">Paragraph</span></h6>
-<p xmlns:svg="http://www.w3.org/2000/svg">Frequency analysis can still be performed on a polyalphabetic cryptosystem, because we have a good understanding of how pairs of letters appear in the English language. The pair <em class="emphasis">th</em> appears quite often; the pair <em class="emphasis">qz</em> never appears. To avoid decryption by a third party, we must use a larger matrix than the one we used in <a class="xref" data-knowl="./knowl/example-crypt-help.html" title="Example 12.4">Example 12.4</a>.</p>
-<span class="incontext"><a href="section-private-key-crypt.html#kkz">in-context</a></span>
+<p>A cryptosystem would be more secure if a ciphertext letter could represent more than one plaintext letter. To give an example of this type of cryptosystem, called a <dfn xmlns:svg="http://www.w3.org/2000/svg" class="terminology">polyalphabetic cryptosystem</dfn>, we will generalize affine codes by using matrices. The idea works roughly the same as before; however, instead of encrypting one letter at a time we will encrypt pairs of letters. We can store a pair of letters \(p_1\) and \(p_2\) in a vector</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{equation*}
+{\mathbf p} = 
+\begin{pmatrix}
+p_1 \\ p_2
+\end{pmatrix}\text{.}
+\end{equation*}
+</div>
+<p class="continuation">Let \(A\) be a \(2 \times 2\) invertible matrix with entries in \({\mathbb Z}_{26}\text{.}\) We can define an encoding function by</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{equation*}
+f({\mathbf p}) = A {\mathbf p} + {\mathbf b}\text{,}
+\end{equation*}
+</div>
+<p class="continuation">where \({\mathbf b}\) is a fixed column vector and matrix operations are performed in \({\mathbb Z}_{26}\text{.}\) The decoding function must be</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{equation*}
+f^{-1}({\mathbf p}) = A^{-1} {\mathbf p} - A^{-1} {\mathbf b}\text{.}
+\end{equation*}
+</div>
+<span class="incontext"><a href="section-private-key-crypt.html#Edq">in-context</a></span>
 </body>
 </html>

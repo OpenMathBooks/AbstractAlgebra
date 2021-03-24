@@ -341,5 +341,7 @@
           </p>
         </example>
       </subsection>
+
+      <xi:include href="exercises/groups-order-collected.ptx" />
     </section>
 

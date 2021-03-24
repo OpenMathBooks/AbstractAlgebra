@@ -43,6 +43,7 @@
 \def\C{\mathbb{C}}
 \newcommand{\st}{:}
 \newcommand{\inv}{^{-1}}
+\DeclareMathOperator{\ord}{ord} 
 \newcommand{\bC}{\mathbb{C}}
       \newcommand{\F}{\mathscr{F}}
       \newcommand{\FR}{\mathscr{F}(\R)}

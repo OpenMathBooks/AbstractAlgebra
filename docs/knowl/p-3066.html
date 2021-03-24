@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2021-03-22T10:27:17-06:00       *-->
+<!--*       on 2021-03-24T14:33:46-06:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -15,7 +15,19 @@
 </head>
 <body>
 <h6 xmlns:svg="http://www.w3.org/2000/svg" class="heading"><span class="type">Paragraph</span></h6>
-<p xmlns:svg="http://www.w3.org/2000/svg">The period after World War I saw the development of special-purpose machines for encrypting and decrypting messages, and mathematicians were very active in cryptography during World War II. Efforts to penetrate the cryptosystems of the Axis nations were organized in England and in the United States by such notable mathematicians as Alan Turing and A. A. Albert. The Allies gained a tremendous advantage in World War II by breaking the ciphers produced by the German Enigma machine and the Japanese Purple ciphers.</p>
-<span class="incontext"><a href="section-public-key-crypt.html#oky">in-context</a></span>
+<p>There is a problem of message verification in public key cryptosystems. Since the encoding key is public knowledge, anyone has the ability to send an encoded message. If Alice receives a message from Bob, she would like to be able to verify that it was Bob who actually sent the message. Suppose that Bob's encrypting key is \((n', E')\) and his decrypting key is \((n', D')\text{.}\) Also, suppose that Alice's encrypting key is \((n, E)\) and her decrypting key is \((n, D)\text{.}\) Since encryption keys are public information, they can exchange coded messages at their convenience. Bob wishes to assure Alice that the message he is sending is authentic. Before Bob sends the message \(x\) to Alice, he decrypts  \(x\) with his own key:</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{equation*}
+x' = x ^{D'} \bmod n'\text{.}
+\end{equation*}
+</div>
+<p class="continuation">Anyone can change \(x'\) back to \(x\) just by encryption, but only Bob has the ability to form \(x'\text{.}\) Now Bob encrypts \(x'\) with Alice's encryption key to form</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{equation*}
+y' = {x'}^E  \bmod n\text{,}
+\end{equation*}
+</div>
+<p class="continuation">a message that only Alice can decode. Alice decodes the message and then encodes the result with Bob's key to read the original message, a message that could have only been sent by Bob.</p>
+<span class="incontext"><a href="section-public-key-crypt.html#bWg">in-context</a></span>
 </body>
 </html>

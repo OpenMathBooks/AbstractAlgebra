@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<exercises xmlns:xi="http://www.w3.org/2001/XInclude" xml:id="homework-groups-order">
+  
+    <title>Collected Homework</title>
+
+    <exercise>
+      <introduction>
+        <p>
+          Prove the following basic facts about orders of elements.  None of these are particularly difficult, so you should focus on writing nice, clean proofs.  In each of the following, <m>a</m> is an element of a group <m>G</m>.
+        </p>
+      </introduction>
+      <task>
+        <p>
+          If <m>\ord(a) = n</m>, then for any <m>n \lt n</m>, the inverse of <m>a^r</m> is <m>a^{n-r}</m>.  That is, <m>(a^r)\inv = a^{n-r}</m>.
+        </p>
+      </task>
+      <task>
+        <statement>
+          <p>
+            The order of <m>a\inv</m> is the same as the order of <m>a</m>.
+          </p>
+        </statement>
+        <hint>
+          <p>
+            Careful: it is not enough to say that <m>(a\inv)^n = e</m> (where <m>\ord(a) = n</m>).  That is only half of it, since you must also show that no smaller power of <m>a\inv</m> is the identity.
+          </p>
+        </hint>
+      </task>
+      <task>
+        <statement>
+          <p>
+            If <m>a^k = e</m> where <m>k</m> is odd, then the order of <m>a</m> is odd.
+          </p>
+        </statement>          
+      </task>
+      <task>
+        <p>
+          If <m>a \ne e</m> and <m>a^p = e</m> where <m>p</m> is prime, then <m>\ord(a) = p</m>.
+        </p>
+      </task>
+    </exercise>
+  </exercises>

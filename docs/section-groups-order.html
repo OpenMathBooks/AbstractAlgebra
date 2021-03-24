@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2021-03-22T10:22:58-06:00       *-->
+<!--*       on 2021-03-24T14:29:09-06:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -78,6 +78,7 @@ MathJax.Hub.Config({
 \def\C{\mathbb{C}}
 \newcommand{\st}{:}
 \newcommand{\inv}{^{-1}}
+\DeclareMathOperator{\ord}{ord} 
 \newcommand{\bC}{\mathbb{C}}
       \newcommand{\F}{\mathscr{F}}
       \newcommand{\FR}{\mathscr{F}(\R)}
@@ -465,7 +466,19 @@ a^k = a^{ns} = (a^n)^s = e^s = e\text{.}
 10 \cdot 9 &amp; =  10 &amp; 11 \cdot 9 &amp; = 3  &amp; 12 \cdot 9 &amp;  = 12\\
 13 \cdot 9 &amp; =  5 &amp; 14 \cdot 9 &amp; = 14 &amp;  15 \cdot 9 &amp; = 7\text{.}
 \end{align*}
-</div></article></section></section></div></main>
+</div></article></section><section class="exercises" id="homework-groups-order"><h3 class="heading hide-type">
+<span class="type">Exercises</span> <span class="codenumber">11.1.5</span> <span class="title">Collected Homework</span>
+</h3>
+<article class="exercise exercise-like" id="exercise-749"><h6 class="heading"><span class="codenumber">1<span class="period">.</span></span></h6>
+<div class="introduction" id="introduction-54"><p id="p-2902">Prove the following basic facts about orders of elements.  None of these are particularly difficult, so you should focus on writing nice, clean proofs.  In each of the following, \(a\) is an element of a group \(G\text{.}\)</p></div>
+<article class="task exercise-like" id="task-20"><h6 class="heading"><span class="codenumber">(a)</span></h6>
+<p id="p-2903">If \(\ord(a) = n\text{,}\) then for any \(n \lt n\text{,}\) the inverse of \(a^r\) is \(a^{n-r}\text{.}\)  That is, \((a^r)\inv = a^{n-r}\text{.}\)</p></article><article class="task exercise-like" id="task-21"><h6 class="heading"><span class="codenumber">(b)</span></h6>
+<p id="p-2904">The order of \(a\inv\) is the same as the order of \(a\text{.}\)</p>
+<div class="solutions">
+<a data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-161" id="hint-161"><span class="type">Hint</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-161"><div class="hint solution-like"><p id="p-2905">Careful: it is not enough to say that \((a\inv)^n = e\) (where \(\ord(a) = n\)).  That is only half of it, since you must also show that no smaller power of \(a\inv\) is the identity.</p></div></div>
+</div></article><article class="task exercise-like" id="task-22"><h6 class="heading"><span class="codenumber">(c)</span></h6>
+<p id="p-2906">If \(a^k = e\) where \(k\) is odd, then the order of \(a\) is odd.</p></article><article class="task exercise-like" id="task-23"><h6 class="heading"><span class="codenumber">(d)</span></h6>
+<p id="p-2907">If \(a \ne e\) and \(a^p = e\) where \(p\) is prime, then \(\ord(a) = p\text{.}\)</p></article></article></section></section></div></main>
 </div>
 <script src="https://unpkg.com/prismjs@v1.22.0/components/prism-core.min.js"></script><script src="https://unpkg.com/prismjs@v1.22.0/plugins/autoloader/prism-autoloader.min.js"></script>
 </body>

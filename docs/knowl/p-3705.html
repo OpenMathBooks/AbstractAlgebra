@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2021-03-22T10:28:04-06:00       *-->
+<!--*       on 2021-03-24T14:34:29-06:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -15,13 +15,63 @@
 </head>
 <body>
 <h6 xmlns:svg="http://www.w3.org/2000/svg" class="heading"><span class="type">Paragraph</span></h6>
-<p>The idea behind <abbr xmlns:svg="http://www.w3.org/2000/svg" class="acronym">BCH</abbr> codes is to choose a generator polynomial of smallest degree that has the largest error detection and error correction  capabilities. Let \(d = 2r + 1\) for some \(r \geq 0\text{.}\) Suppose that \(\omega\) is a primitive \(n\)th root of unity over \({\mathbb Z}_2\text{,}\) and let \(m_i(x)\) be the minimal polynomial over \({\mathbb Z}_2\) of \(\omega^i\text{.}\) If</p>
+<p>Suppose that</p>
 <div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
 \begin{equation*}
-g(x) = \lcm[ m_1(x), m_{2}(x), \ldots, m_{2r}(x)]\text{,}
+g( \omega^r) = g(\omega^{r + 1}) = \cdots = g( \omega^{r + s - 1}) = 0\text{.}
 \end{equation*}
 </div>
-<p class="continuation">then the cyclic code \(\langle g(t) \rangle\) in \(R_n\) is called the <dfn xmlns:svg="http://www.w3.org/2000/svg" class="terminology"><abbr class="acronym">BCH</abbr> code of length</dfn> \(n\) <dfn xmlns:svg="http://www.w3.org/2000/svg" class="terminology">and distance</dfn> \(d\text{.}\) By <a class="xref" data-knowl="./knowl/theorem-min-dist-cyclic-code.html" title="Theorem 17.21">Theorem 17.21</a>, the minimum distance of \(C\) is at least \(d\text{.}\)</p>
-<span class="incontext"><a href="section-poly-codes.html#JhV">in-context</a></span>
+<p class="continuation">Let \(f(x)\) be some polynomial in \(C\) with \(s\) or fewer nonzero coefficients. We can assume that</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{equation*}
+f(x) = a_{i_0} x^{i_0} + a_{i_1} x^{i_1} + \cdots + a_{i_{s - 1}} x^{i_{s - 1}}
+\end{equation*}
+</div>
+<p class="continuation">be some polynomial in \(C\text{.}\) It will suffice to show that all of the \(a_i\)'s must be 0. Since</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{equation*}
+g( \omega^r) = g(\omega^{r + 1}) = \cdots = g( \omega^{r + s - 1}) = 0
+\end{equation*}
+</div>
+<p class="continuation">and \(g(x)\) divides \(f(x)\text{,}\)</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{equation*}
+f( \omega^r) = f(\omega^{r + 1}) = \cdots = f( \omega^{r + s - 1}) = 0\text{.}
+\end{equation*}
+</div>
+<p class="continuation">Equivalently, we have the following system of equations:</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{align*}
+a_{i_0} (\omega^r)^{i_0} + a_{i_1} (\omega^r)^{i_1} + \cdots + a_{i_{s - 1}} (\omega^r)^{i_{s - 1}} &amp; = 0\\
+a_{i_0} (\omega^{r + 1})^{i_0} + a_{i_1} (\omega^{r + 1})^{i_2} + \cdots + a_{i_{s-1}} (\omega^{r+1})^{i_{s-1}} &amp; = 0\\
+&amp; \vdots\\
+a_{i_0} (\omega^{r + s - 1})^{i_0} + a_{i_1} (\omega^{r + s - 1})^{i_1} + \cdots + a_{i_{s - 1}} (\omega^{r + s - 1})^{i_{s - 1}} &amp; = 0\text{.}
+\end{align*}
+</div>
+<p class="continuation">Therefore, \((a_{i_0}, a_{i_1}, \ldots,
+a_{i_{s - 1}})\) is a solution to the homogeneous system of linear equations</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{align*}
+(\omega^{i_0})^r x_0 + (\omega^{i_1})^r x_1 + \cdots + (\omega^{i_{s - 1}})^r x_{n - 1} &amp; = 0\\
+(\omega^{i_0})^{r + 1} x_0 + (\omega^{i_1})^{r + 1} x_1 + \cdots + (\omega^{i_{s - 1}})^{r + 1} x_{n - 1} &amp; = 0\\
+&amp; \vdots\\
+(\omega^{i_0})^{r + s - 1} x_0 + (\omega^{i_1})^{r + s - 1} x_1 + \cdots + (\omega^{i_{s - 1}})^{r + s - 1} x_{n - 1} &amp; = 0\text{.}
+\end{align*}
+</div>
+<p class="continuation">However, this system has a unique solution, since the determinant of the matrix</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{equation*}
+\begin{pmatrix}
+(\omega^{i_0})^r &amp; (\omega^{i_1})^r &amp; \cdots &amp; (\omega^{i_{s-1}})^r \\
+(\omega^{i_0})^{r+1} &amp; (\omega^{i_1})^{r+1} &amp; \cdots &amp;
+(\omega^{i_{s-1}})^{r+1} \\
+\vdots &amp; \vdots         &amp; \ddots &amp; \vdots \\
+(\omega^{i_0})^{r+s-1} &amp; (\omega^{i_1})^{r+s-1} &amp; \cdots &amp;
+(\omega^{i_{s-1}})^{r+s-1} 
+\end{pmatrix}
+\end{equation*}
+</div>
+<p class="continuation">can be shown to be nonzero using <a class="xref" data-knowl="./knowl/lemma-vandermode-det.html" title="Lemma 17.20">Lemma 17.20</a> and the basic properties of determinants (Exercise). Therefore, this solution must be \(a_{i_0} = a_{i_1} = \cdots = a_{i_{s - 1}} = 0\text{.}\)</p>
+<span class="incontext"><a href="section-poly-codes.html#NDt">in-context</a></span>
 </body>
 </html>

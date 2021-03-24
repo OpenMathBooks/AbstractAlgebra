@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2021-03-22T10:27:47-06:00       *-->
+<!--*       on 2021-03-24T14:34:13-06:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -15,7 +15,7 @@
 </head>
 <body>
 <h6 xmlns:svg="http://www.w3.org/2000/svg" class="heading"><span class="type">Paragraph</span></h6>
-<p xmlns:svg="http://www.w3.org/2000/svg">The coding scheme presented in <a class="xref" data-knowl="./knowl/example-algcodes-nearest.html" title="Example 16.4">Example 16.4</a> is not a complete solution to the problem because it does not account for the possibility of multiple errors. For example, either a (000) or a (111) could be sent and a (001) received. We have no means of deciding from the received word whether there was a single error in the third bit or two errors, one in the first bit and one in the second. No matter what coding scheme is used, an incorrect message could be received. We could transmit a (000), have errors in all three bits, and receive the codeword (111). It is important to make explicit assumptions about the likelihood and distribution of transmission errors so that, in a particular application, it will be known whether a given error detection scheme is appropriate. We will assume that transmission errors are rare, and, that when they do occur, they occur independently in each bit; that is, if \(p\) is the probability of an error in one bit and \(q\) is the probability of an error in a different bit, then the probability of errors occurring in both of these bits at the same time is \(pq\text{.}\) We will also assume that a received \(n\)-tuple is decoded into a codeword that is closest to it; that is, we assume that the receiver uses <dfn class="terminology">maximum-likelihood decoding</dfn>.  <a class="fn-knowl original" data-knowl="./knowl/fn-6-hidden.html" title="Footnote 2"><sup> 2 </sup></a></p>
-<span class="incontext"><a href="section-error-detecting-correcting-codes.html#fyg">in-context</a></span>
+<p xmlns:svg="http://www.w3.org/2000/svg">Suppose that our original message is either a \(0\) or a \(1\text{,}\) and that \(0\) encodes to \((000)\) and \(1\) encodes to \((111)\text{.}\) If only a single error occurs during transmission, we can detect and correct the error. For example, if a \((101)\) is received, then the second bit must have been changed from a \(1\) to a \(0\text{.}\) The originally transmitted codeword must have been \((111)\text{.}\) This method will detect and correct all single errors.</p>
+<span class="incontext"><a href="section-error-detecting-correcting-codes.html#KlB">in-context</a></span>
 </body>
 </html>

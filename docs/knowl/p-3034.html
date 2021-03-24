@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2021-03-22T10:27:17-06:00       *-->
+<!--*       on 2021-03-24T14:33:45-06:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -15,7 +15,26 @@
 </head>
 <body>
 <h6 xmlns:svg="http://www.w3.org/2000/svg" class="heading"><span class="type">Paragraph</span></h6>
-<p xmlns:svg="http://www.w3.org/2000/svg">Let \(G\) be a finite abelian \(p\)-group and suppose that \(g \in G\) has maximal order. Then \(G\) is isomorphic to \(\langle g \rangle \times H\) for some subgroup \(H\) of \(G\text{.}\)</p>
-<span class="incontext"><a href="section-finite-abelian-groups.html#ucb">in-context</a></span>
+<p>Next, we must show that it possible to write every \(g \in G\) as a product \(g_1 \cdots g_k\text{,}\) where \(g_i \in G_i\text{.}\) Since the order of \(g\) divides the order of \(G\text{,}\) we know that</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{equation*}
+|g| = p_1^{\beta_1}  p_2^{\beta_2} \cdots p_k^{\beta_k}
+\end{equation*}
+</div>
+<p class="continuation">for some integers \(\beta_1, \ldots, \beta_k\text{.}\) Letting \(a_i = |g| / p_i^{\beta_i}\text{,}\) the \(a_i\)'s are relatively prime; hence, there exist integers \(b_1, \ldots,
+b_k\) such that \(a_1 b_1 + \cdots + a_k b_k = 1\text{.}\) Consequently,</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{equation*}
+g = g^{a_1 b_1 + \cdots + a_k b_k} = g^{a_1 b_1} \cdots  g^{a_k b_k}\text{.}
+\end{equation*}
+</div>
+<p class="continuation">Since</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{equation*}
+g^{(a_i b_i ) p_i^{\beta_i}} = g^{b_i |g|} = e\text{,}
+\end{equation*}
+</div>
+<p class="continuation">it follows that \(g^{a_i b_i}\) must be in \(G_{i}\text{.}\) Let \(g_i = g^{a_i b_i}\text{.}\) Then \(g = g_1 \cdots g_k \in G_1 G_2 \cdots G_k\text{.}\) Therefore, \(G = G_1 G_2 \cdots G_k\) is an internal direct product of subgroups.</p>
+<span class="incontext"><a href="section-finite-abelian-groups.html#smO">in-context</a></span>
 </body>
 </html>
