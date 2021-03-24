@@ -12,7 +12,7 @@
       </introduction>
       <task>
         <p>
-          If <m>\ord(a) = n</m>, then for any <m>n \lt n</m>, the inverse of <m>a^r</m> is <m>a^{n-r}</m>.  That is, <m>(a^r)\inv = a^{n-r}</m>.
+          If <m>\ord(a) = n</m>, then for any <m>r \lt n</m>, the inverse of <m>a^r</m> is <m>a^{n-r}</m>.  That is, <m>(a^r)\inv = a^{n-r}</m>.
         </p>
       </task>
       <task>
