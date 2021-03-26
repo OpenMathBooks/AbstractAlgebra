@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2021-03-24T14:46:48-06:00       *-->
+<!--*       on 2021-03-25T19:24:04-06:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -15,18 +15,18 @@
 </head>
 <body>
 <h6 xmlns:svg="http://www.w3.org/2000/svg" class="heading"><span class="type">Paragraph</span></h6>
-<p>Let \({\mathbf x} = (10101)\text{,}\) \({\mathbf y} = (11010)\text{,}\) and \({\mathbf z} = (00011)\) be all of the codewords in some code \(C\text{.}\) Then we have the following Hamming distances:</p>
+<p>Fix \(k\) different coordinates. We first compute the probability that an error has occurred in this fixed set of coordinates. The probability of an error occurring in a particular one of these \(k\) coordinates is \(q\text{;}\) the probability that an error will not occur in any of the remaining \(n-k\) coordinates is \(p\text{.}\) The probability of each of these \(n\) independent events is \(q^{k}p^{n-k}\text{.}\) The number of possible error patterns with exactly \(k\) errors occurring is equal to</p>
 <div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
 \begin{equation*}
-d({\mathbf x},{\mathbf y}) = 4, \qquad d({\mathbf x},{\mathbf z}) = 3, \qquad d({\mathbf y},{\mathbf z}) = 3\text{.}
+\binom{n}{k}  = \frac{n!}{k!(n - k)!}\text{,}
 \end{equation*}
 </div>
-<p class="continuation">The minimum distance  for this code is 3. We also have the following weights:</p>
+<p class="continuation">the number of combinations of \(n\) things taken \(k\) at a time. Each of these error patterns has probability \(q^{k}p^{n-k}\) of occurring; hence, the probability of all of these error patterns is</p>
 <div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
 \begin{equation*}
-w({\mathbf x}) = 3, \qquad w({\mathbf y}) = 3, \qquad w({\mathbf z}) = 2\text{.}
+\binom{n}{k}  q^{k}p^{n - k}\text{.}
 \end{equation*}
 </div>
-<span class="incontext"><a href="section-error-detecting-correcting-codes.html#iOl">in-context</a></span>
+<span class="incontext"><a href="section-error-detecting-correcting-codes.html#duy">in-context</a></span>
 </body>
 </html>

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<exercises xmlns:xi="http://www.w3.org/2001/XInclude" xml:id="homework-groups-euler">
+  
+    <title>Collected Homework</title>
+
+    <exercise>
+      <introduction>
+        <p>
+          The <term>Euler <m>\phi</m>-function</term> is the function that, on input <m>n</m>, gives the number of positive integers less than and relatively prime to <m>n</m>.  (That is, <m>\phi(n)</m> is the number of <m>m</m> with <m>1 \le m \lt n</m> and <m>\gcd(m,n) = 1</m>).  We also define <m>\phi(1) = 1</m>. Let's explore some properties of this function
+        </p>
+      </introduction>
+      <task>
+        <statement>
+          <p>
+            If <m>p</m> is prime, what is <m>\phi(p)</m>?  Explain how you know.
+          </p>
+        </statement>
+      </task>
+      <task>
+        <statement>
+          <p>
+            Compute the following values of the function by brute force (list and count the numbers less than <m>n</m> relatively prime to <m>n</m>): <m>\phi(6)</m>, <m>\phi(10)</m>, <m>\phi(14)</m>, <m>\phi(15)</m>, and <m>\phi(21)</m>.
+          </p>
+        </statement>
+      </task>
+      <task>
+        <statement>
+          <p>
+            All of the inputs in the previous task were the product of two primes.  Conjecture a formula for <m>\phi(pq)</m> where <m>p</m> and <m>q</m> are distinct primes.
+          </p>
+        </statement>          
+      </task>
+      <task>
+        <p>
+          Does your formula also make sense for <m>\phi(p^2)</m>?  Does it work for <m>\phi(ab)</m> where <m>a</m> and <m>b</m> are not primes?
+        </p>
+      </task>
+    </exercise>
+  </exercises>

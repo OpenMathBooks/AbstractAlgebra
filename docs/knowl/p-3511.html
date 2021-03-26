@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2021-03-24T14:46:49-06:00       *-->
+<!--*       on 2021-03-25T19:24:05-06:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -15,7 +15,16 @@
 </head>
 <body>
 <h6 xmlns:svg="http://www.w3.org/2000/svg" class="heading"><span class="type">Paragraph</span></h6>
-<p xmlns:svg="http://www.w3.org/2000/svg">From <a class="xref" data-knowl="./knowl/example-algcodes-weights.html" title="Example 16.16">Example 16.16</a>, it is now easy to check that the minimum nonzero weight is \(3\text{;}\) hence, the code does indeed detect and correct all single errors. We have now reduced the problem of finding “good” codes to that of generating group codes. One easy way to generate group codes is to employ a bit of matrix theory.</p>
-<span class="incontext"><a href="section-linear-codes.html#UZb">in-context</a></span>
+<p>Suppose that we have a code that consists of the following 7-tuples:</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{align*}
+&amp;(0000000) &amp; &amp; (0001111) &amp;  &amp; (0010101) &amp; &amp; (0011010)\\
+&amp;(0100110) &amp; &amp; (0101001) &amp; &amp; (0110011) &amp; &amp; (0111100)\\
+&amp;(1000011) &amp; &amp; (1001100) &amp; &amp; (1010110) &amp; &amp; (1011001)\\
+&amp;(1100101) &amp; &amp; (1101010) &amp; &amp; (1110000) &amp; &amp; (1111111)\text{.}
+\end{align*}
+</div>
+<p class="continuation">It is a straightforward though tedious task to verify that this code is also a subgroup of \({\mathbb Z}_2^7\) and, therefore, a group code. This code is a single error-detecting and single error-correcting  code, but it is a long and tedious process to compute all of the distances between  pairs of codewords to determine that \(d_{\min} = 3\text{.}\) It is much easier to see that the minimum weight of all the nonzero codewords is \(3\text{.}\) As we will soon see, this is no coincidence. However, the relationship between weights and distances in a particular code is heavily dependent on the fact that the code is a group.</p>
+<span class="incontext"><a href="section-linear-codes.html#vcD">in-context</a></span>
 </body>
 </html>

@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2021-03-24T14:46:42-06:00       *-->
+<!--*       on 2021-03-25T19:23:59-06:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -15,36 +15,45 @@
 </head>
 <body>
 <h6 xmlns:svg="http://www.w3.org/2000/svg" class="heading"><span class="type">Paragraph</span></h6>
-<p>Let \(f\) be an isometry in \({\mathbb R}^2\) fixing the origin. We will first show that \(f\) preserves inner products. Since \(f(0) = 0\text{,}\) \(\| f({\mathbf x})\| = \| {\mathbf x} \|\text{;}\) therefore,</p>
-<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
-\begin{align*}
-\| {\mathbf x} \|^2 - 2 \langle f({\mathbf x}), f({\mathbf y}) \rangle + \| {\mathbf y} \|^2  &amp; = \| f({\mathbf x}) \|^2 - 2 \langle f({\mathbf x}), f({\mathbf y}) \rangle + \| f({\mathbf y}) \|^2\\
-&amp; = \langle f({\mathbf x}) -  f({\mathbf y}), f({\mathbf x}) - f({\mathbf y}) \rangle\\
-&amp; = \| f({\mathbf x}) - f({\mathbf y}) \|^2\\
-&amp; = \| {\mathbf x} - {\mathbf y} \|^2\\
-&amp; = \langle {\mathbf x} - {\mathbf y}, {\mathbf x} - {\mathbf y} \rangle\\
-&amp; = \| {\mathbf x} \|^2 - 2 \langle {\mathbf x}, {\mathbf y} \rangle + \| {\mathbf y} \|^2\text{.}
-\end{align*}
-</div>
-<p class="continuation">Consequently,</p>
+<p>If we choose \(A{\mathbf e}_2 = (b, -a)^\transpose\text{,}\) then we obtain the matrix</p>
 <div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
 \begin{equation*}
-\langle f({\mathbf x}), f({\mathbf y}) \rangle = \langle {\mathbf x}, {\mathbf y} \rangle\text{.}
+B
+=
+\begin{pmatrix}
+a &amp; b \\
+b &amp; -a
+\end{pmatrix}
+=
+\begin{pmatrix}
+\cos \theta &amp; \sin \theta \\
+\sin \theta &amp; -\cos \theta
+\end{pmatrix}.
 \end{equation*}
 </div>
-<p class="continuation">Now let \({\mathbf e}_1\) and \({\mathbf e_2}\) be \((1, 0)^\transpose\) and \((0, 1)^\transpose\text{,}\) respectively. If</p>
+<p class="continuation">Here, \(\det B = -1\) and</p>
 <div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
 \begin{equation*}
-{\mathbf x} = (x_1, x_2) = x_1 {\mathbf e}_1 + x_2 {\mathbf e}_2\text{,}
+B^2
+=
+\begin{pmatrix}
+1 &amp; 0 \\
+0 &amp; 1
+\end{pmatrix}.
 \end{equation*}
 </div>
-<p class="continuation">then</p>
+<p class="continuation">A reflection about the horizontal axis is given by the matrix</p>
 <div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
 \begin{equation*}
-f({\mathbf x}) = \langle f({\mathbf x}), f({\mathbf e}_1) \rangle f({\mathbf e}_1) + \langle f({\mathbf x}), f({\mathbf e}_2) \rangle f({\mathbf e}_2) = x_1 f({\mathbf e}_1)+x_2 f({\mathbf e}_2)\text{.}
+C
+=
+\begin{pmatrix}
+1 &amp; 0 \\
+0 &amp; -1
+\end{pmatrix},
 \end{equation*}
 </div>
-<p class="continuation">The linearity of \(f\) easily follows.</p>
-<span class="incontext"><a href="section-symmetry.html#qbp">in-context</a></span>
+<p class="continuation">and \(B = AC\) (see <a class="xref" data-knowl="./knowl/figure-o2.html" title="Figure 15.9">Figure 15.9</a>). Thus, a reflection about a line \(\ell\) is simply a reflection about the horizontal axis followed by a rotation.</p>
+<span class="incontext"><a href="section-matrix-groups.html#IPo">in-context</a></span>
 </body>
 </html>

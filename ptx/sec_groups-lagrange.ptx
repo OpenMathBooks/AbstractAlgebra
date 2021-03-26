@@ -335,4 +335,7 @@
         </p>
       </subsection>
 
+
+      <xi:include href="exercises/groups-euler-collected.ptx" />
+      
     </section>

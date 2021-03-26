@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2021-03-24T14:46:27-06:00       *-->
+<!--*       on 2021-03-25T19:23:43-06:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -15,15 +15,20 @@
 </head>
 <body>
 <h6 xmlns:svg="http://www.w3.org/2000/svg" class="heading"><span class="type">Paragraph</span></h6>
-<p>The number of conjugate classes in \(S_n\) is the number of ways in which \(n\) can be partitioned into sums of positive integers. In the case of \(S_3\) for example, we can partition the integer \(3\) into the following three sums:</p>
+<p>Let \(X\) be a finite \(G\)-set and \(X_G\) be the set of fixed points in \(X\text{;}\) that is,</p>
 <div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
-\begin{align*}
-3 &amp; =  1 + 1 + 1\\
-3 &amp; =  1 + 2\\
-3 &amp; =  3;
-\end{align*}
+\begin{equation*}
+X_G = \{ x \in X : gx = x \text{ for all } g \in G \}\text{.}
+\end{equation*}
 </div>
-<p class="continuation">therefore, there are three conjugacy classes. The problem of finding the number of such partitions for any positive integer \(n\) is what computer scientists call <dfn xmlns:svg="http://www.w3.org/2000/svg" class="terminology">NP-complete</dfn>. This effectively means that the problem cannot be solved for a large \(n\) because the computations would be too time-consuming for even the largest computer.</p>
-<span class="incontext"><a href="section-class-equation.html#AKY">in-context</a></span>
+<p class="continuation">Since the orbits of the action partition \(X\text{,}\)</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{equation*}
+|X| = |X_G| + \sum_{i = k}^n |{\mathcal O}_{x_i}|\text{,}
+\end{equation*}
+</div>
+<p class="continuation">where \(x_k, \ldots,
+x_n\) are representatives from the distinct nontrivial orbits of \(X\text{.}\)</p>
+<span class="incontext"><a href="section-class-equation.html#wpA">in-context</a></span>
 </body>
 </html>

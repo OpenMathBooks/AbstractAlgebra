@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2021-03-24T14:46:48-06:00       *-->
+<!--*       on 2021-03-25T19:24:04-06:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -15,19 +15,7 @@
 </head>
 <body>
 <h6 xmlns:svg="http://www.w3.org/2000/svg" class="heading"><span class="type">Paragraph</span></h6>
-<p>If we are to develop efficient error-detecting and error-correcting codes, we will need more sophisticated mathematical tools. Group theory  will allow faster methods of encoding and decoding messages. A code is an \((n, m)\)-<dfn xmlns:svg="http://www.w3.org/2000/svg" class="terminology">block code</dfn> if the information that is to be coded can be divided into blocks of \(m\) binary digits, each of which can be encoded into \(n\) binary digits. More specifically, an \((n, m)\)-block code consists of an <dfn xmlns:svg="http://www.w3.org/2000/svg" class="terminology">encoding function</dfn></p>
-<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
-\begin{equation*}
-E:{\mathbb Z}^{m}_{2} \rightarrow {\mathbb Z}^{n}_{2}
-\end{equation*}
-</div>
-<p class="continuation">and a <dfn xmlns:svg="http://www.w3.org/2000/svg" class="terminology">decoding function</dfn></p>
-<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
-\begin{equation*}
-D:{\mathbb Z}^{n}_{2} \rightarrow {\mathbb Z}^{m}_{2}\text{.}
-\end{equation*}
-</div>
-<p class="continuation">A <dfn xmlns:svg="http://www.w3.org/2000/svg" class="terminology">codeword</dfn> is any element in the image of \(E\text{.}\) We also require that \(E\) be one-to-one so that two information blocks will not be encoded into the same codeword. If our code is to be error-correcting, then \(D\) must be onto.</p>
-<span class="incontext"><a href="section-error-detecting-correcting-codes.html#XTH">in-context</a></span>
+<p xmlns:svg="http://www.w3.org/2000/svg">The coding scheme presented in <a class="xref" data-knowl="./knowl/example-algcodes-nearest.html" title="Example 16.4">Example 16.4</a> is not a complete solution to the problem because it does not account for the possibility of multiple errors. For example, either a (000) or a (111) could be sent and a (001) received. We have no means of deciding from the received word whether there was a single error in the third bit or two errors, one in the first bit and one in the second. No matter what coding scheme is used, an incorrect message could be received. We could transmit a (000), have errors in all three bits, and receive the codeword (111). It is important to make explicit assumptions about the likelihood and distribution of transmission errors so that, in a particular application, it will be known whether a given error detection scheme is appropriate. We will assume that transmission errors are rare, and, that when they do occur, they occur independently in each bit; that is, if \(p\) is the probability of an error in one bit and \(q\) is the probability of an error in a different bit, then the probability of errors occurring in both of these bits at the same time is \(pq\text{.}\) We will also assume that a received \(n\)-tuple is decoded into a codeword that is closest to it; that is, we assume that the receiver uses <dfn class="terminology">maximum-likelihood decoding</dfn>.  <a class="fn-knowl original" data-knowl="./knowl/fn-6-hidden.html" title="Footnote 2"><sup> 2 </sup></a></p>
+<span class="incontext"><a href="section-error-detecting-correcting-codes.html#fyg">in-context</a></span>
 </body>
 </html>
