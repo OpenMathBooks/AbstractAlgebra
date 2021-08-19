@@ -33,3 +33,4 @@ localbuild/
 Makefile.paths
 .code-workspace
 .vscode
+output/

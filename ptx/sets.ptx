@@ -1731,7 +1731,7 @@
         <exercise xml:id="rq1-3-1" permid="Sxv">
           <statement>
             <p permid="vJY">
-              Consider the relation <m>R \subset \Z \times \Z</m> that holds of <m>(x,y)</m> precisely when <m>x-y = 3</m>. Is <m>R</m> an equivalence relation?  Not not, what specific properties of an equivalence relation does it not satisfy? 
+              Define the relation <m>\sim</m> on the integers <m>\Z</m> by <m>x\sim y</m> if and only if <m>x-y = 3</m>. Is <m>\sim</m> an equivalence relation?  Not not, what specific properties of an equivalence relation does it not satisfy? 
             </p>
           </statement>
         </exercise>
@@ -1745,7 +1745,7 @@
         <exercise xml:id="rq1-3-3" permid="eLN">
           <statement>
             <p permid="HYq">
-              Consider the equivalence realtion established by the integers modulo 5.  What does the notation <m>[4]</m> mean?  Be as specific as you can.
+              Consider the equivalence relation established by the integers modulo 5.  What does the notation <m>[4]</m> mean?  Be as specific as you can.
             </p>
           </statement>
         </exercise>
