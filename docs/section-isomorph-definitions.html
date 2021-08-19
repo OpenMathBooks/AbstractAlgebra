@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2021-03-25T19:17:59-06:00       *-->
+<!--*       on 2021-08-19T13:08:56-06:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -14,36 +14,42 @@
 <title>AATA Definition and Examples</title>
 <meta name="Keywords" content="Authored in PreTeXt">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<script src="https://sagecell.sagemath.org/embedded_sagecell.js"></script><script type="text/x-mathjax-config">
-MathJax.Hub.Config({
-    tex2jax: {
-        inlineMath: [['\\(','\\)']]
+<script src="https://sagecell.sagemath.org/embedded_sagecell.js"></script><script>window.MathJax = {
+  tex: {
+    inlineMath: [['\\(','\\)']],
+    tags: "none",
+    useLabelIds: true,
+    tagSide: "right",
+    tagIndent: ".8em",
+    packages: {'[+]': ['base', 'extpfeil', 'ams', 'amscd', 'newcommand', 'knowl']}
+  },
+  options: {
+    ignoreHtmlClass: "tex2jax_ignore",
+    processHtmlClass: "has_am",
+    renderActions: {
+        findScript: [10, function (doc) {
+            document.querySelectorAll('script[type^="math/tex"]').forEach(function(node) {
+                var display = !!node.type.match(/; *mode=display/);
+                var math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display);
+                var text = document.createTextNode('');
+                node.parentNode.replaceChild(text, node);
+                math.start = {node: text, delim: '', n: 0};
+                math.end = {node: text, delim: '', n: 0};
+                doc.math.push(math);
+            });
+        }, '']
     },
-    asciimath2jax: {
-        ignoreClass: ".*",
-        processClass: "has_am"
-    },
-    jax: ["input/AsciiMath"],
-    extensions: ["asciimath2jax.js"],
-    TeX: {
-        extensions: ["extpfeil.js", "autobold.js", "https://pretextbook.org/js/lib/mathjaxknowl.js", "AMScd.js", ],
-        // scrolling to fragment identifiers is controlled by other Javascript
-        positionToHash: false,
-        equationNumbers: { autoNumber: "none", useLabelIds: true, },
-        TagSide: "right",
-        TagIndent: ".8em",
-    },
-    // HTML-CSS output Jax to be dropped for MathJax 3.0
-    "HTML-CSS": {
-        scale: 88,
-        mtextFontInherit: true,
-    },
-    CommonHTML: {
-        scale: 88,
-        mtextFontInherit: true,
-    },
-});
-</script><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS_CHTML-full"></script><link href="https://unpkg.com/prismjs@v1.22.0/themes/prism.css" rel="stylesheet">
+  },
+  chtml: {
+    scale: 0.88,
+    mtextInheritFont: true
+  },
+  loader: {
+    load: ['input/asciimath', '[tex]/extpfeil', '[tex]/amscd', '[tex]/newcommand', '[pretext]/mathjaxknowl3.js'],
+    paths: {pretext: "https://pretextbook.org/js/lib"},
+  },
+};
+</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><link href="https://unpkg.com/prismjs@v1.22.0/themes/prism.css" rel="stylesheet">
 <script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/jquery.min.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/0.13/pretext.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/0.13/pretext_add_on.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script xmlns:svg="http://www.w3.org/2000/svg">sagecellEvalName='Evaluate (Sage)';
 </script><link xmlns:svg="http://www.w3.org/2000/svg" href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
 <link xmlns:svg="http://www.w3.org/2000/svg" href="https://fonts.googleapis.com/css?family=Inconsolata:400,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
@@ -91,7 +97,7 @@ MathJax.Hub.Config({
 \newcommand{\amp}{&amp;}
 \)</div>
 <header id="masthead" class="smallbuttons"><div class="banner"><div class="container">
-<a id="logo-link" href="http://abstract.pugetsound.edu" target="_blank"><img src="images/cover_aata_2020.png" alt="Logo image"></a><div class="title-container">
+<a id="logo-link" href="http://abstract.pugetsound.edu" target="_blank"><img src="external/images/cover_aata_2020.png" alt="Logo image"></a><div class="title-container">
 <h1 class="heading"><a href="aata-toc.html"><span class="title">Abstract Algebra:</span> <span class="subtitle">Theory and Applications, Remixed!</span></a></h1>
 <p class="byline">Thomas W. Judson</p>
 </div>
@@ -210,7 +216,7 @@ MathJax.Hub.Config({
 </li>
 <li class="link part"><a href="part-more-group-theory.html" data-scroll="part-more-group-theory"><span class="codenumber">III</span> <span class="title">More Group Theory</span></a></li>
 <li class="link">
-<a href="groups.html" data-scroll="nRa"><span class="codenumber">10</span> <span class="title">Some of the Structure of Groups</span></a><ul>
+<a href="groups-structure.html" data-scroll="nRa"><span class="codenumber">10</span> <span class="title">Some of the Structure of Groups</span></a><ul>
 <li><a href="section-groups-cayley.html" data-scroll="CTu">Isomorphisms and Cayley's Theorem</a></li>
 <li><a href="section-groups-permutations.html" data-scroll="mjE">Permutation Groups</a></li>
 <li><a href="section-solvable-groups.html" data-scroll="WbU">Solvable Groups</a></li>
@@ -436,7 +442,7 @@ h_1 h_2 = \phi(g_1) \phi(g_2) =  \phi(g_1 g_2) = \phi(g_2 g_1) = \phi(g_2) \phi(
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">4.11</span><span class="period">.</span>
 </h6>
 <p id="UJT">Consider the group \({\mathbb Z}_3\text{.}\) The Cayley table for \({\mathbb Z}_3\) is as follows.</p>
-<div class="sidebyside"><div class="sbsrow" style="margin-left:0%;margin-right:0%;"><div class="sbspanel" style="width:100%;justify-content:flex-start;"><div class="displaymath" id="ARc">
+<div class="sidebyside"><div class="sbsrow" style="margin-left:0%;margin-right:0%;"><div class="sbspanel top" style="width:100%;"><div class="displaymath" id="ARc">
 \begin{equation*}
 \begin{array}{c|ccc}
 + &amp; 0 &amp; 1 &amp; 2 \\ \hline
@@ -538,7 +544,7 @@ ga = \lambda_g a = \lambda_h a=  ha\text{.}
 <div class="solutions"></div></article><article class="exercise exercise-like" id="WEH"><h6 class="heading"><span class="codenumber">4<span class="period">.</span></span></h6>
 <p id="yqs">Let \(\phi:G \to H\) be an isomorphism.  Show that \(\phi(x) = e_H\) if and only if \(x = e_G\text{,}\) where \(e_G\) and \(e_H\) are the identities of \(G\) and \(H\text{,}\) respectively.</p>
 <div class="solutions">
-<a data-knowl="" class="id-ref hint-knowl original" data-refid="hk-ddN" id="ddN"><span class="type">Hint</span></a><div class="hidden-content tex2jax_ignore" id="hk-ddN"><div class="hint solution-like"><p id="IPx">Since \(\phi\) is a bijection, it is enough to prove that \(\phi(e_G) = e_H\text{.}\)  Note that \(e_G = e_G^2\text{.}\)  Use the homomorphism property.</p></div></div>
+<a data-knowl="" class="id-ref hint-knowl original" data-refid="hk-ddN" id="ddN"><span class="type">Hint.</span> </a><div class="hidden-content tex2jax_ignore" id="hk-ddN"><div class="hint solution-like"><p id="IPx">Since \(\phi\) is a bijection, it is enough to prove that \(\phi(e_G) = e_H\text{.}\)  Note that \(e_G = e_G^2\text{.}\)  Use the homomorphism property.</p></div></div>
 </div></article><article class="exercise exercise-like" id="CLQ"><h6 class="heading"><span class="codenumber">5<span class="period">.</span></span></h6>
 <p id="exB">Let \(G = \R \setminus \{-1\}\) with the operation \(\ast\) defined by</p>
 <div class="displaymath">
@@ -548,7 +554,7 @@ a \ast b = a+b+ab.
 </div>
 <p class="continuation">We previously saw that \(G\) with this operation is a group.  Show that \((G, \ast)\) is isomprhic to the multiplicative group of nonzero real numbers \(\R^*\text{.}\)</p>
 <div class="solutions">
-<a data-knowl="" class="id-ref hint-knowl original" data-refid="hk-JkW" id="JkW"><span class="type">Hint</span></a><div class="hidden-content tex2jax_ignore" id="hk-JkW"><div class="hint solution-like"><p id="oWG">You need to define the isomorphism \(f:G \to \R^*\text{.}\)  A good place to start would be to decide what the identity is in each group.  Guess a reasonable function that sends the identity in \(G\) to the identity in \(\R^*\text{.}\)</p></div></div>
+<a data-knowl="" class="id-ref hint-knowl original" data-refid="hk-JkW" id="JkW"><span class="type">Hint.</span> </a><div class="hidden-content tex2jax_ignore" id="hk-JkW"><div class="hint solution-like"><p id="oWG">You need to define the isomorphism \(f:G \to \R^*\text{.}\)  A good place to start would be to decide what the identity is in each group.  Guess a reasonable function that sends the identity in \(G\) to the identity in \(\R^*\text{.}\)</p></div></div>
 </div></article><article class="exercise exercise-like" id="iSZ"><h6 class="heading"><span class="codenumber">6<span class="period">.</span></span></h6>
 <p id="KEK">True or false: if \(\phi:G \to H\) is an isomorphism, then \(\phi(a^n) = (\phi(a))^n\) for all \(a \in G\text{.}\)</p>
 <div class="solutions"></div></article></section><section class="exercises" id="Zzn"><h3 class="heading hide-type">
@@ -561,14 +567,14 @@ a \ast b = a+b+ab.
 <li id="ABe"><p id="xGy">Determine whether these two groups are isomorphic.  Either find an isomorphism (and explain why it is) or explain why they are not isomorphic.</p></li>
 </ol>
 <div class="solutions">
-<a data-knowl="" class="id-ref hint-knowl original" data-refid="hk-Vzo" id="Vzo"><span class="type">Hint</span></a><div class="hidden-content tex2jax_ignore" id="hk-Vzo"><div class="hint solution-like">
+<a data-knowl="" class="id-ref hint-knowl original" data-refid="hk-Vzo" id="Vzo"><span class="type">Hint.</span> </a><div class="hidden-content tex2jax_ignore" id="hk-Vzo"><div class="hint solution-like">
 <p id="VdP">First, \(\Z_2\times \Z_3 = \{(0,0), (0,1), (0,2), (1,0), (1,1), (1,2)\}\text{,}\) and the operation is addition coordinate-wise.  So \((1,1) + (1,1) = (0,2)\text{.}\)</p>
 <p id="BkY">For the first part, what would \(f(2)\) and \(f(3)\) be if we defined \(f(1) = (0,1)\text{?}\)  Why is this a problem?</p>
 </div></div>
 </div></article><article class="exercise exercise-like" id="vhr"><h6 class="heading"><span class="codenumber">C2<span class="period">.</span></span></h6>
 <p id="WTc">Suppose group \(G_1\) and \(G_2\) are isomorphic, with isomorphism \(\phi:G_1 \to G_2\text{.}\)  Let \(H_1\) be a subgroup of \(G_1\text{.}\)  Define \(H_2 = \phi(H_1) = \{x \in G_2 \st x = \phi(h) \text{ for some } h \in H_1\}\text{.}\)  Prove that \(H_2\) is a subgroup of \(G_2\text{.}\)  Futher, prove that if \(H_1\) is normal in \(G_1\text{,}\) then \(H_2\) is normal in \(G_2\)</p>
 <div class="solutions">
-<a data-knowl="" class="id-ref hint-knowl original" data-refid="hk-BGx" id="BGx"><span class="type">Hint</span></a><div class="hidden-content tex2jax_ignore" id="hk-BGx"><div class="hint solution-like"><p id="hsh">This should be a fairly standard subgroup proof.  That is, identity, closures, inverses!  For the normal part, show \(H_2\) is closed under conjugates (assuming \(H_1\) is).</p></div></div>
+<a data-knowl="" class="id-ref hint-knowl original" data-refid="hk-BGx" id="BGx"><span class="type">Hint.</span> </a><div class="hidden-content tex2jax_ignore" id="hk-BGx"><div class="hint solution-like"><p id="hsh">This should be a fairly standard subgroup proof.  That is, identity, closures, inverses!  For the normal part, show \(H_2\) is closed under conjugates (assuming \(H_1\) is).</p></div></div>
 </div></article></section></section></div></main>
 </div>
 <script src="https://unpkg.com/prismjs@v1.22.0/components/prism-core.min.js"></script><script src="https://unpkg.com/prismjs@v1.22.0/plugins/autoloader/prism-autoloader.min.js"></script>

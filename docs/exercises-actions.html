@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2021-03-25T19:19:43-06:00       *-->
+<!--*       on 2021-08-19T13:10:54-06:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -14,36 +14,42 @@
 <title>AATA Exercises</title>
 <meta name="Keywords" content="Authored in PreTeXt">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<script src="https://sagecell.sagemath.org/embedded_sagecell.js"></script><script type="text/x-mathjax-config">
-MathJax.Hub.Config({
-    tex2jax: {
-        inlineMath: [['\\(','\\)']]
+<script src="https://sagecell.sagemath.org/embedded_sagecell.js"></script><script>window.MathJax = {
+  tex: {
+    inlineMath: [['\\(','\\)']],
+    tags: "none",
+    useLabelIds: true,
+    tagSide: "right",
+    tagIndent: ".8em",
+    packages: {'[+]': ['base', 'extpfeil', 'ams', 'amscd', 'newcommand', 'knowl']}
+  },
+  options: {
+    ignoreHtmlClass: "tex2jax_ignore",
+    processHtmlClass: "has_am",
+    renderActions: {
+        findScript: [10, function (doc) {
+            document.querySelectorAll('script[type^="math/tex"]').forEach(function(node) {
+                var display = !!node.type.match(/; *mode=display/);
+                var math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display);
+                var text = document.createTextNode('');
+                node.parentNode.replaceChild(text, node);
+                math.start = {node: text, delim: '', n: 0};
+                math.end = {node: text, delim: '', n: 0};
+                doc.math.push(math);
+            });
+        }, '']
     },
-    asciimath2jax: {
-        ignoreClass: ".*",
-        processClass: "has_am"
-    },
-    jax: ["input/AsciiMath"],
-    extensions: ["asciimath2jax.js"],
-    TeX: {
-        extensions: ["extpfeil.js", "autobold.js", "https://pretextbook.org/js/lib/mathjaxknowl.js", "AMScd.js", ],
-        // scrolling to fragment identifiers is controlled by other Javascript
-        positionToHash: false,
-        equationNumbers: { autoNumber: "none", useLabelIds: true, },
-        TagSide: "right",
-        TagIndent: ".8em",
-    },
-    // HTML-CSS output Jax to be dropped for MathJax 3.0
-    "HTML-CSS": {
-        scale: 88,
-        mtextFontInherit: true,
-    },
-    CommonHTML: {
-        scale: 88,
-        mtextFontInherit: true,
-    },
-});
-</script><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS_CHTML-full"></script><link href="https://unpkg.com/prismjs@v1.22.0/themes/prism.css" rel="stylesheet">
+  },
+  chtml: {
+    scale: 0.88,
+    mtextInheritFont: true
+  },
+  loader: {
+    load: ['input/asciimath', '[tex]/extpfeil', '[tex]/amscd', '[tex]/newcommand', '[pretext]/mathjaxknowl3.js'],
+    paths: {pretext: "https://pretextbook.org/js/lib"},
+  },
+};
+</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><link href="https://unpkg.com/prismjs@v1.22.0/themes/prism.css" rel="stylesheet">
 <script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/jquery.min.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/0.13/pretext.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/0.13/pretext_add_on.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script xmlns:svg="http://www.w3.org/2000/svg">sagecellEvalName='Evaluate (Sage)';
 </script><link xmlns:svg="http://www.w3.org/2000/svg" href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
 <link xmlns:svg="http://www.w3.org/2000/svg" href="https://fonts.googleapis.com/css?family=Inconsolata:400,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
@@ -91,7 +97,7 @@ MathJax.Hub.Config({
 \newcommand{\amp}{&amp;}
 \)</div>
 <header id="masthead" class="smallbuttons"><div class="banner"><div class="container">
-<a id="logo-link" href="http://abstract.pugetsound.edu" target="_blank"><img src="images/cover_aata_2020.png" alt="Logo image"></a><div class="title-container">
+<a id="logo-link" href="http://abstract.pugetsound.edu" target="_blank"><img src="external/images/cover_aata_2020.png" alt="Logo image"></a><div class="title-container">
 <h1 class="heading"><a href="aata-toc.html"><span class="title">Abstract Algebra:</span> <span class="subtitle">Theory and Applications, Remixed!</span></a></h1>
 <p class="byline">Thomas W. Judson</p>
 </div>
@@ -210,7 +216,7 @@ MathJax.Hub.Config({
 </li>
 <li class="link part"><a href="part-more-group-theory.html" data-scroll="part-more-group-theory"><span class="codenumber">III</span> <span class="title">More Group Theory</span></a></li>
 <li class="link">
-<a href="groups.html" data-scroll="nRa"><span class="codenumber">10</span> <span class="title">Some of the Structure of Groups</span></a><ul>
+<a href="groups-structure.html" data-scroll="nRa"><span class="codenumber">10</span> <span class="title">Some of the Structure of Groups</span></a><ul>
 <li><a href="section-groups-cayley.html" data-scroll="CTu">Isomorphisms and Cayley's Theorem</a></li>
 <li><a href="section-groups-permutations.html" data-scroll="mjE">Permutation Groups</a></li>
 <li><a href="section-solvable-groups.html" data-scroll="WbU">Solvable Groups</a></li>
@@ -314,7 +320,7 @@ MathJax.Hub.Config({
 <article class="exercise exercise-like" id="EDG"><h6 class="heading"><span class="codenumber">1<span class="period">.</span></span></h6>
 <p id="qlT"><a class="xref" data-knowl="./knowl/example-actions-gl2.html" title="Example 13.1">Examples 13.1–13.5</a> in the first section each describe an action of a group \(G\) on a set \(X\text{,}\) which will give rise to the equivalence relation defined by \(G\)-equivalence. For each example, compute the equivalence classes of the equivalence relation, the \(G\)-<dfn class="terminology">equivalence classes</dfn>.</p>
 <div class="solutions">
-<a data-knowl="" class="id-ref hint-knowl original" data-refid="hk-BnB" id="BnB"><span class="type">Hint</span></a><div class="hidden-content tex2jax_ignore" id="hk-BnB"><div class="hint solution-like"><p id="nMM"><a class="xref" data-knowl="./knowl/example-actions-gl2.html" title="Example 13.1">Example 13.1</a>: \(0\text{,}\) \({\mathbb R}^2 \setminus \{ 0 \}\text{.}\) <a class="xref" data-knowl="./knowl/example-actions-d4.html" title="Example 13.2">Example 13.2</a>: \(X = \{ 1, 2, 3, 4 \}\text{.}\)</p></div></div>
+<a data-knowl="" class="id-ref hint-knowl original" data-refid="hk-BnB" id="BnB"><span class="type">Hint.</span> </a><div class="hidden-content tex2jax_ignore" id="hk-BnB"><div class="hint solution-like"><p id="nMM"><a class="xref" data-knowl="./knowl/example-actions-gl2.html" title="Example 13.1">Example 13.1</a>: \(0\text{,}\) \({\mathbb R}^2 \setminus \{ 0 \}\text{.}\) <a class="xref" data-knowl="./knowl/example-actions-d4.html" title="Example 13.2">Example 13.2</a>: \(X = \{ 1, 2, 3, 4 \}\text{.}\)</p></div></div>
 </div></article><article class="exercise exercise-like" id="kKP"><h6 class="heading"><span class="codenumber">2<span class="period">.</span></span></h6>
 <p id="Wtc">Compute all \(X_g\) and all \(G_x\) for each of the following permutation groups.</p>
 <ol class="lower-alpha">
@@ -322,11 +328,11 @@ MathJax.Hub.Config({
 <li id="xXw"><p id="jys">\(X = \{1, 2, 3, 4, 5, 6\}\text{,}\) \(G = \{(1), (12), (345), (354), (12)(345), (12)(354) \}\)</p></li>
 </ol>
 <div class="solutions">
-<a data-knowl="" class="id-ref hint-knowl original" data-refid="hk-NBT" id="NBT"><span class="type">Hint</span></a><div class="hidden-content tex2jax_ignore" id="hk-NBT"><div class="hint solution-like"><p id="TTV">(a) \(X_{(1)} = \{1, 2, 3 \}\text{,}\) \(X_{(12)} = \{3 \}\text{,}\) \(X_{(13)} = \{ 2 \}\text{,}\) \(X_{(23)} = \{1 \}\text{,}\) \(X_{(123)} = X_{(132)} = \emptyset\text{.}\) \(G_1 = \{ (1), (23) \}\text{,}\) \(G_2 = \{(1), (13) \}\text{,}\) \(G_3 = \{ (1), (12)\}\text{.}\)</p></div></div>
+<a data-knowl="" class="id-ref hint-knowl original" data-refid="hk-NBT" id="NBT"><span class="type">Hint.</span> </a><div class="hidden-content tex2jax_ignore" id="hk-NBT"><div class="hint solution-like"><p id="TTV">(a) \(X_{(1)} = \{1, 2, 3 \}\text{,}\) \(X_{(12)} = \{3 \}\text{,}\) \(X_{(13)} = \{ 2 \}\text{,}\) \(X_{(23)} = \{1 \}\text{,}\) \(X_{(123)} = X_{(132)} = \emptyset\text{.}\) \(G_1 = \{ (1), (23) \}\text{,}\) \(G_2 = \{(1), (13) \}\text{,}\) \(G_3 = \{ (1), (12)\}\text{.}\)</p></div></div>
 </div></article><article class="exercise exercise-like" id="QRY"><h6 class="heading"><span class="codenumber">3<span class="period">.</span></span></h6>
 <p id="CAl">Compute the \(G\)-equivalence classes of \(X\) for each of the \(G\)-sets in <a class="xref" data-knowl="./knowl/exercise-actions-permutation.html" title="Exercise 13.4.2">Exercise 13.4.2</a>. For each \(x \in X\) verify that \(|G|=|{\mathcal O}_x| \cdot |G_x|\text{.}\)</p>
 <div class="solutions">
-<a data-knowl="" class="id-ref hint-knowl original" data-refid="hk-ZQl" id="ZQl"><span class="type">Hint</span></a><div class="hidden-content tex2jax_ignore" id="hk-ZQl"><div class="hint solution-like"><p id="Abe">(a) \({\mathcal O}_1 = {\mathcal O}_2 = {\mathcal O}_3 = \{ 1, 2, 3\}\text{.}\)</p></div></div>
+<a data-knowl="" class="id-ref hint-knowl original" data-refid="hk-ZQl" id="ZQl"><span class="type">Hint.</span> </a><div class="hidden-content tex2jax_ignore" id="hk-ZQl"><div class="hint solution-like"><p id="Abe">(a) \({\mathcal O}_1 = {\mathcal O}_2 = {\mathcal O}_3 = \{ 1, 2, 3\}\text{.}\)</p></div></div>
 </div></article><article class="exercise exercise-like" id="wZh"><h6 class="heading"><span class="codenumber">4<span class="period">.</span></span></h6>
 <p id="iHu">Let \(G\) be the additive group of real numbers. Let the action of \(\theta \in G\) on the real plane \({\mathbb R}^2\) be given by rotating the plane counterclockwise about the origin through \(\theta\) radians. Let \(P\) be a point on the plane other than the origin.</p>
 <ol class="lower-alpha">
@@ -347,7 +353,7 @@ MathJax.Hub.Config({
 <li id="EwC"><p id="pXy">\(\displaystyle Q_8\)</p></li>
 </ol>
 <div class="solutions">
-<a data-knowl="" class="id-ref hint-knowl original" data-refid="hk-ysV" id="ysV"><span class="type">Hint</span></a><div class="hidden-content tex2jax_ignore" id="hk-ysV"><div class="hint solution-like">
+<a data-knowl="" class="id-ref hint-knowl original" data-refid="hk-ysV" id="ysV"><span class="type">Hint.</span> </a><div class="hidden-content tex2jax_ignore" id="hk-ysV"><div class="hint solution-like">
 <p id="gin">The conjugacy classes for \(S_4\) are</p>
 <div class="displaymath">
 \begin{gather*}
@@ -364,31 +370,31 @@ MathJax.Hub.Config({
 <p id="bcV">Write the class equation for \(S_5\) and for \(A_5\text{.}\)</p></article><article class="exercise exercise-like" id="VBR"><h6 class="heading"><span class="codenumber">8<span class="period">.</span></span></h6>
 <p id="Hke">If a square remains fixed in the plane, how many different ways can the corners of the square be colored if three colors are used?</p>
 <div class="solutions">
-<a data-knowl="" class="id-ref hint-knowl original" data-refid="hk-qOw" id="qOw"><span class="type">Hint</span></a><div class="hidden-content tex2jax_ignore" id="hk-qOw"><div class="hint solution-like"><p id="Mpw">\((3^4 + 3^1 + 3^2 + 3^1 + 3^2 + 3^2 + 3^3 + 3^3)/8 = 21\text{.}\)</p></div></div>
+<a data-knowl="" class="id-ref hint-knowl original" data-refid="hk-qOw" id="qOw"><span class="type">Hint.</span> </a><div class="hidden-content tex2jax_ignore" id="hk-qOw"><div class="hint solution-like"><p id="Mpw">\((3^4 + 3^1 + 3^2 + 3^1 + 3^2 + 3^2 + 3^3 + 3^3)/8 = 21\text{.}\)</p></div></div>
 </div></article><article class="exercise exercise-like" id="BJa"><h6 class="heading"><span class="codenumber">9<span class="period">.</span></span></h6>
 <p id="nrn">How many ways can the vertices of an equilateral triangle be colored using three different colors?</p></article><article class="exercise exercise-like" id="hQj"><h6 class="heading"><span class="codenumber">10<span class="period">.</span></span></h6>
 <p id="Tyw">Find the number of ways a six-sided die can be constructed if each side is marked differently with \(1, \ldots, 6\) dots.</p></article><article class="exercise exercise-like" id="NXs"><h6 class="heading"><span class="codenumber">11<span class="period">.</span></span></h6>
 <p id="zFF">Up to a rotation, how many ways can the faces of a cube be colored with three different colors?</p>
 <div class="solutions">
-<a data-knowl="" class="id-ref hint-knowl original" data-refid="hk-Prg" id="Prg"><span class="type">Hint</span></a><div class="hidden-content tex2jax_ignore" id="hk-Prg"><div class="hint solution-like"><p id="swF">The group of rigid motions of the cube can be described by the allowable permutations of the six faces and is isomorphic to \(S_4\text{.}\) There are the identity cycle, 6 permutations with the structure \((abcd)\) that correspond to the quarter turns, 3 permutations with the structure \((ab)(cd)\) that correspond to the half turns, 6 permutations with the structure \((ab)(cd)(ef)\) that correspond to rotating the cube about the centers of opposite edges, and 8 permutations with the structure \((abc)(def)\) that correspond to rotating the cube about opposite vertices.</p></div></div>
+<a data-knowl="" class="id-ref hint-knowl original" data-refid="hk-Prg" id="Prg"><span class="type">Hint.</span> </a><div class="hidden-content tex2jax_ignore" id="hk-Prg"><div class="hint solution-like"><p id="swF">The group of rigid motions of the cube can be described by the allowable permutations of the six faces and is isomorphic to \(S_4\text{.}\) There are the identity cycle, 6 permutations with the structure \((abcd)\) that correspond to the quarter turns, 3 permutations with the structure \((ab)(cd)\) that correspond to the half turns, 6 permutations with the structure \((ab)(cd)(ef)\) that correspond to rotating the cube about the centers of opposite edges, and 8 permutations with the structure \((abc)(def)\) that correspond to rotating the cube about opposite vertices.</p></div></div>
 </div></article><article class="exercise exercise-like" id="ueB"><h6 class="heading"><span class="codenumber">12<span class="period">.</span></span></h6>
 <p id="fMO">Consider \(12\) straight wires of equal lengths with their ends soldered together to form the edges of a cube. Either silver or copper wire can be used for each edge. How many different ways can the cube be constructed?</p></article><article class="exercise exercise-like" id="alK"><h6 class="heading"><span class="codenumber">13<span class="period">.</span></span></h6>
 <p id="LTX">Suppose that we color each of the eight corners of a cube. Using three different colors, how many ways can the corners be colored up to a rotation of the cube?</p></article><article class="exercise exercise-like" id="GsT"><h6 class="heading"><span class="codenumber">14<span class="period">.</span></span></h6>
 <p id="sbg">Each of the faces of a regular tetrahedron can be painted either red or white. Up to a rotation, how many different ways can the tetrahedron be painted?</p></article><article class="exercise exercise-like" id="mAc"><h6 class="heading"><span class="codenumber">15<span class="period">.</span></span></h6>
 <p id="Yip">Suppose that the vertices of a regular hexagon are to be colored either red or white. How many ways can this be done up to a symmetry of the hexagon?</p>
 <div class="solutions">
-<a data-knowl="" class="id-ref hint-knowl original" data-refid="hk-UaZ" id="UaZ"><span class="type">Hint</span></a><div class="hidden-content tex2jax_ignore" id="hk-UaZ"><div class="hint solution-like"><p id="YDO">\((1 \cdot 2^6 + 3 \cdot 2^4 + 4 \cdot 2^3 + 2 \cdot 2^2 + 2 \cdot 2^1)/12 = 13\text{.}\)</p></div></div>
+<a data-knowl="" class="id-ref hint-knowl original" data-refid="hk-UaZ" id="UaZ"><span class="type">Hint.</span> </a><div class="hidden-content tex2jax_ignore" id="hk-UaZ"><div class="hint solution-like"><p id="YDO">\((1 \cdot 2^6 + 3 \cdot 2^4 + 4 \cdot 2^3 + 2 \cdot 2^2 + 2 \cdot 2^1)/12 = 13\text{.}\)</p></div></div>
 </div></article><article class="exercise exercise-like" id="SHl"><h6 class="heading"><span class="codenumber">16<span class="period">.</span></span></h6>
 <p id="Epy">A molecule of benzene is made up of six carbon atoms and six hydrogen atoms, linked together in a hexagonal shape as in <a class="xref" data-knowl="./knowl/figure-exercise-benzene.html" title="Figure 13.24">Figure 13.24</a>.</p>
 <ol class="lower-alpha">
 <li id="Jgv"><p id="uHr">How many different compounds can be formed by replacing one or more of the hydrogen atoms with a chlorine atom?</p></li>
 <li id="pnE"><p id="aOA">Find the number of different chemical compounds that can be formed by replacing three of the six hydrogen atoms in a benzene ring with a \(CH_3\) radical.</p></li>
 </ol>
-<figure class="figure figure-like" id="kwH"><div class="image-box" style="width: 30%; margin-left: 35%; margin-right: 35%;"><img src="images/exercise-benzene.svg" role="img" style="width: 100%; height: auto;" alt=""></div>
+<figure class="figure figure-like" id="kwH"><div class="image-box" style="width: 30%; margin-left: 35%; margin-right: 35%;"><img src="generated/latex-image/exercise-benzene.svg" role="img" class="contained" alt=""></div>
 <figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">13.24<span class="period">.</span></span><span class="space"> </span>A benzene ring</figcaption></figure></article><article class="exercise exercise-like" id="yOu"><h6 class="heading"><span class="codenumber">17<span class="period">.</span></span></h6>
 <p id="QDQ">How many equivalence classes of switching functions are there if the input variables \(x_1\text{,}\) \(x_2\text{,}\) and \(x_3\) can be permuted by any permutation in \(S_3\text{?}\) What if the input variables \(x_1\text{,}\) \(x_2\text{,}\) \(x_3\text{,}\) and \(x_4\) can be permuted by any permutation in \(S_4\text{?}\)</p>
 <div class="solutions">
-<a data-knowl="" class="id-ref hint-knowl original" data-refid="hk-MwA" id="MwA"><span class="type">Hint</span></a><div class="hidden-content tex2jax_ignore" id="hk-MwA"><div class="hint solution-like"><p id="EKX">\((1 \cdot 2^8 + 3 \cdot 2^6 + 2 \cdot 2^4)/6 = 80\text{.}\)</p></div></div>
+<a data-knowl="" class="id-ref hint-knowl original" data-refid="hk-MwA" id="MwA"><span class="type">Hint.</span> </a><div class="hidden-content tex2jax_ignore" id="hk-MwA"><div class="hint solution-like"><p id="EKX">\((1 \cdot 2^8 + 3 \cdot 2^6 + 2 \cdot 2^4)/6 = 80\text{.}\)</p></div></div>
 </div></article><article class="exercise exercise-like" id="eVD"><h6 class="heading"><span class="codenumber">18<span class="period">.</span></span></h6>
 <p id="wKZ">How many equivalence classes of switching functions are there if the input variables \(x_1\text{,}\) \(x_2\text{,}\) \(x_3\text{,}\) and \(x_4\) can be permuted by any permutation in the subgroup of \(S_4\) generated by the permutation \((x_1 x_2 x_3 x_4)\text{?}\)</p></article><article class="exercise exercise-like" id="LcM"><h6 class="heading"><span class="codenumber">19<span class="period">.</span></span></h6>
 <p id="cSi">A striped necktie has \(12\) bands of color. Each band can be colored by one of four possible colors. How many possible different-colored neckties are there?</p></article><article class="exercise exercise-like" id="rjV"><h6 class="heading"><span class="codenumber">20<span class="period">.</span></span></h6>
@@ -396,7 +402,7 @@ MathJax.Hub.Config({
 <p id="pgA">Let \(p\) be prime. Show that the number of different abelian groups of order \(p^n\) (up to isomorphism) is the same as the number of conjugacy classes in \(S_n\text{.}\)</p></article><article class="exercise exercise-like" id="Dyn"><h6 class="heading"><span class="codenumber">22<span class="period">.</span></span></h6>
 <p id="VnJ">Let \(a \in G\text{.}\) Show that for any \(g \in G\text{,}\) \(gC(a) g^{-1} = C(gag^{-1})\text{.}\)</p>
 <div class="solutions">
-<a data-knowl="" class="id-ref hint-knowl original" data-refid="hk-xnC" id="xnC"><span class="type">Hint</span></a><div class="hidden-content tex2jax_ignore" id="hk-xnC"><div class="hint solution-like"><p id="kSg">Use the fact that \(x \in g C(a) g^{-1}\) if and only if \(g^{-1}x g \in C(a)\text{.}\)</p></div></div>
+<a data-knowl="" class="id-ref hint-knowl original" data-refid="hk-xnC" id="xnC"><span class="type">Hint.</span> </a><div class="hidden-content tex2jax_ignore" id="hk-xnC"><div class="hint solution-like"><p id="kSg">Use the fact that \(x \in g C(a) g^{-1}\) if and only if \(g^{-1}x g \in C(a)\text{.}\)</p></div></div>
 </div></article><article class="exercise exercise-like" id="jFw"><h6 class="heading"><span class="codenumber">23<span class="period">.</span></span></h6>
 <p id="BuS">Let \(|G| = p^n\) be a nonabelian group for \(p\) prime. Prove that \(|Z(G)| \lt p^{n - 1}\text{.}\)</p></article><article class="exercise exercise-like" id="PMF"><h6 class="heading"><span class="codenumber">24<span class="period">.</span></span></h6>
 <p id="hCb">Let \(G\) be a group with order \(p^n\) where \(p\) is prime and \(X\) a finite \(G\)-set. If \(X_G = \{ x \in X : gx = x \text{ for all }g \in G \}\) is the set of elements in \(X\) fixed by the group action, then prove that \(|X| \equiv |X_G| \pmod{ p}\text{.}\)</p></article><article class="exercise exercise-like" id="vTO"><h6 class="heading"><span class="codenumber">25<span class="period">.</span></span></h6>

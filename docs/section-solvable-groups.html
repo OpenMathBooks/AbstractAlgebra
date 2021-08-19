@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2021-03-25T19:19:17-06:00       *-->
+<!--*       on 2021-08-19T13:10:24-06:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -14,36 +14,42 @@
 <title>AATA Solvable Groups</title>
 <meta name="Keywords" content="Authored in PreTeXt">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<script src="https://sagecell.sagemath.org/embedded_sagecell.js"></script><script type="text/x-mathjax-config">
-MathJax.Hub.Config({
-    tex2jax: {
-        inlineMath: [['\\(','\\)']]
+<script src="https://sagecell.sagemath.org/embedded_sagecell.js"></script><script>window.MathJax = {
+  tex: {
+    inlineMath: [['\\(','\\)']],
+    tags: "none",
+    useLabelIds: true,
+    tagSide: "right",
+    tagIndent: ".8em",
+    packages: {'[+]': ['base', 'extpfeil', 'ams', 'amscd', 'newcommand', 'knowl']}
+  },
+  options: {
+    ignoreHtmlClass: "tex2jax_ignore",
+    processHtmlClass: "has_am",
+    renderActions: {
+        findScript: [10, function (doc) {
+            document.querySelectorAll('script[type^="math/tex"]').forEach(function(node) {
+                var display = !!node.type.match(/; *mode=display/);
+                var math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display);
+                var text = document.createTextNode('');
+                node.parentNode.replaceChild(text, node);
+                math.start = {node: text, delim: '', n: 0};
+                math.end = {node: text, delim: '', n: 0};
+                doc.math.push(math);
+            });
+        }, '']
     },
-    asciimath2jax: {
-        ignoreClass: ".*",
-        processClass: "has_am"
-    },
-    jax: ["input/AsciiMath"],
-    extensions: ["asciimath2jax.js"],
-    TeX: {
-        extensions: ["extpfeil.js", "autobold.js", "https://pretextbook.org/js/lib/mathjaxknowl.js", "AMScd.js", ],
-        // scrolling to fragment identifiers is controlled by other Javascript
-        positionToHash: false,
-        equationNumbers: { autoNumber: "none", useLabelIds: true, },
-        TagSide: "right",
-        TagIndent: ".8em",
-    },
-    // HTML-CSS output Jax to be dropped for MathJax 3.0
-    "HTML-CSS": {
-        scale: 88,
-        mtextFontInherit: true,
-    },
-    CommonHTML: {
-        scale: 88,
-        mtextFontInherit: true,
-    },
-});
-</script><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS_CHTML-full"></script><link href="https://unpkg.com/prismjs@v1.22.0/themes/prism.css" rel="stylesheet">
+  },
+  chtml: {
+    scale: 0.88,
+    mtextInheritFont: true
+  },
+  loader: {
+    load: ['input/asciimath', '[tex]/extpfeil', '[tex]/amscd', '[tex]/newcommand', '[pretext]/mathjaxknowl3.js'],
+    paths: {pretext: "https://pretextbook.org/js/lib"},
+  },
+};
+</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><link href="https://unpkg.com/prismjs@v1.22.0/themes/prism.css" rel="stylesheet">
 <script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/jquery.min.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/0.13/pretext.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/0.13/pretext_add_on.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script xmlns:svg="http://www.w3.org/2000/svg">sagecellEvalName='Evaluate (Sage)';
 </script><link xmlns:svg="http://www.w3.org/2000/svg" href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
 <link xmlns:svg="http://www.w3.org/2000/svg" href="https://fonts.googleapis.com/css?family=Inconsolata:400,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
@@ -91,7 +97,7 @@ MathJax.Hub.Config({
 \newcommand{\amp}{&amp;}
 \)</div>
 <header id="masthead" class="smallbuttons"><div class="banner"><div class="container">
-<a id="logo-link" href="http://abstract.pugetsound.edu" target="_blank"><img src="images/cover_aata_2020.png" alt="Logo image"></a><div class="title-container">
+<a id="logo-link" href="http://abstract.pugetsound.edu" target="_blank"><img src="external/images/cover_aata_2020.png" alt="Logo image"></a><div class="title-container">
 <h1 class="heading"><a href="aata-toc.html"><span class="title">Abstract Algebra:</span> <span class="subtitle">Theory and Applications, Remixed!</span></a></h1>
 <p class="byline">Thomas W. Judson</p>
 </div>
@@ -99,11 +105,11 @@ MathJax.Hub.Config({
 <nav xmlns:svg="http://www.w3.org/2000/svg" id="primary-navbar" class="navbar"><div class="container">
 <div class="navbar-top-buttons">
 <button class="sidebar-left-toggle-button button active" aria-label="Show or hide table of contents sidebar">Contents</button><div class="tree-nav toolbar toolbar-divisor-3">
-<a class="index-button toolbar-item button" href="index-1.html" title="Index">Index</a><span class="threebuttons"><a id="previousbutton" class="previous-button toolbar-item button" href="section-groups-permutations.html" title="Previous">Prev</a><a id="upbutton" class="up-button button toolbar-item" href="groups.html" title="Up">Up</a><a id="nextbutton" class="next-button button toolbar-item" href="section-simplicity-of-an.html" title="Next">Next</a></span>
+<a class="index-button toolbar-item button" href="index-1.html" title="Index">Index</a><span class="threebuttons"><a id="previousbutton" class="previous-button toolbar-item button" href="section-groups-permutations.html" title="Previous">Prev</a><a id="upbutton" class="up-button button toolbar-item" href="groups-structure.html" title="Up">Up</a><a id="nextbutton" class="next-button button toolbar-item" href="section-simplicity-of-an.html" title="Next">Next</a></span>
 </div>
 </div>
 <div class="navbar-bottom-buttons toolbar toolbar-divisor-4">
-<button class="sidebar-left-toggle-button button toolbar-item active">Contents</button><a class="previous-button toolbar-item button" href="section-groups-permutations.html" title="Previous">Prev</a><a class="up-button button toolbar-item" href="groups.html" title="Up">Up</a><a class="next-button button toolbar-item" href="section-simplicity-of-an.html" title="Next">Next</a>
+<button class="sidebar-left-toggle-button button toolbar-item active">Contents</button><a class="previous-button toolbar-item button" href="section-groups-permutations.html" title="Previous">Prev</a><a class="up-button button toolbar-item" href="groups-structure.html" title="Up">Up</a><a class="next-button button toolbar-item" href="section-simplicity-of-an.html" title="Next">Next</a>
 </div>
 </div></nav></header><div class="page">
 <div xmlns:svg="http://www.w3.org/2000/svg" id="sidebar-left" class="sidebar" role="navigation"><div class="sidebar-content">
@@ -210,7 +216,7 @@ MathJax.Hub.Config({
 </li>
 <li class="link part"><a href="part-more-group-theory.html" data-scroll="part-more-group-theory"><span class="codenumber">III</span> <span class="title">More Group Theory</span></a></li>
 <li class="link">
-<a href="groups.html" data-scroll="nRa"><span class="codenumber">10</span> <span class="title">Some of the Structure of Groups</span></a><ul>
+<a href="groups-structure.html" data-scroll="nRa"><span class="codenumber">10</span> <span class="title">Some of the Structure of Groups</span></a><ul>
 <li><a href="section-groups-cayley.html" data-scroll="CTu">Isomorphisms and Cayley's Theorem</a></li>
 <li><a href="section-groups-permutations.html" data-scroll="mjE">Permutation Groups</a></li>
 <li><a href="section-solvable-groups.html" data-scroll="WbU" class="active">Solvable Groups</a></li>
@@ -312,7 +318,9 @@ MathJax.Hub.Config({
 <span class="type">Section</span> <span class="codenumber">10.3</span> <span class="title">Solvable Groups</span>
 </h2>
 <section class="worksheet" id="OyF"><h3 class="heading hide-type">
-<span class="type">Worksheet</span> <span class="codenumber">10.3.1</span> <span class="title">Activity: (Sub)Normal Series</span>
+<span class="type">Worksheet</span> <span class="codenumber">10.3.1</span> <span class="title">Activity: (Sub)Normal Series</span><div class="print-links">
+<a href="ws_grp-struct-series-a4.html" class="a4">A4</a><a href="ws_grp-struct-series-letter.html" class="us">US</a>
+</div>
 </h3>
 <section class="introduction" id="vLh"><p id="xAu">Given a group, we can look at subgroups.  We say that a sequence of subgroups</p>
 <div class="displaymath">
@@ -323,13 +331,17 @@ G = H_n \supset H_{n-1} \supset \cdots \supset H_1 \supset H_0 = \{e\}
 <p class="continuation">is a <dfn class="terminology">subnormal series</dfn> provided each \(H_i\) is normal in \(H_{i+1}\text{,}\) and a <dfn class="terminology">normal series</dfn> if each \(H_i\) is normal in \(G\text{.}\)</p>
 <p id="dHD">A non-trivial group \(G\) is called <dfn class="terminology">simple</dfn> provided it has no non-trivial normal subgroups.  We say that a subnormal series is a <dfn class="terminology">composition series</dfn> and that a normal series is a <dfn class="terminology">principle series</dfn> if every quotient group \(H_{i+1}/H_i\) is simple.</p></section><article class="exercise exercise-like" id="bSq"><h6 class="heading"><span class="codenumber">1<span class="period">.</span></span></h6>
 <p id="JOM">Find a subnormal series for \(D_4\text{.}\) Is it a normal series?</p>
-<div class="solutions"></div></article><article class="exercise exercise-like" id="HZz"><h6 class="heading"><span class="codenumber">2<span class="period">.</span></span></h6>
+<div class="solutions"></div>
+<div class="workspace" data-space="1.5in"></div></article><article class="exercise exercise-like" id="HZz"><h6 class="heading"><span class="codenumber">2<span class="period">.</span></span></h6>
 <p id="pVV">Find two different normal series for \(\Z_{60}\) of length 3 (length is the number of proper inclusions).</p>
-<div class="solutions"></div></article><article class="exercise exercise-like" id="ogI"><h6 class="heading"><span class="codenumber">3<span class="period">.</span></span></h6>
+<div class="solutions"></div>
+<div class="workspace" data-space="1.5in"></div></article><article class="exercise exercise-like" id="ogI"><h6 class="heading"><span class="codenumber">3<span class="period">.</span></span></h6>
 <p id="Wde">Find the quotient groups \(H_{i+1}/H_i\) for both series above.  How are these related?  Are the series composition series?</p>
-<div class="solutions"></div></article><article class="exercise exercise-like" id="UnR"><h6 class="heading"><span class="codenumber">4<span class="period">.</span></span></h6>
+<div class="solutions"></div>
+<div class="workspace" data-space="1.5in"></div></article><article class="exercise exercise-like" id="UnR"><h6 class="heading"><span class="codenumber">4<span class="period">.</span></span></h6>
 <p id="Ckn">Find a composition series for \(\Z_{60}\text{.}\)  Can you take it to be a <dfn class="terminology">refinement</dfn> of the normal series you found above?</p>
-<div class="solutions"></div></article></section><section class="subsection" id="Flx"><h3 class="heading hide-type">
+<div class="solutions"></div>
+<div class="workspace" data-space="0.1in"></div></article></section><section class="subsection" id="Flx"><h3 class="heading hide-type">
 <span class="type">Subsection</span> <span class="codenumber">10.3.2</span> <span class="title">Series of Subgroups</span>
 </h3>
 <p id="mcd">A <dfn class="terminology">subnormal series</dfn>  of a group \(G\) is a finite sequence of subgroups</p>

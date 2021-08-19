@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2021-03-25T19:18:49-06:00       *-->
+<!--*       on 2021-08-19T13:09:51-06:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -14,36 +14,42 @@
 <title>AATA A Review of Rings and Fields</title>
 <meta name="Keywords" content="Authored in PreTeXt">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<script src="https://sagecell.sagemath.org/embedded_sagecell.js"></script><script type="text/x-mathjax-config">
-MathJax.Hub.Config({
-    tex2jax: {
-        inlineMath: [['\\(','\\)']]
+<script src="https://sagecell.sagemath.org/embedded_sagecell.js"></script><script>window.MathJax = {
+  tex: {
+    inlineMath: [['\\(','\\)']],
+    tags: "none",
+    useLabelIds: true,
+    tagSide: "right",
+    tagIndent: ".8em",
+    packages: {'[+]': ['base', 'extpfeil', 'ams', 'amscd', 'newcommand', 'knowl']}
+  },
+  options: {
+    ignoreHtmlClass: "tex2jax_ignore",
+    processHtmlClass: "has_am",
+    renderActions: {
+        findScript: [10, function (doc) {
+            document.querySelectorAll('script[type^="math/tex"]').forEach(function(node) {
+                var display = !!node.type.match(/; *mode=display/);
+                var math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display);
+                var text = document.createTextNode('');
+                node.parentNode.replaceChild(text, node);
+                math.start = {node: text, delim: '', n: 0};
+                math.end = {node: text, delim: '', n: 0};
+                doc.math.push(math);
+            });
+        }, '']
     },
-    asciimath2jax: {
-        ignoreClass: ".*",
-        processClass: "has_am"
-    },
-    jax: ["input/AsciiMath"],
-    extensions: ["asciimath2jax.js"],
-    TeX: {
-        extensions: ["extpfeil.js", "autobold.js", "https://pretextbook.org/js/lib/mathjaxknowl.js", "AMScd.js", ],
-        // scrolling to fragment identifiers is controlled by other Javascript
-        positionToHash: false,
-        equationNumbers: { autoNumber: "none", useLabelIds: true, },
-        TagSide: "right",
-        TagIndent: ".8em",
-    },
-    // HTML-CSS output Jax to be dropped for MathJax 3.0
-    "HTML-CSS": {
-        scale: 88,
-        mtextFontInherit: true,
-    },
-    CommonHTML: {
-        scale: 88,
-        mtextFontInherit: true,
-    },
-});
-</script><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS_CHTML-full"></script><link href="https://unpkg.com/prismjs@v1.22.0/themes/prism.css" rel="stylesheet">
+  },
+  chtml: {
+    scale: 0.88,
+    mtextInheritFont: true
+  },
+  loader: {
+    load: ['input/asciimath', '[tex]/extpfeil', '[tex]/amscd', '[tex]/newcommand', '[pretext]/mathjaxknowl3.js'],
+    paths: {pretext: "https://pretextbook.org/js/lib"},
+  },
+};
+</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><link href="https://unpkg.com/prismjs@v1.22.0/themes/prism.css" rel="stylesheet">
 <script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/jquery.min.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/0.13/pretext.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/0.13/pretext_add_on.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script xmlns:svg="http://www.w3.org/2000/svg">sagecellEvalName='Evaluate (Sage)';
 </script><link xmlns:svg="http://www.w3.org/2000/svg" href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
 <link xmlns:svg="http://www.w3.org/2000/svg" href="https://fonts.googleapis.com/css?family=Inconsolata:400,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
@@ -91,7 +97,7 @@ MathJax.Hub.Config({
 \newcommand{\amp}{&amp;}
 \)</div>
 <header id="masthead" class="smallbuttons"><div class="banner"><div class="container">
-<a id="logo-link" href="http://abstract.pugetsound.edu" target="_blank"><img src="images/cover_aata_2020.png" alt="Logo image"></a><div class="title-container">
+<a id="logo-link" href="http://abstract.pugetsound.edu" target="_blank"><img src="external/images/cover_aata_2020.png" alt="Logo image"></a><div class="title-container">
 <h1 class="heading"><a href="aata-toc.html"><span class="title">Abstract Algebra:</span> <span class="subtitle">Theory and Applications, Remixed!</span></a></h1>
 <p class="byline">Thomas W. Judson</p>
 </div>
@@ -210,7 +216,7 @@ MathJax.Hub.Config({
 </li>
 <li class="link part"><a href="part-more-group-theory.html" data-scroll="part-more-group-theory"><span class="codenumber">III</span> <span class="title">More Group Theory</span></a></li>
 <li class="link">
-<a href="groups.html" data-scroll="nRa"><span class="codenumber">10</span> <span class="title">Some of the Structure of Groups</span></a><ul>
+<a href="groups-structure.html" data-scroll="nRa"><span class="codenumber">10</span> <span class="title">Some of the Structure of Groups</span></a><ul>
 <li><a href="section-groups-cayley.html" data-scroll="CTu">Isomorphisms and Cayley's Theorem</a></li>
 <li><a href="section-groups-permutations.html" data-scroll="mjE">Permutation Groups</a></li>
 <li><a href="section-solvable-groups.html" data-scroll="WbU">Solvable Groups</a></li>
@@ -313,30 +319,42 @@ MathJax.Hub.Config({
 </h2>
 <section class="introduction" id="introduction-25"><p id="p-2200">The goal of this chapter is to develop a theory of fields that will help us answer questions like those about constructible numbers from the last section, as well as understand what fields can tell us about polynomials.</p>
 <p id="p-2201">Before we can dive into the new details of this study, let's review what we know about rings (since fields are a type of ring) and the quotient structures that rings have.  The next two activities ask you to go back over some topics already covered in the book, and you should feel free to review your notes or the earlier sections to help work through them.</p></section><section class="worksheet" id="YCl"><h3 class="heading hide-type">
-<span class="type">Worksheet</span> <span class="codenumber">8.2.1</span> <span class="title">Activity: Review of Rings and Quotient Rings</span>
+<span class="type">Worksheet</span> <span class="codenumber">8.2.1</span> <span class="title">Activity: Review of Rings and Quotient Rings</span><div class="print-links">
+<a href="ws_rings-review1-a4.html" class="a4">A4</a><a href="ws_rings-review1-letter.html" class="us">US</a>
+</div>
 </h3>
 <section class="introduction" id="uFO"><p id="jbq">The goal of this activity is to remind ourselves of basic but crucially important definitions we will need in our study of fields.</p>
 <p id="Piz">You are asked to provide definitions. Some definitions will include terms that also should be defined.  Make sure that you know what every word in a definition means (if not, provide definitions for those words).  For example, a <dfn class="terminology">field</dfn> is a commutative division ring.  If you have not yet defined commutative ring and division ring, you should say what these mean.</p></section><article class="exercise exercise-like" id="aMX"><h6 class="heading"><span class="codenumber">1<span class="period">.</span></span></h6>
 <p id="vpI">Give a definition of a <dfn class="terminology">ring</dfn>.</p>
-<div class="solutions"></div></article><article class="exercise exercise-like" id="GUg"><h6 class="heading"><span class="codenumber">2<span class="period">.</span></span></h6>
+<div class="solutions"></div>
+<div class="workspace" data-space="1in"></div></article><article class="exercise exercise-like" id="GUg"><h6 class="heading"><span class="codenumber">2<span class="period">.</span></span></h6>
 <p id="bwR">What is a <dfn class="terminology">commutative ring with unity</dfn>?  How is this different from a ring?  (Note, “unity” is also sometimes called “identity”.)</p>
-<div class="solutions"></div></article><article class="exercise exercise-like" id="nbp"><h6 class="heading"><span class="codenumber">3<span class="period">.</span></span></h6>
+<div class="solutions"></div>
+<div class="workspace" data-space="1in"></div></article><article class="exercise exercise-like" id="nbp"><h6 class="heading"><span class="codenumber">3<span class="period">.</span></span></h6>
 <p id="HEa">What is a <dfn class="terminology">commutative division ring</dfn>?  What does “division” refer to here, and how is this different from a ring in general?</p>
-<div class="solutions"></div></article><article class="exercise exercise-like" id="Tiy"><h6 class="heading"><span class="codenumber">4<span class="period">.</span></span></h6>
+<div class="solutions"></div>
+<div class="workspace" data-space="1in"></div></article><article class="exercise exercise-like" id="Tiy"><h6 class="heading"><span class="codenumber">4<span class="period">.</span></span></h6>
 <p id="nLj">Give the definition of an <dfn class="terminology">integral domain</dfn>.  How does this relate to the other types of structures you defined above?</p>
-<div class="solutions"></div></article><article class="exercise exercise-like" id="zpH"><h6 class="heading"><span class="codenumber">5<span class="period">.</span></span></h6>
+<div class="solutions"></div>
+<div class="workspace" data-space="1in"></div></article><article class="exercise exercise-like" id="zpH"><h6 class="heading"><span class="codenumber">5<span class="period">.</span></span></h6>
 <p id="TSs">What is an <dfn class="terminology">ideal</dfn>?  What is the difference between an ideal and a <dfn class="terminology">subring</dfn>?</p>
 <div class="solutions"></div></article><hr class="pagebreak">
 <article class="exercise exercise-like" id="fwQ"><h6 class="heading"><span class="codenumber">6<span class="period">.</span></span></h6>
 <p id="zZB">Consider the integers \(\Z\) (an integral doamin, right?).  What does the notation \(\langle 3 \rangle\) mean?  What sort of thing is this?  What is \(\langle r \rangle\) in general?</p>
-<div class="solutions"></div></article><article class="exercise exercise-like" id="LDZ"><h6 class="heading"><span class="codenumber">7<span class="period">.</span></span></h6>
+<div class="solutions"></div>
+<div class="workspace" data-space="1.5in"></div></article><article class="exercise exercise-like" id="LDZ"><h6 class="heading"><span class="codenumber">7<span class="period">.</span></span></h6>
 <p id="ggK">What is \(\Q[x]\text{?}\)  Then give an example of an ideal in \(\Q[x]\text{,}\) using proper notation and by listing out some of the elements in the ideal.</p>
-<div class="solutions"></div></article><article class="exercise exercise-like" id="rLi"><h6 class="heading"><span class="codenumber">8<span class="period">.</span></span></h6>
+<div class="solutions"></div>
+<div class="workspace" data-space="1.5in"></div></article><article class="exercise exercise-like" id="rLi"><h6 class="heading"><span class="codenumber">8<span class="period">.</span></span></h6>
 <p id="MnT">Give the definition of a <dfn class="terminology">quotient ring</dfn> (i.e. a <dfn class="terminology">factor ring</dfn>).  What do elements of a quotient ring look like?  How are the operations defined?</p>
-<div class="solutions"></div></article><article class="exercise exercise-like" id="XSr"><h6 class="heading"><span class="codenumber">9<span class="period">.</span></span></h6>
+<div class="solutions"></div>
+<div class="workspace" data-space="1.5in"></div></article><article class="exercise exercise-like" id="XSr"><h6 class="heading"><span class="codenumber">9<span class="period">.</span></span></h6>
 <p id="svc">Illustrate you you wrote about quotient rings above using two examples: First, \(\Z/\langle 3 \rangle\text{,}\) and then \(\Q[x]/\langle x^2 + 1\rangle\text{.}\)  How many elements are in each of these quotient rings?  What do the elements look like?  Show how to add/multiply elements.</p>
-<div class="solutions"></div></article></section><section class="worksheet" id="Kdh"><h3 class="heading hide-type">
-<span class="type">Worksheet</span> <span class="codenumber">8.2.2</span> <span class="title">Activity: Review of the Euclidean Algorithm</span>
+<div class="solutions"></div>
+<div class="workspace" data-space="2.3in"></div></article></section><section class="worksheet" id="Kdh"><h3 class="heading hide-type">
+<span class="type">Worksheet</span> <span class="codenumber">8.2.2</span> <span class="title">Activity: Review of the Euclidean Algorithm</span><div class="print-links">
+<a href="ws_rings-review2-a4.html" class="a4">A4</a><a href="ws_rings-review2-letter.html" class="us">US</a>
+</div>
 </h3>
 <section class="introduction" id="kQD"><p id="cgL">The goal of this activity is to remember how to use the Eulcidean Algorithm to find the greatest common divisor of two elements in a ring (numbers or polynomials, for us) and write the gcd as a linear combination of the two elements (which Bezout's lemma tells us we can do).</p>
 <article class="example example-like" id="EJu"><h6 class="heading">
@@ -364,18 +382,24 @@ MathJax.Hub.Config({
 </div>
 <p class="continuation">So \(r = -5\) and \(s= 2\text{.}\)</p></article></section><article class="exercise exercise-like" id="QXM"><h6 class="heading"><span class="codenumber">1<span class="period">.</span></span></h6>
 <p id="InU">Find the greatest common divisor of 471 and 564 using the Euclidean Algorithm and then find integers \(r\) and \(s\) such that \(\gcd(471,564) = 471r+564s\text{.}\)</p>
-<div class="solutions"></div></article><article class="exercise exercise-like" id="xeV"><h6 class="heading"><span class="codenumber">2<span class="period">.</span></span></h6>
+<div class="solutions"></div>
+<div class="workspace" data-space="1.5in"></div></article><article class="exercise exercise-like" id="xeV"><h6 class="heading"><span class="codenumber">2<span class="period">.</span></span></h6>
 <p id="ovd">In the quotient ring \(\Z/\langle 564 \rangle\text{,}\) find an element \(a + \langle 564\rangle\) such that \((a+\langle 564\rangle)(471 + \langle 564\rangle) = 3 + \langle 564 \rangle\text{.}\)  Explain why the previous question is helpful here.</p>
-<div class="solutions"></div></article><article class="exercise exercise-like" id="dme"><h6 class="heading"><span class="codenumber">3<span class="period">.</span></span></h6>
+<div class="solutions"></div>
+<div class="workspace" data-space="1.5in"></div></article><article class="exercise exercise-like" id="dme"><h6 class="heading"><span class="codenumber">3<span class="period">.</span></span></h6>
 <p id="UCm">Is \(471 + \langle 564\rangle\) a unit in \(\Z/\langle 564\rangle\text{?}\)  Explain.</p>
-<div class="solutions"></div></article><hr class="pagebreak">
+<div class="solutions"></div>
+<div class="workspace" data-space="0.1in"></div></article><hr class="pagebreak">
 <article class="exercise exercise-like" id="Jtn"><h6 class="heading"><span class="codenumber">4<span class="period">.</span></span></h6>
 <p id="AJv">In \(\Q[x]\text{,}\) find the gcd of the polynomials \(a(x) = x^3 + 1\) and \(b(x) = x^4 + x^3 + 2x^2 + x - 1\text{.}\)  Then express the gcd as a combination of the two polynomials (as in Bezout's lemma).</p>
-<div class="solutions"></div></article><article class="exercise exercise-like" id="pAw"><h6 class="heading"><span class="codenumber">5<span class="period">.</span></span></h6>
+<div class="solutions"></div>
+<div class="workspace" data-space="2.8in"></div></article><article class="exercise exercise-like" id="pAw"><h6 class="heading"><span class="codenumber">5<span class="period">.</span></span></h6>
 <p id="gQE">Find the greatest common divisor of \(x^{24}-1\) and \(x^{15}-1\) in \(\Q[x]\text{,}\) and then express the gcd as a combination of the two polynomials.</p>
-<div class="solutions"></div></article><article class="exercise exercise-like" id="VHF"><h6 class="heading"><span class="codenumber">6<span class="period">.</span></span></h6>
+<div class="solutions"></div>
+<div class="workspace" data-space="2.8in"></div></article><article class="exercise exercise-like" id="VHF"><h6 class="heading"><span class="codenumber">6<span class="period">.</span></span></h6>
 <p id="MXN">Find a coset \(a(x) + \langle x^{24}-1\rangle\) of \(\Q[x]/\langle x^{24}-1\rangle\) such that \((a(x) + \langle x^{24}-1\rangle)(x^{15}-1 + \langle x^{24}-1\rangle) = x^3-1 + \langle x^{24}-1\rangle\text{.}\)</p>
-<div class="solutions"></div></article></section><section class="subsection" id="subsec-fields-for-polynomials"><h3 class="heading hide-type">
+<div class="solutions"></div>
+<div class="workspace" data-space="2in"></div></article></section><section class="subsection" id="subsec-fields-for-polynomials"><h3 class="heading hide-type">
 <span class="type">Subsection</span> <span class="codenumber">8.2.3</span> <span class="title">Fields for Polynomials</span>
 </h3>
 <p id="ThL">Recall that a <dfn class="terminology">field</dfn> is a commutative division ring.  That is, a field is a type of ring (i.e., a set together with two operations, addition and multiplication, satisfying the ring axioms).  The ring is commutative (meaning <em class="emphasis">multiplication</em> commutes; addition is commutative in all rings), and every non-zero element in the ring has a multiplicative inverse.</p>
@@ -430,29 +454,35 @@ F = {\mathbb Q}( \sqrt{2}\,) = \{ a + b \sqrt{2} : a, b \in {\mathbb Q} \}
 </div>
 <p class="continuation">and let \(E =  {\mathbb Q }( \sqrt{2} + \sqrt{3}\,)\) be the smallest field containing both \({\mathbb Q}\) and the real number \(\sqrt{2} + \sqrt{3}\text{.}\) For now, assume both \(E\) and \(F\) are fields, so they are both extension fields of the rational numbers. We claim that \(E\) is an extension field of \(F\text{.}\) To see this, we need only show that \(\sqrt{2}\) is in \(E\text{.}\) Since \(\sqrt{2} + \sqrt{3}\) is in \(E\text{,}\) \(1 / (\sqrt{2} + \sqrt{3}\,) = \sqrt{3} - \sqrt{2}\) must also be in \(E\text{.}\) Taking linear combinations of \(\sqrt{2} + \sqrt{3}\) and \(\sqrt{3} - \sqrt{2}\text{,}\) we find that \(\sqrt{2}\) and \(\sqrt{3}\) must both be in \(E\text{.}\)</p>
 <p id="naC">Note that this also shows that \(E\) is an extension field of \(\Q(\sqrt{3})\text{.}\)  Later we will consider how \(E\) relates to the fields \(\Q(\sqrt{2}, \sqrt{3})\text{,}\) the smallest field that contains both \(\sqrt{2}\) and \(\sqrt{3}\text{.}\)</p></article><p id="cBx">The example above make sense using real numbers we already know about.  Our next goal will be to simply add a arbitrary root of a polynomial, perhaps without even knowing which real (or complex) number that root is.  Surprisingly, this will work!  To get a feel for this, attempt the problems on the following activity.</p></section><section class="worksheet" id="TwG"><h3 class="heading hide-type">
-<span class="type">Worksheet</span> <span class="codenumber">8.2.4</span> <span class="title">Activity: Extending Fields to Factor</span>
+<span class="type">Worksheet</span> <span class="codenumber">8.2.4</span> <span class="title">Activity: Extending Fields to Factor</span><div class="print-links">
+<a href="ws_fields-intro-a4.html" class="a4">A4</a><a href="ws_fields-intro-letter.html" class="us">US</a>
+</div>
 </h3>
 <section class="introduction" id="BOB"><p id="xOC">Goal: Build the smallest field possible in which \(p(x) = x^3 + 3x^2 - x + 2\) is NOT irreducible.</p>
 <p id="dVL">Note that \(p(x)\) is irreducible over \(\Q\) because it has no roots in \(\Q\) (why is this and why is that enough?).  So let's invent a new number, call it \(\s\text{,}\) and insist that \(\s\) is a root of \(p(x)\text{.}\)  Then consider the smallest field \(E\) larger than \(\Q\) that also contains \(\s\text{.}\)</p></section><article class="exercise exercise-like" id="hVK"><h6 class="heading"><span class="codenumber">1<span class="period">.</span></span></h6>
 <p id="KcU">List five elements in \(E\) that are NOT already in \(\Q\text{.}\)</p>
 <div class="solutions">
-<a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-Lin" id="Lin"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-Lin"><div class="solution solution-like"><p id="ouQ">For example, \(\s\) (which is not in \(\Q\) because, by the rational roots theorem, there are no roots to \(p(x)\) in \(\Q\)), as well as \(\s+1\text{,}\) \(4\s\text{,}\) \(\s^2\text{,}\) and \(3+\frac{1}{2}\s - \s^2\text{.}\)</p></div></div>
-</div></article><article class="exercise exercise-like" id="OcT"><h6 class="heading"><span class="codenumber">2<span class="period">.</span></span></h6>
+<a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-Lin" id="Lin"><span class="type">Solution.</span> </a><div class="hidden-content tex2jax_ignore" id="hk-Lin"><div class="solution solution-like"><p id="ouQ">For example, \(\s\) (which is not in \(\Q\) because, by the rational roots theorem, there are no roots to \(p(x)\) in \(\Q\)), as well as \(\s+1\text{,}\) \(4\s\text{,}\) \(\s^2\text{,}\) and \(3+\frac{1}{2}\s - \s^2\text{.}\)</p></div></div>
+</div>
+<div class="workspace" data-space="1in"></div></article><article class="exercise exercise-like" id="OcT"><h6 class="heading"><span class="codenumber">2<span class="period">.</span></span></h6>
 <p id="qkd">The element \(\s^3\) is in \(E\text{,}\) but this can also be written using smaller powers of \(\s\text{.}\)  How?</p>
 <div class="solutions">
-<a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-rpw" id="rpw"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-rpw"><div class="solution solution-like"><p id="UBZ">Since \(\s^3 + 3\s^2 - \s + 2 = 0\) we see that \(\s^3 = -3\s^2 + \s - 2\text{.}\)</p></div></div>
-</div></article><article class="exercise exercise-like" id="ukc"><h6 class="heading"><span class="codenumber">3<span class="period">.</span></span></h6>
+<a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-rpw" id="rpw"><span class="type">Solution.</span> </a><div class="hidden-content tex2jax_ignore" id="hk-rpw"><div class="solution solution-like"><p id="UBZ">Since \(\s^3 + 3\s^2 - \s + 2 = 0\) we see that \(\s^3 = -3\s^2 + \s - 2\text{.}\)</p></div></div>
+</div>
+<div class="workspace" data-space="1in"></div></article><article class="exercise exercise-like" id="ukc"><h6 class="heading"><span class="codenumber">3<span class="period">.</span></span></h6>
 <p id="Wrm">Describe \(E\) as a set using set builder notation.  In other words, \(E\) is the set of all elements of the form …</p>
 <div class="solutions">
-<a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-XwF" id="XwF"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-XwF"><div class="solution solution-like"><p id="AJi">\(E = \{a + b \s + c \s^2 \st a, b, c, \in \Q\}\text{.}\)  Certainly everything of this form is in \(E\) since \(E\) must be closed under addition and multiplication.  That nothing else is is a consequence of the previous question: since \(\s^3\) can already be expressed as a linear combination of \(1\text{,}\) \(\s\text{,}\) and \(\s^2\text{,}\) any power of \(\s\) greater or equal to 3 can be as well.</p></div></div>
-</div></article><article class="exercise exercise-like" id="arl"><h6 class="heading"><span class="codenumber">4<span class="period">.</span></span></h6>
+<a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-XwF" id="XwF"><span class="type">Solution.</span> </a><div class="hidden-content tex2jax_ignore" id="hk-XwF"><div class="solution solution-like"><p id="AJi">\(E = \{a + b \s + c \s^2 \st a, b, c, \in \Q\}\text{.}\)  Certainly everything of this form is in \(E\) since \(E\) must be closed under addition and multiplication.  That nothing else is is a consequence of the previous question: since \(\s^3\) can already be expressed as a linear combination of \(1\text{,}\) \(\s\text{,}\) and \(\s^2\text{,}\) any power of \(\s\) greater or equal to 3 can be as well.</p></div></div>
+</div>
+<div class="workspace" data-space="1in"></div></article><article class="exercise exercise-like" id="arl"><h6 class="heading"><span class="codenumber">4<span class="period">.</span></span></h6>
 <p id="Cyv">Wait: why are we doing this?  Our goal is for \(p(x)\) to factor.  Does it?  What would one of the factors be?</p>
 <div class="solutions">
-<a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-DDO" id="DDO"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-DDO"><div class="solution solution-like"><p id="gQr">Yes, we get \(p(x) = (x-\s)(x^2 + (3+\s)x - 1 + 3\s + \s^2)\text{.}\)  Do this by long division.  The remainder might not look like zero right away, except that it is precisely \(p(\s)\text{.}\)  This is not a surprise: the division algorithm says that \(p(x) = b(x)(x-\s) + r(x)\) where \(r(x)\) is either the zero polynomial or has degree 0 (less than the degree of \((x-\s)\)).  Now plug in \(\s\) for \(x\text{.}\)  Long division is just there to help us find \(b(x)\text{.}\)</p></div></div>
-</div></article><article class="exercise exercise-like" id="Gyu"><h6 class="heading"><span class="codenumber">5<span class="period">.</span></span></h6>
+<a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-DDO" id="DDO"><span class="type">Solution.</span> </a><div class="hidden-content tex2jax_ignore" id="hk-DDO"><div class="solution solution-like"><p id="gQr">Yes, we get \(p(x) = (x-\s)(x^2 + (3+\s)x - 1 + 3\s + \s^2)\text{.}\)  Do this by long division.  The remainder might not look like zero right away, except that it is precisely \(p(\s)\text{.}\)  This is not a surprise: the division algorithm says that \(p(x) = b(x)(x-\s) + r(x)\) where \(r(x)\) is either the zero polynomial or has degree 0 (less than the degree of \((x-\s)\)).  Now plug in \(\s\) for \(x\text{.}\)  Long division is just there to help us find \(b(x)\text{.}\)</p></div></div>
+</div>
+<div class="workspace" data-space="2in"></div></article><article class="exercise exercise-like" id="Gyu"><h6 class="heading"><span class="codenumber">5<span class="period">.</span></span></h6>
 <p id="iFE">Wait again: we want \(E\) to be a field.  Is it?  What would we need to check?</p>
 <div class="solutions">
-<a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-jKX" id="jKX"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-jKX"><div class="solution solution-like">
+<a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-jKX" id="jKX"><span class="type">Solution.</span> </a><div class="hidden-content tex2jax_ignore" id="hk-jKX"><div class="solution solution-like">
 <p id="MXA">This is a hard question that we will return to.  Note that all we must check still is that every non-zero element in \(E\) has a multiplicative inverse.  That is, given \(a+b\s + c\s^2\text{,}\) find an element \(a' + b'\s + c'\s^2\) such that</p>
 <div class="displaymath">
 \begin{equation*}
@@ -465,23 +495,27 @@ F = {\mathbb Q}( \sqrt{2}\,) = \{ a + b \sqrt{2} : a, b \in {\mathbb Q} \}
 <article class="exercise exercise-like" id="mFD"><h6 class="heading"><span class="codenumber">6<span class="period">.</span></span></h6>
 <p id="OMN">List five elements in the quotient ring \(\Q[x]/\langle p(x)\rangle\) (using the same \(p(x)\) from the previous page).  Remember, these will all be cosets.</p>
 <div class="solutions">
-<a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-PSg" id="PSg"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-PSg"><div class="solution solution-like"><p id="teJ">For example, \(x  + \langle p(x) \rangle\text{,}\)  \(x+1 +\langle p(x) \rangle\text{,}\) \(4x + \langle p(x) \rangle\text{,}\) \(x^2 + \langle p(x) \rangle\text{,}\) and \(3+\frac{1}{2}x - x^2 + \langle p(x) \rangle\text{.}\)</p></div></div>
-</div></article><article class="exercise exercise-like" id="SMM"><h6 class="heading"><span class="codenumber">7<span class="period">.</span></span></h6>
+<a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-PSg" id="PSg"><span class="type">Solution.</span> </a><div class="hidden-content tex2jax_ignore" id="hk-PSg"><div class="solution solution-like"><p id="teJ">For example, \(x  + \langle p(x) \rangle\text{,}\)  \(x+1 +\langle p(x) \rangle\text{,}\) \(4x + \langle p(x) \rangle\text{,}\) \(x^2 + \langle p(x) \rangle\text{,}\) and \(3+\frac{1}{2}x - x^2 + \langle p(x) \rangle\text{.}\)</p></div></div>
+</div>
+<div class="workspace" data-space="1.5in"></div></article><article class="exercise exercise-like" id="SMM"><h6 class="heading"><span class="codenumber">7<span class="period">.</span></span></h6>
 <p id="uTW">The element \(x^3+\langle p(x) \rangle\) is an element of \(\Q[x]/\langle p(x) \rangle\text{,}\) but it can also be written as a “simpler” coset.  How?</p>
 <div class="solutions">
-<a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-vZp" id="vZp"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-vZp"><div class="solution solution-like"><p id="ZlS">Since \(x^3 + 3x^2 - x + 2 \in \langle p(x) \rangle\) we see that \(x^3 + \langle p(x) \rangle = -3x^2 + x - 2 + \langle p(x) \rangle\text{.}\)  You can get here either by dividing \(x^3\) by \(p(x)\) and looking for the remainder, or by asking, what would I need to add to \(p(x)\) to get \(x^3\text{.}\) That is because the coset \(x^3 + \langle p(x) \rangle\) contains all the polynomials in \(\Q[x]\) that result from adding \(x^3\) to a multiple of \(p(x)\text{.}\)  One of these elements is \(x^3\) (since the polynomial \(0\) is a multiple of \(p(x)\)). So if we can find another polynomial \(a(x)\) such that \(a(x)\) added to a multiple of \(p(x)\) gives \(x^3\text{,}\) then \(a(x) + \langle p(x)\rangle\) will be exactly the same coset as \(x^3 + \langle p(x) \rangle\text{.}\)</p></div></div>
-</div></article><article class="exercise exercise-like" id="yTV"><h6 class="heading"><span class="codenumber">8<span class="period">.</span></span></h6>
+<a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-vZp" id="vZp"><span class="type">Solution.</span> </a><div class="hidden-content tex2jax_ignore" id="hk-vZp"><div class="solution solution-like"><p id="ZlS">Since \(x^3 + 3x^2 - x + 2 \in \langle p(x) \rangle\) we see that \(x^3 + \langle p(x) \rangle = -3x^2 + x - 2 + \langle p(x) \rangle\text{.}\)  You can get here either by dividing \(x^3\) by \(p(x)\) and looking for the remainder, or by asking, what would I need to add to \(p(x)\) to get \(x^3\text{.}\) That is because the coset \(x^3 + \langle p(x) \rangle\) contains all the polynomials in \(\Q[x]\) that result from adding \(x^3\) to a multiple of \(p(x)\text{.}\)  One of these elements is \(x^3\) (since the polynomial \(0\) is a multiple of \(p(x)\)). So if we can find another polynomial \(a(x)\) such that \(a(x)\) added to a multiple of \(p(x)\) gives \(x^3\text{,}\) then \(a(x) + \langle p(x)\rangle\) will be exactly the same coset as \(x^3 + \langle p(x) \rangle\text{.}\)</p></div></div>
+</div>
+<div class="workspace" data-space="1.5in"></div></article><article class="exercise exercise-like" id="yTV"><h6 class="heading"><span class="codenumber">8<span class="period">.</span></span></h6>
 <p id="bbf">Describe \(\Q[x]/\langle p(x) \rangle\) as a set using set builder notation.  In other words, this quotient ring is the set of all cosets of the form …</p>
 <div class="solutions">
-<a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-cgy" id="cgy"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-cgy"><div class="solution solution-like">
+<a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-cgy" id="cgy"><span class="type">Solution.</span> </a><div class="hidden-content tex2jax_ignore" id="hk-cgy"><div class="solution solution-like">
 <p id="Ftb">\(\Q[x]/\langle p(x) \rangle = \{a + bx + cx^2 + \langle p(x) \rangle \st a, b, c\in \Q\}\text{.}\)  While we can certainly add a polynomial of degree greater to 2 to get a coset, we can always divide it by \(p(x)\) and get a remainder of degree 2 or less.</p>
 <p id="lAk">This looks very much like the definition of \(E\text{,}\) and in fact it suggests that \(E \cong \Q[x]/\langle p(x) \rangle\text{.}\)  This is correct, as we could prove using the fundamental homomorphism theorem.  To do that, we would need to identify a surjective homomorphism from \(\Q[x]\) onto \(E\) for which \(p(x)\) was the kernel.</p>
 </div></div>
-</div></article><article class="exercise exercise-like" id="fbe"><h6 class="heading"><span class="codenumber">9<span class="period">.</span></span></h6>
+</div>
+<div class="workspace" data-space="1.5in"></div></article><article class="exercise exercise-like" id="fbe"><h6 class="heading"><span class="codenumber">9<span class="period">.</span></span></h6>
 <p id="Hio">Wait: if we want to show that \(E\) is a field, and \(E\) is basically the same as \(\Q[x]/\langle p(x) \rangle\text{,}\) then we could just show \(\Q[x]/\langle p(x) \rangle\) is a field.  What would this mean?  What do we need to verify?</p>
 <div class="solutions">
-<a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-InH" id="InH"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-InH"><div class="solution solution-like"><p id="RHt">We need to verify that for any coset \(a+bx + cx^2 + \langle p(x) \rangle\text{,}\) there is a coset \(a' + b'x + c'x^2 + \langle p(x) \rangle\) such that the product of the two cosets is the multiplicative identity coset, namely \(1 + \langle p(x) \rangle\text{.}\)  We will see how to do this next.</p></div></div>
-</div></article></section></section></div></main>
+<a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-InH" id="InH"><span class="type">Solution.</span> </a><div class="hidden-content tex2jax_ignore" id="hk-InH"><div class="solution solution-like"><p id="RHt">We need to verify that for any coset \(a+bx + cx^2 + \langle p(x) \rangle\text{,}\) there is a coset \(a' + b'x + c'x^2 + \langle p(x) \rangle\) such that the product of the two cosets is the multiplicative identity coset, namely \(1 + \langle p(x) \rangle\text{.}\)  We will see how to do this next.</p></div></div>
+</div>
+<div class="workspace" data-space="0.1in"></div></article></section></section></div></main>
 </div>
 <script src="https://unpkg.com/prismjs@v1.22.0/components/prism-core.min.js"></script><script src="https://unpkg.com/prismjs@v1.22.0/plugins/autoloader/prism-autoloader.min.js"></script>
 </body>

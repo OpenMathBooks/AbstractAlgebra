@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2021-03-25T19:19:21-06:00       *-->
+<!--*       on 2021-08-19T13:10:29-06:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -14,36 +14,42 @@
 <title>AATA Applications: Galois Groups</title>
 <meta name="Keywords" content="Authored in PreTeXt">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<script src="https://sagecell.sagemath.org/embedded_sagecell.js"></script><script type="text/x-mathjax-config">
-MathJax.Hub.Config({
-    tex2jax: {
-        inlineMath: [['\\(','\\)']]
+<script src="https://sagecell.sagemath.org/embedded_sagecell.js"></script><script>window.MathJax = {
+  tex: {
+    inlineMath: [['\\(','\\)']],
+    tags: "none",
+    useLabelIds: true,
+    tagSide: "right",
+    tagIndent: ".8em",
+    packages: {'[+]': ['base', 'extpfeil', 'ams', 'amscd', 'newcommand', 'knowl']}
+  },
+  options: {
+    ignoreHtmlClass: "tex2jax_ignore",
+    processHtmlClass: "has_am",
+    renderActions: {
+        findScript: [10, function (doc) {
+            document.querySelectorAll('script[type^="math/tex"]').forEach(function(node) {
+                var display = !!node.type.match(/; *mode=display/);
+                var math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display);
+                var text = document.createTextNode('');
+                node.parentNode.replaceChild(text, node);
+                math.start = {node: text, delim: '', n: 0};
+                math.end = {node: text, delim: '', n: 0};
+                doc.math.push(math);
+            });
+        }, '']
     },
-    asciimath2jax: {
-        ignoreClass: ".*",
-        processClass: "has_am"
-    },
-    jax: ["input/AsciiMath"],
-    extensions: ["asciimath2jax.js"],
-    TeX: {
-        extensions: ["extpfeil.js", "autobold.js", "https://pretextbook.org/js/lib/mathjaxknowl.js", "AMScd.js", ],
-        // scrolling to fragment identifiers is controlled by other Javascript
-        positionToHash: false,
-        equationNumbers: { autoNumber: "none", useLabelIds: true, },
-        TagSide: "right",
-        TagIndent: ".8em",
-    },
-    // HTML-CSS output Jax to be dropped for MathJax 3.0
-    "HTML-CSS": {
-        scale: 88,
-        mtextFontInherit: true,
-    },
-    CommonHTML: {
-        scale: 88,
-        mtextFontInherit: true,
-    },
-});
-</script><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS_CHTML-full"></script><link href="https://unpkg.com/prismjs@v1.22.0/themes/prism.css" rel="stylesheet">
+  },
+  chtml: {
+    scale: 0.88,
+    mtextInheritFont: true
+  },
+  loader: {
+    load: ['input/asciimath', '[tex]/extpfeil', '[tex]/amscd', '[tex]/newcommand', '[pretext]/mathjaxknowl3.js'],
+    paths: {pretext: "https://pretextbook.org/js/lib"},
+  },
+};
+</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><link href="https://unpkg.com/prismjs@v1.22.0/themes/prism.css" rel="stylesheet">
 <script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/jquery.min.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/0.13/pretext.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/0.13/pretext_add_on.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script xmlns:svg="http://www.w3.org/2000/svg">sagecellEvalName='Evaluate (Sage)';
 </script><link xmlns:svg="http://www.w3.org/2000/svg" href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
 <link xmlns:svg="http://www.w3.org/2000/svg" href="https://fonts.googleapis.com/css?family=Inconsolata:400,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
@@ -91,7 +97,7 @@ MathJax.Hub.Config({
 \newcommand{\amp}{&amp;}
 \)</div>
 <header id="masthead" class="smallbuttons"><div class="banner"><div class="container">
-<a id="logo-link" href="http://abstract.pugetsound.edu" target="_blank"><img src="images/cover_aata_2020.png" alt="Logo image"></a><div class="title-container">
+<a id="logo-link" href="http://abstract.pugetsound.edu" target="_blank"><img src="external/images/cover_aata_2020.png" alt="Logo image"></a><div class="title-container">
 <h1 class="heading"><a href="aata-toc.html"><span class="title">Abstract Algebra:</span> <span class="subtitle">Theory and Applications, Remixed!</span></a></h1>
 <p class="byline">Thomas W. Judson</p>
 </div>
@@ -99,11 +105,11 @@ MathJax.Hub.Config({
 <nav xmlns:svg="http://www.w3.org/2000/svg" id="primary-navbar" class="navbar"><div class="container">
 <div class="navbar-top-buttons">
 <button class="sidebar-left-toggle-button button active" aria-label="Show or hide table of contents sidebar">Contents</button><div class="tree-nav toolbar toolbar-divisor-3">
-<a class="index-button toolbar-item button" href="index-1.html" title="Index">Index</a><span class="threebuttons"><a id="previousbutton" class="previous-button toolbar-item button" href="section-simplicity-of-an.html" title="Previous">Prev</a><a id="upbutton" class="up-button button toolbar-item" href="groups.html" title="Up">Up</a><a id="nextbutton" class="next-button button toolbar-item" href="struct-more.html" title="Next">Next</a></span>
+<a class="index-button toolbar-item button" href="index-1.html" title="Index">Index</a><span class="threebuttons"><a id="previousbutton" class="previous-button toolbar-item button" href="section-simplicity-of-an.html" title="Previous">Prev</a><a id="upbutton" class="up-button button toolbar-item" href="groups-structure.html" title="Up">Up</a><a id="nextbutton" class="next-button button toolbar-item" href="struct-more.html" title="Next">Next</a></span>
 </div>
 </div>
 <div class="navbar-bottom-buttons toolbar toolbar-divisor-4">
-<button class="sidebar-left-toggle-button button toolbar-item active">Contents</button><a class="previous-button toolbar-item button" href="section-simplicity-of-an.html" title="Previous">Prev</a><a class="up-button button toolbar-item" href="groups.html" title="Up">Up</a><a class="next-button button toolbar-item" href="struct-more.html" title="Next">Next</a>
+<button class="sidebar-left-toggle-button button toolbar-item active">Contents</button><a class="previous-button toolbar-item button" href="section-simplicity-of-an.html" title="Previous">Prev</a><a class="up-button button toolbar-item" href="groups-structure.html" title="Up">Up</a><a class="next-button button toolbar-item" href="struct-more.html" title="Next">Next</a>
 </div>
 </div></nav></header><div class="page">
 <div xmlns:svg="http://www.w3.org/2000/svg" id="sidebar-left" class="sidebar" role="navigation"><div class="sidebar-content">
@@ -210,7 +216,7 @@ MathJax.Hub.Config({
 </li>
 <li class="link part"><a href="part-more-group-theory.html" data-scroll="part-more-group-theory"><span class="codenumber">III</span> <span class="title">More Group Theory</span></a></li>
 <li class="link">
-<a href="groups.html" data-scroll="nRa"><span class="codenumber">10</span> <span class="title">Some of the Structure of Groups</span></a><ul>
+<a href="groups-structure.html" data-scroll="nRa"><span class="codenumber">10</span> <span class="title">Some of the Structure of Groups</span></a><ul>
 <li><a href="section-groups-cayley.html" data-scroll="CTu">Isomorphisms and Cayley's Theorem</a></li>
 <li><a href="section-groups-permutations.html" data-scroll="mjE">Permutation Groups</a></li>
 <li><a href="section-solvable-groups.html" data-scroll="WbU">Solvable Groups</a></li>
@@ -433,7 +439,7 @@ G(E/F_{i - 1})/G(E/F_i) \cong G(F_i/F_{i - 1})\text{.}
 <span class="type">Lemma</span><span class="space"> </span><span class="codenumber">10.38</span><span class="period">.</span>
 </h6>
 <p id="RYe">If \(p\) is prime, then any subgroup of \(S_p\) that contains a transposition and a cycle of length \(p\) must be all of \(S_p\text{.}\)</p></article><article class="proof" id="mfd"><h6 class="heading"><span class="type">Proof<span class="period">.</span></span></h6>
-<p id="zkG">Let \(G\) be a subgroup of \(S_p\) that contains a transposition \(\sigma\) and \(\tau\) a cycle of length \(p\text{.}\) We may assume that \(\sigma = (1 2)\text{.}\) The order of \(\tau\) is \(p\) and \(\tau^n\) must be a cycle of length \(p\) for \(1 \leq n \lt p\text{.}\) Therefore, we may assume that \(\mu = \tau^n = (1 2 i_3 \ldots i_p)\) for some \(n\text{,}\) where \(1 \leq n \lt p\) (see <a class="xref" data-knowl="./knowl/exercise-permute-order-product-cycles.html" title="Exercise 2.7.94">Exercise 2.7.94</a>). Noting that \((1 2)(12 i_3\ldots i_p) = (2 i_3\ldots i_p)\) and \((2i_3 \ldots i_p)^k(12)(2i_3 \ldots i_p)^{-k} = (1i_k)\text{,}\) we can obtain all the transpositions of the form \((1n)\) for \(1 \leq n \lt p\text{.}\) However, these transpositions generate all transpositions in \(S_p\text{,}\) since \((1j)(1 i)(1 j) = (i j)\text{.}\) The transpositions generate \(S_p\text{.}\)</p></article><figure class="figure figure-like" id="hvx"><div class="image-box" style="width: 70%; margin-left: 15%; margin-right: 15%;"><img src="images/galois-quintic.svg" role="img" style="width: 100%; height: auto;" alt="" onerror="this.src='images/galois-quintic.png';this.onerror=null;"></div>
+<p id="zkG">Let \(G\) be a subgroup of \(S_p\) that contains a transposition \(\sigma\) and \(\tau\) a cycle of length \(p\text{.}\) We may assume that \(\sigma = (1 2)\text{.}\) The order of \(\tau\) is \(p\) and \(\tau^n\) must be a cycle of length \(p\) for \(1 \leq n \lt p\text{.}\) Therefore, we may assume that \(\mu = \tau^n = (1 2 i_3 \ldots i_p)\) for some \(n\text{,}\) where \(1 \leq n \lt p\) (see <a class="xref" data-knowl="./knowl/exercise-permute-order-product-cycles.html" title="Exercise 2.7.94">Exercise 2.7.94</a>). Noting that \((1 2)(12 i_3\ldots i_p) = (2 i_3\ldots i_p)\) and \((2i_3 \ldots i_p)^k(12)(2i_3 \ldots i_p)^{-k} = (1i_k)\text{,}\) we can obtain all the transpositions of the form \((1n)\) for \(1 \leq n \lt p\text{.}\) However, these transpositions generate all transpositions in \(S_p\text{,}\) since \((1j)(1 i)(1 j) = (i j)\text{.}\) The transpositions generate \(S_p\text{.}\)</p></article><figure class="figure figure-like" id="hvx"><div class="image-box" style="width: 70%; margin-left: 15%; margin-right: 15%;"><img src="generated/sageplot/galois-quintic.svg" role="img" class="contained" alt="" onerror="this.src='generated/sageplot/galois-quintic.png';this.onerror=null;"></div>
 <figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">10.39<span class="period">.</span></span><span class="space"> </span>The graph of \(f(x) = x^5 - 6 x^3 - 27 x - 3\)</figcaption></figure><article class="example example-like" id="YwX"><h6 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">10.40</span><span class="period">.</span>
 </h6>

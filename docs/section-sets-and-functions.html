@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2021-03-25T19:17:23-06:00       *-->
+<!--*       on 2021-08-19T13:08:19-06:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -14,36 +14,42 @@
 <title>AATA Sets and Functions</title>
 <meta name="Keywords" content="Authored in PreTeXt">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<script src="https://sagecell.sagemath.org/embedded_sagecell.js"></script><script type="text/x-mathjax-config">
-MathJax.Hub.Config({
-    tex2jax: {
-        inlineMath: [['\\(','\\)']]
+<script src="https://sagecell.sagemath.org/embedded_sagecell.js"></script><script>window.MathJax = {
+  tex: {
+    inlineMath: [['\\(','\\)']],
+    tags: "none",
+    useLabelIds: true,
+    tagSide: "right",
+    tagIndent: ".8em",
+    packages: {'[+]': ['base', 'extpfeil', 'ams', 'amscd', 'newcommand', 'knowl']}
+  },
+  options: {
+    ignoreHtmlClass: "tex2jax_ignore",
+    processHtmlClass: "has_am",
+    renderActions: {
+        findScript: [10, function (doc) {
+            document.querySelectorAll('script[type^="math/tex"]').forEach(function(node) {
+                var display = !!node.type.match(/; *mode=display/);
+                var math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display);
+                var text = document.createTextNode('');
+                node.parentNode.replaceChild(text, node);
+                math.start = {node: text, delim: '', n: 0};
+                math.end = {node: text, delim: '', n: 0};
+                doc.math.push(math);
+            });
+        }, '']
     },
-    asciimath2jax: {
-        ignoreClass: ".*",
-        processClass: "has_am"
-    },
-    jax: ["input/AsciiMath"],
-    extensions: ["asciimath2jax.js"],
-    TeX: {
-        extensions: ["extpfeil.js", "autobold.js", "https://pretextbook.org/js/lib/mathjaxknowl.js", "AMScd.js", ],
-        // scrolling to fragment identifiers is controlled by other Javascript
-        positionToHash: false,
-        equationNumbers: { autoNumber: "none", useLabelIds: true, },
-        TagSide: "right",
-        TagIndent: ".8em",
-    },
-    // HTML-CSS output Jax to be dropped for MathJax 3.0
-    "HTML-CSS": {
-        scale: 88,
-        mtextFontInherit: true,
-    },
-    CommonHTML: {
-        scale: 88,
-        mtextFontInherit: true,
-    },
-});
-</script><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS_CHTML-full"></script><link href="https://unpkg.com/prismjs@v1.22.0/themes/prism.css" rel="stylesheet">
+  },
+  chtml: {
+    scale: 0.88,
+    mtextInheritFont: true
+  },
+  loader: {
+    load: ['input/asciimath', '[tex]/extpfeil', '[tex]/amscd', '[tex]/newcommand', '[pretext]/mathjaxknowl3.js'],
+    paths: {pretext: "https://pretextbook.org/js/lib"},
+  },
+};
+</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><link href="https://unpkg.com/prismjs@v1.22.0/themes/prism.css" rel="stylesheet">
 <script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/jquery.min.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/0.13/pretext.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/0.13/pretext_add_on.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script xmlns:svg="http://www.w3.org/2000/svg">sagecellEvalName='Evaluate (Sage)';
 </script><link xmlns:svg="http://www.w3.org/2000/svg" href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
 <link xmlns:svg="http://www.w3.org/2000/svg" href="https://fonts.googleapis.com/css?family=Inconsolata:400,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
@@ -91,7 +97,7 @@ MathJax.Hub.Config({
 \newcommand{\amp}{&amp;}
 \)</div>
 <header id="masthead" class="smallbuttons"><div class="banner"><div class="container">
-<a id="logo-link" href="http://abstract.pugetsound.edu" target="_blank"><img src="images/cover_aata_2020.png" alt="Logo image"></a><div class="title-container">
+<a id="logo-link" href="http://abstract.pugetsound.edu" target="_blank"><img src="external/images/cover_aata_2020.png" alt="Logo image"></a><div class="title-container">
 <h1 class="heading"><a href="aata-toc.html"><span class="title">Abstract Algebra:</span> <span class="subtitle">Theory and Applications, Remixed!</span></a></h1>
 <p class="byline">Thomas W. Judson</p>
 </div>
@@ -210,7 +216,7 @@ MathJax.Hub.Config({
 </li>
 <li class="link part"><a href="part-more-group-theory.html" data-scroll="part-more-group-theory"><span class="codenumber">III</span> <span class="title">More Group Theory</span></a></li>
 <li class="link">
-<a href="groups.html" data-scroll="nRa"><span class="codenumber">10</span> <span class="title">Some of the Structure of Groups</span></a><ul>
+<a href="groups-structure.html" data-scroll="nRa"><span class="codenumber">10</span> <span class="title">Some of the Structure of Groups</span></a><ul>
 <li><a href="section-groups-cayley.html" data-scroll="CTu">Isomorphisms and Cayley's Theorem</a></li>
 <li><a href="section-groups-permutations.html" data-scroll="mjE">Permutation Groups</a></li>
 <li><a href="section-solvable-groups.html" data-scroll="WbU">Solvable Groups</a></li>
@@ -525,7 +531,7 @@ f(A) = \{ f(a) : a \in A \} \subset B
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">1.6</span><span class="period">.</span>
 </h6>
 <p id="YzX">Suppose \(A = \{1, 2, 3 \}\) and \(B = \{a, b, c \}\text{.}\) In <a class="xref" data-knowl="./knowl/figure-sets-mappings.html" title="Figure 1.7">Figure 1.7</a> we define relations \(f\) and \(g\) from \(A\) to \(B\text{.}\) The relation \(f\) is a mapping, but \(g\) is not because \(1 \in A\) is not assigned to a unique element in \(B\text{;}\) that is, \(g(1) = a\) and \(g(1) = b\text{.}\)</p>
-<figure class="figure figure-like" id="EHg"><div class="image-box" style="width: 60%; margin-left: 20%; margin-right: 20%;"><img src="images/sets-mappings.svg" role="img" style="width: 100%; height: auto;" alt="Two sets of ovals, A and B, relating 1, 2, 3 to a, b, c.  The first mapping, f, sends 1 to b and 2 and 3 to c.  The second relation, g, sends 1 to a and b, 2 to c, and 3 to a"></div>
+<figure class="figure figure-like" id="EHg"><div class="image-box" style="width: 60%; margin-left: 20%; margin-right: 20%;"><img src="generated/latex-image/sets-mappings.svg" role="img" class="contained" alt="Two sets of ovals, A and B, relating 1, 2, 3 to a, b, c.  The first mapping, f, sends 1 to b and 2 and 3 to c.  The second relation, g, sends 1 to a and b, 2 to c, and 3 to a"></div>
 <figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">1.7<span class="period">.</span></span><span class="space"> </span>Mappings and relations</figcaption></figure></article><p id="KKN">Given a function \(f : A \rightarrow B\text{,}\) it is often possible to write a list describing what the function does to each specific element in the domain. However, not all functions can be described in this manner. For example, the function \(f: {\mathbb R} \rightarrow {\mathbb R}\) that sends each real number to its cube is a mapping that must be described by writing \(f(x) = x^3\) or \(f:x \mapsto x^3\text{.}\)</p>
 <p id="qRW">Consider the relation \(f : {\mathbb Q} \rightarrow {\mathbb Z}\) given by \(f(p/q) = p\text{.}\) We know that \(1/2 = 2/4\text{,}\) but is \(f(1/2) = 1\) or \(2\text{?}\) This relation cannot be a mapping because it is not well-defined. A relation is <dfn class="terminology">well-defined</dfn>  if each element in the domain is assigned to a <em class="emphasis">unique</em> element in the range.</p>
 <p id="WZf">If \(f:A \rightarrow B\) is a map and the image of \(f\) is \(B\text{,}\) i.e., \(f(A) = B\text{,}\) then \(f\) is said to be <dfn class="terminology">onto</dfn>  or <dfn class="terminology">surjective</dfn>.  In other words, if there exists an \(a \in A\) for each \(b \in B\) such that \(f(a) = b\text{,}\) then \(f\) is onto. A map is <dfn class="terminology">one-to-one</dfn> or <dfn class="terminology">injective</dfn> if \(a_1 \neq a_2\) implies \(f(a_1) \neq f(a_2)\text{.}\) Equivalently, a function is one-to-one if \(f(a_1) = f(a_2)\) implies \(a_1 = a_2\text{.}\) A map that is both one-to-one and onto is called <dfn class="terminology">bijective</dfn>. </p>
@@ -533,7 +539,7 @@ f(A) = \{ f(a) : a \in A \} \subset B
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">1.8</span><span class="period">.</span>
 </h6>
 <p id="kOp">Let \(f:{\mathbb Z} \rightarrow {\mathbb Q}\) be defined by \(f(n) = n/1\text{.}\) Then \(f\) is one-to-one but not onto. Define \(g : {\mathbb Q} \rightarrow {\mathbb Z}\) by \(g(p/q) = p\) where \(p/q\) is a rational number expressed in its lowest terms with a positive denominator. The function \(g\) is onto but not one-to-one.</p></article><p id="Dgo">Given two functions, we can construct a new function by using the range of the first function as the domain of the second function. Let \(f : A \rightarrow B\) and \(g : B \rightarrow C\) be mappings. Define a new map, the <dfn class="terminology">composition</dfn> of \(f\) and \(g\) from \(A\) to \(C\text{,}\) by \((g \circ f)(x) = g(f(x))\text{.}\)</p>
-<figure class="figure figure-like" id="PuG"><div class="image-box" style="width: 90%; margin-left: 5%; margin-right: 5%;"><img src="images/sets-composition.svg" role="img" style="width: 100%; height: auto;" alt="Two sets of ovals, A and B, relating 1, 2, 3 to a, b, c and a, b, c to X, Y, Z.  The first mapping, f, sends 1 to b, 2  2 to c, and 3 to a.  The second relation, g, sends a and b to Z and c to X.  The bottom map, g circle f, sends 1 and 3 to Z and 2 to X."></div>
+<figure class="figure figure-like" id="PuG"><div class="image-box" style="width: 90%; margin-left: 5%; margin-right: 5%;"><img src="generated/latex-image/sets-composition.svg" role="img" class="contained" alt="Two sets of ovals, A and B, relating 1, 2, 3 to a, b, c and a, b, c to X, Y, Z.  The first mapping, f, sends 1 to b, 2  2 to c, and 3 to a.  The second relation, g, sends a and b to Z and c to X.  The bottom map, g circle f, sends 1 and 3 to Z and 2 to X."></div>
 <figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">1.9<span class="period">.</span></span><span class="space"> </span>Composition of maps</figcaption></figure><article class="example example-like" id="UzL"><h6 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">1.10</span><span class="period">.</span>
 </h6>
@@ -786,11 +792,11 @@ T_B^{-1} (x,y) = (ax + by, cx +dy)
 <article class="exercise exercise-like" id="qcz"><h6 class="heading"><span class="codenumber">1<span class="period">.</span></span></h6>
 <p id="lHb">Same or different: \(\{2^n \in \N \st n \in \N\}\) and \(\{n \in \N \st 2^n \in \N\}\text{.}\)</p>
 <div class="solutions">
-<a data-knowl="" class="id-ref answer-knowl original" data-refid="hk-fDu" id="fDu"><span class="type">Answer</span></a><div class="hidden-content tex2jax_ignore" id="hk-fDu"><div class="answer solution-like"><p id="UIQ">Different.  The first set only has elements that are powers of 2, while the second set is all natural numbers.</p></div></div>
+<a data-knowl="" class="id-ref answer-knowl original" data-refid="hk-fDu" id="fDu"><span class="type">Answer.</span> </a><div class="hidden-content tex2jax_ignore" id="hk-fDu"><div class="answer solution-like"><p id="UIQ">Different.  The first set only has elements that are powers of 2, while the second set is all natural numbers.</p></div></div>
 </div></article><article class="exercise exercise-like" id="WjI"><h6 class="heading"><span class="codenumber">2<span class="period">.</span></span></h6>
 <p id="ROk">Same or different: \(\{2^n \st n \in \N\}\) and \(\{n \st n = 2^x \text{ for some } x \in \N\}\text{.}\)</p>
 <div class="solutions">
-<a data-knowl="" class="id-ref answer-knowl original" data-refid="hk-LKD" id="LKD"><span class="type">Answer</span></a><div class="hidden-content tex2jax_ignore" id="hk-LKD"><div class="answer solution-like"><p id="APZ">Same.</p></div></div>
+<a data-knowl="" class="id-ref answer-knowl original" data-refid="hk-LKD" id="LKD"><span class="type">Answer.</span> </a><div class="hidden-content tex2jax_ignore" id="hk-LKD"><div class="answer solution-like"><p id="APZ">Same.</p></div></div>
 </div></article><article class="exercise exercise-like" id="nnj"><h6 class="heading"><span class="codenumber">3<span class="period">.</span></span></h6>
 <p id="AHh">Suppose that</p>
 <div class="displaymath">
@@ -808,7 +814,7 @@ C &amp; = \{ x : x \in \mathbb N \text{ and } x \text{ is a multiple of } 5\}\te
 <li id="FjJ"><p id="IsK">\(\displaystyle A \cap (B \cup C)\)</p></li>
 </ol>
 <div class="solutions">
-<a data-knowl="" class="id-ref hint-knowl original" data-refid="hk-sGW" id="sGW"><span class="type">Hint</span></a><div class="hidden-content tex2jax_ignore" id="hk-sGW"><div class="hint solution-like"><p id="rIU">(a) \(A \cap B = \{ 2 \}\text{;}\) (b) \(B \cap C = \{ 5 \}\text{.}\)</p></div></div>
+<a data-knowl="" class="id-ref hint-knowl original" data-refid="hk-sGW" id="sGW"><span class="type">Hint.</span> </a><div class="hidden-content tex2jax_ignore" id="hk-sGW"><div class="hint solution-like"><p id="rIU">(a) \(A \cap B = \{ 2 \}\text{;}\) (b) \(B \cap C = \{ 5 \}\text{.}\)</p></div></div>
 </div></article><article class="exercise exercise-like" id="CqR"><h6 class="heading"><span class="codenumber">4<span class="period">.</span></span></h6>
 <p id="xVt">I'm trying to invent a function \(f: \{1,2,3\} \to \{1,2,3,4\}\text{.}\)  So far, I've decided \(f(1) = 4\) and \(f(2) = 1\text{.}\)  What should \(f(3)\) be ...</p>
 <ol class="lower-alpha">
@@ -816,7 +822,7 @@ C &amp; = \{ x : x \in \mathbb N \text{ and } x \text{ is a multiple of } 5\}\te
 <li id="eyb"><p id="Req">... if I want \(f\) to be onto?</p></li>
 </ol>
 <div class="solutions">
-<a data-knowl="" class="id-ref answer-knowl original" data-refid="hk-rRM" id="rRM"><span class="type">Answer</span></a><div class="hidden-content tex2jax_ignore" id="hk-rRM"><div class="answer solution-like"><p id="gXi">To be one to one, I could take \(f(3) = 2\) or \(f(3) = 3\text{,}\) but the other two options would not work.  There is no choice I can make to make \(f\) onto.</p></div></div>
+<a data-knowl="" class="id-ref answer-knowl original" data-refid="hk-rRM" id="rRM"><span class="type">Answer.</span> </a><div class="hidden-content tex2jax_ignore" id="hk-rRM"><div class="answer solution-like"><p id="gXi">To be one to one, I could take \(f(3) = 2\) or \(f(3) = 3\text{,}\) but the other two options would not work.  There is no choice I can make to make \(f\) onto.</p></div></div>
 </div></article><article class="exercise exercise-like" id="iya"><h6 class="heading"><span class="codenumber">5<span class="period">.</span></span></h6>
 <p id="ecC">I'm trying to invent a function \(f: \{1,2,3\} \to \{1,2\}\text{.}\)  So far, I've decided \(f(1) = 2\text{.}\)  What should \(f(2)\) and \(f(3)\) be ...</p>
 <ol class="lower-alpha">
@@ -824,7 +830,7 @@ C &amp; = \{ x : x \in \mathbb N \text{ and } x \text{ is a multiple of } 5\}\te
 <li id="qMt"><p id="dsI">... if I want \(f\) to be onto?</p></li>
 </ol>
 <div class="solutions">
-<a data-knowl="" class="id-ref answer-knowl original" data-refid="hk-XYV" id="XYV"><span class="type">Answer</span></a><div class="hidden-content tex2jax_ignore" id="hk-XYV"><div class="answer solution-like"><p id="Ner">There is no way to make \(f\) one-to-one.  To make it onto, I just need one of \(f(2)\) or \(f(3)\) to be 1, so every element in the codomain is the image of at least one element of the domain.</p></div></div>
+<a data-knowl="" class="id-ref answer-knowl original" data-refid="hk-XYV" id="XYV"><span class="type">Answer.</span> </a><div class="hidden-content tex2jax_ignore" id="hk-XYV"><div class="answer solution-like"><p id="Ner">There is no way to make \(f\) one-to-one.  To make it onto, I just need one of \(f(2)\) or \(f(3)\) to be 1, so every element in the codomain is the image of at least one element of the domain.</p></div></div>
 </div></article><article class="exercise exercise-like" id="OFj"><h6 class="heading"><span class="codenumber">6<span class="period">.</span></span></h6>
 <p id="KjL">Consider the function \(f:\Z \to \Z\) given by \(f(n) = \begin{cases}n+1 \amp \text{ if }n\text{ is even} \\ n-3 \amp \text{ if }n\text{ is odd} . \end{cases}\)</p>
 <ol class="lower-alpha">
@@ -852,7 +858,7 @@ A = \{2n \st n \in \Z\} \qquad \text{ and } \qquad B = \{x \in \Z \st x^2 \in A\
 <li id="wzR"><p id="zIS">If \(g \circ f\) is onto, show that \(g\) is onto.</p></li>
 </ol>
 <div class="solutions">
-<a data-knowl="" class="id-ref hint-knowl original" data-refid="hk-oGX" id="oGX"><span class="type">Hint</span></a><div class="hidden-content tex2jax_ignore" id="hk-oGX"><div class="hint solution-like">
+<a data-knowl="" class="id-ref hint-knowl original" data-refid="hk-oGX" id="oGX"><span class="type">Hint.</span> </a><div class="hidden-content tex2jax_ignore" id="hk-oGX"><div class="hint solution-like">
 <p id="oOo">To show a function \(h\) is one-to-one, you show that if \(h(x) = h(y)\) then \(x=y\text{.}\)</p>
 <p id="tlA">To show a function \(h\) is onto, show that for every element \(c\) in the codomain, there is some element \(a\) in the domain such that \(h(a) = c\text{.}\)</p>
 </div></div>

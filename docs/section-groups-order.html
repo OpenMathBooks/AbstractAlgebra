@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2021-03-25T19:19:23-06:00       *-->
+<!--*       on 2021-08-19T13:10:33-06:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -14,36 +14,42 @@
 <title>AATA Cyclic Groups and Orders of Elements</title>
 <meta name="Keywords" content="Authored in PreTeXt">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<script src="https://sagecell.sagemath.org/embedded_sagecell.js"></script><script type="text/x-mathjax-config">
-MathJax.Hub.Config({
-    tex2jax: {
-        inlineMath: [['\\(','\\)']]
+<script src="https://sagecell.sagemath.org/embedded_sagecell.js"></script><script>window.MathJax = {
+  tex: {
+    inlineMath: [['\\(','\\)']],
+    tags: "none",
+    useLabelIds: true,
+    tagSide: "right",
+    tagIndent: ".8em",
+    packages: {'[+]': ['base', 'extpfeil', 'ams', 'amscd', 'newcommand', 'knowl']}
+  },
+  options: {
+    ignoreHtmlClass: "tex2jax_ignore",
+    processHtmlClass: "has_am",
+    renderActions: {
+        findScript: [10, function (doc) {
+            document.querySelectorAll('script[type^="math/tex"]').forEach(function(node) {
+                var display = !!node.type.match(/; *mode=display/);
+                var math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display);
+                var text = document.createTextNode('');
+                node.parentNode.replaceChild(text, node);
+                math.start = {node: text, delim: '', n: 0};
+                math.end = {node: text, delim: '', n: 0};
+                doc.math.push(math);
+            });
+        }, '']
     },
-    asciimath2jax: {
-        ignoreClass: ".*",
-        processClass: "has_am"
-    },
-    jax: ["input/AsciiMath"],
-    extensions: ["asciimath2jax.js"],
-    TeX: {
-        extensions: ["extpfeil.js", "autobold.js", "https://pretextbook.org/js/lib/mathjaxknowl.js", "AMScd.js", ],
-        // scrolling to fragment identifiers is controlled by other Javascript
-        positionToHash: false,
-        equationNumbers: { autoNumber: "none", useLabelIds: true, },
-        TagSide: "right",
-        TagIndent: ".8em",
-    },
-    // HTML-CSS output Jax to be dropped for MathJax 3.0
-    "HTML-CSS": {
-        scale: 88,
-        mtextFontInherit: true,
-    },
-    CommonHTML: {
-        scale: 88,
-        mtextFontInherit: true,
-    },
-});
-</script><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS_CHTML-full"></script><link href="https://unpkg.com/prismjs@v1.22.0/themes/prism.css" rel="stylesheet">
+  },
+  chtml: {
+    scale: 0.88,
+    mtextInheritFont: true
+  },
+  loader: {
+    load: ['input/asciimath', '[tex]/extpfeil', '[tex]/amscd', '[tex]/newcommand', '[pretext]/mathjaxknowl3.js'],
+    paths: {pretext: "https://pretextbook.org/js/lib"},
+  },
+};
+</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><link href="https://unpkg.com/prismjs@v1.22.0/themes/prism.css" rel="stylesheet">
 <script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/jquery.min.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/0.13/pretext.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/0.13/pretext_add_on.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script xmlns:svg="http://www.w3.org/2000/svg">sagecellEvalName='Evaluate (Sage)';
 </script><link xmlns:svg="http://www.w3.org/2000/svg" href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
 <link xmlns:svg="http://www.w3.org/2000/svg" href="https://fonts.googleapis.com/css?family=Inconsolata:400,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
@@ -91,7 +97,7 @@ MathJax.Hub.Config({
 \newcommand{\amp}{&amp;}
 \)</div>
 <header id="masthead" class="smallbuttons"><div class="banner"><div class="container">
-<a id="logo-link" href="http://abstract.pugetsound.edu" target="_blank"><img src="images/cover_aata_2020.png" alt="Logo image"></a><div class="title-container">
+<a id="logo-link" href="http://abstract.pugetsound.edu" target="_blank"><img src="external/images/cover_aata_2020.png" alt="Logo image"></a><div class="title-container">
 <h1 class="heading"><a href="aata-toc.html"><span class="title">Abstract Algebra:</span> <span class="subtitle">Theory and Applications, Remixed!</span></a></h1>
 <p class="byline">Thomas W. Judson</p>
 </div>
@@ -210,7 +216,7 @@ MathJax.Hub.Config({
 </li>
 <li class="link part"><a href="part-more-group-theory.html" data-scroll="part-more-group-theory"><span class="codenumber">III</span> <span class="title">More Group Theory</span></a></li>
 <li class="link">
-<a href="groups.html" data-scroll="nRa"><span class="codenumber">10</span> <span class="title">Some of the Structure of Groups</span></a><ul>
+<a href="groups-structure.html" data-scroll="nRa"><span class="codenumber">10</span> <span class="title">Some of the Structure of Groups</span></a><ul>
 <li><a href="section-groups-cayley.html" data-scroll="CTu">Isomorphisms and Cayley's Theorem</a></li>
 <li><a href="section-groups-permutations.html" data-scroll="mjE">Permutation Groups</a></li>
 <li><a href="section-solvable-groups.html" data-scroll="WbU">Solvable Groups</a></li>
@@ -312,16 +318,25 @@ MathJax.Hub.Config({
 <span class="type">Section</span> <span class="codenumber">11.1</span> <span class="title">Cyclic Groups and Orders of Elements</span>
 </h2>
 <section class="introduction" id="Inh"><p id="YfZ">Given an element \(a\) in a group \(G\text{,}\) we can consider what happens when we multiply \(a\) by itself (or if we are writing the group additively, add \(a\) to itself).  Depending on what group we are in, if we continue to multiply the result by \(a\text{,}\) we might eventually find ourselves back at the identity.  How long does this take?  That is precisely the question that the <em class="emphasis">order</em> of a group element addresses.  We will see that this relatively simple idea has far reaching consequences.</p></section><section class="worksheet" id="Dbl"><h3 class="heading hide-type">
-<span class="type">Worksheet</span> <span class="codenumber">11.1.1</span> <span class="title">Powers mod Powers</span>
+<span class="type">Worksheet</span> <span class="codenumber">11.1.1</span> <span class="title">Powers mod Powers</span><div class="print-links">
+<a href="ws_groups-powers-a4.html" class="a4">A4</a><a href="ws_groups-powers-letter.html" class="us">US</a>
+</div>
 </h3>
 <section class="introduction" id="BlY"><p id="mda">Main Question: What is the remainder when you divide \(a^p\) by \(p\text{?}\)</p></section><article class="exercise exercise-like" id="hth"><h6 class="heading"><span class="codenumber">1<span class="period">.</span></span></h6>
-<p id="Skj">Compute \(a^p\) and its remainder when divided by \(p\text{,}\) for various values of \(a\) and \(p\text{.}\)  Everyone should do at least 5, and then share with the group.  As a group, discuss any patterns you see and form a conjecture.</p></article><p id="WUc">Find the remainders when you perform the following divisions.  Try different values of \(a\text{.}\)  You should first guess what the value is based on your conjecture and then verify (or refute) your guess.</p>
+<p id="Skj">Compute \(a^p\) and its remainder when divided by \(p\text{,}\) for various values of \(a\) and \(p\text{.}\)  Everyone should do at least 5, and then share with the group.  As a group, discuss any patterns you see and form a conjecture.</p>
+<div class="workspace" data-space="3.5in"></div></article><p id="WUc">Find the remainders when you perform the following divisions.  Try different values of \(a\text{.}\)  You should first guess what the value is based on your conjecture and then verify (or refute) your guess.</p>
 <article class="exercise exercise-like" id="NAq"><h6 class="heading"><span class="codenumber">2<span class="period">.</span></span></h6>
-<p id="yrs">\(a^6\) divided by 10?</p></article><article class="exercise exercise-like" id="tHz"><h6 class="heading"><span class="codenumber">3<span class="period">.</span></span></h6>
-<p id="eyB">\(a^9\) divided by 15?</p></article><article class="exercise exercise-like" id="ZOI"><h6 class="heading"><span class="codenumber">4<span class="period">.</span></span></h6>
-<p id="KFK">\(a^{13}\) divided by 21?</p></article><article class="exercise exercise-like" id="FVR"><h6 class="heading"><span class="codenumber">5<span class="period">.</span></span></h6>
-<p id="qMT">\(a^{2321}\) divided by \(2419\text{?}\)</p></article><p id="p-2865">Discuss in your groups: how might we think about the main question here in terms of group theory?  What would we need to prove (about groups)?</p></section><section class="worksheet" id="ACe"><h3 class="heading hide-type">
-<span class="type">Worksheet</span> <span class="codenumber">11.1.2</span> <span class="title">Activity: Orders of Permutations</span>
+<p id="yrs">\(a^6\) divided by 10?</p>
+<div class="workspace" data-space="0.5in"></div></article><article class="exercise exercise-like" id="tHz"><h6 class="heading"><span class="codenumber">3<span class="period">.</span></span></h6>
+<p id="eyB">\(a^9\) divided by 15?</p>
+<div class="workspace" data-space="0.5in"></div></article><article class="exercise exercise-like" id="ZOI"><h6 class="heading"><span class="codenumber">4<span class="period">.</span></span></h6>
+<p id="KFK">\(a^{13}\) divided by 21?</p>
+<div class="workspace" data-space="0.5in"></div></article><article class="exercise exercise-like" id="FVR"><h6 class="heading"><span class="codenumber">5<span class="period">.</span></span></h6>
+<p id="qMT">\(a^{2321}\) divided by \(2419\text{?}\)</p>
+<div class="workspace" data-space="0.4in"></div></article><p id="p-2865">Discuss in your groups: how might we think about the main question here in terms of group theory?  What would we need to prove (about groups)?</p></section><section class="worksheet" id="ACe"><h3 class="heading hide-type">
+<span class="type">Worksheet</span> <span class="codenumber">11.1.2</span> <span class="title">Activity: Orders of Permutations</span><div class="print-links">
+<a href="ws_groups-permutations-order-a4.html" class="a4">A4</a><a href="ws_groups-permutations-order-letter.html" class="us">US</a>
+</div>
 </h3>
 <section class="introduction" id="ptf"><p id="jDT">The <em class="emphasis">order</em> of an element \(g\) in a group \(G\) is the least natural number \(n\) such that \(g^n = e\text{,}\) if such a number exists (otherwise we say the order of \(g\) is infinite).</p></section><article class="exercise exercise-like" id="VAo"><h6 class="heading"><span class="codenumber">1<span class="period">.</span></span></h6>
 <p id="PLc">Find the orders of the elements of \(S_5\) below:</p>
@@ -331,24 +346,29 @@ MathJax.Hub.Config({
 \end{equation*}
 </div>
 <div class="solutions">
-<a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-akh" id="akh"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-akh"><div class="solution solution-like"><p id="eUa">The orders are 2, 3, 4, and 5, respectively.</p></div></div>
-</div></article><article class="exercise exercise-like" id="BHx"><h6 class="heading"><span class="codenumber">2<span class="period">.</span></span></h6>
+<a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-akh" id="akh"><span class="type">Solution.</span> </a><div class="hidden-content tex2jax_ignore" id="hk-akh"><div class="solution solution-like"><p id="eUa">The orders are 2, 3, 4, and 5, respectively.</p></div></div>
+</div>
+<div class="workspace" data-space="1.5in"></div></article><article class="exercise exercise-like" id="BHx"><h6 class="heading"><span class="codenumber">2<span class="period">.</span></span></h6>
 <p id="vSl">Find an element of \(S_5\) that has an order different from those found above.</p>
 <div class="solutions">
-<a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-Grq" id="Grq"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-Grq"><div class="solution solution-like"><p id="Lbj">We will need an element that is not just a cycle, since the longest cycle is of length 5.  So how about \((12)(345)\text{.}\)  This will have order 6.</p></div></div>
-</div></article><article class="exercise exercise-like" id="hOG"><h6 class="heading"><span class="codenumber">3<span class="period">.</span></span></h6>
+<a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-Grq" id="Grq"><span class="type">Solution.</span> </a><div class="hidden-content tex2jax_ignore" id="hk-Grq"><div class="solution solution-like"><p id="Lbj">We will need an element that is not just a cycle, since the longest cycle is of length 5.  So how about \((12)(345)\text{.}\)  This will have order 6.</p></div></div>
+</div>
+<div class="workspace" data-space="1in"></div></article><article class="exercise exercise-like" id="hOG"><h6 class="heading"><span class="codenumber">3<span class="period">.</span></span></h6>
 <p id="bZu">Let \(\alpha\) be an element of \(S_5\text{.}\)  What is \(\alpha^{120}\text{?}\)</p>
 <div class="solutions">
-<a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-myz" id="myz"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-myz"><div class="solution solution-like"><p id="ris">No matter what element we pick, \(\alpha^{120}\) will always be \((1)\text{.}\)  This will work in general, but you can also see this by considering the orders of elements, which must all divide the size of the group.</p></div></div>
-</div></article><article class="exercise exercise-like" id="NVP"><h6 class="heading"><span class="codenumber">4<span class="period">.</span></span></h6>
+<a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-myz" id="myz"><span class="type">Solution.</span> </a><div class="hidden-content tex2jax_ignore" id="hk-myz"><div class="solution solution-like"><p id="ris">No matter what element we pick, \(\alpha^{120}\) will always be \((1)\text{.}\)  This will work in general, but you can also see this by considering the orders of elements, which must all divide the size of the group.</p></div></div>
+</div>
+<div class="workspace" data-space="1in"></div></article><article class="exercise exercise-like" id="NVP"><h6 class="heading"><span class="codenumber">4<span class="period">.</span></span></h6>
 <p id="IgD">Is there an element in \(S_5\) that has order \(120\text{?}\)</p>
 <div class="solutions">
-<a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-SFI" id="SFI"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-SFI"><div class="solution solution-like"><p id="XpB">No there is not.  If there were, this would say that \(S_5\) was cyclic, and would thus be abelian, which we know is not the case.  Alternatively, just look at how to write elements as disjoint cycles.</p></div></div>
-</div></article><article class="exercise exercise-like" id="ucY"><h6 class="heading"><span class="codenumber">5<span class="period">.</span></span></h6>
+<a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-SFI" id="SFI"><span class="type">Solution.</span> </a><div class="hidden-content tex2jax_ignore" id="hk-SFI"><div class="solution solution-like"><p id="XpB">No there is not.  If there were, this would say that \(S_5\) was cyclic, and would thus be abelian, which we know is not the case.  Alternatively, just look at how to write elements as disjoint cycles.</p></div></div>
+</div>
+<div class="workspace" data-space="1in"></div></article><article class="exercise exercise-like" id="ucY"><h6 class="heading"><span class="codenumber">5<span class="period">.</span></span></h6>
 <p id="onM">What is the largest order of any element in \(S_5\text{?}\)</p>
 <div class="solutions">
-<a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-yMR" id="yMR"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-yMR"><div class="solution solution-like"><p id="DwK">The largest order will be 6, for elements that are the disjoint product of a 2-cycle and 3-cycle.</p></div></div>
-</div></article></section><section class="subsection" id="Oct"><h3 class="heading hide-type">
+<a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-yMR" id="yMR"><span class="type">Solution.</span> </a><div class="hidden-content tex2jax_ignore" id="hk-yMR"><div class="solution solution-like"><p id="DwK">The largest order will be 6, for elements that are the disjoint product of a 2-cycle and 3-cycle.</p></div></div>
+</div>
+<div class="workspace" data-space="0.1in"></div></article></section><section class="subsection" id="Oct"><h3 class="heading hide-type">
 <span class="type">Subsection</span> <span class="codenumber">11.1.3</span> <span class="title">Cyclic Subgroups</span>
 </h3>
 <p id="Eni">Often a subgroup will depend entirely on a single element of the group; that is, knowing that particular element will allow us to compute any other element in the subgroup.</p>
@@ -396,7 +416,7 @@ MathJax.Hub.Config({
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">11.7</span><span class="period">.</span>
 </h6>
 <p id="zDp">Not every group is a cyclic group. Consider the symmetry group of an equilateral triangle \(S_3\text{.}\) The multiplication table for this group is <a class="xref" data-knowl="./knowl/table-s3.html" title="Figure 2.7">Figure 2.7</a>. The subgroups of \(S_3\) are shown in <a class="xref" data-knowl="./knowl/figure-subgrps-s3.html" title="Figure 2.39">Figure 2.39</a>. Notice that every subgroup is cyclic; however, no single element generates the entire group.</p>
-<figure class="figure figure-like" id="fKy"><div class="image-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><img src="images/cyclic-s3-subgroups.svg" role="img" style="width: 100%; height: auto;" alt=""></div>
+<figure class="figure figure-like" id="fKy"><div class="image-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><img src="generated/latex-image/cyclic-s3-subgroups.svg" role="img" class="contained" alt=""></div>
 <figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">11.8<span class="period">.</span></span><span class="space"> </span>Subgroups of \(S_3\)</figcaption></figure></article><article class="theorem theorem-like" id="GxU"><h6 class="heading">
 <span class="type">Theorem</span><span class="space"> </span><span class="codenumber">11.9</span><span class="period">.</span>
 </h6>
@@ -475,7 +495,7 @@ a^k = a^{ns} = (a^n)^s = e^s = e\text{.}
 <p id="p-2903">If \(\ord(a) = n\text{,}\) then for any \(r \lt n\text{,}\) the inverse of \(a^r\) is \(a^{n-r}\text{.}\)  That is, \((a^r)\inv = a^{n-r}\text{.}\)</p></article><article class="task exercise-like" id="task-21"><h6 class="heading"><span class="codenumber">(b)</span></h6>
 <p id="p-2904">The order of \(a\inv\) is the same as the order of \(a\text{.}\)</p>
 <div class="solutions">
-<a data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-161" id="hint-161"><span class="type">Hint</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-161"><div class="hint solution-like"><p id="p-2905">Careful: it is not enough to say that \((a\inv)^n = e\) (where \(\ord(a) = n\)).  That is only half of it, since you must also show that no smaller power of \(a\inv\) is the identity.</p></div></div>
+<a data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-161" id="hint-161"><span class="type">Hint.</span> </a><div class="hidden-content tex2jax_ignore" id="hk-hint-161"><div class="hint solution-like"><p id="p-2905">Careful: it is not enough to say that \((a\inv)^n = e\) (where \(\ord(a) = n\)).  That is only half of it, since you must also show that no smaller power of \(a\inv\) is the identity.</p></div></div>
 </div></article><article class="task exercise-like" id="task-22"><h6 class="heading"><span class="codenumber">(c)</span></h6>
 <p id="p-2906">If \(a^k = e\) where \(k\) is odd, then the order of \(a\) is odd.</p></article><article class="task exercise-like" id="task-23"><h6 class="heading"><span class="codenumber">(d)</span></h6>
 <p id="p-2907">If \(a \ne e\) and \(a^p = e\) where \(p\) is prime, then \(\ord(a) = p\text{.}\)</p></article></article></section></section></div></main>

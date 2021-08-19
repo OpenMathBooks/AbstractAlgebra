@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2021-03-25T19:19:02-06:00       *-->
+<!--*       on 2021-08-19T13:10:07-06:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -14,36 +14,42 @@
 <title>AATA Splitting Fields</title>
 <meta name="Keywords" content="Authored in PreTeXt">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<script src="https://sagecell.sagemath.org/embedded_sagecell.js"></script><script type="text/x-mathjax-config">
-MathJax.Hub.Config({
-    tex2jax: {
-        inlineMath: [['\\(','\\)']]
+<script src="https://sagecell.sagemath.org/embedded_sagecell.js"></script><script>window.MathJax = {
+  tex: {
+    inlineMath: [['\\(','\\)']],
+    tags: "none",
+    useLabelIds: true,
+    tagSide: "right",
+    tagIndent: ".8em",
+    packages: {'[+]': ['base', 'extpfeil', 'ams', 'amscd', 'newcommand', 'knowl']}
+  },
+  options: {
+    ignoreHtmlClass: "tex2jax_ignore",
+    processHtmlClass: "has_am",
+    renderActions: {
+        findScript: [10, function (doc) {
+            document.querySelectorAll('script[type^="math/tex"]').forEach(function(node) {
+                var display = !!node.type.match(/; *mode=display/);
+                var math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display);
+                var text = document.createTextNode('');
+                node.parentNode.replaceChild(text, node);
+                math.start = {node: text, delim: '', n: 0};
+                math.end = {node: text, delim: '', n: 0};
+                doc.math.push(math);
+            });
+        }, '']
     },
-    asciimath2jax: {
-        ignoreClass: ".*",
-        processClass: "has_am"
-    },
-    jax: ["input/AsciiMath"],
-    extensions: ["asciimath2jax.js"],
-    TeX: {
-        extensions: ["extpfeil.js", "autobold.js", "https://pretextbook.org/js/lib/mathjaxknowl.js", "AMScd.js", ],
-        // scrolling to fragment identifiers is controlled by other Javascript
-        positionToHash: false,
-        equationNumbers: { autoNumber: "none", useLabelIds: true, },
-        TagSide: "right",
-        TagIndent: ".8em",
-    },
-    // HTML-CSS output Jax to be dropped for MathJax 3.0
-    "HTML-CSS": {
-        scale: 88,
-        mtextFontInherit: true,
-    },
-    CommonHTML: {
-        scale: 88,
-        mtextFontInherit: true,
-    },
-});
-</script><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS_CHTML-full"></script><link href="https://unpkg.com/prismjs@v1.22.0/themes/prism.css" rel="stylesheet">
+  },
+  chtml: {
+    scale: 0.88,
+    mtextInheritFont: true
+  },
+  loader: {
+    load: ['input/asciimath', '[tex]/extpfeil', '[tex]/amscd', '[tex]/newcommand', '[pretext]/mathjaxknowl3.js'],
+    paths: {pretext: "https://pretextbook.org/js/lib"},
+  },
+};
+</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><link href="https://unpkg.com/prismjs@v1.22.0/themes/prism.css" rel="stylesheet">
 <script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/jquery.min.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/0.13/pretext.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/0.13/pretext_add_on.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script xmlns:svg="http://www.w3.org/2000/svg">sagecellEvalName='Evaluate (Sage)';
 </script><link xmlns:svg="http://www.w3.org/2000/svg" href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
 <link xmlns:svg="http://www.w3.org/2000/svg" href="https://fonts.googleapis.com/css?family=Inconsolata:400,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
@@ -91,7 +97,7 @@ MathJax.Hub.Config({
 \newcommand{\amp}{&amp;}
 \)</div>
 <header id="masthead" class="smallbuttons"><div class="banner"><div class="container">
-<a id="logo-link" href="http://abstract.pugetsound.edu" target="_blank"><img src="images/cover_aata_2020.png" alt="Logo image"></a><div class="title-container">
+<a id="logo-link" href="http://abstract.pugetsound.edu" target="_blank"><img src="external/images/cover_aata_2020.png" alt="Logo image"></a><div class="title-container">
 <h1 class="heading"><a href="aata-toc.html"><span class="title">Abstract Algebra:</span> <span class="subtitle">Theory and Applications, Remixed!</span></a></h1>
 <p class="byline">Thomas W. Judson</p>
 </div>
@@ -210,7 +216,7 @@ MathJax.Hub.Config({
 </li>
 <li class="link part"><a href="part-more-group-theory.html" data-scroll="part-more-group-theory"><span class="codenumber">III</span> <span class="title">More Group Theory</span></a></li>
 <li class="link">
-<a href="groups.html" data-scroll="nRa"><span class="codenumber">10</span> <span class="title">Some of the Structure of Groups</span></a><ul>
+<a href="groups-structure.html" data-scroll="nRa"><span class="codenumber">10</span> <span class="title">Some of the Structure of Groups</span></a><ul>
 <li><a href="section-groups-cayley.html" data-scroll="CTu">Isomorphisms and Cayley's Theorem</a></li>
 <li><a href="section-groups-permutations.html" data-scroll="mjE">Permutation Groups</a></li>
 <li><a href="section-solvable-groups.html" data-scroll="WbU">Solvable Groups</a></li>
@@ -366,14 +372,14 @@ a_0 + a_1 \alpha + \cdots + a_{n - 1} \alpha^{n - 1}
 \end{equation*}
 </div>
 <p class="continuation">This extension agrees with the original isomorphism \(\phi : E \rightarrow F\text{,}\) since constant polynomials get mapped to constant polynomials. By assumption, \(\phi(p(x)) = q(x)\text{;}\) hence, \(\phi\) maps \(\langle p(x) \rangle\) onto \(\langle q(x) \rangle\text{.}\) Consequently, we have an isomorphism \(\psi : E[x] / \langle p(x) \rangle \rightarrow F[x]/\langle q(x) \rangle\text{.}\) By <a class="xref" data-knowl="./knowl/proposition-minimal-poly.html" title="Proposition 8.17">Proposition 8.17</a>, we have isomorphisms \(\sigma: E[x]/\langle p(x) \rangle \rightarrow E(\alpha)\) and \(\tau : F[x]/\langle q(x) \rangle \rightarrow F( \beta )\text{,}\) defined by evaluation at \(\alpha\) and \(\beta\text{,}\) respectively. Therefore, \(\overline{\phi} = \tau \psi \sigma^{-1}\) is the required isomorphism.</p>
-<div class="sidebyside"><div class="sbsrow" style="margin-left:20%;margin-right:20%;"><div class="sbspanel" style="width:100%;justify-content:flex-start;"><img src="images/fields-extension-isomorph.svg" role="img" style="width: 100%; height: auto;" alt=""></div></div></div>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:20%;margin-right:20%;"><div class="sbspanel top" style="width:100%;"><img src="generated/latex-image/fields-extension-isomorph.svg" role="img" class="contained" alt=""></div></div></div>
 <p id="HQY">We leave the proof of uniqueness as a exercise.</p></article><article class="theorem theorem-like" id="xGb"><h6 class="heading">
 <span class="type">Theorem</span><span class="space"> </span><span class="codenumber">9.5</span><span class="period">.</span>
 </h6>
 <p id="GLF">Let \(\phi : E \rightarrow F\) be an isomorphism of fields and let \(p(x)\) be a nonconstant polynomial in \(E[x]\) and \(q(x)\) the corresponding polynomial in \(F[x]\) under the isomorphism. If \(K\) is a splitting field of \(p(x)\) and \(L\) is a splitting field of \(q(x)\text{,}\) then \(\phi\) extends to an isomorphism \(\psi : K \rightarrow L\text{.}\)</p></article><article class="proof" id="oWj"><h6 class="heading"><span class="type">Proof<span class="period">.</span></span></h6>
 <p id="nYh">We will use mathematical induction on the degree of \(p(x)\text{.}\) We can assume that \(p(x)\) is irreducible over \(E\text{.}\) Therefore, \(q(x)\) is also irreducible over \(F\text{.}\) If \(\deg p(x) = 1\text{,}\) then by the definition of a splitting field, \(K = E\) and \(L = F\) and there is nothing to prove.</p>
 <p id="Ufq">Assume that the theorem holds for all polynomials of degree less than \(n\text{.}\) Since \(K\) is a splitting field of \(p(x)\text{,}\) all of the roots of \(p(x)\) are in \(K\text{.}\) Choose one of these roots, say \(\alpha\text{,}\) such that \(E \subset E( \alpha ) \subset K\text{.}\) Similarly, we can find a root \(\beta\) of \(q(x)\) in \(L\) such that \(F \subset F( \beta) \subset L\text{.}\) By <a class="xref" data-knowl="./knowl/lemma-field-isomorphism.html" title="Lemma 9.4">Lemma 9.4</a>, there exists an isomorphism \(\overline{\phi} : E(\alpha ) \rightarrow F( \beta)\) such that \(\overline{\phi}( \alpha ) = \beta\) and \(\overline{\phi}\) agrees with \(\phi\) on \(E\text{.}\)</p>
-<div class="sidebyside"><div class="sbsrow" style="margin-left:25%;margin-right:25%;"><div class="sbspanel" style="width:100%;justify-content:flex-start;"><img src="images/fields-splitting-isomorph.svg" role="img" style="width: 100%; height: auto;" alt=""></div></div></div>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:25%;margin-right:25%;"><div class="sbspanel top" style="width:100%;"><img src="generated/latex-image/fields-splitting-isomorph.svg" role="img" class="contained" alt=""></div></div></div>
 <p id="Amz">Now write \(p(x) = (x - \alpha ) f(x)\) and \(q(x) = ( x - \beta) g(x)\text{,}\) where the degrees of \(f(x)\) and \(g(x)\) are less than the degrees of \(p(x)\) and \(q(x)\text{,}\) respectively. The field extension \(K\) is a splitting field for \(f(x)\) over \(E( \alpha)\text{,}\) and \(L\) is a splitting field for \(g(x)\) over \(F( \beta )\text{.}\) By our induction hypothesis there exists an isomorphism \(\psi : K \rightarrow L\) such that \(\psi\) agrees with \(\overline{\phi}\) on \(E( \alpha)\text{.}\) Hence, there exists an isomorphism \(\psi : K \rightarrow L\) such that \(\psi\) agrees with \(\phi\) on \(E\text{.}\)</p></article><article class="corollary theorem-like" id="JUt"><h6 class="heading">
 <span class="type">Corollary</span><span class="space"> </span><span class="codenumber">9.6</span><span class="period">.</span>
 </h6>
@@ -430,12 +436,12 @@ j\) with \(j \neq 1\text{.}\) Define \(h(x) \in F( \gamma )[x]\) by \(h(x) = f( 
 <article class="task exercise-like" id="task-11"><h6 class="heading"><span class="codenumber">(a)</span></h6>
 <p id="p-2510">Is this a splitting field for some polynomial in \(\Q[x]\text{?}\)  If so, what is that polynomial, and what is its degree?</p>
 <div class="solutions">
-<a data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-154" id="hint-154"><span class="type">Hint</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-154"><div class="hint solution-like"><p id="p-2511">Guess a polynomial for one of these roots and then try to factor it completely over the complex numbers to see if that polynomial splits in the field.</p></div></div>
+<a data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-154" id="hint-154"><span class="type">Hint.</span> </a><div class="hidden-content tex2jax_ignore" id="hk-hint-154"><div class="hint solution-like"><p id="p-2511">Guess a polynomial for one of these roots and then try to factor it completely over the complex numbers to see if that polynomial splits in the field.</p></div></div>
 </div></article><article class="task exercise-like" id="task-12"><h6 class="heading"><span class="codenumber">(b)</span></h6>
 <p id="p-2512">What is the \([Q(\sqrt[4]{3}, i):\Q]\text{?}\)  Explain how you know.</p></article><article class="task exercise-like" id="task-13"><h6 class="heading"><span class="codenumber">(c)</span></h6>
 <p id="p-2513">It turns out that there are exactly 8 different fields between \(\Q\) and \(\Q(\sqrt[4]{3}, i)\text{.}\)  Find at least four of these (more if you can) and draw a large tower diagram showing how these are related (with degrees marked appropriately).</p>
 <div class="solutions">
-<a data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-155" id="hint-155"><span class="type">Hint</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-155"><div class="hint solution-like"><p id="p-2514">The next part of this problem might be helpful (and you can assume it is true for this part).</p></div></div>
+<a data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-155" id="hint-155"><span class="type">Hint.</span> </a><div class="hidden-content tex2jax_ignore" id="hk-hint-155"><div class="hint solution-like"><p id="p-2514">The next part of this problem might be helpful (and you can assume it is true for this part).</p></div></div>
 </div></article><article class="task exercise-like" id="task-14"><h6 class="heading"><span class="codenumber">(d)</span></h6>
 <p id="p-2515">Prove that the fields \(\Q(\sqrt[4]{3})\) and \(\Q(\sqrt[4]{3}i)\) are isomorphic, but not equal.</p></article></article><article class="exercise exercise-like" id="exercise-696"><h6 class="heading"><span class="codenumber">2<span class="period">.</span></span></h6>
 <p id="p-2516">Bonus: The field \(\Q(\sqrt[3]{7}, \sqrt{2}i)\) can also be written as \(\Q(\gamma)\) for a primitive element \(\gamma\text{.}\)  Find such a \(\gamma\) by working through the proof of <a class="xref" data-knowl="./knowl/theorem-primitive-element.html" title="Theorem 9.8: Primitive Element Theorem">Theorem 9.8</a> with this example.  Explain how you found the number \(a\) from the theorem.</p></article></section></section></div></main>

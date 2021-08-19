@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2021-03-25T19:20:19-06:00       *-->
+<!--*       on 2021-08-19T13:11:35-06:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -14,36 +14,42 @@
 <title>AATA Hints and Answers to Selected Exercises</title>
 <meta name="Keywords" content="Authored in PreTeXt">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<script src="https://sagecell.sagemath.org/embedded_sagecell.js"></script><script type="text/x-mathjax-config">
-MathJax.Hub.Config({
-    tex2jax: {
-        inlineMath: [['\\(','\\)']]
+<script src="https://sagecell.sagemath.org/embedded_sagecell.js"></script><script>window.MathJax = {
+  tex: {
+    inlineMath: [['\\(','\\)']],
+    tags: "none",
+    useLabelIds: true,
+    tagSide: "right",
+    tagIndent: ".8em",
+    packages: {'[+]': ['base', 'extpfeil', 'ams', 'amscd', 'newcommand', 'knowl']}
+  },
+  options: {
+    ignoreHtmlClass: "tex2jax_ignore",
+    processHtmlClass: "has_am",
+    renderActions: {
+        findScript: [10, function (doc) {
+            document.querySelectorAll('script[type^="math/tex"]').forEach(function(node) {
+                var display = !!node.type.match(/; *mode=display/);
+                var math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display);
+                var text = document.createTextNode('');
+                node.parentNode.replaceChild(text, node);
+                math.start = {node: text, delim: '', n: 0};
+                math.end = {node: text, delim: '', n: 0};
+                doc.math.push(math);
+            });
+        }, '']
     },
-    asciimath2jax: {
-        ignoreClass: ".*",
-        processClass: "has_am"
-    },
-    jax: ["input/AsciiMath"],
-    extensions: ["asciimath2jax.js"],
-    TeX: {
-        extensions: ["extpfeil.js", "autobold.js", "https://pretextbook.org/js/lib/mathjaxknowl.js", "AMScd.js", ],
-        // scrolling to fragment identifiers is controlled by other Javascript
-        positionToHash: false,
-        equationNumbers: { autoNumber: "none", useLabelIds: true, },
-        TagSide: "right",
-        TagIndent: ".8em",
-    },
-    // HTML-CSS output Jax to be dropped for MathJax 3.0
-    "HTML-CSS": {
-        scale: 88,
-        mtextFontInherit: true,
-    },
-    CommonHTML: {
-        scale: 88,
-        mtextFontInherit: true,
-    },
-});
-</script><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS_CHTML-full"></script><link href="https://unpkg.com/prismjs@v1.22.0/themes/prism.css" rel="stylesheet">
+  },
+  chtml: {
+    scale: 0.88,
+    mtextInheritFont: true
+  },
+  loader: {
+    load: ['input/asciimath', '[tex]/extpfeil', '[tex]/amscd', '[tex]/newcommand', '[pretext]/mathjaxknowl3.js'],
+    paths: {pretext: "https://pretextbook.org/js/lib"},
+  },
+};
+</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><link href="https://unpkg.com/prismjs@v1.22.0/themes/prism.css" rel="stylesheet">
 <script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/jquery.min.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/0.13/pretext.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/0.13/pretext_add_on.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script xmlns:svg="http://www.w3.org/2000/svg">sagecellEvalName='Evaluate (Sage)';
 </script><link xmlns:svg="http://www.w3.org/2000/svg" href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
 <link xmlns:svg="http://www.w3.org/2000/svg" href="https://fonts.googleapis.com/css?family=Inconsolata:400,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
@@ -91,7 +97,7 @@ MathJax.Hub.Config({
 \newcommand{\amp}{&amp;}
 \)</div>
 <header id="masthead" class="smallbuttons"><div class="banner"><div class="container">
-<a id="logo-link" href="http://abstract.pugetsound.edu" target="_blank"><img src="images/cover_aata_2020.png" alt="Logo image"></a><div class="title-container">
+<a id="logo-link" href="http://abstract.pugetsound.edu" target="_blank"><img src="external/images/cover_aata_2020.png" alt="Logo image"></a><div class="title-container">
 <h1 class="heading"><a href="aata-toc.html"><span class="title">Abstract Algebra:</span> <span class="subtitle">Theory and Applications, Remixed!</span></a></h1>
 <p class="byline">Thomas W. Judson</p>
 </div>
@@ -210,7 +216,7 @@ MathJax.Hub.Config({
 </li>
 <li class="link part"><a href="part-more-group-theory.html" data-scroll="part-more-group-theory"><span class="codenumber">III</span> <span class="title">More Group Theory</span></a></li>
 <li class="link">
-<a href="groups.html" data-scroll="nRa"><span class="codenumber">10</span> <span class="title">Some of the Structure of Groups</span></a><ul>
+<a href="groups-structure.html" data-scroll="nRa"><span class="codenumber">10</span> <span class="title">Some of the Structure of Groups</span></a><ul>
 <li><a href="section-groups-cayley.html" data-scroll="CTu">Isomorphisms and Cayley's Theorem</a></li>
 <li><a href="section-groups-permutations.html" data-scroll="mjE">Permutation Groups</a></li>
 <li><a href="section-solvable-groups.html" data-scroll="WbU">Solvable Groups</a></li>
@@ -321,43 +327,43 @@ MathJax.Hub.Config({
 <span class="type">Exercises</span> <span class="codenumber">1.2.4</span> <span class="title">Practice Problems</span>
 </h6>
 <article class="exercise-like"><h6 class="heading"><span class="codenumber">1.2.4.1<span class="period">.</span></span></h6>
-<div class="solutions"><a class="answer-knowl original" data-knowl="./knowl/answer-1-hidden.html" title="Answer 1.2.4.1.1"><span class="type">Answer</span></a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">1.2.4.2<span class="period">.</span></span></h6>
-<div class="solutions"><a class="answer-knowl original" data-knowl="./knowl/answer-2-hidden.html" title="Answer 1.2.4.2.1"><span class="type">Answer</span></a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">1.2.4.3<span class="period">.</span></span></h6>
-<div class="solutions"><a class="hint-knowl original" data-knowl="./knowl/hint-1-hidden.html" title="Hint 1.2.4.3.1"><span class="type">Hint</span></a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">1.2.4.4<span class="period">.</span></span></h6>
-<div class="solutions"><a class="answer-knowl original" data-knowl="./knowl/answer-3-hidden.html" title="Answer 1.2.4.4.1"><span class="type">Answer</span></a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">1.2.4.5<span class="period">.</span></span></h6>
-<div class="solutions"><a class="answer-knowl original" data-knowl="./knowl/answer-4-hidden.html" title="Answer 1.2.4.5.1"><span class="type">Answer</span></a></div></article></section><section class="exercises"><h6 class="heading hide-type">
+<div class="solutions"><a class="answer-knowl original" data-knowl="./knowl/answer-1-hidden.html" title="Answer 1.2.4.1.1"><span class="type">Answer.</span> </a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">1.2.4.2<span class="period">.</span></span></h6>
+<div class="solutions"><a class="answer-knowl original" data-knowl="./knowl/answer-2-hidden.html" title="Answer 1.2.4.2.1"><span class="type">Answer.</span> </a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">1.2.4.3<span class="period">.</span></span></h6>
+<div class="solutions"><a class="hint-knowl original" data-knowl="./knowl/hint-1-hidden.html" title="Hint 1.2.4.3.1"><span class="type">Hint.</span> </a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">1.2.4.4<span class="period">.</span></span></h6>
+<div class="solutions"><a class="answer-knowl original" data-knowl="./knowl/answer-3-hidden.html" title="Answer 1.2.4.4.1"><span class="type">Answer.</span> </a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">1.2.4.5<span class="period">.</span></span></h6>
+<div class="solutions"><a class="answer-knowl original" data-knowl="./knowl/answer-4-hidden.html" title="Answer 1.2.4.5.1"><span class="type">Answer.</span> </a></div></article></section><section class="exercises"><h6 class="heading hide-type">
 <span class="type">Exercises</span> <span class="codenumber">1.2.5</span> <span class="title">Collected Homework</span>
 </h6>
 <article class="exercise-like"><h6 class="heading"><span class="codenumber">1.2.5.2<span class="period">.</span></span></h6>
-<div class="solutions"><a class="hint-knowl original" data-knowl="./knowl/hint-2-hidden.html" title="Hint 1.2.5.2.1"><span class="type">Hint</span></a></div></article></section><section class="section"><h5 class="heading hide-type">
+<div class="solutions"><a class="hint-knowl original" data-knowl="./knowl/hint-2-hidden.html" title="Hint 1.2.5.2.1"><span class="type">Hint.</span> </a></div></article></section><section class="section"><h5 class="heading hide-type">
 <span class="type">Section</span> <span class="codenumber">1.3</span> <span class="title">Equivalence Relations and Partitions</span>
 </h5></section><section class="exercises"><h6 class="heading hide-type">
 <span class="type">Exercises</span> <span class="codenumber"></span> <span class="title">Practice Problems</span>
 </h6>
 <article class="exercise-like"><h6 class="heading"><span class="codenumber">1.3.1<span class="period">.</span></span></h6>
-<div class="solutions"><a class="hint-knowl original" data-knowl="./knowl/hint-3-hidden.html" title="Hint 1.3.1.1"><span class="type">Hint</span></a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">1.3.2<span class="period">.</span></span></h6>
-<div class="solutions"><a class="hint-knowl original" data-knowl="./knowl/hint-4-hidden.html" title="Hint 1.3.2.1"><span class="type">Hint</span></a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">1.3.3<span class="period">.</span></span></h6>
-<div class="solutions"><a class="hint-knowl original" data-knowl="./knowl/hint-5-hidden.html" title="Hint 1.3.3.1"><span class="type">Hint</span></a></div></article></section><section class="exercises"><h5 class="heading hide-type">
+<div class="solutions"><a class="hint-knowl original" data-knowl="./knowl/hint-3-hidden.html" title="Hint 1.3.1.1"><span class="type">Hint.</span> </a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">1.3.2<span class="period">.</span></span></h6>
+<div class="solutions"><a class="hint-knowl original" data-knowl="./knowl/hint-4-hidden.html" title="Hint 1.3.2.1"><span class="type">Hint.</span> </a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">1.3.3<span class="period">.</span></span></h6>
+<div class="solutions"><a class="hint-knowl original" data-knowl="./knowl/hint-5-hidden.html" title="Hint 1.3.3.1"><span class="type">Hint.</span> </a></div></article></section><section class="exercises"><h5 class="heading hide-type">
 <span class="type">Exercises</span> <span class="codenumber">1.5</span> <span class="title">Additional Exercises</span>
 </h5>
 <article class="exercise-like"><h6 class="heading"><span class="codenumber">1.5.1<span class="period">.</span></span></h6>
-<div class="solutions"><a class="hint-knowl original" data-knowl="./knowl/hint-6-hidden.html" title="Hint 1.5.1.1"><span class="type">Hint</span></a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">1.5.5<span class="period">.</span></span></h6>
-<div class="solutions"><a class="hint-knowl original" data-knowl="./knowl/hint-7-hidden.html" title="Hint 1.5.5.1"><span class="type">Hint</span></a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">1.5.9<span class="period">.</span></span></h6>
-<div class="solutions"><a class="hint-knowl original" data-knowl="./knowl/hint-8-hidden.html" title="Hint 1.5.9.1"><span class="type">Hint</span></a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">1.5.13<span class="period">.</span></span></h6>
-<div class="solutions"><a class="hint-knowl original" data-knowl="./knowl/hint-9-hidden.html" title="Hint 1.5.13.1"><span class="type">Hint</span></a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">1.5.16<span class="period">.</span></span></h6>
-<div class="solutions"><a class="hint-knowl original" data-knowl="./knowl/hint-10-hidden.html" title="Hint 1.5.16.1"><span class="type">Hint</span></a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">1.5.17<span class="period">.</span></span></h6>
-<div class="solutions"><a class="hint-knowl original" data-knowl="./knowl/hint-11-hidden.html" title="Hint 1.5.17.1"><span class="type">Hint</span></a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">1.5.19<span class="period">.</span></span></h6>
-<div class="solutions"><a class="hint-knowl original" data-knowl="./knowl/hint-12-hidden.html" title="Hint 1.5.19.1"><span class="type">Hint</span></a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">1.5.21<span class="period">.</span></span></h6>
-<div class="solutions"><a class="hint-knowl original" data-knowl="./knowl/hint-13-hidden.html" title="Hint 1.5.21.1"><span class="type">Hint</span></a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">1.5.22<span class="period">.</span></span></h6>
-<div class="solutions"><a class="hint-knowl original" data-knowl="./knowl/hint-14-hidden.html" title="Hint 1.5.22.1"><span class="type">Hint</span></a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">1.5.24<span class="period">.</span></span></h6>
-<div class="solutions"><a class="hint-knowl original" data-knowl="./knowl/hint-15-hidden.html" title="Hint 1.5.24.1"><span class="type">Hint</span></a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">1.5.26<span class="period">.</span></span></h6>
-<div class="solutions"><a class="hint-knowl original" data-knowl="./knowl/hint-16-hidden.html" title="Hint 1.5.26.1"><span class="type">Hint</span></a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">1.5.28<span class="period">.</span></span></h6>
-<div class="solutions"><a class="hint-knowl original" data-knowl="./knowl/hint-17-hidden.html" title="Hint 1.5.28.1"><span class="type">Hint</span></a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">1.5.33<span class="period">.</span></span></h6>
-<div class="solutions"><a class="hint-knowl original" data-knowl="./knowl/hint-18-hidden.html" title="Hint 1.5.33.1"><span class="type">Hint</span></a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">1.5.36<span class="period">.</span></span></h6>
-<div class="solutions"><a class="hint-knowl original" data-knowl="./knowl/hint-19-hidden.html" title="Hint 1.5.36.1"><span class="type">Hint</span></a></div></article><article class="exercise-like"><h6 class="heading">
+<div class="solutions"><a class="hint-knowl original" data-knowl="./knowl/hint-6-hidden.html" title="Hint 1.5.1.1"><span class="type">Hint.</span> </a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">1.5.5<span class="period">.</span></span></h6>
+<div class="solutions"><a class="hint-knowl original" data-knowl="./knowl/hint-7-hidden.html" title="Hint 1.5.5.1"><span class="type">Hint.</span> </a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">1.5.9<span class="period">.</span></span></h6>
+<div class="solutions"><a class="hint-knowl original" data-knowl="./knowl/hint-8-hidden.html" title="Hint 1.5.9.1"><span class="type">Hint.</span> </a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">1.5.13<span class="period">.</span></span></h6>
+<div class="solutions"><a class="hint-knowl original" data-knowl="./knowl/hint-9-hidden.html" title="Hint 1.5.13.1"><span class="type">Hint.</span> </a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">1.5.16<span class="period">.</span></span></h6>
+<div class="solutions"><a class="hint-knowl original" data-knowl="./knowl/hint-10-hidden.html" title="Hint 1.5.16.1"><span class="type">Hint.</span> </a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">1.5.17<span class="period">.</span></span></h6>
+<div class="solutions"><a class="hint-knowl original" data-knowl="./knowl/hint-11-hidden.html" title="Hint 1.5.17.1"><span class="type">Hint.</span> </a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">1.5.19<span class="period">.</span></span></h6>
+<div class="solutions"><a class="hint-knowl original" data-knowl="./knowl/hint-12-hidden.html" title="Hint 1.5.19.1"><span class="type">Hint.</span> </a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">1.5.21<span class="period">.</span></span></h6>
+<div class="solutions"><a class="hint-knowl original" data-knowl="./knowl/hint-13-hidden.html" title="Hint 1.5.21.1"><span class="type">Hint.</span> </a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">1.5.22<span class="period">.</span></span></h6>
+<div class="solutions"><a class="hint-knowl original" data-knowl="./knowl/hint-14-hidden.html" title="Hint 1.5.22.1"><span class="type">Hint.</span> </a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">1.5.24<span class="period">.</span></span></h6>
+<div class="solutions"><a class="hint-knowl original" data-knowl="./knowl/hint-15-hidden.html" title="Hint 1.5.24.1"><span class="type">Hint.</span> </a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">1.5.26<span class="period">.</span></span></h6>
+<div class="solutions"><a class="hint-knowl original" data-knowl="./knowl/hint-16-hidden.html" title="Hint 1.5.26.1"><span class="type">Hint.</span> </a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">1.5.28<span class="period">.</span></span></h6>
+<div class="solutions"><a class="hint-knowl original" data-knowl="./knowl/hint-17-hidden.html" title="Hint 1.5.28.1"><span class="type">Hint.</span> </a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">1.5.33<span class="period">.</span></span></h6>
+<div class="solutions"><a class="hint-knowl original" data-knowl="./knowl/hint-18-hidden.html" title="Hint 1.5.33.1"><span class="type">Hint.</span> </a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">1.5.36<span class="period">.</span></span></h6>
+<div class="solutions"><a class="hint-knowl original" data-knowl="./knowl/hint-19-hidden.html" title="Hint 1.5.36.1"><span class="type">Hint.</span> </a></div></article><article class="exercise-like"><h6 class="heading">
 <span class="codenumber">1.5.40<span class="period">.</span></span><span class="space"> </span><span class="title">Fibonacci Numbers.</span>
 </h6>
-<div class="solutions"><a class="hint-knowl original" data-knowl="./knowl/hint-20-hidden.html" title="Hint 1.5.40.1"><span class="type">Hint</span></a></div></article></section><section class="chapter"><h4 class="heading">
+<div class="solutions"><a class="hint-knowl original" data-knowl="./knowl/hint-20-hidden.html" title="Hint 1.5.40.1"><span class="type">Hint.</span> </a></div></article></section><section class="chapter"><h4 class="heading">
 <span class="type">Chapter</span> <span class="codenumber">2</span> <span class="title">Groups</span>
 </h4></section><section class="section"><h5 class="heading hide-type">
 <span class="type">Section</span> <span class="codenumber">2.2</span> <span class="title">Definitions and Examples</span>
@@ -365,80 +371,80 @@ MathJax.Hub.Config({
 <span class="type">Exercises</span> <span class="codenumber">2.2.3</span> <span class="title">Practice Problems</span>
 </h6>
 <article class="exercise-like"><h6 class="heading"><span class="codenumber">2.2.3.1<span class="period">.</span></span></h6>
-<div class="solutions"><a class="hint-knowl original" data-knowl="./knowl/hint-21-hidden.html" title="Hint 2.2.3.1.1"><span class="type">Hint</span></a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">2.2.3.2<span class="period">.</span></span></h6>
-<div class="solutions"><a class="hint-knowl original" data-knowl="./knowl/hint-22-hidden.html" title="Hint 2.2.3.2.1"><span class="type">Hint</span></a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">2.2.3.3<span class="period">.</span></span></h6>
-<div class="solutions"><a class="hint-knowl original" data-knowl="./knowl/hint-23-hidden.html" title="Hint 2.2.3.3.1"><span class="type">Hint</span></a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">2.2.3.6<span class="period">.</span></span></h6>
-<div class="solutions"><a class="hint-knowl original" data-knowl="./knowl/hint-24-hidden.html" title="Hint 2.2.3.6.1"><span class="type">Hint</span></a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">2.2.3.x1<span class="period">.</span></span></h6>
-<div class="solutions"><a class="hint-knowl original" data-knowl="./knowl/hint-25-hidden.html" title="Hint 2.2.3.x1.1"><span class="type">Hint</span></a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">2.2.3.x4<span class="period">.</span></span></h6>
-<div class="solutions"><a class="hint-knowl original" data-knowl="./knowl/hint-26-hidden.html" title="Hint 2.2.3.x4.1"><span class="type">Hint</span></a></div></article></section><section class="exercises"><h6 class="heading hide-type">
+<div class="solutions"><a class="hint-knowl original" data-knowl="./knowl/hint-21-hidden.html" title="Hint 2.2.3.1.1"><span class="type">Hint.</span> </a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">2.2.3.2<span class="period">.</span></span></h6>
+<div class="solutions"><a class="hint-knowl original" data-knowl="./knowl/hint-22-hidden.html" title="Hint 2.2.3.2.1"><span class="type">Hint.</span> </a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">2.2.3.3<span class="period">.</span></span></h6>
+<div class="solutions"><a class="hint-knowl original" data-knowl="./knowl/hint-23-hidden.html" title="Hint 2.2.3.3.1"><span class="type">Hint.</span> </a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">2.2.3.6<span class="period">.</span></span></h6>
+<div class="solutions"><a class="hint-knowl original" data-knowl="./knowl/hint-24-hidden.html" title="Hint 2.2.3.6.1"><span class="type">Hint.</span> </a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">2.2.3.x1<span class="period">.</span></span></h6>
+<div class="solutions"><a class="hint-knowl original" data-knowl="./knowl/hint-25-hidden.html" title="Hint 2.2.3.x1.1"><span class="type">Hint.</span> </a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">2.2.3.x4<span class="period">.</span></span></h6>
+<div class="solutions"><a class="hint-knowl original" data-knowl="./knowl/hint-26-hidden.html" title="Hint 2.2.3.x4.1"><span class="type">Hint.</span> </a></div></article></section><section class="exercises"><h6 class="heading hide-type">
 <span class="type">Exercises</span> <span class="codenumber">2.2.4</span> <span class="title">Collected Homework</span>
 </h6>
 <article class="exercise-like"><h6 class="heading"><span class="codenumber">2.2.4.7<span class="period">.</span></span></h6>
-<div class="solutions"><a class="hint-knowl original" data-knowl="./knowl/hint-27-hidden.html" title="Hint 2.2.4.7.1"><span class="type">Hint</span></a></div></article></section><section class="section"><h5 class="heading hide-type">
+<div class="solutions"><a class="hint-knowl original" data-knowl="./knowl/hint-27-hidden.html" title="Hint 2.2.4.7.1"><span class="type">Hint.</span> </a></div></article></section><section class="section"><h5 class="heading hide-type">
 <span class="type">Section</span> <span class="codenumber">2.3</span> <span class="title">Basic Properties of Groups</span>
 </h5></section><section class="exercises"><h6 class="heading hide-type">
 <span class="type">Exercises</span> <span class="codenumber"></span> <span class="title">Collected Homework</span>
 </h6>
 <article class="exercise-like"><h6 class="heading"><span class="codenumber">2.3.1<span class="period">.</span></span></h6>
-<div class="solutions"><a class="hint-knowl original" data-knowl="./knowl/hint-28-hidden.html" title="Hint 2.3.1.1"><span class="type">Hint</span></a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">2.3.2<span class="period">.</span></span></h6>
-<div class="solutions"><a class="hint-knowl original" data-knowl="./knowl/hint-29-hidden.html" title="Hint 2.3.2.1"><span class="type">Hint</span></a></div></article></section><section class="section"><h5 class="heading hide-type">
+<div class="solutions"><a class="hint-knowl original" data-knowl="./knowl/hint-28-hidden.html" title="Hint 2.3.1.1"><span class="type">Hint.</span> </a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">2.3.2<span class="period">.</span></span></h6>
+<div class="solutions"><a class="hint-knowl original" data-knowl="./knowl/hint-29-hidden.html" title="Hint 2.3.2.1"><span class="type">Hint.</span> </a></div></article></section><section class="section"><h5 class="heading hide-type">
 <span class="type">Section</span> <span class="codenumber">2.4</span> <span class="title">Subgroups</span>
 </h5></section><section class="exercises"><h6 class="heading hide-type">
 <span class="type">Exercises</span> <span class="codenumber">2.4.4</span> <span class="title">Practice Problems</span>
 </h6>
 <article class="exercise-like"><h6 class="heading"><span class="codenumber">2.4.4.1<span class="period">.</span></span></h6>
-<div class="solutions"><a class="hint-knowl original" data-knowl="./knowl/hint-30-hidden.html" title="Hint 2.4.4.1.1"><span class="type">Hint</span></a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">2.4.4.2<span class="period">.</span></span></h6>
-<div class="solutions"><a class="hint-knowl original" data-knowl="./knowl/hint-31-hidden.html" title="Hint 2.4.4.2.1"><span class="type">Hint</span></a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">2.4.4.3<span class="period">.</span></span></h6>
-<div class="solutions"><a class="hint-knowl original" data-knowl="./knowl/hint-32-hidden.html" title="Hint 2.4.4.3.1"><span class="type">Hint</span></a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">2.4.4.5<span class="period">.</span></span></h6>
-<div class="solutions"><a class="hint-knowl original" data-knowl="./knowl/hint-33-hidden.html" title="Hint 2.4.4.5.1"><span class="type">Hint</span></a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">2.4.4.6<span class="period">.</span></span></h6>
-<div class="solutions"><a class="answer-knowl original" data-knowl="./knowl/answer-5-hidden.html" title="Answer 2.4.4.6.1"><span class="type">Answer</span></a></div></article></section><section class="exercises"><h6 class="heading hide-type">
+<div class="solutions"><a class="hint-knowl original" data-knowl="./knowl/hint-30-hidden.html" title="Hint 2.4.4.1.1"><span class="type">Hint.</span> </a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">2.4.4.2<span class="period">.</span></span></h6>
+<div class="solutions"><a class="hint-knowl original" data-knowl="./knowl/hint-31-hidden.html" title="Hint 2.4.4.2.1"><span class="type">Hint.</span> </a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">2.4.4.3<span class="period">.</span></span></h6>
+<div class="solutions"><a class="hint-knowl original" data-knowl="./knowl/hint-32-hidden.html" title="Hint 2.4.4.3.1"><span class="type">Hint.</span> </a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">2.4.4.5<span class="period">.</span></span></h6>
+<div class="solutions"><a class="hint-knowl original" data-knowl="./knowl/hint-33-hidden.html" title="Hint 2.4.4.5.1"><span class="type">Hint.</span> </a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">2.4.4.6<span class="period">.</span></span></h6>
+<div class="solutions"><a class="answer-knowl original" data-knowl="./knowl/answer-5-hidden.html" title="Answer 2.4.4.6.1"><span class="type">Answer.</span> </a></div></article></section><section class="exercises"><h6 class="heading hide-type">
 <span class="type">Exercises</span> <span class="codenumber">2.4.5</span> <span class="title">Collected Homework</span>
 </h6>
 <article class="exercise-like"><h6 class="heading"><span class="codenumber">2.4.5.C2<span class="period">.</span></span></h6>
-<div class="solutions"><a class="hint-knowl original" data-knowl="./knowl/hint-34-hidden.html" title="Hint 2.4.5.C2.1"><span class="type">Hint</span></a></div></article></section><section class="section"><h5 class="heading hide-type">
+<div class="solutions"><a class="hint-knowl original" data-knowl="./knowl/hint-34-hidden.html" title="Hint 2.4.5.C2.1"><span class="type">Hint.</span> </a></div></article></section><section class="section"><h5 class="heading hide-type">
 <span class="type">Section</span> <span class="codenumber">2.6</span> <span class="title">Permutation Groups</span>
 </h5></section><section class="exercises"><h6 class="heading hide-type">
 <span class="type">Exercises</span> <span class="codenumber">2.6.7</span> <span class="title">Practice Problems</span>
 </h6>
 <article class="exercise-like"><h6 class="heading"><span class="codenumber">2.6.7.1<span class="period">.</span></span></h6>
-<div class="solutions"><a class="answer-knowl original" data-knowl="./knowl/answer-6-hidden.html" title="Answer 2.6.7.1.1"><span class="type">Answer</span></a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">2.6.7.2<span class="period">.</span></span></h6>
-<div class="solutions"><a class="answer-knowl original" data-knowl="./knowl/answer-7-hidden.html" title="Answer 2.6.7.2.1"><span class="type">Answer</span></a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">2.6.7.3<span class="period">.</span></span></h6>
-<div class="solutions"><a class="answer-knowl original" data-knowl="./knowl/answer-8-hidden.html" title="Answer 2.6.7.3.1"><span class="type">Answer</span></a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">2.6.7.5<span class="period">.</span></span></h6>
-<div class="solutions"><a class="hint-knowl original" data-knowl="./knowl/hint-35-hidden.html" title="Hint 2.6.7.5.1"><span class="type">Hint</span></a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">2.6.7.6<span class="period">.</span></span></h6>
-<div class="solutions"><a class="hint-knowl original" data-knowl="./knowl/hint-36-hidden.html" title="Hint 2.6.7.6.1"><span class="type">Hint</span></a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">2.6.7.7<span class="period">.</span></span></h6>
-<div class="solutions"><a class="answer-knowl original" data-knowl="./knowl/answer-9-hidden.html" title="Answer 2.6.7.7.1"><span class="type">Answer</span></a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">2.6.7.8<span class="period">.</span></span></h6>
-<div class="solutions"><a class="hint-knowl original" data-knowl="./knowl/hint-37-hidden.html" title="Hint 2.6.7.8.1"><span class="type">Hint</span></a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">2.6.7.9<span class="period">.</span></span></h6>
-<div class="solutions"><a class="answer-knowl original" data-knowl="./knowl/answer-10-hidden.html" title="Answer 2.6.7.9.1"><span class="type">Answer</span></a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">2.6.7.10<span class="period">.</span></span></h6>
-<div class="solutions"><a class="answer-knowl original" data-knowl="./knowl/answer-11-hidden.html" title="Answer 2.6.7.10.1"><span class="type">Answer</span></a></div></article></section><section class="exercises"><h5 class="heading hide-type">
+<div class="solutions"><a class="answer-knowl original" data-knowl="./knowl/answer-6-hidden.html" title="Answer 2.6.7.1.1"><span class="type">Answer.</span> </a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">2.6.7.2<span class="period">.</span></span></h6>
+<div class="solutions"><a class="answer-knowl original" data-knowl="./knowl/answer-7-hidden.html" title="Answer 2.6.7.2.1"><span class="type">Answer.</span> </a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">2.6.7.3<span class="period">.</span></span></h6>
+<div class="solutions"><a class="answer-knowl original" data-knowl="./knowl/answer-8-hidden.html" title="Answer 2.6.7.3.1"><span class="type">Answer.</span> </a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">2.6.7.5<span class="period">.</span></span></h6>
+<div class="solutions"><a class="hint-knowl original" data-knowl="./knowl/hint-35-hidden.html" title="Hint 2.6.7.5.1"><span class="type">Hint.</span> </a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">2.6.7.6<span class="period">.</span></span></h6>
+<div class="solutions"><a class="hint-knowl original" data-knowl="./knowl/hint-36-hidden.html" title="Hint 2.6.7.6.1"><span class="type">Hint.</span> </a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">2.6.7.7<span class="period">.</span></span></h6>
+<div class="solutions"><a class="answer-knowl original" data-knowl="./knowl/answer-9-hidden.html" title="Answer 2.6.7.7.1"><span class="type">Answer.</span> </a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">2.6.7.8<span class="period">.</span></span></h6>
+<div class="solutions"><a class="hint-knowl original" data-knowl="./knowl/hint-37-hidden.html" title="Hint 2.6.7.8.1"><span class="type">Hint.</span> </a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">2.6.7.9<span class="period">.</span></span></h6>
+<div class="solutions"><a class="answer-knowl original" data-knowl="./knowl/answer-10-hidden.html" title="Answer 2.6.7.9.1"><span class="type">Answer.</span> </a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">2.6.7.10<span class="period">.</span></span></h6>
+<div class="solutions"><a class="answer-knowl original" data-knowl="./knowl/answer-11-hidden.html" title="Answer 2.6.7.10.1"><span class="type">Answer.</span> </a></div></article></section><section class="exercises"><h5 class="heading hide-type">
 <span class="type">Exercises</span> <span class="codenumber">2.7</span> <span class="title">Additional Exercises</span>
 </h5>
 <article class="exercise-like"><h6 class="heading"><span class="codenumber">2.7.2<span class="period">.</span></span></h6>
-<div class="solutions"><a class="hint-knowl original" data-knowl="./knowl/hint-38-hidden.html" title="Hint 2.7.2.1"><span class="type">Hint</span></a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">2.7.9<span class="period">.</span></span></h6>
-<div class="solutions"><a class="hint-knowl original" data-knowl="./knowl/hint-39-hidden.html" title="Hint 2.7.9.1"><span class="type">Hint</span></a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">2.7.10<span class="period">.</span></span></h6>
-<div class="solutions"><a class="hint-knowl original" data-knowl="./knowl/hint-40-hidden.html" title="Hint 2.7.10.1"><span class="type">Hint</span></a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">2.7.11<span class="period">.</span></span></h6>
-<div class="solutions"><a class="hint-knowl original" data-knowl="./knowl/hint-41-hidden.html" title="Hint 2.7.11.1"><span class="type">Hint</span></a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">2.7.12<span class="period">.</span></span></h6>
-<div class="solutions"><a class="hint-knowl original" data-knowl="./knowl/hint-42-hidden.html" title="Hint 2.7.12.1"><span class="type">Hint</span></a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">2.7.19<span class="period">.</span></span></h6>
-<div class="solutions"><a class="hint-knowl original" data-knowl="./knowl/hint-43-hidden.html" title="Hint 2.7.19.1"><span class="type">Hint</span></a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">2.7.25<span class="period">.</span></span></h6>
-<div class="solutions"><a class="hint-knowl original" data-knowl="./knowl/hint-44-hidden.html" title="Hint 2.7.25.1"><span class="type">Hint</span></a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">2.7.29<span class="period">.</span></span></h6>
-<div class="solutions"><a class="hint-knowl original" data-knowl="./knowl/hint-45-hidden.html" title="Hint 2.7.29.1"><span class="type">Hint</span></a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">2.7.35<span class="period">.</span></span></h6>
-<div class="solutions"><a class="hint-knowl original" data-knowl="./knowl/hint-46-hidden.html" title="Hint 2.7.35.1"><span class="type">Hint</span></a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">2.7.40<span class="period">.</span></span></h6>
-<div class="solutions"><a class="hint-knowl original" data-knowl="./knowl/hint-47-hidden.html" title="Hint 2.7.40.1"><span class="type">Hint</span></a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">2.7.43<span class="period">.</span></span></h6>
-<div class="solutions"><a class="hint-knowl original" data-knowl="./knowl/hint-48-hidden.html" title="Hint 2.7.43.1"><span class="type">Hint</span></a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">2.7.49<span class="period">.</span></span></h6>
-<div class="solutions"><a class="hint-knowl original" data-knowl="./knowl/hint-49-hidden.html" title="Hint 2.7.49.1"><span class="type">Hint</span></a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">2.7.50<span class="period">.</span></span></h6>
-<div class="solutions"><a class="hint-knowl original" data-knowl="./knowl/hint-50-hidden.html" title="Hint 2.7.50.1"><span class="type">Hint</span></a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">2.7.51<span class="period">.</span></span></h6>
-<div class="solutions"><a class="hint-knowl original" data-knowl="./knowl/hint-51-hidden.html" title="Hint 2.7.51.1"><span class="type">Hint</span></a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">2.7.52<span class="period">.</span></span></h6>
-<div class="solutions"><a class="hint-knowl original" data-knowl="./knowl/hint-52-hidden.html" title="Hint 2.7.52.1"><span class="type">Hint</span></a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">2.7.58<span class="period">.</span></span></h6>
-<div class="solutions"><a class="hint-knowl original" data-knowl="./knowl/hint-53-hidden.html" title="Hint 2.7.58.1"><span class="type">Hint</span></a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">2.7.59<span class="period">.</span></span></h6>
-<div class="solutions"><a class="hint-knowl original" data-knowl="./knowl/hint-54-hidden.html" title="Hint 2.7.59.1"><span class="type">Hint</span></a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">2.7.66<span class="period">.</span></span></h6>
-<div class="solutions"><a class="hint-knowl original" data-knowl="./knowl/hint-55-hidden.html" title="Hint 2.7.66.1"><span class="type">Hint</span></a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">2.7.71<span class="period">.</span></span></h6>
-<div class="solutions"><a class="hint-knowl original" data-knowl="./knowl/hint-56-hidden.html" title="Hint 2.7.71.1"><span class="type">Hint</span></a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">2.7.75<span class="period">.</span></span></h6>
-<div class="solutions"><a class="hint-knowl original" data-knowl="./knowl/hint-57-hidden.html" title="Hint 2.7.75.1"><span class="type">Hint</span></a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">2.7.81<span class="period">.</span></span></h6>
-<div class="solutions"><a class="hint-knowl original" data-knowl="./knowl/hint-58-hidden.html" title="Hint 2.7.81.1"><span class="type">Hint</span></a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">2.7.91<span class="period">.</span></span></h6>
-<div class="solutions"><a class="hint-knowl original" data-knowl="./knowl/hint-59-hidden.html" title="Hint 2.7.91.1"><span class="type">Hint</span></a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">2.7.92<span class="period">.</span></span></h6>
-<div class="solutions"><a class="hint-knowl original" data-knowl="./knowl/hint-60-hidden.html" title="Hint 2.7.92.1"><span class="type">Hint</span></a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">2.7.98<span class="period">.</span></span></h6>
-<div class="solutions"><a class="hint-knowl original" data-knowl="./knowl/hint-61-hidden.html" title="Hint 2.7.98.1"><span class="type">Hint</span></a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">2.7.106<span class="period">.</span></span></h6>
-<div class="solutions"><a class="hint-knowl original" data-knowl="./knowl/hint-62-hidden.html" title="Hint 2.7.106.1"><span class="type">Hint</span></a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">2.7.111<span class="period">.</span></span></h6>
-<div class="solutions"><a class="hint-knowl original" data-knowl="./knowl/hint-63-hidden.html" title="Hint 2.7.111.1"><span class="type">Hint</span></a></div></article></section><section class="chapter"><h4 class="heading">
+<div class="solutions"><a class="hint-knowl original" data-knowl="./knowl/hint-38-hidden.html" title="Hint 2.7.2.1"><span class="type">Hint.</span> </a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">2.7.9<span class="period">.</span></span></h6>
+<div class="solutions"><a class="hint-knowl original" data-knowl="./knowl/hint-39-hidden.html" title="Hint 2.7.9.1"><span class="type">Hint.</span> </a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">2.7.10<span class="period">.</span></span></h6>
+<div class="solutions"><a class="hint-knowl original" data-knowl="./knowl/hint-40-hidden.html" title="Hint 2.7.10.1"><span class="type">Hint.</span> </a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">2.7.11<span class="period">.</span></span></h6>
+<div class="solutions"><a class="hint-knowl original" data-knowl="./knowl/hint-41-hidden.html" title="Hint 2.7.11.1"><span class="type">Hint.</span> </a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">2.7.12<span class="period">.</span></span></h6>
+<div class="solutions"><a class="hint-knowl original" data-knowl="./knowl/hint-42-hidden.html" title="Hint 2.7.12.1"><span class="type">Hint.</span> </a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">2.7.19<span class="period">.</span></span></h6>
+<div class="solutions"><a class="hint-knowl original" data-knowl="./knowl/hint-43-hidden.html" title="Hint 2.7.19.1"><span class="type">Hint.</span> </a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">2.7.25<span class="period">.</span></span></h6>
+<div class="solutions"><a class="hint-knowl original" data-knowl="./knowl/hint-44-hidden.html" title="Hint 2.7.25.1"><span class="type">Hint.</span> </a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">2.7.29<span class="period">.</span></span></h6>
+<div class="solutions"><a class="hint-knowl original" data-knowl="./knowl/hint-45-hidden.html" title="Hint 2.7.29.1"><span class="type">Hint.</span> </a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">2.7.35<span class="period">.</span></span></h6>
+<div class="solutions"><a class="hint-knowl original" data-knowl="./knowl/hint-46-hidden.html" title="Hint 2.7.35.1"><span class="type">Hint.</span> </a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">2.7.40<span class="period">.</span></span></h6>
+<div class="solutions"><a class="hint-knowl original" data-knowl="./knowl/hint-47-hidden.html" title="Hint 2.7.40.1"><span class="type">Hint.</span> </a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">2.7.43<span class="period">.</span></span></h6>
+<div class="solutions"><a class="hint-knowl original" data-knowl="./knowl/hint-48-hidden.html" title="Hint 2.7.43.1"><span class="type">Hint.</span> </a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">2.7.49<span class="period">.</span></span></h6>
+<div class="solutions"><a class="hint-knowl original" data-knowl="./knowl/hint-49-hidden.html" title="Hint 2.7.49.1"><span class="type">Hint.</span> </a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">2.7.50<span class="period">.</span></span></h6>
+<div class="solutions"><a class="hint-knowl original" data-knowl="./knowl/hint-50-hidden.html" title="Hint 2.7.50.1"><span class="type">Hint.</span> </a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">2.7.51<span class="period">.</span></span></h6>
+<div class="solutions"><a class="hint-knowl original" data-knowl="./knowl/hint-51-hidden.html" title="Hint 2.7.51.1"><span class="type">Hint.</span> </a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">2.7.52<span class="period">.</span></span></h6>
+<div class="solutions"><a class="hint-knowl original" data-knowl="./knowl/hint-52-hidden.html" title="Hint 2.7.52.1"><span class="type">Hint.</span> </a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">2.7.58<span class="period">.</span></span></h6>
+<div class="solutions"><a class="hint-knowl original" data-knowl="./knowl/hint-53-hidden.html" title="Hint 2.7.58.1"><span class="type">Hint.</span> </a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">2.7.59<span class="period">.</span></span></h6>
+<div class="solutions"><a class="hint-knowl original" data-knowl="./knowl/hint-54-hidden.html" title="Hint 2.7.59.1"><span class="type">Hint.</span> </a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">2.7.66<span class="period">.</span></span></h6>
+<div class="solutions"><a class="hint-knowl original" data-knowl="./knowl/hint-55-hidden.html" title="Hint 2.7.66.1"><span class="type">Hint.</span> </a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">2.7.71<span class="period">.</span></span></h6>
+<div class="solutions"><a class="hint-knowl original" data-knowl="./knowl/hint-56-hidden.html" title="Hint 2.7.71.1"><span class="type">Hint.</span> </a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">2.7.75<span class="period">.</span></span></h6>
+<div class="solutions"><a class="hint-knowl original" data-knowl="./knowl/hint-57-hidden.html" title="Hint 2.7.75.1"><span class="type">Hint.</span> </a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">2.7.81<span class="period">.</span></span></h6>
+<div class="solutions"><a class="hint-knowl original" data-knowl="./knowl/hint-58-hidden.html" title="Hint 2.7.81.1"><span class="type">Hint.</span> </a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">2.7.91<span class="period">.</span></span></h6>
+<div class="solutions"><a class="hint-knowl original" data-knowl="./knowl/hint-59-hidden.html" title="Hint 2.7.91.1"><span class="type">Hint.</span> </a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">2.7.92<span class="period">.</span></span></h6>
+<div class="solutions"><a class="hint-knowl original" data-knowl="./knowl/hint-60-hidden.html" title="Hint 2.7.92.1"><span class="type">Hint.</span> </a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">2.7.98<span class="period">.</span></span></h6>
+<div class="solutions"><a class="hint-knowl original" data-knowl="./knowl/hint-61-hidden.html" title="Hint 2.7.98.1"><span class="type">Hint.</span> </a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">2.7.106<span class="period">.</span></span></h6>
+<div class="solutions"><a class="hint-knowl original" data-knowl="./knowl/hint-62-hidden.html" title="Hint 2.7.106.1"><span class="type">Hint.</span> </a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">2.7.111<span class="period">.</span></span></h6>
+<div class="solutions"><a class="hint-knowl original" data-knowl="./knowl/hint-63-hidden.html" title="Hint 2.7.111.1"><span class="type">Hint.</span> </a></div></article></section><section class="chapter"><h4 class="heading">
 <span class="type">Chapter</span> <span class="codenumber">3</span> <span class="title">Cosets and Factor Groups</span>
 </h4></section><section class="section"><h5 class="heading hide-type">
 <span class="type">Section</span> <span class="codenumber">3.1</span> <span class="title">Cosets</span>
@@ -446,35 +452,35 @@ MathJax.Hub.Config({
 <span class="type">Exercises</span> <span class="codenumber"></span> <span class="title">Practice Problems</span>
 </h6>
 <article class="exercise-like"><h6 class="heading"><span class="codenumber">3.1.5<span class="period">.</span></span></h6>
-<div class="solutions"><a class="hint-knowl original" data-knowl="./knowl/hint-64-hidden.html" title="Hint 3.1.5.1"><span class="type">Hint</span></a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">3.1.12<span class="period">.</span></span></h6>
-<div class="solutions"><a class="hint-knowl original" data-knowl="./knowl/hint-65-hidden.html" title="Hint 3.1.12.1"><span class="type">Hint</span></a></div></article></section><section class="exercises"><h6 class="heading hide-type">
+<div class="solutions"><a class="hint-knowl original" data-knowl="./knowl/hint-64-hidden.html" title="Hint 3.1.5.1"><span class="type">Hint.</span> </a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">3.1.12<span class="period">.</span></span></h6>
+<div class="solutions"><a class="hint-knowl original" data-knowl="./knowl/hint-65-hidden.html" title="Hint 3.1.12.1"><span class="type">Hint.</span> </a></div></article></section><section class="exercises"><h6 class="heading hide-type">
 <span class="type">Exercises</span> <span class="codenumber"></span> <span class="title">Collected Homework</span>
 </h6>
 <article class="exercise-like"><h6 class="heading"><span class="codenumber">3.1.1<span class="period">.</span></span></h6>
-<div class="solutions"><a class="hint-knowl original" data-knowl="./knowl/hint-66-hidden.html" title="Hint 3.1.1.1"><span class="type">Hint</span></a></div></article></section><section class="section"><h5 class="heading hide-type">
+<div class="solutions"><a class="hint-knowl original" data-knowl="./knowl/hint-66-hidden.html" title="Hint 3.1.1.1"><span class="type">Hint.</span> </a></div></article></section><section class="section"><h5 class="heading hide-type">
 <span class="type">Section</span> <span class="codenumber">3.2</span> <span class="title">Factor Groups and Normal Subgroups</span>
 </h5></section><section class="exercises"><h6 class="heading hide-type">
 <span class="type">Exercises</span> <span class="codenumber">3.2.4</span> <span class="title">Practice Problems</span>
 </h6>
 <article class="exercise-like"><h6 class="heading"><span class="codenumber">3.2.4.4<span class="period">.</span></span></h6>
-<div class="solutions"><a class="hint-knowl original" data-knowl="./knowl/hint-67-hidden.html" title="Hint 3.2.4.4.1"><span class="type">Hint</span></a></div></article></section><section class="exercises"><h6 class="heading hide-type">
+<div class="solutions"><a class="hint-knowl original" data-knowl="./knowl/hint-67-hidden.html" title="Hint 3.2.4.4.1"><span class="type">Hint.</span> </a></div></article></section><section class="exercises"><h6 class="heading hide-type">
 <span class="type">Exercises</span> <span class="codenumber">3.2.5</span> <span class="title">Collected Homework</span>
 </h6>
 <article class="exercise-like"><h6 class="heading"><span class="codenumber">3.2.5.C2<span class="period">.</span></span></h6>
-<div class="solutions"><a class="hint-knowl original" data-knowl="./knowl/hint-68-hidden.html" title="Hint 3.2.5.C2.1"><span class="type">Hint</span></a></div></article></section><section class="exercises"><h5 class="heading hide-type">
+<div class="solutions"><a class="hint-knowl original" data-knowl="./knowl/hint-68-hidden.html" title="Hint 3.2.5.C2.1"><span class="type">Hint.</span> </a></div></article></section><section class="exercises"><h5 class="heading hide-type">
 <span class="type">Exercises</span> <span class="codenumber">3.3</span> <span class="title">Exercises</span>
 </h5>
 <article class="exercise-like"><h6 class="heading"><span class="codenumber">3.3.1<span class="period">.</span></span></h6>
-<div class="solutions"><a class="hint-knowl original" data-knowl="./knowl/hint-69-hidden.html" title="Hint 3.3.1.1"><span class="type">Hint</span></a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">3.3.2<span class="period">.</span></span></h6>
-<div class="solutions"><a class="hint-knowl original" data-knowl="./knowl/hint-70-hidden.html" title="Hint 3.3.2.1"><span class="type">Hint</span></a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">3.3.4<span class="period">.</span></span></h6>
-<div class="solutions"><a class="hint-knowl original" data-knowl="./knowl/hint-71-hidden.html" title="Hint 3.3.4.1"><span class="type">Hint</span></a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">3.3.13<span class="period">.</span></span></h6>
-<div class="solutions"><a class="hint-knowl original" data-knowl="./knowl/hint-72-hidden.html" title="Hint 3.3.13.1"><span class="type">Hint</span></a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">3.3.16<span class="period">.</span></span></h6>
-<div class="solutions"><a class="hint-knowl original" data-knowl="./knowl/hint-73-hidden.html" title="Hint 3.3.16.1"><span class="type">Hint</span></a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">3.3.18<span class="period">.</span></span></h6>
-<div class="solutions"><a class="hint-knowl original" data-knowl="./knowl/hint-74-hidden.html" title="Hint 3.3.18.1"><span class="type">Hint</span></a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">3.3.25<span class="period">.</span></span></h6>
-<div class="solutions"><a class="hint-knowl original" data-knowl="./knowl/hint-75-hidden.html" title="Hint 3.3.25.1"><span class="type">Hint</span></a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">3.3.28<span class="period">.</span></span></h6>
-<div class="solutions"><a class="hint-knowl original" data-knowl="./knowl/hint-76-hidden.html" title="Hint 3.3.28.1"><span class="type">Hint</span></a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">3.3.29<span class="period">.</span></span></h6>
-<div class="solutions"><a class="hint-knowl original" data-knowl="./knowl/hint-77-hidden.html" title="Hint 3.3.29.1"><span class="type">Hint</span></a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">3.3.31<span class="period">.</span></span></h6>
-<div class="solutions"><a class="hint-knowl original" data-knowl="./knowl/hint-78-hidden.html" title="Hint 3.3.31.1"><span class="type">Hint</span></a></div></article></section><section class="chapter"><h4 class="heading">
+<div class="solutions"><a class="hint-knowl original" data-knowl="./knowl/hint-69-hidden.html" title="Hint 3.3.1.1"><span class="type">Hint.</span> </a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">3.3.2<span class="period">.</span></span></h6>
+<div class="solutions"><a class="hint-knowl original" data-knowl="./knowl/hint-70-hidden.html" title="Hint 3.3.2.1"><span class="type">Hint.</span> </a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">3.3.4<span class="period">.</span></span></h6>
+<div class="solutions"><a class="hint-knowl original" data-knowl="./knowl/hint-71-hidden.html" title="Hint 3.3.4.1"><span class="type">Hint.</span> </a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">3.3.13<span class="period">.</span></span></h6>
+<div class="solutions"><a class="hint-knowl original" data-knowl="./knowl/hint-72-hidden.html" title="Hint 3.3.13.1"><span class="type">Hint.</span> </a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">3.3.16<span class="period">.</span></span></h6>
+<div class="solutions"><a class="hint-knowl original" data-knowl="./knowl/hint-73-hidden.html" title="Hint 3.3.16.1"><span class="type">Hint.</span> </a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">3.3.18<span class="period">.</span></span></h6>
+<div class="solutions"><a class="hint-knowl original" data-knowl="./knowl/hint-74-hidden.html" title="Hint 3.3.18.1"><span class="type">Hint.</span> </a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">3.3.25<span class="period">.</span></span></h6>
+<div class="solutions"><a class="hint-knowl original" data-knowl="./knowl/hint-75-hidden.html" title="Hint 3.3.25.1"><span class="type">Hint.</span> </a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">3.3.28<span class="period">.</span></span></h6>
+<div class="solutions"><a class="hint-knowl original" data-knowl="./knowl/hint-76-hidden.html" title="Hint 3.3.28.1"><span class="type">Hint.</span> </a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">3.3.29<span class="period">.</span></span></h6>
+<div class="solutions"><a class="hint-knowl original" data-knowl="./knowl/hint-77-hidden.html" title="Hint 3.3.29.1"><span class="type">Hint.</span> </a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">3.3.31<span class="period">.</span></span></h6>
+<div class="solutions"><a class="hint-knowl original" data-knowl="./knowl/hint-78-hidden.html" title="Hint 3.3.31.1"><span class="type">Hint.</span> </a></div></article></section><section class="chapter"><h4 class="heading">
 <span class="type">Chapter</span> <span class="codenumber">4</span> <span class="title">Isomorphisms and Homomorphisms</span>
 </h4></section><section class="section"><h5 class="heading hide-type">
 <span class="type">Section</span> <span class="codenumber">4.1</span> <span class="title">Definition and Examples</span>
@@ -482,47 +488,47 @@ MathJax.Hub.Config({
 <span class="type">Exercises</span> <span class="codenumber">4.1.4</span> <span class="title">Practice Problems</span>
 </h6>
 <article class="exercise-like"><h6 class="heading"><span class="codenumber">4.1.4.4<span class="period">.</span></span></h6>
-<div class="solutions"><a class="hint-knowl original" data-knowl="./knowl/hint-79-hidden.html" title="Hint 4.1.4.4.1"><span class="type">Hint</span></a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">4.1.4.5<span class="period">.</span></span></h6>
-<div class="solutions"><a class="hint-knowl original" data-knowl="./knowl/hint-80-hidden.html" title="Hint 4.1.4.5.1"><span class="type">Hint</span></a></div></article></section><section class="exercises"><h6 class="heading hide-type">
+<div class="solutions"><a class="hint-knowl original" data-knowl="./knowl/hint-79-hidden.html" title="Hint 4.1.4.4.1"><span class="type">Hint.</span> </a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">4.1.4.5<span class="period">.</span></span></h6>
+<div class="solutions"><a class="hint-knowl original" data-knowl="./knowl/hint-80-hidden.html" title="Hint 4.1.4.5.1"><span class="type">Hint.</span> </a></div></article></section><section class="exercises"><h6 class="heading hide-type">
 <span class="type">Exercises</span> <span class="codenumber">4.1.5</span> <span class="title">Collected Homework</span>
 </h6>
 <article class="exercise-like"><h6 class="heading"><span class="codenumber">4.1.5.C1<span class="period">.</span></span></h6>
-<div class="solutions"><a class="hint-knowl original" data-knowl="./knowl/hint-81-hidden.html" title="Hint 4.1.5.C1.1"><span class="type">Hint</span></a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">4.1.5.C2<span class="period">.</span></span></h6>
-<div class="solutions"><a class="hint-knowl original" data-knowl="./knowl/hint-82-hidden.html" title="Hint 4.1.5.C2.1"><span class="type">Hint</span></a></div></article></section><section class="section"><h5 class="heading hide-type">
+<div class="solutions"><a class="hint-knowl original" data-knowl="./knowl/hint-81-hidden.html" title="Hint 4.1.5.C1.1"><span class="type">Hint.</span> </a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">4.1.5.C2<span class="period">.</span></span></h6>
+<div class="solutions"><a class="hint-knowl original" data-knowl="./knowl/hint-82-hidden.html" title="Hint 4.1.5.C2.1"><span class="type">Hint.</span> </a></div></article></section><section class="section"><h5 class="heading hide-type">
 <span class="type">Section</span> <span class="codenumber">4.2</span> <span class="title">Group Homomorphisms</span>
 </h5></section><section class="exercises"><h6 class="heading hide-type">
 <span class="type">Exercises</span> <span class="codenumber"></span> <span class="title">Collected Homework</span>
 </h6>
 <article class="exercise-like"><h6 class="heading"><span class="codenumber">4.2.C1<span class="period">.</span></span></h6>
-<div class="solutions"><a class="hint-knowl original" data-knowl="./knowl/hint-83-hidden.html" title="Hint 4.2.C1.1"><span class="type">Hint</span></a></div></article></section><section class="section"><h5 class="heading hide-type">
+<div class="solutions"><a class="hint-knowl original" data-knowl="./knowl/hint-83-hidden.html" title="Hint 4.2.C1.1"><span class="type">Hint.</span> </a></div></article></section><section class="section"><h5 class="heading hide-type">
 <span class="type">Section</span> <span class="codenumber">4.3</span> <span class="title">The Isomorphism Theorems</span>
 </h5></section><section class="exercises"><h6 class="heading hide-type">
 <span class="type">Exercises</span> <span class="codenumber"></span> <span class="title">Practice Problems</span>
 </h6>
 <article class="exercise-like"><h6 class="heading"><span class="codenumber">4.3.1<span class="period">.</span></span></h6>
-<div class="solutions"><a class="hint-knowl original" data-knowl="./knowl/hint-84-hidden.html" title="Hint 4.3.1.1"><span class="type">Hint</span></a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">4.3.3<span class="period">.</span></span></h6>
-<div class="solutions"><a class="hint-knowl original" data-knowl="./knowl/hint-85-hidden.html" title="Hint 4.3.3.1"><span class="type">Hint</span></a></div></article></section><section class="exercises"><h5 class="heading hide-type">
+<div class="solutions"><a class="hint-knowl original" data-knowl="./knowl/hint-84-hidden.html" title="Hint 4.3.1.1"><span class="type">Hint.</span> </a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">4.3.3<span class="period">.</span></span></h6>
+<div class="solutions"><a class="hint-knowl original" data-knowl="./knowl/hint-85-hidden.html" title="Hint 4.3.3.1"><span class="type">Hint.</span> </a></div></article></section><section class="exercises"><h5 class="heading hide-type">
 <span class="type">Exercises</span> <span class="codenumber">4.4</span> <span class="title">Additional Exercises</span>
 </h5>
 <article class="exercise-like"><h6 class="heading"><span class="codenumber">4.4.1<span class="period">.</span></span></h6>
-<div class="solutions"><a class="hint-knowl original" data-knowl="./knowl/hint-86-hidden.html" title="Hint 4.4.1.1"><span class="type">Hint</span></a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">4.4.2<span class="period">.</span></span></h6>
-<div class="solutions"><a class="hint-knowl original" data-knowl="./knowl/hint-87-hidden.html" title="Hint 4.4.2.1"><span class="type">Hint</span></a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">4.4.3<span class="period">.</span></span></h6>
-<div class="solutions"><a class="hint-knowl original" data-knowl="./knowl/hint-88-hidden.html" title="Hint 4.4.3.1"><span class="type">Hint</span></a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">4.4.6<span class="period">.</span></span></h6>
-<div class="solutions"><a class="hint-knowl original" data-knowl="./knowl/hint-89-hidden.html" title="Hint 4.4.6.1"><span class="type">Hint</span></a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">4.4.8<span class="period">.</span></span></h6>
-<div class="solutions"><a class="hint-knowl original" data-knowl="./knowl/hint-90-hidden.html" title="Hint 4.4.8.1"><span class="type">Hint</span></a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">4.4.11<span class="period">.</span></span></h6>
-<div class="solutions"><a class="hint-knowl original" data-knowl="./knowl/hint-91-hidden.html" title="Hint 4.4.11.1"><span class="type">Hint</span></a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">4.4.16<span class="period">.</span></span></h6>
-<div class="solutions"><a class="hint-knowl original" data-knowl="./knowl/hint-92-hidden.html" title="Hint 4.4.16.1"><span class="type">Hint</span></a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">4.4.19<span class="period">.</span></span></h6>
-<div class="solutions"><a class="hint-knowl original" data-knowl="./knowl/hint-93-hidden.html" title="Hint 4.4.19.1"><span class="type">Hint</span></a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">4.4.20<span class="period">.</span></span></h6>
-<div class="solutions"><a class="hint-knowl original" data-knowl="./knowl/hint-94-hidden.html" title="Hint 4.4.20.1"><span class="type">Hint</span></a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">4.4.25<span class="period">.</span></span></h6>
-<div class="solutions"><a class="hint-knowl original" data-knowl="./knowl/hint-95-hidden.html" title="Hint 4.4.25.1"><span class="type">Hint</span></a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">4.4.27<span class="period">.</span></span></h6>
-<div class="solutions"><a class="hint-knowl original" data-knowl="./knowl/hint-96-hidden.html" title="Hint 4.4.27.1"><span class="type">Hint</span></a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">4.4.38<span class="period">.</span></span></h6>
-<div class="solutions"><a class="hint-knowl original" data-knowl="./knowl/hint-97-hidden.html" title="Hint 4.4.38.1"><span class="type">Hint</span></a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">4.4.45<span class="period">.</span></span></h6>
-<div class="solutions"><a class="hint-knowl original" data-knowl="./knowl/hint-98-hidden.html" title="Hint 4.4.45.1"><span class="type">Hint</span></a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">4.4.57<span class="period">.</span></span></h6>
-<div class="solutions"><a class="hint-knowl original" data-knowl="./knowl/hint-99-hidden.html" title="Hint 4.4.57.1"><span class="type">Hint</span></a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">4.4.59<span class="period">.</span></span></h6>
-<div class="solutions"><a class="hint-knowl original" data-knowl="./knowl/hint-100-hidden.html" title="Hint 4.4.59.1"><span class="type">Hint</span></a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">4.4.60<span class="period">.</span></span></h6>
-<div class="solutions"><a class="hint-knowl original" data-knowl="./knowl/hint-101-hidden.html" title="Hint 4.4.60.1"><span class="type">Hint</span></a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">4.4.64<span class="period">.</span></span></h6>
-<div class="solutions"><a class="hint-knowl original" data-knowl="./knowl/hint-102-hidden.html" title="Hint 4.4.64.1"><span class="type">Hint</span></a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">4.4.72<span class="period">.</span></span></h6>
-<div class="solutions"><a class="hint-knowl original" data-knowl="./knowl/hint-103-hidden.html" title="Hint 4.4.72.1"><span class="type">Hint</span></a></div></article></section><section class="part"><h3 class="heading hide-type">
+<div class="solutions"><a class="hint-knowl original" data-knowl="./knowl/hint-86-hidden.html" title="Hint 4.4.1.1"><span class="type">Hint.</span> </a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">4.4.2<span class="period">.</span></span></h6>
+<div class="solutions"><a class="hint-knowl original" data-knowl="./knowl/hint-87-hidden.html" title="Hint 4.4.2.1"><span class="type">Hint.</span> </a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">4.4.3<span class="period">.</span></span></h6>
+<div class="solutions"><a class="hint-knowl original" data-knowl="./knowl/hint-88-hidden.html" title="Hint 4.4.3.1"><span class="type">Hint.</span> </a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">4.4.6<span class="period">.</span></span></h6>
+<div class="solutions"><a class="hint-knowl original" data-knowl="./knowl/hint-89-hidden.html" title="Hint 4.4.6.1"><span class="type">Hint.</span> </a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">4.4.8<span class="period">.</span></span></h6>
+<div class="solutions"><a class="hint-knowl original" data-knowl="./knowl/hint-90-hidden.html" title="Hint 4.4.8.1"><span class="type">Hint.</span> </a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">4.4.11<span class="period">.</span></span></h6>
+<div class="solutions"><a class="hint-knowl original" data-knowl="./knowl/hint-91-hidden.html" title="Hint 4.4.11.1"><span class="type">Hint.</span> </a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">4.4.16<span class="period">.</span></span></h6>
+<div class="solutions"><a class="hint-knowl original" data-knowl="./knowl/hint-92-hidden.html" title="Hint 4.4.16.1"><span class="type">Hint.</span> </a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">4.4.19<span class="period">.</span></span></h6>
+<div class="solutions"><a class="hint-knowl original" data-knowl="./knowl/hint-93-hidden.html" title="Hint 4.4.19.1"><span class="type">Hint.</span> </a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">4.4.20<span class="period">.</span></span></h6>
+<div class="solutions"><a class="hint-knowl original" data-knowl="./knowl/hint-94-hidden.html" title="Hint 4.4.20.1"><span class="type">Hint.</span> </a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">4.4.25<span class="period">.</span></span></h6>
+<div class="solutions"><a class="hint-knowl original" data-knowl="./knowl/hint-95-hidden.html" title="Hint 4.4.25.1"><span class="type">Hint.</span> </a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">4.4.27<span class="period">.</span></span></h6>
+<div class="solutions"><a class="hint-knowl original" data-knowl="./knowl/hint-96-hidden.html" title="Hint 4.4.27.1"><span class="type">Hint.</span> </a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">4.4.38<span class="period">.</span></span></h6>
+<div class="solutions"><a class="hint-knowl original" data-knowl="./knowl/hint-97-hidden.html" title="Hint 4.4.38.1"><span class="type">Hint.</span> </a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">4.4.45<span class="period">.</span></span></h6>
+<div class="solutions"><a class="hint-knowl original" data-knowl="./knowl/hint-98-hidden.html" title="Hint 4.4.45.1"><span class="type">Hint.</span> </a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">4.4.57<span class="period">.</span></span></h6>
+<div class="solutions"><a class="hint-knowl original" data-knowl="./knowl/hint-99-hidden.html" title="Hint 4.4.57.1"><span class="type">Hint.</span> </a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">4.4.59<span class="period">.</span></span></h6>
+<div class="solutions"><a class="hint-knowl original" data-knowl="./knowl/hint-100-hidden.html" title="Hint 4.4.59.1"><span class="type">Hint.</span> </a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">4.4.60<span class="period">.</span></span></h6>
+<div class="solutions"><a class="hint-knowl original" data-knowl="./knowl/hint-101-hidden.html" title="Hint 4.4.60.1"><span class="type">Hint.</span> </a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">4.4.64<span class="period">.</span></span></h6>
+<div class="solutions"><a class="hint-knowl original" data-knowl="./knowl/hint-102-hidden.html" title="Hint 4.4.64.1"><span class="type">Hint.</span> </a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">4.4.72<span class="period">.</span></span></h6>
+<div class="solutions"><a class="hint-knowl original" data-knowl="./knowl/hint-103-hidden.html" title="Hint 4.4.72.1"><span class="type">Hint.</span> </a></div></article></section><section class="part"><h3 class="heading hide-type">
 <span class="type">Part</span> <span class="codenumber">II</span> <span class="title">Rings and Fields</span>
 </h3></section><section class="chapter"><h4 class="heading">
 <span class="type">Chapter</span> <span class="codenumber">5</span> <span class="title">Rings</span>
@@ -532,39 +538,39 @@ MathJax.Hub.Config({
 <span class="type">Exercises</span> <span class="codenumber"></span> <span class="title">Practice Problems</span>
 </h6>
 <article class="exercise-like"><h6 class="heading"><span class="codenumber">5.1.2<span class="period">.</span></span></h6>
-<div class="solutions"><a class="hint-knowl original" data-knowl="./knowl/hint-104-hidden.html" title="Hint 5.1.2.1"><span class="type">Hint</span></a></div></article></section><section class="section"><h5 class="heading hide-type">
+<div class="solutions"><a class="hint-knowl original" data-knowl="./knowl/hint-104-hidden.html" title="Hint 5.1.2.1"><span class="type">Hint.</span> </a></div></article></section><section class="section"><h5 class="heading hide-type">
 <span class="type">Section</span> <span class="codenumber">5.2</span> <span class="title">Integral Domains and Fields</span>
 </h5></section><section class="exercises"><h6 class="heading hide-type">
 <span class="type">Exercises</span> <span class="codenumber"></span> <span class="title">Collected Homework</span>
 </h6>
 <article class="exercise-like"><h6 class="heading"><span class="codenumber">5.2.C2<span class="period">.</span></span></h6>
-<div class="solutions"><a class="hint-knowl original" data-knowl="./knowl/hint-105-hidden.html" title="Hint 5.2.C2.1"><span class="type">Hint</span></a></div></article></section><section class="section"><h5 class="heading hide-type">
+<div class="solutions"><a class="hint-knowl original" data-knowl="./knowl/hint-105-hidden.html" title="Hint 5.2.C2.1"><span class="type">Hint.</span> </a></div></article></section><section class="section"><h5 class="heading hide-type">
 <span class="type">Section</span> <span class="codenumber">5.3</span> <span class="title">Ring Homomorphisms and Ideals</span>
 </h5></section><section class="exercises"><h6 class="heading hide-type">
 <span class="type">Exercises</span> <span class="codenumber"></span> <span class="title">Practice Problems</span>
 </h6>
 <article class="exercise-like"><h6 class="heading"><span class="codenumber">5.3.4<span class="period">.</span></span></h6>
-<div class="solutions"><a class="hint-knowl original" data-knowl="./knowl/hint-106-hidden.html" title="Hint 5.3.4.1"><span class="type">Hint</span></a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">5.3.5<span class="period">.</span></span></h6>
-<div class="solutions"><a class="hint-knowl original" data-knowl="./knowl/hint-107-hidden.html" title="Hint 5.3.5.1"><span class="type">Hint</span></a></div></article></section><section class="exercises"><h6 class="heading hide-type">
+<div class="solutions"><a class="hint-knowl original" data-knowl="./knowl/hint-106-hidden.html" title="Hint 5.3.4.1"><span class="type">Hint.</span> </a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">5.3.5<span class="period">.</span></span></h6>
+<div class="solutions"><a class="hint-knowl original" data-knowl="./knowl/hint-107-hidden.html" title="Hint 5.3.5.1"><span class="type">Hint.</span> </a></div></article></section><section class="exercises"><h6 class="heading hide-type">
 <span class="type">Exercises</span> <span class="codenumber"></span> <span class="title">Collected Homework</span>
 </h6>
 <article class="exercise-like"><h6 class="heading"><span class="codenumber">5.3.C1<span class="period">.</span></span></h6>
-<div class="solutions"><a class="hint-knowl original" data-knowl="./knowl/hint-108-hidden.html" title="Hint 5.3.C1.1"><span class="type">Hint</span></a></div></article></section><section class="exercises"><h5 class="heading hide-type">
+<div class="solutions"><a class="hint-knowl original" data-knowl="./knowl/hint-108-hidden.html" title="Hint 5.3.C1.1"><span class="type">Hint.</span> </a></div></article></section><section class="exercises"><h5 class="heading hide-type">
 <span class="type">Exercises</span> <span class="codenumber">5.6</span> <span class="title">Additional Exercises</span>
 </h5>
 <article class="exercise-like"><h6 class="heading"><span class="codenumber">5.6.1<span class="period">.</span></span></h6>
-<div class="solutions"><a class="hint-knowl original" data-knowl="./knowl/hint-109-hidden.html" title="Hint 5.6.1.1"><span class="type">Hint</span></a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">5.6.3<span class="period">.</span></span></h6>
-<div class="solutions"><a class="hint-knowl original" data-knowl="./knowl/hint-110-hidden.html" title="Hint 5.6.3.1"><span class="type">Hint</span></a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">5.6.4<span class="period">.</span></span></h6>
-<div class="solutions"><a class="hint-knowl original" data-knowl="./knowl/hint-111-hidden.html" title="Hint 5.6.4.1"><span class="type">Hint</span></a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">5.6.7<span class="period">.</span></span></h6>
-<div class="solutions"><a class="hint-knowl original" data-knowl="./knowl/hint-112-hidden.html" title="Hint 5.6.7.1"><span class="type">Hint</span></a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">5.6.8<span class="period">.</span></span></h6>
-<div class="solutions"><a class="hint-knowl original" data-knowl="./knowl/hint-113-hidden.html" title="Hint 5.6.8.1"><span class="type">Hint</span></a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">5.6.13<span class="period">.</span></span></h6>
-<div class="solutions"><a class="hint-knowl original" data-knowl="./knowl/hint-114-hidden.html" title="Hint 5.6.13.1"><span class="type">Hint</span></a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">5.6.16<span class="period">.</span></span></h6>
-<div class="solutions"><a class="hint-knowl original" data-knowl="./knowl/hint-115-hidden.html" title="Hint 5.6.16.1"><span class="type">Hint</span></a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">5.6.18<span class="period">.</span></span></h6>
-<div class="solutions"><a class="hint-knowl original" data-knowl="./knowl/hint-116-hidden.html" title="Hint 5.6.18.1"><span class="type">Hint</span></a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">5.6.26<span class="period">.</span></span></h6>
-<div class="solutions"><a class="hint-knowl original" data-knowl="./knowl/hint-117-hidden.html" title="Hint 5.6.26.1"><span class="type">Hint</span></a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">5.6.28<span class="period">.</span></span></h6>
-<div class="solutions"><a class="hint-knowl original" data-knowl="./knowl/hint-118-hidden.html" title="Hint 5.6.28.1"><span class="type">Hint</span></a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">5.6.33<span class="period">.</span></span></h6>
-<div class="solutions"><a class="hint-knowl original" data-knowl="./knowl/hint-119-hidden.html" title="Hint 5.6.33.1"><span class="type">Hint</span></a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">5.6.37<span class="period">.</span></span></h6>
-<div class="solutions"><a class="hint-knowl original" data-knowl="./knowl/hint-120-hidden.html" title="Hint 5.6.37.1"><span class="type">Hint</span></a></div></article></section><section class="chapter"><h4 class="heading">
+<div class="solutions"><a class="hint-knowl original" data-knowl="./knowl/hint-109-hidden.html" title="Hint 5.6.1.1"><span class="type">Hint.</span> </a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">5.6.3<span class="period">.</span></span></h6>
+<div class="solutions"><a class="hint-knowl original" data-knowl="./knowl/hint-110-hidden.html" title="Hint 5.6.3.1"><span class="type">Hint.</span> </a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">5.6.4<span class="period">.</span></span></h6>
+<div class="solutions"><a class="hint-knowl original" data-knowl="./knowl/hint-111-hidden.html" title="Hint 5.6.4.1"><span class="type">Hint.</span> </a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">5.6.7<span class="period">.</span></span></h6>
+<div class="solutions"><a class="hint-knowl original" data-knowl="./knowl/hint-112-hidden.html" title="Hint 5.6.7.1"><span class="type">Hint.</span> </a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">5.6.8<span class="period">.</span></span></h6>
+<div class="solutions"><a class="hint-knowl original" data-knowl="./knowl/hint-113-hidden.html" title="Hint 5.6.8.1"><span class="type">Hint.</span> </a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">5.6.13<span class="period">.</span></span></h6>
+<div class="solutions"><a class="hint-knowl original" data-knowl="./knowl/hint-114-hidden.html" title="Hint 5.6.13.1"><span class="type">Hint.</span> </a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">5.6.16<span class="period">.</span></span></h6>
+<div class="solutions"><a class="hint-knowl original" data-knowl="./knowl/hint-115-hidden.html" title="Hint 5.6.16.1"><span class="type">Hint.</span> </a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">5.6.18<span class="period">.</span></span></h6>
+<div class="solutions"><a class="hint-knowl original" data-knowl="./knowl/hint-116-hidden.html" title="Hint 5.6.18.1"><span class="type">Hint.</span> </a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">5.6.26<span class="period">.</span></span></h6>
+<div class="solutions"><a class="hint-knowl original" data-knowl="./knowl/hint-117-hidden.html" title="Hint 5.6.26.1"><span class="type">Hint.</span> </a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">5.6.28<span class="period">.</span></span></h6>
+<div class="solutions"><a class="hint-knowl original" data-knowl="./knowl/hint-118-hidden.html" title="Hint 5.6.28.1"><span class="type">Hint.</span> </a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">5.6.33<span class="period">.</span></span></h6>
+<div class="solutions"><a class="hint-knowl original" data-knowl="./knowl/hint-119-hidden.html" title="Hint 5.6.33.1"><span class="type">Hint.</span> </a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">5.6.37<span class="period">.</span></span></h6>
+<div class="solutions"><a class="hint-knowl original" data-knowl="./knowl/hint-120-hidden.html" title="Hint 5.6.37.1"><span class="type">Hint.</span> </a></div></article></section><section class="chapter"><h4 class="heading">
 <span class="type">Chapter</span> <span class="codenumber">6</span> <span class="title">Polynomials</span>
 </h4></section><section class="section"><h5 class="heading hide-type">
 <span class="type">Section</span> <span class="codenumber">6.1</span> <span class="title">The Integers</span>
@@ -572,63 +578,63 @@ MathJax.Hub.Config({
 <span class="type">Exercises</span> <span class="codenumber">6.1.5</span> <span class="title">Exercises</span>
 </h6>
 <article class="exercise-like"><h6 class="heading"><span class="codenumber">6.1.5.4<span class="period">.</span></span></h6>
-<div class="solutions"><a class="hint-knowl original" data-knowl="./knowl/hint-121-hidden.html" title="Hint 6.1.5.4.1"><span class="type">Hint</span></a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">6.1.5.8<span class="period">.</span></span></h6>
-<div class="solutions"><a class="hint-knowl original" data-knowl="./knowl/hint-122-hidden.html" title="Hint 6.1.5.8.1"><span class="type">Hint</span></a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">6.1.5.12<span class="period">.</span></span></h6>
-<div class="solutions"><a class="hint-knowl original" data-knowl="./knowl/hint-123-hidden.html" title="Hint 6.1.5.12.1"><span class="type">Hint</span></a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">6.1.5.14<span class="period">.</span></span></h6>
-<div class="solutions"><a class="hint-knowl original" data-knowl="./knowl/hint-124-hidden.html" title="Hint 6.1.5.14.1"><span class="type">Hint</span></a></div></article></section><section class="section"><h5 class="heading hide-type">
+<div class="solutions"><a class="hint-knowl original" data-knowl="./knowl/hint-121-hidden.html" title="Hint 6.1.5.4.1"><span class="type">Hint.</span> </a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">6.1.5.8<span class="period">.</span></span></h6>
+<div class="solutions"><a class="hint-knowl original" data-knowl="./knowl/hint-122-hidden.html" title="Hint 6.1.5.8.1"><span class="type">Hint.</span> </a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">6.1.5.12<span class="period">.</span></span></h6>
+<div class="solutions"><a class="hint-knowl original" data-knowl="./knowl/hint-123-hidden.html" title="Hint 6.1.5.12.1"><span class="type">Hint.</span> </a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">6.1.5.14<span class="period">.</span></span></h6>
+<div class="solutions"><a class="hint-knowl original" data-knowl="./knowl/hint-124-hidden.html" title="Hint 6.1.5.14.1"><span class="type">Hint.</span> </a></div></article></section><section class="section"><h5 class="heading hide-type">
 <span class="type">Section</span> <span class="codenumber">6.3</span> <span class="title">The Division Algorithm</span>
 </h5></section><section class="exercises"><h6 class="heading hide-type">
 <span class="type">Exercises</span> <span class="codenumber"></span> <span class="title">Practice Problems</span>
 </h6>
 <article class="exercise-like"><h6 class="heading"><span class="codenumber">6.3.4<span class="period">.</span></span></h6>
-<div class="solutions"><a class="hint-knowl original" data-knowl="./knowl/hint-125-hidden.html" title="Hint 6.3.4.1"><span class="type">Hint</span></a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">6.3.9<span class="period">.</span></span></h6>
-<div class="solutions"><a class="hint-knowl original" data-knowl="./knowl/hint-126-hidden.html" title="Hint 6.3.9.1"><span class="type">Hint</span></a></div></article></section><section class="section"><h5 class="heading hide-type">
+<div class="solutions"><a class="hint-knowl original" data-knowl="./knowl/hint-125-hidden.html" title="Hint 6.3.4.1"><span class="type">Hint.</span> </a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">6.3.9<span class="period">.</span></span></h6>
+<div class="solutions"><a class="hint-knowl original" data-knowl="./knowl/hint-126-hidden.html" title="Hint 6.3.9.1"><span class="type">Hint.</span> </a></div></article></section><section class="section"><h5 class="heading hide-type">
 <span class="type">Section</span> <span class="codenumber">6.4</span> <span class="title">Irreducible Polynomials</span>
 </h5></section><section class="exercises"><h6 class="heading hide-type">
 <span class="type">Exercises</span> <span class="codenumber">6.4.5</span> <span class="title">Collected Homework</span>
 </h6>
 <article class="exercise-like"><h6 class="heading"><span class="codenumber">6.4.5.2<span class="period">.</span></span></h6>
-<div class="solutions"><a class="hint-knowl original" data-knowl="./knowl/hint-127-hidden.html" title="Hint 6.4.5.2.1"><span class="type">Hint</span></a></div></article></section><section class="section"><h5 class="heading hide-type">
+<div class="solutions"><a class="hint-knowl original" data-knowl="./knowl/hint-127-hidden.html" title="Hint 6.4.5.2.1"><span class="type">Hint.</span> </a></div></article></section><section class="section"><h5 class="heading hide-type">
 <span class="type">Section</span> <span class="codenumber">6.5</span> <span class="title">Factoring over \(\C\) and \(\R\)</span>
 </h5></section><section class="exercises"><h6 class="heading hide-type">
 <span class="type">Exercises</span> <span class="codenumber">6.5.3</span> <span class="title">Practice Problems</span>
 </h6>
 <article class="exercise-like"><h6 class="heading"><span class="codenumber">6.5.3.1<span class="period">.</span></span></h6>
-<div class="solutions"><a class="hint-knowl original" data-knowl="./knowl/hint-128-hidden.html" title="Hint 6.5.3.1.1"><span class="type">Hint</span></a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">6.5.3.2<span class="period">.</span></span></h6>
-<div class="solutions"><a class="hint-knowl original" data-knowl="./knowl/hint-129-hidden.html" title="Hint 6.5.3.2.1"><span class="type">Hint</span></a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">6.5.3.3<span class="period">.</span></span></h6>
-<div class="solutions"><a class="hint-knowl original" data-knowl="./knowl/hint-130-hidden.html" title="Hint 6.5.3.3.1"><span class="type">Hint</span></a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">6.5.3.4<span class="period">.</span></span></h6>
-<div class="solutions"><a class="hint-knowl original" data-knowl="./knowl/hint-131-hidden.html" title="Hint 6.5.3.4.1"><span class="type">Hint</span></a></div></article></section><section class="exercises"><h6 class="heading hide-type">
+<div class="solutions"><a class="hint-knowl original" data-knowl="./knowl/hint-128-hidden.html" title="Hint 6.5.3.1.1"><span class="type">Hint.</span> </a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">6.5.3.2<span class="period">.</span></span></h6>
+<div class="solutions"><a class="hint-knowl original" data-knowl="./knowl/hint-129-hidden.html" title="Hint 6.5.3.2.1"><span class="type">Hint.</span> </a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">6.5.3.3<span class="period">.</span></span></h6>
+<div class="solutions"><a class="hint-knowl original" data-knowl="./knowl/hint-130-hidden.html" title="Hint 6.5.3.3.1"><span class="type">Hint.</span> </a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">6.5.3.4<span class="period">.</span></span></h6>
+<div class="solutions"><a class="hint-knowl original" data-knowl="./knowl/hint-131-hidden.html" title="Hint 6.5.3.4.1"><span class="type">Hint.</span> </a></div></article></section><section class="exercises"><h6 class="heading hide-type">
 <span class="type">Exercises</span> <span class="codenumber">6.5.4</span> <span class="title">Collected Homework</span>
 </h6>
 <article class="exercise-like"><h6 class="heading"><span class="codenumber">6.5.4.1<span class="period">.</span></span></h6>
-<div class="solutions"><a class="hint-knowl original" data-knowl="./knowl/hint-132-hidden.html" title="Hint 6.5.4.1.1"><span class="type">Hint</span></a></div></article></section><section class="exercises"><h5 class="heading hide-type">
+<div class="solutions"><a class="hint-knowl original" data-knowl="./knowl/hint-132-hidden.html" title="Hint 6.5.4.1.1"><span class="type">Hint.</span> </a></div></article></section><section class="exercises"><h5 class="heading hide-type">
 <span class="type">Exercises</span> <span class="codenumber">6.6</span> <span class="title">Additional Exercises</span>
 </h5>
 <article class="exercise-like"><h6 class="heading"><span class="codenumber">6.6.2<span class="period">.</span></span></h6>
-<div class="solutions"><a class="hint-knowl original" data-knowl="./knowl/hint-133-hidden.html" title="Hint 6.6.2.1"><span class="type">Hint</span></a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">6.6.3<span class="period">.</span></span></h6>
-<div class="solutions"><a class="hint-knowl original" data-knowl="./knowl/hint-134-hidden.html" title="Hint 6.6.3.1"><span class="type">Hint</span></a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">6.6.5<span class="period">.</span></span></h6>
-<div class="solutions"><a class="hint-knowl original" data-knowl="./knowl/hint-135-hidden.html" title="Hint 6.6.5.1"><span class="type">Hint</span></a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">6.6.7<span class="period">.</span></span></h6>
-<div class="solutions"><a class="hint-knowl original" data-knowl="./knowl/hint-136-hidden.html" title="Hint 6.6.7.1"><span class="type">Hint</span></a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">6.6.8<span class="period">.</span></span></h6>
-<div class="solutions"><a class="hint-knowl original" data-knowl="./knowl/hint-137-hidden.html" title="Hint 6.6.8.1"><span class="type">Hint</span></a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">6.6.10<span class="period">.</span></span></h6>
-<div class="solutions"><a class="hint-knowl original" data-knowl="./knowl/hint-138-hidden.html" title="Hint 6.6.10.1"><span class="type">Hint</span></a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">6.6.13<span class="period">.</span></span></h6>
-<div class="solutions"><a class="hint-knowl original" data-knowl="./knowl/hint-139-hidden.html" title="Hint 6.6.13.1"><span class="type">Hint</span></a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">6.6.14<span class="period">.</span></span></h6>
-<div class="solutions"><a class="hint-knowl original" data-knowl="./knowl/hint-140-hidden.html" title="Hint 6.6.14.1"><span class="type">Hint</span></a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">6.6.16<span class="period">.</span></span></h6>
-<div class="solutions"><a class="hint-knowl original" data-knowl="./knowl/hint-141-hidden.html" title="Hint 6.6.16.1"><span class="type">Hint</span></a></div></article><article class="exercise-like"><h6 class="heading">
+<div class="solutions"><a class="hint-knowl original" data-knowl="./knowl/hint-133-hidden.html" title="Hint 6.6.2.1"><span class="type">Hint.</span> </a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">6.6.3<span class="period">.</span></span></h6>
+<div class="solutions"><a class="hint-knowl original" data-knowl="./knowl/hint-134-hidden.html" title="Hint 6.6.3.1"><span class="type">Hint.</span> </a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">6.6.5<span class="period">.</span></span></h6>
+<div class="solutions"><a class="hint-knowl original" data-knowl="./knowl/hint-135-hidden.html" title="Hint 6.6.5.1"><span class="type">Hint.</span> </a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">6.6.7<span class="period">.</span></span></h6>
+<div class="solutions"><a class="hint-knowl original" data-knowl="./knowl/hint-136-hidden.html" title="Hint 6.6.7.1"><span class="type">Hint.</span> </a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">6.6.8<span class="period">.</span></span></h6>
+<div class="solutions"><a class="hint-knowl original" data-knowl="./knowl/hint-137-hidden.html" title="Hint 6.6.8.1"><span class="type">Hint.</span> </a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">6.6.10<span class="period">.</span></span></h6>
+<div class="solutions"><a class="hint-knowl original" data-knowl="./knowl/hint-138-hidden.html" title="Hint 6.6.10.1"><span class="type">Hint.</span> </a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">6.6.13<span class="period">.</span></span></h6>
+<div class="solutions"><a class="hint-knowl original" data-knowl="./knowl/hint-139-hidden.html" title="Hint 6.6.13.1"><span class="type">Hint.</span> </a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">6.6.14<span class="period">.</span></span></h6>
+<div class="solutions"><a class="hint-knowl original" data-knowl="./knowl/hint-140-hidden.html" title="Hint 6.6.14.1"><span class="type">Hint.</span> </a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">6.6.16<span class="period">.</span></span></h6>
+<div class="solutions"><a class="hint-knowl original" data-knowl="./knowl/hint-141-hidden.html" title="Hint 6.6.16.1"><span class="type">Hint.</span> </a></div></article><article class="exercise-like"><h6 class="heading">
 <span class="codenumber">6.6.20<span class="period">.</span></span><span class="space"> </span><span class="title">Cyclotomic Polynomials.</span>
 </h6>
-<div class="solutions"><a class="hint-knowl original" data-knowl="./knowl/hint-142-hidden.html" title="Hint 6.6.20.1"><span class="type">Hint</span></a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">6.6.26<span class="period">.</span></span></h6>
-<div class="solutions"><a class="hint-knowl original" data-knowl="./knowl/hint-143-hidden.html" title="Hint 6.6.26.1"><span class="type">Hint</span></a></div></article></section><section class="chapter"><h4 class="heading">
+<div class="solutions"><a class="hint-knowl original" data-knowl="./knowl/hint-142-hidden.html" title="Hint 6.6.20.1"><span class="type">Hint.</span> </a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">6.6.26<span class="period">.</span></span></h6>
+<div class="solutions"><a class="hint-knowl original" data-knowl="./knowl/hint-143-hidden.html" title="Hint 6.6.26.1"><span class="type">Hint.</span> </a></div></article></section><section class="chapter"><h4 class="heading">
 <span class="type">Chapter</span> <span class="codenumber">7</span> <span class="title">Integral Domains</span>
 </h4></section><section class="exercises"><h5 class="heading hide-type">
 <span class="type">Exercises</span> <span class="codenumber">7.4</span> <span class="title">Exercises</span>
 </h5>
 <article class="exercise-like"><h6 class="heading"><span class="codenumber">7.4.1<span class="period">.</span></span></h6>
-<div class="solutions"><a class="hint-knowl original" data-knowl="./knowl/hint-144-hidden.html" title="Hint 7.4.1.1"><span class="type">Hint</span></a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">7.4.2<span class="period">.</span></span></h6>
-<div class="solutions"><a class="hint-knowl original" data-knowl="./knowl/hint-145-hidden.html" title="Hint 7.4.2.1"><span class="type">Hint</span></a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">7.4.4<span class="period">.</span></span></h6>
-<div class="solutions"><a class="hint-knowl original" data-knowl="./knowl/hint-146-hidden.html" title="Hint 7.4.4.1"><span class="type">Hint</span></a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">7.4.9<span class="period">.</span></span></h6>
-<div class="solutions"><a class="hint-knowl original" data-knowl="./knowl/hint-147-hidden.html" title="Hint 7.4.9.1"><span class="type">Hint</span></a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">7.4.15<span class="period">.</span></span></h6>
-<div class="solutions"><a class="hint-knowl original" data-knowl="./knowl/hint-148-hidden.html" title="Hint 7.4.15.1"><span class="type">Hint</span></a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">7.4.16<span class="period">.</span></span></h6>
-<div class="solutions"><a class="hint-knowl original" data-knowl="./knowl/hint-149-hidden.html" title="Hint 7.4.16.1"><span class="type">Hint</span></a></div></article></section><section class="chapter"><h4 class="heading">
+<div class="solutions"><a class="hint-knowl original" data-knowl="./knowl/hint-144-hidden.html" title="Hint 7.4.1.1"><span class="type">Hint.</span> </a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">7.4.2<span class="period">.</span></span></h6>
+<div class="solutions"><a class="hint-knowl original" data-knowl="./knowl/hint-145-hidden.html" title="Hint 7.4.2.1"><span class="type">Hint.</span> </a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">7.4.4<span class="period">.</span></span></h6>
+<div class="solutions"><a class="hint-knowl original" data-knowl="./knowl/hint-146-hidden.html" title="Hint 7.4.4.1"><span class="type">Hint.</span> </a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">7.4.9<span class="period">.</span></span></h6>
+<div class="solutions"><a class="hint-knowl original" data-knowl="./knowl/hint-147-hidden.html" title="Hint 7.4.9.1"><span class="type">Hint.</span> </a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">7.4.15<span class="period">.</span></span></h6>
+<div class="solutions"><a class="hint-knowl original" data-knowl="./knowl/hint-148-hidden.html" title="Hint 7.4.15.1"><span class="type">Hint.</span> </a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">7.4.16<span class="period">.</span></span></h6>
+<div class="solutions"><a class="hint-knowl original" data-knowl="./knowl/hint-149-hidden.html" title="Hint 7.4.16.1"><span class="type">Hint.</span> </a></div></article></section><section class="chapter"><h4 class="heading">
 <span class="type">Chapter</span> <span class="codenumber">8</span> <span class="title">Fields</span>
 </h4></section><section class="section"><h5 class="heading hide-type">
 <span class="type">Section</span> <span class="codenumber">8.1</span> <span class="title">Geometric Constructions</span>
@@ -636,27 +642,27 @@ MathJax.Hub.Config({
 <span class="type">Exercises</span> <span class="codenumber">8.1.4</span> <span class="title">Collected Homework</span>
 </h6>
 <article class="exercise-like"><h6 class="heading"><span class="codenumber">8.1.4.1<span class="period">.</span></span></h6>
-<div class="solutions"><a class="hint-knowl original" data-knowl="./knowl/hint-150-hidden.html" title="Hint 8.1.4.1.1"><span class="type">Hint</span></a></div></article></section><section class="section"><h5 class="heading hide-type">
+<div class="solutions"><a class="hint-knowl original" data-knowl="./knowl/hint-150-hidden.html" title="Hint 8.1.4.1.1"><span class="type">Hint.</span> </a></div></article></section><section class="section"><h5 class="heading hide-type">
 <span class="type">Section</span> <span class="codenumber">8.3</span> <span class="title">Extension Fields</span>
 </h5></section><section class="exercises"><h6 class="heading hide-type">
 <span class="type">Exercises</span> <span class="codenumber">8.3.3</span> <span class="title">Collected Homework</span>
 </h6>
 <article class="exercise-like"><h6 class="heading"><span class="codenumber">8.3.3.1<span class="period">.</span></span></h6>
 <article class="exercise-like"><h6 class="heading"><span class="codenumber">(a)</span></h6>
-<div class="solutions"><a class="hint-knowl original" data-knowl="./knowl/hint-151-hidden.html" title="Hint 8.3.3.1.a.1"><span class="type">Hint</span></a></div></article></article></section><section class="section"><h5 class="heading hide-type">
+<div class="solutions"><a class="hint-knowl original" data-knowl="./knowl/hint-151-hidden.html" title="Hint 8.3.3.1.a.1"><span class="type">Hint.</span> </a></div></article></article></section><section class="section"><h5 class="heading hide-type">
 <span class="type">Section</span> <span class="codenumber">8.4</span> <span class="title">Algebraic Elements</span>
 </h5></section><section class="exercises"><h6 class="heading hide-type">
 <span class="type">Exercises</span> <span class="codenumber"></span> <span class="title">Collected Homework</span>
 </h6>
 <article class="exercise-like"><h6 class="heading"><span class="codenumber">8.4.1<span class="period">.</span></span></h6>
 <article class="exercise-like"><h6 class="heading"><span class="codenumber">(b)</span></h6>
-<div class="solutions"><a class="hint-knowl original" data-knowl="./knowl/hint-152-hidden.html" title="Hint 8.4.1.b.1"><span class="type">Hint</span></a></div></article></article></section><section class="section"><h5 class="heading hide-type">
+<div class="solutions"><a class="hint-knowl original" data-knowl="./knowl/hint-152-hidden.html" title="Hint 8.4.1.b.1"><span class="type">Hint.</span> </a></div></article></article></section><section class="section"><h5 class="heading hide-type">
 <span class="type">Section</span> <span class="codenumber">8.7</span> <span class="title">What's Not Constructible</span>
 </h5></section><section class="exercises"><h6 class="heading hide-type">
 <span class="type">Exercises</span> <span class="codenumber">8.7.4</span> <span class="title">Collected Homework</span>
 </h6>
 <article class="exercise-like"><h6 class="heading"><span class="codenumber">8.7.4.2<span class="period">.</span></span></h6>
-<div class="solutions"><a class="hint-knowl original" data-knowl="./knowl/hint-153-hidden.html" title="Hint 8.7.4.2.1"><span class="type">Hint</span></a></div></article></section><section class="chapter"><h4 class="heading">
+<div class="solutions"><a class="hint-knowl original" data-knowl="./knowl/hint-153-hidden.html" title="Hint 8.7.4.2.1"><span class="type">Hint.</span> </a></div></article></section><section class="chapter"><h4 class="heading">
 <span class="type">Chapter</span> <span class="codenumber">9</span> <span class="title">Galois Theory</span>
 </h4></section><section class="section"><h5 class="heading hide-type">
 <span class="type">Section</span> <span class="codenumber">9.1</span> <span class="title">Splitting Fields</span>
@@ -665,15 +671,15 @@ MathJax.Hub.Config({
 </h6>
 <article class="exercise-like"><h6 class="heading"><span class="codenumber">9.1.2.1<span class="period">.</span></span></h6>
 <article class="exercise-like"><h6 class="heading"><span class="codenumber">(a)</span></h6>
-<div class="solutions"><a class="hint-knowl original" data-knowl="./knowl/hint-154-hidden.html" title="Hint 9.1.2.1.a.1"><span class="type">Hint</span></a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">(c)</span></h6>
-<div class="solutions"><a class="hint-knowl original" data-knowl="./knowl/hint-155-hidden.html" title="Hint 9.1.2.1.c.1"><span class="type">Hint</span></a></div></article></article></section><section class="section"><h5 class="heading hide-type">
+<div class="solutions"><a class="hint-knowl original" data-knowl="./knowl/hint-154-hidden.html" title="Hint 9.1.2.1.a.1"><span class="type">Hint.</span> </a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">(c)</span></h6>
+<div class="solutions"><a class="hint-knowl original" data-knowl="./knowl/hint-155-hidden.html" title="Hint 9.1.2.1.c.1"><span class="type">Hint.</span> </a></div></article></article></section><section class="section"><h5 class="heading hide-type">
 <span class="type">Section</span> <span class="codenumber">9.2</span> <span class="title">Field Automorphisms</span>
 </h5></section><section class="exercises"><h6 class="heading hide-type">
 <span class="type">Exercises</span> <span class="codenumber"></span> <span class="title">Collected Homework</span>
 </h6>
 <article class="exercise-like"><h6 class="heading"><span class="codenumber">9.2.1<span class="period">.</span></span></h6>
 <article class="exercise-like"><h6 class="heading"><span class="codenumber">(a)</span></h6>
-<div class="solutions"><a class="hint-knowl original" data-knowl="./knowl/hint-156-hidden.html" title="Hint 9.2.1.a.1"><span class="type">Hint</span></a></div></article></article></section><section class="part"><h3 class="heading hide-type">
+<div class="solutions"><a class="hint-knowl original" data-knowl="./knowl/hint-156-hidden.html" title="Hint 9.2.1.a.1"><span class="type">Hint.</span> </a></div></article></article></section><section class="part"><h3 class="heading hide-type">
 <span class="type">Part</span> <span class="codenumber">III</span> <span class="title">More Group Theory</span>
 </h3></section><section class="chapter"><h4 class="heading">
 <span class="type">Chapter</span> <span class="codenumber">10</span> <span class="title">Some of the Structure of Groups</span>
@@ -683,21 +689,21 @@ MathJax.Hub.Config({
 <span class="type">Exercises</span> <span class="codenumber">10.1.4</span> <span class="title">Collected Homework</span>
 </h6>
 <article class="exercise-like"><h6 class="heading"><span class="codenumber">10.1.4.1<span class="period">.</span></span></h6>
-<div class="solutions"><a class="hint-knowl original" data-knowl="./knowl/hint-157-hidden.html" title="Hint 10.1.4.1.1"><span class="type">Hint</span></a></div></article></section><section class="section"><h5 class="heading hide-type">
+<div class="solutions"><a class="hint-knowl original" data-knowl="./knowl/hint-157-hidden.html" title="Hint 10.1.4.1.1"><span class="type">Hint.</span> </a></div></article></section><section class="section"><h5 class="heading hide-type">
 <span class="type">Section</span> <span class="codenumber">10.2</span> <span class="title">Permutation Groups</span>
 </h5></section><section class="exercises"><h6 class="heading hide-type">
 <span class="type">Exercises</span> <span class="codenumber">10.2.6</span> <span class="title">Practice Problems</span>
 </h6>
 <article class="exercise-like"><h6 class="heading"><span class="codenumber">10.2.6.1<span class="period">.</span></span></h6>
-<div class="solutions"><a class="answer-knowl original" data-knowl="./knowl/answer-12-hidden.html" title="Answer 10.2.6.1.1"><span class="type">Answer</span></a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">10.2.6.2<span class="period">.</span></span></h6>
-<div class="solutions"><a class="answer-knowl original" data-knowl="./knowl/answer-13-hidden.html" title="Answer 10.2.6.2.1"><span class="type">Answer</span></a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">10.2.6.3<span class="period">.</span></span></h6>
-<div class="solutions"><a class="answer-knowl original" data-knowl="./knowl/answer-14-hidden.html" title="Answer 10.2.6.3.1"><span class="type">Answer</span></a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">10.2.6.5<span class="period">.</span></span></h6>
-<div class="solutions"><a class="hint-knowl original" data-knowl="./knowl/hint-158-hidden.html" title="Hint 10.2.6.5.1"><span class="type">Hint</span></a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">10.2.6.6<span class="period">.</span></span></h6>
-<div class="solutions"><a class="hint-knowl original" data-knowl="./knowl/hint-159-hidden.html" title="Hint 10.2.6.6.1"><span class="type">Hint</span></a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">10.2.6.7<span class="period">.</span></span></h6>
-<div class="solutions"><a class="answer-knowl original" data-knowl="./knowl/answer-15-hidden.html" title="Answer 10.2.6.7.1"><span class="type">Answer</span></a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">10.2.6.8<span class="period">.</span></span></h6>
-<div class="solutions"><a class="hint-knowl original" data-knowl="./knowl/hint-160-hidden.html" title="Hint 10.2.6.8.1"><span class="type">Hint</span></a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">10.2.6.9<span class="period">.</span></span></h6>
-<div class="solutions"><a class="answer-knowl original" data-knowl="./knowl/answer-16-hidden.html" title="Answer 10.2.6.9.1"><span class="type">Answer</span></a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">10.2.6.10<span class="period">.</span></span></h6>
-<div class="solutions"><a class="answer-knowl original" data-knowl="./knowl/answer-17-hidden.html" title="Answer 10.2.6.10.1"><span class="type">Answer</span></a></div></article></section><section class="chapter"><h4 class="heading">
+<div class="solutions"><a class="answer-knowl original" data-knowl="./knowl/answer-12-hidden.html" title="Answer 10.2.6.1.1"><span class="type">Answer.</span> </a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">10.2.6.2<span class="period">.</span></span></h6>
+<div class="solutions"><a class="answer-knowl original" data-knowl="./knowl/answer-13-hidden.html" title="Answer 10.2.6.2.1"><span class="type">Answer.</span> </a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">10.2.6.3<span class="period">.</span></span></h6>
+<div class="solutions"><a class="answer-knowl original" data-knowl="./knowl/answer-14-hidden.html" title="Answer 10.2.6.3.1"><span class="type">Answer.</span> </a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">10.2.6.5<span class="period">.</span></span></h6>
+<div class="solutions"><a class="hint-knowl original" data-knowl="./knowl/hint-158-hidden.html" title="Hint 10.2.6.5.1"><span class="type">Hint.</span> </a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">10.2.6.6<span class="period">.</span></span></h6>
+<div class="solutions"><a class="hint-knowl original" data-knowl="./knowl/hint-159-hidden.html" title="Hint 10.2.6.6.1"><span class="type">Hint.</span> </a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">10.2.6.7<span class="period">.</span></span></h6>
+<div class="solutions"><a class="answer-knowl original" data-knowl="./knowl/answer-15-hidden.html" title="Answer 10.2.6.7.1"><span class="type">Answer.</span> </a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">10.2.6.8<span class="period">.</span></span></h6>
+<div class="solutions"><a class="hint-knowl original" data-knowl="./knowl/hint-160-hidden.html" title="Hint 10.2.6.8.1"><span class="type">Hint.</span> </a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">10.2.6.9<span class="period">.</span></span></h6>
+<div class="solutions"><a class="answer-knowl original" data-knowl="./knowl/answer-16-hidden.html" title="Answer 10.2.6.9.1"><span class="type">Answer.</span> </a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">10.2.6.10<span class="period">.</span></span></h6>
+<div class="solutions"><a class="answer-knowl original" data-knowl="./knowl/answer-17-hidden.html" title="Answer 10.2.6.10.1"><span class="type">Answer.</span> </a></div></article></section><section class="chapter"><h4 class="heading">
 <span class="type">Chapter</span> <span class="codenumber">11</span> <span class="title">More of the Structure of Groups</span>
 </h4></section><section class="section"><h5 class="heading hide-type">
 <span class="type">Section</span> <span class="codenumber">11.1</span> <span class="title">Cyclic Groups and Orders of Elements</span>
@@ -706,18 +712,18 @@ MathJax.Hub.Config({
 </h6>
 <article class="exercise-like"><h6 class="heading"><span class="codenumber">11.1.5.1<span class="period">.</span></span></h6>
 <article class="exercise-like"><h6 class="heading"><span class="codenumber">(b)</span></h6>
-<div class="solutions"><a class="hint-knowl original" data-knowl="./knowl/hint-161-hidden.html" title="Hint 11.1.5.1.b.1"><span class="type">Hint</span></a></div></article></article></section><section class="chapter"><h4 class="heading">
+<div class="solutions"><a class="hint-knowl original" data-knowl="./knowl/hint-161-hidden.html" title="Hint 11.1.5.1.b.1"><span class="type">Hint.</span> </a></div></article></article></section><section class="chapter"><h4 class="heading">
 <span class="type">Chapter</span> <span class="codenumber">12</span> <span class="title">Introduction to Cryptography</span>
 </h4></section><section class="exercises"><h5 class="heading hide-type">
 <span class="type">Exercises</span> <span class="codenumber">12.5</span> <span class="title">Exercises</span>
 </h5>
 <article class="exercise-like"><h6 class="heading"><span class="codenumber">12.5.1<span class="period">.</span></span></h6>
-<div class="solutions"><a class="hint-knowl original" data-knowl="./knowl/hint-162-hidden.html" title="Hint 12.5.1.1"><span class="type">Hint</span></a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">12.5.3<span class="period">.</span></span></h6>
-<div class="solutions"><a class="hint-knowl original" data-knowl="./knowl/hint-163-hidden.html" title="Hint 12.5.3.1"><span class="type">Hint</span></a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">12.5.4<span class="period">.</span></span></h6>
-<div class="solutions"><a class="hint-knowl original" data-knowl="./knowl/hint-164-hidden.html" title="Hint 12.5.4.1"><span class="type">Hint</span></a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">12.5.7<span class="period">.</span></span></h6>
-<div class="solutions"><a class="hint-knowl original" data-knowl="./knowl/hint-165-hidden.html" title="Hint 12.5.7.1"><span class="type">Hint</span></a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">12.5.9<span class="period">.</span></span></h6>
-<div class="solutions"><a class="hint-knowl original" data-knowl="./knowl/hint-166-hidden.html" title="Hint 12.5.9.1"><span class="type">Hint</span></a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">12.5.10<span class="period">.</span></span></h6>
-<div class="solutions"><a class="hint-knowl original" data-knowl="./knowl/hint-167-hidden.html" title="Hint 12.5.10.1"><span class="type">Hint</span></a></div></article></section><section class="chapter"><h4 class="heading">
+<div class="solutions"><a class="hint-knowl original" data-knowl="./knowl/hint-162-hidden.html" title="Hint 12.5.1.1"><span class="type">Hint.</span> </a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">12.5.3<span class="period">.</span></span></h6>
+<div class="solutions"><a class="hint-knowl original" data-knowl="./knowl/hint-163-hidden.html" title="Hint 12.5.3.1"><span class="type">Hint.</span> </a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">12.5.4<span class="period">.</span></span></h6>
+<div class="solutions"><a class="hint-knowl original" data-knowl="./knowl/hint-164-hidden.html" title="Hint 12.5.4.1"><span class="type">Hint.</span> </a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">12.5.7<span class="period">.</span></span></h6>
+<div class="solutions"><a class="hint-knowl original" data-knowl="./knowl/hint-165-hidden.html" title="Hint 12.5.7.1"><span class="type">Hint.</span> </a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">12.5.9<span class="period">.</span></span></h6>
+<div class="solutions"><a class="hint-knowl original" data-knowl="./knowl/hint-166-hidden.html" title="Hint 12.5.9.1"><span class="type">Hint.</span> </a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">12.5.10<span class="period">.</span></span></h6>
+<div class="solutions"><a class="hint-knowl original" data-knowl="./knowl/hint-167-hidden.html" title="Hint 12.5.10.1"><span class="type">Hint.</span> </a></div></article></section><section class="chapter"><h4 class="heading">
 <span class="type">Chapter</span> <span class="codenumber">13</span> <span class="title">Group Actions</span>
 </h4></section><section class="section"><h5 class="heading hide-type">
 <span class="type">Section</span> <span class="codenumber">13.3</span> <span class="title">Burnside's Counting Theorem</span>
@@ -725,32 +731,32 @@ MathJax.Hub.Config({
 <span class="type">Exercises</span> <span class="codenumber">13.3.3</span> <span class="title">Collected Homework</span>
 </h6>
 <article class="exercise-like"><h6 class="heading"><span class="codenumber">13.3.3.2<span class="period">.</span></span></h6>
-<div class="solutions"><a class="hint-knowl original" data-knowl="./knowl/hint-168-hidden.html" title="Hint 13.3.3.2.1"><span class="type">Hint</span></a></div></article></section><section class="exercises"><h5 class="heading hide-type">
+<div class="solutions"><a class="hint-knowl original" data-knowl="./knowl/hint-168-hidden.html" title="Hint 13.3.3.2.1"><span class="type">Hint.</span> </a></div></article></section><section class="exercises"><h5 class="heading hide-type">
 <span class="type">Exercises</span> <span class="codenumber">13.4</span> <span class="title">Exercises</span>
 </h5>
 <article class="exercise-like"><h6 class="heading"><span class="codenumber">13.4.1<span class="period">.</span></span></h6>
-<div class="solutions"><a class="hint-knowl original" data-knowl="./knowl/hint-169-hidden.html" title="Hint 13.4.1.1"><span class="type">Hint</span></a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">13.4.2<span class="period">.</span></span></h6>
-<div class="solutions"><a class="hint-knowl original" data-knowl="./knowl/hint-170-hidden.html" title="Hint 13.4.2.1"><span class="type">Hint</span></a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">13.4.3<span class="period">.</span></span></h6>
-<div class="solutions"><a class="hint-knowl original" data-knowl="./knowl/hint-171-hidden.html" title="Hint 13.4.3.1"><span class="type">Hint</span></a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">13.4.6<span class="period">.</span></span></h6>
-<div class="solutions"><a class="hint-knowl original" data-knowl="./knowl/hint-172-hidden.html" title="Hint 13.4.6.1"><span class="type">Hint</span></a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">13.4.8<span class="period">.</span></span></h6>
-<div class="solutions"><a class="hint-knowl original" data-knowl="./knowl/hint-173-hidden.html" title="Hint 13.4.8.1"><span class="type">Hint</span></a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">13.4.11<span class="period">.</span></span></h6>
-<div class="solutions"><a class="hint-knowl original" data-knowl="./knowl/hint-174-hidden.html" title="Hint 13.4.11.1"><span class="type">Hint</span></a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">13.4.15<span class="period">.</span></span></h6>
-<div class="solutions"><a class="hint-knowl original" data-knowl="./knowl/hint-175-hidden.html" title="Hint 13.4.15.1"><span class="type">Hint</span></a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">13.4.17<span class="period">.</span></span></h6>
-<div class="solutions"><a class="hint-knowl original" data-knowl="./knowl/hint-176-hidden.html" title="Hint 13.4.17.1"><span class="type">Hint</span></a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">13.4.22<span class="period">.</span></span></h6>
-<div class="solutions"><a class="hint-knowl original" data-knowl="./knowl/hint-177-hidden.html" title="Hint 13.4.22.1"><span class="type">Hint</span></a></div></article></section><section class="chapter"><h4 class="heading">
+<div class="solutions"><a class="hint-knowl original" data-knowl="./knowl/hint-169-hidden.html" title="Hint 13.4.1.1"><span class="type">Hint.</span> </a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">13.4.2<span class="period">.</span></span></h6>
+<div class="solutions"><a class="hint-knowl original" data-knowl="./knowl/hint-170-hidden.html" title="Hint 13.4.2.1"><span class="type">Hint.</span> </a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">13.4.3<span class="period">.</span></span></h6>
+<div class="solutions"><a class="hint-knowl original" data-knowl="./knowl/hint-171-hidden.html" title="Hint 13.4.3.1"><span class="type">Hint.</span> </a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">13.4.6<span class="period">.</span></span></h6>
+<div class="solutions"><a class="hint-knowl original" data-knowl="./knowl/hint-172-hidden.html" title="Hint 13.4.6.1"><span class="type">Hint.</span> </a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">13.4.8<span class="period">.</span></span></h6>
+<div class="solutions"><a class="hint-knowl original" data-knowl="./knowl/hint-173-hidden.html" title="Hint 13.4.8.1"><span class="type">Hint.</span> </a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">13.4.11<span class="period">.</span></span></h6>
+<div class="solutions"><a class="hint-knowl original" data-knowl="./knowl/hint-174-hidden.html" title="Hint 13.4.11.1"><span class="type">Hint.</span> </a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">13.4.15<span class="period">.</span></span></h6>
+<div class="solutions"><a class="hint-knowl original" data-knowl="./knowl/hint-175-hidden.html" title="Hint 13.4.15.1"><span class="type">Hint.</span> </a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">13.4.17<span class="period">.</span></span></h6>
+<div class="solutions"><a class="hint-knowl original" data-knowl="./knowl/hint-176-hidden.html" title="Hint 13.4.17.1"><span class="type">Hint.</span> </a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">13.4.22<span class="period">.</span></span></h6>
+<div class="solutions"><a class="hint-knowl original" data-knowl="./knowl/hint-177-hidden.html" title="Hint 13.4.22.1"><span class="type">Hint.</span> </a></div></article></section><section class="chapter"><h4 class="heading">
 <span class="type">Chapter</span> <span class="codenumber">14</span> <span class="title">The Sylow Theorems</span>
 </h4></section><section class="exercises"><h5 class="heading hide-type">
 <span class="type">Exercises</span> <span class="codenumber">14.4</span> <span class="title">Exercises</span>
 </h5>
 <article class="exercise-like"><h6 class="heading"><span class="codenumber">14.4.1<span class="period">.</span></span></h6>
-<div class="solutions"><a class="hint-knowl original" data-knowl="./knowl/hint-178-hidden.html" title="Hint 14.4.1.1"><span class="type">Hint</span></a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">14.4.2<span class="period">.</span></span></h6>
-<div class="solutions"><a class="hint-knowl original" data-knowl="./knowl/hint-179-hidden.html" title="Hint 14.4.2.1"><span class="type">Hint</span></a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">14.4.5<span class="period">.</span></span></h6>
-<div class="solutions"><a class="hint-knowl original" data-knowl="./knowl/hint-180-hidden.html" title="Hint 14.4.5.1"><span class="type">Hint</span></a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">14.4.8<span class="period">.</span></span></h6>
-<div class="solutions"><a class="hint-knowl original" data-knowl="./knowl/hint-181-hidden.html" title="Hint 14.4.8.1"><span class="type">Hint</span></a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">14.4.10<span class="period">.</span></span></h6>
-<div class="solutions"><a class="hint-knowl original" data-knowl="./knowl/hint-182-hidden.html" title="Hint 14.4.10.1"><span class="type">Hint</span></a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">14.4.17<span class="period">.</span></span></h6>
-<div class="solutions"><a class="hint-knowl original" data-knowl="./knowl/hint-183-hidden.html" title="Hint 14.4.17.1"><span class="type">Hint</span></a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">14.4.23<span class="period">.</span></span></h6>
-<div class="solutions"><a class="hint-knowl original" data-knowl="./knowl/hint-184-hidden.html" title="Hint 14.4.23.1"><span class="type">Hint</span></a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">14.4.26<span class="period">.</span></span></h6>
-<div class="solutions"><a class="hint-knowl original" data-knowl="./knowl/hint-185-hidden.html" title="Hint 14.4.26.1"><span class="type">Hint</span></a></div></article></section><section class="part"><h3 class="heading hide-type">
+<div class="solutions"><a class="hint-knowl original" data-knowl="./knowl/hint-178-hidden.html" title="Hint 14.4.1.1"><span class="type">Hint.</span> </a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">14.4.2<span class="period">.</span></span></h6>
+<div class="solutions"><a class="hint-knowl original" data-knowl="./knowl/hint-179-hidden.html" title="Hint 14.4.2.1"><span class="type">Hint.</span> </a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">14.4.5<span class="period">.</span></span></h6>
+<div class="solutions"><a class="hint-knowl original" data-knowl="./knowl/hint-180-hidden.html" title="Hint 14.4.5.1"><span class="type">Hint.</span> </a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">14.4.8<span class="period">.</span></span></h6>
+<div class="solutions"><a class="hint-knowl original" data-knowl="./knowl/hint-181-hidden.html" title="Hint 14.4.8.1"><span class="type">Hint.</span> </a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">14.4.10<span class="period">.</span></span></h6>
+<div class="solutions"><a class="hint-knowl original" data-knowl="./knowl/hint-182-hidden.html" title="Hint 14.4.10.1"><span class="type">Hint.</span> </a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">14.4.17<span class="period">.</span></span></h6>
+<div class="solutions"><a class="hint-knowl original" data-knowl="./knowl/hint-183-hidden.html" title="Hint 14.4.17.1"><span class="type">Hint.</span> </a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">14.4.23<span class="period">.</span></span></h6>
+<div class="solutions"><a class="hint-knowl original" data-knowl="./knowl/hint-184-hidden.html" title="Hint 14.4.23.1"><span class="type">Hint.</span> </a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">14.4.26<span class="period">.</span></span></h6>
+<div class="solutions"><a class="hint-knowl original" data-knowl="./knowl/hint-185-hidden.html" title="Hint 14.4.26.1"><span class="type">Hint.</span> </a></div></article></section><section class="part"><h3 class="heading hide-type">
 <span class="type">Part</span> <span class="codenumber">IV</span> <span class="title">Additional Topics</span>
 </h3></section><section class="chapter"><h4 class="heading">
 <span class="type">Chapter</span> <span class="codenumber">15</span> <span class="title">Matrix Groups and Symmetry</span>
@@ -758,60 +764,60 @@ MathJax.Hub.Config({
 <span class="type">Exercises</span> <span class="codenumber">15.4</span> <span class="title">Exercises</span>
 </h5>
 <article class="exercise-like"><h6 class="heading"><span class="codenumber">15.4.1<span class="period">.</span></span></h6>
-<div class="solutions"><a class="hint-knowl original" data-knowl="./knowl/hint-186-hidden.html" title="Hint 15.4.1.1"><span class="type">Hint</span></a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">15.4.3<span class="period">.</span></span></h6>
-<div class="solutions"><a class="hint-knowl original" data-knowl="./knowl/hint-187-hidden.html" title="Hint 15.4.3.1"><span class="type">Hint</span></a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">15.4.5<span class="period">.</span></span></h6>
-<div class="solutions"><a class="hint-knowl original" data-knowl="./knowl/hint-188-hidden.html" title="Hint 15.4.5.1"><span class="type">Hint</span></a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">15.4.7<span class="period">.</span></span></h6>
-<div class="solutions"><a class="hint-knowl original" data-knowl="./knowl/hint-189-hidden.html" title="Hint 15.4.7.1"><span class="type">Hint</span></a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">15.4.10<span class="period">.</span></span></h6>
-<div class="solutions"><a class="hint-knowl original" data-knowl="./knowl/hint-190-hidden.html" title="Hint 15.4.10.1"><span class="type">Hint</span></a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">15.4.13<span class="period">.</span></span></h6>
-<div class="solutions"><a class="hint-knowl original" data-knowl="./knowl/hint-191-hidden.html" title="Hint 15.4.13.1"><span class="type">Hint</span></a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">15.4.17<span class="period">.</span></span></h6>
-<div class="solutions"><a class="hint-knowl original" data-knowl="./knowl/hint-192-hidden.html" title="Hint 15.4.17.1"><span class="type">Hint</span></a></div></article></section><section class="chapter"><h4 class="heading">
+<div class="solutions"><a class="hint-knowl original" data-knowl="./knowl/hint-186-hidden.html" title="Hint 15.4.1.1"><span class="type">Hint.</span> </a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">15.4.3<span class="period">.</span></span></h6>
+<div class="solutions"><a class="hint-knowl original" data-knowl="./knowl/hint-187-hidden.html" title="Hint 15.4.3.1"><span class="type">Hint.</span> </a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">15.4.5<span class="period">.</span></span></h6>
+<div class="solutions"><a class="hint-knowl original" data-knowl="./knowl/hint-188-hidden.html" title="Hint 15.4.5.1"><span class="type">Hint.</span> </a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">15.4.7<span class="period">.</span></span></h6>
+<div class="solutions"><a class="hint-knowl original" data-knowl="./knowl/hint-189-hidden.html" title="Hint 15.4.7.1"><span class="type">Hint.</span> </a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">15.4.10<span class="period">.</span></span></h6>
+<div class="solutions"><a class="hint-knowl original" data-knowl="./knowl/hint-190-hidden.html" title="Hint 15.4.10.1"><span class="type">Hint.</span> </a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">15.4.13<span class="period">.</span></span></h6>
+<div class="solutions"><a class="hint-knowl original" data-knowl="./knowl/hint-191-hidden.html" title="Hint 15.4.13.1"><span class="type">Hint.</span> </a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">15.4.17<span class="period">.</span></span></h6>
+<div class="solutions"><a class="hint-knowl original" data-knowl="./knowl/hint-192-hidden.html" title="Hint 15.4.17.1"><span class="type">Hint.</span> </a></div></article></section><section class="chapter"><h4 class="heading">
 <span class="type">Chapter</span> <span class="codenumber">16</span> <span class="title">Algebraic Coding Theory</span>
 </h4></section><section class="exercises"><h5 class="heading hide-type">
 <span class="type">Exercises</span> <span class="codenumber">16.6</span> <span class="title">Exercises</span>
 </h5>
 <article class="exercise-like"><h6 class="heading"><span class="codenumber">16.6.2<span class="period">.</span></span></h6>
-<div class="solutions"><a class="hint-knowl original" data-knowl="./knowl/hint-193-hidden.html" title="Hint 16.6.2.1"><span class="type">Hint</span></a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">16.6.3<span class="period">.</span></span></h6>
-<div class="solutions"><a class="hint-knowl original" data-knowl="./knowl/hint-194-hidden.html" title="Hint 16.6.3.1"><span class="type">Hint</span></a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">16.6.4<span class="period">.</span></span></h6>
-<div class="solutions"><a class="hint-knowl original" data-knowl="./knowl/hint-195-hidden.html" title="Hint 16.6.4.1"><span class="type">Hint</span></a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">16.6.6<span class="period">.</span></span></h6>
-<div class="solutions"><a class="hint-knowl original" data-knowl="./knowl/hint-196-hidden.html" title="Hint 16.6.6.1"><span class="type">Hint</span></a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">16.6.7<span class="period">.</span></span></h6>
-<div class="solutions"><a class="hint-knowl original" data-knowl="./knowl/hint-197-hidden.html" title="Hint 16.6.7.1"><span class="type">Hint</span></a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">16.6.9<span class="period">.</span></span></h6>
-<div class="solutions"><a class="hint-knowl original" data-knowl="./knowl/hint-198-hidden.html" title="Hint 16.6.9.1"><span class="type">Hint</span></a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">16.6.11<span class="period">.</span></span></h6>
-<div class="solutions"><a class="hint-knowl original" data-knowl="./knowl/hint-199-hidden.html" title="Hint 16.6.11.1"><span class="type">Hint</span></a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">16.6.12<span class="period">.</span></span></h6>
-<div class="solutions"><a class="hint-knowl original" data-knowl="./knowl/hint-200-hidden.html" title="Hint 16.6.12.1"><span class="type">Hint</span></a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">16.6.15<span class="period">.</span></span></h6>
-<div class="solutions"><a class="hint-knowl original" data-knowl="./knowl/hint-201-hidden.html" title="Hint 16.6.15.1"><span class="type">Hint</span></a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">16.6.19<span class="period">.</span></span></h6>
-<div class="solutions"><a class="hint-knowl original" data-knowl="./knowl/hint-202-hidden.html" title="Hint 16.6.19.1"><span class="type">Hint</span></a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">16.6.23<span class="period">.</span></span></h6>
-<div class="solutions"><a class="hint-knowl original" data-knowl="./knowl/hint-203-hidden.html" title="Hint 16.6.23.1"><span class="type">Hint</span></a></div></article></section><section class="chapter"><h4 class="heading">
+<div class="solutions"><a class="hint-knowl original" data-knowl="./knowl/hint-193-hidden.html" title="Hint 16.6.2.1"><span class="type">Hint.</span> </a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">16.6.3<span class="period">.</span></span></h6>
+<div class="solutions"><a class="hint-knowl original" data-knowl="./knowl/hint-194-hidden.html" title="Hint 16.6.3.1"><span class="type">Hint.</span> </a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">16.6.4<span class="period">.</span></span></h6>
+<div class="solutions"><a class="hint-knowl original" data-knowl="./knowl/hint-195-hidden.html" title="Hint 16.6.4.1"><span class="type">Hint.</span> </a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">16.6.6<span class="period">.</span></span></h6>
+<div class="solutions"><a class="hint-knowl original" data-knowl="./knowl/hint-196-hidden.html" title="Hint 16.6.6.1"><span class="type">Hint.</span> </a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">16.6.7<span class="period">.</span></span></h6>
+<div class="solutions"><a class="hint-knowl original" data-knowl="./knowl/hint-197-hidden.html" title="Hint 16.6.7.1"><span class="type">Hint.</span> </a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">16.6.9<span class="period">.</span></span></h6>
+<div class="solutions"><a class="hint-knowl original" data-knowl="./knowl/hint-198-hidden.html" title="Hint 16.6.9.1"><span class="type">Hint.</span> </a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">16.6.11<span class="period">.</span></span></h6>
+<div class="solutions"><a class="hint-knowl original" data-knowl="./knowl/hint-199-hidden.html" title="Hint 16.6.11.1"><span class="type">Hint.</span> </a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">16.6.12<span class="period">.</span></span></h6>
+<div class="solutions"><a class="hint-knowl original" data-knowl="./knowl/hint-200-hidden.html" title="Hint 16.6.12.1"><span class="type">Hint.</span> </a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">16.6.15<span class="period">.</span></span></h6>
+<div class="solutions"><a class="hint-knowl original" data-knowl="./knowl/hint-201-hidden.html" title="Hint 16.6.15.1"><span class="type">Hint.</span> </a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">16.6.19<span class="period">.</span></span></h6>
+<div class="solutions"><a class="hint-knowl original" data-knowl="./knowl/hint-202-hidden.html" title="Hint 16.6.19.1"><span class="type">Hint.</span> </a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">16.6.23<span class="period">.</span></span></h6>
+<div class="solutions"><a class="hint-knowl original" data-knowl="./knowl/hint-203-hidden.html" title="Hint 16.6.23.1"><span class="type">Hint.</span> </a></div></article></section><section class="chapter"><h4 class="heading">
 <span class="type">Chapter</span> <span class="codenumber">17</span> <span class="title">Finite Fields</span>
 </h4></section><section class="exercises"><h5 class="heading hide-type">
 <span class="type">Exercises</span> <span class="codenumber">17.4</span> <span class="title">Exercises</span>
 </h5>
 <article class="exercise-like"><h6 class="heading"><span class="codenumber">17.4.1<span class="period">.</span></span></h6>
-<div class="solutions"><a class="hint-knowl original" data-knowl="./knowl/hint-204-hidden.html" title="Hint 17.4.1.1"><span class="type">Hint</span></a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">17.4.4<span class="period">.</span></span></h6>
-<div class="solutions"><a class="hint-knowl original" data-knowl="./knowl/hint-205-hidden.html" title="Hint 17.4.4.1"><span class="type">Hint</span></a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">17.4.5<span class="period">.</span></span></h6>
-<div class="solutions"><a class="hint-knowl original" data-knowl="./knowl/hint-206-hidden.html" title="Hint 17.4.5.1"><span class="type">Hint</span></a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">17.4.7<span class="period">.</span></span></h6>
-<div class="solutions"><a class="hint-knowl original" data-knowl="./knowl/hint-207-hidden.html" title="Hint 17.4.7.1"><span class="type">Hint</span></a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">17.4.8<span class="period">.</span></span></h6>
-<div class="solutions"><a class="hint-knowl original" data-knowl="./knowl/hint-208-hidden.html" title="Hint 17.4.8.1"><span class="type">Hint</span></a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">17.4.11<span class="period">.</span></span></h6>
-<div class="solutions"><a class="hint-knowl original" data-knowl="./knowl/hint-209-hidden.html" title="Hint 17.4.11.1"><span class="type">Hint</span></a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">17.4.12<span class="period">.</span></span></h6>
-<div class="solutions"><a class="hint-knowl original" data-knowl="./knowl/hint-210-hidden.html" title="Hint 17.4.12.1"><span class="type">Hint</span></a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">17.4.17<span class="period">.</span></span></h6>
-<div class="solutions"><a class="hint-knowl original" data-knowl="./knowl/hint-211-hidden.html" title="Hint 17.4.17.1"><span class="type">Hint</span></a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">17.4.18<span class="period">.</span></span></h6>
-<div class="solutions"><a class="hint-knowl original" data-knowl="./knowl/hint-212-hidden.html" title="Hint 17.4.18.1"><span class="type">Hint</span></a></div></article><article class="exercise-like"><h6 class="heading">
+<div class="solutions"><a class="hint-knowl original" data-knowl="./knowl/hint-204-hidden.html" title="Hint 17.4.1.1"><span class="type">Hint.</span> </a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">17.4.4<span class="period">.</span></span></h6>
+<div class="solutions"><a class="hint-knowl original" data-knowl="./knowl/hint-205-hidden.html" title="Hint 17.4.4.1"><span class="type">Hint.</span> </a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">17.4.5<span class="period">.</span></span></h6>
+<div class="solutions"><a class="hint-knowl original" data-knowl="./knowl/hint-206-hidden.html" title="Hint 17.4.5.1"><span class="type">Hint.</span> </a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">17.4.7<span class="period">.</span></span></h6>
+<div class="solutions"><a class="hint-knowl original" data-knowl="./knowl/hint-207-hidden.html" title="Hint 17.4.7.1"><span class="type">Hint.</span> </a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">17.4.8<span class="period">.</span></span></h6>
+<div class="solutions"><a class="hint-knowl original" data-knowl="./knowl/hint-208-hidden.html" title="Hint 17.4.8.1"><span class="type">Hint.</span> </a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">17.4.11<span class="period">.</span></span></h6>
+<div class="solutions"><a class="hint-knowl original" data-knowl="./knowl/hint-209-hidden.html" title="Hint 17.4.11.1"><span class="type">Hint.</span> </a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">17.4.12<span class="period">.</span></span></h6>
+<div class="solutions"><a class="hint-knowl original" data-knowl="./knowl/hint-210-hidden.html" title="Hint 17.4.12.1"><span class="type">Hint.</span> </a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">17.4.17<span class="period">.</span></span></h6>
+<div class="solutions"><a class="hint-knowl original" data-knowl="./knowl/hint-211-hidden.html" title="Hint 17.4.17.1"><span class="type">Hint.</span> </a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">17.4.18<span class="period">.</span></span></h6>
+<div class="solutions"><a class="hint-knowl original" data-knowl="./knowl/hint-212-hidden.html" title="Hint 17.4.18.1"><span class="type">Hint.</span> </a></div></article><article class="exercise-like"><h6 class="heading">
 <span class="codenumber">17.4.24<span class="period">.</span></span><span class="space"> </span><span class="title">Wilson's Theorem.</span>
 </h6>
-<div class="solutions"><a class="hint-knowl original" data-knowl="./knowl/hint-213-hidden.html" title="Hint 17.4.24.1"><span class="type">Hint</span></a></div></article></section><section class="chapter"><h4 class="heading">
+<div class="solutions"><a class="hint-knowl original" data-knowl="./knowl/hint-213-hidden.html" title="Hint 17.4.24.1"><span class="type">Hint.</span> </a></div></article></section><section class="chapter"><h4 class="heading">
 <span class="type">Chapter</span> <span class="codenumber">18</span> <span class="title">Lattices and Boolean Algebras</span>
 </h4></section><section class="exercises"><h5 class="heading hide-type">
 <span class="type">Exercises</span> <span class="codenumber">18.5</span> <span class="title">Exercises</span>
 </h5>
 <article class="exercise-like"><h6 class="heading"><span class="codenumber">18.5.2<span class="period">.</span></span></h6>
-<div class="solutions"><a class="hint-knowl original" data-knowl="./knowl/hint-214-hidden.html" title="Hint 18.5.2.1"><span class="type">Hint</span></a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">18.5.4<span class="period">.</span></span></h6>
-<div class="solutions"><a class="hint-knowl original" data-knowl="./knowl/hint-215-hidden.html" title="Hint 18.5.4.1"><span class="type">Hint</span></a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">18.5.5<span class="period">.</span></span></h6>
-<div class="solutions"><a class="hint-knowl original" data-knowl="./knowl/hint-216-hidden.html" title="Hint 18.5.5.1"><span class="type">Hint</span></a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">18.5.6<span class="period">.</span></span></h6>
-<div class="solutions"><a class="hint-knowl original" data-knowl="./knowl/hint-217-hidden.html" title="Hint 18.5.6.1"><span class="type">Hint</span></a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">18.5.8<span class="period">.</span></span></h6>
-<div class="solutions"><a class="hint-knowl original" data-knowl="./knowl/hint-218-hidden.html" title="Hint 18.5.8.1"><span class="type">Hint</span></a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">18.5.10<span class="period">.</span></span></h6>
-<div class="solutions"><a class="hint-knowl original" data-knowl="./knowl/hint-219-hidden.html" title="Hint 18.5.10.1"><span class="type">Hint</span></a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">18.5.14<span class="period">.</span></span></h6>
-<div class="solutions"><a class="hint-knowl original" data-knowl="./knowl/hint-220-hidden.html" title="Hint 18.5.14.1"><span class="type">Hint</span></a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">18.5.18<span class="period">.</span></span></h6>
-<div class="solutions"><a class="hint-knowl original" data-knowl="./knowl/hint-221-hidden.html" title="Hint 18.5.18.1"><span class="type">Hint</span></a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">18.5.20<span class="period">.</span></span></h6>
-<div class="solutions"><a class="hint-knowl original" data-knowl="./knowl/hint-222-hidden.html" title="Hint 18.5.20.1"><span class="type">Hint</span></a></div></article></section></section></div></main>
+<div class="solutions"><a class="hint-knowl original" data-knowl="./knowl/hint-214-hidden.html" title="Hint 18.5.2.1"><span class="type">Hint.</span> </a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">18.5.4<span class="period">.</span></span></h6>
+<div class="solutions"><a class="hint-knowl original" data-knowl="./knowl/hint-215-hidden.html" title="Hint 18.5.4.1"><span class="type">Hint.</span> </a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">18.5.5<span class="period">.</span></span></h6>
+<div class="solutions"><a class="hint-knowl original" data-knowl="./knowl/hint-216-hidden.html" title="Hint 18.5.5.1"><span class="type">Hint.</span> </a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">18.5.6<span class="period">.</span></span></h6>
+<div class="solutions"><a class="hint-knowl original" data-knowl="./knowl/hint-217-hidden.html" title="Hint 18.5.6.1"><span class="type">Hint.</span> </a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">18.5.8<span class="period">.</span></span></h6>
+<div class="solutions"><a class="hint-knowl original" data-knowl="./knowl/hint-218-hidden.html" title="Hint 18.5.8.1"><span class="type">Hint.</span> </a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">18.5.10<span class="period">.</span></span></h6>
+<div class="solutions"><a class="hint-knowl original" data-knowl="./knowl/hint-219-hidden.html" title="Hint 18.5.10.1"><span class="type">Hint.</span> </a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">18.5.14<span class="period">.</span></span></h6>
+<div class="solutions"><a class="hint-knowl original" data-knowl="./knowl/hint-220-hidden.html" title="Hint 18.5.14.1"><span class="type">Hint.</span> </a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">18.5.18<span class="period">.</span></span></h6>
+<div class="solutions"><a class="hint-knowl original" data-knowl="./knowl/hint-221-hidden.html" title="Hint 18.5.18.1"><span class="type">Hint.</span> </a></div></article><article class="exercise-like"><h6 class="heading"><span class="codenumber">18.5.20<span class="period">.</span></span></h6>
+<div class="solutions"><a class="hint-knowl original" data-knowl="./knowl/hint-222-hidden.html" title="Hint 18.5.20.1"><span class="type">Hint.</span> </a></div></article></section></section></div></main>
 </div>
 <script src="https://unpkg.com/prismjs@v1.22.0/components/prism-core.min.js"></script><script src="https://unpkg.com/prismjs@v1.22.0/plugins/autoloader/prism-autoloader.min.js"></script>
 </body>

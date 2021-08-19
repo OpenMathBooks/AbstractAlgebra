@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2021-03-25T19:19:54-06:00       *-->
+<!--*       on 2021-08-19T13:11:07-06:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -14,36 +14,42 @@
 <title>AATA Exercises</title>
 <meta name="Keywords" content="Authored in PreTeXt">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<script src="https://sagecell.sagemath.org/embedded_sagecell.js"></script><script type="text/x-mathjax-config">
-MathJax.Hub.Config({
-    tex2jax: {
-        inlineMath: [['\\(','\\)']]
+<script src="https://sagecell.sagemath.org/embedded_sagecell.js"></script><script>window.MathJax = {
+  tex: {
+    inlineMath: [['\\(','\\)']],
+    tags: "none",
+    useLabelIds: true,
+    tagSide: "right",
+    tagIndent: ".8em",
+    packages: {'[+]': ['base', 'extpfeil', 'ams', 'amscd', 'newcommand', 'knowl']}
+  },
+  options: {
+    ignoreHtmlClass: "tex2jax_ignore",
+    processHtmlClass: "has_am",
+    renderActions: {
+        findScript: [10, function (doc) {
+            document.querySelectorAll('script[type^="math/tex"]').forEach(function(node) {
+                var display = !!node.type.match(/; *mode=display/);
+                var math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display);
+                var text = document.createTextNode('');
+                node.parentNode.replaceChild(text, node);
+                math.start = {node: text, delim: '', n: 0};
+                math.end = {node: text, delim: '', n: 0};
+                doc.math.push(math);
+            });
+        }, '']
     },
-    asciimath2jax: {
-        ignoreClass: ".*",
-        processClass: "has_am"
-    },
-    jax: ["input/AsciiMath"],
-    extensions: ["asciimath2jax.js"],
-    TeX: {
-        extensions: ["extpfeil.js", "autobold.js", "https://pretextbook.org/js/lib/mathjaxknowl.js", "AMScd.js", ],
-        // scrolling to fragment identifiers is controlled by other Javascript
-        positionToHash: false,
-        equationNumbers: { autoNumber: "none", useLabelIds: true, },
-        TagSide: "right",
-        TagIndent: ".8em",
-    },
-    // HTML-CSS output Jax to be dropped for MathJax 3.0
-    "HTML-CSS": {
-        scale: 88,
-        mtextFontInherit: true,
-    },
-    CommonHTML: {
-        scale: 88,
-        mtextFontInherit: true,
-    },
-});
-</script><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS_CHTML-full"></script><link href="https://unpkg.com/prismjs@v1.22.0/themes/prism.css" rel="stylesheet">
+  },
+  chtml: {
+    scale: 0.88,
+    mtextInheritFont: true
+  },
+  loader: {
+    load: ['input/asciimath', '[tex]/extpfeil', '[tex]/amscd', '[tex]/newcommand', '[pretext]/mathjaxknowl3.js'],
+    paths: {pretext: "https://pretextbook.org/js/lib"},
+  },
+};
+</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><link href="https://unpkg.com/prismjs@v1.22.0/themes/prism.css" rel="stylesheet">
 <script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/jquery.min.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/0.13/pretext.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/0.13/pretext_add_on.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script xmlns:svg="http://www.w3.org/2000/svg">sagecellEvalName='Evaluate (Sage)';
 </script><link xmlns:svg="http://www.w3.org/2000/svg" href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
 <link xmlns:svg="http://www.w3.org/2000/svg" href="https://fonts.googleapis.com/css?family=Inconsolata:400,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
@@ -91,7 +97,7 @@ MathJax.Hub.Config({
 \newcommand{\amp}{&amp;}
 \)</div>
 <header id="masthead" class="smallbuttons"><div class="banner"><div class="container">
-<a id="logo-link" href="http://abstract.pugetsound.edu" target="_blank"><img src="images/cover_aata_2020.png" alt="Logo image"></a><div class="title-container">
+<a id="logo-link" href="http://abstract.pugetsound.edu" target="_blank"><img src="external/images/cover_aata_2020.png" alt="Logo image"></a><div class="title-container">
 <h1 class="heading"><a href="aata-toc.html"><span class="title">Abstract Algebra:</span> <span class="subtitle">Theory and Applications, Remixed!</span></a></h1>
 <p class="byline">Thomas W. Judson</p>
 </div>
@@ -210,7 +216,7 @@ MathJax.Hub.Config({
 </li>
 <li class="link part"><a href="part-more-group-theory.html" data-scroll="part-more-group-theory"><span class="codenumber">III</span> <span class="title">More Group Theory</span></a></li>
 <li class="link">
-<a href="groups.html" data-scroll="nRa"><span class="codenumber">10</span> <span class="title">Some of the Structure of Groups</span></a><ul>
+<a href="groups-structure.html" data-scroll="nRa"><span class="codenumber">10</span> <span class="title">Some of the Structure of Groups</span></a><ul>
 <li><a href="section-groups-cayley.html" data-scroll="CTu">Isomorphisms and Cayley's Theorem</a></li>
 <li><a href="section-groups-permutations.html" data-scroll="mjE">Permutation Groups</a></li>
 <li><a href="section-solvable-groups.html" data-scroll="WbU">Solvable Groups</a></li>
@@ -319,7 +325,7 @@ MathJax.Hub.Config({
 \end{equation*}
 </div>
 <div class="solutions">
-<a data-knowl="" class="id-ref hint-knowl original" data-refid="hk-Kbk" id="Kbk"><span class="type">Hint</span></a><div class="hidden-content tex2jax_ignore" id="hk-Kbk"><div class="hint solution-like"><div class="displaymath" id="omc">
+<a data-knowl="" class="id-ref hint-knowl original" data-refid="hk-Kbk" id="Kbk"><span class="type">Hint.</span> </a><div class="hidden-content tex2jax_ignore" id="hk-Kbk"><div class="hint solution-like"><div class="displaymath" id="omc">
 \begin{align*}
 \frac{1}{2} \left[ \|{\mathbf x} + {\mathbf y}\|^2 + \|{\mathbf x}\|^2 - \| {\mathbf y}\|^2 \right] &amp; = \frac{1}{2} \left[ \langle x + y, x + y \rangle - \|{\mathbf x}\|^2 - \| {\mathbf y}\|^2 \right]\\
 &amp; = \frac{1}{2} \left[ \| {\mathbf x}\|^2 + 2 \langle x, y \rangle + \| {\mathbf y}\|^2 - \|{\mathbf x}\|^2 - \| {\mathbf y}\|^2 \right]\\
@@ -366,10 +372,10 @@ MathJax.Hub.Config({
 </div></li>
 </ol>
 <div class="solutions">
-<a data-knowl="" class="id-ref hint-knowl original" data-refid="hk-CwL" id="CwL"><span class="type">Hint</span></a><div class="hidden-content tex2jax_ignore" id="hk-CwL"><div class="hint solution-like"><p id="Utl">(a) is in \(SO(2)\text{;}\) (c) is not in \(O(3)\text{.}\)</p></div></div>
+<a data-knowl="" class="id-ref hint-knowl original" data-refid="hk-CwL" id="CwL"><span class="type">Hint.</span> </a><div class="hidden-content tex2jax_ignore" id="hk-CwL"><div class="hint solution-like"><p id="Utl">(a) is in \(SO(2)\text{;}\) (c) is not in \(O(3)\text{.}\)</p></div></div>
 </div></article><article class="exercise exercise-like" id="GwK"><h6 class="heading"><span class="codenumber">4<span class="period">.</span></span></h6>
 <p id="mbq">Determine the symmetry group of each of the figures in <a class="xref" data-knowl="./knowl/figure-exercise-symmetry-groups.html" title="Figure 15.25">Figure 15.25</a>.</p>
-<figure class="figure figure-like" id="Siz"><div class="image-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><img src="images/exercise-symmetry-groups.svg" role="img" style="width: 100%; height: auto;" alt="There are two figures in the top row and one figure on bottom.  The top left figure, a,  is a rectangle.  Inside the rectangle is an oval in the lower left and a solid circle in the upper right.  The top right figure, c, is there intersecting circles of the same radii.  The bottom middle figure, b, is a large square with the two diagonals.  The midpoints of the large square are the vertices of a smaller inscribed square."></div>
+<figure class="figure figure-like" id="Siz"><div class="image-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><img src="generated/latex-image/exercise-symmetry-groups.svg" role="img" class="contained" alt="There are two figures in the top row and one figure on bottom.  The top left figure, a,  is a rectangle.  Inside the rectangle is an oval in the lower left and a solid circle in the upper right.  The top right figure, c, is there intersecting circles of the same radii.  The bottom middle figure, b, is a large square with the two diagonals.  The midpoints of the large square are the vertices of a smaller inscribed square."></div>
 <figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">15.25<span class="period">.</span></span><span class="space"> </span></figcaption></figure></article><article class="exercise exercise-like" id="mDT"><h6 class="heading"><span class="codenumber">5<span class="period">.</span></span></h6>
 <p id="ypI">Let \({\mathbf x}\text{,}\) \({\mathbf y}\text{,}\) and \({\mathbf w}\) be vectors in \({\mathbb R}^n\) and \(\alpha \in {\mathbb R}\text{.}\) Prove each of the following properties of inner products.</p>
 <ol class="lower-alpha">
@@ -380,7 +386,7 @@ MathJax.Hub.Config({
 <li id="aDW"><p id="zQA">If \(\langle {\mathbf x}, {\mathbf y} \rangle = 0\) for all \({\mathbf x}\) in \({\mathbb R}^n\text{,}\) then \({\mathbf y} = 0\text{.}\)</p></li>
 </ol>
 <div class="solutions">
-<a data-knowl="" class="id-ref hint-knowl original" data-refid="hk-uSm" id="uSm"><span class="type">Hint</span></a><div class="hidden-content tex2jax_ignore" id="hk-uSm"><div class="hint solution-like"><p id="AAu">(a) \(\langle {\mathbf x}, {\mathbf y} \rangle = \langle {\mathbf y}, {\mathbf x} \rangle\text{.}\)</p></div></div>
+<a data-knowl="" class="id-ref hint-knowl original" data-refid="hk-uSm" id="uSm"><span class="type">Hint.</span> </a><div class="hidden-content tex2jax_ignore" id="hk-uSm"><div class="hint solution-like"><p id="AAu">(a) \(\langle {\mathbf x}, {\mathbf y} \rangle = \langle {\mathbf y}, {\mathbf x} \rangle\text{.}\)</p></div></div>
 </div></article><article class="exercise exercise-like" id="SLc"><h6 class="heading"><span class="codenumber">6<span class="period">.</span></span></h6>
 <p id="ewR">Verify that</p>
 <div class="displaymath">
@@ -391,7 +397,7 @@ E(n) = \{(A, {\mathbf x}) : A \in O(n) \text{ and } {\mathbf x} \in {\mathbb R}^
 <p class="continuation">is a group.</p></article><article class="exercise exercise-like" id="ySl"><h6 class="heading"><span class="codenumber">7<span class="period">.</span></span></h6>
 <p id="KEa">Prove that \(\{ (2,1), (1,1) \}\) and \(\{ ( 12, 5), ( 7, 3) \}\) are bases for the same lattice.</p>
 <div class="solutions">
-<a data-knowl="" class="id-ref hint-knowl original" data-refid="hk-nnN" id="nnN"><span class="type">Hint</span></a><div class="hidden-content tex2jax_ignore" id="hk-nnN"><div class="hint solution-like">
+<a data-knowl="" class="id-ref hint-knowl original" data-refid="hk-nnN" id="nnN"><span class="type">Hint.</span> </a><div class="hidden-content tex2jax_ignore" id="hk-nnN"><div class="hint solution-like">
 <p id="gHD">Use the unimodular matrix</p>
 <div class="displaymath">
 \begin{equation*}
@@ -407,13 +413,13 @@ E(n) = \{(A, {\mathbf x}) : A \in O(n) \text{ and } {\mathbf x} \in {\mathbb R}^
 <p id="WSs">Let \(A \in SL_2({\mathbb R})\) and suppose that the vectors \({\mathbf x}\) and \({\mathbf y}\) form two sides of a parallelogram in \({\mathbb R}^2\text{.}\) Prove that the area of this parallelogram is the same as the area of the parallelogram with sides \(A{\mathbf x}\) and \(A{\mathbf y}\text{.}\)</p></article><article class="exercise exercise-like" id="rnM"><h6 class="heading"><span class="codenumber">10<span class="period">.</span></span></h6>
 <p id="CZB">Prove that \(SO(n)\) is a normal subgroup of \(O(n)\text{.}\)</p>
 <div class="solutions">
-<a data-knowl="" class="id-ref hint-knowl original" data-refid="hk-LQx" id="LQx"><span class="type">Hint</span></a><div class="hidden-content tex2jax_ignore" id="hk-LQx"><div class="hint solution-like"><p id="MOM">Show that the kernel of the map \(\det : O(n) \rightarrow {\mathbb R}^*\) is \(SO(n)\text{.}\)</p></div></div>
+<a data-knowl="" class="id-ref hint-knowl original" data-refid="hk-LQx" id="LQx"><span class="type">Hint.</span> </a><div class="hidden-content tex2jax_ignore" id="hk-LQx"><div class="hint solution-like"><p id="MOM">Show that the kernel of the map \(\det : O(n) \rightarrow {\mathbb R}^*\) is \(SO(n)\text{.}\)</p></div></div>
 </div></article><article class="exercise exercise-like" id="XuV"><h6 class="heading"><span class="codenumber">11<span class="period">.</span></span></h6>
 <p id="jgK">Show that any isometry \(f\) in \({\mathbb R}^n\) is a one-to-one map.</p></article><article class="exercise exercise-like" id="DCe"><h6 class="heading"><span class="codenumber">12<span class="period">.</span></span></h6>
 <p id="PnT">Prove or disprove: an element in \(E(2)\) of the form \((A, {\mathbf x})\text{,}\) where \({\mathbf x} \neq 0\text{,}\) has infinite order.</p></article><article class="exercise exercise-like" id="jJn"><h6 class="heading"><span class="codenumber">13<span class="period">.</span></span></h6>
 <p id="vvc">Prove or disprove: There exists an infinite abelian subgroup of \(O(n)\text{.}\)</p>
 <div class="solutions">
-<a data-knowl="" class="id-ref hint-knowl original" data-refid="hk-kth" id="kth"><span class="type">Hint</span></a><div class="hidden-content tex2jax_ignore" id="hk-kth"><div class="hint solution-like"><p id="sVV">True.</p></div></div>
+<a data-knowl="" class="id-ref hint-knowl original" data-refid="hk-kth" id="kth"><span class="type">Hint.</span> </a><div class="hidden-content tex2jax_ignore" id="hk-kth"><div class="hint solution-like"><p id="sVV">True.</p></div></div>
 </div></article><article class="exercise exercise-like" id="PQw"><h6 class="heading"><span class="codenumber">14<span class="period">.</span></span></h6>
 <p id="bCl">Let \({\mathbf x} = (x_1, x_2)\) be a point on the unit circle in \({\mathbb R}^2\text{;}\) that is, \(x_1^2 + x_2^2 = 1\text{.}\) If \(A \in O(2)\text{,}\) show that \(A {\mathbf x}\) is also a point on the unit circle.</p></article><article class="exercise exercise-like" id="vXF"><h6 class="heading"><span class="codenumber">15<span class="period">.</span></span></h6>
 <p id="HJu">Let \(G\) be a group with a subgroup \(H\) (not necessarily normal) and a normal subgroup \(N\text{.}\) Then \(G\) is a <dfn class="terminology">semidirect product</dfn> of \(N\) by \(H\) if</p>
@@ -430,8 +436,8 @@ E(n) = \{(A, {\mathbf x}) : A \in O(n) \text{ and } {\mathbf x} \in {\mathbb R}^
 <p id="nQD">Determine which of the 17 wallpaper groups preserves the symmetry of the pattern in <a class="xref" data-knowl="./knowl/figure-wallpaper.html" title="Figure 15.16">Figure 15.16</a>.</p></article><article class="exercise exercise-like" id="IlX"><h6 class="heading"><span class="codenumber">17<span class="period">.</span></span></h6>
 <p id="TXM">Determine which of the 17 wallpaper groups preserves the symmetry of the pattern in <a class="xref" data-knowl="./knowl/figure-exercise-wallpaper.html" title="Figure 15.26">Figure 15.26</a>.</p>
 <div class="solutions">
-<a data-knowl="" class="id-ref hint-knowl original" data-refid="hk-pda" id="pda"><span class="type">Hint</span></a><div class="hidden-content tex2jax_ignore" id="hk-pda"><div class="hint solution-like"><p id="Zde">\(p6m\)</p></div></div>
-</div></article><figure class="figure figure-like" id="Ito"><div class="image-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><img src="images/exercise-wallpaper.svg" role="img" style="width: 100%; height: auto;" alt="A lattices of hexagons.  Each hexagon is divided into three rhombuses."></div>
+<a data-knowl="" class="id-ref hint-knowl original" data-refid="hk-pda" id="pda"><span class="type">Hint.</span> </a><div class="hidden-content tex2jax_ignore" id="hk-pda"><div class="hint solution-like"><p id="Zde">\(p6m\)</p></div></div>
+</div></article><figure class="figure figure-like" id="Ito"><div class="image-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><img src="generated/latex-image/exercise-wallpaper.svg" role="img" class="contained" alt="A lattices of hexagons.  Each hexagon is divided into three rhombuses."></div>
 <figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">15.26<span class="period">.</span></span><span class="space"> </span></figcaption></figure><article class="exercise exercise-like" id="otg"><h6 class="heading"><span class="codenumber">18<span class="period">.</span></span></h6>
 <p id="AeV">Find the rotation group of a dodecahedron.</p></article><article class="exercise exercise-like" id="UAp"><h6 class="heading"><span class="codenumber">19<span class="period">.</span></span></h6>
 <p id="gme">For each of the 17 wallpaper groups, draw a wallpaper pattern having that group as a symmetry group.</p></article></section></div></main>

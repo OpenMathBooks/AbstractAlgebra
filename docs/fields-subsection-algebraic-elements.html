@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2021-03-25T19:18:53-06:00       *-->
+<!--*       on 2021-08-19T13:09:56-06:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -14,36 +14,42 @@
 <title>AATA Algebraic Elements</title>
 <meta name="Keywords" content="Authored in PreTeXt">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<script src="https://sagecell.sagemath.org/embedded_sagecell.js"></script><script type="text/x-mathjax-config">
-MathJax.Hub.Config({
-    tex2jax: {
-        inlineMath: [['\\(','\\)']]
+<script src="https://sagecell.sagemath.org/embedded_sagecell.js"></script><script>window.MathJax = {
+  tex: {
+    inlineMath: [['\\(','\\)']],
+    tags: "none",
+    useLabelIds: true,
+    tagSide: "right",
+    tagIndent: ".8em",
+    packages: {'[+]': ['base', 'extpfeil', 'ams', 'amscd', 'newcommand', 'knowl']}
+  },
+  options: {
+    ignoreHtmlClass: "tex2jax_ignore",
+    processHtmlClass: "has_am",
+    renderActions: {
+        findScript: [10, function (doc) {
+            document.querySelectorAll('script[type^="math/tex"]').forEach(function(node) {
+                var display = !!node.type.match(/; *mode=display/);
+                var math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display);
+                var text = document.createTextNode('');
+                node.parentNode.replaceChild(text, node);
+                math.start = {node: text, delim: '', n: 0};
+                math.end = {node: text, delim: '', n: 0};
+                doc.math.push(math);
+            });
+        }, '']
     },
-    asciimath2jax: {
-        ignoreClass: ".*",
-        processClass: "has_am"
-    },
-    jax: ["input/AsciiMath"],
-    extensions: ["asciimath2jax.js"],
-    TeX: {
-        extensions: ["extpfeil.js", "autobold.js", "https://pretextbook.org/js/lib/mathjaxknowl.js", "AMScd.js", ],
-        // scrolling to fragment identifiers is controlled by other Javascript
-        positionToHash: false,
-        equationNumbers: { autoNumber: "none", useLabelIds: true, },
-        TagSide: "right",
-        TagIndent: ".8em",
-    },
-    // HTML-CSS output Jax to be dropped for MathJax 3.0
-    "HTML-CSS": {
-        scale: 88,
-        mtextFontInherit: true,
-    },
-    CommonHTML: {
-        scale: 88,
-        mtextFontInherit: true,
-    },
-});
-</script><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS_CHTML-full"></script><link href="https://unpkg.com/prismjs@v1.22.0/themes/prism.css" rel="stylesheet">
+  },
+  chtml: {
+    scale: 0.88,
+    mtextInheritFont: true
+  },
+  loader: {
+    load: ['input/asciimath', '[tex]/extpfeil', '[tex]/amscd', '[tex]/newcommand', '[pretext]/mathjaxknowl3.js'],
+    paths: {pretext: "https://pretextbook.org/js/lib"},
+  },
+};
+</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><link href="https://unpkg.com/prismjs@v1.22.0/themes/prism.css" rel="stylesheet">
 <script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/jquery.min.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/0.13/pretext.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/0.13/pretext_add_on.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script xmlns:svg="http://www.w3.org/2000/svg">sagecellEvalName='Evaluate (Sage)';
 </script><link xmlns:svg="http://www.w3.org/2000/svg" href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
 <link xmlns:svg="http://www.w3.org/2000/svg" href="https://fonts.googleapis.com/css?family=Inconsolata:400,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
@@ -91,7 +97,7 @@ MathJax.Hub.Config({
 \newcommand{\amp}{&amp;}
 \)</div>
 <header id="masthead" class="smallbuttons"><div class="banner"><div class="container">
-<a id="logo-link" href="http://abstract.pugetsound.edu" target="_blank"><img src="images/cover_aata_2020.png" alt="Logo image"></a><div class="title-container">
+<a id="logo-link" href="http://abstract.pugetsound.edu" target="_blank"><img src="external/images/cover_aata_2020.png" alt="Logo image"></a><div class="title-container">
 <h1 class="heading"><a href="aata-toc.html"><span class="title">Abstract Algebra:</span> <span class="subtitle">Theory and Applications, Remixed!</span></a></h1>
 <p class="byline">Thomas W. Judson</p>
 </div>
@@ -210,7 +216,7 @@ MathJax.Hub.Config({
 </li>
 <li class="link part"><a href="part-more-group-theory.html" data-scroll="part-more-group-theory"><span class="codenumber">III</span> <span class="title">More Group Theory</span></a></li>
 <li class="link">
-<a href="groups.html" data-scroll="nRa"><span class="codenumber">10</span> <span class="title">Some of the Structure of Groups</span></a><ul>
+<a href="groups-structure.html" data-scroll="nRa"><span class="codenumber">10</span> <span class="title">Some of the Structure of Groups</span></a><ul>
 <li><a href="section-groups-cayley.html" data-scroll="CTu">Isomorphisms and Cayley's Theorem</a></li>
 <li><a href="section-groups-permutations.html" data-scroll="mjE">Permutation Groups</a></li>
 <li><a href="section-solvable-groups.html" data-scroll="WbU">Solvable Groups</a></li>
@@ -400,11 +406,11 @@ b_0 - c_0 = b_1 - c_1 = \cdots = b_{n - 1} - c_{n - 1} = 0\text{,}
 &amp; = 0\text{.}
 \end{align*}
 </div>
-<p class="continuation">Hence, we have an isomorphism of \({\mathbb R}( \alpha )\) with \({\mathbb C}\) defined by the map that takes \(a + b \alpha\) to \(a + bi\text{.}\)</p></article><article class="paragraphs" id="Gjz"><h5 class="heading"><span class="title">Summary.</span></h5>
+<p class="continuation">Hence, we have an isomorphism of \({\mathbb R}( \alpha )\) with \({\mathbb C}\) defined by the map that takes \(a + b \alpha\) to \(a + bi\text{.}\)</p></article><section class="paragraphs" id="Gjz"><h5 class="heading"><span class="title">Summary.</span></h5>
 <p id="mqI">At this point, it might seem like we are running around in circles, as it often seems whenever we get close to the Fundamental Homomorphism Theorem.  Before moving on, let's try to sort out the different things the theorems and propositions are doing in this section.</p>
 <p id="SxR">First, if we are start with a given polynomial \(p(x)\) over some field \(F\text{,}\) we know there is some extension field \(E\) above \(F\) in which \(p(x)\) has a root \(\alpha\) (and therefore factors).  This is <a class="xref" data-knowl="./knowl/theorem-fundamental-of-field-theory.html" title="Theorem 8.10">Theorem 8.10</a>.</p>
 <p id="yFa">On the other hand, we can start a extension field \(E\) of a base field \(F\) that contains some element \(\alpha\) <em class="emphasis">algebraic</em> over \(F\text{.}\)  By definition, \(\alpha\) is the root to some polynomial with coefficients from \(F\text{,}\) and by <a class="xref" data-knowl="./knowl/thm_minimum-poly.html" title="Theorem 8.15">Theorem 8.15</a> there is a minimum polynomial \(p(x)\) for \(\alpha\text{.}\)  By <a class="xref" data-knowl="./knowl/proposition-minimal-poly.html" title="Proposition 8.17">Proposition 8.17</a>, the field extension \(F(\alpha)\) (which is a subfield of \(E\text{,}\) if not \(E\) exactly) is isomorphic to the quotient ring \(F[x]/\langle p(x) \rangle\text{.}\)</p>
-<p id="eMj">So if you have a minimal polynomial \(p(x)\text{,}\) you can find an extension field that contains a root \(\alpha\text{,}\) namely \(F[x]/\langle p(x)\rangle\text{.}\)  Or if you have an extension field with a root \(\alpha\text{,}\) you can find a minimal polynomial \(p(x)\) and the extension field that you would get by starting with \(p(x)\) will be precisely the smallest field containing \(F\) and \(\alpha\text{.}\)</p></article><section class="exercises" id="YXk"><h3 class="heading hide-type">
+<p id="eMj">So if you have a minimal polynomial \(p(x)\text{,}\) you can find an extension field that contains a root \(\alpha\text{,}\) namely \(F[x]/\langle p(x)\rangle\text{.}\)  Or if you have an extension field with a root \(\alpha\text{,}\) you can find a minimal polynomial \(p(x)\) and the extension field that you would get by starting with \(p(x)\) will be precisely the smallest field containing \(F\) and \(\alpha\text{.}\)</p></section><section class="exercises" id="YXk"><h3 class="heading hide-type">
 <span class="type">Exercises</span> <span class="codenumber"></span> <span class="title">Collected Homework</span>
 </h3>
 <article class="exercise exercise-like" id="XhX"><h6 class="heading"><span class="codenumber">1<span class="period">.</span></span></h6>
@@ -413,7 +419,7 @@ b_0 - c_0 = b_1 - c_1 = \cdots = b_{n - 1} - c_{n - 1} = 0\text{,}
 <p id="ogi">Prove that \(\alpha\) is an algebraic number.</p></article><article class="task exercise-like" id="task-6"><h6 class="heading"><span class="codenumber">(b)</span></h6>
 <p id="p-2339">Is \(\Q(\alpha)\) an extension field of \(\Q(\sqrt{3})\text{?}\)  Is it an extension field of \(\Q(\sqrt{5})\text{?}\)  Explain.</p>
 <div class="solutions">
-<a data-knowl="" class="id-ref hint-knowl original" data-refid="hk-Dpg" id="Dpg"><span class="type">Hint</span></a><div class="hidden-content tex2jax_ignore" id="hk-Dpg"><div class="hint solution-like"><p id="MIS">First decide whether \(\Q(\alpha)\) contains the element \(\sqrt{15}\text{.}\)  If it does, note that it must also contain \(\sqrt{15}(\sqrt{3}+\sqrt{5}) - 3(\sqrt{3}+\sqrt{5})\text{.}\)  Why is this helpful?</p></div></div>
+<a data-knowl="" class="id-ref hint-knowl original" data-refid="hk-Dpg" id="Dpg"><span class="type">Hint.</span> </a><div class="hidden-content tex2jax_ignore" id="hk-Dpg"><div class="hint solution-like"><p id="MIS">First decide whether \(\Q(\alpha)\) contains the element \(\sqrt{15}\text{.}\)  If it does, note that it must also contain \(\sqrt{15}(\sqrt{3}+\sqrt{5}) - 3(\sqrt{3}+\sqrt{5})\text{.}\)  Why is this helpful?</p></div></div>
 </div></article><article class="task exercise-like" id="task-7"><h6 class="heading"><span class="codenumber">(c)</span></h6>
 <p id="p-2341">If we take \(\Q(\sqrt{3})\) and adjoin \(\sqrt{5}\text{,}\) do we get a bigger field?  We can write \(\Q(\sqrt{3})(\sqrt{5})\) as \(\Q(\sqrt{3},\sqrt{5})\text{.}\)</p></article><article class="task exercise-like" id="task-8"><h6 class="heading"><span class="codenumber">(d)</span></h6>
 <p id="p-2342">Find the minimal polynomials for \(\sqrt{3}\) over \(\Q\) and of \(\alpha = \sqrt{3}+\sqrt{5}\) over \(\Q(\sqrt{3})\text{.}\)  How do the degrees of these relate to the degree of the polynomial you found for \(\alpha\) in part (a)?</p></article></article></section></section></div></main>

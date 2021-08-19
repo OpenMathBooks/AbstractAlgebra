@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2021-03-25T19:19:50-06:00       *-->
+<!--*       on 2021-08-19T13:11:03-06:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -14,36 +14,42 @@
 <title>AATA Matrix Groups</title>
 <meta name="Keywords" content="Authored in PreTeXt">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<script src="https://sagecell.sagemath.org/embedded_sagecell.js"></script><script type="text/x-mathjax-config">
-MathJax.Hub.Config({
-    tex2jax: {
-        inlineMath: [['\\(','\\)']]
+<script src="https://sagecell.sagemath.org/embedded_sagecell.js"></script><script>window.MathJax = {
+  tex: {
+    inlineMath: [['\\(','\\)']],
+    tags: "none",
+    useLabelIds: true,
+    tagSide: "right",
+    tagIndent: ".8em",
+    packages: {'[+]': ['base', 'extpfeil', 'ams', 'amscd', 'newcommand', 'knowl']}
+  },
+  options: {
+    ignoreHtmlClass: "tex2jax_ignore",
+    processHtmlClass: "has_am",
+    renderActions: {
+        findScript: [10, function (doc) {
+            document.querySelectorAll('script[type^="math/tex"]').forEach(function(node) {
+                var display = !!node.type.match(/; *mode=display/);
+                var math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display);
+                var text = document.createTextNode('');
+                node.parentNode.replaceChild(text, node);
+                math.start = {node: text, delim: '', n: 0};
+                math.end = {node: text, delim: '', n: 0};
+                doc.math.push(math);
+            });
+        }, '']
     },
-    asciimath2jax: {
-        ignoreClass: ".*",
-        processClass: "has_am"
-    },
-    jax: ["input/AsciiMath"],
-    extensions: ["asciimath2jax.js"],
-    TeX: {
-        extensions: ["extpfeil.js", "autobold.js", "https://pretextbook.org/js/lib/mathjaxknowl.js", "AMScd.js", ],
-        // scrolling to fragment identifiers is controlled by other Javascript
-        positionToHash: false,
-        equationNumbers: { autoNumber: "none", useLabelIds: true, },
-        TagSide: "right",
-        TagIndent: ".8em",
-    },
-    // HTML-CSS output Jax to be dropped for MathJax 3.0
-    "HTML-CSS": {
-        scale: 88,
-        mtextFontInherit: true,
-    },
-    CommonHTML: {
-        scale: 88,
-        mtextFontInherit: true,
-    },
-});
-</script><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS_CHTML-full"></script><link href="https://unpkg.com/prismjs@v1.22.0/themes/prism.css" rel="stylesheet">
+  },
+  chtml: {
+    scale: 0.88,
+    mtextInheritFont: true
+  },
+  loader: {
+    load: ['input/asciimath', '[tex]/extpfeil', '[tex]/amscd', '[tex]/newcommand', '[pretext]/mathjaxknowl3.js'],
+    paths: {pretext: "https://pretextbook.org/js/lib"},
+  },
+};
+</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><link href="https://unpkg.com/prismjs@v1.22.0/themes/prism.css" rel="stylesheet">
 <script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/jquery.min.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/0.13/pretext.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/0.13/pretext_add_on.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script xmlns:svg="http://www.w3.org/2000/svg">sagecellEvalName='Evaluate (Sage)';
 </script><link xmlns:svg="http://www.w3.org/2000/svg" href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
 <link xmlns:svg="http://www.w3.org/2000/svg" href="https://fonts.googleapis.com/css?family=Inconsolata:400,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
@@ -91,7 +97,7 @@ MathJax.Hub.Config({
 \newcommand{\amp}{&amp;}
 \)</div>
 <header id="masthead" class="smallbuttons"><div class="banner"><div class="container">
-<a id="logo-link" href="http://abstract.pugetsound.edu" target="_blank"><img src="images/cover_aata_2020.png" alt="Logo image"></a><div class="title-container">
+<a id="logo-link" href="http://abstract.pugetsound.edu" target="_blank"><img src="external/images/cover_aata_2020.png" alt="Logo image"></a><div class="title-container">
 <h1 class="heading"><a href="aata-toc.html"><span class="title">Abstract Algebra:</span> <span class="subtitle">Theory and Applications, Remixed!</span></a></h1>
 <p class="byline">Thomas W. Judson</p>
 </div>
@@ -210,7 +216,7 @@ MathJax.Hub.Config({
 </li>
 <li class="link part"><a href="part-more-group-theory.html" data-scroll="part-more-group-theory"><span class="codenumber">III</span> <span class="title">More Group Theory</span></a></li>
 <li class="link">
-<a href="groups.html" data-scroll="nRa"><span class="codenumber">10</span> <span class="title">Some of the Structure of Groups</span></a><ul>
+<a href="groups-structure.html" data-scroll="nRa"><span class="codenumber">10</span> <span class="title">Some of the Structure of Groups</span></a><ul>
 <li><a href="section-groups-cayley.html" data-scroll="CTu">Isomorphisms and Cayley's Theorem</a></li>
 <li><a href="section-groups-permutations.html" data-scroll="mjE">Permutation Groups</a></li>
 <li><a href="section-solvable-groups.html" data-scroll="WbU">Solvable Groups</a></li>
@@ -504,7 +510,7 @@ A =
 \end{pmatrix}
 \end{equation*}
 </div>
-<p class="continuation">be in \(SL_2({\mathbb R})\text{.}\) In <a class="xref" data-knowl="./knowl/figure-sl2.html" title="Figure 15.4">Figure 15.4</a>, the unit square corresponding to the vectors \({\mathbf x} = (1,0)^\transpose\) and \({\mathbf y} = (0,1)^\transpose\) is taken  by \(A\) to the parallelogram with sides \((1,0)^\transpose\) and \((1, 1)^\transpose\text{;}\) that is, \(A {\mathbf x} = (1,0)^\transpose\) and \(A {\mathbf y} = (1, 1)^\transpose\text{.}\) Notice that these two parallelograms have the same area.</p></article><figure class="figure figure-like" id="xkp"><div class="image-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><img src="images/matrix-sl2r.svg" role="img" style="width: 100%; height: auto;" alt="Two side-by figures. The figure on the left is a square on set of axes with the left edge a vector from the origin to (0,1) and bottom edge a vector from the origin to (1,0). The figure on the right is a parallelogram on set of axes with the left edge a vector from the origin to (1,1) and bottom edge a vector from the origin to (1,0)."></div>
+<p class="continuation">be in \(SL_2({\mathbb R})\text{.}\) In <a class="xref" data-knowl="./knowl/figure-sl2.html" title="Figure 15.4">Figure 15.4</a>, the unit square corresponding to the vectors \({\mathbf x} = (1,0)^\transpose\) and \({\mathbf y} = (0,1)^\transpose\) is taken  by \(A\) to the parallelogram with sides \((1,0)^\transpose\) and \((1, 1)^\transpose\text{;}\) that is, \(A {\mathbf x} = (1,0)^\transpose\) and \(A {\mathbf y} = (1, 1)^\transpose\text{.}\) Notice that these two parallelograms have the same area.</p></article><figure class="figure figure-like" id="xkp"><div class="image-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><img src="generated/latex-image/matrix-sl2r.svg" role="img" class="contained" alt="Two side-by figures. The figure on the left is a square on set of axes with the left edge a vector from the origin to (0,1) and bottom edge a vector from the origin to (1,0). The figure on the right is a parallelogram on set of axes with the left edge a vector from the origin to (1,1) and bottom edge a vector from the origin to (1,0)."></div>
 <figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">15.4<span class="period">.</span></span><span class="space"> </span>\(SL_2(\mathbb R)\) acting on the unit square</figcaption></figure></section><section class="subsection" id="vnL"><h3 class="heading hide-type">
 <span class="type">Subsection</span> <span class="codenumber">15.1.3</span> <span class="title">The Orthogonal Group \(O(n)\)</span>
 </h3>
@@ -659,7 +665,7 @@ a_{1j} \\ a_{2j} \\ \vdots \\ a_{nj}
 &amp; = \frac{1}{2} \left[ \|{\mathbf x} + {\mathbf y}\|^2 - \|{\mathbf x}\|^2 - \|{\mathbf y}\|^2 \right]\\
 &amp; = \langle {\mathbf x}, {\mathbf y} \rangle\text{.}
 \end{align*}
-</div></article><figure class="figure figure-like" id="ibr"><div class="image-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><img src="images/matrix-o2.svg" role="img" style="width: 100%; height: auto;" alt="Two side-by figures. The figure on the left is a set of axes with an arrow pointing up and right from the origin to (a,b) and the second arrow pointing down and right from the origin to a point (a, -b). The figure on the right is a set of axes with an arrow pointed up and right from the origin to (cosine theta, sine theta) and an arrow point up and left at a right angle to the first vector from the origin to (sine theta, minus cosine theta)."></div>
+</div></article><figure class="figure figure-like" id="ibr"><div class="image-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><img src="generated/latex-image/matrix-o2.svg" role="img" class="contained" alt="Two side-by figures. The figure on the left is a set of axes with an arrow pointing up and right from the origin to (a,b) and the second arrow pointing down and right from the origin to a point (a, -b). The figure on the right is a set of axes with an arrow pointed up and right from the origin to (cosine theta, sine theta) and an arrow point up and left at a right angle to the first vector from the origin to (sine theta, minus cosine theta)."></div>
 <figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">15.9<span class="period">.</span></span><span class="space"> </span>\(O(2)\) acting on \(\mathbb R^2\)</figcaption></figure><article class="example example-like" id="pyz"><h6 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">15.10</span><span class="period">.</span>
 </h6>
@@ -725,7 +731,7 @@ C
 \end{equation*}
 </div>
 <p class="continuation">The identity of the group is \((I,{\mathbf 0})\text{;}\) the inverse of \((A, {\mathbf x})\) is \((A^{-1}, -A^{-1} {\mathbf x})\text{.}\) In <a class="xref" data-knowl="./knowl/matrix-exercise-en-group.html" title="Exercise 15.4.6">Exercise 15.4.6</a>, you are asked to check that \(E(n)\) is indeed a group under this operation.</p>
-<figure class="figure figure-like" id="OiA"><div class="image-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><img src="images/matrix-r2-translations.svg" role="img" style="width: 100%; height: auto;" alt="Two side-by figures. The figure on the left is a set of axes with an arrow pointing up and right from the origin to a point x. The figure on the right is a set of axes with an arrow of the same length and same direction from a point to the right and above the origin to a point x + y."></div>
+<figure class="figure figure-like" id="OiA"><div class="image-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><img src="generated/latex-image/matrix-r2-translations.svg" role="img" class="contained" alt="Two side-by figures. The figure on the left is a set of axes with an arrow pointing up and right from the origin to a point x. The figure on the right is a set of axes with an arrow of the same length and same direction from a point to the right and above the origin to a point x + y."></div>
 <figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">15.11<span class="period">.</span></span><span class="space"> </span>Translations in \(\mathbb R^2\)</figcaption></figure></section></section></div></main>
 </div>
 <script src="https://unpkg.com/prismjs@v1.22.0/components/prism-core.min.js"></script><script src="https://unpkg.com/prismjs@v1.22.0/plugins/autoloader/prism-autoloader.min.js"></script>

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2021-03-25T19:19:56-06:00       *-->
+<!--*       on 2021-08-19T13:11:09-06:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -14,36 +14,42 @@
 <title>AATA Error-Detecting and Correcting Codes</title>
 <meta name="Keywords" content="Authored in PreTeXt">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<script src="https://sagecell.sagemath.org/embedded_sagecell.js"></script><script type="text/x-mathjax-config">
-MathJax.Hub.Config({
-    tex2jax: {
-        inlineMath: [['\\(','\\)']]
+<script src="https://sagecell.sagemath.org/embedded_sagecell.js"></script><script>window.MathJax = {
+  tex: {
+    inlineMath: [['\\(','\\)']],
+    tags: "none",
+    useLabelIds: true,
+    tagSide: "right",
+    tagIndent: ".8em",
+    packages: {'[+]': ['base', 'extpfeil', 'ams', 'amscd', 'newcommand', 'knowl']}
+  },
+  options: {
+    ignoreHtmlClass: "tex2jax_ignore",
+    processHtmlClass: "has_am",
+    renderActions: {
+        findScript: [10, function (doc) {
+            document.querySelectorAll('script[type^="math/tex"]').forEach(function(node) {
+                var display = !!node.type.match(/; *mode=display/);
+                var math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display);
+                var text = document.createTextNode('');
+                node.parentNode.replaceChild(text, node);
+                math.start = {node: text, delim: '', n: 0};
+                math.end = {node: text, delim: '', n: 0};
+                doc.math.push(math);
+            });
+        }, '']
     },
-    asciimath2jax: {
-        ignoreClass: ".*",
-        processClass: "has_am"
-    },
-    jax: ["input/AsciiMath"],
-    extensions: ["asciimath2jax.js"],
-    TeX: {
-        extensions: ["extpfeil.js", "autobold.js", "https://pretextbook.org/js/lib/mathjaxknowl.js", "AMScd.js", ],
-        // scrolling to fragment identifiers is controlled by other Javascript
-        positionToHash: false,
-        equationNumbers: { autoNumber: "none", useLabelIds: true, },
-        TagSide: "right",
-        TagIndent: ".8em",
-    },
-    // HTML-CSS output Jax to be dropped for MathJax 3.0
-    "HTML-CSS": {
-        scale: 88,
-        mtextFontInherit: true,
-    },
-    CommonHTML: {
-        scale: 88,
-        mtextFontInherit: true,
-    },
-});
-</script><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS_CHTML-full"></script><link href="https://unpkg.com/prismjs@v1.22.0/themes/prism.css" rel="stylesheet">
+  },
+  chtml: {
+    scale: 0.88,
+    mtextInheritFont: true
+  },
+  loader: {
+    load: ['input/asciimath', '[tex]/extpfeil', '[tex]/amscd', '[tex]/newcommand', '[pretext]/mathjaxknowl3.js'],
+    paths: {pretext: "https://pretextbook.org/js/lib"},
+  },
+};
+</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><link href="https://unpkg.com/prismjs@v1.22.0/themes/prism.css" rel="stylesheet">
 <script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/jquery.min.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/0.13/pretext.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/0.13/pretext_add_on.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script xmlns:svg="http://www.w3.org/2000/svg">sagecellEvalName='Evaluate (Sage)';
 </script><link xmlns:svg="http://www.w3.org/2000/svg" href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
 <link xmlns:svg="http://www.w3.org/2000/svg" href="https://fonts.googleapis.com/css?family=Inconsolata:400,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
@@ -91,7 +97,7 @@ MathJax.Hub.Config({
 \newcommand{\amp}{&amp;}
 \)</div>
 <header id="masthead" class="smallbuttons"><div class="banner"><div class="container">
-<a id="logo-link" href="http://abstract.pugetsound.edu" target="_blank"><img src="images/cover_aata_2020.png" alt="Logo image"></a><div class="title-container">
+<a id="logo-link" href="http://abstract.pugetsound.edu" target="_blank"><img src="external/images/cover_aata_2020.png" alt="Logo image"></a><div class="title-container">
 <h1 class="heading"><a href="aata-toc.html"><span class="title">Abstract Algebra:</span> <span class="subtitle">Theory and Applications, Remixed!</span></a></h1>
 <p class="byline">Thomas W. Judson</p>
 </div>
@@ -210,7 +216,7 @@ MathJax.Hub.Config({
 </li>
 <li class="link part"><a href="part-more-group-theory.html" data-scroll="part-more-group-theory"><span class="codenumber">III</span> <span class="title">More Group Theory</span></a></li>
 <li class="link">
-<a href="groups.html" data-scroll="nRa"><span class="codenumber">10</span> <span class="title">Some of the Structure of Groups</span></a><ul>
+<a href="groups-structure.html" data-scroll="nRa"><span class="codenumber">10</span> <span class="title">Some of the Structure of Groups</span></a><ul>
 <li><a href="section-groups-cayley.html" data-scroll="CTu">Isomorphisms and Cayley's Theorem</a></li>
 <li><a href="section-groups-permutations.html" data-scroll="mjE">Permutation Groups</a></li>
 <li><a href="section-solvable-groups.html" data-scroll="WbU">Solvable Groups</a></li>
@@ -312,7 +318,7 @@ MathJax.Hub.Config({
 <span class="type">Section</span> <span class="codenumber">16.1</span> <span class="title">Error-Detecting and Correcting Codes</span>
 </h2>
 <section class="introduction" id="XTu"><p id="Jgi">Let us examine a simple model of a communications system for transmitting and receiving coded messages (<a class="xref" data-knowl="./knowl/figure-encoding.html" title="Figure 16.1">Figure 16.1</a>).</p>
-<figure class="figure figure-like" id="BBJ"><div class="image-box" style="width: 60%; margin-left: 20%; margin-right: 20%;"><img src="images/algcodes-encode-decode.svg" role="img" style="width: 100%; height: auto;" alt="A vertical flow chart where an m-digit message is passed to an encoder which is represented by a rectangle to become an n-digit codeword which is passed to a transmitter that is also represented by a rectangle.  The outcome of the transmitter may have noise and is passed to the receiver which is prepresented by a rectangle.  The receiver passes an n-digit received word to a decoder that is represented by a rectangle.  The decoder produces an m-digit received word or an error."></div>
+<figure class="figure figure-like" id="BBJ"><div class="image-box" style="width: 60%; margin-left: 20%; margin-right: 20%;"><img src="generated/latex-image/algcodes-encode-decode.svg" role="img" class="contained" alt="A vertical flow chart where an m-digit message is passed to an encoder which is represented by a rectangle to become an n-digit codeword which is passed to a transmitter that is also represented by a rectangle.  The outcome of the transmitter may have noise and is passed to the receiver which is prepresented by a rectangle.  The receiver passes an n-digit received word to a decoder that is represented by a rectangle.  The decoder produces an m-digit received word or an error."></div>
 <figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">16.1<span class="period">.</span></span><span class="space"> </span>Encoding and decoding messages</figcaption></figure><p id="pnr">Uncoded messages may be composed of letters or characters, but typically they consist of binary \(m\)-tuples. These messages are encoded into codewords, consisting of binary \(n\)-tuples, by a device called an <dfn class="terminology">encoder</dfn>. The message is transmitted and then decoded. We will consider the occurrence of errors during transmission. An <dfn class="terminology">error</dfn> occurs if there is a change in one or more bits in the codeword. A <dfn class="terminology">decoding scheme</dfn> is a method that either converts an arbitrarily received \(n\)-tuple into a meaningful decoded message or gives an error message for that \(n\)-tuple. If the received message is a codeword (one of the special \(n\)-tuples allowed to be transmitted), then the decoded message must be the unique message that was encoded into the codeword. For received non-codewords, the decoding scheme will give an error indication, or, if we are more clever, will actually try to correct the error and reconstruct the original message. Our goal is to transmit error-free messages as cheaply and quickly as possible.</p>
 <article class="example example-like" id="isz"><h6 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">16.2</span><span class="period">.</span>
@@ -402,7 +408,7 @@ x_{n})\text{.}\) The message is encoded into a binary \(3n\)-tuple by simply rep
 </h3>
 <p id="fyg">The coding scheme presented in <a class="xref" data-knowl="./knowl/example-algcodes-nearest.html" title="Example 16.4">Example 16.4</a> is not a complete solution to the problem because it does not account for the possibility of multiple errors. For example, either a (000) or a (111) could be sent and a (001) received. We have no means of deciding from the received word whether there was a single error in the third bit or two errors, one in the first bit and one in the second. No matter what coding scheme is used, an incorrect message could be received. We could transmit a (000), have errors in all three bits, and receive the codeword (111). It is important to make explicit assumptions about the likelihood and distribution of transmission errors so that, in a particular application, it will be known whether a given error detection scheme is appropriate. We will assume that transmission errors are rare, and, that when they do occur, they occur independently in each bit; that is, if \(p\) is the probability of an error in one bit and \(q\) is the probability of an error in a different bit, then the probability of errors occurring in both of these bits at the same time is \(pq\text{.}\) We will also assume that a received \(n\)-tuple is decoded into a codeword that is closest to it; that is, we assume that the receiver uses <dfn class="terminology">maximum-likelihood decoding</dfn>.  <a data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-6" id="fn-6"><sup> 2 </sup></a></p>
 <div class="hidden-content tex2jax_ignore" id="hk-fn-6"><div class="fn">This section requires a knowledge of probability, but can be skipped without loss of continuity.</div></div>
-<figure class="figure figure-like" id="rMy"><div class="image-box" style="width: 40%; margin-left: 30%; margin-right: 30%;"><img src="images/algcodes-binary-channel.svg" role="img" style="width: 100%; height: auto;" alt="A schematic diagram where a zero has probabilty p that it will be decoded as a zero and probability q that it will be decoded as a one, which are represented by arrows from 0 to 0 and 1 to 1, respectively.  A one has probabilty p that it will be decoded as a one and probability q that it will be decoded as a zero, which are represented by arrows from 1 to 1 and 0 to 1, respectively."></div>
+<figure class="figure figure-like" id="rMy"><div class="image-box" style="width: 40%; margin-left: 30%; margin-right: 30%;"><img src="generated/latex-image/algcodes-binary-channel.svg" role="img" class="contained" alt="A schematic diagram where a zero has probabilty p that it will be decoded as a zero and probability q that it will be decoded as a one, which are represented by arrows from 0 to 0 and 1 to 1, respectively.  A one has probabilty p that it will be decoded as a one and probability q that it will be decoded as a zero, which are represented by arrows from 1 to 1 and 0 to 1, respectively."></div>
 <figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">16.6<span class="period">.</span></span><span class="space"> </span>Binary symmetric channel</figcaption></figure><p id="LFp">A <dfn class="terminology">binary symmetric channel</dfn> is a model that consists of a transmitter capable of sending a binary signal, either a \(0\) or a \(1\text{,}\) together with a receiver. Let \(p\) be the probability that the signal is correctly received. Then \(q = 1 - p\) is the probability of an incorrect reception. If a \(1\) is sent, then the probability that a \(1\) is received is \(p\) and the probability that a \(0\) is received is \(q\) (<a class="xref" data-knowl="./knowl/figure-channel.html" title="Figure 16.6">Figure 16.6</a>). The probability that no errors occur during the transmission of a binary codeword of length \(n\) is \(p^{n}\text{.}\) For example, if \(p=0.999\) and a message consisting of 10,000 bits is sent, then the probability of a perfect transmission is</p>
 <div class="displaymath">
 \begin{equation*}

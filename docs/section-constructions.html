@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2021-03-25T19:18:46-06:00       *-->
+<!--*       on 2021-08-19T13:09:45-06:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -14,36 +14,42 @@
 <title>AATA Geometric Constructions</title>
 <meta name="Keywords" content="Authored in PreTeXt">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<script src="https://sagecell.sagemath.org/embedded_sagecell.js"></script><script type="text/x-mathjax-config">
-MathJax.Hub.Config({
-    tex2jax: {
-        inlineMath: [['\\(','\\)']]
+<script src="https://sagecell.sagemath.org/embedded_sagecell.js"></script><script>window.MathJax = {
+  tex: {
+    inlineMath: [['\\(','\\)']],
+    tags: "none",
+    useLabelIds: true,
+    tagSide: "right",
+    tagIndent: ".8em",
+    packages: {'[+]': ['base', 'extpfeil', 'ams', 'amscd', 'newcommand', 'knowl']}
+  },
+  options: {
+    ignoreHtmlClass: "tex2jax_ignore",
+    processHtmlClass: "has_am",
+    renderActions: {
+        findScript: [10, function (doc) {
+            document.querySelectorAll('script[type^="math/tex"]').forEach(function(node) {
+                var display = !!node.type.match(/; *mode=display/);
+                var math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display);
+                var text = document.createTextNode('');
+                node.parentNode.replaceChild(text, node);
+                math.start = {node: text, delim: '', n: 0};
+                math.end = {node: text, delim: '', n: 0};
+                doc.math.push(math);
+            });
+        }, '']
     },
-    asciimath2jax: {
-        ignoreClass: ".*",
-        processClass: "has_am"
-    },
-    jax: ["input/AsciiMath"],
-    extensions: ["asciimath2jax.js"],
-    TeX: {
-        extensions: ["extpfeil.js", "autobold.js", "https://pretextbook.org/js/lib/mathjaxknowl.js", "AMScd.js", ],
-        // scrolling to fragment identifiers is controlled by other Javascript
-        positionToHash: false,
-        equationNumbers: { autoNumber: "none", useLabelIds: true, },
-        TagSide: "right",
-        TagIndent: ".8em",
-    },
-    // HTML-CSS output Jax to be dropped for MathJax 3.0
-    "HTML-CSS": {
-        scale: 88,
-        mtextFontInherit: true,
-    },
-    CommonHTML: {
-        scale: 88,
-        mtextFontInherit: true,
-    },
-});
-</script><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS_CHTML-full"></script><link href="https://unpkg.com/prismjs@v1.22.0/themes/prism.css" rel="stylesheet">
+  },
+  chtml: {
+    scale: 0.88,
+    mtextInheritFont: true
+  },
+  loader: {
+    load: ['input/asciimath', '[tex]/extpfeil', '[tex]/amscd', '[tex]/newcommand', '[pretext]/mathjaxknowl3.js'],
+    paths: {pretext: "https://pretextbook.org/js/lib"},
+  },
+};
+</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><link href="https://unpkg.com/prismjs@v1.22.0/themes/prism.css" rel="stylesheet">
 <script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/jquery.min.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/0.13/pretext.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/0.13/pretext_add_on.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script xmlns:svg="http://www.w3.org/2000/svg">sagecellEvalName='Evaluate (Sage)';
 </script><link xmlns:svg="http://www.w3.org/2000/svg" href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
 <link xmlns:svg="http://www.w3.org/2000/svg" href="https://fonts.googleapis.com/css?family=Inconsolata:400,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
@@ -91,7 +97,7 @@ MathJax.Hub.Config({
 \newcommand{\amp}{&amp;}
 \)</div>
 <header id="masthead" class="smallbuttons"><div class="banner"><div class="container">
-<a id="logo-link" href="http://abstract.pugetsound.edu" target="_blank"><img src="images/cover_aata_2020.png" alt="Logo image"></a><div class="title-container">
+<a id="logo-link" href="http://abstract.pugetsound.edu" target="_blank"><img src="external/images/cover_aata_2020.png" alt="Logo image"></a><div class="title-container">
 <h1 class="heading"><a href="aata-toc.html"><span class="title">Abstract Algebra:</span> <span class="subtitle">Theory and Applications, Remixed!</span></a></h1>
 <p class="byline">Thomas W. Judson</p>
 </div>
@@ -210,7 +216,7 @@ MathJax.Hub.Config({
 </li>
 <li class="link part"><a href="part-more-group-theory.html" data-scroll="part-more-group-theory"><span class="codenumber">III</span> <span class="title">More Group Theory</span></a></li>
 <li class="link">
-<a href="groups.html" data-scroll="nRa"><span class="codenumber">10</span> <span class="title">Some of the Structure of Groups</span></a><ul>
+<a href="groups-structure.html" data-scroll="nRa"><span class="codenumber">10</span> <span class="title">Some of the Structure of Groups</span></a><ul>
 <li><a href="section-groups-cayley.html" data-scroll="CTu">Isomorphisms and Cayley's Theorem</a></li>
 <li><a href="section-groups-permutations.html" data-scroll="mjE">Permutation Groups</a></li>
 <li><a href="section-solvable-groups.html" data-scroll="WbU">Solvable Groups</a></li>
@@ -319,7 +325,9 @@ MathJax.Hub.Config({
 </ol>
 <p class="continuation">After puzzling mathematicians for over two thousand years, each of these constructions was finally shown to be impossible. We will use the theory of fields to provide a proof that the solutions do not exist. It is quite remarkable that the long-sought solution to each of these three geometric problems came from abstract algebra.</p>
 <p id="boq">First, let us determine more specifically what we mean by a straightedge and compass, and also examine the nature of these problems in a bit more depth. To begin with, <em class="emphasis">a straightedge is not a ruler</em>. We cannot measure arbitrary lengths with a straightedge. It is merely a tool for drawing a line through two points. The statement that the trisection of an arbitrary angle is impossible means that there is at least one angle that is impossible to trisect with a straightedge-and-compass construction. Certainly it is possible to trisect an angle in special cases. We can construct a \(30^\circ\) angle; hence, it is possible to trisect a \(90^\circ\) angle. However, we will show that it is impossible to construct a \(20^\circ\) angle. Therefore, we cannot trisect a \(60^\circ\) angle.</p></section><section class="worksheet" id="Cka"><h3 class="heading hide-type">
-<span class="type">Worksheet</span> <span class="codenumber">8.1.1</span> <span class="title">Activity: Geometric Constructions</span>
+<span class="type">Worksheet</span> <span class="codenumber">8.1.1</span> <span class="title">Activity: Geometric Constructions</span><div class="print-links">
+<a href="ws_fields-constructions-a4.html" class="a4">A4</a><a href="ws_fields-constructions-letter.html" class="us">US</a>
+</div>
 </h3>
 <section class="introduction" id="acQ"><p id="FeG">Our first application of algebra (to other mathematics) will be to questions of classical geometry.  We will look at geometry as it was done in ancient Greece, except that we will use GeoGebra for our constructions.</p>
 <p id="llP">Our main question is, what can you <em class="emphasis">construct</em> using reasonable, fundamental tools.  The tools are: an <em class="emphasis">unmarked straightedge</em> and a <em class="emphasis">compass</em>.</p>
@@ -327,22 +335,25 @@ MathJax.Hub.Config({
 <p id="xAh">To get a feel for the sorts of things you can construct, and maybe things you cannot, here are a few challenges.</p></section><article class="exercise exercise-like" id="GjZ"><h6 class="heading"><span class="codenumber">1<span class="period">.</span></span></h6>
 <p id="dHq">Can you construct a \(60^\circ\) angle?  A \(30^\circ\) angle?  If you have constructed any angle at all, can you construct an angle half its measure?  That is, can you <em class="emphasis">bisect</em> an given angle?</p>
 <div class="solutions">
-<a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-eMJ" id="eMJ"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-eMJ"><div class="solution solution-like">
+<a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-eMJ" id="eMJ"><span class="type">Solution.</span> </a><div class="hidden-content tex2jax_ignore" id="hk-eMJ"><div class="solution solution-like">
 <p id="UnE">If you can construct an equilateral triangle (draw two circles with the same radius with centers at the two points on a line, and look for the intersections), then the angles at the vertices will be \(60^\circ\text{.}\)</p>
 <p id="AuN">To bisect an angle, create a circle centered at the vertex of the angle.  Call the two points of intersection of this circle and the rays of the angle \(A\) and \(B\text{.}\)  Draw a circle centered at \(A\) with radius \(\overline{AB}\text{,}\) and another circle centered at \(B\) with radius \(\overline{AB}\text{.}\)  Create a line from the vertex of the angle to the intersection of these two circles (either or both).</p>
 </div></div>
-</div></article><article class="exercise exercise-like" id="mri"><h6 class="heading"><span class="codenumber">2<span class="period">.</span></span></h6>
+</div>
+<div class="workspace" data-space="0.1in"></div></article><article class="exercise exercise-like" id="mri"><h6 class="heading"><span class="codenumber">2<span class="period">.</span></span></h6>
 <p id="JOz">Can you construct a square?  Can you double the square?  That is, if you can construct a square, can you construct a square of twice the area?  Careful: this is not a square whose side length is twice the side length of the original.</p>
 <div class="solutions">
-<a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-KTS" id="KTS"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-KTS"><div class="solution solution-like">
+<a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-KTS" id="KTS"><span class="type">Solution.</span> </a><div class="hidden-content tex2jax_ignore" id="hk-KTS"><div class="solution solution-like">
 <p id="gBW">Constructing the square can be accomplished by creating perpendicular lines.  You can make the length of all the sides equal using the compass.</p>
 <p id="MJf">To “double the square” of side length 1 say, you need to find a line segment of length \(\sqrt{2}\) off which to build  a square.  Take the diagonal of the original square.</p>
 </div></div>
-</div></article><article class="exercise exercise-like" id="Syr"><h6 class="heading"><span class="codenumber">3<span class="period">.</span></span></h6>
+</div>
+<div class="workspace" data-space="0.1in"></div></article><article class="exercise exercise-like" id="Syr"><h6 class="heading"><span class="codenumber">3<span class="period">.</span></span></h6>
 <p id="pVI">Can you double the circle?  That is, can you construct a circle and then construct a second circle of twice the area?</p>
 <div class="solutions">
-<a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-rbb" id="rbb"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-rbb"><div class="solution solution-like"><p id="sQo">Call the radius of the first circle 1, so you want to find a circle with radius \(\sqrt{2}\text{.}\)  If you can double the square, you should be able to double the circle!</p></div></div>
-</div></article><article class="exercise exercise-like" id="yFA"><h6 class="heading"><span class="codenumber">4<span class="period">.</span></span></h6>
+<a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-rbb" id="rbb"><span class="type">Solution.</span> </a><div class="hidden-content tex2jax_ignore" id="hk-rbb"><div class="solution solution-like"><p id="sQo">Call the radius of the first circle 1, so you want to find a circle with radius \(\sqrt{2}\text{.}\)  If you can double the square, you should be able to double the circle!</p></div></div>
+</div>
+<div class="workspace" data-space="0.1in"></div></article><article class="exercise exercise-like" id="yFA"><h6 class="heading"><span class="codenumber">4<span class="period">.</span></span></h6>
 <p id="WcR">Here are three much harder, but related challenges.  For each, play around enough to convince yourself these are really hard, if not impossible:</p>
 <ol class="lower-alpha">
 <li id="jwC"><p id="bSd">Can you <em class="emphasis">trisect</em> and angle?  That is, given a constructed angle, can you construct an angle \(1/3\) its measure?</p></li>
@@ -350,9 +361,12 @@ MathJax.Hub.Config({
 <li id="vKU"><p id="ogv">Can you square the circle?  That is, if you have constructed a circle, can you construct a square that has the same area as the circle?</p></li>
 </ol>
 <div class="solutions">
-<a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-Xik" id="Xik"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-Xik"><div class="solution solution-like"><p id="YXx">None of these are possible, although it will take us a while to prove it (less than the 2000 years it took humanity).</p></div></div>
-</div></article></section><section class="worksheet" id="tVH"><h3 class="heading hide-type">
-<span class="type">Worksheet</span> <span class="codenumber">8.1.2</span> <span class="title">Activity: Constructible Numbers</span>
+<a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-Xik" id="Xik"><span class="type">Solution.</span> </a><div class="hidden-content tex2jax_ignore" id="hk-Xik"><div class="solution solution-like"><p id="YXx">None of these are possible, although it will take us a while to prove it (less than the 2000 years it took humanity).</p></div></div>
+</div>
+<div class="workspace" data-space="0.1in"></div></article></section><section class="worksheet" id="tVH"><h3 class="heading hide-type">
+<span class="type">Worksheet</span> <span class="codenumber">8.1.2</span> <span class="title">Activity: Constructible Numbers</span><div class="print-links">
+<a href="ws_fields-constructable-numbers-a4.html" class="a4">A4</a><a href="ws_fields-constructable-numbers-letter.html" class="us">US</a>
+</div>
 </h3>
 <section class="introduction" id="gXv"><p id="sgu">We have considered what geometric shapes we could or could not construct.  We are left with three big questions: is it possible to <em class="emphasis">trisect an angle</em>, to <em class="emphasis">double a cube</em>, or to <em class="emphasis">square a circle</em>.  To answer these questions, we must “algebratize” geometric constructions.</p>
 <p id="YnD">Start with two constructible points \(0\) and \(1\) <em class="emphasis">one unit</em> apart.  We define <dfn class="terminology">constructible</dfn> recursively from this base case:</p>
@@ -367,12 +381,12 @@ MathJax.Hub.Config({
 <div class="solutions"></div></article><article class="exercise exercise-like" id="tlN"><h6 class="heading"><span class="codenumber">2<span class="period">.</span></span></h6>
 <p id="wQn">If \(a\) and \(b\) are constructible numbers, are the numbers \(a+b\) and \(a-b\) also constructible?</p></article><article class="exercise exercise-like" id="ZsW"><h6 class="heading"><span class="codenumber">3<span class="period">.</span></span></h6>
 <p id="cXw">Suppose \(a\) and \(b\) are constructible.  Construct a triangle containing a base of unit length adjacent to a side of length \(a\text{.}\)  Construct a similar triangle with where the side corresponding the unit length side now has length \(b\text{.}\)  What is the length of the side corresponding to the \(a\)-length side?</p>
-<div class="image-box" style="width: 25%; margin-left: 37.5%; margin-right: 37.5%;"><img src="images/img-construct-product.svg" role="img" style="width: 100%; height: auto;" alt=""></div>
+<div class="image-box" style="width: 25%; margin-left: 37.5%; margin-right: 37.5%;"><img src="generated/latex-image/img-construct-product.svg" role="img" class="contained" alt=""></div>
 <div class="solutions"></div></article><article class="exercise exercise-like" id="FAf"><h6 class="heading"><span class="codenumber">4<span class="period">.</span></span></h6>
 <p id="JeF">Explain how you can modify the above construction to prove that if \(a\) and \(b\) are constructible, then \(a/b\) is constructible.</p>
 <div class="solutions"></div></article><article class="exercise exercise-like" id="lHo"><h6 class="heading"><span class="codenumber">5<span class="period">.</span></span></h6>
 <p id="plO">Given constructible number \(c\text{,}\) explain how you can construct the figure below.  The vertical line should be perpendicular to the horizontal line, which is the diameter of the circle.</p>
-<div class="image-box" style="width: 30%; margin-left: 35%; margin-right: 35%;"><img src="images/img-root-construct.svg" role="img" style="width: 100%; height: auto;" alt=""></div>
+<div class="image-box" style="width: 30%; margin-left: 35%; margin-right: 35%;"><img src="generated/latex-image/img-root-construct.svg" role="img" class="contained" alt=""></div>
 <p id="VsX">What is the length of the vertical line?</p>
 <div class="solutions"></div></article><article class="exercise exercise-like" id="ROx"><h6 class="heading"><span class="codenumber">6<span class="period">.</span></span></h6>
 <p id="BAg">Let \(\mathfrak C\) be the set of all constructible numbers.  What sort of set is this?  Is it a group?  A ring?  A field?  Is it one of these we know about already?</p>
@@ -384,12 +398,12 @@ MathJax.Hub.Config({
 <span class="type">Theorem</span><span class="space"> </span><span class="codenumber">8.1</span><span class="period">.</span>
 </h6>
 <p id="mSO">The set of all constructible real numbers forms a subfield \(F\) of the field of real numbers.</p></article><article class="proof" id="Vds"><h6 class="heading"><span class="type">Proof<span class="period">.</span></span></h6>
-<p id="gtI">Let \(\alpha\) and \(\beta\) be constructible numbers. We must show that \(\alpha + \beta\text{,}\) \(\alpha - \beta\text{,}\) \(\alpha \beta\text{,}\) and \(\alpha / \beta\) (\(\beta \neq 0\)) are also constructible numbers. We can assume that both \(\alpha\) and \(\beta\) are positive with \(\alpha \gt \beta\text{.}\) It is quite obvious how to construct \(\alpha + \beta\) and \(\alpha - \beta\text{.}\) To find a line segment with length \(\alpha \beta\text{,}\) we assume that \(\beta \gt 1\) and construct the triangle in <a class="xref" data-knowl="./knowl/figure-multiplication-construction.html" title="Figure 8.2">Figure 8.2</a> such that triangles \(\triangle ABC\) and \(\triangle ADE\) are similar. Since \(\alpha / 1 = x / \beta\text{,}\) the line segment \(x\) has length \(\alpha \beta\text{.}\) A similar construction can be made if \(\beta \lt 1\text{.}\) We will leave it as an exercise to show that the same triangle can be used to construct \(\alpha / \beta\) for \(\beta \neq 0\text{.}\)</p></article><figure class="figure figure-like" id="rRc"><div class="image-box" style="width: 80%; margin-left: 10%; margin-right: 10%;"><img src="images/fields-multiply.svg" role="img" style="width: 100%; height: auto;" alt=""></div>
+<p id="gtI">Let \(\alpha\) and \(\beta\) be constructible numbers. We must show that \(\alpha + \beta\text{,}\) \(\alpha - \beta\text{,}\) \(\alpha \beta\text{,}\) and \(\alpha / \beta\) (\(\beta \neq 0\)) are also constructible numbers. We can assume that both \(\alpha\) and \(\beta\) are positive with \(\alpha \gt \beta\text{.}\) It is quite obvious how to construct \(\alpha + \beta\) and \(\alpha - \beta\text{.}\) To find a line segment with length \(\alpha \beta\text{,}\) we assume that \(\beta \gt 1\) and construct the triangle in <a class="xref" data-knowl="./knowl/figure-multiplication-construction.html" title="Figure 8.2">Figure 8.2</a> such that triangles \(\triangle ABC\) and \(\triangle ADE\) are similar. Since \(\alpha / 1 = x / \beta\text{,}\) the line segment \(x\) has length \(\alpha \beta\text{.}\) A similar construction can be made if \(\beta \lt 1\text{.}\) We will leave it as an exercise to show that the same triangle can be used to construct \(\alpha / \beta\) for \(\beta \neq 0\text{.}\)</p></article><figure class="figure figure-like" id="rRc"><div class="image-box" style="width: 80%; margin-left: 10%; margin-right: 10%;"><img src="generated/latex-image/fields-multiply.svg" role="img" class="contained" alt=""></div>
 <figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">8.2<span class="period">.</span></span><span class="space"> </span>Construction of products</figcaption></figure><article class="lemma theorem-like" id="fXW"><h6 class="heading">
 <span class="type">Lemma</span><span class="space"> </span><span class="codenumber">8.3</span><span class="period">.</span>
 </h6>
 <p id="Lvy">If \(\alpha\) is a constructible number, then \(\sqrt{\alpha}\) is a constructible number.</p></article><article class="proof" id="tGc"><h6 class="heading"><span class="type">Proof<span class="period">.</span></span></h6>
-<p id="MAR">In <a class="xref" data-knowl="./knowl/figure-root-construction.html" title="Figure 8.4">Figure 8.4</a> the triangles \(\triangle ABD\text{,}\) \(\triangle BCD\text{,}\) and \(\triangle ABC\) are similar; hence, \(1 /x = x / \alpha\text{,}\) or \(x^2 = \alpha\text{.}\)</p></article><figure class="figure figure-like" id="XYl"><div class="image-box" style="width: 80%; margin-left: 10%; margin-right: 10%;"><img src="images/fields-root.svg" role="img" style="width: 100%; height: auto;" alt=""></div>
+<p id="MAR">In <a class="xref" data-knowl="./knowl/figure-root-construction.html" title="Figure 8.4">Figure 8.4</a> the triangles \(\triangle ABD\text{,}\) \(\triangle BCD\text{,}\) and \(\triangle ABC\) are similar; hence, \(1 /x = x / \alpha\text{,}\) or \(x^2 = \alpha\text{.}\)</p></article><figure class="figure figure-like" id="XYl"><div class="image-box" style="width: 80%; margin-left: 10%; margin-right: 10%;"><img src="generated/latex-image/fields-root.svg" role="img" class="contained" alt=""></div>
 <figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">8.4<span class="period">.</span></span><span class="space"> </span>Construction of roots</figcaption></figure><p id="Tos">By <a class="xref" data-knowl="./knowl/theorem-constructible-numbers.html" title="Theorem 8.1">Theorem 8.1</a>, we can locate in the plane any point \(P =( p, q)\) that has rational coordinates \(p\) and \(q\text{.}\) We need to know what other points can be constructed with a compass and straightedge from points with rational coordinates.</p>
 <article class="lemma theorem-like" id="Mff"><h6 class="heading">
 <span class="type">Lemma</span><span class="space"> </span><span class="codenumber">8.5</span><span class="period">.</span>
@@ -474,7 +488,7 @@ x = \frac{- B \pm \sqrt{B^2 - 4 A C} }{2 A}
 <article class="exercise exercise-like" id="aMx"><h6 class="heading"><span class="codenumber">1<span class="period">.</span></span></h6>
 <p id="ThY">Write up a careful argument for question 4 from the activity <a href="section-constructions.html#tVH" class="internal" title="Worksheet 8.1.2: Activity: Constructible Numbers">Constructible Numbers</a>: Prove that if \(a\) and \(b\) are constructible numbers, with \(b \ne 0\text{,}\) then \(a/b\) is also constructible.</p>
 <div class="solutions">
-<a data-knowl="" class="id-ref hint-knowl original" data-refid="hk-GTG" id="GTG"><span class="type">Hint</span></a><div class="hidden-content tex2jax_ignore" id="hk-GTG"><div class="hint solution-like"><p id="naP">As suggested in the worksheet, you will modify the argument that \(a\cdot b\) is constructible when \(a\) and \(b\) are.  That is, you should use similar triangles.  Make sure you explain why you can construct the similar triangles you need, and also why the side you find really is \(a/b\text{.}\)</p></div></div>
+<a data-knowl="" class="id-ref hint-knowl original" data-refid="hk-GTG" id="GTG"><span class="type">Hint.</span> </a><div class="hidden-content tex2jax_ignore" id="hk-GTG"><div class="hint solution-like"><p id="naP">As suggested in the worksheet, you will modify the argument that \(a\cdot b\) is constructible when \(a\) and \(b\) are.  That is, you should use similar triangles.  Make sure you explain why you can construct the similar triangles you need, and also why the side you find really is \(a/b\text{.}\)</p></div></div>
 </div></article></section></section></div></main>
 </div>
 <script src="https://unpkg.com/prismjs@v1.22.0/components/prism-core.min.js"></script><script src="https://unpkg.com/prismjs@v1.22.0/plugins/autoloader/prism-autoloader.min.js"></script>

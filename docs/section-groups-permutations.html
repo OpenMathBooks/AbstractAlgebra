@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2021-03-25T19:19:13-06:00       *-->
+<!--*       on 2021-08-19T13:10:19-06:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -14,36 +14,42 @@
 <title>AATA Permutation Groups</title>
 <meta name="Keywords" content="Authored in PreTeXt">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<script src="https://sagecell.sagemath.org/embedded_sagecell.js"></script><script type="text/x-mathjax-config">
-MathJax.Hub.Config({
-    tex2jax: {
-        inlineMath: [['\\(','\\)']]
+<script src="https://sagecell.sagemath.org/embedded_sagecell.js"></script><script>window.MathJax = {
+  tex: {
+    inlineMath: [['\\(','\\)']],
+    tags: "none",
+    useLabelIds: true,
+    tagSide: "right",
+    tagIndent: ".8em",
+    packages: {'[+]': ['base', 'extpfeil', 'ams', 'amscd', 'newcommand', 'knowl']}
+  },
+  options: {
+    ignoreHtmlClass: "tex2jax_ignore",
+    processHtmlClass: "has_am",
+    renderActions: {
+        findScript: [10, function (doc) {
+            document.querySelectorAll('script[type^="math/tex"]').forEach(function(node) {
+                var display = !!node.type.match(/; *mode=display/);
+                var math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display);
+                var text = document.createTextNode('');
+                node.parentNode.replaceChild(text, node);
+                math.start = {node: text, delim: '', n: 0};
+                math.end = {node: text, delim: '', n: 0};
+                doc.math.push(math);
+            });
+        }, '']
     },
-    asciimath2jax: {
-        ignoreClass: ".*",
-        processClass: "has_am"
-    },
-    jax: ["input/AsciiMath"],
-    extensions: ["asciimath2jax.js"],
-    TeX: {
-        extensions: ["extpfeil.js", "autobold.js", "https://pretextbook.org/js/lib/mathjaxknowl.js", "AMScd.js", ],
-        // scrolling to fragment identifiers is controlled by other Javascript
-        positionToHash: false,
-        equationNumbers: { autoNumber: "none", useLabelIds: true, },
-        TagSide: "right",
-        TagIndent: ".8em",
-    },
-    // HTML-CSS output Jax to be dropped for MathJax 3.0
-    "HTML-CSS": {
-        scale: 88,
-        mtextFontInherit: true,
-    },
-    CommonHTML: {
-        scale: 88,
-        mtextFontInherit: true,
-    },
-});
-</script><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS_CHTML-full"></script><link href="https://unpkg.com/prismjs@v1.22.0/themes/prism.css" rel="stylesheet">
+  },
+  chtml: {
+    scale: 0.88,
+    mtextInheritFont: true
+  },
+  loader: {
+    load: ['input/asciimath', '[tex]/extpfeil', '[tex]/amscd', '[tex]/newcommand', '[pretext]/mathjaxknowl3.js'],
+    paths: {pretext: "https://pretextbook.org/js/lib"},
+  },
+};
+</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><link href="https://unpkg.com/prismjs@v1.22.0/themes/prism.css" rel="stylesheet">
 <script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/jquery.min.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/0.13/pretext.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/0.13/pretext_add_on.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script xmlns:svg="http://www.w3.org/2000/svg">sagecellEvalName='Evaluate (Sage)';
 </script><link xmlns:svg="http://www.w3.org/2000/svg" href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
 <link xmlns:svg="http://www.w3.org/2000/svg" href="https://fonts.googleapis.com/css?family=Inconsolata:400,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
@@ -91,7 +97,7 @@ MathJax.Hub.Config({
 \newcommand{\amp}{&amp;}
 \)</div>
 <header id="masthead" class="smallbuttons"><div class="banner"><div class="container">
-<a id="logo-link" href="http://abstract.pugetsound.edu" target="_blank"><img src="images/cover_aata_2020.png" alt="Logo image"></a><div class="title-container">
+<a id="logo-link" href="http://abstract.pugetsound.edu" target="_blank"><img src="external/images/cover_aata_2020.png" alt="Logo image"></a><div class="title-container">
 <h1 class="heading"><a href="aata-toc.html"><span class="title">Abstract Algebra:</span> <span class="subtitle">Theory and Applications, Remixed!</span></a></h1>
 <p class="byline">Thomas W. Judson</p>
 </div>
@@ -99,11 +105,11 @@ MathJax.Hub.Config({
 <nav xmlns:svg="http://www.w3.org/2000/svg" id="primary-navbar" class="navbar"><div class="container">
 <div class="navbar-top-buttons">
 <button class="sidebar-left-toggle-button button active" aria-label="Show or hide table of contents sidebar">Contents</button><div class="tree-nav toolbar toolbar-divisor-3">
-<a class="index-button toolbar-item button" href="index-1.html" title="Index">Index</a><span class="threebuttons"><a id="previousbutton" class="previous-button toolbar-item button" href="section-groups-cayley.html" title="Previous">Prev</a><a id="upbutton" class="up-button button toolbar-item" href="groups.html" title="Up">Up</a><a id="nextbutton" class="next-button button toolbar-item" href="section-solvable-groups.html" title="Next">Next</a></span>
+<a class="index-button toolbar-item button" href="index-1.html" title="Index">Index</a><span class="threebuttons"><a id="previousbutton" class="previous-button toolbar-item button" href="section-groups-cayley.html" title="Previous">Prev</a><a id="upbutton" class="up-button button toolbar-item" href="groups-structure.html" title="Up">Up</a><a id="nextbutton" class="next-button button toolbar-item" href="section-solvable-groups.html" title="Next">Next</a></span>
 </div>
 </div>
 <div class="navbar-bottom-buttons toolbar toolbar-divisor-4">
-<button class="sidebar-left-toggle-button button toolbar-item active">Contents</button><a class="previous-button toolbar-item button" href="section-groups-cayley.html" title="Previous">Prev</a><a class="up-button button toolbar-item" href="groups.html" title="Up">Up</a><a class="next-button button toolbar-item" href="section-solvable-groups.html" title="Next">Next</a>
+<button class="sidebar-left-toggle-button button toolbar-item active">Contents</button><a class="previous-button toolbar-item button" href="section-groups-cayley.html" title="Previous">Prev</a><a class="up-button button toolbar-item" href="groups-structure.html" title="Up">Up</a><a class="next-button button toolbar-item" href="section-solvable-groups.html" title="Next">Next</a>
 </div>
 </div></nav></header><div class="page">
 <div xmlns:svg="http://www.w3.org/2000/svg" id="sidebar-left" class="sidebar" role="navigation"><div class="sidebar-content">
@@ -210,7 +216,7 @@ MathJax.Hub.Config({
 </li>
 <li class="link part"><a href="part-more-group-theory.html" data-scroll="part-more-group-theory"><span class="codenumber">III</span> <span class="title">More Group Theory</span></a></li>
 <li class="link">
-<a href="groups.html" data-scroll="nRa"><span class="codenumber">10</span> <span class="title">Some of the Structure of Groups</span></a><ul>
+<a href="groups-structure.html" data-scroll="nRa"><span class="codenumber">10</span> <span class="title">Some of the Structure of Groups</span></a><ul>
 <li><a href="section-groups-cayley.html" data-scroll="CTu">Isomorphisms and Cayley's Theorem</a></li>
 <li><a href="section-groups-permutations.html" data-scroll="mjE" class="active">Permutation Groups</a></li>
 <li><a href="section-solvable-groups.html" data-scroll="WbU">Solvable Groups</a></li>
@@ -345,7 +351,7 @@ MathJax.Hub.Config({
 \end{align*}
 </div>
 <p class="continuation">The following table tells us how to multiply elements in the permutation group \(G\text{.}\)</p>
-<div class="sidebyside"><div class="sbsrow" style="margin-left:0%;margin-right:0%;"><div class="sbspanel" style="width:100%;justify-content:flex-start;"><div class="displaymath" id="Nlv">
+<div class="sidebyside"><div class="sbsrow" style="margin-left:0%;margin-right:0%;"><div class="sbspanel top" style="width:100%;"><div class="displaymath" id="Nlv">
 \begin{equation*}
 \begin{array}{c|cccc}
 \circ &amp; \identity &amp; \sigma &amp; \tau &amp; \mu \\ \hline
@@ -579,30 +585,39 @@ x   &amp; x \notin X_i
 <span class="type">Remark</span><span class="space"> </span><span class="codenumber">10.13</span><span class="period">.</span>
 </h6>
 <p id="WFh">From this point forward we will find it convenient to use cycle notation to represent permutations. When using cycle notation, we often denote the identity permutation by \((1)\text{.}\)</p></article></section><section class="worksheet" id="VeP"><h3 class="heading hide-type">
-<span class="type">Worksheet</span> <span class="codenumber">10.2.2</span> <span class="title">Activity: Writing Cycles and Permutations</span>
+<span class="type">Worksheet</span> <span class="codenumber">10.2.2</span> <span class="title">Activity: Writing Cycles and Permutations</span><div class="print-links">
+<a href="ws_groups-permutations-a4.html" class="a4">A4</a><a href="ws_groups-permutations-letter.html" class="us">US</a>
+</div>
 </h3>
 <section class="introduction" id="gJn"><p id="LLd">Goal: Understand how elements of \(S_n\) can be represented as cycles and products of cycles.</p></section><article class="exercise exercise-like" id="MQw"><h6 class="heading"><span class="codenumber">1<span class="period">.</span></span></h6>
 <p id="rSm">Can every permutation in \(S_n\) be represented using cycle notation?  How could you represent the permutation \(\begin{pmatrix}1 \amp 2 \amp 3 \amp 4 \amp 5 \amp 6 \amp 7 \amp 8 \amp 9 \\ 3 \amp 5 \amp 2 \amp 8 \amp 7 \amp 9 \amp 6 \amp 1 \amp 4  \end{pmatrix}\text{?}\)</p>
-<div class="solutions"></div></article><article class="exercise exercise-like" id="sXF"><h6 class="heading"><span class="codenumber">2<span class="period">.</span></span></h6>
+<div class="solutions"></div>
+<div class="workspace" data-space="2in"></div></article><article class="exercise exercise-like" id="sXF"><h6 class="heading"><span class="codenumber">2<span class="period">.</span></span></h6>
 <p id="XZv">How should we define “cycle”?  Write a definition.  Some considerations: is \((132)(45)\) a single cycle or two cycles?  Is \((3124)\) a cycle?  What should we call the <dfn class="terminology">length</dfn> of a cycle?</p>
-<div class="solutions"></div></article><article class="exercise exercise-like" id="ZeO"><h6 class="heading"><span class="codenumber">3<span class="period">.</span></span></h6>
+<div class="solutions"></div>
+<div class="workspace" data-space="2in"></div></article><article class="exercise exercise-like" id="ZeO"><h6 class="heading"><span class="codenumber">3<span class="period">.</span></span></h6>
 <p id="EgE">Here are a few permutations of \(S_7\text{,}\) written as products of cycles.  Are there other ways to write each of these using cycle notation?  What makes two products of cycles the <em class="emphasis">same</em>?</p>
 <div class="displaymath">
 \begin{equation*}
 (142)(2534)(46)(135) \qquad\quad (12546) \qquad\quad (16)(14)(15)(12) \qquad\quad (12)(37)(25)(37)(45)(46)
 \end{equation*}
 </div>
-<div class="solutions"></div></article><hr class="pagebreak">
+<div class="solutions"></div>
+<div class="workspace" data-space="2in"></div></article><hr class="pagebreak">
 <p id="IQx">A <em class="emphasis">transposition</em> (or \(2\)-cycle) is a cycle of <em class="emphasis">length</em> 2.  That is, it swaps (transposes) a pair of elements.</p>
 <article class="exercise exercise-like" id="FlX"><h6 class="heading"><span class="codenumber">4<span class="period">.</span></span></h6>
 <p id="knN">Can the cycle \((13254)\) be written as the product of transpositions?  Can it be written as the product of transpositions in more than one way?</p>
-<div class="solutions"></div></article><article class="exercise exercise-like" id="ltg"><h6 class="heading"><span class="codenumber">5<span class="period">.</span></span></h6>
+<div class="solutions"></div>
+<div class="workspace" data-space="2in"></div></article><article class="exercise exercise-like" id="ltg"><h6 class="heading"><span class="codenumber">5<span class="period">.</span></span></h6>
 <p id="QuW">What about the product \((124)(2354)\text{?}\)</p>
-<div class="solutions"></div></article><article class="exercise exercise-like" id="RAp"><h6 class="heading"><span class="codenumber">6<span class="period">.</span></span></h6>
+<div class="solutions"></div>
+<div class="workspace" data-space="2in"></div></article><article class="exercise exercise-like" id="RAp"><h6 class="heading"><span class="codenumber">6<span class="period">.</span></span></h6>
 <p id="wCf">Can you write \((13)(24)(45)(15)(26)(13)\) as the product of more than 6 transpositions?  Fewer than 6 transpositions?  Can you write it as the product of an odd number of transpositions?</p>
-<div class="solutions"></div></article><article class="exercise exercise-like" id="xHy"><h6 class="heading"><span class="codenumber">7<span class="period">.</span></span></h6>
+<div class="solutions"></div>
+<div class="workspace" data-space="2in"></div></article><article class="exercise exercise-like" id="xHy"><h6 class="heading"><span class="codenumber">7<span class="period">.</span></span></h6>
 <p id="cJo">What numbers of transpositions can you write the identity \((1)\) as?</p>
-<div class="solutions"></div></article></section><section class="subsection" id="yxW"><h3 class="heading hide-type">
+<div class="solutions"></div>
+<div class="workspace" data-space="0.1in"></div></article></section><section class="subsection" id="yxW"><h3 class="heading hide-type">
 <span class="type">Subsection</span> <span class="codenumber">10.2.3</span> <span class="title">Transpositions</span>
 </h3>
 <p id="nDs">The simplest permutation is a cycle of length \(2\text{.}\) Such cycles are called <dfn class="terminology">transpositions</dfn>.  Since</p>
@@ -776,7 +791,7 @@ x   &amp; x \notin X_i
 </div></li>
 </ol>
 <div class="solutions">
-<a data-knowl="" class="id-ref answer-knowl original" data-refid="hk-qTK" id="qTK"><span class="type">Answer</span></a><div class="hidden-content tex2jax_ignore" id="hk-qTK"><div class="answer solution-like"><p id="YuH">(a) \((12453)\text{;}\) (b) \((14)(35)\text{;}\) (c) \((13)(25)\text{;}\) (d) \((24)\text{.}\)</p></div></div>
+<a data-knowl="" class="id-ref answer-knowl original" data-refid="hk-qTK" id="qTK"><span class="type">Answer.</span> </a><div class="hidden-content tex2jax_ignore" id="hk-qTK"><div class="answer solution-like"><p id="YuH">(a) \((12453)\text{;}\) (b) \((14)(35)\text{;}\) (c) \((13)(25)\text{;}\) (d) \((24)\text{.}\)</p></div></div>
 </div></article><article class="exercise exercise-like" id="tOq"><h6 class="heading"><span class="codenumber">2<span class="period">.</span></span></h6>
 <p id="ucL">Compute each of the following.</p>
 <ol class="lower-alpha cols2">
@@ -798,7 +813,7 @@ x   &amp; x \notin X_i
 <li id="fpm"><p id="vie">\(\displaystyle [(1235)(467)]^{-1}\)</p></li>
 </ol>
 <div class="solutions">
-<a data-knowl="" class="id-ref answer-knowl original" data-refid="hk-XaT" id="XaT"><span class="type">Answer</span></a><div class="hidden-content tex2jax_ignore" id="hk-XaT"><div class="answer solution-like"><p id="EBQ">(a) \((135)(24)\text{;}\) (b) \((253)\text{;}\) (c) \((14)(23)\text{;}\) (d) \((12)(56)\text{;}\) (e) \((1324)\text{;}\) (f) \((13254)\text{;}\) (g) \((134)(25)\text{;}\) (h) \((14)(235)\text{;}\) (i) \((143)(25)\text{;}\) (j) \((1)\text{;}\) (k) \(4\) (i.e., the order of the element); (l) \(2\text{;}\) (m) \((12)\text{;}\) (n) \((17352)\text{;}\) (o) \((374)\text{;}\) (p) \((476)(1532)\text{.}\)</p></div></div>
+<a data-knowl="" class="id-ref answer-knowl original" data-refid="hk-XaT" id="XaT"><span class="type">Answer.</span> </a><div class="hidden-content tex2jax_ignore" id="hk-XaT"><div class="answer solution-like"><p id="EBQ">(a) \((135)(24)\text{;}\) (b) \((253)\text{;}\) (c) \((14)(23)\text{;}\) (d) \((12)(56)\text{;}\) (e) \((1324)\text{;}\) (f) \((13254)\text{;}\) (g) \((134)(25)\text{;}\) (h) \((14)(235)\text{;}\) (i) \((143)(25)\text{;}\) (j) \((1)\text{;}\) (k) \(4\) (i.e., the order of the element); (l) \(2\text{;}\) (m) \((12)\text{;}\) (n) \((17352)\text{;}\) (o) \((374)\text{;}\) (p) \((476)(1532)\text{.}\)</p></div></div>
 </div></article><article class="exercise exercise-like" id="ZVz"><h6 class="heading"><span class="codenumber">3<span class="period">.</span></span></h6>
 <p id="ajU">Express the following permutations as products of transpositions and identify them as even or odd.</p>
 <ol class="lower-alpha cols2">
@@ -809,7 +824,7 @@ x   &amp; x \notin X_i
 <li id="jZf"><p id="zRX">\(\displaystyle (142637)\)</p></li>
 </ol>
 <div class="solutions">
-<a data-knowl="" class="id-ref answer-knowl original" data-refid="hk-Dic" id="Dic"><span class="type">Answer</span></a><div class="hidden-content tex2jax_ignore" id="hk-Dic"><div class="answer solution-like"><p id="kIZ">(a) \((16)(15)(13)(14)\) (even); (b) \((15)(56)(23)(24)\) (even); (c) \((16)(14)(12)\) (odd); (d) \((17)(72)(25)(54)(14)(42)(23)(15)(54)(46)(63)(32)\) (even); (e) \((14)(42)(26)(63)(37)\) (odd).</p></div></div>
+<a data-knowl="" class="id-ref answer-knowl original" data-refid="hk-Dic" id="Dic"><span class="type">Answer.</span> </a><div class="hidden-content tex2jax_ignore" id="hk-Dic"><div class="answer solution-like"><p id="kIZ">(a) \((16)(15)(13)(14)\) (even); (b) \((15)(56)(23)(24)\) (even); (c) \((16)(14)(12)\) (odd); (d) \((17)(72)(25)(54)(14)(42)(23)(15)(54)(46)(63)(32)\) (even); (e) \((14)(42)(26)(63)(37)\) (odd).</p></div></div>
 </div></article><article class="exercise exercise-like" id="GcI"><h6 class="heading"><span class="codenumber">5<span class="period">.</span></span></h6>
 <p id="Grd">List all of the subgroups of \(S_4\text{.}\) Find each of the following sets:</p>
 <ol class="lower-alpha">
@@ -819,7 +834,7 @@ x   &amp; x \notin X_i
 </ol>
 <p class="continuation">Are any of these sets subgroups of \(S_4\text{?}\)</p>
 <div class="solutions">
-<a data-knowl="" class="id-ref hint-knowl original" data-refid="hk-jpl" id="jpl"><span class="type">Hint</span></a><div class="hidden-content tex2jax_ignore" id="hk-jpl"><div class="hint solution-like">
+<a data-knowl="" class="id-ref hint-knowl original" data-refid="hk-jpl" id="jpl"><span class="type">Hint.</span> </a><div class="hidden-content tex2jax_ignore" id="hk-jpl"><div class="hint solution-like">
 <p id="JlJ">(a) \(\{ (13), (13)(24), (132), (134), (1324), (1342) \}\) is not a subgroup.</p>
 <p id="psS">(b) \(\{(1), (134), (143), (13), (14), (34)\}\) is a subgroup.</p>
 <p id="VAb">(c) \(\{(13), (134)\}\) is not a subgroup.</p>
@@ -827,23 +842,23 @@ x   &amp; x \notin X_i
 </div></article><article class="exercise exercise-like" id="mjR"><h6 class="heading"><span class="codenumber">6<span class="period">.</span></span></h6>
 <p id="mym">Find all of the subgroups in \(A_4\text{.}\) What is the order of each subgroup?</p>
 <div class="solutions">
-<a data-knowl="" class="id-ref hint-knowl original" data-refid="hk-Pwu" id="Pwu"><span class="type">Hint</span></a><div class="hidden-content tex2jax_ignore" id="hk-Pwu"><div class="hint solution-like"><p id="BHk">There are subgroups of orders 1, 2, 3, 4, and 12.  You have multiple choices for the subgroups of order 2 and 3.</p></div></div>
+<a data-knowl="" class="id-ref hint-knowl original" data-refid="hk-Pwu" id="Pwu"><span class="type">Hint.</span> </a><div class="hidden-content tex2jax_ignore" id="hk-Pwu"><div class="hint solution-like"><p id="BHk">There are subgroups of orders 1, 2, 3, 4, and 12.  You have multiple choices for the subgroups of order 2 and 3.</p></div></div>
 </div></article><article class="exercise exercise-like" id="Sra"><h6 class="heading"><span class="codenumber">7<span class="period">.</span></span></h6>
 <p id="SFv">Find all possible orders of elements in \(S_7\) and \(A_7\text{.}\)</p>
 <div class="solutions">
-<a data-knowl="" class="id-ref answer-knowl original" data-refid="hk-vDD" id="vDD"><span class="type">Answer</span></a><div class="hidden-content tex2jax_ignore" id="hk-vDD"><div class="answer solution-like"><p id="QQi">The possible orders in \(S_7\) are 1, 2, 3, 4, 5, 6, 7, 10, and 12.  In \(A_7\) you can only have orders 1, 2, 3, 5, 6, and 7.</p></div></div>
+<a data-knowl="" class="id-ref answer-knowl original" data-refid="hk-vDD" id="vDD"><span class="type">Answer.</span> </a><div class="hidden-content tex2jax_ignore" id="hk-vDD"><div class="answer solution-like"><p id="QQi">The possible orders in \(S_7\) are 1, 2, 3, 4, 5, 6, 7, 10, and 12.  In \(A_7\) you can only have orders 1, 2, 3, 5, 6, and 7.</p></div></div>
 </div></article><article class="exercise exercise-like" id="yyj"><h6 class="heading"><span class="codenumber">8<span class="period">.</span></span></h6>
 <p id="yME">Show that \(A_{10}\) contains an element of order \(15\text{.}\)</p>
 <div class="solutions">
-<a data-knowl="" class="id-ref hint-knowl original" data-refid="hk-bKM" id="bKM"><span class="type">Hint</span></a><div class="hidden-content tex2jax_ignore" id="hk-bKM"><div class="hint solution-like"><p id="hOt">\((12345)(678)\text{.}\)</p></div></div>
+<a data-knowl="" class="id-ref hint-knowl original" data-refid="hk-bKM" id="bKM"><span class="type">Hint.</span> </a><div class="hidden-content tex2jax_ignore" id="hk-bKM"><div class="hint solution-like"><p id="hOt">\((12345)(678)\text{.}\)</p></div></div>
 </div></article><article class="exercise exercise-like" id="eFs"><h6 class="heading"><span class="codenumber">9<span class="period">.</span></span></h6>
 <p id="eTN">Does \(A_8\) contain an element of order \(26\text{?}\)</p>
 <div class="solutions">
-<a data-knowl="" class="id-ref answer-knowl original" data-refid="hk-HRV" id="HRV"><span class="type">Answer</span></a><div class="hidden-content tex2jax_ignore" id="hk-HRV"><div class="answer solution-like"><p id="wXr">No.  We will give a good reason why in chapter 6.</p></div></div>
+<a data-knowl="" class="id-ref answer-knowl original" data-refid="hk-HRV" id="HRV"><span class="type">Answer.</span> </a><div class="hidden-content tex2jax_ignore" id="hk-HRV"><div class="answer solution-like"><p id="wXr">No.  We will give a good reason why in chapter 6.</p></div></div>
 </div></article><article class="exercise exercise-like" id="KMB"><h6 class="heading"><span class="codenumber">10<span class="period">.</span></span></h6>
 <p id="LaW">Find an element of largest order in \(S_n\) for \(n = 3, \ldots, 10\text{.}\)</p>
 <div class="solutions">
-<a data-knowl="" class="id-ref answer-knowl original" data-refid="hk-nZe" id="nZe"><span class="type">Answer</span></a><div class="hidden-content tex2jax_ignore" id="hk-nZe"><div class="answer solution-like"><p id="deA">\((123)\text{,}\)          \((1234)\text{,}\)          \((12)(345)\text{,}\) \((123456)\text{,}\)          \((123)(4567)\text{,}\)          \((123)(45678)\text{,}\)          \((1234)(56789)\text{,}\)          \((12)(345)(678910)\text{.}\)</p></div></div>
+<a data-knowl="" class="id-ref answer-knowl original" data-refid="hk-nZe" id="nZe"><span class="type">Answer.</span> </a><div class="hidden-content tex2jax_ignore" id="hk-nZe"><div class="answer solution-like"><p id="deA">\((123)\text{,}\)          \((1234)\text{,}\)          \((12)(345)\text{,}\) \((123456)\text{,}\)          \((123)(4567)\text{,}\)          \((123)(45678)\text{,}\)          \((1234)(56789)\text{,}\)          \((12)(345)(678910)\text{.}\)</p></div></div>
 </div></article></section><section class="exercises" id="hzY"><h3 class="heading hide-type">
 <span class="type">Exercises</span> <span class="codenumber">10.2.7</span> <span class="title">Collected Homework</span>
 </h3>

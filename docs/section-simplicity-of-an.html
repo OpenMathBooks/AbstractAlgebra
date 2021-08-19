@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2021-03-25T19:19:20-06:00       *-->
+<!--*       on 2021-08-19T13:10:27-06:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -14,36 +14,42 @@
 <title>AATA The group \(S_5\)</title>
 <meta name="Keywords" content="Authored in PreTeXt">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<script src="https://sagecell.sagemath.org/embedded_sagecell.js"></script><script type="text/x-mathjax-config">
-MathJax.Hub.Config({
-    tex2jax: {
-        inlineMath: [['\\(','\\)']]
+<script src="https://sagecell.sagemath.org/embedded_sagecell.js"></script><script>window.MathJax = {
+  tex: {
+    inlineMath: [['\\(','\\)']],
+    tags: "none",
+    useLabelIds: true,
+    tagSide: "right",
+    tagIndent: ".8em",
+    packages: {'[+]': ['base', 'extpfeil', 'ams', 'amscd', 'newcommand', 'knowl']}
+  },
+  options: {
+    ignoreHtmlClass: "tex2jax_ignore",
+    processHtmlClass: "has_am",
+    renderActions: {
+        findScript: [10, function (doc) {
+            document.querySelectorAll('script[type^="math/tex"]').forEach(function(node) {
+                var display = !!node.type.match(/; *mode=display/);
+                var math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display);
+                var text = document.createTextNode('');
+                node.parentNode.replaceChild(text, node);
+                math.start = {node: text, delim: '', n: 0};
+                math.end = {node: text, delim: '', n: 0};
+                doc.math.push(math);
+            });
+        }, '']
     },
-    asciimath2jax: {
-        ignoreClass: ".*",
-        processClass: "has_am"
-    },
-    jax: ["input/AsciiMath"],
-    extensions: ["asciimath2jax.js"],
-    TeX: {
-        extensions: ["extpfeil.js", "autobold.js", "https://pretextbook.org/js/lib/mathjaxknowl.js", "AMScd.js", ],
-        // scrolling to fragment identifiers is controlled by other Javascript
-        positionToHash: false,
-        equationNumbers: { autoNumber: "none", useLabelIds: true, },
-        TagSide: "right",
-        TagIndent: ".8em",
-    },
-    // HTML-CSS output Jax to be dropped for MathJax 3.0
-    "HTML-CSS": {
-        scale: 88,
-        mtextFontInherit: true,
-    },
-    CommonHTML: {
-        scale: 88,
-        mtextFontInherit: true,
-    },
-});
-</script><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS_CHTML-full"></script><link href="https://unpkg.com/prismjs@v1.22.0/themes/prism.css" rel="stylesheet">
+  },
+  chtml: {
+    scale: 0.88,
+    mtextInheritFont: true
+  },
+  loader: {
+    load: ['input/asciimath', '[tex]/extpfeil', '[tex]/amscd', '[tex]/newcommand', '[pretext]/mathjaxknowl3.js'],
+    paths: {pretext: "https://pretextbook.org/js/lib"},
+  },
+};
+</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><link href="https://unpkg.com/prismjs@v1.22.0/themes/prism.css" rel="stylesheet">
 <script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/jquery.min.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/0.13/pretext.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/0.13/pretext_add_on.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script xmlns:svg="http://www.w3.org/2000/svg">sagecellEvalName='Evaluate (Sage)';
 </script><link xmlns:svg="http://www.w3.org/2000/svg" href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
 <link xmlns:svg="http://www.w3.org/2000/svg" href="https://fonts.googleapis.com/css?family=Inconsolata:400,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
@@ -91,7 +97,7 @@ MathJax.Hub.Config({
 \newcommand{\amp}{&amp;}
 \)</div>
 <header id="masthead" class="smallbuttons"><div class="banner"><div class="container">
-<a id="logo-link" href="http://abstract.pugetsound.edu" target="_blank"><img src="images/cover_aata_2020.png" alt="Logo image"></a><div class="title-container">
+<a id="logo-link" href="http://abstract.pugetsound.edu" target="_blank"><img src="external/images/cover_aata_2020.png" alt="Logo image"></a><div class="title-container">
 <h1 class="heading"><a href="aata-toc.html"><span class="title">Abstract Algebra:</span> <span class="subtitle">Theory and Applications, Remixed!</span></a></h1>
 <p class="byline">Thomas W. Judson</p>
 </div>
@@ -99,11 +105,11 @@ MathJax.Hub.Config({
 <nav xmlns:svg="http://www.w3.org/2000/svg" id="primary-navbar" class="navbar"><div class="container">
 <div class="navbar-top-buttons">
 <button class="sidebar-left-toggle-button button active" aria-label="Show or hide table of contents sidebar">Contents</button><div class="tree-nav toolbar toolbar-divisor-3">
-<a class="index-button toolbar-item button" href="index-1.html" title="Index">Index</a><span class="threebuttons"><a id="previousbutton" class="previous-button toolbar-item button" href="section-solvable-groups.html" title="Previous">Prev</a><a id="upbutton" class="up-button button toolbar-item" href="groups.html" title="Up">Up</a><a id="nextbutton" class="next-button button toolbar-item" href="section-galois-applications.html" title="Next">Next</a></span>
+<a class="index-button toolbar-item button" href="index-1.html" title="Index">Index</a><span class="threebuttons"><a id="previousbutton" class="previous-button toolbar-item button" href="section-solvable-groups.html" title="Previous">Prev</a><a id="upbutton" class="up-button button toolbar-item" href="groups-structure.html" title="Up">Up</a><a id="nextbutton" class="next-button button toolbar-item" href="section-galois-applications.html" title="Next">Next</a></span>
 </div>
 </div>
 <div class="navbar-bottom-buttons toolbar toolbar-divisor-4">
-<button class="sidebar-left-toggle-button button toolbar-item active">Contents</button><a class="previous-button toolbar-item button" href="section-solvable-groups.html" title="Previous">Prev</a><a class="up-button button toolbar-item" href="groups.html" title="Up">Up</a><a class="next-button button toolbar-item" href="section-galois-applications.html" title="Next">Next</a>
+<button class="sidebar-left-toggle-button button toolbar-item active">Contents</button><a class="previous-button toolbar-item button" href="section-solvable-groups.html" title="Previous">Prev</a><a class="up-button button toolbar-item" href="groups-structure.html" title="Up">Up</a><a class="next-button button toolbar-item" href="section-galois-applications.html" title="Next">Next</a>
 </div>
 </div></nav></header><div class="page">
 <div xmlns:svg="http://www.w3.org/2000/svg" id="sidebar-left" class="sidebar" role="navigation"><div class="sidebar-content">
@@ -210,7 +216,7 @@ MathJax.Hub.Config({
 </li>
 <li class="link part"><a href="part-more-group-theory.html" data-scroll="part-more-group-theory"><span class="codenumber">III</span> <span class="title">More Group Theory</span></a></li>
 <li class="link">
-<a href="groups.html" data-scroll="nRa"><span class="codenumber">10</span> <span class="title">Some of the Structure of Groups</span></a><ul>
+<a href="groups-structure.html" data-scroll="nRa"><span class="codenumber">10</span> <span class="title">Some of the Structure of Groups</span></a><ul>
 <li><a href="section-groups-cayley.html" data-scroll="CTu">Isomorphisms and Cayley's Theorem</a></li>
 <li><a href="section-groups-permutations.html" data-scroll="mjE">Permutation Groups</a></li>
 <li><a href="section-solvable-groups.html" data-scroll="WbU">Solvable Groups</a></li>
@@ -312,27 +318,38 @@ MathJax.Hub.Config({
 <span class="type">Section</span> <span class="codenumber">10.4</span> <span class="title">The group \(S_5\)</span>
 </h2>
 <section class="worksheet" id="PDY"><h3 class="heading hide-type">
-<span class="type">Worksheet</span> <span class="codenumber">10.4.1</span> <span class="title">Activity: Working with \(S_5\)</span>
+<span class="type">Worksheet</span> <span class="codenumber">10.4.1</span> <span class="title">Activity: Working with \(S_5\)</span><div class="print-links">
+<a href="ws_grp-struct-s5-a4.html" class="a4">A4</a><a href="ws_grp-struct-s5-letter.html" class="us">US</a>
+</div>
 </h3>
 <section class="introduction" id="vbn"><p id="p-2785">We are close to our goal of finding a degree 5 polynomial whose roots cannot be expressed in a nice way (using radicals and field operations).  It turns out that a key step in this goal is understanding the group \(S_5\text{.}\)  In this activity, we will get a better feel for this group by examining the “cycle structure” of its elements.</p></section><article class="exercise exercise-like" id="exercise-727"><h6 class="heading"><span class="codenumber">1<span class="period">.</span></span></h6>
 <p id="p-2786">Every element in \(S_5\) can be written as a single cycle or a product of disjoint cycles.  Write down all the different possibilities for how these cycles or products of cycles might look (focusing on their “shape” rather than the specific numbers in the cycles).</p>
-<div class="solutions"></div></article><article class="exercise exercise-like" id="biw"><h6 class="heading"><span class="codenumber">2<span class="period">.</span></span></h6>
+<div class="solutions"></div>
+<div class="workspace" data-space="1in"></div></article><article class="exercise exercise-like" id="biw"><h6 class="heading"><span class="codenumber">2<span class="period">.</span></span></h6>
 <p id="mrv">Does \(S_5\) contain a non-trivial subgroup that contains all the transpositions (2-cycles)?  What is it, or why not?</p>
-<div class="solutions"></div></article><article class="exercise exercise-like" id="HpF"><h6 class="heading"><span class="codenumber">3<span class="period">.</span></span></h6>
+<div class="solutions"></div>
+<div class="workspace" data-space="1in"></div></article><article class="exercise exercise-like" id="HpF"><h6 class="heading"><span class="codenumber">3<span class="period">.</span></span></h6>
 <p id="SyE">Does \(S_5\) contain a non-trivial subgroup that includes the elements \((12)\text{,}\) \((13)\text{,}\) \((14)\text{,}\) and \((15)\text{?}\)  What else would it contain?  Hint: what is \((12)(14)(12)\text{?}\)</p>
-<div class="solutions"></div></article><article class="exercise exercise-like" id="nwO"><h6 class="heading"><span class="codenumber">4<span class="period">.</span></span></h6>
+<div class="solutions"></div>
+<div class="workspace" data-space="1in"></div></article><article class="exercise exercise-like" id="nwO"><h6 class="heading"><span class="codenumber">4<span class="period">.</span></span></h6>
 <p id="yFN">Does \(S_5\) contain a non-trivial subgroup that contains \((24) \) and \((12345)\text{?}\)  Think about what else such a subgroup would contain.</p>
-<div class="solutions"></div></article><article class="exercise exercise-like" id="TDX"><h6 class="heading"><span class="codenumber">5<span class="period">.</span></span></h6>
-<p id="eMW">What if you started with a different 2-cycle and a different 5-cycle?Would any pair of 5-cycle and 2-cycle work?</p></article><hr class="pagebreak">
+<div class="solutions"></div>
+<div class="workspace" data-space="1in"></div></article><article class="exercise exercise-like" id="TDX"><h6 class="heading"><span class="codenumber">5<span class="period">.</span></span></h6>
+<p id="eMW">What if you started with a different 2-cycle and a different 5-cycle?Would any pair of 5-cycle and 2-cycle work?</p>
+<div class="workspace" data-space="0.1in"></div></article><hr class="pagebreak">
 <p id="p-2795">Now let's consider the alternating group \(A_5\text{.}\)  Recall this is the group of all permutations in \(S_5\) that can be written as the product of an even number of 2-cycles.</p>
 <article class="exercise exercise-like" id="exercise-732"><h6 class="heading"><span class="codenumber">6<span class="period">.</span></span></h6>
-<p id="p-2796">If you write elements of \(A_5\) as the product of disjoint cycles, what sorts of cycle structures do you get?</p></article><article class="exercise exercise-like" id="zLg"><h6 class="heading"><span class="codenumber">7<span class="period">.</span></span></h6>
+<p id="p-2796">If you write elements of \(A_5\) as the product of disjoint cycles, what sorts of cycle structures do you get?</p>
+<div class="workspace" data-space="1.5in"></div></article><article class="exercise exercise-like" id="zLg"><h6 class="heading"><span class="codenumber">7<span class="period">.</span></span></h6>
 <p id="KUf">Does \(A_5\) contain a non-trivial subgroup that contains all the 3-cycles? Hint: show that every pair of transpositions can be written as a product of 3-cycles.</p>
-<div class="solutions"></div></article><article class="exercise exercise-like" id="fSp"><h6 class="heading"><span class="codenumber">8<span class="period">.</span></span></h6>
+<div class="solutions"></div>
+<div class="workspace" data-space="1.5in"></div></article><article class="exercise exercise-like" id="fSp"><h6 class="heading"><span class="codenumber">8<span class="period">.</span></span></h6>
 <p id="rbo">Now consider <em class="emphasis">normal</em> subgroups \(N\) of \(A_5\text{.}\)  Remember, a normal subgroup is closed under conjugates (here the conjugate would be  \(aba\inv\) where \(a \in A_5\) and \(b \in N\)). Does \(A_5\) contain a non-trivial normal subgroup that contains \((123)\text{?}\)</p>
-<div class="solutions"></div></article><article class="exercise exercise-like" id="LZy"><h6 class="heading"><span class="codenumber">9<span class="period">.</span></span></h6>
+<div class="solutions"></div>
+<div class="workspace" data-space="1.5in"></div></article><article class="exercise exercise-like" id="LZy"><h6 class="heading"><span class="codenumber">9<span class="period">.</span></span></h6>
 <p id="Xix">Look at the different cycle structures of elements in \(A_n\) and start taking conjugates.  Will you be able to get \((123)\) starting from any non-identity element?</p>
-<div class="solutions"></div></article></section><section class="subsection" id="Zeo"><h3 class="heading hide-type">
+<div class="solutions"></div>
+<div class="workspace" data-space="0.1in"></div></article></section><section class="subsection" id="Zeo"><h3 class="heading hide-type">
 <span class="type">Subsection</span> <span class="codenumber">10.4.2</span> <span class="title">The Simplicity of the Alternating Group</span>
 </h3>
 <p id="nWq">Of special interest are groups with no nontrivial normal subgroups. Such groups are called <dfn class="terminology">simple groups</dfn>.  Of course, we already have a whole class of examples of simple groups, \({\mathbb Z}_p\text{,}\) where \(p\) is prime. These groups are trivially simple since they have no proper subgroups other than the subgroup consisting solely of the identity. Other examples of simple groups are not so easily found. We can, however, show that the alternating group, \(A_n\text{,}\) is simple for \(n \geq 5\text{.}\) The proof of this result requires several lemmas.</p>

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2021-03-25T19:17:28-06:00       *-->
+<!--*       on 2021-08-19T13:08:25-06:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -14,36 +14,42 @@
 <title>AATA Additional Exercises</title>
 <meta name="Keywords" content="Authored in PreTeXt">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<script src="https://sagecell.sagemath.org/embedded_sagecell.js"></script><script type="text/x-mathjax-config">
-MathJax.Hub.Config({
-    tex2jax: {
-        inlineMath: [['\\(','\\)']]
+<script src="https://sagecell.sagemath.org/embedded_sagecell.js"></script><script>window.MathJax = {
+  tex: {
+    inlineMath: [['\\(','\\)']],
+    tags: "none",
+    useLabelIds: true,
+    tagSide: "right",
+    tagIndent: ".8em",
+    packages: {'[+]': ['base', 'extpfeil', 'ams', 'amscd', 'newcommand', 'knowl']}
+  },
+  options: {
+    ignoreHtmlClass: "tex2jax_ignore",
+    processHtmlClass: "has_am",
+    renderActions: {
+        findScript: [10, function (doc) {
+            document.querySelectorAll('script[type^="math/tex"]').forEach(function(node) {
+                var display = !!node.type.match(/; *mode=display/);
+                var math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display);
+                var text = document.createTextNode('');
+                node.parentNode.replaceChild(text, node);
+                math.start = {node: text, delim: '', n: 0};
+                math.end = {node: text, delim: '', n: 0};
+                doc.math.push(math);
+            });
+        }, '']
     },
-    asciimath2jax: {
-        ignoreClass: ".*",
-        processClass: "has_am"
-    },
-    jax: ["input/AsciiMath"],
-    extensions: ["asciimath2jax.js"],
-    TeX: {
-        extensions: ["extpfeil.js", "autobold.js", "https://pretextbook.org/js/lib/mathjaxknowl.js", "AMScd.js", ],
-        // scrolling to fragment identifiers is controlled by other Javascript
-        positionToHash: false,
-        equationNumbers: { autoNumber: "none", useLabelIds: true, },
-        TagSide: "right",
-        TagIndent: ".8em",
-    },
-    // HTML-CSS output Jax to be dropped for MathJax 3.0
-    "HTML-CSS": {
-        scale: 88,
-        mtextFontInherit: true,
-    },
-    CommonHTML: {
-        scale: 88,
-        mtextFontInherit: true,
-    },
-});
-</script><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS_CHTML-full"></script><link href="https://unpkg.com/prismjs@v1.22.0/themes/prism.css" rel="stylesheet">
+  },
+  chtml: {
+    scale: 0.88,
+    mtextInheritFont: true
+  },
+  loader: {
+    load: ['input/asciimath', '[tex]/extpfeil', '[tex]/amscd', '[tex]/newcommand', '[pretext]/mathjaxknowl3.js'],
+    paths: {pretext: "https://pretextbook.org/js/lib"},
+  },
+};
+</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><link href="https://unpkg.com/prismjs@v1.22.0/themes/prism.css" rel="stylesheet">
 <script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/jquery.min.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/0.13/pretext.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/0.13/pretext_add_on.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script xmlns:svg="http://www.w3.org/2000/svg">sagecellEvalName='Evaluate (Sage)';
 </script><link xmlns:svg="http://www.w3.org/2000/svg" href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
 <link xmlns:svg="http://www.w3.org/2000/svg" href="https://fonts.googleapis.com/css?family=Inconsolata:400,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
@@ -91,7 +97,7 @@ MathJax.Hub.Config({
 \newcommand{\amp}{&amp;}
 \)</div>
 <header id="masthead" class="smallbuttons"><div class="banner"><div class="container">
-<a id="logo-link" href="http://abstract.pugetsound.edu" target="_blank"><img src="images/cover_aata_2020.png" alt="Logo image"></a><div class="title-container">
+<a id="logo-link" href="http://abstract.pugetsound.edu" target="_blank"><img src="external/images/cover_aata_2020.png" alt="Logo image"></a><div class="title-container">
 <h1 class="heading"><a href="aata-toc.html"><span class="title">Abstract Algebra:</span> <span class="subtitle">Theory and Applications, Remixed!</span></a></h1>
 <p class="byline">Thomas W. Judson</p>
 </div>
@@ -210,7 +216,7 @@ MathJax.Hub.Config({
 </li>
 <li class="link part"><a href="part-more-group-theory.html" data-scroll="part-more-group-theory"><span class="codenumber">III</span> <span class="title">More Group Theory</span></a></li>
 <li class="link">
-<a href="groups.html" data-scroll="nRa"><span class="codenumber">10</span> <span class="title">Some of the Structure of Groups</span></a><ul>
+<a href="groups-structure.html" data-scroll="nRa"><span class="codenumber">10</span> <span class="title">Some of the Structure of Groups</span></a><ul>
 <li><a href="section-groups-cayley.html" data-scroll="CTu">Isomorphisms and Cayley's Theorem</a></li>
 <li><a href="section-groups-permutations.html" data-scroll="mjE">Permutation Groups</a></li>
 <li><a href="section-solvable-groups.html" data-scroll="WbU">Solvable Groups</a></li>
@@ -320,28 +326,28 @@ MathJax.Hub.Config({
 <li id="Cpd"><p id="Fye">\(\displaystyle A \times D\)</p></li>
 </ol>
 <div class="solutions">
-<a data-knowl="" class="id-ref hint-knowl original" data-refid="hk-EVo" id="EVo"><span class="type">Hint</span></a><div class="hidden-content tex2jax_ignore" id="hk-EVo"><div class="hint solution-like"><p id="XQd">(a) \(A \times B = \{ (a,1), (a,2), (a,3), (b,1), (b,2), (b,3), (c,1), (c,2), (c,3) \}\text{;}\) (d) \(A \times D = \emptyset\text{.}\)</p></div></div>
+<a data-knowl="" class="id-ref hint-knowl original" data-refid="hk-EVo" id="EVo"><span class="type">Hint.</span> </a><div class="hidden-content tex2jax_ignore" id="hk-EVo"><div class="hint solution-like"><p id="XQd">(a) \(A \times B = \{ (a,1), (a,2), (a,3), (b,1), (b,2), (b,3), (c,1), (c,2), (c,3) \}\text{;}\) (d) \(A \times D = \emptyset\text{.}\)</p></div></div>
 </div></article><article class="exercise exercise-like" id="zBB"><h6 class="heading"><span class="codenumber">2<span class="period">.</span></span></h6>
 <p id="MVz">Find an example of two nonempty sets \(A\) and \(B\) for which \(A \times B = B \times A\) is true.</p></article><article class="exercise exercise-like" id="fIK"><h6 class="heading"><span class="codenumber">3<span class="period">.</span></span></h6>
 <p id="tcI">Prove \(A \cup \emptyset = A\) and \(A \cap \emptyset = \emptyset\text{.}\)</p></article><article class="exercise exercise-like" id="LPT"><h6 class="heading"><span class="codenumber">4<span class="period">.</span></span></h6>
 <p id="ZjR">Prove \(A \cup B = B \cup A\) and \(A \cap B = B \cap A\text{.}\)</p></article><article class="exercise exercise-like" id="rXc"><h6 class="heading"><span class="codenumber">5<span class="period">.</span></span></h6>
 <p id="Fra">Prove \(A \cup (B \cap C) = (A \cup B) \cap (A \cup C)\text{.}\)</p>
 <div class="solutions">
-<a data-knowl="" class="id-ref hint-knowl original" data-refid="hk-JFh" id="JFh"><span class="type">Hint</span></a><div class="hidden-content tex2jax_ignore" id="hk-JFh"><div class="hint solution-like"><p id="DXm">If \(x \in A \cup (B \cap C)\text{,}\) then either \(x \in A\) or \(x \in B \cap C\text{.}\) Thus, \(x \in A \cup B\) and \(A \cup C\text{.}\) Hence, \(x \in (A \cup B) \cap (A \cup C)\text{.}\) Therefore, \(A \cup (B \cap C) \subset (A \cup B) \cap (A \cup C)\text{.}\) Conversely, if \(x \in (A \cup B) \cap (A \cup C)\text{,}\) then \(x \in A \cup B\) and \(A \cup C\text{.}\) Thus, \(x \in A\) or \(x\) is in both \(B\) and \(C\text{.}\) So \(x \in A \cup (B \cap C)\) and therefore \((A \cup B) \cap (A \cup C) \subset A \cup (B \cap C)\text{.}\) Hence, \(A \cup (B \cap C) = (A \cup B) \cap (A \cup C)\text{.}\)</p></div></div>
+<a data-knowl="" class="id-ref hint-knowl original" data-refid="hk-JFh" id="JFh"><span class="type">Hint.</span> </a><div class="hidden-content tex2jax_ignore" id="hk-JFh"><div class="hint solution-like"><p id="DXm">If \(x \in A \cup (B \cap C)\text{,}\) then either \(x \in A\) or \(x \in B \cap C\text{.}\) Thus, \(x \in A \cup B\) and \(A \cup C\text{.}\) Hence, \(x \in (A \cup B) \cap (A \cup C)\text{.}\) Therefore, \(A \cup (B \cap C) \subset (A \cup B) \cap (A \cup C)\text{.}\) Conversely, if \(x \in (A \cup B) \cap (A \cup C)\text{,}\) then \(x \in A \cup B\) and \(A \cup C\text{.}\) Thus, \(x \in A\) or \(x\) is in both \(B\) and \(C\text{.}\) So \(x \in A \cup (B \cap C)\) and therefore \((A \cup B) \cap (A \cup C) \subset A \cup (B \cap C)\text{.}\) Hence, \(A \cup (B \cap C) = (A \cup B) \cap (A \cup C)\text{.}\)</p></div></div>
 </div></article><article class="exercise exercise-like" id="Yel"><h6 class="heading"><span class="codenumber">6<span class="period">.</span></span></h6>
 <p id="lyj">Prove \(A \cap (B \cup C) = (A \cap B) \cup (A \cap C)\text{.}\)</p></article><article class="exercise exercise-like" id="Elu"><h6 class="heading"><span class="codenumber">7<span class="period">.</span></span></h6>
 <p id="RFs">Prove \(A \subset B\) if and only if \(A \cap B = A\text{.}\)</p></article><article class="exercise exercise-like" id="ksD"><h6 class="heading"><span class="codenumber">8<span class="period">.</span></span></h6>
 <p id="xMB">Prove \((A \cap B)' = A' \cup B'\text{.}\)</p></article><article class="exercise exercise-like" id="QzM"><h6 class="heading"><span class="codenumber">9<span class="period">.</span></span></h6>
 <p id="dTK">Prove \(A \cup B = (A \cap B) \cup (A \setminus B) \cup (B \setminus A)\text{.}\)</p>
 <div class="solutions">
-<a data-knowl="" class="id-ref hint-knowl original" data-refid="hk-Opa" id="Opa"><span class="type">Hint</span></a><div class="hidden-content tex2jax_ignore" id="hk-Opa"><div class="hint solution-like"><p id="kev">\((A \cap B) \cup (A \setminus B) \cup (B \setminus A) = (A \cap B) \cup (A \cap B') \cup (B \cap A') = [A \cap (B \cup B')] \cup (B \cap A') = A \cup (B \cap A') = (A \cup B) \cap (A \cup A') = A \cup B\text{.}\)</p></div></div>
+<a data-knowl="" class="id-ref hint-knowl original" data-refid="hk-Opa" id="Opa"><span class="type">Hint.</span> </a><div class="hidden-content tex2jax_ignore" id="hk-Opa"><div class="hint solution-like"><p id="kev">\((A \cap B) \cup (A \setminus B) \cup (B \setminus A) = (A \cap B) \cup (A \cap B') \cup (B \cap A') = [A \cap (B \cup B')] \cup (B \cap A') = A \cup (B \cap A') = (A \cup B) \cap (A \cup A') = A \cup B\text{.}\)</p></div></div>
 </div></article><article class="exercise exercise-like" id="wGV"><h6 class="heading"><span class="codenumber">10<span class="period">.</span></span></h6>
 <p id="KaT">Prove \((A \cup B) \times C = (A \times C ) \cup (B \times C)\text{.}\)</p></article><article class="exercise exercise-like" id="cOe"><h6 class="heading"><span class="codenumber">11<span class="period">.</span></span></h6>
 <p id="qic">Prove \((A \cap B) \setminus B = \emptyset\text{.}\)</p></article><article class="exercise exercise-like" id="IVn"><h6 class="heading"><span class="codenumber">12<span class="period">.</span></span></h6>
 <p id="Wpl">Prove \((A \cup B) \setminus B = A \setminus B\text{.}\)</p></article><article class="exercise exercise-like" id="pcw"><h6 class="heading"><span class="codenumber">13<span class="period">.</span></span></h6>
 <p id="Cwu">Prove \(A \setminus (B \cup C) = (A \setminus B) \cap (A \setminus C)\text{.}\)</p>
 <div class="solutions">
-<a data-knowl="" class="id-ref hint-knowl original" data-refid="hk-SYT" id="SYT"><span class="type">Hint</span></a><div class="hidden-content tex2jax_ignore" id="hk-SYT"><div class="hint solution-like"><p id="QlE">\(A \setminus (B \cup C) = A \cap (B \cup C)' = (A \cap A) \cap (B' \cap C') = (A \cap B') \cap (A \cap C') = (A \setminus B) \cap (A \setminus C)\text{.}\)</p></div></div>
+<a data-knowl="" class="id-ref hint-knowl original" data-refid="hk-SYT" id="SYT"><span class="type">Hint.</span> </a><div class="hidden-content tex2jax_ignore" id="hk-SYT"><div class="hint solution-like"><p id="QlE">\(A \setminus (B \cup C) = A \cap (B \cup C)' = (A \cap A) \cap (B' \cap C') = (A \cap B') \cap (A \cap C') = (A \setminus B) \cap (A \setminus C)\text{.}\)</p></div></div>
 </div></article><article class="exercise exercise-like" id="VjF"><h6 class="heading"><span class="codenumber">14<span class="period">.</span></span></h6>
 <p id="iDD">Prove \(A \cap (B \setminus C) = (A \cap B) \setminus (A \cap C)\text{.}\)</p></article><article class="exercise exercise-like" id="BqO"><h6 class="heading"><span class="codenumber">15<span class="period">.</span></span></h6>
 <p id="OKM">Prove \((A \setminus B) \cup (B \setminus A) = (A \cup B) \setminus (A \cap B)\text{.}\)</p></article><article class="exercise exercise-like" id="hxX"><h6 class="heading"><span class="codenumber">16<span class="period">.</span></span></h6>
@@ -353,7 +359,7 @@ MathJax.Hub.Config({
 <li id="zux"><p id="CDy">\(\displaystyle \displaystyle f(p/q) = \frac{3 p^2}{7 q^2} - \frac{p}{q}\)</p></li>
 </ol>
 <div class="solutions">
-<a data-knowl="" class="id-ref hint-knowl original" data-refid="hk-rBD" id="rBD"><span class="type">Hint</span></a><div class="hidden-content tex2jax_ignore" id="hk-rBD"><div class="hint solution-like"><p id="wsN">(a) Not a map since \(f(2/3)\) is undefined; (b) this is a map; (c) not a map, since \(f(1/2) = 3/4\) but \(f(2/4)=3/8\text{;}\) (d) this is a map.</p></div></div>
+<a data-knowl="" class="id-ref hint-knowl original" data-refid="hk-rBD" id="rBD"><span class="type">Hint.</span> </a><div class="hidden-content tex2jax_ignore" id="hk-rBD"><div class="hint solution-like"><p id="wsN">(a) Not a map since \(f(2/3)\) is undefined; (b) this is a map; (c) not a map, since \(f(1/2) = 3/4\) but \(f(2/4)=3/8\text{;}\) (d) this is a map.</p></div></div>
 </div></article><article class="exercise exercise-like" id="NFg"><h6 class="heading"><span class="codenumber">17<span class="period">.</span></span></h6>
 <p id="aZe">Determine which of the following functions are one-to-one and which are onto. If the function is not onto, determine its range.</p>
 <ol class="lower-alpha">
@@ -363,7 +369,7 @@ MathJax.Hub.Config({
 <li id="XXh"><p id="bgi">\(f: {\mathbb Z} \rightarrow {\mathbb Z}\) defined by \(f(x) = x^2\)</p></li>
 </ol>
 <div class="solutions">
-<a data-knowl="" class="id-ref hint-knowl original" data-refid="hk-DPV" id="DPV"><span class="type">Hint</span></a><div class="hidden-content tex2jax_ignore" id="hk-DPV"><div class="hint solution-like"><p id="czW">(a) \(f\) is one-to-one but not onto. \(f({\mathbb R} ) = \{ x \in {\mathbb R} : x \gt 0 \}\text{.}\) (c) \(f\) is neither one-to-one nor onto. \(f(\mathbb R) = \{ x : -1 \leq x \leq 1 \}\text{.}\)</p></div></div>
+<a data-knowl="" class="id-ref hint-knowl original" data-refid="hk-DPV" id="DPV"><span class="type">Hint.</span> </a><div class="hidden-content tex2jax_ignore" id="hk-DPV"><div class="hint solution-like"><p id="czW">(a) \(f\) is one-to-one but not onto. \(f({\mathbb R} ) = \{ x \in {\mathbb R} : x \gt 0 \}\text{.}\) (c) \(f\) is neither one-to-one nor onto. \(f(\mathbb R) = \{ x : -1 \leq x \leq 1 \}\text{.}\)</p></div></div>
 </div></article><article class="exercise exercise-like" id="tMp"><h6 class="heading"><span class="codenumber">18<span class="period">.</span></span></h6>
 <p id="Hgn">Let \(f :A \rightarrow B\) and \(g : B \rightarrow C\) be invertible mappings; that is, mappings such that \(f^{-1}\) and \(g^{-1}\) exist. Show that \((g \circ f)^{-1} =f^{-1} \circ g^{-1}\text{.}\)</p></article><article class="exercise exercise-like" id="ZTy"><h6 class="heading"><span class="codenumber">19<span class="period">.</span></span></h6>
 <ol id="nnw" class="lower-alpha">
@@ -371,7 +377,7 @@ MathJax.Hub.Config({
 <li id="klz"><p id="nuA">Define a function \(f: {\mathbb N} \rightarrow {\mathbb N}\) that is onto but not one-to-one.</p></li>
 </ol>
 <div class="solutions">
-<a data-knowl="" class="id-ref hint-knowl original" data-refid="hk-wlw" id="wlw"><span class="type">Hint</span></a><div class="hidden-content tex2jax_ignore" id="hk-wlw"><div class="hint solution-like"><p id="IHf">(a) \(f(n) = n + 1\text{.}\)</p></div></div>
+<a data-knowl="" class="id-ref hint-knowl original" data-refid="hk-wlw" id="wlw"><span class="type">Hint.</span> </a><div class="hidden-content tex2jax_ignore" id="hk-wlw"><div class="hint solution-like"><p id="IHf">(a) \(f(n) = n + 1\text{.}\)</p></div></div>
 </div></article><article class="exercise exercise-like" id="GaH"><h6 class="heading"><span class="codenumber">20<span class="period">.</span></span></h6>
 <p id="TuF">Prove the relation defined on \({\mathbb R}^2\) by \((x_1, y_1 ) \sim (x_2, y_2)\) if \(x_1^2 + y_1^2 = x_2^2 + y_2^2\) is an equivalence relation.</p></article><article class="exercise exercise-like" id="SoZ"><h6 class="heading"><span class="codenumber">21<span class="period">.</span></span></h6>
 <p id="fIX">Define a function on the real numbers by</p>
@@ -382,7 +388,7 @@ f(x) = \frac{x + 1}{x - 1}\text{.}
 </div>
 <p class="continuation">What are the domain and range of \(f\text{?}\) What is the inverse of \(f\text{?}\) Compute \(f \circ f^{-1}\) and \(f^{-1} \circ f\text{.}\)</p>
 <div class="solutions">
-<a data-knowl="" class="id-ref hint-knowl original" data-refid="hk-AVp" id="AVp"><span class="type">Hint</span></a><div class="hidden-content tex2jax_ignore" id="hk-AVp"><div class="hint solution-like"><p id="UVx">\(f^{-1}(x) = (x+1)/(x-1)\text{.}\)</p></div></div>
+<a data-knowl="" class="id-ref hint-knowl original" data-refid="hk-AVp" id="AVp"><span class="type">Hint.</span> </a><div class="hidden-content tex2jax_ignore" id="hk-AVp"><div class="hint solution-like"><p id="UVx">\(f^{-1}(x) = (x+1)/(x-1)\text{.}\)</p></div></div>
 </div></article><article class="exercise exercise-like" id="ywi"><h6 class="heading"><span class="codenumber">22<span class="period">.</span></span></h6>
 <p id="LQg">Let \(f: X \rightarrow Y\) be a map with \(A_1, A_2 \subset X\) and \(B_1, B_2 \subset Y\text{.}\)</p>
 <ol class="lower-alpha">
@@ -400,12 +406,12 @@ f^{-1}(B) = \{ x \in X : f(x) \in B \}\text{.}
 <li id="ype"><p id="Byf">Prove \(f^{-1}( Y \setminus B_1 ) = X \setminus f^{-1}( B_1)\text{.}\)</p></li>
 </ol>
 <div class="solutions">
-<a data-knowl="" class="id-ref hint-knowl original" data-refid="hk-NjH" id="NjH"><span class="type">Hint</span></a><div class="hidden-content tex2jax_ignore" id="hk-NjH"><div class="hint solution-like"><p id="BcG">(a) Let \(y \in f(A_1 \cup A_2)\text{.}\) Then there exists an \(x \in A_1 \cup A_2\) such that \(f(x) = y\text{.}\) Hence, \(y \in f(A_1)\) or \(f(A_2) \text{.}\) Therefore, \(y \in f(A_1) \cup f(A_2)\text{.}\) Consequently, \(f(A_1 \cup A_2) \subset f(A_1) \cup f(A_2)\text{.}\) Conversely, if \(y \in f(A_1) \cup f(A_2)\text{,}\) then \(y \in f(A_1)\) or \(f(A_2)\text{.}\) Hence, there exists an \(x\) in \(A_1\) or \(A_2\) such that \(f(x) = y\text{.}\) Thus, there exists an \(x \in A_1 \cup A_2\) such that \(f(x) = y\text{.}\) Therefore, \(f(A_1) \cup f(A_2) \subset f(A_1 \cup A_2)\text{,}\) and \(f(A_1 \cup A_2) = f(A_1) \cup f(A_2)\text{.}\)</p></div></div>
+<a data-knowl="" class="id-ref hint-knowl original" data-refid="hk-NjH" id="NjH"><span class="type">Hint.</span> </a><div class="hidden-content tex2jax_ignore" id="hk-NjH"><div class="hint solution-like"><p id="BcG">(a) Let \(y \in f(A_1 \cup A_2)\text{.}\) Then there exists an \(x \in A_1 \cup A_2\) such that \(f(x) = y\text{.}\) Hence, \(y \in f(A_1)\) or \(f(A_2) \text{.}\) Therefore, \(y \in f(A_1) \cup f(A_2)\text{.}\) Consequently, \(f(A_1 \cup A_2) \subset f(A_1) \cup f(A_2)\text{.}\) Conversely, if \(y \in f(A_1) \cup f(A_2)\text{,}\) then \(y \in f(A_1)\) or \(f(A_2)\text{.}\) Hence, there exists an \(x\) in \(A_1\) or \(A_2\) such that \(f(x) = y\text{.}\) Thus, there exists an \(x \in A_1 \cup A_2\) such that \(f(x) = y\text{.}\) Therefore, \(f(A_1) \cup f(A_2) \subset f(A_1 \cup A_2)\text{,}\) and \(f(A_1 \cup A_2) = f(A_1) \cup f(A_2)\text{.}\)</p></div></div>
 </div></article><article class="exercise exercise-like" id="qRJ"><h6 class="heading"><span class="codenumber">23<span class="period">.</span></span></h6>
 <p id="ElH">Show that an \(m \times n\) matrix gives rise to a well-defined map from \({\mathbb R}^n\) to \({\mathbb R}^m\text{.}\)</p></article><article class="exercise exercise-like" id="WYS"><h6 class="heading"><span class="codenumber">24<span class="period">.</span></span></h6>
 <p id="ksQ">Find the error in the following argument by providing a counterexample. “The reflexive property is redundant in the axioms for an equivalence relation. If \(x \sim y\text{,}\) then \(y \sim x\) by the symmetric property. Using the transitive property, we can deduce that \(x \sim x\text{.}\)”</p>
 <div class="solutions">
-<a data-knowl="" class="id-ref hint-knowl original" data-refid="hk-yaJ" id="yaJ"><span class="type">Hint</span></a><div class="hidden-content tex2jax_ignore" id="hk-yaJ"><div class="hint solution-like"><p id="NqY">Let \(X = {\mathbb N} \cup \{ \sqrt{2}\, \}\) and define \(x \sim y\) if \(x + y \in {\mathbb N}\text{.}\)</p></div></div>
+<a data-knowl="" class="id-ref hint-knowl original" data-refid="hk-yaJ" id="yaJ"><span class="type">Hint.</span> </a><div class="hidden-content tex2jax_ignore" id="hk-yaJ"><div class="hint solution-like"><p id="NqY">Let \(X = {\mathbb N} \cup \{ \sqrt{2}\, \}\) and define \(x \sim y\) if \(x + y \in {\mathbb N}\text{.}\)</p></div></div>
 </div></article><article class="exercise exercise-like" id="Dgb"><h6 class="heading">
 <span class="codenumber">25<span class="period">.</span></span><span class="space"> </span><span class="title">Projective Real Line.</span>
 </h6>
@@ -418,7 +424,7 @@ f^{-1}(B) = \{ x \in X : f(x) \in B \}\text{.}
 </div>
 <p class="continuation">for \(n \in {\mathbb N}\text{.}\)</p>
 <div class="solutions">
-<a data-knowl="" class="id-ref hint-knowl original" data-refid="hk-pCZ" id="pCZ"><span class="type">Hint</span></a><div class="hidden-content tex2jax_ignore" id="hk-pCZ"><div class="hint solution-like">
+<a data-knowl="" class="id-ref hint-knowl original" data-refid="hk-pCZ" id="pCZ"><span class="type">Hint.</span> </a><div class="hidden-content tex2jax_ignore" id="hk-pCZ"><div class="hint solution-like">
 <p id="iWP">The base case, \(S(1): [1(1 + 1)(2(1) + 1)]/6 = 1 = 1^2\) is true. Assume that \(S(k): 1^2 + 2^2 + \cdots + k^2 = [k(k + 1)(2k + 1)]/6\) is true. Then</p>
 <div class="displaymath">
 \begin{align*}
@@ -438,7 +444,7 @@ f^{-1}(B) = \{ x \in X : f(x) \in B \}\text{.}
 <p class="continuation">for \(n \in {\mathbb N}\text{.}\)</p></article><article class="exercise exercise-like" id="Fhw"><h6 class="heading"><span class="codenumber">28<span class="period">.</span></span></h6>
 <p id="MTm">Prove that \(n! \gt 2^n\) for \(n \geq 4\text{.}\)</p>
 <div class="solutions">
-<a data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hYA" id="hYA"><span class="type">Hint</span></a><div class="hidden-content tex2jax_ignore" id="hk-hYA"><div class="hint solution-like"><p id="PdY">The base case, \(S(4): 4! = 24 \gt 16 =2^4\) is true. Assume \(S(k): k! \gt 2^k\) is true. Then \((k + 1)! = k! (k + 1) \gt 2^k \cdot 2 = 2^{k + 1}\text{,}\) so \(S(k + 1)\) is true. Thus, \(S(n)\) is true for all positive integers \(n\text{.}\)</p></div></div>
+<a data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hYA" id="hYA"><span class="type">Hint.</span> </a><div class="hidden-content tex2jax_ignore" id="hk-hYA"><div class="hint solution-like"><p id="PdY">The base case, \(S(4): 4! = 24 \gt 16 =2^4\) is true. Assume \(S(k): k! \gt 2^k\) is true. Then \((k + 1)! = k! (k + 1) \gt 2^k \cdot 2 = 2^{k + 1}\text{,}\) so \(S(k + 1)\) is true. Thus, \(S(n)\) is true for all positive integers \(n\text{.}\)</p></div></div>
 </div></article><article class="exercise exercise-like" id="loF"><h6 class="heading"><span class="codenumber">29<span class="period">.</span></span></h6>
 <p id="tav">Prove that</p>
 <div class="displaymath">
@@ -462,7 +468,7 @@ x + 4x + 7x + \cdots + (3n - 2)x = \frac{n(3n - 1)x}{2}
 \end{equation*}
 </div>
 <div class="solutions">
-<a data-knowl="" class="id-ref hint-knowl original" data-refid="hk-SPC" id="SPC"><span class="type">Hint</span></a><div class="hidden-content tex2jax_ignore" id="hk-SPC"><div class="hint solution-like"><p id="vlh">Follow the proof in <a class="xref" data-knowl="./knowl/example-integers-binomial-theorem.html" title="Example 1.34">Example 1.34</a> .</p></div></div>
+<a data-knowl="" class="id-ref hint-knowl original" data-refid="hk-SPC" id="SPC"><span class="type">Hint.</span> </a><div class="hidden-content tex2jax_ignore" id="hk-SPC"><div class="hint solution-like"><p id="vlh">Follow the proof in <a class="xref" data-knowl="./knowl/example-integers-binomial-theorem.html" title="Example 1.34">Example 1.34</a> .</p></div></div>
 </div></article><article class="exercise exercise-like" id="pYy"><h6 class="heading"><span class="codenumber">34<span class="period">.</span></span></h6>
 <p id="xKo">Use induction to prove that \(1 + 2 + 2^2 + \cdots + 2^n = 2^{n + 1} - 1\) for \(n \in {\mathbb N}\text{.}\)</p></article><article class="exercise exercise-like" id="WfH"><h6 class="heading"><span class="codenumber">35<span class="period">.</span></span></h6>
 <p id="dRx">Prove that</p>
@@ -474,7 +480,7 @@ x + 4x + 7x + \cdots + (3n - 2)x = \frac{n(3n - 1)x}{2}
 <p class="continuation">for \(n \in {\mathbb N}\text{.}\)</p></article><article class="exercise exercise-like" id="CmQ"><h6 class="heading"><span class="codenumber">36<span class="period">.</span></span></h6>
 <p id="JYG">If \(x\) is a nonnegative real number, then show that \((1 + x)^n - 1 \geq nx\) for \(n = 0, 1, 2, \ldots\text{.}\)</p>
 <div class="solutions">
-<a data-knowl="" class="id-ref hint-knowl original" data-refid="hk-rsm" id="rsm"><span class="type">Hint</span></a><div class="hidden-content tex2jax_ignore" id="hk-rsm"><div class="hint solution-like">
+<a data-knowl="" class="id-ref hint-knowl original" data-refid="hk-rsm" id="rsm"><span class="type">Hint.</span> </a><div class="hidden-content tex2jax_ignore" id="hk-rsm"><div class="hint solution-like">
 <p id="bsq">The base case, \(S(0): (1 + x)^0 - 1 = 0 \geq 0 = 0 \cdot x\) is true. Assume \(S(k): (1 + x)^k -1 \geq kx\) is true. Then</p>
 <div class="displaymath">
 \begin{align*}
@@ -516,7 +522,7 @@ x + 4x + 7x + \cdots + (3n - 2)x = \frac{n(3n - 1)x}{2}
 <li id="XdW"><p id="VYD">Prove that \(f_n\) and \(f_{n + 1}\) are relatively prime.</p></li>
 </ol>
 <div class="solutions">
-<a data-knowl="" class="id-ref hint-knowl original" data-refid="hk-Iqx" id="Iqx"><span class="type">Hint</span></a><div class="hidden-content tex2jax_ignore" id="hk-Iqx"><div class="hint solution-like"><p id="Hzz">For (a) and (b) use mathematical induction. (c) Show that \(f_1 = 1\text{,}\) \(f_2 = 1\text{,}\) and \(f_{n + 2} = f_{n + 1} + f_n\text{.}\) (d) Use part (c). (e) Use part (b) and <a class="xref" data-knowl="./knowl/integers-exercise-gcd-1.html" title="Exercise 6.1.5.2">Exercise 6.1.5.2</a> .</p></div></div>
+<a data-knowl="" class="id-ref hint-knowl original" data-refid="hk-Iqx" id="Iqx"><span class="type">Hint.</span> </a><div class="hidden-content tex2jax_ignore" id="hk-Iqx"><div class="hint solution-like"><p id="Hzz">For (a) and (b) use mathematical induction. (c) Show that \(f_1 = 1\text{,}\) \(f_2 = 1\text{,}\) and \(f_{n + 2} = f_{n + 1} + f_n\text{.}\) (d) Use part (c). (e) Use part (b) and <a class="xref" data-knowl="./knowl/integers-exercise-gcd-1.html" title="Exercise 6.1.5.2">Exercise 6.1.5.2</a> .</p></div></div>
 </div></article></section></div></main>
 </div>
 <script src="https://unpkg.com/prismjs@v1.22.0/components/prism-core.min.js"></script><script src="https://unpkg.com/prismjs@v1.22.0/plugins/autoloader/prism-autoloader.min.js"></script>

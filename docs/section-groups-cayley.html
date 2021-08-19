@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2021-03-25T19:19:08-06:00       *-->
+<!--*       on 2021-08-19T13:10:14-06:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -14,36 +14,42 @@
 <title>AATA Isomorphisms and Cayley's Theorem</title>
 <meta name="Keywords" content="Authored in PreTeXt">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<script src="https://sagecell.sagemath.org/embedded_sagecell.js"></script><script type="text/x-mathjax-config">
-MathJax.Hub.Config({
-    tex2jax: {
-        inlineMath: [['\\(','\\)']]
+<script src="https://sagecell.sagemath.org/embedded_sagecell.js"></script><script>window.MathJax = {
+  tex: {
+    inlineMath: [['\\(','\\)']],
+    tags: "none",
+    useLabelIds: true,
+    tagSide: "right",
+    tagIndent: ".8em",
+    packages: {'[+]': ['base', 'extpfeil', 'ams', 'amscd', 'newcommand', 'knowl']}
+  },
+  options: {
+    ignoreHtmlClass: "tex2jax_ignore",
+    processHtmlClass: "has_am",
+    renderActions: {
+        findScript: [10, function (doc) {
+            document.querySelectorAll('script[type^="math/tex"]').forEach(function(node) {
+                var display = !!node.type.match(/; *mode=display/);
+                var math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display);
+                var text = document.createTextNode('');
+                node.parentNode.replaceChild(text, node);
+                math.start = {node: text, delim: '', n: 0};
+                math.end = {node: text, delim: '', n: 0};
+                doc.math.push(math);
+            });
+        }, '']
     },
-    asciimath2jax: {
-        ignoreClass: ".*",
-        processClass: "has_am"
-    },
-    jax: ["input/AsciiMath"],
-    extensions: ["asciimath2jax.js"],
-    TeX: {
-        extensions: ["extpfeil.js", "autobold.js", "https://pretextbook.org/js/lib/mathjaxknowl.js", "AMScd.js", ],
-        // scrolling to fragment identifiers is controlled by other Javascript
-        positionToHash: false,
-        equationNumbers: { autoNumber: "none", useLabelIds: true, },
-        TagSide: "right",
-        TagIndent: ".8em",
-    },
-    // HTML-CSS output Jax to be dropped for MathJax 3.0
-    "HTML-CSS": {
-        scale: 88,
-        mtextFontInherit: true,
-    },
-    CommonHTML: {
-        scale: 88,
-        mtextFontInherit: true,
-    },
-});
-</script><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS_CHTML-full"></script><link href="https://unpkg.com/prismjs@v1.22.0/themes/prism.css" rel="stylesheet">
+  },
+  chtml: {
+    scale: 0.88,
+    mtextInheritFont: true
+  },
+  loader: {
+    load: ['input/asciimath', '[tex]/extpfeil', '[tex]/amscd', '[tex]/newcommand', '[pretext]/mathjaxknowl3.js'],
+    paths: {pretext: "https://pretextbook.org/js/lib"},
+  },
+};
+</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><link href="https://unpkg.com/prismjs@v1.22.0/themes/prism.css" rel="stylesheet">
 <script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/jquery.min.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/0.13/pretext.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/0.13/pretext_add_on.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script xmlns:svg="http://www.w3.org/2000/svg">sagecellEvalName='Evaluate (Sage)';
 </script><link xmlns:svg="http://www.w3.org/2000/svg" href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
 <link xmlns:svg="http://www.w3.org/2000/svg" href="https://fonts.googleapis.com/css?family=Inconsolata:400,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
@@ -91,7 +97,7 @@ MathJax.Hub.Config({
 \newcommand{\amp}{&amp;}
 \)</div>
 <header id="masthead" class="smallbuttons"><div class="banner"><div class="container">
-<a id="logo-link" href="http://abstract.pugetsound.edu" target="_blank"><img src="images/cover_aata_2020.png" alt="Logo image"></a><div class="title-container">
+<a id="logo-link" href="http://abstract.pugetsound.edu" target="_blank"><img src="external/images/cover_aata_2020.png" alt="Logo image"></a><div class="title-container">
 <h1 class="heading"><a href="aata-toc.html"><span class="title">Abstract Algebra:</span> <span class="subtitle">Theory and Applications, Remixed!</span></a></h1>
 <p class="byline">Thomas W. Judson</p>
 </div>
@@ -99,11 +105,11 @@ MathJax.Hub.Config({
 <nav xmlns:svg="http://www.w3.org/2000/svg" id="primary-navbar" class="navbar"><div class="container">
 <div class="navbar-top-buttons">
 <button class="sidebar-left-toggle-button button active" aria-label="Show or hide table of contents sidebar">Contents</button><div class="tree-nav toolbar toolbar-divisor-3">
-<a class="index-button toolbar-item button" href="index-1.html" title="Index">Index</a><span class="threebuttons"><a id="previousbutton" class="previous-button toolbar-item button" href="groups.html" title="Previous">Prev</a><a id="upbutton" class="up-button button toolbar-item" href="groups.html" title="Up">Up</a><a id="nextbutton" class="next-button button toolbar-item" href="section-groups-permutations.html" title="Next">Next</a></span>
+<a class="index-button toolbar-item button" href="index-1.html" title="Index">Index</a><span class="threebuttons"><a id="previousbutton" class="previous-button toolbar-item button" href="groups-structure.html" title="Previous">Prev</a><a id="upbutton" class="up-button button toolbar-item" href="groups-structure.html" title="Up">Up</a><a id="nextbutton" class="next-button button toolbar-item" href="section-groups-permutations.html" title="Next">Next</a></span>
 </div>
 </div>
 <div class="navbar-bottom-buttons toolbar toolbar-divisor-4">
-<button class="sidebar-left-toggle-button button toolbar-item active">Contents</button><a class="previous-button toolbar-item button" href="groups.html" title="Previous">Prev</a><a class="up-button button toolbar-item" href="groups.html" title="Up">Up</a><a class="next-button button toolbar-item" href="section-groups-permutations.html" title="Next">Next</a>
+<button class="sidebar-left-toggle-button button toolbar-item active">Contents</button><a class="previous-button toolbar-item button" href="groups-structure.html" title="Previous">Prev</a><a class="up-button button toolbar-item" href="groups-structure.html" title="Up">Up</a><a class="next-button button toolbar-item" href="section-groups-permutations.html" title="Next">Next</a>
 </div>
 </div></nav></header><div class="page">
 <div xmlns:svg="http://www.w3.org/2000/svg" id="sidebar-left" class="sidebar" role="navigation"><div class="sidebar-content">
@@ -210,7 +216,7 @@ MathJax.Hub.Config({
 </li>
 <li class="link part"><a href="part-more-group-theory.html" data-scroll="part-more-group-theory"><span class="codenumber">III</span> <span class="title">More Group Theory</span></a></li>
 <li class="link">
-<a href="groups.html" data-scroll="nRa"><span class="codenumber">10</span> <span class="title">Some of the Structure of Groups</span></a><ul>
+<a href="groups-structure.html" data-scroll="nRa"><span class="codenumber">10</span> <span class="title">Some of the Structure of Groups</span></a><ul>
 <li><a href="section-groups-cayley.html" data-scroll="CTu" class="active">Isomorphisms and Cayley's Theorem</a></li>
 <li><a href="section-groups-permutations.html" data-scroll="mjE">Permutation Groups</a></li>
 <li><a href="section-solvable-groups.html" data-scroll="WbU">Solvable Groups</a></li>
@@ -321,12 +327,14 @@ MathJax.Hub.Config({
 <p id="YBy">The main goal in group theory is to classify all groups; however, it makes sense to consider two groups to be the same if they are isomorphic. Hence, we can modify our goal of classifying all groups to classifying all groups <dfn class="terminology">up to isomorphism</dfn>.</p>
 <p id="EIH">For example, you might wonder how many different cyclic groups there are of a given order.  It turns out the answer is 1.  For any given order, there is exactly one cyclic group (up to isomorphism) of that order: \(\Z_n\) is isomorphic to every cyclic group of order \(n\text{.}\)  Later will will give a similar classification of all abelian groups of a particular type.</p>
 <p id="kPQ">The other advantage in considering isomorphisms is that it provides us a way to represent groups in some consistent way.  Let's see what this means.</p></section><section class="worksheet" id="deN"><h3 class="heading hide-type">
-<span class="type">Worksheet</span> <span class="codenumber">10.1.1</span> <span class="title">Activity: Cayley Permutations</span>
+<span class="type">Worksheet</span> <span class="codenumber">10.1.1</span> <span class="title">Activity: Cayley Permutations</span><div class="print-links">
+<a href="ws_groups-cayley-permutations-a4.html" class="a4">A4</a><a href="ws_groups-cayley-permutations-letter.html" class="us">US</a>
+</div>
 </h3>
 <section class="introduction" id="oJl"><p id="iTZ">We have studied <em class="emphasis">permutation groups</em>, as well as groups that do not appear to be groups of permutations (such as \(\Z_n\text{,}\) \(\Z_n\times \Z_m\text{,}\) groups of functions or matrices, \(D_4\text{,}\) etc.).  How distinct are these non-permutation groups from permutation groups?</p></section><article class="exercise exercise-like" id="UQu"><h6 class="heading"><span class="codenumber">1<span class="period">.</span></span></h6>
 <p id="Pbi">Write the \(4\times 4\) group tables for \(\Z_4\) and  \(U(8)\text{,}\) the group of <em class="emphasis">units</em>  of \(\Z_8\) (numbers relatively prime to 8) under multiplication.</p>
 <div class="solutions">
-<a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-tte" id="tte"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-tte"><div class="solution solution-like"><div class="displaymath" id="RVO">
+<a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-tte" id="tte"><span class="type">Solution.</span> </a><div class="hidden-content tex2jax_ignore" id="hk-tte"><div class="solution solution-like"><div class="displaymath" id="RVO">
 \begin{equation*}
 \begin{array}{c|cccc}
 + &amp; 0 &amp; 1 &amp; 2 &amp; 3 \\
@@ -339,11 +347,12 @@ MathJax.Hub.Config({
 \qquad
 \end{equation*}
 </div></div></div>
-</div></article><article class="exercise exercise-like" id="AXD"><h6 class="heading"><span class="codenumber">2<span class="period">.</span></span></h6>
+</div>
+<div class="workspace" data-space="1.5in"></div></article><article class="exercise exercise-like" id="AXD"><h6 class="heading"><span class="codenumber">2<span class="period">.</span></span></h6>
 <p id="vir">For each element in the groups above, we can see what adding or multiplying it by the other elements does to the other elements.  For example, \(5 \in U(8)\) corresponds to this function: \(\lambda_5 = \begin{pmatrix}1 \amp 3 \amp 5 \amp 7\\ 5 \amp 7 \amp 1 \amp 3\end{pmatrix}\text{,}\) since \(5 \cdot 1 = 5 \text{,}\) \(5 \cdot 3 = 7\text{,}\) and so on.</p>
 <p id="bpA">For each element \(g\) in each group above, write down the corresponding function \(\lambda_g\text{.}\)</p>
 <div class="solutions">
-<a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-ZAn" id="ZAn"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-ZAn"><div class="solution solution-like">
+<a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-ZAn" id="ZAn"><span class="type">Solution.</span> </a><div class="hidden-content tex2jax_ignore" id="hk-ZAn"><div class="solution solution-like">
 <p id="ycX">For \(Z_4\) we have</p>
 <div class="displaymath">
 \begin{equation*}
@@ -388,10 +397,11 @@ MathJax.Hub.Config({
 </div>
 <p id="Krp">Notice that we are getting the rows in the group table as the outputs of the function.  This makes sense, right?</p>
 </div></div>
-</div></article><article class="exercise exercise-like" id="heM"><h6 class="heading"><span class="codenumber">3<span class="period">.</span></span></h6>
+</div>
+<div class="workspace" data-space="1.5in"></div></article><article class="exercise exercise-like" id="heM"><h6 class="heading"><span class="codenumber">3<span class="period">.</span></span></h6>
 <p id="HwJ">What happens when you compose two functions \(\lambda_g\) and \(\lambda_h\) for \(g\) and \(h\) in a group?  Try this with a few examples you have above.  What do you notice about the function you get?</p>
 <div class="solutions">
-<a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-FHw" id="FHw"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-FHw"><div class="solution solution-like">
+<a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-FHw" id="FHw"><span class="type">Solution.</span> </a><div class="hidden-content tex2jax_ignore" id="hk-FHw"><div class="solution solution-like">
 <p id="qyy">For example, in the case of \(\Z_4\text{,}\) we have</p>
 <div class="displaymath">
 \begin{equation*}
@@ -400,14 +410,16 @@ MathJax.Hub.Config({
 </div>
 <p class="continuation">In \(U(8)\text{,}\) we have \(\lambda_3\lambda_7 = \lambda_5\text{.}\)  But notice that \(5 = 3 \cdot 7\) in \(U(8)\text{.}\)  In other words, the \(\lambda_g\) are acting just like \(g\text{.}\)</p>
 </div></div>
-</div></article><article class="exercise exercise-like" id="NlV"><h6 class="heading"><span class="codenumber">4<span class="period">.</span></span></h6>
+</div>
+<div class="workspace" data-space="1.5in"></div></article><article class="exercise exercise-like" id="NlV"><h6 class="heading"><span class="codenumber">4<span class="period">.</span></span></h6>
 <p id="nDS">Consider the set \(\overline{G} = \{\lambda_g \st g \in G\}\text{.}\)  Since each \(\lambda_g\) is a permutation of the elements of \(G\text{,}\) each of these will be a subset of \(S_n\) where \(n = |G|\) (in our case, \(n=4\)).  Is \(\overline{G}\) a subgroup of \(S_4\) in both our cases?  Will it be a subgroup in general?</p>
 <div class="solutions">
-<a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-lOF" id="lOF"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-lOF"><div class="solution solution-like">
+<a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-lOF" id="lOF"><span class="type">Solution.</span> </a><div class="hidden-content tex2jax_ignore" id="hk-lOF"><div class="solution solution-like">
 <p id="WFH">Instead of using the elements of \(G\) themselves, if we put them in some order (a first one, second one, etc), then we can associate numbers \(1,2,3,\ldots,n\) to the \(n\) elements of \(G\text{.}\)  The permutations \(\lambda_g\) are then exactly elements of \(S_n\text{.}\)</p>
 <p id="CMQ">What we found in the previous question is that the \(\lambda_g\) act just like the elements \(g\) they come from.  In fact, we can prove that \(G \cong \overline{G}\text{:}\) the set of permutations \(\overline{G}\) is a subgroup of \(S_n\text{,}\) in fact, a subgroup isomorphic to \(G\text{.}\)</p>
 </div></div>
-</div></article></section><section class="subsection" id="jaD"><h3 class="heading hide-type">
+</div>
+<div class="workspace" data-space="0.1in"></div></article></section><section class="subsection" id="jaD"><h3 class="heading hide-type">
 <span class="type">Subsection</span> <span class="codenumber">10.1.2</span> <span class="title">Cayley's Theorem</span>
 </h3>
 <p id="QWZ">Cayley proved that if \(G\) is a group, it is isomorphic to a group of permutations on some set; hence, every group is a permutation group. Cayley's Theorem is what we call a representation theorem. The aim of representation theory is to find an isomorphism of some group \(G\) that we wish to study into a group that we know a great deal about, such as a group of permutations or matrices.</p>
@@ -415,7 +427,7 @@ MathJax.Hub.Config({
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">10.1</span><span class="period">.</span>
 </h6>
 <p id="zYO">Consider the group \({\mathbb Z}_3\text{.}\) The Cayley table for \({\mathbb Z}_3\) is as follows.</p>
-<div class="sidebyside"><div class="sbsrow" style="margin-left:0%;margin-right:0%;"><div class="sbspanel" style="width:100%;justify-content:flex-start;"><div class="displaymath" id="gfX">
+<div class="sidebyside"><div class="sbsrow" style="margin-left:0%;margin-right:0%;"><div class="sbspanel top" style="width:100%;"><div class="displaymath" id="gfX">
 \begin{equation*}
 \begin{array}{c|ccc}
 + &amp; 0 &amp; 1 &amp; 2 \\ \hline
@@ -477,7 +489,7 @@ MathJax.Hub.Config({
 <li id="Cyi"><p id="zDC">Prove that \(\phi\) satisfies the homomorphism property.</p></li>
 </ol>
 <div class="solutions">
-<a data-knowl="" class="id-ref hint-knowl original" data-refid="hk-tew" id="tew"><span class="type">Hint</span></a><div class="hidden-content tex2jax_ignore" id="hk-tew"><div class="hint solution-like"><p id="fKL">To prove a function \(f:A \to B\) is injective, suppose \(f(a) = f(b)\) and deduce that \(a = b\text{.}\)  To prove that the function is surjective, assume \(b \in B\) and find some \(a \in A\) such that \(f(a) = b\text{.}\)</p></div></div>
+<a data-knowl="" class="id-ref hint-knowl original" data-refid="hk-tew" id="tew"><span class="type">Hint.</span> </a><div class="hidden-content tex2jax_ignore" id="hk-tew"><div class="hint solution-like"><p id="fKL">To prove a function \(f:A \to B\) is injective, suppose \(f(a) = f(b)\) and deduce that \(a = b\text{.}\)  To prove that the function is surjective, assume \(b \in B\) and find some \(a \in A\) such that \(f(a) = b\text{.}\)</p></div></div>
 </div></article></section></section></div></main>
 </div>
 <script src="https://unpkg.com/prismjs@v1.22.0/components/prism-core.min.js"></script><script src="https://unpkg.com/prismjs@v1.22.0/plugins/autoloader/prism-autoloader.min.js"></script>

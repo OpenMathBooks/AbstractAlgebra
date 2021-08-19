@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2021-03-25T19:20:03-06:00       *-->
+<!--*       on 2021-08-19T13:11:18-06:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -14,36 +14,42 @@
 <title>AATA Structure of a Finite Field</title>
 <meta name="Keywords" content="Authored in PreTeXt">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<script src="https://sagecell.sagemath.org/embedded_sagecell.js"></script><script type="text/x-mathjax-config">
-MathJax.Hub.Config({
-    tex2jax: {
-        inlineMath: [['\\(','\\)']]
+<script src="https://sagecell.sagemath.org/embedded_sagecell.js"></script><script>window.MathJax = {
+  tex: {
+    inlineMath: [['\\(','\\)']],
+    tags: "none",
+    useLabelIds: true,
+    tagSide: "right",
+    tagIndent: ".8em",
+    packages: {'[+]': ['base', 'extpfeil', 'ams', 'amscd', 'newcommand', 'knowl']}
+  },
+  options: {
+    ignoreHtmlClass: "tex2jax_ignore",
+    processHtmlClass: "has_am",
+    renderActions: {
+        findScript: [10, function (doc) {
+            document.querySelectorAll('script[type^="math/tex"]').forEach(function(node) {
+                var display = !!node.type.match(/; *mode=display/);
+                var math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display);
+                var text = document.createTextNode('');
+                node.parentNode.replaceChild(text, node);
+                math.start = {node: text, delim: '', n: 0};
+                math.end = {node: text, delim: '', n: 0};
+                doc.math.push(math);
+            });
+        }, '']
     },
-    asciimath2jax: {
-        ignoreClass: ".*",
-        processClass: "has_am"
-    },
-    jax: ["input/AsciiMath"],
-    extensions: ["asciimath2jax.js"],
-    TeX: {
-        extensions: ["extpfeil.js", "autobold.js", "https://pretextbook.org/js/lib/mathjaxknowl.js", "AMScd.js", ],
-        // scrolling to fragment identifiers is controlled by other Javascript
-        positionToHash: false,
-        equationNumbers: { autoNumber: "none", useLabelIds: true, },
-        TagSide: "right",
-        TagIndent: ".8em",
-    },
-    // HTML-CSS output Jax to be dropped for MathJax 3.0
-    "HTML-CSS": {
-        scale: 88,
-        mtextFontInherit: true,
-    },
-    CommonHTML: {
-        scale: 88,
-        mtextFontInherit: true,
-    },
-});
-</script><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS_CHTML-full"></script><link href="https://unpkg.com/prismjs@v1.22.0/themes/prism.css" rel="stylesheet">
+  },
+  chtml: {
+    scale: 0.88,
+    mtextInheritFont: true
+  },
+  loader: {
+    load: ['input/asciimath', '[tex]/extpfeil', '[tex]/amscd', '[tex]/newcommand', '[pretext]/mathjaxknowl3.js'],
+    paths: {pretext: "https://pretextbook.org/js/lib"},
+  },
+};
+</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><link href="https://unpkg.com/prismjs@v1.22.0/themes/prism.css" rel="stylesheet">
 <script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/jquery.min.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/0.13/pretext.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/0.13/pretext_add_on.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script xmlns:svg="http://www.w3.org/2000/svg">sagecellEvalName='Evaluate (Sage)';
 </script><link xmlns:svg="http://www.w3.org/2000/svg" href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
 <link xmlns:svg="http://www.w3.org/2000/svg" href="https://fonts.googleapis.com/css?family=Inconsolata:400,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
@@ -91,7 +97,7 @@ MathJax.Hub.Config({
 \newcommand{\amp}{&amp;}
 \)</div>
 <header id="masthead" class="smallbuttons"><div class="banner"><div class="container">
-<a id="logo-link" href="http://abstract.pugetsound.edu" target="_blank"><img src="images/cover_aata_2020.png" alt="Logo image"></a><div class="title-container">
+<a id="logo-link" href="http://abstract.pugetsound.edu" target="_blank"><img src="external/images/cover_aata_2020.png" alt="Logo image"></a><div class="title-container">
 <h1 class="heading"><a href="aata-toc.html"><span class="title">Abstract Algebra:</span> <span class="subtitle">Theory and Applications, Remixed!</span></a></h1>
 <p class="byline">Thomas W. Judson</p>
 </div>
@@ -210,7 +216,7 @@ MathJax.Hub.Config({
 </li>
 <li class="link part"><a href="part-more-group-theory.html" data-scroll="part-more-group-theory"><span class="codenumber">III</span> <span class="title">More Group Theory</span></a></li>
 <li class="link">
-<a href="groups.html" data-scroll="nRa"><span class="codenumber">10</span> <span class="title">Some of the Structure of Groups</span></a><ul>
+<a href="groups-structure.html" data-scroll="nRa"><span class="codenumber">10</span> <span class="title">Some of the Structure of Groups</span></a><ul>
 <li><a href="section-groups-cayley.html" data-scroll="CTu">Isomorphisms and Cayley's Theorem</a></li>
 <li><a href="section-groups-permutations.html" data-scroll="mjE">Permutation Groups</a></li>
 <li><a href="section-solvable-groups.html" data-scroll="WbU">Solvable Groups</a></li>
@@ -421,7 +427,7 @@ f(-\alpha) =  (-\alpha)^{2^n} - (-\alpha) = \alpha + \alpha = 0\text{.}
 <p id="cMr">To prove the converse, suppose that \(m \mid n\) for some \(m \gt 0\text{.}\) Then \(p^m -1\) divides \(p^n -1\text{.}\) Consequently, \(x^{p^m -1} - 1\) divides \(x^{p^n -1} -1\text{.}\) Therefore, \(x^{p^m} - x\) must divide \(x^{p^n} - x\text{,}\) and every zero of \(x^{p^m} - x\) is also a zero of \(x^{p^n} - x\text{.}\) Thus, \(\gf(p^n)\) contains, as a subfield, a splitting field of \(x^{p^m} - x\text{,}\) which must be isomorphic to \(\gf(p^m)\text{.}\)</p></article><article class="example example-like" id="gjA"><h6 class="heading">
 <span class="type">Example</span><span class="space"> </span><span class="codenumber">17.8</span><span class="period">.</span>
 </h6>
-<p id="AjI">The lattice of subfields of \(\gf(p^{24})\) is given in <a class="xref" data-knowl="./knowl/figure-field-lattice.html" title="Figure 17.9">Figure 17.9</a>.</p></article><figure class="figure figure-like" id="rer"><div class="image-box" style="width: 50%; margin-left: 25%; margin-right: 25%;"><img src="images/finite-subfield-lattice.svg" role="img" style="width: 100%; height: auto;" alt="A lattice of field inclusions with the top level a Galois field of p^24 elements.  The second level has Galois fields of p^8 and p^12 elements which are included in the top level.  The third level has Galois fields of p^4 (included in the fields of p^8 and p^12 elements) and p^6 elements (included in the field of p^12 elements).  The fourth level has Galois fields of p^2 (included in the fields of p^4 and p^16 elements) and p^3 elements (included in the field of p^6 elements). The bottom level a Galois field of p elements (included in the fields of p^2 and p^3 elements)."></div>
+<p id="AjI">The lattice of subfields of \(\gf(p^{24})\) is given in <a class="xref" data-knowl="./knowl/figure-field-lattice.html" title="Figure 17.9">Figure 17.9</a>.</p></article><figure class="figure figure-like" id="rer"><div class="image-box" style="width: 50%; margin-left: 25%; margin-right: 25%;"><img src="generated/latex-image/finite-subfield-lattice.svg" role="img" class="contained" alt="A lattice of field inclusions with the top level a Galois field of p^24 elements.  The second level has Galois fields of p^8 and p^12 elements which are included in the top level.  The third level has Galois fields of p^4 (included in the fields of p^8 and p^12 elements) and p^6 elements (included in the field of p^12 elements).  The fourth level has Galois fields of p^2 (included in the fields of p^4 and p^16 elements) and p^3 elements (included in the field of p^6 elements). The bottom level a Galois field of p elements (included in the fields of p^2 and p^3 elements)."></div>
 <figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">17.9<span class="period">.</span></span><span class="space"> </span>Subfields of \(\gf(p^{24})\)</figcaption></figure><p id="KXi">With each field \(F\) we have a multiplicative group of nonzero elements of \(F\) which we will denote by \(F^*\text{.}\)  The multiplicative group of any finite field is cyclic. This result follows from the more general result that we will prove in the next theorem.</p>
 <article class="theorem theorem-like" id="jeg"><h6 class="heading">
 <span class="type">Theorem</span><span class="space"> </span><span class="codenumber">17.10</span><span class="period">.</span>

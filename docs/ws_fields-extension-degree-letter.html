@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*       on 2021-08-19T13:10:02-06:00       *-->
+<!--*   A recent stable commit (2020-08-09):   *-->
+<!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<html lang="en-US">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>AATA Activity: Dimension and Degree</title>
+<meta name="Keywords" content="Authored in PreTeXt">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script src="https://sagecell.sagemath.org/embedded_sagecell.js"></script><script>window.MathJax = {
+  tex: {
+    inlineMath: [['\\(','\\)']],
+    tags: "none",
+    useLabelIds: true,
+    tagSide: "right",
+    tagIndent: ".8em",
+    packages: {'[+]': ['base', 'extpfeil', 'ams', 'amscd', 'newcommand', 'knowl']}
+  },
+  options: {
+    ignoreHtmlClass: "tex2jax_ignore",
+    processHtmlClass: "has_am",
+    renderActions: {
+        findScript: [10, function (doc) {
+            document.querySelectorAll('script[type^="math/tex"]').forEach(function(node) {
+                var display = !!node.type.match(/; *mode=display/);
+                var math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display);
+                var text = document.createTextNode('');
+                node.parentNode.replaceChild(text, node);
+                math.start = {node: text, delim: '', n: 0};
+                math.end = {node: text, delim: '', n: 0};
+                doc.math.push(math);
+            });
+        }, '']
+    },
+  },
+  chtml: {
+    scale: 0.88,
+    mtextInheritFont: true
+  },
+  loader: {
+    load: ['input/asciimath', '[tex]/extpfeil', '[tex]/amscd', '[tex]/newcommand', '[pretext]/mathjaxknowl3.js'],
+    paths: {pretext: "https://pretextbook.org/js/lib"},
+  },
+};
+</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><link href="https://unpkg.com/prismjs@v1.22.0/themes/prism.css" rel="stylesheet">
+<script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/jquery.min.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/0.13/pretext.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/0.13/pretext_add_on.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script xmlns:svg="http://www.w3.org/2000/svg">sagecellEvalName='Evaluate (Sage)';
+</script><link xmlns:svg="http://www.w3.org/2000/svg" href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://fonts.googleapis.com/css?family=Inconsolata:400,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/pretext.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/pretext_add_on.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/banner_default.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/toc_default.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/knowls_default.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/style_default.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/colors_default.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/setcolors.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="custom-styles.css">
+<!-- 2019-10-12: Temporary - CSS file for experiments with styling --><link xmlns:svg="http://www.w3.org/2000/svg" href="developer.css" rel="stylesheet" type="text/css">
+</head>
+<body id="judson-AATA" class="mathbook-book has-toc has-sidebar-left standalone worksheet letter">
+<a class="assistive" href="#content">Skip to main content</a><div xmlns:svg="http://www.w3.org/2000/svg" id="latex-macros" class="hidden-content" style="display:none">\(\newcommand{\identity}{\mathrm{id}}
+\newcommand{\notdivide}{\nmid}
+\newcommand{\notsubset}{\not\subset}
+\newcommand{\lcm}{\operatorname{lcm}}
+\newcommand{\gf}{\operatorname{GF}}
+\newcommand{\inn}{\operatorname{Inn}}
+\newcommand{\aut}{\operatorname{Aut}}
+\newcommand{\Hom}{\operatorname{Hom}}
+\newcommand{\cis}{\operatorname{cis}}
+\newcommand{\chr}{\operatorname{char}}
+\newcommand{\Null}{\operatorname{Null}}
+\newcommand{\transpose}{\text{t}}
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\Q}{\mathbb{Q}}
+\newcommand{\R}{\mathbb{R}}
+\def\C{\mathbb{C}}
+\newcommand{\st}{:}
+\newcommand{\inv}{^{-1}}
+\DeclareMathOperator{\ord}{ord} 
+\newcommand{\bC}{\mathbb{C}}
+      \newcommand{\F}{\mathscr{F}}
+      \newcommand{\FR}{\mathscr{F}(\R)}
+      \newcommand{\DR}{\mathscr{D}(\R)}
+      \def\s{\varrho}
+      \def\theterm{Spring 2021}
+      \def\thecourse{MATH 322}
+\newcommand{\lt}{&lt;}
+\newcommand{\gt}{&gt;}
+\newcommand{\amp}{&amp;}
+\)</div>
+<header id="masthead" class="smallbuttons"><div class="banner"><div class="container">
+<a id="logo-link" href="http://abstract.pugetsound.edu" target="_blank"><img src="external/images/cover_aata_2020.png" alt="Logo image"></a><div class="title-container">
+<h1 class="heading"><a href="aata-toc.html"><span class="title">Abstract Algebra:</span> <span class="subtitle">Theory and Applications, Remixed!</span></a></h1>
+<p class="byline">Thomas W. Judson</p>
+</div>
+</div></div>
+<nav xmlns:svg="http://www.w3.org/2000/svg" id="primary-navbar" class="navbar"><div class="container">
+<div class="navbar-top-buttons">
+<button class="sidebar-left-toggle-button button active" aria-label="Show or hide table of contents sidebar">Contents</button><div class="tree-nav toolbar toolbar-divisor-3">
+<a class="index-button toolbar-item button" href="index-1.html" title="Index">Index</a><span class="threebuttons"><a id="previousbutton" class="previous-button toolbar-item button" href="section-fields-vectorspaces.html#yjB" title="Previous">Prev</a><a id="upbutton" class="up-button button toolbar-item" href="section-fields-vectorspaces.html" title="Up">Up</a><a id="nextbutton" class="next-button button toolbar-item" href="section-fields-vectorspaces.html#Cbz" title="Next">Next</a></span>
+</div>
+</div>
+<div class="navbar-bottom-buttons toolbar toolbar-divisor-4">
+<button class="sidebar-left-toggle-button button toolbar-item active">Contents</button><a class="previous-button toolbar-item button" href="section-fields-vectorspaces.html#yjB" title="Previous">Prev</a><a class="up-button button toolbar-item" href="section-fields-vectorspaces.html" title="Up">Up</a><a class="next-button button toolbar-item" href="section-fields-vectorspaces.html#Cbz" title="Next">Next</a>
+</div>
+</div></nav></header><div class="page">
+<div xmlns:svg="http://www.w3.org/2000/svg" id="sidebar-left" class="sidebar" role="navigation"><div class="sidebar-content">
+<nav id="toc"><ul>
+<li class="link frontmatter">
+<a href="aata.html" data-scroll="Wih"><span class="title">Front Matter</span></a><ul>
+<li><a href="colophon-1.html" data-scroll="colophon-1">Colophon</a></li>
+<li><a href="acknowledgement-1.html" data-scroll="acknowledgement-1">Acknowledgements</a></li>
+<li><a href="preface-1.html" data-scroll="JEk">Preface to the Remixed Version</a></li>
+<li><a href="preface-2.html" data-scroll="Cpq">Original Preface</a></li>
+</ul>
+</li>
+<li class="link part"><a href="part-groups.html" data-scroll="part-groups"><span class="codenumber">I</span> <span class="title">Groups</span></a></li>
+<li class="link">
+<a href="sets.html" data-scroll="xcu"><span class="codenumber">1</span> <span class="title">Preliminaries</span></a><ul>
+<li><a href="section-note-on-proofs.html" data-scroll="yRH">A Short Note on Proofs</a></li>
+<li><a href="section-sets-and-functions.html" data-scroll="eYQ">Sets and Functions</a></li>
+<li><a href="section-equivalence-relations.html" data-scroll="VFe">Equivalence Relations and Partitions</a></li>
+<li><a href="section-math-induction.html" data-scroll="bUT">Mathematical Induction</a></li>
+<li><a href="exercises-sets.html" data-scroll="mDp">Additional Exercises</a></li>
+<li><a href="sets-references.html" data-scroll="ztb">References and Suggested Readings</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="groups.html" data-scroll="ZbN"><span class="codenumber">2</span> <span class="title">Groups</span></a><ul>
+<li><a href="section-mod-n-sym.html" data-scroll="nfs">Integer Equivalence Classes and Symmetries</a></li>
+<li><a href="section-groups-define.html" data-scroll="TmB">Definitions and Examples</a></li>
+<li><a href="section-basic-properties.html" data-scroll="Rxo">Basic Properties of Groups</a></li>
+<li><a href="section-subgroups.html" data-scroll="ztK">Subgroups</a></li>
+<li><a href="cyclic.html" data-scroll="MzR">Cyclic Subgroups</a></li>
+<li><a href="section-permutation-definitions.html" data-scroll="Wyg">Permutation Groups</a></li>
+<li><a href="exercises-groups.html" data-scroll="OCI">Additional Exercises</a></li>
+<li><a href="groups-exercises-detecting-errors.html" data-scroll="uJR">Additional Exercises: Detecting Errors</a></li>
+<li><a href="groups-references.html" data-scroll="muP">References and Suggested Readings</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="cosets.html" data-scroll="Uzy"><span class="codenumber">3</span> <span class="title">Cosets and Factor Groups</span></a><ul>
+<li><a href="section-cosets.html" data-scroll="xMb">Cosets</a></li>
+<li><a href="section-factor-groups.html" data-scroll="avo">Factor Groups and Normal Subgroups</a></li>
+<li><a href="exercises-cosets.html" data-scroll="FqA">Exercises</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="isomorph.html" data-scroll="OUu"><span class="codenumber">4</span> <span class="title">Isomorphisms and Homomorphisms</span></a><ul>
+<li><a href="section-isomorph-definitions.html" data-scroll="Evp">Definition and Examples</a></li>
+<li><a href="section-group-homomorphisms.html" data-scroll="uOI">Group Homomorphisms</a></li>
+<li><a href="section-group-isomorphism-theorems.html" data-scroll="aVR">The Isomorphism Theorems</a></li>
+<li><a href="exercises-isomorph.html" data-scroll="VeC">Additional Exercises</a></li>
+<li><a href="homomorph-exercises-automorphisms.html" data-scroll="Jes">Additional Exercises: Automorphisms</a></li>
+</ul>
+</li>
+<li class="link part"><a href="part-rings-and-fields.html" data-scroll="part-rings-and-fields"><span class="codenumber">II</span> <span class="title">Rings and Fields</span></a></li>
+<li class="link">
+<a href="rings.html" data-scroll="bhz"><span class="codenumber">5</span> <span class="title">Rings</span></a><ul>
+<li><a href="section-rings-definitions.html" data-scroll="kBl">Rings</a></li>
+<li><a href="section-domains-and-fields.html" data-scroll="QIu">Integral Domains and Fields</a></li>
+<li><a href="section-ring-homomorphisms.html" data-scroll="wPD">Ring Homomorphisms and Ideals</a></li>
+<li><a href="section-maximal-prime-ideals.html" data-scroll="cWM">Maximal and Prime Ideals</a></li>
+<li><a href="section-software-application.html" data-scroll="JdV">An Application to Software Design</a></li>
+<li><a href="exercises-rings.html" data-scroll="LYB">Additional Exercises</a></li>
+<li><a href="rings-exercises-programming.html" data-scroll="sfK">Programming Exercise</a></li>
+<li><a href="rings-references.html" data-scroll="JSg">References and Suggested Readings</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="poly.html" data-scroll="tPt"><span class="codenumber">6</span> <span class="title">Polynomials</span></a><ul>
+<li><a href="section-division-algorithm.html" data-scroll="Icc">The Integers</a></li>
+<li><a href="section-poly-rings.html" data-scroll="Djf">Polynomial Rings</a></li>
+<li><a href="section-poly-division-algorithm.html" data-scroll="jqo">The Division Algorithm</a></li>
+<li><a href="section-irreducible-poly.html" data-scroll="Pxx">Irreducible Polynomials</a></li>
+<li><a href="sec-factoring-c-r.html" data-scroll="icb">Factoring over \(\C\) and \(\R\)</a></li>
+<li><a href="exercises-poly.html" data-scroll="eGv">Additional Exercises</a></li>
+<li><a href="practice-euclidean-algorithm.html" data-scroll="BUS">Additional Exercises: The Euclidean Algorithm</a></li>
+<li><a href="poly-exercises-cubics-quartics.html" data-scroll="KNE">Additional Exercises:  Solving the Cubic and Quartic Equations</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="domains.html" data-scroll="HlR"><span class="codenumber">7</span> <span class="title">Integral Domains</span></a><ul>
+<li><a href="section-field-of-fractions.html" data-scroll="cTV">Fields of Fractions</a></li>
+<li><a href="section-factorization-domains.html" data-scroll="Jbe">Factorization in Integral Domains</a></li>
+<li><a href="reading-questions-22.html" data-scroll="drU">Reading Questions</a></li>
+<li><a href="exercises-domains.html" data-scroll="kyu">Exercises</a></li>
+<li><a href="domains-references.html" data-scroll="CJg">References and Suggested Readings</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="fields.html" data-scroll="pNh"><span class="codenumber">8</span> <span class="title">Fields</span></a><ul>
+<li><a href="section-constructions.html" data-scroll="ctw">Geometric Constructions</a></li>
+<li><a href="section-fields-intro.html" data-scroll="GTt">A Review of Rings and Fields</a></li>
+<li><a href="section-extension-fields.html" data-scroll="dGQ">Extension Fields</a></li>
+<li><a href="fields-subsection-algebraic-elements.html" data-scroll="acq">Algebraic Elements</a></li>
+<li><a href="section-fields-vectorspaces-review.html" data-scroll="UWY">A Review of Vector Spaces</a></li>
+<li><a href="section-fields-vectorspaces.html" data-scroll="Scs">Extension Fields as Vector Spaces</a></li>
+<li><a href="section-constructions-conc.html" data-scroll="XhK">What's Not Constructible</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="galois.html" data-scroll="hgP"><span class="codenumber">9</span> <span class="title">Galois Theory</span></a><ul>
+<li><a href="section-galois-splitting-fields.html" data-scroll="wmn">Splitting Fields</a></li>
+<li><a href="section-galois-field-automorphisms.html" data-scroll="iWc">Field Automorphisms</a></li>
+<li><a href="section-galois-fund-theorem-galois-theory.html" data-scroll="Pdl">The Fundamental Theorem</a></li>
+</ul>
+</li>
+<li class="link part"><a href="part-more-group-theory.html" data-scroll="part-more-group-theory"><span class="codenumber">III</span> <span class="title">More Group Theory</span></a></li>
+<li class="link">
+<a href="groups-structure.html" data-scroll="nRa"><span class="codenumber">10</span> <span class="title">Some of the Structure of Groups</span></a><ul>
+<li><a href="section-groups-cayley.html" data-scroll="CTu">Isomorphisms and Cayley's Theorem</a></li>
+<li><a href="section-groups-permutations.html" data-scroll="mjE">Permutation Groups</a></li>
+<li><a href="section-solvable-groups.html" data-scroll="WbU">Solvable Groups</a></li>
+<li><a href="section-simplicity-of-an.html" data-scroll="GCx">The group \(S_5\)</a></li>
+<li><a href="section-galois-applications.html" data-scroll="vku">Applications: Galois Groups</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="struct-more.html" data-scroll="YWA"><span class="codenumber">11</span> <span class="title">More of the Structure of Groups</span></a><ul>
+<li><a href="section-groups-order.html" data-scroll="hVk">Cyclic Groups and Orders of Elements</a></li>
+<li><a href="section-groups-lagrange.html" data-scroll="BOb">Lagrange's Theorem and its consequences</a></li>
+<li><a href="section-direct-products.html" data-scroll="kCy">Direct Products</a></li>
+<li><a href="section-finite-abelian-groups.html" data-scroll="pUL">Finite Abelian Groups</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="crypt.html" data-scroll="uCn"><span class="codenumber">12</span> <span class="title">Introduction to Cryptography</span></a><ul>
+<li><a href="section-private-key-crypt.html" data-scroll="Qkr">Private Key Cryptography</a></li>
+<li><a href="section-public-key-crypt.html" data-scroll="wrA">Public Key Cryptography</a></li>
+<li><a href="ws_groups-RSA-lab.html" data-scroll="zaZ">Activity: RSA Cryptography Lab</a></li>
+<li><a href="section-method-of-repeated-squares.html" data-scroll="YOj">The Method of Repeated Squares</a></li>
+<li><a href="exercises-crypt.html" data-scroll="rHH">Exercises</a></li>
+<li><a href="crypt-exercises-additional.html" data-scroll="XOQ">Additional Exercises: Primality and Factoring</a></li>
+<li><a href="crypt-references.html" data-scroll="yqf">References and Suggested Readings</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="actions.html" data-scroll="elJ"><span class="codenumber">13</span> <span class="title">Group Actions</span></a><ul>
+<li><a href="section-groups-acting-on-sets.html" data-scroll="nFv">Groups Acting on Sets</a></li>
+<li><a href="section-class-equation.html" data-scroll="TME">The Class Equation</a></li>
+<li><a href="section-burnsides-counting-theorem.html" data-scroll="zTN">Burnside's Counting Theorem</a></li>
+<li><a href="exercises-actions.html" data-scroll="PcL">Exercises</a></li>
+<li><a href="actions-exercises-programming.html" data-scroll="vjU">Programming Exercise</a></li>
+<li><a href="actions-references.html" data-scroll="VdC">References and Suggested Reading</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="sylow.html" data-scroll="TkO"><span class="codenumber">14</span> <span class="title">The Sylow Theorems</span></a><ul>
+<li><a href="section-sylow-theorems.html" data-scroll="ILJ">The Sylow Theorems</a></li>
+<li><a href="section-sylow-applications.html" data-scroll="oSS">Examples and Applications</a></li>
+<li><a href="reading-questions-23.html" data-scroll="EPk">Reading Questions</a></li>
+<li><a href="exercises-sylow.html" data-scroll="kiZ">Exercises</a></li>
+<li><a href="sylow-exercises-project.html" data-scroll="Qqi">A Project</a></li>
+<li><a href="sylow-references.html" data-scroll="Sgz">References and Suggested Readings</a></li>
+</ul>
+</li>
+<li class="link part"><a href="part-additional.html" data-scroll="part-additional"><span class="codenumber">IV</span> <span class="title">Additional Topics</span></a></li>
+<li class="link">
+<a href="matrix.html" data-scroll="CSk"><span class="codenumber">15</span> <span class="title">Matrix Groups and Symmetry</span></a><ul>
+<li><a href="section-matrix-groups.html" data-scroll="geN">Matrix Groups</a></li>
+<li><a href="section-symmetry.html" data-scroll="MlW">Symmetry</a></li>
+<li><a href="reading-questions-24.html" data-scroll="jhg">Reading Questions</a></li>
+<li><a href="exercises-matrix.html" data-scroll="nJm">Exercises</a></li>
+<li><a href="matrix-references.html" data-scroll="IcT">References and Suggested Readings</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="algcodes.html" data-scroll="jTr"><span class="codenumber">16</span> <span class="title">Algebraic Coding Theory</span></a><ul>
+<li><a href="section-error-detecting-correcting-codes.html" data-scroll="lIE">Error-Detecting and Correcting Codes</a></li>
+<li><a href="section-linear-codes.html" data-scroll="RPN">Linear Codes</a></li>
+<li><a href="section-parity-check.html" data-scroll="xWW">Parity-Check and Generator Matrices</a></li>
+<li><a href="section-efficient-decoding.html" data-scroll="eef">Efficient Decoding</a></li>
+<li><a href="reading-questions-25.html" data-scroll="gmA">Reading Questions</a></li>
+<li><a href="exercises-algcodes.html" data-scroll="NfU">Exercises</a></li>
+<li><a href="algcodes-exercises-programming.html" data-scroll="tnd">Programming Exercises</a></li>
+<li><a href="algcodes-references.html" data-scroll="GJf">References and Suggested Readings</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="finite.html" data-scroll="Gnc"><span class="codenumber">17</span> <span class="title">Finite Fields</span></a><ul>
+<li><a href="section-finite-field.html" data-scroll="jzF">Structure of a Finite Field</a></li>
+<li><a href="section-poly-codes.html" data-scroll="PGO">Polynomial Codes</a></li>
+<li><a href="reading-questions-26.html" data-scroll="RdC">Reading Questions</a></li>
+<li><a href="exercises-finite.html" data-scroll="KWV">Exercises</a></li>
+<li><a href="finite-exercises-bch-codes.html" data-scroll="ree">Additional Exercises: Error Correction for <abbr class="acronym">BCH</abbr> Codes</a></li>
+<li><a href="finite-references.html" data-scroll="Yrk">References and Suggested Readings</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="boolean.html" data-scroll="dAp"><span class="codenumber">18</span> <span class="title">Lattices and Boolean Algebras</span></a><ul>
+<li><a href="section-boolean-lattices.html" data-scroll="Tbk">Lattices</a></li>
+<li><a href="section-boolean-algebras.html" data-scroll="zit">Boolean Algebras</a></li>
+<li><a href="section-algebra-of-circuits.html" data-scroll="fpC">The Algebra of Electrical Circuits</a></li>
+<li><a href="reading-questions-27.html" data-scroll="nQZ">Reading Questions</a></li>
+<li><a href="exercises-boolean.html" data-scroll="uyA">Exercises</a></li>
+<li><a href="boolean-exercises-programming.html" data-scroll="aFJ">Programming Exercises</a></li>
+<li><a href="boolean-references.html" data-scroll="QcR">References and Suggested Readings</a></li>
+</ul>
+</li>
+<li class="link backmatter"><a href="backmatter.html" data-scroll="uDN"><span class="title">Reference</span></a></li>
+<li class="link"><a href="appendix-gfdl.html" data-scroll="gAi"><span class="codenumber">A</span> <span class="title">GNU Free Documentation License</span></a></li>
+<li class="link"><a href="solutions-1.html" data-scroll="aKW"><span class="codenumber">B</span> <span class="title">Hints and Answers to Selected Exercises</span></a></li>
+<li class="link"><a href="appendix-2.html" data-scroll="MHr"><span class="codenumber">C</span> <span class="title">Notation</span></a></li>
+<li class="link"><a href="index-1.html" data-scroll="index-1"><span class="title">Index</span></a></li>
+<li class="link"><a href="colophon-2.html" data-scroll="colophon-2"><span class="title">Colophon</span></a></li>
+</ul></nav><div class="extras"><nav><a class="mathbook-link" href="https://pretextbook.org">Authored in PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" alt="Powered by MathJax"></a></nav></div>
+</div></div>
+<main class="main"><div id="content" class="pretext-content"><section xmlns:svg="http://www.w3.org/2000/svg" class="worksheet" id="FOA"><h3 class="heading hide-type">
+<span class="type">Worksheet</span> <span class="codenumber">8.6.2</span> <span class="title">Activity: Dimension and Degree</span><div class="print-links">
+<a href="ws_fields-extension-degree-a4.html" class="a4">A4</a><a href="ws_fields-extension-degree-letter.html" class="us">US</a>
+</div>
+</h3>
+<section class="introduction" id="irj"><p id="oQp">Recall that a <em class="emphasis">basis</em> for a vector space is a linearly independent spanning set, and that the <em class="emphasis">dimension</em> of a vector space is the size of a (any) basis for the space.</p>
+<p id="UXy">If \(K\) is an extension field of \(F\text{,}\) we can view \(K\) as a vector space over the field of scalars \(F\text{.}\)  In this case, we say the <dfn class="terminology">degree</dfn> of \(K\) over \(F\text{,}\) written \([K:F]\) is the dimension of this vector space.</p></section><article class="exercise exercise-like" id="uFB"><h6 class="heading"><span class="codenumber">1<span class="period">.</span></span></h6>
+<p id="hlQ">Find a basis for \(\Q(\sqrt{7})\) over \(\Q\text{.}\)  What is \([\Q(\sqrt{7}):\Q]\text{?}\)</p>
+<div class="solutions">
+<a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-zpu" id="zpu"><span class="type">Solution.</span> </a><div class="hidden-content tex2jax_ignore" id="hk-zpu"><div class="solution solution-like"><p id="DZn">One possible basis is \(\{1, \sqrt{7}\}\text{,}\) making \([\Q(\sqrt{7}):\Q] = 2\)</p></div></div>
+</div>
+<div class="workspace" data-space="0.7in"></div></article><article class="exercise exercise-like" id="Oys"><h6 class="heading"><span class="codenumber">2<span class="period">.</span></span></h6>
+<p id="BeH">Find a basis for \(\Q(\sqrt[3]{5})\) over \(\Q\text{.}\)  What is \([\Q(\sqrt[3]{5}):\Q]\text{?}\)</p>
+<div class="solutions">
+<a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-Til" id="Til"><span class="type">Solution.</span> </a><div class="hidden-content tex2jax_ignore" id="hk-Til"><div class="solution solution-like"><p id="XSe">One possible basis is \(\{1, \sqrt[3]{5}, \sqrt[3]{5}^2\}\text{.}\)  Thus \([\Q(\sqrt[3]{5}):\Q] = 3\text{.}\)</p></div></div>
+</div>
+<div class="workspace" data-space="0.7in"></div></article><article class="exercise exercise-like" id="aMK"><h6 class="heading"><span class="codenumber">3<span class="period">.</span></span></h6>
+<p id="NsZ">Suppose \(\alpha\) is a root of \(p(x) = x^5 -6x^4 + 9x^2 + 3\text{.}\)  Find a basis for \(\Q(\alpha)\) over \(\Q\text{.}\)  What is \([\Q(\alpha):\Q]\text{.}\)</p>
+<div class="solutions">
+<a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-fwD" id="fwD"><span class="type">Solution.</span> </a><div class="hidden-content tex2jax_ignore" id="hk-fwD"><div class="solution solution-like"><p id="kgw">The polynomial \(p(x)\) is irreducible by Eisenstein's criterion.  Therefore, it is the minimal polynomial for any of its roots, including \(\alpha\text{.}\)  We then know that \(\{1, \alpha, \alpha^2, \alpha^3, \alpha^4\}\) will be a basis for \(\Q(\alpha)\text{,}\) making \([\Q(\alpha):\Q] = 5\text{.}\)</p></div></div>
+</div>
+<div class="workspace" data-space="0.7in"></div></article><article class="exercise exercise-like" id="GTT"><h6 class="heading"><span class="codenumber">4<span class="period">.</span></span></h6>
+<p id="tAi">What is the general rule here?  Some things to think about: If you claim that you can always find a basis in some systematic way, how do you know it is really a basis?  How do you know the basis is linearly independent?  How do you know it spans?</p>
+<div class="solutions">
+<a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-LDM" id="LDM"><span class="type">Solution.</span> </a><div class="hidden-content tex2jax_ignore" id="hk-LDM"><div class="solution solution-like">
+<p id="QnF">We claim that \([\Q(c):\Q]\) is equal to the degree of the minimal polynomial for \(c\) (so the degree of the extension is the degree of the polynomial).  In fact, we know that \(\{1, c, c^2, \ldots, c^{n-1}\}\) will always be a basis (where \(n\) is the degree).</p>
+<p id="wuO">Why is this?  We know that \(\Q(c)\) must contain all powers of \(c\text{.}\)  However, \(c^m\) for \(m\ge n\) can always be expressed as a linear combination of \(c^i\) for \(i \lt n\text{,}\) using the minimal polynomial for \(c\text{.}\)  This proves that \(\{1, c, c^2, \ldots, c^{n-1}\}\) spans \(\Q(c)\text{.}\)  To see why this set is linearly independent, note that if it were not, then there would be a linear combination of powers of \(c\) that was zero.  But that would give a polynomial equal to zero at \(c\text{,}\) making \(c\) a root of a polynomial of degree less than \(n\text{.}\)</p>
+</div></div>
+</div>
+<div class="workspace" data-space="1.7in"></div></article><article class="exercise exercise-like" id="nbc"><h6 class="heading"><span class="codenumber">5<span class="period">.</span></span></h6>
+<p id="ZHr">The polynomial \(q(x) = x^5 -7x^3 - 5x^2 + 35\) has \(\sqrt{7}\) and \(\sqrt[3]{5}\) as roots.  Does this mean \([\Q(\sqrt{7}):\Q] = [\Q(\sqrt[3]{5}):\Q] = 5\text{?}\)  Why not?</p>
+<div class="solutions">
+<a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-rKV" id="rKV"><span class="type">Solution.</span> </a><div class="hidden-content tex2jax_ignore" id="hk-rKV"><div class="solution solution-like">
+<p id="cBX">Clearly this cannot be true, since we already said that these degrees were \(2\) and \(3\) respectively.  They key thing that made our argument work above was that the polynomial was a <em class="emphasis">minimal</em> polynomial.</p>
+<p id="IJg">To further see that this is silly, what would the basis for \(\Q(\sqrt{7})\) be if it had size 7?  Would it be \(\{1, \sqrt{7}, \sqrt{7}^2,\ldots, \sqrt{7}^4\}\text{?}\)  That is clearly linearly dependent, since \(\sqrt{7}^2\) is a multiple of 1.</p>
+</div></div>
+</div>
+<div class="workspace" data-space="0.7in"></div></article><hr class="pagebreak">
+<p id="suP">We now have a fairly good idea how to work with \(\Q(\alpha)\text{.}\)  What if we consider \(\Q(\sqrt[3]{5}, \sqrt{7})\text{,}\) the smallest field containing \(\Q\text{,}\) \(\sqrt{7}\text{,}\) and also \(\sqrt[3]{5}\text{?}\)</p>
+<article class="exercise exercise-like" id="ScS"><h6 class="heading"><span class="codenumber">6<span class="period">.</span></span></h6>
+<p id="YBY">We can think of this as an extension of an extension.  Take \(\Q(\sqrt[3]{5})\) as our base field.  Adjoin to that \(\sqrt{7}\) to get \(\Q(\sqrt[3]{5}, \sqrt{7})\text{.}\) What is \([\Q(\sqrt[3]{5}, \sqrt{7}):\Q(\sqrt[3]{5})]\text{?}\)  Use the general rule we discovered above and also find a basis</p>
+<div class="solutions">
+<a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-WML" id="WML"><span class="type">Solution.</span> </a><div class="hidden-content tex2jax_ignore" id="hk-WML"><div class="solution solution-like">
+<p id="bwE">Over \(\Q(\sqrt[3]{5})\text{,}\) the minimal polynomial for \(\sqrt{7}\) is still \(x^2 - 7\text{.}\)  For what else could it be?  The only way that there could be a smaller degree polynomial would be for there to be a degree 1 polynomial, but in that case, we would have \(\sqrt{7} \in \Q(\sqrt[3]{5})\text{.}\)  It is not obvious, but this is not the case.</p>
+<p id="HDN">Given that, we know that the \([\Q(\sqrt[3]{5}, \sqrt{7}):\Q(\sqrt[3]{5})] = 2\text{.}\)</p>
+<p id="nKW">A basis will be \(\{1, \sqrt{7}\}\text{.}\)</p>
+</div></div>
+</div>
+<div class="workspace" data-space="1.5in"></div></article><article class="exercise exercise-like" id="erk"><h6 class="heading"><span class="codenumber">7<span class="period">.</span></span></h6>
+<p id="kQq">Using the basis above and the basis for \(\Q(\sqrt[3]{5})\) over \(\Q\text{,}\) find a basis for \(\Q(\sqrt[3]{5}, \sqrt{7})\) over \(\Q\text{.}\)</p>
+<div class="solutions">
+<a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-jbd" id="jbd"><span class="type">Solution.</span> </a><div class="hidden-content tex2jax_ignore" id="hk-jbd"><div class="solution solution-like">
+<p id="TSf">A basis for \(\Q(\sqrt[3]{5})\) over \(\Q\) is \(\{1, \sqrt[3]{5}, \sqrt[3]{5}^2\}\text{.}\)  So every element of \(\Q(\sqrt[3]{5})\) can be written in the form \(a+b\sqrt[3]{5} + c \sqrt[3]{5}^2\text{.}\) These are the coefficients we can multiply by basis elements \(\{1, \sqrt{7}\}\) for \(\Q(\sqrt[3]{5},\sqrt{7})\) over \(\Q(\sqrt[3]{5})\text{.}\)  So a general element in \(\Q(\sqrt[3]{5}, \sqrt{7})\) has the form</p>
+<div class="displaymath">
+\begin{equation*}
+a+b\sqrt[3]{5} + c\sqrt[3]{5}^2 + a'\sqrt{7} + b'\sqrt[3]{5}\sqrt{7} + c'\sqrt[3]{5}^2\sqrt{7}.
+\end{equation*}
+</div>
+<p class="continuation">A basis is thus</p>
+<div class="displaymath">
+\begin{equation*}
+\{1, \sqrt[3]{5}, \sqrt[3]{5}^2, \sqrt{7}, \sqrt[3]{5}\sqrt{7}, \sqrt[3]{5}^2\sqrt{7} \}.
+\end{equation*}
+</div>
+</div></div>
+</div>
+<div class="workspace" data-space="1.5in"></div></article><article class="exercise exercise-like" id="Kyt"><h6 class="heading"><span class="codenumber">8<span class="period">.</span></span></h6>
+<p id="QXz">What is \([\Q(\sqrt[3]{5}, \sqrt{7}):\Q]\text{?}\)  What is the general rule for degrees of extensions of extensions?</p>
+<div class="solutions">
+<a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-Pim" id="Pim"><span class="type">Solution.</span> </a><div class="hidden-content tex2jax_ignore" id="hk-Pim"><div class="solution solution-like">
+<p id="zZo">From looking at the basis above, we see that the degree over \(\Q\) is 6, which is of course, \(2 \cdot 3\text{.}\)  It certainly appears this will always work.  In other words, if \(K\) is an extension of \(F\text{,}\) which is an extension of \(E\text{,}\) we have</p>
+<div class="displaymath">
+\begin{equation*}
+[K:E] = [K:F]\cdot [F:E].
+\end{equation*}
+</div>
+</div></div>
+</div>
+<div class="workspace" data-space="1.5in"></div></article><article class="exercise exercise-like" id="exercise-687"><h6 class="heading"><span class="codenumber">9<span class="period">.</span></span></h6>
+<p id="p-2441">What if we started with \(\Q(\sqrt{7})\) and then adjoined \(\sqrt[3]{5}\text{?}\)  Repeat the analysis you did above to make sure we get the same results about degree and basis.</p>
+<div class="solutions">
+<a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-126" id="solution-126"><span class="type">Solution.</span> </a><div class="hidden-content tex2jax_ignore" id="hk-solution-126"><div class="solution solution-like">
+<p id="p-2442">We do indeed get the same thing.  The minimal polynomial for \(\sqrt[3]{5}\) is \(x^3 - 5\text{,}\) even over the extension field \(\Q(\sqrt{7})\text{.}\)  Thus \([\Q(\sqrt{7},\sqrt[3]{5}):\Q(\sqrt{7})] = 3\text{.}\)  A basis is \(\{1, \sqrt[3]{5}, \sqrt[3]{5}^2\}\text{.}\)</p>
+<p id="p-2443">If we combine this with the basis for \(\Q(\sqrt{7})\) over \(\Q\text{,}\) we get a basis for \(\Q(\sqrt[3]{5}, \sqrt{7})\) over \(\Q\text{:}\) \(\{1, \sqrt{7}, \sqrt[3]{5}, \sqrt{7}\sqrt[3]{5}, \sqrt[3]{5}^2, \sqrt{7}\sqrt[3]{5}^2\}\text{,}\) containing 6 elements, as expected.</p>
+</div></div>
+</div>
+<div class="workspace" data-space="1.5in"></div></article><article class="exercise exercise-like" id="qFC"><h6 class="heading"><span class="codenumber">10<span class="period">.</span></span></h6>
+<p id="xeI">What is \([\Q(\sqrt{2}, \sqrt[4]{2}):\Q]\text{?}\)</p>
+<div class="solutions">
+<a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-vpv" id="vpv"><span class="type">Solution.</span> </a><div class="hidden-content tex2jax_ignore" id="hk-vpv"><div class="solution solution-like">
+<p id="ggx">At first, this might look like a counterexample to the “tower rule” we gave above.  The minimum polynomial for \(\sqrt[4]{2}\) over \(\Q\) is \(x^4 - 2\text{,}\) which has degree 4.  The minimum polynomial for \(\sqrt{2}\) is \(x^2 - 2\text{.}\) However, \([\Q(\sqrt{2}, \sqrt[4]{2}):\Q] = 4\text{,}\) not 8.  This can be seen easily by noticing that \(\Q(\sqrt{2}, \sqrt[4]{2}) = \Q(\sqrt[4]{2})\text{,}\) as this already contains \(\sqrt{2}\text{.}\)</p>
+<p id="MnG">The point is that the tower rule is correct: you do multiply the degrees of each extension.  But these degrees are not always the degree of the minimal polynomials over the base field.  Each time you go up one floor in the tower, you must again ask what the minimum polynomial for the next element you adjoin is.</p>
+</div></div>
+</div>
+<div class="workspace" data-space="0in"></div></article></section></div></main>
+</div>
+<script src="https://unpkg.com/prismjs@v1.22.0/components/prism-core.min.js"></script><script src="https://unpkg.com/prismjs@v1.22.0/plugins/autoloader/prism-autoloader.min.js"></script>
+</body>
+</html>

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2021-03-25T19:18:29-06:00       *-->
+<!--*       on 2021-08-19T13:09:28-06:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -14,36 +14,42 @@
 <title>AATA Factoring over \(\C\) and \(\R\)</title>
 <meta name="Keywords" content="Authored in PreTeXt">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<script src="https://sagecell.sagemath.org/embedded_sagecell.js"></script><script type="text/x-mathjax-config">
-MathJax.Hub.Config({
-    tex2jax: {
-        inlineMath: [['\\(','\\)']]
+<script src="https://sagecell.sagemath.org/embedded_sagecell.js"></script><script>window.MathJax = {
+  tex: {
+    inlineMath: [['\\(','\\)']],
+    tags: "none",
+    useLabelIds: true,
+    tagSide: "right",
+    tagIndent: ".8em",
+    packages: {'[+]': ['base', 'extpfeil', 'ams', 'amscd', 'newcommand', 'knowl']}
+  },
+  options: {
+    ignoreHtmlClass: "tex2jax_ignore",
+    processHtmlClass: "has_am",
+    renderActions: {
+        findScript: [10, function (doc) {
+            document.querySelectorAll('script[type^="math/tex"]').forEach(function(node) {
+                var display = !!node.type.match(/; *mode=display/);
+                var math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display);
+                var text = document.createTextNode('');
+                node.parentNode.replaceChild(text, node);
+                math.start = {node: text, delim: '', n: 0};
+                math.end = {node: text, delim: '', n: 0};
+                doc.math.push(math);
+            });
+        }, '']
     },
-    asciimath2jax: {
-        ignoreClass: ".*",
-        processClass: "has_am"
-    },
-    jax: ["input/AsciiMath"],
-    extensions: ["asciimath2jax.js"],
-    TeX: {
-        extensions: ["extpfeil.js", "autobold.js", "https://pretextbook.org/js/lib/mathjaxknowl.js", "AMScd.js", ],
-        // scrolling to fragment identifiers is controlled by other Javascript
-        positionToHash: false,
-        equationNumbers: { autoNumber: "none", useLabelIds: true, },
-        TagSide: "right",
-        TagIndent: ".8em",
-    },
-    // HTML-CSS output Jax to be dropped for MathJax 3.0
-    "HTML-CSS": {
-        scale: 88,
-        mtextFontInherit: true,
-    },
-    CommonHTML: {
-        scale: 88,
-        mtextFontInherit: true,
-    },
-});
-</script><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS_CHTML-full"></script><link href="https://unpkg.com/prismjs@v1.22.0/themes/prism.css" rel="stylesheet">
+  },
+  chtml: {
+    scale: 0.88,
+    mtextInheritFont: true
+  },
+  loader: {
+    load: ['input/asciimath', '[tex]/extpfeil', '[tex]/amscd', '[tex]/newcommand', '[pretext]/mathjaxknowl3.js'],
+    paths: {pretext: "https://pretextbook.org/js/lib"},
+  },
+};
+</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><link href="https://unpkg.com/prismjs@v1.22.0/themes/prism.css" rel="stylesheet">
 <script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/jquery.min.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/0.13/pretext.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/0.13/pretext_add_on.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script xmlns:svg="http://www.w3.org/2000/svg">sagecellEvalName='Evaluate (Sage)';
 </script><link xmlns:svg="http://www.w3.org/2000/svg" href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
 <link xmlns:svg="http://www.w3.org/2000/svg" href="https://fonts.googleapis.com/css?family=Inconsolata:400,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
@@ -91,7 +97,7 @@ MathJax.Hub.Config({
 \newcommand{\amp}{&amp;}
 \)</div>
 <header id="masthead" class="smallbuttons"><div class="banner"><div class="container">
-<a id="logo-link" href="http://abstract.pugetsound.edu" target="_blank"><img src="images/cover_aata_2020.png" alt="Logo image"></a><div class="title-container">
+<a id="logo-link" href="http://abstract.pugetsound.edu" target="_blank"><img src="external/images/cover_aata_2020.png" alt="Logo image"></a><div class="title-container">
 <h1 class="heading"><a href="aata-toc.html"><span class="title">Abstract Algebra:</span> <span class="subtitle">Theory and Applications, Remixed!</span></a></h1>
 <p class="byline">Thomas W. Judson</p>
 </div>
@@ -210,7 +216,7 @@ MathJax.Hub.Config({
 </li>
 <li class="link part"><a href="part-more-group-theory.html" data-scroll="part-more-group-theory"><span class="codenumber">III</span> <span class="title">More Group Theory</span></a></li>
 <li class="link">
-<a href="groups.html" data-scroll="nRa"><span class="codenumber">10</span> <span class="title">Some of the Structure of Groups</span></a><ul>
+<a href="groups-structure.html" data-scroll="nRa"><span class="codenumber">10</span> <span class="title">Some of the Structure of Groups</span></a><ul>
 <li><a href="section-groups-cayley.html" data-scroll="CTu">Isomorphisms and Cayley's Theorem</a></li>
 <li><a href="section-groups-permutations.html" data-scroll="mjE">Permutation Groups</a></li>
 <li><a href="section-solvable-groups.html" data-scroll="WbU">Solvable Groups</a></li>
@@ -362,9 +368,9 @@ z^{-1} &amp; = \frac{2}{13} - \frac{3}{13}i\\
 |z| &amp; = \sqrt{13}\\
 \overline{z} &amp; = 2-3i\text{.}
 \end{align*}
-</div></article><figure class="figure figure-like" id="Nyt"><div class="image-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><img src="images/cyclic-complex-rectangular.svg" role="img" style="width: 100%; height: auto;" alt="The complex plane where the horizontal axis is the x-axis or real axis and the verticle axis is the y-axis or imaginary axis. The point z1 = 2 + 3i is in the upper right quadrant, the point z2 = 1- 2i in the lower right quadrant, and z3 = -3 + 2i in the upper right quadrant."></div>
+</div></article><figure class="figure figure-like" id="Nyt"><div class="image-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><img src="generated/latex-image/cyclic-complex-rectangular.svg" role="img" class="contained" alt="The complex plane where the horizontal axis is the x-axis or real axis and the verticle axis is the y-axis or imaginary axis. The point z1 = 2 + 3i is in the upper right quadrant, the point z2 = 1- 2i in the lower right quadrant, and z3 = -3 + 2i in the upper right quadrant."></div>
 <figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">6.31<span class="period">.</span></span><span class="space"> </span>Rectangular coordinates of a complex number</figcaption></figure><p id="VcS">There are several ways of graphically representing complex numbers. We can represent a complex number \(z = a +bi\) as an ordered pair on the \(xy\) plane where \(a\) is the \(x\) (or real) coordinate and \(b\) is the \(y\) (or imaginary) coordinate. This is called the <dfn class="terminology">rectangular</dfn> or <dfn class="terminology">Cartesian</dfn> representation. The rectangular representations of \(z_1 = 2 + 3i\text{,}\)          \(z_2 = 1 - 2i\text{,}\) and \(z_3 = - 3 + 2i\) are depicted in <a class="xref" data-knowl="./knowl/figure-rectcoord.html" title="Figure 6.31">Figure 6.31</a>.</p>
-<figure class="figure figure-like" id="tFC"><div class="image-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><img src="images/cyclic-complex-polar.svg" role="img" style="width: 100%; height: auto;" alt="The complex plane where the horizontal axis is the x-axis or real axis and the verticle axis is the y-axis or imaginary axis.  The point a + bi is in the upper right quadrant.  The point is also determined by a ray that at an angle of theta counterclockwise from the horizontal axis having a length of r."></div>
+<figure class="figure figure-like" id="tFC"><div class="image-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><img src="generated/latex-image/cyclic-complex-polar.svg" role="img" class="contained" alt="The complex plane where the horizontal axis is the x-axis or real axis and the verticle axis is the y-axis or imaginary axis.  The point a + bi is in the upper right quadrant.  The point is also determined by a ray that at an angle of theta counterclockwise from the horizontal axis having a length of r."></div>
 <figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">6.32<span class="period">.</span></span><span class="space"> </span>Polar coordinates of a complex number</figcaption></figure><p id="Bkb">Nonzero complex numbers can also be represented using <dfn class="terminology">polar coordinates</dfn>. To specify any nonzero point on the plane, it suffices to give an angle \(\theta\) from the positive \(x\) axis in the counterclockwise direction and a distance \(r\) from the origin, as in  <a class="xref" data-knowl="./knowl/figure-polarcoord.html" title="Figure 6.32">Figure 6.32</a>. We can see that</p>
 <div class="displaymath">
 \begin{equation*}
@@ -456,7 +462,7 @@ z^{10} &amp; = (1+i)^{10}\\
 &amp; = 32  \cis \left( \frac{\pi }{2} \right)\\
 &amp; = 32i\text{.}
 \end{align*}
-</div></article><article class="paragraphs" id="WYW"><h5 class="heading"><span class="title">The Circle Group and the Roots of Unity.</span></h5>
+</div></article><section class="paragraphs" id="WYW"><h5 class="heading"><span class="title">The Circle Group and the Roots of Unity.</span></h5>
 <p id="RMN">The multiplicative group of the complex numbers, \({\mathbb C}^*\text{,}\) possesses some interesting subgroups. Whereas \({\mathbb Q}^*\) and \({\mathbb R}^*\) have no interesting subgroups of finite order, \({\mathbb C}^*\) has many. We first consider the <dfn class="terminology">circle group</dfn>, </p>
 <div class="displaymath">
 \begin{equation*}
@@ -497,8 +503,8 @@ z^n = \cis \left( n \frac{2 k \pi}{n } \right) = \cis( 2 k \pi ) = 1\text{.}
 \omega^7 &amp; = \frac{\sqrt{2}}{2}  - \frac{\sqrt{2}}{2}i\text{.}
 \end{align*}
 </div>
-<figure class="figure figure-like" id="LJg"><div class="image-box" style="width: 80%; margin-left: 10%; margin-right: 10%;"><img src="images/cyclic-roots-unity.svg" role="img" style="width: 100%; height: auto;" alt="The 8 roots of unity are spaced evenly around the unit circle beginning with 1 on the positive horizontal axis and followed by omega, i, the cube of omega, -1, omega to the fifth power, -i, and omega to the seventh power."></div>
-<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">6.41<span class="period">.</span></span><span class="space"> </span>8th roots of unity</figcaption></figure></article></article></section><section class="subsection" id="sBg"><h3 class="heading hide-type">
+<figure class="figure figure-like" id="LJg"><div class="image-box" style="width: 80%; margin-left: 10%; margin-right: 10%;"><img src="generated/latex-image/cyclic-roots-unity.svg" role="img" class="contained" alt="The 8 roots of unity are spaced evenly around the unit circle beginning with 1 on the positive horizontal axis and followed by omega, i, the cube of omega, -1, omega to the fifth power, -i, and omega to the seventh power."></div>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">6.41<span class="period">.</span></span><span class="space"> </span>8th roots of unity</figcaption></figure></article></section></section><section class="subsection" id="sBg"><h3 class="heading hide-type">
 <span class="type">Subsection</span> <span class="codenumber">6.5.2</span> <span class="title">Factoring With and Without Complex Numbers</span>
 </h3>
 <p id="VVa">Every odd degree polynomial has a root in \(\R\) (how do we know?), so no odd degree polynomial (of degree at least 3) can be irreducible over \(\R\text{.}\)  What about even degree polynomials?  For example, what about \(x^2 + 3\text{?}\)</p>
@@ -557,7 +563,7 @@ a(x) = k(x-c_1)(x-c_2)\cdots(x-c_n)\text{.}
 <li id="MHi"><p id="uRZ">\(\displaystyle (1+i)+\overline{(1+i)}\)</p></li>
 </ol>
 <div class="solutions">
-<a data-knowl="" class="id-ref hint-knowl original" data-refid="hk-klD" id="klD"><span class="type">Hint</span></a><div class="hidden-content tex2jax_ignore" id="hk-klD"><div class="hint solution-like"><p id="ubb">(a) \(-3 + 3i\text{;}\) (c) \(43- 18i\text{;}\) (e) \(i\)</p></div></div>
+<a data-knowl="" class="id-ref hint-knowl original" data-refid="hk-klD" id="klD"><span class="type">Hint.</span> </a><div class="hidden-content tex2jax_ignore" id="hk-klD"><div class="hint solution-like"><p id="ubb">(a) \(-3 + 3i\text{;}\) (c) \(43- 18i\text{;}\) (e) \(i\)</p></div></div>
 </div></article><article class="exercise exercise-like" id="csJ"><h6 class="heading"><span class="codenumber">2<span class="period">.</span></span></h6>
 <p id="glR">Convert the following complex numbers to the form \(a + bi\text{.}\)</p>
 <ol class="lower-alpha cols2">
@@ -567,7 +573,7 @@ a(x) = k(x-c_1)(x-c_2)\cdots(x-c_n)\text{.}
 <li id="ljS"><p id="TuJ">\(\displaystyle \frac{1}{2}e^{7\pi/4}\)</p></li>
 </ol>
 <div class="solutions">
-<a data-knowl="" class="id-ref hint-knowl original" data-refid="hk-wzV" id="wzV"><span class="type">Hint</span></a><div class="hidden-content tex2jax_ignore" id="hk-wzV"><div class="hint solution-like"><p id="aik">(a) \(\sqrt{3} + i\text{;}\) (c) \(-3\text{.}\)</p></div></div>
+<a data-knowl="" class="id-ref hint-knowl original" data-refid="hk-wzV" id="wzV"><span class="type">Hint.</span> </a><div class="hidden-content tex2jax_ignore" id="hk-wzV"><div class="hint solution-like"><p id="aik">(a) \(\sqrt{3} + i\text{;}\) (c) \(-3\text{.}\)</p></div></div>
 </div></article><article class="exercise exercise-like" id="IzS"><h6 class="heading"><span class="codenumber">3<span class="period">.</span></span></h6>
 <p id="Mta">Change the following complex numbers to polar representation.</p>
 <ol class="lower-alpha cols3">
@@ -579,7 +585,7 @@ a(x) = k(x-c_1)(x-c_2)\cdots(x-c_n)\text{.}
 <li id="WaU"><p id="ElL">\(\displaystyle 2i + 2 \sqrt{3}\)</p></li>
 </ol>
 <div class="solutions">
-<a data-knowl="" class="id-ref hint-knowl original" data-refid="hk-IOn" id="IOn"><span class="type">Hint</span></a><div class="hidden-content tex2jax_ignore" id="hk-IOn"><div class="hint solution-like"><p id="Gpt">(a) \(\sqrt{2} \cis( 7 \pi /4)\text{;}\) (c) \(2 \sqrt{2} \cis( \pi /4)\text{;}\) (e) \(3 \cis(3 \pi/2)\text{.}\)</p></div></div>
+<a data-knowl="" class="id-ref hint-knowl original" data-refid="hk-IOn" id="IOn"><span class="type">Hint.</span> </a><div class="hidden-content tex2jax_ignore" id="hk-IOn"><div class="hint solution-like"><p id="Gpt">(a) \(\sqrt{2} \cis( 7 \pi /4)\text{;}\) (c) \(2 \sqrt{2} \cis( \pi /4)\text{;}\) (e) \(3 \cis(3 \pi/2)\text{.}\)</p></div></div>
 </div></article><article class="exercise exercise-like" id="oHb"><h6 class="heading"><span class="codenumber">4<span class="period">.</span></span></h6>
 <p id="sAj">Calculate each of the following expressions.</p>
 <ol class="lower-alpha cols2">
@@ -592,7 +598,7 @@ a(x) = k(x-c_1)(x-c_2)\cdots(x-c_n)\text{.}
 <li id="mZf"><p id="VjW">\(\displaystyle (-2 + 2i)^{-5}\)</p></li>
 </ol>
 <div class="solutions">
-<a data-knowl="" class="id-ref hint-knowl original" data-refid="hk-VcF" id="VcF"><span class="type">Hint</span></a><div class="hidden-content tex2jax_ignore" id="hk-VcF"><div class="hint solution-like"><p id="mwC">(a) \((1 - i)/2\text{;}\) (c) \(16(i - \sqrt{3}\, )\text{;}\) (e) \(-1/4\text{.}\)</p></div></div>
+<a data-knowl="" class="id-ref hint-knowl original" data-refid="hk-VcF" id="VcF"><span class="type">Hint.</span> </a><div class="hidden-content tex2jax_ignore" id="hk-VcF"><div class="hint solution-like"><p id="mwC">(a) \((1 - i)/2\text{;}\) (c) \(16(i - \sqrt{3}\, )\text{;}\) (e) \(-1/4\text{.}\)</p></div></div>
 </div></article><article class="exercise exercise-like" id="WxD"><h6 class="heading"><span class="codenumber">5<span class="period">.</span></span></h6>
 <p id="UfN">Prove that the function \(\phi:\bC \to \bC\) given by \(\phi(z) = \bar z\) is a ring homomorphism.  Here \(\bar z = a-bi\) is the complex conjugate of \(z = a+bi\)</p>
 <div class="solutions"></div></article><article class="exercise exercise-like" id="CEM"><h6 class="heading"><span class="codenumber">6<span class="period">.</span></span></h6>
@@ -607,7 +613,7 @@ a(x) = k(x-c_1)(x-c_2)\cdots(x-c_n)\text{.}
 <article class="exercise exercise-like" id="van"><h6 class="heading"><span class="codenumber">1<span class="period">.</span></span></h6>
 <p id="sIx">Factor the polynomial \(p(x) = x^7 + 2x^6 - 3x - 6\) completely (into irreducible factors) over \(\Q\text{,}\) then over \(\bC\text{,}\) and then over \(\R\text{.}\)</p>
 <div class="solutions">
-<a data-knowl="" class="id-ref hint-knowl original" data-refid="hk-gBj" id="gBj"><span class="type">Hint</span></a><div class="hidden-content tex2jax_ignore" id="hk-gBj"><div class="hint solution-like"><p id="noK">Do the factoring in that order.</p></div></div>
+<a data-knowl="" class="id-ref hint-knowl original" data-refid="hk-gBj" id="gBj"><span class="type">Hint.</span> </a><div class="hidden-content tex2jax_ignore" id="hk-gBj"><div class="hint solution-like"><p id="noK">Do the factoring in that order.</p></div></div>
 </div></article><article class="exercise exercise-like" id="bhw"><h6 class="heading"><span class="codenumber">2<span class="period">.</span></span></h6>
 <p id="YPG">True or false: \(x^4 + 20x^3 + 5x^2+ 10x + 15\) is irreducible in \(\R[x]\text{.}\)  Briefly explain.</p></article></section></section></div></main>
 </div>

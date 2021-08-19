@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2021-03-25T19:20:01-06:00       *-->
+<!--*       on 2021-08-19T13:11:16-06:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -14,36 +14,42 @@
 <title>AATA Exercises</title>
 <meta name="Keywords" content="Authored in PreTeXt">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<script src="https://sagecell.sagemath.org/embedded_sagecell.js"></script><script type="text/x-mathjax-config">
-MathJax.Hub.Config({
-    tex2jax: {
-        inlineMath: [['\\(','\\)']]
+<script src="https://sagecell.sagemath.org/embedded_sagecell.js"></script><script>window.MathJax = {
+  tex: {
+    inlineMath: [['\\(','\\)']],
+    tags: "none",
+    useLabelIds: true,
+    tagSide: "right",
+    tagIndent: ".8em",
+    packages: {'[+]': ['base', 'extpfeil', 'ams', 'amscd', 'newcommand', 'knowl']}
+  },
+  options: {
+    ignoreHtmlClass: "tex2jax_ignore",
+    processHtmlClass: "has_am",
+    renderActions: {
+        findScript: [10, function (doc) {
+            document.querySelectorAll('script[type^="math/tex"]').forEach(function(node) {
+                var display = !!node.type.match(/; *mode=display/);
+                var math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display);
+                var text = document.createTextNode('');
+                node.parentNode.replaceChild(text, node);
+                math.start = {node: text, delim: '', n: 0};
+                math.end = {node: text, delim: '', n: 0};
+                doc.math.push(math);
+            });
+        }, '']
     },
-    asciimath2jax: {
-        ignoreClass: ".*",
-        processClass: "has_am"
-    },
-    jax: ["input/AsciiMath"],
-    extensions: ["asciimath2jax.js"],
-    TeX: {
-        extensions: ["extpfeil.js", "autobold.js", "https://pretextbook.org/js/lib/mathjaxknowl.js", "AMScd.js", ],
-        // scrolling to fragment identifiers is controlled by other Javascript
-        positionToHash: false,
-        equationNumbers: { autoNumber: "none", useLabelIds: true, },
-        TagSide: "right",
-        TagIndent: ".8em",
-    },
-    // HTML-CSS output Jax to be dropped for MathJax 3.0
-    "HTML-CSS": {
-        scale: 88,
-        mtextFontInherit: true,
-    },
-    CommonHTML: {
-        scale: 88,
-        mtextFontInherit: true,
-    },
-});
-</script><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS_CHTML-full"></script><link href="https://unpkg.com/prismjs@v1.22.0/themes/prism.css" rel="stylesheet">
+  },
+  chtml: {
+    scale: 0.88,
+    mtextInheritFont: true
+  },
+  loader: {
+    load: ['input/asciimath', '[tex]/extpfeil', '[tex]/amscd', '[tex]/newcommand', '[pretext]/mathjaxknowl3.js'],
+    paths: {pretext: "https://pretextbook.org/js/lib"},
+  },
+};
+</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><link href="https://unpkg.com/prismjs@v1.22.0/themes/prism.css" rel="stylesheet">
 <script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/jquery.min.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/0.13/pretext.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/0.13/pretext_add_on.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script xmlns:svg="http://www.w3.org/2000/svg">sagecellEvalName='Evaluate (Sage)';
 </script><link xmlns:svg="http://www.w3.org/2000/svg" href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
 <link xmlns:svg="http://www.w3.org/2000/svg" href="https://fonts.googleapis.com/css?family=Inconsolata:400,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
@@ -91,7 +97,7 @@ MathJax.Hub.Config({
 \newcommand{\amp}{&amp;}
 \)</div>
 <header id="masthead" class="smallbuttons"><div class="banner"><div class="container">
-<a id="logo-link" href="http://abstract.pugetsound.edu" target="_blank"><img src="images/cover_aata_2020.png" alt="Logo image"></a><div class="title-container">
+<a id="logo-link" href="http://abstract.pugetsound.edu" target="_blank"><img src="external/images/cover_aata_2020.png" alt="Logo image"></a><div class="title-container">
 <h1 class="heading"><a href="aata-toc.html"><span class="title">Abstract Algebra:</span> <span class="subtitle">Theory and Applications, Remixed!</span></a></h1>
 <p class="byline">Thomas W. Judson</p>
 </div>
@@ -210,7 +216,7 @@ MathJax.Hub.Config({
 </li>
 <li class="link part"><a href="part-more-group-theory.html" data-scroll="part-more-group-theory"><span class="codenumber">III</span> <span class="title">More Group Theory</span></a></li>
 <li class="link">
-<a href="groups.html" data-scroll="nRa"><span class="codenumber">10</span> <span class="title">Some of the Structure of Groups</span></a><ul>
+<a href="groups-structure.html" data-scroll="nRa"><span class="codenumber">10</span> <span class="title">Some of the Structure of Groups</span></a><ul>
 <li><a href="section-groups-cayley.html" data-scroll="CTu">Isomorphisms and Cayley's Theorem</a></li>
 <li><a href="section-groups-permutations.html" data-scroll="mjE">Permutation Groups</a></li>
 <li><a href="section-solvable-groups.html" data-scroll="WbU">Solvable Groups</a></li>
@@ -313,7 +319,7 @@ MathJax.Hub.Config({
 </h2>
 <article class="exercise exercise-like" id="kDl"><h6 class="heading"><span class="codenumber">1<span class="period">.</span></span></h6>
 <p id="SzU">Why is the following encoding scheme not acceptable?</p>
-<div class="sidebyside"><div class="sbsrow" style="margin-left:0%;margin-right:0%;"><div class="sbspanel fixed-width" style="width:100%;justify-content:flex-start;"><table class="tabular" id="AZg">
+<div class="sidebyside"><div class="sbsrow" style="margin-left:0%;margin-right:0%;"><div class="sbspanel fixed-width top" style="width:100%;"><table class="tabular" id="AZg">
 <tr>
 <td class="c m b2 r0 l0 t2 lines">Information</td>
 <td class="c m b2 r0 l0 t2 lines">\(0\)</td>
@@ -346,7 +352,7 @@ MathJax.Hub.Config({
 \end{equation*}
 </div>
 <div class="solutions">
-<a data-knowl="" class="id-ref hint-knowl original" data-refid="hk-esA" id="esA"><span class="type">Hint</span></a><div class="hidden-content tex2jax_ignore" id="hk-esA"><div class="hint solution-like"><p id="HMu">This cannot be a group code since \((0000) \notin C\text{.}\)</p></div></div>
+<a data-knowl="" class="id-ref hint-knowl original" data-refid="hk-esA" id="esA"><span class="type">Hint.</span> </a><div class="hidden-content tex2jax_ignore" id="hk-esA"><div class="hint solution-like"><p id="HMu">This cannot be a group code since \((0000) \notin C\text{.}\)</p></div></div>
 </div></article><article class="exercise exercise-like" id="wRD"><h6 class="heading"><span class="codenumber">3<span class="period">.</span></span></h6>
 <p id="eOm">Compute the Hamming distances between the following pairs of \(n\)-tuples.</p>
 <ol class="lower-alpha cols2">
@@ -356,7 +362,7 @@ MathJax.Hub.Config({
 <li id="zFf"><p id="RXe">\(\displaystyle (1001), (0111)\)</p></li>
 </ol>
 <div class="solutions">
-<a data-knowl="" class="id-ref hint-knowl original" data-refid="hk-qGS" id="qGS"><span class="type">Hint</span></a><div class="hidden-content tex2jax_ignore" id="hk-qGS"><div class="hint solution-like"><p id="nTD">(a) \(2\text{;}\) (c) \(2\text{.}\)</p></div></div>
+<a data-knowl="" class="id-ref hint-knowl original" data-refid="hk-qGS" id="qGS"><span class="type">Hint.</span> </a><div class="hidden-content tex2jax_ignore" id="hk-qGS"><div class="hint solution-like"><p id="nTD">(a) \(2\text{;}\) (c) \(2\text{.}\)</p></div></div>
 </div></article><article class="exercise exercise-like" id="cYM"><h6 class="heading"><span class="codenumber">4<span class="period">.</span></span></h6>
 <p id="KVv">Compute the weights of the following \(n\)-tuples.</p>
 <ol class="lower-alpha cols2">
@@ -366,7 +372,7 @@ MathJax.Hub.Config({
 <li id="YhP"><p id="qzO">\(\displaystyle (1011)\)</p></li>
 </ol>
 <div class="solutions">
-<a data-knowl="" class="id-ref hint-knowl original" data-refid="hk-CVk" id="CVk"><span class="type">Hint</span></a><div class="hidden-content tex2jax_ignore" id="hk-CVk"><div class="hint solution-like"><p id="UaM">(a) \(3\text{;}\) (c) \(4\text{.}\)</p></div></div>
+<a data-knowl="" class="id-ref hint-knowl original" data-refid="hk-CVk" id="CVk"><span class="type">Hint.</span> </a><div class="hidden-content tex2jax_ignore" id="hk-CVk"><div class="hint solution-like"><p id="UaM">(a) \(3\text{;}\) (c) \(4\text{.}\)</p></div></div>
 </div></article><article class="exercise exercise-like" id="JfV"><h6 class="heading"><span class="codenumber">5<span class="period">.</span></span></h6>
 <p id="rcE">Suppose that a linear code \(C\) has a minimum weight of \(7\text{.}\) What are the error-detection and error-correction capabilities of \(C\text{?}\)</p></article><article class="exercise exercise-like" id="pne"><h6 class="heading"><span class="codenumber">6<span class="period">.</span></span></h6>
 <p id="XjN">In each of the following codes, what is the minimum distance for the code? What is the best situation we might hope for in connection with error detection and error correction?</p>
@@ -377,7 +383,7 @@ MathJax.Hub.Config({
 <li id="wKz"><p id="Pcy">\(\displaystyle (0110110) \; (0111100) \; (1110000) \; (1111111) \\ (1001001) \; (1000011) \; (0001111) \; (0000000)\)</p></li>
 </ol>
 <div class="solutions">
-<a data-knowl="" class="id-ref hint-knowl original" data-refid="hk-vqL" id="vqL"><span class="type">Hint</span></a><div class="hidden-content tex2jax_ignore" id="hk-vqL"><div class="hint solution-like"><p id="AhV">(a) \(d_{\min} = 2\text{;}\) (c) \(d_{\min} = 1\text{.}\)</p></div></div>
+<a data-knowl="" class="id-ref hint-knowl original" data-refid="hk-vqL" id="vqL"><span class="type">Hint.</span> </a><div class="hidden-content tex2jax_ignore" id="hk-vqL"><div class="hint solution-like"><p id="AhV">(a) \(d_{\min} = 2\text{;}\) (c) \(d_{\min} = 1\text{.}\)</p></div></div>
 </div></article><article class="exercise exercise-like" id="Vun"><h6 class="heading"><span class="codenumber">7<span class="period">.</span></span></h6>
 <p id="DqW">Compute the null space of each of the following matrices. What type of \((n,k)\)-block codes are the null spaces? Can you find a matrix (not necessarily a standard generator matrix) that generates each code? Are your generator matrices unique?</p>
 <ol class="lower-alpha cols2">
@@ -420,7 +426,7 @@ MathJax.Hub.Config({
 </div></li>
 </ol>
 <div class="solutions">
-<a data-knowl="" class="id-ref hint-knowl original" data-refid="hk-HFd" id="HFd"><span class="type">Hint</span></a><div class="hidden-content tex2jax_ignore" id="hk-HFd"><div class="hint solution-like"><ol id="gpe" class="lower-alpha">
+<a data-knowl="" class="id-ref hint-knowl original" data-refid="hk-HFd" id="HFd"><span class="type">Hint.</span> </a><div class="hidden-content tex2jax_ignore" id="hk-HFd"><div class="hint solution-like"><ol id="gpe" class="lower-alpha">
 <li id="Bus">
 <p id="TMr">\((00000), (00101), (10011), (10110)\)</p>
 <div class="displaymath">
@@ -474,7 +480,7 @@ H =
 </div>
 <p class="continuation">if possible.</p>
 <div class="solutions">
-<a data-knowl="" class="id-ref hint-knowl original" data-refid="hk-AaE" id="AaE"><span class="type">Hint</span></a><div class="hidden-content tex2jax_ignore" id="hk-AaE"><div class="hint solution-like"><p id="Mwn">Multiple errors occur in one of the received words.</p></div></div>
+<a data-knowl="" class="id-ref hint-knowl original" data-refid="hk-AaE" id="AaE"><span class="type">Hint.</span> </a><div class="hidden-content tex2jax_ignore" id="hk-AaE"><div class="hint solution-like"><p id="Mwn">Multiple errors occur in one of the received words.</p></div></div>
 </div></article><article class="exercise exercise-like" id="NPO"><h6 class="heading"><span class="codenumber">10<span class="period">.</span></span></h6>
 <p id="vMx">Suppose that a \(1000\)-bit binary message is transmitted. Assume that the probability of a single error is \(p\) and that the errors occurring in different bits are independent of one another. If \(p = 0.01\text{,}\) what is the probability of more than one error occurring? What is the probability of exactly two errors occurring? Repeat this problem for \(p = 0.0001\text{.}\)</p></article><article class="exercise exercise-like" id="tWX"><h6 class="heading"><span class="codenumber">11<span class="period">.</span></span></h6>
 <p id="bTG">Which matrices are canonical parity-check matrices? For those matrices that are canonical parity-check matrices, what are the corresponding standard generator matrices? What are the error-detection and error-correction capabilities of the code generated by each of these matrices?</p>
@@ -519,7 +525,7 @@ H =
 </div></li>
 </ol>
 <div class="solutions">
-<a data-knowl="" class="id-ref hint-knowl original" data-refid="hk-swf" id="swf"><span class="type">Hint</span></a><div class="hidden-content tex2jax_ignore" id="hk-swf"><div class="hint solution-like">
+<a data-knowl="" class="id-ref hint-knowl original" data-refid="hk-swf" id="swf"><span class="type">Hint.</span> </a><div class="hidden-content tex2jax_ignore" id="hk-swf"><div class="hint solution-like">
 <p id="sDw">(a) A canonical parity-check matrix with standard generator matrix</p>
 <div class="displaymath">
 \begin{equation*}
@@ -545,7 +551,7 @@ G =
 </div></article><article class="exercise exercise-like" id="aeg"><h6 class="heading"><span class="codenumber">12<span class="period">.</span></span></h6>
 <p id="IaP">List all possible syndromes for the codes generated by each of the matrices in <a class="xref" data-knowl="./knowl/algcodes-exercise-check-matrices.html" title="Exercise 16.6.11">Exercise 16.6.11</a>.</p>
 <div class="solutions">
-<a data-knowl="" class="id-ref hint-knowl original" data-refid="hk-EKx" id="EKx"><span class="type">Hint</span></a><div class="hidden-content tex2jax_ignore" id="hk-EKx"><div class="hint solution-like"><p id="ERO">(a) All possible syndromes occur.</p></div></div>
+<a data-knowl="" class="id-ref hint-knowl original" data-refid="hk-EKx" id="EKx"><span class="type">Hint.</span> </a><div class="hidden-content tex2jax_ignore" id="hk-EKx"><div class="hint solution-like"><p id="ERO">(a) All possible syndromes occur.</p></div></div>
 </div></article><article class="exercise exercise-like" id="Glp"><h6 class="heading"><span class="codenumber">13<span class="period">.</span></span></h6>
 <p id="ohY">Let</p>
 <div class="displaymath">
@@ -607,7 +613,7 @@ H =
 </div></li>
 </ol>
 <div class="solutions">
-<a data-knowl="" class="id-ref hint-knowl original" data-refid="hk-dnh" id="dnh"><span class="type">Hint</span></a><div class="hidden-content tex2jax_ignore" id="hk-dnh"><div class="hint solution-like"><p id="kYX">(a) \(C\text{,}\) \((10000) + C\text{,}\) \((01000) + C\text{,}\) \((00100) + C\text{,}\) \((00010) + C\text{,}\) \((11000) + C\text{,}\) \((01100) + C\text{,}\) \((01010) + C\text{.}\) A decoding table does not exist for \(C\) since this is only a single error-detecting code.</p></div></div>
+<a data-knowl="" class="id-ref hint-knowl original" data-refid="hk-dnh" id="dnh"><span class="type">Hint.</span> </a><div class="hidden-content tex2jax_ignore" id="hk-dnh"><div class="hint solution-like"><p id="kYX">(a) \(C\text{,}\) \((10000) + C\text{,}\) \((01000) + C\text{,}\) \((00100) + C\text{,}\) \((00010) + C\text{,}\) \((11000) + C\text{,}\) \((01100) + C\text{,}\) \((01010) + C\text{.}\) A decoding table does not exist for \(C\) since this is only a single error-detecting code.</p></div></div>
 </div></article><article class="exercise exercise-like" id="yGQ"><h6 class="heading"><span class="codenumber">16<span class="period">.</span></span></h6>
 <p id="gDz">Let \({\mathbf x}\text{,}\) \({\mathbf y}\text{,}\) and \({\mathbf z}\) be binary \(n\)-tuples. Prove each of the following statements.</p>
 <ol class="lower-alpha">
@@ -626,14 +632,14 @@ H =
 <p id="sRR">Let \(C\) be a linear code. Show that either the \(i\)th coordinates in the codewords of \(C\) are all zeros or exactly half of them are zeros.</p></article><article class="exercise exercise-like" id="rcr"><h6 class="heading"><span class="codenumber">19<span class="period">.</span></span></h6>
 <p id="YZa">Let \(C\) be a linear code. Show that either every codeword has even weight or exactly half of the codewords have even weight.</p>
 <div class="solutions">
-<a data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hXa" id="hXa"><span class="type">Hint</span></a><div class="hidden-content tex2jax_ignore" id="hk-hXa"><div class="hint solution-like"><p id="Rgg">Let \({\mathbf x} \in C\) have odd weight and define a map from the set of odd codewords to the set of even codewords by \({\mathbf y} \mapsto {\mathbf x} + {\mathbf y}\text{.}\) Show that this map is a bijection.</p></div></div>
+<a data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hXa" id="hXa"><span class="type">Hint.</span> </a><div class="hidden-content tex2jax_ignore" id="hk-hXa"><div class="hint solution-like"><p id="Rgg">Let \({\mathbf x} \in C\) have odd weight and define a map from the set of odd codewords to the set of even codewords by \({\mathbf y} \mapsto {\mathbf x} + {\mathbf y}\text{.}\) Show that this map is a bijection.</p></div></div>
 </div></article><article class="exercise exercise-like" id="XjA"><h6 class="heading"><span class="codenumber">20<span class="period">.</span></span></h6>
 <p id="Fgj">Show that the codewords of even weight in a linear code \(C\) are also a linear code.</p></article><article class="exercise exercise-like" id="DqJ"><h6 class="heading"><span class="codenumber">21<span class="period">.</span></span></h6>
 <p id="lns">If we are to use an error-correcting linear code to transmit the 128 <abbr class="acronym">ASCII</abbr> characters, what size matrix must be used? What size matrix must be used to transmit the extended <abbr class="acronym">ASCII</abbr> character set of 256 characters? What if we require only error detection in both cases?</p></article><article class="exercise exercise-like" id="jxS"><h6 class="heading"><span class="codenumber">22<span class="period">.</span></span></h6>
 <p id="RuB">Find the canonical parity-check matrix that gives the even parity check bit code with three information positions. What is the matrix for seven information positions? What are the corresponding standard generator matrices?</p></article><article class="exercise exercise-like" id="PFb"><h6 class="heading"><span class="codenumber">23<span class="period">.</span></span></h6>
 <p id="xBK">How many check positions are needed for a single error-correcting code with 20 information positions? With 32 information positions?</p>
 <div class="solutions">
-<a data-knowl="" class="id-ref hint-knowl original" data-refid="hk-mGT" id="mGT"><span class="type">Hint</span></a><div class="hidden-content tex2jax_ignore" id="hk-mGT"><div class="hint solution-like"><p id="xnp">For \(20\) information positions, at least 6 check bits are needed to ensure an error-correcting code.</p></div></div>
+<a data-knowl="" class="id-ref hint-knowl original" data-refid="hk-mGT" id="mGT"><span class="type">Hint.</span> </a><div class="hidden-content tex2jax_ignore" id="hk-mGT"><div class="hint solution-like"><p id="xnp">For \(20\) information positions, at least 6 check bits are needed to ensure an error-correcting code.</p></div></div>
 </div></article><article class="exercise exercise-like" id="vMk"><h6 class="heading"><span class="codenumber">24<span class="period">.</span></span></h6>
 <p id="dIT">Let \({\mathbf e}_i\) be the binary \(n\)-tuple with a \(1\) in the \(i\)th coordinate and \(0\)'s elsewhere and suppose that \(H \in {\mathbb M}_{m \times n}({\mathbb Z}_2)\text{.}\) Show that \(H{\mathbf e}_i\) is the \(i\)th column of the matrix \(H\text{.}\)</p></article><article class="exercise exercise-like" id="bTt"><h6 class="heading"><span class="codenumber">25<span class="period">.</span></span></h6>
 <p id="JQc">Let \(C\) be an \((n,k)\)-linear code. Define the <dfn class="terminology">dual</dfn> or <dfn class="terminology">orthogonal code</dfn> of \(C\)  to be</p>
